@@ -1,0 +1,70 @@
+<apex:page standardController="Cases__c" extensions="accountProductList">
+<script>
+    var newwindow;
+    function poptastic(url)
+    {
+        newwindow=window.open(url,"name","width=600,height=500,top=0,toolbar=no ,personalbar=no,location=no,directories=no,statusbar=no,menubar=no,status=no,re sizable=yes,left=60,screenX=60,top=100,screenY=100");
+        
+        if (window.focus) {newwindow.focus()}  
+        
+    }
+
+</script>
+<apex:outputText value="{!Cases__c.Account__c}" rendered="false"/>
+<apex:form >
+<apex:pageblock rendered="{!renderList}">
+<apex:pageBlockTable value="{!accountProductList}" var="list">
+    <apex:column headerValue="Product Name">
+        {!list.Name}
+    </apex:column>
+
+    <apex:column headerValue="Description">
+        {!list.Description__c}
+    </apex:column>
+
+    <apex:column headerValue="P Number">
+        {!list.Product_Number__c}
+    </apex:column>
+    
+    <apex:column headerValue="Price">
+        {!list.Product_Price__c}
+    </apex:column>
+   
+    <apex:column headerValue="Status">
+    	<apex:commandLink onclick="poptastic('/apex/changeProductStatus?productid={!list.Id}&case={!Cases__c.Name}&caseid={!Cases__c.Id}')" rendered="{!list.Recurring_Frequency__c > 0}">{!list.Product_Status__c}</apex:commandLink>        
+    </apex:column>
+
+	<apex:column headerValue="Payment Option">
+		{!list.Payment_Option__c}
+    </apex:column>
+    
+	<apex:column headerValue="Pause On">
+		{!DAY(list.pauseat__c)}/{!MONTH(list.pauseat__c)}/{!YEAR(list.pauseat__c)}
+    </apex:column>
+
+    <apex:column headerValue="Activate On">
+        {!DAY(list.activeat__c)}/{!MONTH(list.activeat__c)}/{!YEAR(list.activeat__c)}
+    </apex:column>
+    
+    <apex:column headerValue="Cancel On">
+        {!DAY(list.cancelat__c)}/{!MONTH(list.cancelat__c)}/{!YEAR(list.cancelat__c)}
+    </apex:column>
+
+    <apex:column headerValue="Recurring">
+        {!list.Recurring_Frequency__c}
+    </apex:column>
+
+    <apex:column headerValue="Period">
+        {!list.Recurring_Period__c}
+    </apex:column>
+    
+    <apex:column headerValue="Created Date">
+        {!list.CreatedDate}
+    </apex:column>
+</apex:pageBlockTable>
+</apex:pageblock>
+<apex:pageblock rendered="{!renderMsg}">
+There are no Account Products linked
+</apex:pageblock>
+</apex:form>
+</apex:page>

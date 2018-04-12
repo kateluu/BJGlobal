@@ -1,0 +1,208 @@
+<apex:page controller="StatementPDF"  contentType="text/html" renderAs="pdf"
+        standardstylesheets="false" sidebar="false" showheader="false">
+        
+<apex:outputText escape="false" value="{!"<!DOCTYPE html>"}"/>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{!company.Business_Name__c} Invoice</title>
+    <style type="text/css">
+        *, body, table {
+            font-family: helvetica, arial, tahoma, verdana, serif;
+            font-size: 8px;
+        }
+        img { width: 50%; }
+        #logo img { width: 70%; }
+    </style>
+</head>
+<body>
+<table style="border: 1px solid #000;" border="0" cellpadding="10" cellspacing="0" width="90%">
+    <tbody>
+        <tr>
+            <td>
+                <table style="width: 680px;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 5px; padding-right: 20px; width: 260px; text-align: left;" id="logo" valign="top">
+                                <img src="{!company.Logo_Code__c}" style="border: none; margin-left: -2px;" />
+                            </td>
+                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; text-align: left; width: 170px" valign="top">
+                                   {!company.Business_Name__c}<br />
+                       				 {!company.Address__c}<br />
+                        		<div style="display:{!IF(isNewZealand, 'none', '')}"><div style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; text-align: left; width: 170px">ABN: {!company.ABN__c}<br /></div></div>
+                        	
+                            </td>
+                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; text-align: right;" valign="top">
+                                Billing Enquiries<br />{!company.Phone__c}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+                <br />
+
+
+                <table>
+                    <tr>
+                        <td style="font-size: 18px; font-weight: bold; text-align: center">Account Statement</td>
+                    </tr>
+                </table>
+
+
+                <br />
+
+                <table style="width: 680px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width: 430px;">
+                            <div>
+                                <table style="width: 430px;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 15px; padding-top: 5px;">
+                                                {!acc_name}<br />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="float: right;">
+                                <table style="width: 200px;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; text-align: right;"> <b style="font-size: 15px;">Account Number</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 15px; text-align: left;">{!acc_number}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; text-align: right;"><b style="font-size: 15px;">Statement Date</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 15px; text-align: left;"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}"><apex:param value="{!to_date}" /></apex:outputText></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; text-align: right;"><b style="font-size: 15px;">Balance Due</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; text-align: left;"><b style="font-size: 15px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!due}" /></apex:outputText></b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <table style="width: 680px; -fs-table-paginate: paginate;" border="0" cellpadding="0" cellspacing="0" >
+                    <THEAD>
+                        <tr>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: left;"><b style="font-size: 12px;">Date</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: left;"><b style="font-size: 12px;">Activity</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: left;"><b style="font-size: 12px;">Reference</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: left;"><b style="font-size: 12px;">Due Date</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: right;"><b style="font-size: 12px;">Total</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: right;"><b style="font-size: 12px;">Payment</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: right;"><b style="font-size: 12px;">Credit</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: right;"><b style="font-size: 12px;">Refund</b></th>
+                            <th style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-bottom: 1px solid #000; text-align: right;"><b style="font-size: 12px;">Due</b></th>
+                        </tr>
+                    </THEAD>
+                    <tbody>
+                        <apex:repeat value="{!transactions}" var="trans" id="theRepeat">
+                        <tr>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: left"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}"><apex:param value="{!trans.trans.Date__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: left">{!trans.trans.Activity__c}</td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: left">{!trans.trans.Reference__c}</td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: left"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}"><apex:param value="{!trans.trans.Due_Date__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right"> <apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!trans.trans.Total__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!trans.trans.Payment__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!trans.trans.Credit__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!trans.trans.Refund__c}" /></apex:outputText></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!trans.trans.Due__c}" /></apex:outputText></td>
+                        </tr>
+                        </apex:repeat>
+                        <tr>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;">&nbsp;</td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: left;">TOTAL</td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;" colspan="2">&nbsp;</td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;"><b style="font-size: 12px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!total_amount}" /></apex:outputText></b></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;"><b style="font-size: 12px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!total_paid}" /></apex:outputText></b></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;"><b style="font-size: 12px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!total_credit}" /></apex:outputText></b></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;"><b style="font-size: 12px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!total_refund}" /></apex:outputText></b></td>
+                            <td style="padding: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; border-top: 1px solid #000; text-align: right;"><b style="font-size: 12px;"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!due}" /></apex:outputText></b></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <table style="width: 680px;display: {!IF((company.Name = 'SponsoredLinX'), '', 'None')}" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td align="left"><img src="{!$Resource.internet}" alt="INTERNET" width="40" height="40" /></td>
+                            <td style="padding-bottom: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;" valign="top">
+                                Please login to your SponsoredLinX client panel <a href="https://clientpanel.sponsoredlinx.com.au" target="_blank">https://clientpanel.sponsoredlinx.com.au</a> to access your invoice.
+                                If you have forgotten your login details, please contact us on 1300 859 600 or reply to this email.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+
+            <table style="width: 680px; border: 1px solid #000; page-break-inside: avoid;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 10px; min-height: 7px;">
+                                <table style="width: 560px;" border="0" cellpadding="5" cellspacing="0">
+                                    <tbody>
+                                        <tr style="display:{!IF(isNewZealand, 'none', '')}">
+                                            <td align="center"><img src="{!$Resource.debit}" alt="DIRECT DEBIT" width="55" height="55" /></td>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">
+                                                <b>DIRECT DEBIT</b><br />
+                                                Pay your bills automatically from a nominated bank account (including credit cards).<br />
+                                                Please call {!company.Phone__c} for more information.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="{!$Resource.phone}" alt="PHONE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">
+                                                <b>PAY BY PHONE</b><br />
+                                                Call {!company.Phone__c} to make a payment by credit card<br />
+                                                Use Account No: {!acc_number}  or Invoice Number as a reference and have your credit card ready when calling.
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{!IF(isNewZealand, 'none', '')}">
+                                            <td width="81" align="center"><img src="{!$Resource.bank}"  alt="BANK" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">
+                                                <b>DIRECT BANK DEPOSIT</b><br />
+                                                Remit to {!company.Business_Name__c} <br />
+                                                BSB: {!company.bsb__c}, Account Number: {!company.account_number__c}<br />
+                                                Please put your Account No: {!acc_number} as a reference.
+                                            </td>
+                                        </tr>
+                                   </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div style="width: 700px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+    <p>As per our terms and conditions located at <a href="{!company.term_page__c}" target="_blank">{!company.term_page__c}</a> all late payments may incur an additional late fee.<br />
+    Failure to pay this invoice beyond 30 days may result in this invoice being passed on to our Debt Recovery Specialists for collection as per our terms and conditions.</p>
+</div>
+</body>
+</html>
+</apex:page>

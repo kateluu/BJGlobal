@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Product</label>
+        <referenceTo>Account_Product__c</referenceTo>
+        <relationshipLabel>Client_Histories</relationshipLabel>
+        <relationshipName>Client_Histories</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Days_Paused_Last_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND ((Start_Date__c &gt;= First_Day_Last_Month__c), ISNULL(End_Date__c)),  Last_Day_of_Last_Month__c - Start_Date__c + 1 , 
+IF( AND ((Start_Date__c &gt;= First_Day_Last_Month__c), End_Date__c &lt;= Last_Day_of_Last_Month__c), End_Date__c-Start_Date__c + 1 , 
+IF( AND ((Start_Date__c &gt;= First_Day_Last_Month__c), End_Date__c &gt; Last_Day_of_Last_Month__c), Last_Day_of_Last_Month__c-Start_Date__c + 1 , 
+IF( AND ((Start_Date__c &lt; First_Day_Last_Month__c), ISNULL(End_Date__c)), Last_Day_of_Last_Month__c -First_Day_Last_Month__c + 1 , 
+IF( AND ((Start_Date__c &lt; First_Day_Last_Month__c), End_Date__c &lt;= Last_Day_of_Last_Month__c), End_Date__c-First_Day_Last_Month__c + 1 , 
+IF( AND ((Start_Date__c &lt; First_Day_Last_Month__c), End_Date__c &gt; Last_Day_of_Last_Month__c), Last_Day_of_Last_Month__c-First_Day_Last_Month__c + 1 , 
+0 
+) 
+) 
+) 
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Paused Last Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_Paused_This_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND ((Start_Date__c &gt;= First_Day_This_Month__c), ISNULL(End_Date__c)), Today()-Start_Date__c + 1 , 
+IF( AND ((Start_Date__c &gt;= First_Day_This_Month__c), End_Date__c &lt;= TODAY()), End_Date__c-Start_Date__c + 1 ,
+IF( AND ((Start_Date__c &lt; First_Day_This_Month__c), ISNULL(End_Date__c)), Today()-First_Day_This_Month__c + 1 , 
+IF( AND ((Start_Date__c &lt; First_Day_This_Month__c), End_Date__c &lt;= TODAY()), End_Date__c-First_Day_This_Month__c + 1 , 
+0
+)
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Paused This Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <description>null if the product status is ongoing</description>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Day_Last_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(
+     YEAR(TODAY()),
+     MONTH(TODAY()) - 1,
+     1
+)</formula>
+        <label>First Day of Last Month</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Day_This_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(
+     YEAR(TODAY()),
+     MONTH(TODAY()),
+     1
+)</formula>
+        <label>First Day of This Month</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Day_of_Last_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(
+     YEAR(TODAY()),
+     MONTH(TODAY()),
+     1
+) - 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Day of Last Month</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lasting_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(End_Date__c), today() -Start_Date__c+1, End_Date__c - Start_Date__c+1)</formula>
+        <label>Lasting Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paused_Revenue_Last_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Sold_to_Pause__c == true, 0 ,Days_Paused_Last_Month__c *  Account_Product__r.Daily_Rate__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Paused Revenue - Last Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Paused_Revenue_Last_Month_w_STP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Days_Paused_Last_Month__c * Account_Product__r.Daily_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Paused Revenue - Last Month (w/ STP)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Paused_Revenue_This_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Sold_to_Pause__c == True, 0,Days_Paused_This_Month__c *  Account_Product__r.Daily_Rate__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Paused Revenue - This Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Paused_Revenue_This_Month_w_STP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Days_Paused_This_Month__c * Account_Product__r.Daily_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Paused Revenue - This Month (w/ STP)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sold_to_Pause__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sold to Pause</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>StartDateEqualsEndDate__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Start_Date__c = End_Date__c , &apos;true&apos;, &apos;false&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>StartDateEqualsEndDate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Paused</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Client_History</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
+        <columns>Days_Paused_Last_Month__c</columns>
+        <columns>Days_Paused_This_Month__c</columns>
+        <columns>Paused_Revenue_Last_Month__c</columns>
+        <columns>Paused_Revenue_Last_Month_w_STP__c</columns>
+        <columns>Paused_Revenue_This_Month__c</columns>
+        <columns>Paused_Revenue_This_Month_w_STP__c</columns>
+        <columns>Type__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <columns>End_Date__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>StartDateEqualsEndDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>ClientHistory Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Client_Histories</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

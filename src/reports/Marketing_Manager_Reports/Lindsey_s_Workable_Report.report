@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Company__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Lead_Status__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.From_Source__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Description__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead__c.Lead_Status__c</column>
+            <operator>notContain</operator>
+            <value>Double Up,Spam,Client Contact,uncontactable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead__c.From_Source__c</column>
+            <operator>notContain</operator>
+            <value>GMT,Get More Traffic,Crank IT,SLX NZ</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead__c.From_Form__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Inbound Leads - SLX</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Lead__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2015-09-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-09-01</startDate>
+    </timeFrameFilter>
+</Report>

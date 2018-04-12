@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Product_Price__c</field>
+    </columns>
+    <description>Average weekly product value per week running</description>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Status__c</column>
+            <operator>contains</operator>
+            <value>active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>notContain</operator>
+            <value>,setup,set up,seo,facebook,direct listing,landing,hosting,domain,iiconnect,amex,email,marketing,website,search engine,web,directory,listing,Google Funds for 30 days,Google Funds Pre-Paid for 30 days,Google Pre-Paid for 30 days,Google Funds,Google Funds Pre-Paid Monthly for 30days,Conversion Page Plus,yahoo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <operator>notEqual</operator>
+            <value>Ben Bradshaw</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AdWords Average Product Price (weekly)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

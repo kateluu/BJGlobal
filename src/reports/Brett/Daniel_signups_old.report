@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$Sign_Up__c.Salesperson__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Sign_Up__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Sign_Up__c.Product_Type__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$Sign_Up__c.Set_Up_Price__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account_Product__c.Monthly_Price__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>By month</description>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Sign_Up__c.Status__c</column>
+            <operator>notEqual</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Sign_Up__c.Product_Type__c</column>
+            <operator>notContain</operator>
+            <value>SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Sign_Up__c.Salesperson__c</column>
+            <operator>equals</operator>
+            <value>daniel manning</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>FK_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Daniel signups old</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Sign_Up_del__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_$Sign_Up__c.Salesperson__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_PREVCUR2Y</interval>
+    </timeFrameFilter>
+</Report>

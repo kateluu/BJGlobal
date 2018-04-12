@@ -1,0 +1,19 @@
+<apex:page standardController="SFDC_Projects__c" extensions="NoteAndAttachmentForProjectController">
+<style>
+	.fewerMore { display: none;}
+</style>
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!nas}" var="na" rendered="{!NOT(ISNULL(nas))}">
+		        <apex:column headervalue="Type" value="{!na.dType}"/>
+		        <apex:column headervalue="Title">
+		        	<apex:CommandLink onclick="window.open('/{!na.Id}', '_blank'); return false;" >{!na.Title}</apex:CommandLink>
+		        </apex:column>
+		        <apex:column headervalue="Related To" value="{!na.ParentName}"/>
+		        <apex:column headervalue="Last Modified Date" value=" {!na.LastModifiedDate}"/>
+		        <apex:column headervalue="Created By" value="{!na.CreatedByName}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!(ISNULL(nas))}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

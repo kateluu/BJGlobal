@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_64760296</developerName>
+        <masterLabel>Product Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Facebook Lead Ads Optimised Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facebook Lead Ads Premium Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Facebook Lead Ads Standard Setup</sourceValue>
+            </sourceValues>
+            <value>Lead ads</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Optimised Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Premium Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Standard Setup</sourceValue>
+            </sourceValues>
+            <value>adwords</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Social Media Partnered Plus Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Social Media Standard Monthly Management</sourceValue>
+            </sourceValues>
+            <value>social</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Invoice__c.Issue_Date__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_64760296</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>setup</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Invoice__c.Status__c</column>
+            <operator>equals</operator>
+            <value>PAID,CREDITED,NO CHARGE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>notContain</operator>
+            <value>google+,seo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.BJB_Company__c</column>
+            <operator>notContain</operator>
+            <value>get more traffic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Invoice__c.Promocode__c</column>
+            <operator>notContain</operator>
+            <value>new owner</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Invoice__c.Issue_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.BJB_Company__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_64760296</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SLX AW/FB Paid Sales Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Invoice__c@Invoice__c.Account_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Invoice__c.Issue_Date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

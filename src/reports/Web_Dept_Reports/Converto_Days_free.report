@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>SFDC_Projects__c.Days_from_In_Progress_to_Complete__c:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>CUST_CREATED_DATE</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>AVG days</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c.Project_Completed_Date__c</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c.Days_from_In_Progress_to_Complete__c</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c.Days_to_complete__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Project_Type__c</column>
+            <operator>contains</operator>
+            <value>ConvertoPages</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account_Product__c.Product_Price__c</column>
+            <operator>equals</operator>
+            <value>AUD 0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Project_Completed_Date__c</column>
+            <operator>greaterThan</operator>
+            <value>1/1/2017</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Converto Days (free)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SFDC_Projects__c@SFDC_Projects__c.Account_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>SFDC_Projects__c.Days_to_complete__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <endDate>2018-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,42 @@
+<apex:page controller="LostRevenue">
+    <apex:form >
+        <apex:pageBlock title="Lost Revenue For {!lastMonth}">
+            <apex:pageBlockTable value="{!teamAMap}" var="cm">  
+                <apex:column headerValue="Team A">  
+                  {!cm}  
+                </apex:column>  
+                <apex:column headerValue="Cancel Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamAMap[cm]['Cancel']}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Pause Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamAMap[cm]['Pause']}" />
+                    </apex:outputText>
+                </apex:column>
+             </apex:pageBlockTable>
+             
+             <br/>
+             
+             <apex:pageBlockTable value="{!teamBMap}" var="cm">  
+                <apex:column headerValue="Team B">  
+                  {!cm}  
+                </apex:column>  
+                <apex:column headerValue="Cancel Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamBMap[cm]['Cancel']}" />
+                    </apex:outputText>
+                </apex:column>
+                <apex:column headerValue="Pause Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamBMap[cm]['Pause']}" />
+                    </apex:outputText>
+                </apex:column>  
+             </apex:pageBlockTable> 
+             
+             <br/>
+             
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SFDC_Projects__c.Activities$Subject</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c$Name</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Overview of everyone&apos;s tasks for the day</description>
+    <filter>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Activities$Status</column>
+            <operator>equals</operator>
+            <value>Not Started</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Activities$Owner</column>
+            <operator>equals</operator>
+            <value>,Alexander Mortimer,Celest Maggs,Chanelle Canilao,Fiona Hoy,James Snelson,Kate Muller,Marco Cacciola,Molly Hanrahan,Nathan Moody,Nicholas Davis,Raymond Serafin,Sarah Googe,Tom Caffrey,Laura Markwort</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Activities$ActivityTimeOnly</column>
+            <operator>lessOrEqual</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c$Project_Stage__c</column>
+            <operator>notEqual</operator>
+            <value>Completed - New Contract</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SFDC_Projects__c.Activities$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Tasks Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Projects_with_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SFDC_Projects__c.Activities$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

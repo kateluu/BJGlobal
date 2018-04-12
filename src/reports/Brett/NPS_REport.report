@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>simplesurvey__Survey__c.simplesurvey__Survey_Score__c:AVG</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Avg Survey Score</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_19862386</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>simplesurvey__Survey__c$simplesurvey__Record_Owner__c.UserRole</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team A</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Leader</sourceValue>
+            </sourceValues>
+            <value>Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <value>Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team B</sourceValue>
+            </sourceValues>
+            <value>Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team B</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>simplesurvey__Survey__c$Name</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>simplesurvey__Survey__c$simplesurvey__Record_Owner__c.IsActive</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_19862386</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>simplesurvey__Survey__c$simplesurvey__Record_Owner__c</field>
+        <sortByName>FORMULA1</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>CustomSummaryFormula</sortType>
+    </groupingsDown>
+    <name>NPS REport</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>simplesurvey__Simple_Survey__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>simplesurvey__Survey__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

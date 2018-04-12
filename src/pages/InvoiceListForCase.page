@@ -1,0 +1,58 @@
+<apex:page standardController="Cases__c" extensions="InvoiceListForCase" standardstylesheets="false" sidebar="false" showheader="false">
+    <apex:includeScript value="{!URLFOR($Resource.FixedHeaderTable, '/jquery-1.8.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FixedHeaderTable, '/jquery.fixheadertable.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.FixedHeaderTable, '/base.css')}"/> 
+    <apex:stylesheet value="{!URLFOR($Resource.FixedHeaderTable, '/jquery-ui/css/redmond/jquery-ui-1.8.4.custom.css')}"/> 
+   	
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fixme').fixheadertable({
+                 height  : 200,
+                 //zebra : true,                 
+                 whiteSpace : 'nowrap',
+                 colratio : [220, 215, 140, 80, 80, 80, 80, 80, 110, 110, 250, 120]
+            });
+        });
+    </script>
+
+    <apex:form >
+        <table class="fixme" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;}">
+            <thead style="font-size: 12px;">
+                <tr>
+                    <th>Inv. Name</th>
+                    <th>Description</th>
+                    <th>Inv. Number</th>
+                    <th>Credited</th>
+                    <th>Due</th>
+                    <th>Paid</th>
+                    <th>Refunded</th>
+                    <th>Total</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Account Product</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!irs}" var="ir">
+                <tr style="background-color:{!ir.color}">
+                    <td>
+                        <apex:CommandLink onclick="window.open('/{!ir.invoice.Id}', '_blank'); return false;" >{!ir.invoice.Name}</apex:CommandLink>
+                    </td>
+                    <td><apex:outputText value="{!ir.invoice.Account_Product__r.Description__c}"/></td>
+                    <td style="text-align:right">{!ir.invoice.Invoice_Number__c}</td>
+                    <td style="text-align:right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!ir.invoice.Amount_Credited__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!ir.invoice.Amount_Due__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!ir.invoice.Amount_Paid__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!ir.invoice.Amount_Refunded__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,number,$#,##0.00}"><apex:param value="{!ir.invoice.Invoice_Total__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,date, E dd'-'MM'-'yyyy}"><apex:param value="{!ir.invoice.Issue_Date__c}" /></apex:outputText></td>
+                    <td style="text-align:right"><apex:outputText value="{0,date, E dd'-'MM'-'yyyy}"><apex:param value="{!ir.invoice.Due_Date__c}" /></apex:outputText></td>
+                    <td><apex:outputText value="{!ir.invoice.Account_Product__r.Name}"/></td>
+                    <td><apex:outputText value="{!ir.invoice.Status__c}"/></td>
+                </tr>
+                </apex:repeat>
+            </tbody>
+        </table>
+    </apex:form>
+</apex:page>

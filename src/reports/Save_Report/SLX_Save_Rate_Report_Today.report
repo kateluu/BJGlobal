@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Escalated</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>Cases__c.Saved__c:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Saved</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>Cases__c.Saved__c:SUM / RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Save Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_48248036</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CUST_OWNER_ROLE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team A</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A  Leader</sourceValue>
+            </sourceValues>
+            <value>Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <value>Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team GMT</sourceValue>
+            </sourceValues>
+            <value>Team GMT</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Saved_By__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Save_Date__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Status__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <booleanFilter>(1 AND (2 OR 3)) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>CUST_OWNER_ROLE</column>
+            <operator>contains</operator>
+            <value>team a,team b,team c,team gmt</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Saved_By__c</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Saved_By__c</column>
+            <operator>contains</operator>
+            <value>Kristen,Daniella,katie,Sam,Ryan Goldsworthy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.CaseType__c</column>
+            <operator>includes</operator>
+            <value>Cancellation,Pause</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_48248036</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Cases__c.CaseType__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SLX Save Rate Report - Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Cases__c.unresolved_date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

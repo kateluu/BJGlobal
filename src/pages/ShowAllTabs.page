@@ -1,0 +1,21 @@
+<apex:page StandardController="Admin_Page__c" extensions="ShowAllTabsController">
+	<apex:form >
+		<apex:pageBlock title="All Objects in Schema">
+			<apex:pageBlockButtons >
+	        	<apex:commandbutton action="{!save}" value="Save"/>
+	        	<apex:commandbutton action="{!save_new}" value="Save & New"/>
+	        </apex:pageBlockButtons>
+	        
+			<apex:pageBlock >
+				<apex:panelGrid columns="2">
+					<apex:outputLabel value="Object: "/>
+					<apex:selectList value="{!ap.Name}" size="1">
+						<apex:selectOptions value="{!listOptions}"/>
+					</apex:selectList>
+					<apex:outputlabel />
+					<apex:outputText value="Most objects don't have a proper user interface, so please choose carefully." />
+				</apex:panelGrid>
+			</apex:pageBlock>
+		</apex:pageBlock>
+	</apex:form>		
+</apex:page>

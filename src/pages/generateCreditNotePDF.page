@@ -1,0 +1,252 @@
+<apex:page standardcontroller="Credit__c"  extensions="generateCreditNotePDF" renderAs="pdf" contentType="text/html" standardstylesheets="false" sidebar="false" showheader="false"><apex:outputText escape="false" value="{!"<!DOCTYPE html>"}"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SponsoredLinX Credit Note</title>
+    <style type="text/css">
+        *, body, table {
+            font-family: helvetica, arial, tahoma, verdana, serif;
+            font-size: 8px;
+        }
+        img { width: 50%; }
+        #logo img { width: 70%; }
+    </style>
+</head>
+<body>
+<table style="border: 1px solid #000;" border="0" cellpadding="10" cellspacing="0" width="600px">
+    <tbody>
+        <tr>
+            <td>
+                <table style="width: 570px;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 5px; padding-right: 20px; width: 260px; text-align: left;" id="logo" valign="top"><a href="https://clientpanel.sponsoredlinx.com.au/"><img src="{!$Resource.splxlogo}" style="border: none; margin-left: -2px;" /></a></td>
+                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px; text-align: left; width: 170px" valign="top">
+                                <b>SponsoredLinX</b><br />
+                                50 Shottery Street, Yeronga, QLD, 4104<br />
+                                ABN: 81 124 272 359<br />
+                            </td>
+                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px; text-align: right;" valign="top">Bill Enquiries<br />1300 859 600</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+                <br />
+
+                <table style="width: 570px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 16px; text-align: left;">Credit Note</td>
+                    </tr>
+                </table>
+
+                <br />
+
+                <table style="width: 560px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width: 430px;">
+                            <div>
+                                <table style="width: 430px;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; padding-top: 5px;">
+                                                {!credit.Account__r.Name}<br />
+                                                {!credit.Account__r.BillingStreet}<br />
+                                                {!credit.Account__r.BillingCity}
+                                                {!credit.Account__r.BillingState}
+                                                {!credit.Account__r.BillingPostalCode}<br />
+                                                {!credit.Account__r.BillingCountry}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="float: right;">
+                                <table style="width: 160px;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Account Number</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;">{!credit.Account__r.Unique_Id__c}</td>
+                                        </tr>
+                                        <tr>
+                                        	<td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Credit Number</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;">{!credit.name}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Issue Date</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}"><apex:param value="{!credit.Valid_From__c}" /></apex:outputText></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Amount</b>:</td>
+                                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;"><b><apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Left__c}" /></apex:outputText></b></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <br />
+
+                <table style="width: 570px; border: 1px solid #000;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px;">
+                                <table style="width: 560px;" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style=" font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px;" colspan="2">Credit Activity</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px;"><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 5px auto 1px 10px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">Product</td>
+                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">Amount</td>
+                                        </tr>
+                                        
+                                        <tr>
+											<td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">{!credit.Account_Product_Number__c} - {!credit.Account_Product__r.Name}<br/>
+                                            {!IF(credit.Account_Product__r.Description__c != null,' - '+credit.Account_Product__r.Description__c, "")}</td>
+                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><apex:outputText value="{0,number,$#,###.00}"><apex:param value="{!credit.Amount__c}" /></apex:outputText></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px;"><br /></td>
+                                        </tr>
+                                        
+                                        
+                                        <tr style="display:{!IF(ps.size == 0, 'None', '')}">
+                                            <td style="padding: 5px auto 1px 10px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">Invoice</td>
+                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">Amount</td>
+                                        </tr>
+                                        <apex:repeat value="{!ps}" var="payment"> 
+	                                        <tr style="display:{!IF(ps.size == 0, 'None', '')}">
+                                        		<td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
+									       			<apex:outputText value="{!payment.Invoice__r.Invoice_Number__c}"/>
+                                        		</td>
+	                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
+										       		<apex:outputText value="{0,number,-$##,##0.00}"><apex:param value="{!payment.Payment_Amount__c}" /></apex:outputText>
+	                                            </td>
+	                                        </tr>
+                                        </apex:repeat>
+                                        <tr style="display:{!IF(ps.size == 0, 'None', '')}">
+                                            <td colspan="2" style="padding: 2px 5px 2px 5px;"><br /></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">Total</td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Amount__c}" /></apex:outputText></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">Credit Used</td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Used__c}" /></apex:outputText></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><b>Credit Left</b></td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><b><apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Left__c}" /></apex:outputText></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 2px 5px 2px 5px;"><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                                Note: all prices are 10% GST inclusive<br />
+                                                Breakdown: <apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Left__c/11*10}" /></apex:outputText> Price + <apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Left__c/11}" /></apex:outputText> GST = <apex:outputText value="{0,number,$##,##0.00}"><apex:param value="{!credit.Credit_Left__c}" /></apex:outputText> Total
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+
+                <table style="width: 570px;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" style="padding-bottom: 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                <br />
+                                <b>Notes:</b>
+                                <br />
+                                1. All invoices can be found online at <a href="https://clientpanel.sponsoredlinx.com.au" target="_blank">https://clientpanel.sponsoredlinx.com.au</a>, using your login details.
+                                <br />
+                                <br />
+                                <b>Payment Options:</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+
+                <table style="width: 570px; border: 1px solid #000;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 10px; min-height: 7px;">
+                                <table style="width: 560px;" border="0" cellpadding="5" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"><img src="{!$Resource.debit}" alt="DIRECT DEBIT" width="55" height="55" /></td>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                                <b>DIRECT DEBIT</b><br />
+                                                Pay your bills automatically from a nominated bank account (including credit cards).<br />
+                                                Please call 1300 859 600 for more information.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="{!$Resource.phone}" alt="PHONE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                                <b>PAY BY PHONE</b><br />
+                                                Call 1300 859 600 to make a payment by credit card<br />
+                                                Use Account No: {!credit.Account__r.Unique_Id__c} or Invoice No as a reference and have your credit card ready when calling.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="{!$Resource.cheque}"  alt="CHEQUE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                                <b>PAY BY CHEQUE</b><br />
+                                                Make cheque payable to "SponsoredLinX"<br />
+                                                Post to PO BOX 3200, Yeronga QLD 4104<br />
+                                                Please put your Account No: {!credit.Account__r.Unique_Id__c} or Invoice No on the back of the cheque.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="{!$Resource.bank}"  alt="BANK" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+                                                <b>DIRECT BANK DEPOSIT</b><br />
+                                                Remit to SponsoredLinX <br />
+                                                BSB: 014-286, Account Number: 2805 97402<br />
+                                                Please put your Account No: {!credit.Account__r.Unique_Id__c} as a reference.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><img src="{!$Resource.internet}"  alt="INTERNET" width="40" height="40" /></td>
+                                            <td style="padding-bottom: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;" valign="top">
+                                                Please login to your SponsoredLinX client panel by visiting <a href="https://clientpanel.sponsoredlinx.com.au" target="_blank">https://clientpanel.sponsoredlinx.com.au</a> for more info.
+                                                If you have forgotten your login details, please contact us.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div style="width: 700px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px;">
+    <p>As per our terms and conditions located at <a href="http://www.sponsoredlinx.com/terms-and-conditions/" target="_blank">http://www.sponsoredlinx.com/terms-and-conditions/</a> all late payments may incur an additional late fee.<br />
+    Failure to pay this invoice beyond 30 days may result in this invoice being passed into Marshall Freeman for collection as per our terms and conditions.</p>
+</div>
+</body>
+</html>
+</apex:page>

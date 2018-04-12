@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<apex:page sidebar="false" 
+           showHeader="false" 
+           controller="TwilioIVR" 
+           contentType="application/xml">
+  <Response>
+    <Say>Hello {!callerName}.&nbsp;Thanks for calling sponsoredlinx. Connecting you with your client manager {!rep.name}.</Say>
+    <Pause/>
+        <Dial>{!rep.phone}</Dial>
+  </Response>
+</apex:page>

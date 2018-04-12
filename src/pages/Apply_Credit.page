@@ -1,0 +1,123 @@
+<apex:page standardController="Account" sidebar="true" showHeader="true" extensions="Apply_Credit">
+
+	<apex:outputPanel id="SelectAccountProduct">
+		<apex:pageblock rendered="{!showSelectAccountProductInitial}">
+			<h1>Make a Credit</h1>
+			
+			
+			    <apex:form >
+    <apex:commandButton value="Back to Account" action="{!returnToAccount}" status="status"/>
+    </apex:form>
+			<apex:form >
+			<h2>Select Account Product</h2>
+				<apex:selectList id="selectListPruducts" value="{!selectedAccountProductId}" size="1" >
+   					<apex:actionSupport event="onchange" action="{!createCreditDetails}" rerender="CreditCreated,CreditDetails,SelectAccountProduct" status="status"/>
+   					<apex:selectOptions value="{!AccountProducts}"/>
+  				</apex:selectList>
+			</apex:form> 
+		</apex:pageblock>
+	</apex:outputPanel>
+
+   	<apex:outputPanel id="CreditDetails">
+   		<apex:pageblock rendered="{!showCreditDetails}">
+    		<apex:form >
+	        	<apex:actionstatus id="status" startText="updating...">
+            		<apex:facet name="stop">
+                		<apex:pageBlockSection columns="2">
+<!--                   		<apex:pageBlockSectionItem > -->
+                    			<!-- <apex:outputLabel value="Account Product: "/><apex:outputText value="{!SelectedAccountProductId}"/> -->
+<!--   	            		</apex:pageBlockSectionItem> -->
+           	        		<apex:pageBlockSectionItem >
+               	    			<apex:outputLabel value="Account Product Name: "/><apex:outputText value="{!SelectedAccountProduct.Name}"/>
+	                   		</apex:pageBlockSectionItem>
+                    		<apex:pageBlockSectionItem >
+       		            		<apex:outputLabel value="Last Invoice Date: "/><apex:outputText value="{!SelectedAccountProduct.Last_Invoice_Date__c}"/>
+               	    		</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="Last Invoice Number: "/><apex:outputText value="{!SelectedAccountProduct.Last_Invoice_Number__c}"/>
+                   			</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="Payment Option: "/><apex:outputText value="{!SelectedAccountProduct.Payment_Option__c}"/>
+                   			</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="Product Price: "/><apex:outputText value="{!SelectedAccountProduct.Product_Price__c}"/>
+                   			</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="Recurring Period: "/><apex:outputText value="{!SelectedAccountProduct.Recurring_Period__c}"/>
+                   			</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="Recurring Frequency: "/><apex:outputText value="{!SelectedAccountProduct.Recurring_Frequency__c}"/>
+                   			</apex:pageBlockSectionItem>
+                   			<apex:pageBlockSectionItem >
+                   				<apex:outputLabel value="SLX Product: "/><apex:outputText value="{!SelectedAccountProduct.SLX_Product__c}"/>
+							</apex:pageBlockSectionItem>
+                   		</apex:pageBlockSection>
+            		</apex:facet>
+        		</apex:actionstatus>
+        	</apex:form>
+		</apex:pageBlock>
+		<apex:pageBlock rendered="{!showCreditDetails}">   
+    		<h2>Credit Details</h2>
+        	<apex:messages />
+        	<apex:form >
+        		<table>
+    	           	<tr><td>Amount:</td><td><apex:inputField value="{!ThisCredit.Amount__c}" /></td>
+    	            <td>Valid From:</td><td><apex:inputField value="{!ThisCredit.Valid_From__c}" /></td>
+    	            <td>
+						<apex:outputLabel value="Select Account Product"/>
+						<apex:selectList id="selectListPruducts" value="{!selectedAccountProductId}" size="1" >
+   							<apex:actionSupport event="onchange" action="{!createCreditDetails}" rerender="CreditCreated,CreditDetails,SelectAccountProduct" status="status"/>
+   							<apex:selectOptions value="{!AccountProducts}"/>
+  						</apex:selectList>    	                	
+    	            </td>
+    	    	    <td><apex:commandButton value="Create" action="{!save}" rerender="CreditCreated,CreditDetails,SelectAccountProduct" status="status"/></td></tr>
+				</table>    	                	
+        	</apex:form>
+       	
+       	</apex:pageblock>
+       	<apex:pageBlock rendered="{!showCreditDetails}">
+        <h2>Existing Credits for this Account Product</h2>
+        <apex:pageBlockTable value="{!SelectedAccountProductCredits}" var="crd" id="tableOfInvoices"> 
+			<apex:column headerValue="Credit Number">
+				{!crd.Name}
+			</apex:column>
+			<apex:column headerValue="Valid From">
+			   	<apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+    				<apex:param value="{!crd.Valid_From__c}" /> 
+				</apex:outputText>     
+			</apex:column>  
+			<apex:column headerValue="Credit Amount">
+			   	<apex:outputText value="{0,number,$#,###,###.00}">
+    				<apex:param value="{!crd.Amount__c}" />
+  				</apex:outputText>
+			</apex:column>
+			<apex:column headerValue="Credit Used">
+			    <apex:outputText value="{0,number,$#,###,###.00}">
+    				<apex:param value="{!crd.Credit_Used__c}" />
+  				</apex:outputText>
+			</apex:column>
+			<apex:column headerValue="Credit Left">
+			    <apex:outputText value="{0,number,$#,###,###.00}">
+    				<apex:param value="{!crd.Credit_Left__c}" />
+  				</apex:outputText>
+			</apex:column>
+			<apex:column headerValue="Credit Account Product">
+			    {!crd.Account_Product__r.Name}
+			</apex:column>
+		</apex:pageBlockTable>
+   		</apex:pageblock>
+        
+        
+        
+   
+        
+    </apex:outputPanel>
+   
+
+
+
+	<apex:outputPanel id="CreditCreated">
+	</apex:outputPanel>
+
+
+</apex:page>

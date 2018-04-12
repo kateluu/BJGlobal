@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_76901871</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_OWNER_ROLE</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A  Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team A</sourceValue>
+            </sourceValues>
+            <value>Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team B</sourceValue>
+            </sourceValues>
+            <value>Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <value>Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+            </sourceValues>
+            <value>GMT Team B</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Sign_Up__c.Salesperson__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Product_Package__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Completed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Build_Checked_By__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Sign_Up__c.Product_Type__c</column>
+            <operator>notEqual</operator>
+            <value>SEO,ConvertoPages</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_76901871</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Desc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Completions Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sign_Up__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Sign_Up__c.Completed_Date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

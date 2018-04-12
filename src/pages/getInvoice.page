@@ -1,0 +1,9 @@
+<apex:page showHeader="false" sidebar="false" controller="getInvoice" action="{!init}">
+Invoice Id          : {!invDetails.invoiceId}<br></br>
+Invoice Number      : {!invDetails.invoiceNumber}<br></br>
+Invoice Total       : {!invDetails.Total}<br></br>
+Invoice Amountdue   : {!invDetails.Amountdue}<br></br>
+Invoice Reference   : {!invDetails.reference}<br></br>
+Invoice Status      : {!invDetails.Status}<br></br>
+Invoice Line Items  : {!invLineItems}<br></br>
+</apex:page>

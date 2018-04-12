@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <chartSummaries>
+            <column>Cases__c.Case_Open_Time__c</column>
+        </chartSummaries>
+        <chartType>None</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>CUST_NAME</groupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Case_Open_Time__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Cases__c.CaseType__c</column>
+            <operator>equals</operator>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Product_Type__c</column>
+            <operator>equals</operator>
+            <value>AdWords Management,Social Marketing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Status__c</column>
+            <operator>equals</operator>
+            <value>Escalated</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Top 5 Priority Cases</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Cases__c</reportType>
+    <rowLimit>5</rowLimit>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Cases__c.Case_Open_Time__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Cases__c.Cancel_by__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

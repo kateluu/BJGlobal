@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ShareWithGMT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ShareWithGMT</label>
+        <sharedTo>
+            <role>GMTSales</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>From_Source__c</field>
+            <operation>contains</operation>
+            <value>Get More Traffic,GMT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HTTP_Referer__c</field>
+            <operation>contains</operation>
+            <value>getmoretraffic.com.au</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Sale</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_SLX_Leads</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share SLX Leads</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>From_Source__c</field>
+            <operation>contains</operation>
+            <value>Facebook,SponsoredLinX,SLX,NZ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>HTTP_Referer__c</field>
+            <operation>contains</operation>
+            <value>sponsoredlinx.co.nz,adadviser,sponsoredlinx.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Sale</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

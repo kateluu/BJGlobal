@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount / PARENTGROUPVAL(RowCount, GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>BucketField_29434854</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Cancel Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_29434854</developerName>
+        <masterLabel>Active Period</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>FK_$Account.Active_Days__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>28</to>
+            </sourceValues>
+            <value>0-4 Weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>28</from>
+                <to>56</to>
+            </sourceValues>
+            <value>4-8 Weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>56</from>
+                <to>84</to>
+            </sourceValues>
+            <value>8-12 Weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>84</from>
+                <to>112</to>
+            </sourceValues>
+            <value>12-16 Weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>112</from>
+                <to>140</to>
+            </sourceValues>
+            <value>16-20 Weeks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>140</from>
+                <to>365</to>
+            </sourceValues>
+            <value>20 wks to 1 year</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>365</from>
+            </sourceValues>
+            <value>1 year +</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_82725919</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_OWNER_ROLE</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A  Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Resolution Manager</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team A</sourceValue>
+            </sourceValues>
+            <value>Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Resolution Manager</sourceValue>
+            </sourceValues>
+            <value>Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <value>Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team GMT</sourceValue>
+            </sourceValues>
+            <value>Team GMT</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>FORMULA1</column>
+        </chartSummaries>
+        <chartType>Pie</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>BucketField_29434854</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.Active_Days__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CUST_OWNER_ROLE</column>
+            <operator>notContain</operator>
+            <value>sales,web,seo</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_29434854</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cancellations vs Active Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Cases__c@Cases__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>FK_$Account.Active_Days__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Cases__c.Cancellation_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

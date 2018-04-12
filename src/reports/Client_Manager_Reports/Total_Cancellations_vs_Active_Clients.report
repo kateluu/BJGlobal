@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Product_Price__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.cancelat__c</field>
+    </columns>
+    <description>For Client Manager Dashboards</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>contains</operator>
+            <value>adwords,facebook,yahoo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>contains</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Yearly,2 Yearly</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account_Product__c.Product_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CMD - Cancellations vs Active Clients</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.cancelat__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

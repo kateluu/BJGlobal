@@ -1,0 +1,21 @@
+<apex:page standardController="SFDC_Projects__c" extensions="CasesForProjectController">
+<style>
+	.fewerMore { display: none;}
+</style>
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!cs}" var="c" rendered="{!NOT(ISNULL(cs))}">
+	        <apex:column headervalue="Case Name" >
+	        	<apex:CommandLink onclick="window.open('/{!c.Id}', '_blank'); return false;" >{!c.Name}</apex:CommandLink>
+	        </apex:column>
+	        <apex:column value="{!c.Status__c}"/>
+	        <apex:column value="{!c.Case_Reason__c}"/>
+	        <apex:column value="{!c.Priority__c}"/>
+	        <apex:column value="{!c.CreatedDate}"/>
+	        <apex:column value="{!c.CreatedById}"/>
+	        <apex:column value="{!c.Internal_Comments__c}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!(ISNULL(cs))}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

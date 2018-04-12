@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>field_key</field>
+    </columns>
+    <columns>
+        <field>OLDVAL</field>
+    </columns>
+    <columns>
+        <field>NEWVAL</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Case Edit History For Ben Brown 
+(26/2/2018 - 12/3/2018)</description>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <operator>equals</operator>
+            <value>Ben Brown</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>field_key</column>
+            <operator>equals</operator>
+            <value>Status</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Case Edit History For Ben Brown</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityAuditHistory$Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2018-03-12</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-02-26</startDate>
+    </timeFrameFilter>
+</Report>

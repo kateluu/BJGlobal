@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_23860920</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_OWNER_ROLE</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A  Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team A</sourceValue>
+            </sourceValues>
+            <value>Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team B</sourceValue>
+            </sourceValues>
+            <value>Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <value>Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team GMT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team GMT Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SLX (Aus) SEO Manager</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SLX (Aus) SEO Account Manager</sourceValue>
+            </sourceValues>
+            <value>SEO Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team B</value>
+        </values>
+        <values>
+            <value>SEO Team B</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account_Product__c.Sold_to_Pause__c</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.activeat__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Paused</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>notContain</operator>
+            <value>seo,convertopages,GO! Pages</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_23860920</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Current Paused</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.activeat__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

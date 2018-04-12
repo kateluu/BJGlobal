@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Share an account with a user</description>
+    <interviewLabel>Share account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Share account</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Share_Account</name>
+        <label>Share Account</label>
+        <locationX>52</locationX>
+        <locationY>81</locationY>
+        <inputAssignments>
+            <field>AccountAccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>VarT_AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CaseAccessLevel</field>
+            <value>
+                <stringValue>None</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OpportunityAccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>VarT_UserId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>AccountShare</object>
+    </recordCreates>
+    <startElementReference>Share_Account</startElementReference>
+    <variables>
+        <description>Id of the account to share</description>
+        <name>VarT_AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The Id of the user to share the account with.</description>
+        <name>VarT_UserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

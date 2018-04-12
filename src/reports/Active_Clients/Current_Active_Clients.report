@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_12448713</developerName>
+        <masterLabel>Company</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_$SLX_Product__c.company_name__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SponsoredLinx</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SponsoredLinX New Zealand</sourceValue>
+            </sourceValues>
+            <value>SLX</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Get More Traffic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Get More Traffic New Zealand</sourceValue>
+            </sourceValues>
+            <value>GMT</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>By Product and company</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_$SLX_Product__c.Product_Family__c</column>
+            <operator>equals</operator>
+            <value>AdWords,Facebook,SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>notContain</operator>
+            <value>funds</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$SLX_Product__c.Product_Family__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_12448713</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Current Active Clients</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.SLX_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.activeat__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

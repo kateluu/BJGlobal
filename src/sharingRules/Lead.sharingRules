@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Marketing_edit_all</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Marketing edit all</label>
+        <sharedTo>
+            <group>Marketing_Department</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>FirstName</field>
+            <operation>notEqual</operation>
+            <value>anything</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_GMT_leads_with_GMT_sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share GMT leads with GMT sales</label>
+        <sharedTo>
+            <role>GMTSales</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>From_Source__c</field>
+            <operation>contains</operation>
+            <value>Get More Traffic,GMT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SFGA__Web_Source__c</field>
+            <operation>contains</operation>
+            <value>getmoretraffic.com.au</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>notEqual</operation>
+            <value>Sale</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_SLX_leads_with_SLX_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share SLX leads with SLX Sales</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 2 or 4) AND 3</booleanFilter>
+        <criteriaItems>
+            <field>From_Source__c</field>
+            <operation>contains</operation>
+            <value>Facebook,SponsoredLinX,SLX,NZ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>SFGA__Web_Source__c</field>
+            <operation>contains</operation>
+            <value>sponsoredlinx.co.nz,adadviser,sponsoredlinx.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>notEqual</operation>
+            <value>Sale</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>LeadSource</field>
+            <operation>equals</operation>
+            <value>Facebook Lead Ads</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a generic template for Custom Object.  With this template, you may adjust the default elements and values and add new elements and values.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>seoWebsites</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bing_Top_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Bing Top 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Device__c</fullName>
+        <externalId>false</externalId>
+        <label>Device</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Desktop</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The geolocation that keyword ranking refers to.</inlineHelpText>
+        <label>Geolocation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Adelaide,South Australia,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alice Springs,Northern Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auckland,Auckland,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ballarat,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Belfast,Northern Ireland,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brisbane,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bundaberg,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caboolture,Caboolture,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cairns,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cambridge,Waikato,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canberra,Australian Capital Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Coast,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chermside,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chicago,Illinois,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Christchurch,Canterbury,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Darwin,Northern Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dubbo,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geelong,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glasgow,Scotland,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold Coast,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gympie,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hervey Bay,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hobart,Tasmania,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Houston,Texas,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lismore,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>London,England,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Los Angeles,California,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mackay,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manchester,England,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maroochydore,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Melbourne,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mount Isa,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nambour,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Newcastle,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York,New York,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Perth,Western Australia,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queenstown,Otago,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Redcliffe,Redcliffe,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rockhampton,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sunshine Coast,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sydney,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tamworth,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Toowoomba,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Townsville,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Victoria Point,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wagga Wagga,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wellington,Wellington,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wollongong,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4877,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Google_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Keyword_Count__c &gt; 0, Google_Sum__c / Keyword_Count__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Average Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Indexed_Pages__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Indexed Pages</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Map_Top_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Places Top 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Google_Original_Average__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Keyword_Count__c &gt; 0, Google_Original_Sum__c / Keyword_Count__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Original Google Average Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Original_Sum__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Original Sum</label>
+        <summarizedField>seoThemeKeywords__c.Google_Original__c</summarizedField>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Top_10_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Places Top 10 Count</label>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_Places_Current__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_Places_Current__c</field>
+            <operation>lessOrEqual</operation>
+            <value>10</value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Top_10_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Keyword_Count__c &gt; 0, Google_Places_Top_10_Count__c /  Keyword_Count__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Percentage in Google Places Top 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Google_Sum__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Sum</label>
+        <summarizedField>seoThemeKeywords__c.Google_Current__c</summarizedField>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Top_10_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Top 10 Count</label>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_Current__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_Current__c</field>
+            <operation>lessOrEqual</operation>
+            <value>10</value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Top_10_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Keyword_Count__c &gt; 0, Google_Top_10_Count__c / Keyword_Count__c, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Percentage in Page 1 Google</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Google_Top_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Top 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Crawl__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial Crawl</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Keyword_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Keywords</label>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Last_Crawl_Completed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Crawl Completed Date</label>
+        <summarizedField>seoThemeKeywords__c.Last_Crawl_Date__c</summarizedField>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Last_Crawl_Date__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Last_Crawl_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Crawl Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Report_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Report Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>SFDC_Projects__c.Account__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>SFDC_Projects__c</referenceTo>
+        <relationshipLabel>SEO Websites</relationshipLabel>
+        <relationshipName>SEO_Websites</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prospect_Keywords__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Keywords</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prospect_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Notes</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prospect_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Uncontactable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Searching_From__c</fullName>
+        <externalId>false</externalId>
+        <label>Search filter</label>
+        <picklist>
+            <picklistValues>
+                <fullName>The Web</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pages from Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Send_SEO_Report__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Send SEO Report</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Project__r.Account_Product__r.Product_Status__c)</formula>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Progress__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Update Progress</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Yahoo_Top_10__c</fullName>
+        <externalId>false</externalId>
+        <label>Yahoo Top 10</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>website_url__c</fullName>
+        <externalId>false</externalId>
+        <label>URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>SEO Website</label>
+    <listViews>
+        <fullName>Active_SEO_Websites</fullName>
+        <columns>Send_SEO_Report__c</columns>
+        <columns>NAME</columns>
+        <columns>website_url__c</columns>
+        <columns>Account__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Google_Top_10_Percent__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Project__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>seoWebsite__c.Internal_SEO_Website</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Active SEO Websites</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Send_SEO_Report__c</columns>
+        <columns>NAME</columns>
+        <columns>website_url__c</columns>
+        <columns>Account__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Google_Top_10_Percent__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Project__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>seoWebsite__c.Internal_SEO_Website</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>GMT</fullName>
+        <columns>Send_SEO_Report__c</columns>
+        <columns>NAME</columns>
+        <columns>website_url__c</columns>
+        <columns>Account__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Google_Top_10_Percent__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Project__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>notEqual</operation>
+            <value>seoWebsite__c.Internal_SEO_Website</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <label>Get More Traffic</label>
+    </listViews>
+    <listViews>
+        <fullName>Internal_seo_sites</fullName>
+        <columns>Send_SEO_Report__c</columns>
+        <columns>NAME</columns>
+        <columns>website_url__c</columns>
+        <columns>Account__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Google_Top_10_Percent__c</columns>
+        <columns>Last_Crawl_Completed_Date__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>seoWebsite__c.Internal_SEO_Website</value>
+        </filters>
+        <label>Internal SEO Websites</label>
+    </listViews>
+    <nameField>
+        <label>SEO Website</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>SEO Websites</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Internal_SEO_Website</fullName>
+        <active>true</active>
+        <description>For SEO Opportunities</description>
+        <label>Internal SEO Websites</label>
+        <picklistValues>
+            <picklist>Device__c</picklist>
+            <values>
+                <fullName>Desktop</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Geolocation__c</picklist>
+            <values>
+                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alice Springs%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auckland%2CAuckland%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ballarat%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belfast%2CNorthern Ireland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bundaberg%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caboolture%2CCaboolture%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cairns%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambridge%2CWaikato%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canberra%2CAustralian Capital Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central Coast%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chermside%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago%2CIllinois%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christchurch%2CCanterbury%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubbo%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geelong%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glasgow%2CScotland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hervey Bay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hobart%2CTasmania%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston%2CTexas%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lismore%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>London%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Los Angeles%2CCalifornia%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mackay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manchester%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Melbourne%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Isa%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nambour%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York%2CNew York%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newcastle%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Perth%2CWestern Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queenstown%2COtago%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redcliffe%2CRedcliffe%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rockhampton%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sunshine Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sydney%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tamworth%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townsville%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria Point%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wagga Wagga%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellington%2CWellington%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wollongong%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Searching_From__c</picklist>
+            <values>
+                <fullName>Pages from Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Web</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SEO_Prospect</fullName>
+        <active>true</active>
+        <description>SEO Prospects</description>
+        <label>SEO Prospect</label>
+        <picklistValues>
+            <picklist>Device__c</picklist>
+            <values>
+                <fullName>Desktop</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Geolocation__c</picklist>
+            <values>
+                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alice Springs%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auckland%2CAuckland%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ballarat%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belfast%2CNorthern Ireland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bundaberg%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caboolture%2CCaboolture%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cairns%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambridge%2CWaikato%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canberra%2CAustralian Capital Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central Coast%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chermside%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago%2CIllinois%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christchurch%2CCanterbury%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubbo%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geelong%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glasgow%2CScotland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hervey Bay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hobart%2CTasmania%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston%2CTexas%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lismore%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>London%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Los Angeles%2CCalifornia%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mackay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manchester%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Melbourne%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Isa%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nambour%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York%2CNew York%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newcastle%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Perth%2CWestern Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queenstown%2COtago%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redcliffe%2CRedcliffe%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rockhampton%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sunshine Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sydney%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tamworth%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townsville%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria Point%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wagga Wagga%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellington%2CWellington%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wollongong%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Prospect_Status__c</picklist>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uncontactable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unqualified</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Searching_From__c</picklist>
+            <values>
+                <fullName>Pages from Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Web</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SEO_Websites</fullName>
+        <active>true</active>
+        <label>SEO Websites</label>
+        <picklistValues>
+            <picklist>Device__c</picklist>
+            <values>
+                <fullName>Desktop</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Geolocation__c</picklist>
+            <values>
+                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alice Springs%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Auckland%2CAuckland%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ballarat%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belfast%2CNorthern Ireland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bundaberg%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caboolture%2CCaboolture%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cairns%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambridge%2CWaikato%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canberra%2CAustralian Capital Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central Coast%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chermside%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago%2CIllinois%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Christchurch%2CCanterbury%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dubbo%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Geelong%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glasgow%2CScotland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gold Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hervey Bay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hobart%2CTasmania%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston%2CTexas%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lismore%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>London%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Los Angeles%2CCalifornia%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mackay%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manchester%2CEngland%2CUnited Kingdom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Melbourne%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mount Isa%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nambour%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New York%2CNew York%2CUnited States</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newcastle%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Perth%2CWestern Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queenstown%2COtago%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Redcliffe%2CRedcliffe%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rockhampton%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sunshine Coast%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sydney%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tamworth%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townsville%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria Point%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wagga Wagga%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wellington%2CWellington%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wollongong%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Searching_From__c</picklist>
+            <values>
+                <fullName>Pages from Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>The Web</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Competitor_Comparison</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Competitor Comparison</masterLabel>
+        <openType>sidebar</openType>
+        <page>SeoCompetitorCompare</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Geolocation_Comparison</fullName>
+        <availability>online</availability>
+        <description>Compare rankings across different geolocations</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Geolocation Comparison</masterLabel>
+        <openType>sidebar</openType>
+        <page>SeoGeoCompare</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_SEO_Report</fullName>
+        <availability>online</availability>
+        <description>Send SEO report email to client immediately</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send SEO Report</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/38.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/38.0/apex.js&quot;)}
+
+var success = sforce.apex.execute(
+  &quot;SeoWebsiteService&quot;,
+  &quot;sendSeoReport&quot;,
+  {
+    websiteid:&apos;{!seoWebsite__c.Id}&apos;
+  }
+);
+
+if (success){
+  alert(&quot;Sent SEO report for {!seoWebsite__c.Name}&quot;);
+} else {
+  alert(&quot;FAILED Sending SEO report for {!seoWebsite__c.Name}&quot;);
+}
+
+//window.top.location.reload();</url>
+    </webLinks>
+</CustomObject>

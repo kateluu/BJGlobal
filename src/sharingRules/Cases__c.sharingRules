@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_BJB_Sales_Manager_Cases_with_Team_GMT_Leader</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share BJB Sales Manager Cases with Team GMT Leader</label>
+        <sharedTo>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>GMTAustralia</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_GMT_Sales_Manager_Case_with_Team_GMT_Leader</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share GMT Sales Manager Case with Team GMT Leader</label>
+        <sharedTo>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Sales_Manager_Assistant_GMT</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_GMT_cases_with_GMT_Sales_Manager</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share GMT cases with GMT Sales Manager</label>
+        <sharedTo>
+            <role>Sales_Manager_Assistant_GMT</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>GMTAustralia</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_SEO_Cases_with_James</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share SEO Cases with James</label>
+        <sharedTo>
+            <group>James_Snelson</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>SLX_Aus_SEO_Manager</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Team_A_Leaders_Cases_with_Team_Member</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Team A Leaders Cases with Team Member</label>
+        <sharedTo>
+            <role>Client_Manager_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Client_Manager_Team_A_Leader</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Team_GMT_Leaders_Cases_with_Team_GMT_Leader</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Team GMT Leaders Cases with Team GMT Leader</label>
+        <sharedTo>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Web_Case_with_Team_GMT_Leader</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Web Case with Team GMT Leader</label>
+        <sharedTo>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>SLXAusWebProjectManager</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

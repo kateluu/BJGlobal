@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Account_Products__r.Invoices__r.Payments__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Products__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Products__r.Invoices__r.Payments__r$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Account_Products__r.Invoices__r.Payments__r$Payment_Amount__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Products__r$Name</column>
+            <operator>contains</operator>
+            <value>adwords,seo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Products__r.Invoices__r.Payments__r$Payment_Type__c</column>
+            <operator>notEqual</operator>
+            <value>Credit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Products__r$Owner</column>
+            <operator>equals</operator>
+            <value>Nathan Moody</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Account.Account_Products__r.Invoices__r.Payments__r$Payment_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Nathan Moody November Payments</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Account_Products_with_Payments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.Account_Products__r.Invoices__r.Payments__r$Payment_Amount__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Account_Products__r.Invoices__r.Payments__r$Payment_Date__c</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

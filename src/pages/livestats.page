@@ -1,0 +1,18 @@
+<apex:page Controller="livestats" sidebar="false" showHeader="false">
+<script>   
+    var interval = 1000 * 60 * 5;
+    window.setTimeout('location.reload()',interval);
+</script>
+<div style="text-align:center">
+<h1>Number of Sign Ups Today</h1>
+<h2>{!NumberOfSignupsToday}</h2>
+<br/><br/>
+<h1>Number of Cancellations Today</h1>
+<h2>{!NumberOfCancellationsToday}</h2>
+</div>
+<div id="playsound" style="display: none">
+	<audio controls="controls" autoplay="autoplay"><source src="{!PlaySoundForNewSignup}" type="audio/wav" />Your browser does not support the audio tag.</audio> 
+	<audio controls="controls" autoplay="autoplay"><source src="{!PlaySoundForNewCancellation}" type="audio/wav" />Your browser does not support the audio tag.</audio>
+</div>
+
+</apex:page>

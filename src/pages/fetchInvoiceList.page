@@ -1,0 +1,43 @@
+<apex:page showHeader="false" sidebar="false" controller="fetchInvoiceList" action="{!init}">
+<apex:form >
+<h1>Invoice List</h1>
+<br></br>
+{!systemnow}
+<br></br>
+{!compname}
+<apex:pageblock >
+<apex:pageBlockTable value="{!InvList}" var="inv">
+    <apex:column headerValue="Invoice Number">
+        {!inv.invoiceNumber}
+    </apex:column>
+    <apex:column headerValue="Invoice Issue Date">
+        {!inv.issuedDate}
+    </apex:column>
+    <apex:column headerValue="Invoice Due Date">
+        {!inv.dueDate}
+    </apex:column>
+    <apex:column headerValue="Invoice Reference">
+        {!inv.reference}
+    </apex:column>
+    <apex:column headerValue="Invoice Total Due">
+        {!inv.amountDue}
+    </apex:column>
+    <apex:column headerValue="Contact ID">
+        {!inv.contact.contactID}
+    </apex:column>
+    <apex:column headerValue="Contact Organisation">
+        {!inv.contact.orgName}
+    </apex:column>
+    <apex:column headerValue="Contact Email">
+        {!inv.contact.emailAddress}
+    </apex:column>
+    <apex:column headerValue="Invoice Type">
+        {!inv.invoiceType}
+    </apex:column>
+    <apex:column headerValue="Invoice Status">
+        {!inv.status}
+    </apex:column>
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page standardController="Account" extensions="creditnoteList">
+<apex:outputText value="{!account.Xero_Sync_ID__c} {!account.id}" rendered="false"/>
+<apex:pageblock rendered="{!renderCrdList}">
+<apex:pageBlockTable value="{!CrdList}" var="crd">
+    <apex:column headerValue="CreditNote Number">
+        {!crd.CreditNoteNumber}
+    </apex:column>
+
+    <apex:column headerValue="Total">
+        {!crd.Total}
+    </apex:column>
+    
+    <apex:column headerValue="Tax">
+        {!crd.LineAmountType}
+    </apex:column>
+
+    <apex:column headerValue="Issued Date">
+        {!crd.issuedDate}
+    </apex:column>
+
+    <apex:column headerValue="Status">
+        {!crd.statusCode}
+    </apex:column>
+</apex:pageBlockTable>
+</apex:pageblock>
+
+<apex:pageblock title="CreditNote List" rendered="{!renderCrdMsg}">
+There are no credit notes to display at this time
+</apex:pageblock>
+</apex:page>

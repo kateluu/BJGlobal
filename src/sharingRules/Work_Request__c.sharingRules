@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Web_Work_Request_with_Doug</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Web Work Request with Doug</label>
+        <sharedTo>
+            <group>Doug_Carpenter</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Web(Data Feed),Web(Google Codes)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Google Code</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Web_Work_Request_with_Web_Dept</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Web Work Request with Web Dept</label>
+        <sharedTo>
+            <role>SLXAusWebProjectManager</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Web(Data Feed),Web(Google Codes)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Category__c</field>
+            <operation>equals</operation>
+            <value>Google Code</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Share_GMT_Receptions_Work_Request_with_GMT_TL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share GMT Receptions Work Request with GMT TL</label>
+        <sharedTo>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>GMT_Receptionist</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Tracey_Work_Request_with_Grace</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Tracey Work Request with Grace</label>
+        <sharedTo>
+            <managers>grace.james@sponsoredlinx.com</managers>
+        </sharedTo>
+        <sharedFrom>
+            <role>BJBGlobalAccountsAdmin</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

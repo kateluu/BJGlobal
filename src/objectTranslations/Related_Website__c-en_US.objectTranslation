@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Related Website</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Related Websites</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Related Websites --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Website URL --></label>
+        <name>Url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Website Type --></label>
+        <name>Website_Type__c</name>
+        <picklistValues>
+            <masterLabel>E-Commerce Site</masterLabel>
+            <translation><!-- E-Commerce Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landing Page</masterLabel>
+            <translation><!-- Landing Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Related Website Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

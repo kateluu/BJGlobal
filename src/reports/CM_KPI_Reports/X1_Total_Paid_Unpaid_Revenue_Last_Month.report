@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Xero_Invoices__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Xero_Invoices__r$AmountDue__c</field>
+    </columns>
+    <columns>
+        <field>Account.Xero_Invoices__r$AmountPaid__c</field>
+    </columns>
+    <columns>
+        <field>Account.Xero_Invoices__r$CreatedDate</field>
+    </columns>
+    <description>For CM KPI Reports</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Xero_Invoices__r$Status__c</column>
+            <operator>equals</operator>
+            <value>PAID,AUTHORISED</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>1. Total Paid/Unpaid Revenue (Last Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Xero_Invoices_with_Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.Xero_Invoices__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

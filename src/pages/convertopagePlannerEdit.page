@@ -1,0 +1,207 @@
+<apex:page showHeader="true" sidebar="true" standardController="Convertopage_Planner__c">
+    <style type="text/css">
+        input[type="text"],textarea { width: 450px; }
+    </style>
+
+	<apex:sectionHeader title="{!$ObjectType.Convertopage_Planner__c.label}" subtitle="{!Convertopage_Planner__c.name}"/>
+	<apex:pagemessages />
+
+	<apex:form >
+		<apex:pageBlock title="Convertopage Planner Edit">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!save}" value="Save"/>
+				<apex:commandButton action="{!cancel}" value="Cancel"/>
+			</apex:pageBlockButtons>
+
+			<apex:pageBlockSection showHeader="true" collapsible="false" columns="2" title="The following questions relate to your client's general business goals" >
+				<apex:pageBlockSectionItem >
+					Account
+					<apex:inputField value="{!Convertopage_Planner__c.Account__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					What is the current website URL for your client?
+					<apex:inputField value="{!Convertopage_Planner__c.What_is_the_current_website_URL_for_your__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: www.companyname.com.au
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					List any direct competitor site URLs
+					<apex:inputField value="{!Convertopage_Planner__c.List_any_direct_competitor_s_websites__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: www.companyname.com.au
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					What phone number should we use on the landing page?
+					<apex:inputField value="{!Convertopage_Planner__c.What_phone_number_should_we_use_on_the_l__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					If you would like to display an location/map please provide an address
+					<apex:inputField value="{!Convertopage_Planner__c.If_you_would_like_to_display_an_location__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					What email address should leads go to?
+					<apex:inputField value="{!Convertopage_Planner__c.What_email_add_do_you_want_your_lead__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+				
+				<apex:pageBlockSectionItem >
+					List 4 key selling points, plus a short description of each if applicable
+					<apex:inputField value="{!Convertopage_Planner__c.Please_list_your_unique_selling_points__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Provide a brief description of each USP where applicable
+					Example: 
+					Quality Workmanship: We take pride in each and every job and make sure all work passes our quality check process.
+					Attention to Detail: Our team have a keen eye on the small details which make all of our work special.
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					Provide a brief description about the business
+					<apex:inputField value="{!Convertopage_Planner__c.Provide_a_brief_description_about_the_bu__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: We're investing in our networks. In our staff and in sustainability. At Company, we’re invested in giving Australians choice and keeping you connected. With over 10 years in the industry we are always focussed on keeping our clients happy and producing the best work possible.
+				</apex:pageBlockSectionItem>
+				
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection showHeader="true" collapsible="false" columns="2" title="The following questions should be asked in relation to a single Ad Group">
+				<apex:pageBlockSectionItem >
+					What is the main website title
+					<apex:inputField value="{!Convertopage_Planner__c.What_is_the_main_website_title__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Wedding photo booth hire in Melbourne
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Provide a single sentence tagline describing this service
+					<apex:inputField value="{!Convertopage_Planner__c.Provide_a_short_description_of_this_prod__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Hiring a photobooth in Melbourne has never been easier and more affordable. We understand the importance of your special event and promise to create a unique experience that reflects your vision.
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					What should be the primary call to action?
+					<apex:inputField value="{!Convertopage_Planner__c.What_should_be_the_primary_call_to_actio__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Book a Booth
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Is there any specific form data you would like to capture for the primary call to action?
+					<apex:inputField value="{!Convertopage_Planner__c.Is_there_any_specific_form_data_you_woul__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Select a Date and time, List 4 colours to choose from (red, green, blue, yellow)
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					What should be the secondary call to action?
+					<apex:inputField value="{!Convertopage_Planner__c.Would_should_be_the_secondary_call_to_ac__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Contact Us
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Is there any specific form data you would like to capture for the secondary call to action?
+					<apex:inputField value="{!Convertopage_Planner__c.Is_there_any_specific_form_data_you_wou2__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Example: Make sure phone number is required
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					List any specific selling points related to this product/service
+					<apex:inputField value="{!Convertopage_Planner__c.List_any_specific_selling_points_related__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Provide a brief description of each USP where applicable. Example: Free Wedding album with all wedding photo booth hire
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Provide up to 3 testimonials if available
+					<apex:inputField value="{!Convertopage_Planner__c.Provide_up_to_3_testimonials_if_availabl__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					Provide a full description of the product/service
+					<apex:inputField value="{!Convertopage_Planner__c.Which_products_or_services_do_you_want_t__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+			</apex:pageBlockSection>
+
+
+			<apex:pageBlockSection showHeader="true" collapsible="false" columns="2" title="Converto colours, design, domain and images">
+				<apex:pageBlockSectionItem >
+					What colours do you think should be used
+					<apex:inputField value="{!Convertopage_Planner__c.What_colours_do_you_think_should_be_used__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					If no colours are preferred these will be chosen for you. If revisions to colours are requested this could result in additional charges.
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Please choose a domain/URL name for the convertopage
+					<apex:inputField value="{!Convertopage_Planner__c.What_domain_name_you_like_to_use_for_Con__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Please be aware this will be used for all convertopages in this account.
+					To check availability of a domain name you can use this tool: https://www.whois.com.au/
+					The domain chose must be available to register.
+					Example: www.clientname.com.au
+				</apex:pageBlockSectionItem>
+
+
+				<apex:pageBlockSectionItem >
+					What is the client’s ABN
+					<apex:inputField value="{!Convertopage_Planner__c.What_ABN_to_use_to_register_free_domain__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					This is only required if choosing an .au domain
+					Please check the ABN validates here: http://abr.business.gov.au/
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					What is your adwords Conversion code
+					<apex:inputField value="{!Convertopage_Planner__c.Please_enter_adwords_conversion_tracking__c}" required="true"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					Please enter GTM if required
+					<apex:inputField value="{!Convertopage_Planner__c.Please_enter_GTM_if_required__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Google Tag Manager code.
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					Please enter any additional notes
+					<apex:inputField value="{!Convertopage_Planner__c.Please_enter_any_addition_notes__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem />
+
+				<apex:pageBlockSectionItem >
+					<strong>After saving, please use the 'Attach Files' feature to attach the logo and other images to be used on the page.</strong>
+				</apex:pageBlockSectionItem>
+
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

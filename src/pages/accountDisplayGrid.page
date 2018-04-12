@@ -1,0 +1,46 @@
+<apex:page controller="accountDisplayGrid" sidebar="true" showHeader="true">
+<apex:form >
+<apex:selectList value="{!newAccOwner}" size="1" id="changeMyAccOwner">
+    <apex:actionSupport event="onchange" action="{!updateAccOwnerList}" rerender="pageBlock" />
+    <apex:selectOptions value="{!AccOwnerList}"/>
+</apex:selectList>
+<apex:pageBlock title="Custom Account View" mode="edit" id="pageBlock">
+<div align="right" style="display:{!IF(NOT(ISNULL(userAccount)),'block','none')}">
+<font size="1pt">Page #:&nbsp;<apex:outputLabel value="{!PageNumber}"/>&nbsp;out of&nbsp;<apex:outputLabel value="{!totalPageNumber}"/>&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<apex:commandButton value="Previous" action="{!previousBtnClick}" disabled="{!previousButtonEnabled}" reRender="pageBlock"></apex:commandButton>
+<apex:commandButton value="Next" action="{!nextBtnClick}" reRender="pageBlock" disabled="{!nextButtonDisabled}" ></apex:commandButton>
+</div>
+<apex:pageBlockTable value="{!userAccount}" var="acc">
+    <apex:column headerValue="Account">
+        {!acc.accname}
+    </apex:column>
+
+    <apex:column headerValue="Subscription">
+        {!acc.subscription}
+    </apex:column>
+
+    <apex:column headerValue="Subscription Type">
+        {!acc.subscriptiontype}
+    </apex:column>
+    
+    <apex:column headerValue="Billing Status">
+        {!acc.billingstatus}
+    </apex:column>
+    
+    <apex:column headerValue="Report Email">
+        {!acc.reportemail}
+    </apex:column>
+    
+    <apex:column headerValue="Contact Person">
+        {!acc.contactperson}
+    </apex:column>
+    
+    <apex:column headerValue="Contact Phone">
+        {!acc.contactphone}
+    </apex:column>
+
+</apex:pageBlockTable>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

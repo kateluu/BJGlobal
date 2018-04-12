@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_68942337</developerName>
+        <masterLabel>Product Types</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>ConvertoPages Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ConvertoPages Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Convertopages</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Starter Pack</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Conversion Page Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starter Pack 1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starter Pack 2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starter Pack 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starter Pack 4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Starter Pack 5</sourceValue>
+            </sourceValues>
+            <value>Starter Pack</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Business Pack</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Website Design &amp; Development</sourceValue>
+            </sourceValues>
+            <value>Business Pack</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Pie</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>BucketField_68942337</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5 OR 8 OR 9) AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Converto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Commerce</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Conversion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Landing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Project_Stage__c</column>
+            <operator>notContain</operator>
+            <value>Complete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Project_Stage__c</column>
+            <operator>notContain</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>starter pack</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>Business Pack</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_68942337</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Current Active Project</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SFDC_Projects__c@SFDC_Projects__c.Account_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <endDate>2015-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-01-01</startDate>
+    </timeFrameFilter>
+</Report>

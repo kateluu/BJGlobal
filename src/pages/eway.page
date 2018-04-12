@@ -1,0 +1,17 @@
+<apex:page showHeader="false" sidebar="false" controller="eway" action="{!init}">
+<h1>Eway Gateway Test Page</h1>
+{!response.ewayTrxnError}<br></br>
+{!response.ewayTrxnStatus}<br></br>
+{!response.ewayTrxnNumber}<br></br>
+{!response.ewayAuthCode}<br></br>
+<br></br><br></br>
+<h1>EWAY XML Request</h1>
+<pre>
+{!xmlrequest}
+</pre>
+<br></br><br></br>
+<h1>EWAY XML Response</h1>
+<pre>
+{!xmlresponse}
+</pre>
+</apex:page>

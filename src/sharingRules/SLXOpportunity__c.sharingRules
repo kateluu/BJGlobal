@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ShareWithGMT</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ShareWithGMT</label>
+        <sharedTo>
+            <role>GMTSales</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Team__c</field>
+            <operation>equals</operation>
+            <value>Get More Traffic</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ShareWithSLX</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ShareWithSLX</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Sales_Team__c</field>
+            <operation>equals</operation>
+            <value>SponsoredLinX</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Facebook_Opps_to_Sales_TeamLeader</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Facebook Opps to Sales TeamLeader</label>
+        <sharedTo>
+            <role>Sales_Manager_Assistant_SLX</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Send_to_Salesperson__c</field>
+            <operation>equals</operation>
+            <value>Sales Teamleader</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Default Rule</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>sales@sponsoredlinx.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.BJB_Company__c</field>
+                <operation>equals</operation>
+                <value>SponsoredLinX,SponsoredLinX NZ</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>sales@getmoretraffic.com.au</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Lead.BJB_Company__c</field>
+                <operation>equals</operation>
+                <value>GetMoreTraffic,GetMoreTraffic NZ</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>ben@bjbglobal.com.au</assignedTo>
+            <assignedToType>User</assignedToType>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

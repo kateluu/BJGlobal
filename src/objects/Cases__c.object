@@ -1,0 +1,2680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Customer Service Cases</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Account 2</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Product</label>
+        <referenceTo>Account_Product__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Products_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Products List</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Account_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Resolution</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Save</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Christmas Special</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alter Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saved to SEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Account_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Resolution</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change Business Ownership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Move To SLX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Move To GMT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alter Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cancel_by__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancel by</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancellation Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancelled Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CaseOwnerRole__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CaseOwnerRole</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseType__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Other Problem</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancellation</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Domain Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hosting Issue</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reassign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Resume</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case Type</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Christmas Special</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Holiday Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Case_Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Case_Open_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND(8*( 
+(5*FLOOR((DATEVALUE(NOW())-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(NOW())-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(NOW() -DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+- 
+(5*FLOOR((DATEVALUE(escalated_date__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(escalated_date__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+), 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Case Open Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Origin__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Origin</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Case_Reason__c</fullName>
+        <description>Please provide as much info as possible</description>
+        <externalId>false</externalId>
+        <label>Case Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BTS:Act of God</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BTS:Issues re SLX or Google Fees/Budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BTS:Signup not compl by Decision maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BTS:Technical/Legal/Industry std issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>----------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Sold to other products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Client referred a client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Sold to pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Relationship Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Alter billing method</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: EOM discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales: Holiday Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-----------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Bad reassign from last CM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Didn&apos;t see account was down</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Forced Pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Insufficient contact with client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Pause Extension</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Lack of ROI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Resume off pause - now cancelling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: CM error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM          - Tech issue (Scripts not running)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM - Poor Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM Error - Google billing down 2+ weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM Error - 3+ SLX invoices unpaid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM Error - Agreed work not completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM Error - Insufficient Contact With Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM Error - Save Strat Not Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>---------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Bad site, said no to landing page</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Business failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Cannot get in contact with client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Cashflow reasons</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Client illness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Competitor had better offer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Getting web work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Going on holiday</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Not funding Google Ac</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Not paying SLX invoices</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Refuses to give reason for cancel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Trademark/Compliance issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Selling business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Delay in getting access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client: Seasonal Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client       - Delays to Project (Waiting for client)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>--------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Financial Difficulty</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Delays to project - Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Delays to project - SponsoredLinX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Negotiating Re-sign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Guarantee not achieved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Client with debt collection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Aged client-Res no longer sufficient</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Client undersold (needs higher pkg)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEO:Client impossible to educate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converto: Cancelling AdWords</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converto: Web work complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converto: Unhappy with creative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converto: Lack of functionality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Converto: Lack of ROI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other: Christmas pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other: XMAS CXL CREDIT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SLX          - Cancelling due to other departments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-------------------------------------------</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RM - Client Unresponsive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RM - Cancellation Processed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Case_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Resolution</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pause</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Save</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reassign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Christmas Special</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Case_Response_Time__c</fullName>
+        <description>The duration from when the case is escalated to the first successful response.</description>
+        <externalId>false</externalId>
+        <formula>ROUND(8*( 
+(5*FLOOR((DATEVALUE(First_Success_Call__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(First_Success_Call__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(First_Success_Call__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+- 
+(5*FLOOR((DATEVALUE(escalated_date__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(escalated_date__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+), 2)</formula>
+        <inlineHelpText>The duration from when the case is escalated to the first successful response.</inlineHelpText>
+        <label>Case Response Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Manager1__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Manager1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Manager_Reassign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Client Manager Reassign</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Client_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Competitor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Competitor</label>
+        <referenceTo>Competitor__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Amount__c</fullName>
+        <description>Total Credit amount</description>
+        <externalId>false</externalId>
+        <label>Credit Request Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Invoices_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Invoices End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Invoices_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Invoices List</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Credit_Invoices_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Invoices Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Daily_Budget__c</fullName>
+        <description>Current AdWords Daily Budget</description>
+        <externalId>false</externalId>
+        <label>Daily Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Downgrade_Amount__c</fullName>
+        <description>Please specify the downgrade amount.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please specify the downgrade amount.</inlineHelpText>
+        <label>Downgrade Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Downgrade_Difference__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Downgrade_Amount__c==0, 0,Account_Product__r.Product_Price__c - Downgrade_Amount__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Downgrade Difference</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Downgrade__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Downgrade</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Final_Action_Timestamp__c</fullName>
+        <externalId>false</externalId>
+        <label>Final_Action_Timestamp</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>First_Success_Call__c</fullName>
+        <description>The timestamp of the first outbound call which duration longer than 30s in related to the case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The timestamp of the first outbound call which duration longer than 30s in related to the case</inlineHelpText>
+        <label>First Success Call</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Have_Confirmed_to_Turn_Off_AdWords_Acct__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If client would like Adwords account turned off</inlineHelpText>
+        <label>Have Confirmed to Turn Off AdWords Acct</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>If_no_please_explain__c</fullName>
+        <externalId>false</externalId>
+        <label>If no please explain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Internal_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal Comments</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Latest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Latest</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Num_Of_Calls__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of calls the sales team member had involved (made or received)</inlineHelpText>
+        <label>Num Of Calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Num_Of_Emails__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of emails the sales team member had done</inlineHelpText>
+        <label>Num Of Emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offered_1_Weeks_Free_Management__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Offered 1 Weeks Free Management</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Offered_2_Weeks_Free_Management__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Offered 2 Weeks Free Management</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Offered_Credit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Offered Credit</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Offered_Senior_Client_Manager__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Offered Senior Client Manager</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>CaseOwnerRole__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pause_by__c</fullName>
+        <externalId>false</externalId>
+        <label>Pause by</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Winbacks__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Potential Winbacks</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <color>#0B6FCE</color>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <color>#FF9900</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Processed_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Processed By</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>SLX Client Team Manager</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>SLX Client Operations Manager</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Processing_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND(8*( 
+(5*FLOOR((DATEVALUE(unresolved_date__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(unresolved_date__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(unresolved_date__c -DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+- 
+(5*FLOOR((DATEVALUE(escalated_date__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(escalated_date__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+), 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Processing Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Active_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Product__r.Active_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Active Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Product__r.Product_Type__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reassign_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Reassign To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Refund_Amount__c</fullName>
+        <description>Total Refund Amount</description>
+        <externalId>false</externalId>
+        <label>Refund Request Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Refund_Invoices_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Refund Invoices End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Refund_Invoices_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Refund Invoices List</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Refund_Invoices_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Refund Invoices Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Manager_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Manager Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resolution_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Resolution Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SEO_Package__c</fullName>
+        <externalId>false</externalId>
+        <label>SEO Package</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Sales_Person__r.Name</formula>
+        <label>Sales Person</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Save_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Saved Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Saved_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Saved By</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>contains</operation>
+                <value>Client</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Saved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Saved</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Saved_by_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>Saved_By__r.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Saved by Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Solution__c</fullName>
+        <externalId>false</externalId>
+        <label>Solution</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <color>#0B6FCE</color>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Escalated</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Call_Duration__c</fullName>
+        <description>Total Call Duration in last 3 weeks from escalated time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Call Duration in last 3 weeks from escalated time</inlineHelpText>
+        <label>Total Call Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unresolved_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Unresolved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Cases4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unresolved_by_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>Unresolved_By__r.UserRole.Name</formula>
+        <label>Unresolved by Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Waiver_Request_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Waiver Request Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>X2012_2_Weeks_Notice_to_be_applied__c</fullName>
+        <description>2 weeks&apos; notice to be applied?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please specify how many weeks&apos; notice is required. (For cancellations only)</inlineHelpText>
+        <label>2 Weeks&apos; Notice to be applied?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2 weeks&apos; notice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 week&apos;s notice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>0 weeks&apos; notice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>X2012_Action_Taken_to_Save__c</fullName>
+        <defaultValue>&quot;If you have attempted to save the client, please detail your save strategy.&quot;</defaultValue>
+        <description>Action Taken to Save</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you have attempted to save the client, please detail your save strategy.</inlineHelpText>
+        <label>Action Taken to Save</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2012_CM_Comments__c</fullName>
+        <defaultValue>&quot;Please enter your comments regarding the case.&quot;</defaultValue>
+        <description>CM Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter any comments regarding the case.</inlineHelpText>
+        <label>CM Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2012_CM_Proposed_Action__c</fullName>
+        <defaultValue>&quot;Please enter your proposed action to resolve this case.&quot;</defaultValue>
+        <description>CM Proposed Action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter your proposed action to resolve this case.</inlineHelpText>
+        <label>CM Proposed Action</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2012_Cancellation_Waiver_Requested__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Cancellation Waiver Requested by CM?</description>
+        <externalId>false</externalId>
+        <label>Cancellation Waiver Requested by CM?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X2012_Cancellation_Waiver_approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Cancellation Waiver approved?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To be approved by Client Operations Manager.</inlineHelpText>
+        <label>Cancellation Waiver approved?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>X2012_E_mail_or_Phone_Summary__c</fullName>
+        <defaultValue>&quot;Please enter a transcript of the customer&apos;s complaint.&quot;</defaultValue>
+        <description>E-mail or Phone Summary</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a transcript of the customer&apos;s complaint.</inlineHelpText>
+        <label>E-mail or Phone Summary</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2012_Final_Action_FOR_MANAGERS__c</fullName>
+        <defaultValue>&quot;***For Team Managers to complete.***&quot;</defaultValue>
+        <description>Final Action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the final action for Accounts to complete.</inlineHelpText>
+        <label>Final Action (FOR MANAGERS)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X2012_Original_Request_Date__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <description>Original Request Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the original date that the client raised the issue.</inlineHelpText>
+        <label>Original Request Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X2012_Refund_Invoice_s__c</fullName>
+        <description>Refund Invoice(s)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the Invoice Numbers to be refunded.</inlineHelpText>
+        <label>Refund Invoice(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X2012_Related_to_previous_case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Related to previous case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter any related cases.</inlineHelpText>
+        <label>Related to previous case</label>
+        <referenceTo>Cases__c</referenceTo>
+        <relationshipLabel>Related to previous case</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X2012_Void_Invoice_s__c</fullName>
+        <description>Void Invoice(s)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the Invoice Numbers to be voided.</inlineHelpText>
+        <label>Void Invoice(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X2012_Website_URL__c</fullName>
+        <defaultValue>&quot;http://&quot;</defaultValue>
+        <description>Website URL</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the exact URL of your client&apos;s website.</inlineHelpText>
+        <label>Website URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>escalated_date__c</fullName>
+        <description>The datetime when case was changed to escalated.</description>
+        <externalId>false</externalId>
+        <label>Escalated Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>unresolved_date__c</fullName>
+        <description>the date when case was changed to unresolved</description>
+        <externalId>false</externalId>
+        <label>Unresolved Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Cases</label>
+    <listViews>
+        <fullName>Alex_Escalated_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CaseType__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Alexandra Brown</value>
+        </filters>
+        <label>Alex Escalated Cases</label>
+        <sharedTo>
+            <group>Daniel_Carey</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Account_2__c</columns>
+        <columns>Status__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Cancellation_Date__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>X2012_Cancellation_Waiver_approved__c</columns>
+        <columns>X2012_Cancellation_Waiver_Requested__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <sharedTo>
+            <role>SLX_Aus_Receptionist</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_Escalated_Cases2</fullName>
+        <columns>NAME</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>kylie vaughan,ben brown,tuifao pi,amber porter,courtney leech</value>
+        </filters>
+        <label>RM TEAM CASES - All</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_New</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Subject__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Product_Active_Days__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>new</value>
+        </filters>
+        <label>All New</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Back_to_Sales</fullName>
+        <columns>NAME</columns>
+        <columns>CaseType__c</columns>
+        <columns>Account__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>Sales_Person__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>OWNER.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>Porter,Andersen,Staunton,Lamers,Phillips,Wilson</value>
+        </filters>
+        <label>Back to Sales</label>
+        <sharedTo>
+            <group>Kerry_Anderson</group>
+            <role>SLXSalesManager</role>
+            <role>Sales_Manager_Assistant_Digital_Strategy</role>
+            <role>Sales_Manager_Assistant_GMT</role>
+            <role>Sales_Manager_Assistant_SLX</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Ben_Shannah_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>Ben</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,Escalated</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>12/24/2014 12:00 AM</value>
+        </filters>
+        <label>Ben &amp; Shannah Cases</label>
+        <sharedTo>
+            <group>Sharene_Moses</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Cancelled</fullName>
+        <booleanFilter>(1 OR 2) AND (3 OR 4)</booleanFilter>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Subject__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Status__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>cancelled</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>closed</value>
+        </filters>
+        <filters>
+            <field>CaseType__c</field>
+            <operation>includes</operation>
+            <value>Cancellation</value>
+        </filters>
+        <filters>
+            <field>CaseType__c</field>
+            <operation>includes</operation>
+            <value>Refund</value>
+        </filters>
+        <label>Cancels &amp; Refunds - Cancelled &amp; Closed</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Charge_Backs</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Cancel_by__c</columns>
+        <columns>Pause_by__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>equals</operation>
+            <value>Kerry,Amber</value>
+        </filters>
+        <label>Charge Backs</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Daniel_s_Escalated_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CaseType__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Ben Brown</value>
+        </filters>
+        <label>Ben Brown&apos;s  Escalated Cases</label>
+        <sharedTo>
+            <group>Daniel_Carey</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Escalated</fullName>
+        <columns>NAME</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <label>All Escalated Cases</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>EscalatedTeamANotAss</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Team A</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>notContain</operation>
+            <value>Kylie</value>
+        </filters>
+        <label>All Team A Escalated - NoAssignToKyllie</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_Team_A_Escalated</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>GMT Team A</value>
+        </filters>
+        <label>GMT Team A Escalated</label>
+        <sharedTo>
+            <group>Aimee_Devitt</group>
+            <group>Lydia_Osullivan</group>
+            <group>Matthew_Pearson</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+            <role>Client_Manager_GMT_Team_B_Leader</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_Team_A_New</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>GMT Team A</value>
+        </filters>
+        <label>GMT Team A New</label>
+        <sharedTo>
+            <group>Aimee_Devitt</group>
+            <group>Lydia_Osullivan</group>
+            <group>Matthew_Pearson</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_GMT_Team_A_Leader</role>
+            <role>Client_Manager_GMT_Team_B_Leader</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_Team_B_Escalated</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>GMT Team B</value>
+        </filters>
+        <label>GMT Team B Escalated</label>
+        <sharedTo>
+            <group>Aimee_Devitt</group>
+            <group>Lydia_Osullivan</group>
+            <group>Matthew_Pearson</group>
+            <group>Ryan_Goldsworthy</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_GMT_Team_B_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_Team_B_New</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>GMT Team B</value>
+        </filters>
+        <label>GMT Team B New</label>
+        <sharedTo>
+            <group>Aimee_Devitt</group>
+            <group>Lydia_Osullivan</group>
+            <group>Matthew_Pearson</group>
+            <group>Ryan_Goldsworthy</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_GMT_Team_B_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NotEscalated</fullName>
+        <columns>NAME</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>Escalated</value>
+        </filters>
+        <label>All Not Escalated Cases</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SEO_Casess1</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>SEO_Package__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>SEO Team A</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated,Unresolved,New</value>
+        </filters>
+        <label>SEO Cases - Team A</label>
+        <sharedTo>
+            <group>James_Snelson</group>
+            <group>Nathan_Moody</group>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+            <role>SLX_Aus_SEO_Manager</role>
+            <role>SLX_Aus_SEO_Team_A_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SEO_Casess2</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>SEO_Package__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>SEO Team B,Adwords &amp; SEO Client Manger</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated,Unresolved,New</value>
+        </filters>
+        <label>SEO Cases - Team B</label>
+        <sharedTo>
+            <group>James_Snelson</group>
+            <role>Adwords_SEO_Client_Manger</role>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>SLXAusClientOperationsManager</role>
+            <role>SLX_Aus_SEO_Team_B_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Saved</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Subject__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Resolution__c</field>
+            <operation>contains</operation>
+            <value>Save</value>
+        </filters>
+        <label>Saved</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_A_Escalated_teamA</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team A,Adwords,Resolution Manager Team A</value>
+        </filters>
+        <label>Team A Escalated</label>
+        <sharedTo>
+            <group>Ryan_Goldsworthy</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>Client_Resolution_Manager_Team_A</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_A_New_Cases_teama</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team A,Adwords,Resolution Manager Team A</value>
+        </filters>
+        <label>Team A New Cases</label>
+        <sharedTo>
+            <group>Ryan_Goldsworthy</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>Client_Resolution_Manager_Team_A</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_B_Escalated_teamB</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team B,Adwords,Resolution Manager Team B</value>
+        </filters>
+        <label>Team B Escalated</label>
+        <sharedTo>
+            <group>Daniel_Carey</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>Client_Resolution_Manager_Team_B</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_B_New_Cases_teama</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team B,Adwords,Resolution Manager Team B</value>
+        </filters>
+        <label>Team B New Cases</label>
+        <sharedTo>
+            <group>Daniel_Carey</group>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>Client_Resolution_Manager_Team_B</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_C_Escalated_teamb</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team C,Resolution Manager Team C</value>
+        </filters>
+        <label>Team C Escalated</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_C_Leader</role>
+            <role>Client_Resolution_Manager_Team_C</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Team_C_New_Cases_teamb</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CaseOwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Client Manager Team C,Resolution Manager Team C</value>
+        </filters>
+        <label>Team C New Cases</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>Client_Manager_Team_C_Leader</role>
+            <role>Client_Resolution_Manager_Team_C</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Tuis_Escalated_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>LAST_ACTIVITY</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Tuifao Pi</value>
+        </filters>
+        <label>Tuis Escalated Cases</label>
+        <sharedTo>
+            <group>Daniel_Carey</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Unresolved</fullName>
+        <columns>NAME</columns>
+        <columns>CaseType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>Status__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Unresolved</value>
+        </filters>
+        <filters>
+            <field>CaseType__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </filters>
+        <label>Unresolved</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UnresolvedApprovalTeam_Cases</fullName>
+        <filterScope>Queue</filterScope>
+        <label>UnresolvedApprovalTeam</label>
+        <queue>UnresolvedApprovalTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Yesterday_Escalated</fullName>
+        <columns>NAME</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>escalated_date__c</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <filters>
+            <field>CaseType__c</field>
+            <operation>includes</operation>
+            <value>Cancellation</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>contains</operation>
+            <value>Social,AdWords</value>
+        </filters>
+        <label>Yesterday Escalated Cases</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>Case Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cases</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Action_Taken_to_Save</fullName>
+        <active>false</active>
+        <description>Check if the Action_taken_to_save field is blank or same as help text.</description>
+        <errorConditionFormula>AND (INCLUDES( CaseType__c , &apos;Cancellation&apos;), OR(ISBLANK( X2012_Action_Taken_to_Save__c), X2012_Action_Taken_to_Save__c = &apos;If you have attempted to save the client, please detail your save strategy.&apos;))</errorConditionFormula>
+        <errorDisplayField>X2012_Action_Taken_to_Save__c</errorDisplayField>
+        <errorMessage>Action_taken_to_save cannot be blank or same as help text if case type is Cancellation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Billing_Resolution_Credit</fullName>
+        <active>false</active>
+        <description>Billing Resolution Credit</description>
+        <errorConditionFormula>ISPICKVAL(Billing_Resolution__c, &apos;Credit&apos;)  &amp;&amp;  ISBLANK( Credit_Amount__c )</errorConditionFormula>
+        <errorDisplayField>Credit_Amount__c</errorDisplayField>
+        <errorMessage>Please enter a credit amount</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Billing_Resolution_Refund</fullName>
+        <active>false</active>
+        <description>Billing Resolution Refund</description>
+        <errorConditionFormula>ISPICKVAL(Billing_Resolution__c, &apos;Refund&apos;)  &amp;&amp;  ISBLANK( Refund_Amount__c )</errorConditionFormula>
+        <errorDisplayField>Refund_Amount__c</errorDisplayField>
+        <errorMessage>Please enter a refund amount</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Have_Confirmed_When_Unresolved</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(Status__c , &apos;Unresolved&apos;),
+AND(ISBLANK(If_no_please_explain__c), Have_Confirmed_to_Turn_Off_AdWords_Acct__c =false),
+NOT(CONTAINS(  Owner_Role__c , &quot;SEO&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>Have_Confirmed_to_Turn_Off_AdWords_Acct__c</errorDisplayField>
+        <errorMessage>Have you confirmed if client would like Adwords Account turned off, if no, please explain</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Client_Manager_Reassign_To</fullName>
+        <active>true</active>
+        <description>Client Manager Reassign To</description>
+        <errorConditionFormula>Client_Manager_Reassign__c = TRUE &amp;&amp; ISBLANK( Reassign_To__c )</errorConditionFormula>
+        <errorDisplayField>Reassign_To__c</errorDisplayField>
+        <errorMessage>Please select a user account to reassign to</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Closed_Cases</fullName>
+        <active>true</active>
+        <description>Only Accounts and COM can change Final Action (FOR MANAGERS) and Case Resolution once case being Closed</description>
+        <errorConditionFormula>AND( 
+OR( 
+ISCHANGED(Case_Resolution__c), 
+ISCHANGED(X2012_Final_Action_FOR_MANAGERS__c)
+), 
+ISPICKVAL(Status__c, &quot;Closed&quot;), 
+$Profile.Name &lt;&gt; &quot;Accounts &amp; Admin&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;SLX Client Operations Manager&quot; 
+)</errorConditionFormula>
+        <errorMessage>Sorry, you can&apos;t alter Case Resolution or Final Action (FOR MANAGERS) once Case being closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>For_Unresolved_Approval_Require</fullName>
+        <active>true</active>
+        <description>Approval is Required for any Unresolved Request</description>
+        <errorConditionFormula>OR(
+AND(
+AND(ISPICKVAL(PRIORVALUE(Status__c),&quot;Escalated&quot;),
+OR((Downgrade_Difference__c&gt;= 10),
+(Refund_Amount__c  &gt; 500))), (ISPICKVAL(Status__c,&quot;Unresolved&quot;)),
+ $User.Username &lt;&gt; &apos;amber.porter@sponsoredlinx.com&apos;
+)
+)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Approval is required to become &apos;Unresolved&apos; status because the Downgrade Amount or Refund Request Amount is too big</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Client_Manager_to_edit_record</fullName>
+        <active>true</active>
+        <description>Prevent_Client_Manager_to_edit_record</description>
+        <errorConditionFormula>ISPICKVAL(Status__c , &apos;Escalated&apos;) 
+&amp;&amp; INCLUDES(CaseType__c, &apos;Cancellation&apos;) 
+&amp;&amp; ( 
+CONTAINS(Product_Type__c, &apos;AdWords&apos;) || 
+CONTAINS(Product_Type__c, &apos;Social&apos;) 
+) 
+&amp;&amp; (OwnerId = $User.Id)
+&amp;&amp; (NOT(ISCHANGED(Status__c)))</errorConditionFormula>
+        <errorMessage>Sorry. It is an escalated case , please contact the Resolution Manager to request any update. Thanks</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,59 @@
+<apex:page controller="createProductList" sidebar="false" showHeader="false" action="{!init}">
+    <apex:form >
+        <apex:inputHidden value="{!account.Id}" id="accountid"/>
+                 
+        <apex:sectionHeader title="Add Product To {!account.Name}'s Account" subtitle=""/>
+            <apex:pageblock >
+                <apex:pageblocksection title="Product Selection" columns="1">
+                    <apex:pageblocksectionItem >
+                        <apex:outputlabel value="Product" for="products" /> 
+                        <apex:selectList value="{!product}" size="1" id="products">
+                            <apex:actionSupport event="onchange" action="{!populate}" rerender="newvalue" />
+                            <apex:selectOptions value="{!productnames}"/>
+                        </apex:selectList>
+                    </apex:pageblocksectionItem>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Product Information" columns="1" id="newvalue">                    
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Code" for="productcode"/>
+                        <apex:outputText value="{!prodobject.ProductCode__c}" id="productcode"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Company Name" for="companyname"/>
+                        <apex:outputText value="{!prodobject.company_name__c}" id="companyname"/>
+                    </apex:pageblocksectionItem>   
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Name" for="productname"/>
+                        <apex:outputText value="{!prodobject.Name}" id="productname"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Package" for="productpackage"/>
+                        <apex:outputText value="{!prodobject.Product_Package__c}" id="productpackage"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Family" for="productfamily"/>
+                        <apex:outputText value="{!prodobject.Product_Family__c}" id="productfamily"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Max Usage" for="productmaxusage"/>
+                        <apex:outputText value="{!prodobject.product_max_usage__c}" id="productmaxusage"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Recurring" for="productrecurring"/>
+                        <apex:outputText value="{!prodobject.product_recurring__c}" id="productrecurring"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Recurring Period" for="recurringperiod"/>
+                        <apex:outputText value="{!prodobject.recurring_period__c}" id="recurringperiod"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:outputLabel value="Product Price" for="productprice"/>
+                        <apex:inputText value="{!prodobject.product_price__c}" id="productprice"/>
+                    </apex:pageblocksectionItem>
+                    <apex:pageblocksectionItem >
+                        <apex:commandButton action="{!addproduct}" value="Add Product" disabled="{!buttonIsDisabled}" id="addProductButton"/>
+                    </apex:pageblocksectionItem>
+                </apex:pageblocksection>                
+        </apex:pageblock>        
+    </apex:form>
+</apex:page>

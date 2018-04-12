@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Monthly_Price__c</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_ADDR1_STATE</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_ADDR1_ZIP</field>
+    </columns>
+    <columns>
+        <field>FK_ACC_INDUSTRY</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>contains</operator>
+            <value>Adwords,Facebook,Admob,Yahoo,google+</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Yearly,2 Yearly,Quarterly</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Active Customer List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

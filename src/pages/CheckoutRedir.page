@@ -1,0 +1,9 @@
+<apex:page controller="CheckoutController" showHeader="false" sidebar="false" standardStyleSheets="false" cache="false">
+
+<apex:outputPanel rendered="{!parentRedirect != null}">
+<script>
+	window.top.location.href = "{!parentRedirect}";
+</script>
+</apex:outputPanel>
+
+</apex:page>

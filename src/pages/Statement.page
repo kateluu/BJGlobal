@@ -1,0 +1,159 @@
+<apex:page StandardController="Account" extensions="Statement">
+	<head>
+	<style type="text/css">
+		.statementSum {
+			white-space:pre; 
+			font-size: 10pt; 
+			font-weight:bold; 
+		}
+	</style>
+	<script>
+        function setFocusOnLoad() {} 
+    </script>
+	</head> 
+
+
+	<apex:pageblock title="Account Statement for {!acc.Name} ">
+		<apex:form >
+			<h3>Statement period</h3>
+			<apex:pageBlockSection >
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="From" />
+					<apex:inputField id="from" value="{!invoice1.Issue_Date__c}" />
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="To" />
+					<apex:inputField id="to" value="{!invoice2.Issue_Date__c}" />
+				</apex:pageBlockSectionItem>
+
+				<apex:commandbutton value="Search" action="{!showResult}" rerender="search_result,thePanel" status="statement_status">
+				</apex:commandbutton>
+
+				<apex:pageBlockSectionItem >
+					<apex:commandbutton value="Print PDF " action="{!printPDF}" />
+					<apex:commandbutton value="Send Email" action="{!sendEmail}" />
+				</apex:pageBlockSectionItem>
+
+				<apex:actionStatus id="statement_status"
+					startText="Searching......." />
+			</apex:pageBlockSection> 
+
+			<apex:pageBlock id="search_result">
+				<table class="list" border="0" cellpadding="0" cellspacing="0">
+					<thead class="rich-table-thead">
+		                <tr class="headerRow">
+				            <th class="headerRow" scope="col" colspan="1">Date</th>
+				            <th class="headerRow" scope="col" colspan="1">Activity</th>
+				            <th class="headerRow" scope="col" colspan="1">Reference</th>
+				            <th class="headerRow" scope="col" colspan="1">Due Date</th>
+				            <th class="headerRow" scope="col" colspan="1">Total</th>
+				            <th class="headerRow" scope="col" colspan="1">Payment</th>
+				            <th class="headerRow" scope="col" colspan="1">Credit</th>
+				            <th class="headerRow" scope="col" colspan="1">Refund</th>
+				            <th class="headerRow" scope="col" colspan="1">Due</th>
+				        </tr>
+		            </thead>
+						
+			        <apex:repeat var="trans" value="{!transactions}">
+			        
+			        <tr class="dataRow" onblur="if (window.hiOff){hiOff(this);}" onfocus="if (window.hiOn){hiOn(this);}" onmouseout="if (window.hiOff){hiOff(this);}" onmouseover="if (window.hiOn){hiOn(this);}">
+			            <td class="dataCell">
+				            <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+								<apex:param value="{!trans.trans.Date__c}" />
+							</apex:outputText>
+						</td> 
+			
+			            <td class="dataCell">
+			            	<apex:CommandLink onclick="window.open('/{!trans.trans.Link__c}', '_blank'); return false;">
+			            		{!trans.trans.Activity__c}
+							</apex:CommandLink>
+						</td>
+			
+			            <td class="dataCell">{!trans.trans.Reference__c}</td>
+			
+			            <td class="dataCell">
+							<apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+								<apex:param value="{!trans.trans.Due_Date__c}" />
+							</apex:outputText>
+						</td>
+			            
+			            <td class="dataCell">
+			            	<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!trans.trans.Total__c}" />
+							</apex:outputText>
+			            </td>
+			            
+			            <td class="dataCell">
+			            	<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!trans.trans.Payment__c}" />
+							</apex:outputText>
+			            </td>
+			            
+			            <td class="dataCell">
+			            	<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!trans.trans.Credit__c}" />
+							</apex:outputText>
+			            </td>
+			            
+			            <td class="dataCell">
+			            	<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!trans.trans.Refund__c}" />
+							</apex:outputText>
+			            </td>
+			            
+			            <td class="dataCell">
+			            	<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!trans.trans.Due__c}" />
+							</apex:outputText>
+			            </td>
+			
+			        </tr> 
+			 
+			        </apex:repeat> 
+			        
+			        <tr class="dataRow" style="display:{!if(transactions.size>0, 'table-row', 'none')}">
+			        	<td class="statementSum">Total</td>
+			        	<td></td>
+			        	<td></td>
+			        	<td></td>
+			        	<td class="statementSum">
+			        		<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!total_amount}" />
+							</apex:outputText>
+						</td>
+						<td class="statementSum">
+			        		<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!total_paid_by_client}" />
+							</apex:outputText>
+						</td>
+						<td class="statementSum">
+			        		<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!total_credit}" />
+							</apex:outputText>
+						</td>
+			        	<td class="statementSum">
+			        		<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!total_refund}" />
+							</apex:outputText>
+						</td>
+			        	<td class="statementSum">
+			        		<apex:outputText value="{0,number,$##,##0.00}">
+								<apex:param value="{!due}" />
+							</apex:outputText>
+						</td>
+			        </tr>
+			        
+				<!-- <apex:outputText
+					
+					value="TOTAL PAID: {0,number,$##,##0.00}">
+					<apex:param value="{!total_paid}" />
+				</apex:outputText> -->
+			
+			    </table>
+
+			</apex:pageBlock>
+		</apex:form>
+	</apex:pageblock>
+</apex:page>

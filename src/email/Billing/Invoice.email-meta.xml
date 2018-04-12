@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Invoice email template</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Invoice</name>
+    <style>none</style>
+    <subject>Invoice</subject>
+    <textOnly>[company-name]
+[company-address]
+ABN: [company-abn]
+
+
+
+Tax Invoice
+
+Your Details:
+[contact-business-name]
+[contact-address]
+
+Account Number: [account-number]
+Invoice Number: [invoice-number]
+Issue Date: [invoice-issue-date]
+Due Date: [invoice-due-date]
+Amount Due: $[invoice-amount-due]
+
+
+Account Activity
+Products:
+
+[line-items]
+
+Total: $[invoice-total]
+Amount Paid: $[invoice-amount-paid]
+Amount Due: $[invoice-amount-due]
+
+Note: all prices are 10% GST inclusive
+Breakdown: $[invoice-subtotal] Price + $[invoice-tax] GST = $[invoice-total] Total
+
+
+Notes:
+1. All invoices can be found online at http://clientpanel.sponsoredlinx.com.au, using your login details.
+
+
+Payment Options:
+
+DIRECT DEBIT
+Pay your bills automatically from a nominated bank account (including credit cards).
+Please call [company-phone] for more information.
+
+PAY BY PHONE
+Call [company-phone] to make a payment by credit card
+Use Account No: [account-number] or Invoice No: [invoice-number] as a reference and have your credit card ready when calling.
+
+PAY BY CHEQUE
+Make cheque payable to &quot;[company-name]&quot;
+Post to PO BOX 1802, Sunnybank Hills 4109 QLD
+Please put your Account No: [account-number] or Invoice No: [invoice-number] on the back of the cheque.
+
+DIRECT BANK DEPOSIT
+Remit to [company-name]
+BSB: 014-278, Account Number: 4889 29453
+Please put your Account No: [account-number] as a reference.
+
+
+Please login to your SponsoredLinX client panel by visiting http://clientpanel.sponsoredlinx.com.au for more info.
+If you have forgotten your login details, please contact us.
+
+
+
+As per our terms and conditions located at http://www.sponsoredlinx.com/terms-and-conditions/ all late payments may incur an additional late fee.
+Failure to pay this invoice beyond 30 days may result in this invoice being passed into marshall freeman for collection as per our terms and conditions.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

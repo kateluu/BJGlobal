@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Commission Sheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Commission Sheets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Double Commissions At --></label>
+        <name>Double_Commissions_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Multiplier Percent --></label>
+        <name>Multiplier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Manager --></label>
+        <name>Sales_Manager__c</name>
+        <relationshipLabel><!-- Commission Sheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales --></label>
+        <name>Sales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesperson --></label>
+        <name>Salesperson__c</name>
+        <relationshipLabel><!-- Commission Sheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Single Commissions At --></label>
+        <name>Single_Commissions_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid</masterLabel>
+            <translation><!-- Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Total --></label>
+        <name>Sub_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Ending --></label>
+        <name>Week_Ending__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

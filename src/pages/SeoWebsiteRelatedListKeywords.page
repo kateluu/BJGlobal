@@ -1,0 +1,13 @@
+<apex:page standardController="seoWebsite__c">
+	<apex:pageBlock title="Keyword Landing Pages">
+		<apex:pageBlockTable value="{!seoWebsite__c.seoThemeKeywords__r}" var="keyword">    <!-- The pageBlockTable iterates through the list of the custom Class -->
+		    <apex:column headerValue="Keyword"><apex:outputLink value="{!URLFOR($Action.seoThemeKeywords__c.View, keyword.id)}" target="_top">{!keyword.Name}</apex:outputLink></apex:column>
+		    <apex:column value="{!keyword.Google_Current__c}"/>
+		    <apex:column value="{!keyword.Google_URL_Landing_Relative_1__c}"/>
+		    <apex:column value="{!keyword.Google_URL_Landing_Relative_2__c}"/>
+		    <apex:column value="{!keyword.Google_URL_Landing_Relative_3__c}"/>
+		    <apex:column value="{!keyword.Google_URL_Landing_Relative_4__c}"/>
+		    <apex:column value="{!keyword.Google_URL_Landing_Relative_5__c}"/>
+		</apex:pageblocktable>
+	</apex:pageBlock>
+</apex:page>

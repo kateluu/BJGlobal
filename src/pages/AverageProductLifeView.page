@@ -1,0 +1,187 @@
+<apex:page controller="AverageProductLifeController" readOnly="true">
+    <script>
+        function setFocusOnLoad() {} 
+    </script>
+    <apex:form >
+        <apex:pageBlock Title="Product Life Report" id="theBlock">
+            <apex:pageBlockButtons location="top">
+                    <apex:commandButton action="{!getResults}" value="Search"/>
+                    <apex:commandButton action="{!exportCSV}" value="Export"/>
+            </apex:pageBlockButtons>
+        
+            <apex:pageBlockSection Title="Define filters" collapsible="false" id="theSection">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Filter Type" for="filter"/>
+                    <apex:selectRadio value="{!filterType}" id="filter" style="width: 200%">
+                        <apex:actionSupport event="onchange" rerender="theSection"/>
+                        <apex:selectOptions value="{!types}"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem />
+                
+                <apex:pageBlockSectionItem rendered="{!(filterType == 'PP')}">
+                    <apex:outputLabel value="Compare Discount Setup" for="activeCheckBox1" />
+                    <apex:inputCheckbox value="{!isComparePromo}" id="activeCheckBox1" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem rendered="{!(filterType == 'CM')}">  
+                    <apex:outputLabel value="Active Client Manager Only" for="activeCheckBox2" />
+                    <apex:inputCheckbox value="{!isActiveCMOnly}" id="activeCheckBox2" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem rendered="{!(filterType == 'SA')}">  
+                    <apex:outputLabel value="Active Salesperson Only" for="activeCheckBox3" />
+                    <apex:inputCheckbox value="{!isActiveSAOnly}" id="activeCheckBox3" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Display Scatter Chart (Life Report Only)" for="activeCheckBox4" rendered="{!(filterType == 'CM')}"/>
+                    <apex:inputCheckbox value="{!isDisplayScatter}" id="activeCheckBox4" rendered="{!(filterType == 'CM')}"/>
+                </apex:pageBlockSectionItem>
+
+                <apex:inputField value="{!ap.Start_Date__c}"/>
+                <apex:inputField value="{!ap.End_Date__c}"/>
+            
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Report Type" for="reportType"/>
+                    <apex:selectRadio value="{!reportType}" style="width: 100%" id="reportType">
+                        <apex:selectOption itemValue="life" itemLabel="Life Span"/>
+                        <apex:selectOption itemValue="revenue" itemLabel="Revenue (Since 01/Jul/2012)"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem />
+                
+                <apex:pageBlockSectionItem rendered="{!(reportType == 'life')}">
+                    <apex:outputLabel value="Average life for all weekly product"/>
+                    <apex:outputText value="{0, number, 0.0} weeks">
+                       <apex:param value="{!averageLifeForAll}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem rendered="{!(reportType == 'revenue')}">
+                    <apex:outputLabel value="Average revenue for all weekly product"/>
+                    <apex:outputText value="${0, number, 0.00}">
+                       <apex:param value="{!averageRevenueForAll}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="theChart" title="Chart" collapsible="false" columns="1">
+            
+                <apex:chart height="500" width="1200" data="{!result}" rendered="{!(filterType == 'PP' && !isComparePromo && reportType == 'life')}">
+                    <apex:legend position="right"/>
+                    <apex:axis type="Numeric" position="left" fields="weeks"  title="Average Lifetime (weeks)" grid="true" minimum="0"/>
+                    <apex:axis type="Numeric" position="right" fields="quantity"  title="Number" minimum="0"/>
+                    <apex:axis type="Category" position="bottom" fields="name" title="Package Break Down">
+                        <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left"  xField="name" yField="weeks" stacked="false">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:barSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="quantity"  markerType="circle" markerSize="4" markerFill="#8E35EF">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                </apex:chart>
+                
+                <apex:chart height="500" width="1200" data="{!result}" rendered="{!(filterType == 'PP' && !isComparePromo && reportType == 'revenue')}">
+                    <apex:legend position="right"/>
+                    <apex:axis type="Numeric" position="left" fields="weeks"  title="Total Revenue" grid="true" minimum="0"/>
+                    <apex:axis type="Numeric" position="right" fields="quantity"  title="Number" minimum="0"/>
+                    <apex:axis type="Category" position="bottom" fields="name" title="Package Break Down">
+                        <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left"  xField="name" yField="weeks" stacked="false">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:barSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="quantity"  markerType="circle" markerSize="4" markerFill="#8E35EF">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                </apex:chart>
+                
+                <apex:chart height="500" width="1200" data="{!compare}" rendered="{!(filterType == 'PP' && isComparePromo && reportType == 'life')}">
+                    <apex:legend position="right"/>
+                    <apex:axis type="Numeric" position="left" fields="Normal"  title="Average Lifetime (weeks)" grid="true" minimum="0"/>
+                    <apex:axis type="Numeric" position="right" fields="NormalQuantity"  title="Number" minimum="0"/>
+                    <apex:axis type="Category" position="bottom" fields="name" title="Package Break Down">
+                        <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left"  xField="name" yField="Normal,Discount">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:barSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="NormalQuantity"  markerType="circle" markerSize="4" markerFill="#8E35EF">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="DiscountQuantity"  markerType="cross" markerSize="4" markerFill="#FF0000">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                </apex:chart>
+                
+                <apex:chart height="500" width="1200" data="{!compare}" rendered="{!(filterType == 'PP' && isComparePromo && reportType == 'revenue')}">
+                    <apex:legend position="right"/>
+                    <apex:axis type="Numeric" position="left" fields="Normal"  title="Total Revenue" grid="true" minimum="0"/>
+                    <apex:axis type="Numeric" position="right" fields="NormalQuantity"  title="Number" minimum="0"/>
+                    <apex:axis type="Category" position="bottom" fields="name" title="Package Break Down">
+                        <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left"  xField="name" yField="Normal,Discount">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:barSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="NormalQuantity"  markerType="circle" markerSize="4" markerFill="#8E35EF">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                    <apex:lineSeries axis="right" xField="name" yField="DiscountQuantity"  markerType="cross" markerSize="4" markerFill="#FF0000">
+                        <apex:chartTips height="20" width="150"/>
+                    </apex:lineSeries>
+                </apex:chart>
+                
+                <apex:chart height="800" width="900" data="{!result}"  rendered="{!(filterType == 'CM' && reportType == 'life')}">
+                    <apex:axis type="Numeric" position="top" fields="weeks"  title="Average Lifetime (weeks)" minimum="0" grid="true"/>
+                    <apex:axis type="Category" position="left" fields="name" title="Client Managers"/>
+                    <apex:barSeries orientation="horizontal" axis="top"  xField="weeks" yField="name">
+                        <apex:chartTips height="20" width="180"/>
+                        <apex:chartLabel display="outside" field="quantity"/>
+                    </apex:barSeries>
+                </apex:chart>
+                
+                <apex:chart height="800" width="900" data="{!result}"  rendered="{!(filterType == 'CM' && reportType == 'revenue')}">
+                    <apex:axis type="Numeric" position="top" fields="weeks"  title="Total Revenue" minimum="0" grid="true"/>
+                    <apex:axis type="Category" position="left" fields="name" title="Client Managers"/>
+                    <apex:barSeries orientation="horizontal" axis="top"  xField="weeks" yField="name">
+                        <apex:chartTips height="20" width="180"/>
+                        <apex:chartLabel display="outside" field="quantity"/>
+                    </apex:barSeries>
+                </apex:chart>
+                
+                <br/>
+                <apex:chart height="800" width="900" data="{!result}"  rendered="{!(filterType == 'CM' && reportType == 'life' && isDisplayScatter)}">
+                    <apex:axis type="Numeric" position="bottom" fields="quantity"  title="Product Number" minimum="0" grid="true"/>
+                    <apex:axis type="Numeric" position="left" fields="weeks" title="Average Lifetime (weeks)" minimum="0" grid="true"/>
+                    <apex:scatterSeries xField="quantity" yField="weeks" markerType="circle" markerSize="3" markerFill="#551A8B" >
+                        <apex:chartTips height="20" width="200" labelField="name" valueField="weeks"/>
+                        <apex:chartLabel display="outside" field="name"/>
+                    </apex:scatterSeries>
+                </apex:chart>
+                
+                <apex:chart height="900" width="900" data="{!result}"  rendered="{!(filterType == 'SA' && reportType == 'life')}">
+                    <apex:axis type="Numeric" position="top" fields="weeks"  title="Average Lifetime (weeks)" minimum="0" grid="true"/>
+                    <apex:axis type="Category" position="left" fields="name" title="Salespersons"/>
+                    <apex:barSeries orientation="horizontal" axis="top"  xField="weeks" yField="name">
+                        <apex:chartTips height="20" width="180"/>
+                        <apex:chartLabel display="outside" field="quantity"/>
+                    </apex:barSeries>
+                </apex:chart>
+                
+                <apex:chart height="900" width="900" data="{!result}"  rendered="{!(filterType == 'SA' && reportType == 'revenue')}">
+                    <apex:axis type="Numeric" position="top" fields="weeks"  title="Total Revenue" minimum="0" grid="true"/>
+                    <apex:axis type="Category" position="left" fields="name" title="Salespersons"/>
+                    <apex:barSeries orientation="horizontal" axis="top"  xField="weeks" yField="name">
+                        <apex:chartTips height="20" width="180"/>
+                        <apex:chartLabel display="outside" field="quantity"/>
+                    </apex:barSeries>
+                </apex:chart>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

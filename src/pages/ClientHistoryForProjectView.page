@@ -1,0 +1,22 @@
+<apex:page StandardController="SFDC_Projects__c" extensions="ClientHistoryForProjectController" docType="html-4.01-strict">
+   	<apex:stylesheet value="{!URLFOR($Resource.GanttChart, '/style.css')}"/> 
+	<apex:includeScript value="{!URLFOR($Resource.GanttChart, '/js/jquery-1.8.2.min.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.GanttChart, '/js/jquery.fn.gantt.js')}"/>
+	<script type="text/javascript">
+	var data = {!productHistoryJson};
+	$j = jQuery.noConflict();
+	$j(document).ready(function(){
+		$j(".gantt").gantt({
+			source: data,
+			navigate: "scroll",
+			scale: "weeks",
+			maxScale: "months",
+			minScale: "days",
+			itemsPerPage: 8,
+			dow: ["S", "M", "T", "W", "Th", "F", "Sa"],
+			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+		});
+	});
+	</script>
+	<div class="gantt"></div>
+</apex:page>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account_Product__c.Projects__r$Name</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Status</column>
+            <operator>equals</operator>
+            <value>Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ActivityDate</column>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:30</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Account_Product__c.Projects__r$Id</primaryTableColumn>
+        <relatedTable>Activity</relatedTable>
+        <relatedTableJoinColumn>What</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>AUD</currency>
+    <description>For seo manager</description>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c$Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Projects__r$Owner</column>
+            <operator>equals</operator>
+            <value>Madeleine Slater,Adam Conroy,Connor Krohn,Amy Ambrose,Alexander Mortimer,Celest Maggs,Chanelle Canilao,Fiona Hoy,James Snelson,Kate Muller,Marco Cacciola,Molly Hanrahan,Nathan Moody,Nicholas Davis,Raymond Serafin,Sarah Googe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Projects__r$Project_Stage__c</column>
+            <operator>notEqual</operator>
+            <value>Completed - New Contract,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$CreatedDate</column>
+            <operator>lessThan</operator>
+            <value>LAST_WEEK</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account_Product__c.Projects__r$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>4 Weeks No Contact Projects</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Product_with_Project_without_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

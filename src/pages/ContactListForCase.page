@@ -1,0 +1,18 @@
+<apex:page standardController="Cases__c" extensions="ContactListForCase">
+<style>
+	.fewerMore { display: none;}
+</style>
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!cs}" var="c" rendered="{!NOT(ISNULL(cs))}">
+		        <apex:column value="{!c.Name}"/>
+		        <apex:column value="{!c.Department}"/>
+		        <apex:column value="{!c.Phone}"/>
+		        <apex:column value="{!c.MobilePhone}"/>
+		        <apex:column value="{!c.Email}"/>
+		        <apex:column value="{!c.Title}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!(ISNULL(cs))}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

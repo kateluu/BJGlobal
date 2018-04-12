@@ -1,0 +1,129 @@
+<apex:page standardController="Account" sidebar="true" showHeader="true" extensions="MakeAnInvoice" title="Make an Invoice to {!Account.Name}'s Account">
+	<apex:pageMessages id="Messages"/>
+
+	<apex:form id="SelectProduct">
+		<apex:pageBlock >
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="Back to Account" action="{!returnToAccount}" />
+			</apex:pageBlockButtons>
+			
+			<apex:pageBlockSection title="Step 1" collapsible="false">
+				<apex:pageblocksectionitem >
+	              	Filter product by company: 
+	              	<apex:inputField value="{!slxProduct.company_name__c}">
+						<apex:actionSupport event="onchange"
+											action="{!setProductList}"
+											rerender="SelectProduct, Messages" />
+					</apex:inputField>
+				</apex:pageblocksectionitem>
+			</apex:pageBlockSection>
+			
+			<apex:pageBlockSection title="Step 2" collapsible="false">
+				<apex:pageblocksectionitem >
+	              	Choose the product: 
+	              	<apex:selectList value="{!selectedSlxProduct}" size="1">
+						<apex:actionSupport event="onchange"
+											action="{!createInvoiceDetails}"
+											rerender="form, Messages" />
+						<apex:selectOptions value="{!items}" />
+					</apex:selectList>
+				</apex:pageblocksectionitem>
+			</apex:pageBlockSection>
+		</apex:pageblock>
+	</apex:form>
+
+	<apex:form id="form" >
+		<apex:pageblock rendered="{!creating}">
+			<apex:pageBlockSection collapsible="false" columns="1" title="Create Invoice">
+				<apex:outputField value="{!slxProduct.name}" />
+				<apex:inputField value="{!accProduct.Description__c}" />
+				<apex:outputField rendered="{!slxProduct.product_recurring__c == 'Hourly'}" value="{!accProduct.Hourly_Rate__c}" />
+				<apex:outputField rendered="{!slxProduct.product_recurring__c != 'Hourly'}" value="{!accProduct.Product_Price__c}" />
+				<apex:outputField value="{!slxProduct.product_recurring__c}" />
+				<apex:outputField value="{!accProduct.Recurring_Period__c}" />
+				<apex:inputField value="{!inv.Issue_Date__c}">
+					<apex:actionSupport event="onchange"
+								action="{!updateDueDate}"
+								rerender="form, Messages" />
+				</apex:inputField>
+				<apex:outputField value="{!inv.Due_Date__c}" />
+				<apex:inputField value="{!accProduct.Send_Invoice__c}" />
+				<apex:inputField value="{!inv.Promocode__c}">
+					<apex:actionSupport event="onchange"
+								action="{!ApplyPromo}"
+								rerender="form, Messages" />
+				</apex:inputField>
+				<apex:inputField value="{!accProduct.Payment_Option__c}">
+					<apex:actionSupport event="onchange"
+										action="{!changePaymentMethod}"
+										rerender="form, Messages" />
+				</apex:inputField>
+				<apex:pageblocksectionitem rendered="{!slxProduct.product_recurring__c == 'Hourly'}">
+                			Hours billed:<apex:inputField value="{!accProduct.Hours__c}">
+						<apex:actionSupport event="onchange" 
+											action="{!updateHours}"
+											rerender="form, Messages" />
+					</apex:inputField>
+				</apex:pageblocksectionitem>
+				<apex:pageblocksectionitem rendered="{!slxProduct.product_recurring__c == 'Hourly'}">
+                			Set Price: <apex:inputField value="{!accProduct.Product_Price__c}">
+						<apex:actionSupport event="onchange"
+											action="{!updateSetPrice}"
+											rerender="form, Messages" />
+					</apex:inputField>
+				</apex:pageblocksectionitem>
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="Next Step" action="{!Next}" rerender="form, Messages" />
+			</apex:pageBlockButtons>
+		</apex:pageblock>
+
+		<apex:pageblock rendered="{!confirming}">
+			<apex:pageBlockSection collapsible="false" columns="1" title="Confirm Details">
+				<apex:outputField value="{!slxProduct.name}" />
+				<apex:outputField value="{!accProduct.Description__c}" />
+				<apex:outputField rendered="{!slxProduct.product_recurring__c == 'Hourly'}" value="{!accProduct.Hourly_Rate__c}" />
+				<apex:outputField rendered="{!slxProduct.product_recurring__c != 'Hourly'}" value="{!accProduct.Product_Price__c}" />
+				<apex:outputField value="{!slxProduct.product_recurring__c}" />
+				<apex:outputField value="{!accProduct.Recurring_Period__c}" />
+				<apex:outputField value="{!inv.Issue_Date__c}" />
+				<apex:outputField value="{!inv.Due_Date__c}" />
+				<apex:outputField value="{!accProduct.Send_Invoice__c}" />
+				<apex:outputField value="{!inv.Promocode__c}" />
+				<apex:outputField value="{!accProduct.Payment_Option__c}" />
+				<apex:pageblocksectionitem rendered="{!slxProduct.product_recurring__c == 'Hourly'}">
+                	<apex:outputlabel value="Hours billed: " />
+              		<apex:outputField value="{!accProduct.Hours__c}" />
+				</apex:pageblocksectionitem>
+				<apex:pageblocksectionitem rendered="{!slxProduct.product_recurring__c == 'Hourly'}">
+                	<apex:outputlabel value="Set Price: " />
+                	<apex:outputField value="{!accProduct.Product_Price__c}" />
+				</apex:pageblocksectionitem>
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons location="bottom">
+               	<apex:commandButton value="Back" action="{!createInvoiceDetails}" rerender="form, Messages" />
+				<apex:commandButton value="Create" action="{!save}" rerender="form, Messages" />
+         	</apex:pageBlockButtons>
+		</apex:pageblock>
+
+		<apex:pageblock rendered="{!accProduct.Payment_Option__c=='Eway' && creating == true}">
+			<apex:pageblocksection title="Modify Credit Card" collapsible="false">
+				<apex:inputField value="{!accProduct.Name_On_Card__c}" />
+				<apex:inputField value="{!accProduct.Card_Number__c}" />
+				<apex:inputField value="{!accProduct.Card_Month_Expiry__c}" />
+				<apex:inputField value="{!accProduct.Card_Year_Expiry__c}" />
+				<apex:inputField value="{!accProduct.Card_CVN__c}" />
+			</apex:pageblocksection>
+		</apex:pageblock>
+		
+		<apex:pageblock rendered="{!accProduct.Payment_Option__c=='Eway' && confirming == true}">
+			<apex:pageblocksection title="Credit Card Details" collapsible="false">
+				<apex:outputField value="{!accProduct.Name_On_Card__c}" />
+				<apex:outputField value="{!accProduct.Card_Number__c}" />
+				<apex:outputField value="{!accProduct.Card_Month_Expiry__c}" />
+				<apex:outputField value="{!accProduct.Card_Year_Expiry__c}" />
+				<apex:outputField value="{!accProduct.Card_CVN__c}" />
+			</apex:pageblocksection>
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

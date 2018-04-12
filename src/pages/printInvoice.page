@@ -1,0 +1,261 @@
+<apex:page standardcontroller="Invoice__c" extensions="printInvoice"
+    renderAs="pdf" contentType="text/html" standardstylesheets="false"
+    sidebar="false" showheader="false">
+<apex:outputText escape="false" value="{!"<!DOCTYPE html>"}"/>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{!company.Name} Invoice</title>
+        <style type="text/css">
+        *,body,table {
+            font-family: helvetica, arial, tahoma, verdana, serif;
+            font-size: 12px;
+        }
+        
+        .outter {
+            width: 100%;
+            border: 0px solid black;
+            margin-bottom: 20px;
+        }
+        
+        .digit {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        td,th {
+            font-size: 12px;
+            font-family: helvetica, arial, tahoma, verdana, serif;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        img {
+            width: 50%;
+        }
+        
+        #logo img {
+            width: 70%;
+        }
+        
+        caption {
+            font-size: 13px;
+            text-align: left;
+            padding-bottom: 6px;
+            font-weight: bold;
+            border-bottom: 2px solid black;
+        }
+        </style>
+        </head>
+
+        <body>
+        <table class="outter">
+            <tbody>
+                <tr>
+                    <td style="width: 350px;" id="logo">
+                        <apex:image value="{!company.Logo_Code__c}"/>
+                    </td>
+                    <td style="width: 250px;">
+                        Billing Enquiries<br />
+                        {!company.Phone__c}
+                    </td>
+                    <td style="width: 300px">
+                        {!company.Business_Name__c}<br />
+                        <apex:outputField value="{!company.Address__c}"/><br />
+                        <div style="display:{!IF(isNewZealand, 'None', '')};">ABN: {!company.ABN__c}<br /></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="outter">
+            <tr>
+                <td style="font-size: 18px; font-weight: bold; text-align: center">Tax
+                Invoice</td>
+            </tr>
+        </table>
+
+        <table class="outter">
+            <caption>ACCOUNT INFO</caption>
+            <tr>
+                <td>
+                <table style="width: 500px;">
+                    <tbody>
+                        <tr>
+                            <td><span style="font-size: 14px; font-weight: bold">{!invoice.Account__r.Name}</span><br />
+                            {!invoice.Account__r.BillingStreet}<br />
+                            {!invoice.Account__r.BillingCity}
+                            <div style="display:{!IF(isNewZealand, 'None', '')};">{!invoice.Account__r.BillingState}</div>
+                            {!invoice.Account__r.BillingPostalCode}<br />
+                            {!invoice.Account__r.BillingCountry}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </td>
+                <td>
+                <table style="width: 200px" cellpadding="3">
+                    <tbody>
+                        <tr>
+                            <td>Invoice Number:</td>
+                            <td class="digit">{!invoice.Invoice_Number__c}</td>
+                        </tr>
+                        <tr>
+                            <td>Issue Date:</td>
+                            <td class="digit"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}">
+                                <apex:param value="{!invoice.Issue_Date__c}" />
+                            </apex:outputText></td>
+                        </tr>
+                        <tr>
+                            <td>Due Date:</td>
+                            <td class="digit"><apex:outputText value="{0,date,dd'-'MM'-'yyyy}">
+                                <apex:param value="{!invoice.Due_Date__c}" />
+                            </apex:outputText></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </td>
+            </tr>
+        </table>
+
+        <table class="outter" cellpadding="5">
+            <caption>BILLING ITEM</caption>
+            <thead>
+                <tr>
+                    <th
+                        style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Product
+                    Name</th>
+                    <th
+                        style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Product
+                    Number</th>
+                    <th
+                        style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Description</th>
+                    <th
+                        style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Management
+                    Period</th>
+                    <th style="text-align: center; border-bottom: 1px dashed">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-right: 1px dashed; border-bottom: 1px dashed">{!invoice.Account_Product__r.Name}</td>
+                    <td style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">{!invoice.Account_Product__r.Product_Number__c}</td>
+                    <td style="border-right: 1px dashed; border-bottom: 1px dashed; max-width: 400px">{!invoice.Account_Product__r.Description__c}</td>
+                    <td style="text-align: center; border-right: 1px dashed black; border-bottom: 1px dashed black">{!dateRange}</td>
+                    <td style="text-align: center; border-bottom: 1px dashed black" class="digit">
+                        <apex:outputText value="{0,number,$#,###.00}">
+                            <apex:param value="{!IF(invoice.Amex__c, invoice.Invoice_Total__c/1.030, invoice.Invoice_Total__c)}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+                <tr style="display:{!IF(invoice.Amex__c, 'table-row', 'None')};">
+                    <td style="border-right: 1px dashed; border-bottom: 1px dashed">Amex Surcharge</td>
+                    <td style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">--</td>
+                    <td style="border-right: 1px dashed; border-bottom: 1px dashed; max-width: 400px">3.0% Amex Surcharge</td>
+                    <td style="text-align: center; border-right: 1px dashed black; border-bottom: 1px dashed black">--</td>
+                    <td style="text-align: center; border-bottom: 1px dashed black" class="digit">
+                        <apex:outputText value="{0,number,$#,###.00}">
+                            <apex:param value="{!invoice.Invoice_Total__c*0.030/1.030}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot style="display:{!IF(isNewZealand, 'None', '')};">
+                <tr>
+                    <td colspan="5" style="text-align: right">{!priceBreakDown}</td>
+                </tr>
+            </tfoot>
+        </table>
+    
+        <table class="outter" cellpadding="5">
+            <caption>TRANSACTIONS</caption>
+            <thead>
+                <tr>
+                    <th style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Date</th>
+                    <th style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">Type</th>
+                    <th style="text-align: center; border-bottom: 1px dashed">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!trans}" var="t">
+                    <tr>
+                        <td style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed; width: 40%">{!t.tranDate}</td>
+                        <td style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed;">{!t.tranType}</td>
+                        <td style="border-bottom: 1px dashed black" class="digit">
+                            <apex:outputText value="{0,number,$##,##0.00}">
+                                <apex:param value="{!t.tranAmount}" />
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                </apex:repeat>
+                <tr style="display:{!IF(trans.size=0, 'table-row', 'none')}">
+                    <td colspan="3">No transaction occurred.</td>
+                </tr>
+                <tr style="font-weight: bold;">
+                    <td colspan="2">Amount due</td>
+                    <td class="digit">
+                        <apex:outputText value="{0,number,$##,##0.00}">
+                            <apex:param value="{!invoice.Amount_Due__c}" />
+                        </apex:outputText>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="outter">
+            <CAPTION>NOTES</CAPTION>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li style="display: {!IF(company.Display_Invoice_Client_Panel__c, '', 'None')};">All invoices can be found online at <a href="https://clientpanel.sponsoredlinx.com.au" target="_blank">https://clientpanel.sponsoredlinx.com.au</a>, using your login details.</li>
+                            <li>As per our terms and conditions located at <a href="{!company.term_page__c}" target="_blank">{!company.term_page__c}</a> all late payments may incur an additional late fee.</li>
+                            <li>Failure to pay this invoice beyond 30 days may result in this invoice being passed on to our Debt Recovery Specialists for collection as per our terms and conditions.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table cellpadding="7"  style="page-break-inside: avoid;">
+            <CAPTION>PAYMENT OPTIONS</CAPTION>
+            <tbody>
+                <tr style="display:{!IF(company.Display_Invoice_Direct_Debit__c, 'table-row', 'None')};">
+                    <td align="center"><img src="{!$Resource.debit}"
+                        alt="DIRECT DEBIT" width="40" height="40" /></td>
+                    <td><b>DIRECT DEBIT</b><br />
+                    Pay your bills automatically from a nominated bank account
+                    (including credit cards).<br />
+                    Please call {!company.phone__c} for more information.</td>
+                </tr>
+                <tr style="display:{!IF(company.Display_Invoice_Pay_By_Phone__c, 'table-row', 'None')};">
+                    <td align="center"><img src="{!$Resource.phone}" alt="PHONE"
+                        width="40" height="40" /></td>
+                    <td><b>PAY BY PHONE</b><br />
+                    Call {!company.phone__c} to make a payment by credit card<br />
+                    Use Invoice No: {!invoice.Invoice_Number__c} as a reference and have your credit
+                    card ready when calling.</td>
+                </tr>
+                <tr style="display: {!IF(AND(OR(invoice.Payment_Option__c = 'Other', invoice.Payment_Option__c = 'EFT'), company.Display_Invoice_Direct_Bank_Deposit__c), 'table-row', 'None')};">
+                    <td align="center"><img src="{!$Resource.bank}" alt="BANK"
+                        width="40" height="40" /></td>
+                    <td><b>DIRECT BANK DEPOSIT</b><br />
+                    Remit to {!company.Account_Name__c} <br />
+                    BSB: {!company.BSB__c}, Account Number: {!company.Account_Number__c}<br />
+                    Please put your invoice No: {!invoice.Invoice_Number__c} as a reference.
+                    </td>
+                </tr>
+                <tr style="display: {!IF(company.Display_Invoice_Client_Panel__c, 'table-row', 'None')};">
+                    <td align="center"><img src="{!$Resource.internet}"
+                        alt="INTERNET" width="40" height="40" /></td>
+                    <td>Please login to your SponsoredLinX client panel by
+                    visiting <a href="https://clientpanel.sponsoredlinx.com.au"
+                        target="_blank">https://clientpanel.sponsoredlinx.com.au</a> for
+                    more info. If you have forgotten your login details, please contact
+                    us.</td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+        </html>
+</apex:page>

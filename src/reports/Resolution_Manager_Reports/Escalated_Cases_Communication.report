@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Activity.CallDurationInSeconds:SUM</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Total call duration in second</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Cases__c$Name</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total call duration (s)</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>If(Activity.IsTask:SUM=0, 0, RowCount)</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Num Of Calls</description>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>Cases__c$Name</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Num Of Calls</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Cases__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Activities$Subject</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Activities$Owner</field>
+    </columns>
+    <columns>
+        <field>Cases__c$escalated_date__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Activities$NVMContactWorld__CW_Call_End_Time__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Activities$CallDurationInSeconds</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <booleanFilter>( 1 AND 2 AND (3 AND 4))</booleanFilter>
+        <criteriaItems>
+            <column>Cases__c$CaseType__c</column>
+            <operator>includes</operator>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c$Product_Type__c</column>
+            <operator>contains</operator>
+            <value>Social,AdWords</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Activities$NVMContactWorld__CW_Call_End_Time__c</column>
+            <operator>lessOrEqual</operator>
+            <value>LAST_N_WEEKS:3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Activities$NVMContactWorld__CW_Call_End_Time__c</column>
+            <operator>greaterOrEqual</operator>
+            <value>YESTERDAY</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Cases__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Escalated Cases Communication</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_or_without_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Cases__c$escalated_date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Lead_Status__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Assigned_To_Id__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.From_Source__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead__c.Lead_Status__c</column>
+            <operator>equals</operator>
+            <value>Sale</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead__c.From_Form__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Sales By Source</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Lead__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-08-01</startDate>
+    </timeFrameFilter>
+</Report>

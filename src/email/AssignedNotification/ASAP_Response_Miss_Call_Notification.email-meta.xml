@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>urgent notification for any miss call need to response asap, because waiting time is longer than 2hours</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ASAP Response Miss Call Notification</name>
+    <style>none</style>
+    <subject>Miss call from account #  {!Account.Name} has been waiting more than 2 hours</subject>
+    <type>text</type>
+</EmailTemplate>

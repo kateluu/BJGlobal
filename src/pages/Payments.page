@@ -1,0 +1,118 @@
+<apex:page Controller="Payments" readOnly="true" >
+<apex:pageblock >
+<apex:form >
+<apex:outputPanel id="Search">
+    <apex:pageblock id="search_input">            
+    <apex:pageBlockSection >
+
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Account Name : " for="description" />
+        <apex:inputText id="description" value="{!description}" />
+    </apex:pageBlockSectionItem>
+    
+    
+    <apex:pageBlockSectionItem >
+        
+        
+    <apex:outputLabel >Payment Option : </apex:outputLabel>
+        <apex:selectList id="selectPaymentType" value="{!options}" size="4" multiselect="true" >
+        <apex:selectOptions value="{!PaymentTypes}"/>
+    </apex:selectList> 
+    </apex:pageBlockSectionItem>
+        
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Minimum Amount : " for="min" />
+        <apex:inputText id="min" value="{!min}" />
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Maximum Amount : " for="max" />
+        <apex:inputText id="max" value="{!max}" />
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Start Date : " for="startDate" />
+        <apex:inputField id="startDate" value="{!payment1.Payment_Date__c}" />
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="End Date : " for="endDate" />
+        <apex:inputField id="endDate" value="{!payment2.Payment_Date__c}"/>
+    </apex:pageBlockSectionItem>
+    
+    
+    <apex:pageBlockSectionItem >
+        <apex:commandButton value="Search" action="{!getResults}" rerender="search_result, payment_status, stats" status="payment_status"/>
+        <apex:commandButton value="Reset" action="{!reset}"  status="payment_status"/>
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:commandButton value="Export to Excel" action="{!export}"/>
+    </apex:pageBlockSectionItem>
+    
+    
+
+                                
+    <apex:actionStatus id="payment_status" startText="Searching......." />
+    
+    </apex:pageBlockSection>            
+    </apex:pageblock>
+</apex:outputPanel>
+
+<apex:outputPanel layout="block" styleClass="pSearchShowMore" id="stats">  
+              Total Records Found: <apex:outputText rendered="{!IF(Con.resultSize==10000,true,false)}">10000 +</apex:outputText><apex:outputText rendered="{!IF(Con.resultSize < 10000,true,false)}">{!Con.resultSize}</apex:outputText>  
+                  <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOT(Con.HasPrevious)}"/>  
+                  <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!Con.HasPrevious}"/>  
+                  <apex:commandLink action="{!Previous}" title="Previous Page" value="Previous Page" rendered="{!Con.HasPrevious}"/>  
+                  <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(Con.HasPrevious)}">Previous Page</apex:outputPanel>           
+                  &nbsp;({!IF(Con.PageNumber == 1,1,((Con.PageNumber -1) * Con.PageSize)+1)}-{!IF(Con.resultSize < Con.PageSize,Con.resultSize,Con.PageNumber * Con.pageSize)})&nbsp;  
+                  <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOT(Con.HasNext)}">Next Page</apex:outputPanel>           
+                  <apex:commandLink title="Next Page" value="Next Page" rendered="{!Con.HasNext}" action="{!Next}"/>&nbsp;  
+                  <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!Con.HasNext}"/>  
+                  <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOT(Con.HasNext)}"/>            
+    </apex:outputPanel> 
+    
+</apex:form>    
+<apex:pageBlock id="search_result">
+<apex:pageBlockTable value="{!Payments}" var="payment" id="search_result">
+    <apex:column headerValue="Payment Id">
+        <apex:outputLink value="https://ap1.salesforce.com/{!payment.Id}" target="_blank">{!payment.Name}</apex:outputLink>
+    </apex:column>
+    <apex:column headerValue="Account">
+        {!payment.Account__r.Name}
+    </apex:column>
+     <apex:column headerValue="Invoice">
+        {!payment.Invoice__r.Name}
+</apex:column>
+    
+   <apex:column headerValue="Payment Amount">
+       <apex:outputText value="{0, number, $.00}">
+        <apex:param value="{!payment.Payment_Amount__c}" /> 
+       </apex:outputText>
+    </apex:column>
+   <apex:column headerValue="Payment Type">
+        {!payment.Payment_Type__c}
+    </apex:column>
+   
+    <apex:column headerValue="Payment Option">
+        {!payment.Payment_Option__c}
+    </apex:column>
+   
+    <apex:column headerValue="Payment Date">
+       <apex:outputText value="{0,date,EEEE dd'/'MM'/'yyyy}">
+        <apex:param value="{!payment.Payment_Date__c}" /> 
+       </apex:outputText>
+    </apex:column>
+   
+    <apex:column headerValue="Invoice Number">
+        {!payment.Invoice_Number__c}
+    </apex:column>
+    
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+
+  
+</apex:pageblock>
+
+</apex:page>

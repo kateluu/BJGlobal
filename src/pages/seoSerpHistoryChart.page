@@ -1,0 +1,5 @@
+<apex:page standardController="seoThemeKeywords__c">
+    
+  <apex:iframe src="http://console.sponsoredlinx.com/?c=seo&action=keyword&keyword={!URLENCODE(seoThemeKeywords__c.Name)}&searchFilter={!URLENCODE(seoThemeKeywords__c.seoWebsites__r.Searching_From__c)}&geolocation={!URLENCODE(seoThemeKeywords__c.seoWebsites__r.Geolocation__c)}&targetDomain={!URLENCODE(seoThemeKeywords__c.seoWebsites__r.website_url__c)}" scrolling="false" id="seoSerpHistory" width="900" height="360" frameborder="false" />
+  
+</apex:page>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$Account.Revenue__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Sign_Up__c.Salesperson__c</column>
+            <operator>equals</operator>
+            <value>Toby Wilson</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED_DATE</column>
+            <operator>greaterOrEqual</operator>
+            <value>8/24/2015 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Daniel Manning Signups</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sign_Up__c@Sign_Up__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2016-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-09-01</startDate>
+    </timeFrameFilter>
+</Report>

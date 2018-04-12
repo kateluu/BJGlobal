@@ -1,0 +1,38 @@
+<apex:page standardController="Account" extensions="invoiceList">
+<apex:outputText value="{!account.Xero_Sync_ID__c} {!account.id}" rendered="false"/>
+<apex:pageblock rendered="{!renderInvList}">
+<apex:pageBlockTable value="{!InvList}" var="inv">
+    <apex:column headerValue="Issue Date">
+        {!inv.issuedDate}
+    </apex:column>
+
+    <apex:column headerValue="Invoice No">
+        {!inv.invoiceNumber}
+    </apex:column>
+
+    <apex:column headerValue="Total">
+        {!inv.total}
+    </apex:column>
+    
+    <apex:column headerValue="Amount Paid">
+        {!inv.amountPaid}
+    </apex:column>
+    
+    <apex:column headerValue="Amount Due">
+        {!inv.amountDue}
+    </apex:column>
+
+    <apex:column headerValue="Due Date">
+        {!inv.dueDate}
+    </apex:column>
+
+    <apex:column headerValue="Status">
+        {!inv.status}
+    </apex:column>
+</apex:pageBlockTable>
+</apex:pageblock>
+
+<apex:pageblock title="Invoice List" rendered="{!renderInvMsg}">
+There are no invoices to display at this time
+</apex:pageblock>
+</apex:page>

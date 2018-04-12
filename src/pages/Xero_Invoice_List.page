@@ -1,0 +1,64 @@
+<apex:page standardController="Account" >
+<script>
+    var newwindow;
+    function poptastic(url)
+    {
+        newwindow=window.open(url,"name","width=750,height=700,top=0,toolbar=no ,personalbar=no,location=no,directories=no,statusbar=no,menubar=no,status=no,resizable=yes,left=60,screenX=60,top=100,screenY=100");
+        
+        if (window.focus) {newwindow.focus()}  
+
+        return false;
+    }
+
+</script>
+
+<apex:form >
+
+    <apex:pageBlock >
+    <apex:pageblockTable value="{!Account.Xero_Invoices__r}" var="inv">
+
+        <apex:column headerValue="Invoice Number">
+            <apex:commandLink onclick="poptastic('https://www.sponsoredlinx.com/PHPXero/ViewInvoice.php?inv={!inv.InvoiceID__c}')">{!inv.InvoiceNumber__c}</apex:commandLink>        
+        </apex:column>
+        
+        <apex:column headerValue="Reference">
+            {!inv.Reference__c} 
+        </apex:column>
+        
+        <apex:column headerValue="Total">
+            {!inv.Total__c} 
+        </apex:column>
+        
+        <apex:column headerValue="Credited">
+            {!inv.AmountCredited__c} 
+        </apex:column>
+        
+        <apex:column headerValue="Paid">
+            {!inv.AmountPaid__c} 
+        </apex:column>
+        
+        <apex:column headerValue="Owing">
+            {!inv.AmountDue__c}
+        </apex:column>
+        
+        <apex:column headerValue="Issue Date">
+            <apex:outputText value="{0,date,dd/MM/yyyy}">
+                <apex:param value="{!inv.Date__c}" />
+            </apex:outputText>
+        </apex:column>
+        
+        <apex:column headerValue="Due Date">
+            <apex:outputText value="{0,date,dd/MM/yyyy}">
+                <apex:param value="{!inv.DueDate__c}" />
+            </apex:outputText>
+        </apex:column>
+        
+        <apex:column headerValue="Status">
+            {!inv.Status__c}
+        </apex:column>
+        
+    </apex:pageblockTable>
+    </apex:pageBlock>
+    
+</apex:form>
+</apex:page>

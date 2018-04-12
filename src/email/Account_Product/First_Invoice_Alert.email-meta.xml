@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>First Invoice Alert</name>
+    <style>none</style>
+    <subject>First Management Invoice Alert</subject>
+    <textOnly>Hi {!Account_Product__c.OwnerFirstName},  Your client: {!Account_Product__c.Account__c} first management invoice will be raised in two days, please make sure client&apos;s account has been built.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>BulkKeywordsInsert</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Adwords_Competition__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitiveness</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amp_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Amp URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Bing_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Bing Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bing_Last_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Bing Last Report</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bing_Original__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Bing Original</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bing_Yesterday__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Bing Yesterday</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bing__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Bing_Last_Report__c &gt; Bing_Current__c , TEXT(Bing_Current__c) + &apos; (&apos; + IMAGE(&apos;http://sponsoredlinx.com/seobot/images/uparrow.png&apos;, &apos;&apos;,10,10) + TEXT(Bing_Last_Report__c - Bing_Current__c) + &apos;)&apos;, 
+
+IF(Bing_Last_Report__c &lt; Bing_Current__c , TEXT(Bing_Current__c) + &apos; (&apos; +IMAGE(&apos;http://sponsoredlinx.com/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Bing_Current__c - Bing_Last_Report__c) +&apos;)&apos;, 
+
+IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Geolocation__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Override the SEO website&apos;s default geolocation to use a specific geolocation for this keyword only. Leave blank to use the SEO website&apos;s default setting.</inlineHelpText>
+        <label>Geolocation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Adelaide,South Australia,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alice Springs,Northern Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Auckland,Auckland,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ballarat,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Belfast,Northern Ireland,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brisbane,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bundaberg,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caboolture,Caboolture,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cairns,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cambridge,Waikato,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canberra,Australian Capital Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Coast,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chermside,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chicago,Illinois,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Christchurch,Canterbury,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Darwin,Northern Territory,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dubbo,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Geelong,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glasgow,Scotland,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold Coast,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gympie,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hervey Bay,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hobart,Tasmania,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Houston,Texas,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lismore,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>London,England,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Los Angeles,California,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mackay,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manchester,England,United Kingdom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maroochydore,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Melbourne,Victoria,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mount Isa,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nambour,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Newcastle,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York,New York,United States</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Perth,Western Australia,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queenstown,Otago,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Redcliffe,Redcliffe,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rockhampton,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sunshine Coast,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sydney,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tamworth,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Toowoomba,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Townsville,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Victoria Point,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wagga Wagga,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wellington,Wellington,New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wollongong,New South Wales,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4877,Queensland,Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Google_Current_Page__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Current Page</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Keyword_Including__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Keyword Including</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Keyword_Showing__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Keyword Showing</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Knowledge_Panel__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Knowledge Panel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Last_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Last Report</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Month3__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Month3</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Month6__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Month6</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Original__c</fullName>
+        <externalId>false</externalId>
+        <label>Original</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Places Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Last_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Places Last Report</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Original__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Places Original</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Places_Yesterday__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Google Places Yesterday</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Places__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Google_Places_Last_Report__c &gt; Google_Places_Current__c , TEXT(Google_Places_Current__c) + &apos; (&apos; + IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/uparrow.png&apos;, &apos;&apos;,10,10) + TEXT(Google_Places_Last_Report__c - Google_Places_Current__c) + &apos;)&apos;, 
+
+IF(Google_Places_Last_Report__c &lt; Google_Places_Current__c , TEXT(Google_Places_Current__c) + &apos; (&apos; +IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Google_Places_Current__c - Google_Places_Last_Report__c) +&apos;)&apos;, 
+
+IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Places</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Result_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Total Results</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Results_Page1__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Results Page1</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Results_Page2__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Results Page2</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Sitelinks__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Google Sitelinks</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Google_Stored_SERP__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( TODAY() - Last_Crawl_Date__c &lt;= 7 &amp;&amp; Google_Stored_URL__c != &apos;&apos;, 
+&apos;Page &apos;+
+HYPERLINK(Google_Stored_URL__c+&apos;.page-1.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;1&apos;)+&apos; &apos;+
+HYPERLINK(Google_Stored_URL__c+&apos;.page-2.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;2&apos;)+&apos; &apos;+
+HYPERLINK(Google_Stored_URL__c+&apos;.page-3.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;3&apos;)+&apos; &apos;+
+HYPERLINK(Google_Stored_URL__c+&apos;.page-4.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;4&apos;)
++ IF(Google_Current_Page__c &gt;= 5, &apos; &apos;+HYPERLINK(Google_Stored_URL__c+&apos;.page-5.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;5&apos;), &apos;&apos;)
++ IF(Google_Current_Page__c &gt;= 6 &amp;&amp; Google_Current_Page__c &lt;= 10, &apos; ... &apos;+HYPERLINK(Google_Stored_URL__c+&apos;.page-&apos;+TEXT(Google_Current_Page__c)+&apos;.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,TEXT(Google_Current_Page__c)), &apos;&apos;)
+, &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SERP Snapshot</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Stored_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>SERP Base URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Top_Unstable_Rank__c</fullName>
+        <description>The highest rank at which there is regular movement. Ranks above this may be difficult to obtain.</description>
+        <externalId>false</externalId>
+        <label>Top Unstable Rank</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Cache_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Cached</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL Landing 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL Landing 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL Landing 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL Landing 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL Landing 5</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_Relative_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL_Landing_1__c, 
+SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL_Landing_1__c, seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Landing Page 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_Relative_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL_Landing_2__c, 
+SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL_Landing_2__c, seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Landing Page 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_Relative_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL_Landing_3__c, 
+SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL_Landing_3__c, seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Landing Page 3</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_Relative_4__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL_Landing_4__c, 
+SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL_Landing_4__c, seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Landing Page 4</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Landing_Relative_5__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL_Landing_5__c, 
+SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL_Landing_5__c, seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Landing Page 5</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL_Relative__c</fullName>
+        <description>Relative URL</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Google_URL__c, 
+LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL__c,  seoWebsites__r.website_url__c , &apos;&apos;), &apos;http://&apos;, &apos;&apos;), &apos;https://&apos;, &apos;&apos;), &apos;www.&apos;, &apos;&apos;), 80))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google URL (Relative)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Google URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Google_Volume__c</fullName>
+        <externalId>false</externalId>
+        <label>Search Volume</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Yesterday__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Google Yesterday</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Google_Last_Report__c &gt; Google_Current__c , &apos;(&apos; + IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/uparrow.png&apos;, &apos;&apos;,10,10) + TEXT(Google_Last_Report__c - Google_Current__c) + &apos;)&apos;, 
+
+IF(Google_Last_Report__c &lt; Google_Current__c , &apos;(&apos; +IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Google_Current__c - Google_Last_Report__c) +&apos;)&apos;, 
+
+IF(Google_Current__c = 100,&apos;~&apos;,&apos;&apos;) ) )</formula>
+        <label>Since last rpt</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_Place__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>GMB</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Crawl_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Crawl Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Priority_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Priority__c, &apos;High&apos;) , IMAGE(&apos;/img/samples/flag_red.gif&apos;,&apos;High priority&apos;) , 
+IF(ISPICKVAL(Priority__c, &apos;Low&apos;) , IMAGE(&apos;/img/samples/flag_green.gif&apos;,&apos;Low priority&apos;) , 
+&apos;&apos;))
+&amp; &apos; &apos; &amp;
+IF( !ISNULL(Sniper_Date__c), IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/target.png&apos;, &apos;Sniper&apos;,16,16), &apos;&apos;)
+&amp; &apos; &apos; &amp;
+IF( Amp_URL__c != &apos;&apos;, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/amp.png&apos;, &apos;Amp&apos;,16,16), &apos;&apos;) 
+&amp; &apos; &apos; &amp;
+IF((Google_Results_Page1__c + Google_Results_Page2__c) &gt; 1, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/pages&apos;+TEXT(Google_Results_Page1__c + Google_Results_Page2__c)+&apos;.png&apos;, TEXT(Google_Results_Page1__c + Google_Results_Page2__c) + &apos; results on pages 1-2&apos;,16,16), &apos;&apos;)
+&amp; &apos; &apos; &amp;
+IF(Google_URL__c != null &amp;&amp; Google_URL_Landing_1__c != null &amp;&amp; Google_URL__c != Google_URL_Landing_1__c &amp;&amp;  seoWebsites__r.Account__c != NULL, &apos; &apos; + IMAGE(&apos;/img/msg_icons/warning16.png&apos;,&apos;Landing page does not match site-search landing page&apos;), &apos;&apos;)
+&amp; &apos; &apos; &amp;
+IF(Google_Knowledge_Panel__c == &apos;2&apos;, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/knowledge-on.png&apos;, &apos;Knowledge panel&apos;,16,16), IF(Google_Knowledge_Panel__c == &apos;3&apos;, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/knowledge-off.png&apos;, &apos;Knowledge panel&apos;,16,16), &apos;&apos;))
+&amp; &apos; &apos; &amp;
+IF(Google_Keyword_Showing__c != &apos;&apos; &amp;&amp; Google_Keyword_Showing__c != Name, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/switch.png&apos;, &apos;Showing results for &apos; + Google_Keyword_Showing__c,16,16) + Google_Keyword_Showing__c, &apos;&apos;)
+&amp; &apos; &apos; &amp; 
+IF(ISNULL(Last_Crawl_Date__c), &apos;[crawling]&apos;,
+IF(Last_Crawl_Date__c != TODAY(), &apos;[crawled:&apos;+TEXT(DAY(Last_Crawl_Date__c))+&apos;/&apos;+TEXT(MONTH(Last_Crawl_Date__c))+&apos;/&apos;+TEXT(YEAR(Last_Crawl_Date__c))+&apos;]&apos;, &apos;&apos;)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Flags</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sniper_Date__c</fullName>
+        <description>Date when sniper was ordered for this keyword</description>
+        <externalId>false</externalId>
+        <label>Sniper Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Yahoo_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Yahoo Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yahoo_Last_Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Yahoo Last Report</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yahoo_Original__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Yahoo Original</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yahoo_Yesterday__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Yahoo Yesterday</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yahoo__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Yahoo_Last_Report__c &gt; Yahoo_Current__c , TEXT(Yahoo_Current__c) + &apos; (&apos; + IMAGE(&apos;http://sponsoredlinx.com/seobot/images/uparrow.png&apos;, &apos;&apos;,10,10) + TEXT(Yahoo_Last_Report__c - Yahoo_Current__c) + &apos;)&apos;, 
+
+IF(Yahoo_Last_Report__c &lt; Yahoo_Current__c , TEXT(Yahoo_Current__c) + &apos; (&apos; +IMAGE(&apos;http://sponsoredlinx.com/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Yahoo_Current__c - Yahoo_Last_Report__c) +&apos;)&apos;, 
+
+IF(Yahoo_Current__c = 100,&apos;~&apos;,TEXT(Yahoo_Current__c)) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yahoo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>original_crawl__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>original_crawl</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>seoWebsiteTheme__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>seoWebsiteTheme</label>
+        <referenceTo>seoWebsiteThemes__c</referenceTo>
+        <relationshipName>seoThemeKeywords</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>seoWebsites__c</fullName>
+        <externalId>false</externalId>
+        <label>seoWebsites</label>
+        <referenceTo>seoWebsite__c</referenceTo>
+        <relationshipLabel>SEO Keywords</relationshipLabel>
+        <relationshipName>seoThemeKeywords</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>SEO Keyword</label>
+    <nameField>
+        <label>Keyword</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>SEO Keywords</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Add_Sniper</fullName>
+        <availability>online</availability>
+        <description>Set this keyword as having a sniper</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Sniper</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.seoThemeKeywords__c)};
+
+var newRecords = [];
+
+if(records.length&lt;1) {
+	alert(&quot;Please choose at least one keyword to recrawl.&quot;);
+} else {
+	try {
+		for (var n=0; n&lt;records.length; n++){
+			var keyword = new sforce.SObject(&quot;seoThemeKeywords__c&quot;);
+			keyword.id = records[n];
+			keyword.Sniper_Date__c = new Date();
+
+			newRecords.push(keyword);
+		}
+		result = sforce.connection.update(newRecords);
+
+		if (result[0].getBoolean(&quot;success&quot;)) {
+//			alert(&quot;Keyword with id &quot; + result[0].id + &quot; updated&quot;);
+			window.location.reload();
+		} else {
+			alert(&quot;failed to update Keyword &quot; + result[0]);
+		}
+	}
+	catch (e) {
+		alert(e);
+	}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Recrawl_Seo_Keyword</fullName>
+        <availability>online</availability>
+        <description>Queue the keyword for recrawling.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Recrawl Keyword</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/23.0/connection.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.seoThemeKeywords__c)};
+
+var newRecords = [];
+
+if(records.length&lt;1) {
+	alert(&quot;Please choose at least one keyword to recrawl.&quot;);
+} else {
+	try {
+		for (var n=0; n&lt;records.length; n++){
+			var keyword = new sforce.SObject(&quot;seoThemeKeywords__c&quot;);
+			keyword.id = records[n];
+			keyword.Last_Crawl_Date__c = null;
+
+			newRecords.push(keyword);
+		}
+		result = sforce.connection.update(newRecords);
+
+		if (result[0].getBoolean(&quot;success&quot;)) {
+//			alert(&quot;Keyword with id &quot; + result[0].id + &quot; updated&quot;);
+			window.location.reload();
+		} else {
+			alert(&quot;failed to update Keyword &quot; + result[0]);
+		}
+	}
+	catch (e) {
+		alert(e);
+	}
+}</url>
+    </webLinks>
+</CustomObject>

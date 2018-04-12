@@ -1,0 +1,29 @@
+<apex:page controller="CreateAccountController">
+<apex:form >
+    <apex:pageBlock title="Create Account">
+    
+        <apex:pageBlockSection title="Account Info">
+        <apex:inputField value="{!account.name}" />
+        <!-- <apex:inputField required="true" value="{!account.username__c}" />
+        <apex:inputfield required="true" value="{!account.password__c}" /> -->
+        <apex:inputField value="{!account.phone}" />
+        <apex:inputField value="{!account.extension__c}" />
+        <!-- <apex:inputField value="{!account.email__c}" /> -->
+        <apex:inputField value="{!account.Employee_Department__c}" />
+        <!-- <apex:inputField value="{!account.type}" /> -->
+        <apex:inputField value="{!account.Active__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Promocode Info">
+            <apex:inputField value="{!pcode.name}" />
+            <apex:inputField value="{!pcode.Promocode_Description__c}" />
+            <apex:inputField value="{!pcode.Promotions__c}" />
+            <apex:inputField value="{!pcode.IsActive__c}" />
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+            <apex:commandbutton action="{!save}" value="Save" id="theButton"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

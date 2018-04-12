@@ -1,0 +1,44 @@
+<apex:page standardController="seoWebsite__c" extensions="SeoGeoController" showHeader="true" sidebar="true">
+
+    <apex:sectionHeader title="Compare Search Parameters" subtitle="{!seoWebsite.name}"/>
+
+    <apex:form >
+	    <apex:commandLink value="Back to Website" action="{!cancel}" status="status"/>
+
+	    <apex:pageMessages ></apex:pageMessages> 
+
+		<apex:pageBlock >
+	    	<apex:pageBlockSection columns="1">
+				<apex:pageBlockSectionItem >
+		    		<c:MultiselectPicklist leftLabel="Available Geolocations" leftOption="{!allGeo}" rightLabel="Selected Geolocations" rightOption="{!selectedGeo}" size="8" width="280px" showUpDownButtons="true"/>
+				</apex:pageBlockSectionItem>
+
+		    	<apex:pageBlockSectionItem >
+		    		
+		    	<apex:outputLabel value="Device" for="deviceSelect"/>
+			        <apex:selectList value="{!device}" multiselect="false" size="1" id="deviceSelect">
+			            <apex:selectOptions value="{!deviceOptions}"/>
+			        </apex:selectList>
+			    </apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+	    	<apex:pageBlockButtons location="bottom">
+		    	<apex:commandButton value="Compare" action="{!submit}" />
+		    </apex:pageBlockButtons>
+		</apex:pageBlock>
+
+	</apex:form>
+
+	<apex:form >
+		<apex:pageBlock title="Rankings: {!seoWebsite.website_url__c}">
+			<apex:outputtext value="{!geoTable}" escape="false" id="geoTable" />
+
+			<apex:actionPoller action="{!submit}" id="refreshPoller" reRender="geoTable,refreshPoller" interval="20" rendered="{!refreshRequired}" />
+		</apex:pageBlock>
+	</apex:form>
+	
+<script language="javascript" type="text/javascript">
+	/* URL: {!geoURL} */
+</script>
+
+</apex:page>

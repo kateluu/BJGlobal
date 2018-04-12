@@ -1,0 +1,166 @@
+<apex:page standardController="Account" sidebar="true" showHeader="true" extensions="MakeARefund" action="{!PageLoad}">
+    <apex:form >
+        <apex:commandButton value="Back to Account" action="{!returnToAccount}" status="status"/>
+    </apex:form>    
+    <apex:form >
+<!--
+        <apex:pageblock id="Test">
+            <apex:pageBlockTable value="{!invoices}" var="inv" id="Test">
+                <apex:column headerValue="Select">
+                    <apex:inputCheckbox value="{!inv.Checked__c}">
+                        <apex:actionsupport event="onchange" action="{!updateInvoices}"
+                                            rerender="tableOfInvoices,PaymentTotal,Test,refundDetails"></apex:actionsupport>
+                    </apex:inputCheckbox>
+                </apex:column>
+
+                <apex:column HeaderValue="Invoice Name">
+                        {!inv.Account_Product__r.Name}
+                </apex:column>
+
+                <apex:column headerValue="Invoice No">
+                        {!inv.Invoice_Number__c}
+                </apex:column>
+
+                <apex:column headerValue="Total">
+                    ${!inv.Invoice_Total__c}
+                </apex:column>
+
+                <apex:column headerValue="Amount Paid">
+                    ${!inv.Amount_Paid__c}
+                </apex:column>
+
+                <apex:column headerValue="Amount Due">
+                    ${!inv.Amount_Due__c}
+                </apex:column>
+                <apex:column headerValue="Amount Refunded">
+                    ${!inv.Amount_Refunded__c}
+                </apex:column>
+
+                <apex:column headerValue="Issue Date">
+                    <apex:outputText id="paymentReference" value="{0,date,dd'/'MM'/'yyyy}">
+                        <apex:param value="{!inv.Issue_Date__c}"/>
+                    </apex:outputText>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageblock>
+-->
+
+        <apex:pageblock id="invoiceList">
+            <apex:pageBlockTable value="{!invoiceList}" var="item" id="invoiceList">
+                <apex:column headerValue="Select">
+                    <apex:inputCheckbox value="{!item.isSelected}">
+                        <apex:actionsupport event="onchange" action="{!updateRefundAmount}"
+                                            rerender="invoiceList, refundDetails"></apex:actionsupport>
+                    </apex:inputCheckbox>
+                </apex:column>
+
+                <apex:column HeaderValue="Invoice Name">
+                    {!item.invoice.Account_Product__r.Name}
+                </apex:column>
+
+                <apex:column headerValue="Invoice No">
+                    {!item.invoice.Invoice_Number__c}
+                </apex:column>
+
+                <apex:column headerValue="Total">
+                    ${!item.invoice.Invoice_Total__c}
+                </apex:column>
+
+                <apex:column headerValue="Amount Paid">
+                    ${!item.invoice.Amount_Paid__c}
+                </apex:column>
+                
+                <apex:column headerValue="Amount Due">
+                    ${!item.invoice.Amount_Due__c}
+                </apex:column>
+                
+                <apex:column headerValue="Amount Refunded">
+                    ${!item.invoice.Amount_Refunded__c}
+                </apex:column>
+                
+                <apex:column headerValue="Issue Date">
+                    <apex:outputText id="paymentReference" value="{0,date,dd'/'MM'/'yyyy}">
+                        <apex:param value="{!item.invoice.Issue_Date__c}"/>
+                    </apex:outputText>
+                </apex:column>
+
+            </apex:pageBlockTable>
+        </apex:pageblock>
+
+        <apex:pageblock id="refundDetails">
+
+            Total Refund Amount =
+            <apex:outputText value="{!totalRefund}"/>
+            <br/>
+            Invoices Selected =
+            <apex:outputText value="{!invoicesSelected}"/>
+            <br/>
+            Notes:<br/>
+            <apex:InputField value="{!inputPayment.Notes__c}" style="width:500px;"/>
+            <br/>
+            <apex:commandButton value="Bulk Refunds" action="{!bulkEwayCommwebRefunds}"  rerender="showmsg"/>
+            <!--<apex:commandButton value="Bulk Test Refunds" action="{!bulkTestCommwebRefund}" rerender="showmsg" onclick="alert('test');"/>-->
+
+        </apex:pageblock>
+
+        <apex:pageMessages id="showmsg"></apex:pageMessages>
+
+        <apex:outputText value="{!SUBSTITUTE(JSENCODE(message), '\\n', '<br/>')}" escape="false"/>
+
+
+        <apex:pageblock id="InvoiceDetail">
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+
+                    <apex:outputLabel >Invoice Number :</apex:outputLabel>
+                    <apex:selectList id="selectInvoiceNumber" value="{!invoiceNumber}" size="1">
+                        <apex:actionSupport event="onchange" action="{!ChangeInvoiceNumber}"
+                                            rerender="InvoiceDetail,PaymentTotal,ccinfo,Test" status="status"/>
+                        <apex:selectOptions value="{!InvoiceNumbers}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Refund Amount :</apex:outputLabel>
+                    <apex:inputText id="refundAmount" value="{!singleRefundAmount}"/>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Refund Reference :</apex:outputLabel>
+                    <apex:inputText id="paymentReference" value="{!paymentReference}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Amount Due :</apex:outputLabel>
+                    <apex:outputText id="paymentReference" value="{!invoiceAmountDue}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Amount Paid :</apex:outputLabel>
+                    <apex:outputText id="paymentReference" value="{!invoiceAmountPaid}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Issue Date :</apex:outputLabel>
+                    <!-- <apex:outputText id="paymentReference" value="{!invoiceIssuedDate}" /> -->
+                    <apex:outputText id="paymentReference" value="{0,date,dd'/'MM'/'yyyy}">
+                        <apex:param value="{!invoiceIssuedDate}"/>
+                    </apex:outputText>
+
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Notes :</apex:outputLabel>
+                    <apex:InputField value="{!inputPaymentPartial.Notes__c}" style="width:500px;"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:commandButton value="Refund" action="{!Refund}" rerender="showmsg"/>            
+        <!--
+            <apex:commandButton value="Test Single Refund" action="{!singleTestRefund}" rerender="showmsg"/>                    
+            <apex:commandButton value="AU Refund" action="{!partialRefund}" rerender="showmsg"/>
+            <apex:commandButton value="NZ Refund" action="{!SingleRefund}" rerender="showmsg"/>
+        -->
+    
+        </apex:pageblock>
+
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page standardController="Cases__c" extensions="CreditListForCase">
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!cs}" var="c" rendered="{!IF(cs.size!=0, true, false)}">
+                <apex:column headervalue="Credit Number" >
+		        	<apex:CommandLink onclick="window.open('/{!c.Id}', '_blank'); return false;" >{!c.Name}</apex:CommandLink>
+		        </apex:column>
+		        <apex:column headervalue="Account Product" >
+		        	<apex:CommandLink onclick="window.open('/{!c.Account_Product__c}', '_blank'); return false;" >{!c.account_product__r.name}</apex:CommandLink>
+		        </apex:column>
+		        <apex:column value="{!c.Amount__c}"/>
+		        <apex:column value="{!c.Credit_Left__c}"/>
+		        <apex:column value="{!c.Credit_Used__c}"/>
+		        <apex:column value="{!c.Valid_From__c}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!IF(cs.size=0, true, false)}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

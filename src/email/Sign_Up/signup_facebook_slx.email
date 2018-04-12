@@ -1,0 +1,96 @@
+<messaging:emailTemplate subject="Welcome to SponsoredLinX" recipientType="Contact" relatedToType="Sign_Up__c">
+
+<messaging:HtmlEmailBody >
+<html>
+<body>
+<div style="width:650px;">
+Hi {!relatedTo.Firstname__c},<br />
+<br /> 
+Thank you for joining SponsoredLinX!<br />
+<br />
+We look forward to working alongside your business towards achieving your online marketing goals.<br />
+<br />
+You have signed up online for the following services:<br />
+
+<!-- BEGIN services -->
+<ul>
+<apex:repeat var="ap" value="{!relatedTo.Account_Products__r}">
+    <li>{!ap.Name}</li> 
+</apex:repeat>
+</ul> 
+<!-- END services -->
+
+Your Internet Marketing Specialist will be in contact with you shortly to assess your online marketing needs and start working on your new social media campaign. 
+<br /><br />
+You can monitor the progress of your account setup by using the LinX app on your mobile device. Simply download the app and use your login below:<br />
+Username: {!relatedTo.Account__r.username__c}<br />
+Password: {!relatedTo.Account__r.password_on_signup__c}<br /><br />
+
+<a href="https://play.google.com/store/apps/details?id=com.linxapp"><img src="http://www.sponsoredlinx.com.au/email/signatures/appstore-android.png" /></a>
+<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1228592479&mt=8"><img src="http://www.sponsoredlinx.com.au/email/signatures/appstore-apple.png" /></a>
+
+<br /><br />  
+In the meantime, check out some of our recent success stories <a href="http://www.sponsoredlinx.com.au/success-stories">Here</a>
+<br /><br />
+The SponsoredLinX on-going social media management service is free of contracts or fixed time periods.
+<br /><br />
+Lastly, if you haven't already, please take a moment to review the full terms and conditions of our service, located at <a href="http://www.sponsoredlinx.com.au/terms-and-conditions">Terms and Conditions</a>
+<br /><br />
+Our goal is to hit the ground running on your social media marketing, and the sooner we get the formalities out of the way, the sooner we can deliver great results!<br /> 
+<br /> 
+Kind regards,
+
+<table width="300" border="0" style="border-collapse: collapse" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2">
+        <table width="100%" border="0">
+        <tr>
+          <td><div style="font-family:Arial, Helvetica, sans-serif;font-size:16px;text-align:center">
+          
+          <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name != null}">
+              <span style="color:#3967ff;">{!relatedTo.Salesperson__r.Name}</span><br />
+              <span style="font-size:14px">Internet Marketing Consultant</span>
+          </apex:outputPanel>
+          
+          <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name == null}">
+              <span style="color:#3967ff;">SponsoredLinX</span><br />
+              <span style="font-size:14px">Search Engine Marketing</span>
+          </apex:outputPanel>
+          
+          </div></td>
+          <td style="text-align: right; vertical-align: bottom;">
+        <img src="http://www.sponsoredlinx.com.au/email/signatures/followus.jpg" />&nbsp;<a href="https://plus.google.com/b/100557937750884224241/100557937750884224241/posts" style="border: 0px;" target="_blank"><img border="0" src="http://www.sponsoredlinx.com.au/email/signatures/icon-gplus.jpg" /></a><a href="http://www.facebook.com/SponsoredLinX" style="border: 0px;" target="_blank"><img border="0" src="http://www.sponsoredlinx.com.au/email/signatures/icon-fb.jpg" /></a>
+      </td>
+    </tr>
+    </table>
+    </td>
+</tr>    
+    <tr>
+      <td colspan="2" style="background-color: #222c6a;">
+        <a href="http://www.sponsoredlinx.com.au/promotions" style="border: none;" target="_blank"><img border="0" src="http://www.sponsoredlinx.com.au/email/signatures/slx.jpg" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="background-color: #222c6a; text-align: center; color: #e45d24; padding: 4px 0px;">
+        <a href="http://www.sponsoredlinx.com.au/" style="color: #ffffff; text-decoration: none; font-family: Arial,Helvetica,sans-serif; font-size: 11px;" target="_blank">AdWords Management</a>&nbsp; | &nbsp;<a href="http://www.sponsoredlinx.com.au/" style="color: #ffffff; text-decoration: none; font-family: Arial,Helvetica,sans-serif; font-size: 11px;" target="_blank">Search Engine Optimisation</a>&nbsp; | &nbsp;<a href="http://www.sponsoredlinx.com.au/" style="color: #ffffff; text-decoration: none; font-family: Arial,Helvetica,sans-serif; font-size: 11px;" target="_blank">Social Media</a>&nbsp; | &nbsp;<a href="http://www.sponsoredlinx.com.au/" style="color: #ffffff; text-decoration: none; font-family: Arial,Helvetica,sans-serif; font-size: 11px;" target="_blank">Web</a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">
+        <img src="http://www.sponsoredlinx.com.au/email/signatures/brw.jpg" /><img src="http://www.sponsoredlinx.com.au/email/signatures/best.jpg" /><img src="http://www.sponsoredlinx.com.au/email/signatures/certified.jpg" /><img src="http://www.sponsoredlinx.com.au/email/signatures/smart.jpg" /><img src="http://www.sponsoredlinx.com.au/email/signatures/yahoo.jpg" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src="http://www.sponsoredlinx.com.au/email/signatures/disclaimer.jpg" />
+      </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+
+</messaging:HtmlEmailBody>
+
+</messaging:emailTemplate>

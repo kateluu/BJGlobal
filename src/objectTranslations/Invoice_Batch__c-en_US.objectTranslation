@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice Batch</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoice Batches</value>
+    </caseValues>
+    <fields>
+        <label><!-- Batch Date --></label>
+        <name>Batch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Error Response --></label>
+        <name>Batch_Error_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Number --></label>
+        <name>Batch_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Period --></label>
+        <name>Batch_Period__c</name>
+        <picklistValues>
+            <masterLabel>13 Day</masterLabel>
+            <translation><!-- 13 Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Day</masterLabel>
+            <translation><!-- 3 Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Day</masterLabel>
+            <translation><!-- 5 Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 Day</masterLabel>
+            <translation><!-- 9 Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Today</masterLabel>
+            <translation><!-- Today --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch Processed --></label>
+        <name>Batch_Processed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch Records --></label>
+        <name>Batch_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Type --></label>
+        <name>Batch_Type__c</name>
+        <picklistValues>
+            <masterLabel>Invoices</masterLabel>
+            <translation><!-- Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch Status --></label>
+        <name>status__c</name>
+        <picklistValues>
+            <masterLabel>Batch Approved</masterLabel>
+            <translation><!-- Batch Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Approval</masterLabel>
+            <translation><!-- Pending Approval --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Invoice Batch Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

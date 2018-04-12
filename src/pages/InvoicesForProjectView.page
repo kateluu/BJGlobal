@@ -1,0 +1,22 @@
+<apex:page standardController="SFDC_Projects__c" extensions="InvoicesForProjectController">
+<style>
+	.fewerMore { display: none;}
+</style>
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!ins}" var="inv" rendered="{!NOT(ISNULL(ins))}">
+		        <apex:column value="{!inv.Invoice_Number__c}"/>
+		        <apex:column value="{!inv.Amount_Credited__c}"/>
+		        <apex:column value="{!inv.Amount_Due__c}"/>
+		        <apex:column value="{!inv.Amount_Paid__c}"/>
+		        <apex:column value="{!inv.Amount_Refunded__c}"/>
+		        <apex:column value="{!inv.Invoice_Total__c}"/>
+		        <apex:column value="{!inv.Issue_Date__c}"/>
+		        <apex:column value="{!inv.Due_Date__c}"/>
+		        <apex:column value="{!inv.Account_Product__r.Name}"/>
+		        <apex:column value="{!inv.Status__c}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!(ISNULL(ins))}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

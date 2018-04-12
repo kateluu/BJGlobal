@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_40368200</developerName>
+        <masterLabel>By set up range</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Sign_Up__c.Set_Up_Price__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>150</to>
+            </sourceValues>
+            <value>Low setup 150 or less</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>150</from>
+                <to>300</to>
+            </sourceValues>
+            <value>Mid setup 150 - 300</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>300</from>
+            </sourceValues>
+            <value>High setup</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>FK_$Account.Adwords_Active_Days__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Sign_Up__c.Product_Type__c</column>
+            <operator>equals</operator>
+            <value>AdWords Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account.Adwords_Product__c</column>
+            <operator>equals</operator>
+            <value>Cancelled</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_40368200</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Sign_Up__c.Set_Up_Price__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Churn rate by setup values</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sign_Up__c@Sign_Up__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

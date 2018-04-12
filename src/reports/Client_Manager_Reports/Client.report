@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_68870529</developerName>
+        <masterLabel>Product Package</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account_Product__c.SLX_Product__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Optimised Fortnightly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Optimised Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Optimised Quarterly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Optimised Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AdWords Optimised Monthly Management</sourceValue>
+            </sourceValues>
+            <value>Optimised Package</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Premium Fortnightly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Premium Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Premium Monthly Management</sourceValue>
+            </sourceValues>
+            <value>Premium Package</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Standard Half Yearly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Standard Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Standard Quarterly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Standard Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AdWords Standard Monthly Management</sourceValue>
+            </sourceValues>
+            <value>Standard Package</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Corporate BRONZE Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate BRONZE Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate Diamond Management (Monthly)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate Diamond Management (Weekly)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate GOLD Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate GOLD Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate Management Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Corporate SILVER Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Corporate Adwords + Bing Monthly Management</sourceValue>
+            </sourceValues>
+            <value>Corporate Package</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Basic Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Basic Package</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords E-Commerce Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords E-Commerce Monthly Management</sourceValue>
+            </sourceValues>
+            <value>E Commerce</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Trade Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Trade Monthly Management</sourceValue>
+            </sourceValues>
+            <value>Trade Package</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>FK_$Account.Revenue__c</column>
+        </chartSummaries>
+        <chartType>Pie</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>BucketField_68870529</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.SLX_Product__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$Account.Revenue__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$Account.Credit__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$Account.Refund__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account_Product__c.Monthly_Price__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>notContain</operator>
+            <value>hosting,converto,fund,seo</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_68870529</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Client Contribution</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>user</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.activeat__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

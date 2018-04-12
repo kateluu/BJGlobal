@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>SEO and Google+</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_$Account_Product__c.Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Project_Stage__c</column>
+            <operator>notEqual</operator>
+            <value>Completed - New Contract</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <operator>equals</operator>
+            <value>Adam Conroy,Connor Krohn,Amy Ambrose,Tom Caffrey,Alexander Mortimer,Celest Maggs,Chanelle Canilao,Fiona Hoy,James Snelson,Kate Muller,Marco Cacciola,Molly Hanrahan,Nathan Moody,Nicholas Davis,Raymond Serafin,Sarah Googe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>SEO,Google+</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active Projects</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SFDC_Projects__c@SFDC_Projects__c.Account_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

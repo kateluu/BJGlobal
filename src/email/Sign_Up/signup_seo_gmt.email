@@ -1,0 +1,92 @@
+<messaging:emailTemplate subject="Welcome to GetMoreTraffic" recipientType="Contact" relatedToType="Sign_Up__c">
+
+<messaging:HtmlEmailBody >
+<html>
+<body>
+
+<div style="width:650px;">
+Hi {!relatedTo.Firstname__c}<br />
+<br /> 
+Thank you for joining Get More Traffic!<br />
+<br />
+We look forward to working alongside your business towards achieving your online marketing goals.<br />
+<br />
+You have signed up online for the following services:<br />
+
+<!-- BEGIN services -->
+<ul>
+<apex:repeat var="ap" value="{!relatedTo.Account_Products__r}">
+    <li>{!ap.Name}</li> 
+</apex:repeat>
+</ul> 
+<!-- END services -->
+
+
+Your Dedicated Campaign Manager will be in contact with you shortly to introduce themselves and to get that first hand understanding on how we best can drive your business forward.<br />
+<br />  
+Lastly, we have attached a copy of the agreed Terms and Conditions as well as the initial steps in our proven strategy to <i>Get you More Traffic</i>.<br />
+<br />  
+Kind regards,
+
+<table style="width: 100%; max-width: 600px; height: auto; margin: 0; padding: 0; border: none; margin-top:20px; margin-bottom:10px;" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+          <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name != null}">
+            <p style="font-size:14px; color:#8bc541; margin-bottom:10px;">{!relatedTo.Salesperson__r.Name}</p>
+            <p style="font-size:14px; color:#8bc541; margin-bottom:10px;">Internet Marketing Consultant</p>
+          </apex:outputPanel>
+          
+          <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name == null}">
+            <p style="font-size:14px; color:#8bc541; margin-bottom:10px;">GetMoreTraffic</p>
+            <p style="font-size:14px; color:#8bc541; margin-bottom:10px;">Search Engine Marketing</p>
+          </apex:outputPanel>
+          
+            <p>
+                P: 1300 332 256<br />
+                W: <a style="text-decoration:none; color:#666666;" href="http://getmoretraffic.com.au">www.GetMoreTraffic.com.au</a>
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table style="margin-bottom:5px; width: 100%; max-width: 600px; height: auto; margin: 0; padding: 0; border: none;" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <img style="vertical-align:middle; margin-right:10px;" src="http://getmoretraffic.com.au/email/2016/img_follow.png" alt="Follow us on:" />
+            <a style="margin-right:5px;" href="https://plus.google.com/+GetmoretrafficAu/posts"><img src="http://getmoretraffic.com.au/email/2016/img_googleplus.png" alt="Google Plus" /></a>
+            <a href="https://www.facebook.com/Get-More-Traffic-926216180727121/"><img src="http://getmoretraffic.com.au/email/2016/img_facebook.png" alt="Facebook" /></a>
+        </td>
+        <td style="text-align:right;">
+            <a href="https://www.google.com.au/partners/?hl=en-US#a_profile;idtf=6983347790"><img src="http://getmoretraffic.com.au/email/2016/img_googlepartner.png" alt="Google Partner" /></a>
+            <img style="vertical-align:top;" src="http://getmoretraffic.com.au/email/2016/img_bing.png" alt="Bing Ads" />
+        </td>
+    </tr>
+</table>
+
+<table style="width: 100%; max-width: 600px; height: auto; margin: 0; padding: 0; border: none;" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="width:50%;">
+            <a href="http://getmoretraffic.com.au"><img src="http://getmoretraffic.com.au/email/2016/img_logo.jpg" alt="Get More Traffic" /></a>
+        </td>
+        <td style="width:50%;">
+            <a href="http://getmoretraffic.com.au/promotions"><img src="http://getmoretraffic.com.au/email/2016/img_right_promo.jpg" alt="Drive your business online. Get Started" /></a>
+        </td>
+    </tr>
+</table>
+
+<table style="width: 100%; max-width: 600px; height: auto; margin: 0; padding: 0; border: none;">
+    <tr>
+        <td style="padding-top:30px; padding-bottom:10px;">
+            <p>The content of this e-mail, including attachments is a confidential communication between Get More Traffic and the intended addressee. Any unauthorised use of the contents is expressly prohibited. If you have received this e-mail in error please contact the sender immediately and then delete the message and any attachment(s).</p>
+        </td>
+    </tr>
+</table>
+
+</div>
+
+</body>
+</html>
+
+</messaging:HtmlEmailBody>
+
+</messaging:emailTemplate>

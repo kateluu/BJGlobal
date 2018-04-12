@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Active_Days__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <booleanFilter>(1 AND 2 AND 3) AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>contains</operator>
+            <value>adwords</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <operator>lessThan</operator>
+            <value>11/13/2015 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Active_Days__c</column>
+            <operator>greaterThan</operator>
+            <value>140</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.cancelat__c</column>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.cancelat__c</column>
+            <operator>greaterThan</operator>
+            <value>4/1/2016</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_ROLE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Historical Active Clients Number</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>Account_Product__c.Active_Days__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.cancelat__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

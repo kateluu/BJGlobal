@@ -1,0 +1,552 @@
+<apex:page controller="CheckoutController" showHeader="false" sidebar="false" standardStyleSheets="false" cache="false" action="{!index}">
+
+	<apex:stylesheet value="https://getmoretraffic.com.au/wp-content/themes/cosmos/styles/bootstrap.min.css" />
+
+	<apex:stylesheet value="https://getmoretraffic.com.au/wp-content/themes/cosmos/styles/fonts.css" />
+	<apex:stylesheet value="https://getmoretraffic.com.au/wp-content/uploads/wp-less-cache/child-style.css" />
+	<apex:stylesheet value="https://getmoretraffic.com.au/wp-content/themes/gmt/checkout-dev.css?3" />
+
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-includes/js/jquery/jquery.js"/>
+
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/cosmos/js/bootstrap.min.js"/>
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/cosmos/js/jquery.matchHeight-min.js"/>
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/cosmos/js/jquery.cycle2.min.js"/>
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/cosmos/js/jquery.cycle2.carousel.min.js"/>
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/gmt/js/jquery.validate.min.js"/>
+	<apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/gmt/js/checkout-dev.js?3"/>
+
+<script type="text/javascript">
+var wrapperURL = "{!siteWrapperURL}";
+var addonsURL = "{!addonsURL}";
+// If we're not in an iframe, redirect to the checkout wrapper
+if (!inIframe() && wrapperURL) {
+	window.top.location.href = "{!siteWrapperURL}/checkout/?bjblocale={!locale}";
+}
+
+jQuery(function ($) {
+	document.cookie = "ThirdPartyCookie=yes;";
+	if (document.cookie.indexOf("ThirdPartyCookie=") <= -1) {
+		$('#MainHeader').text('Third Party Cookies appear to be disabled');
+		$('#ErrorMessage').text('To display this content you need to change your browser privacy settings to allow "Third Party" cookies.');
+	}
+
+    // Salesforce doesn't allow you to specify custom 'select' text, so we have to modify it after load.
+	$('.input-industry option:contains("--None--")').text('Industry');
+	$('.input-employees option:contains("--None--")').text('Number of Employees');
+});
+</script>
+
+<div class="page page-template page-template-page-checkout page-checkout-sf">
+
+<div id="wrapper">
+
+<div id="content" class="block_div block_grey block_no_skew block_bg_img">
+<div class="container">
+
+	<apex:pageMessages ></apex:pageMessages>
+
+	<apex:outputPanel rendered="{!IsCartEmpty == true}">
+	<div class="row">
+		<div class="col-sm-12">
+			<section class="chunk_wysiwyg">
+				<h2 id="MainHeader">Your cart is currently empty</h2>
+				<span id="ErrorMessage"></span>
+			</section>
+		</div>
+	</div>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!IsCartEmpty == false}">
+	<div class="row">
+		<div class="col-sm-12">
+			<section class="chunk_wysiwyg">
+				<h2>You're Nearly There	<span>The best is yet to come!</span></h2>
+			</section>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-7">
+			<div class="checkout_left">
+				<apex:form id="checkout-form" styleClass="checkout-form" >
+				<div id="checkout_slide_1" class="checkout_slide checkout_slide_active ">
+					<h5 class="checkout_title">Your Details</h5>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.Firstname__c}" html-placeholder="First Name" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.Lastname__c}" html-placeholder="Last Name" required="true" />
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.Email__c}" html-placeholder="Email" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.Phone__c}" html-placeholder="Phone" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row">
+								<apex:inputField value="{!signup.Mobile__c}" html-placeholder="Mobile" />
+							</div>
+						</div>
+					</div>
+					<h5 class="checkout_title">Company Details</h5>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.Company__c}" html-placeholder="Company" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row">
+								<apex:inputField value="{!signup.Website__c}" html-placeholder="Website" styleClass="web_adress urlvalidation" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row">
+								<span class="select_cover">
+									<apex:inputField value="{!acc.Industry}" styleClass="input-industry" />
+								</span>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row">
+								<span class="select_cover">
+									<apex:inputField value="{!acc.Number_of_Employees__c}" styleClass="input-employees" />
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row checkout_buttons">
+						<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-6 col-md-offset-4 TAR">
+							<a href="#" id="first_step" class="btn_green btn_checkout_next">Proceed to Next Step</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="checkout_slide_2" class="checkout_slide">
+					<h5 class="checkout_title">Billing Address</h5>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputText value="{!signup.Street__c}" html-placeholder="Street Address" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.City__c}" html-placeholder="Suburb/Town" required="true" />
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:inputField value="{!signup.PostalCode__c}" html-placeholder="Postcode" required="true" />
+							</div>
+						</div>
+						<apex:outputPanel rendered="{!locale == 'AUD'}">
+						<div class="col-md-6 col-sm-12">
+							<div class="form_row reqd">
+								<apex:selectList value="{!signup.State__c}" multiselect="false" size="1" title="Please choose your state" required="true" >
+									<apex:selectOptions value="{!stateOptions}"/>
+		        				</apex:selectList>
+							</div>
+						</div>
+						</apex:outputPanel>
+						<div class="col-sm-12">
+							<div class="form_row">
+								<label for="mailing_address" class="checkout_checkbox">
+								<apex:actionRegion >
+									<apex:inputCheckbox value="{!mailing_address}" styleClass="mailing_address">
+										<apex:actionSupport event="onchange" action="{!index}" reRender="mailing-address-fields"/>
+									</apex:inputCheckbox>
+								</apex:actionRegion>
+								Mailing Address Same As Billing Address</label>
+							</div>
+						</div>
+
+						<apex:outputPanel id="mailing-address-fields">
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row {!IF(mailing_address,'','reqd')}">
+									<apex:inputText value="{!signup.MailingStreet__c}" html-placeholder="Street Address" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row {!IF(mailing_address,'','reqd')}">
+									<apex:inputText value="{!signup.MailingCity__c}" html-placeholder="City" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row {!IF(mailing_address,'','reqd')}">
+									<apex:inputText value="{!signup.MailingPostalCode__c}" html-placeholder="Postcode" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row {!IF(mailing_address,'','reqd')}">
+									<span class="select_cover">
+										<apex:selectList value="{!signup.MailingState__c}" multiselect="false" size="1" title="Please choose your state" required="{!NOT(mailing_address)}" disabled="{!mailing_address}">
+											<apex:selectOptions value="{!stateOptions}"/>
+				        				</apex:selectList>
+									</span>
+								</div>
+							</div>
+						</apex:outputPanel>
+
+					</div>
+					<div class="row checkout_buttons">
+						<div class="col-lg-6 col-md-4 col-sm-12">
+							<a href="#" class="btn_checkout_prev prev_firststep">Forget Something?</a>
+						</div>
+						<div class="col-lg-6 col-md-8 col-sm-12 TAR">
+							<a href="#" id="second_step" class="btn_green btn_checkout_next">Proceed to Next Step</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="checkout_slide_3" class="checkout_slide">
+					<apex:outputPanel id="slide-payment">
+					<h5 class="checkout_title">Payment Method</h5>
+					<div class="row">
+						<apex:outputPanel rendered="{!paymentTypeOptions.size > 1}">
+						<div class="col-sm-12">
+							<div class="form_row reqd">
+							<apex:actionRegion >
+								<apex:selectList value="{!paymentType}" multiselect="false" size="1" required="true">
+									<apex:selectOptions value="{!paymentTypeOptions}"/>
+
+									<apex:actionSupport event="onchange" action="{!applyPaymentType}" reRender="slide-payment"/>
+		        				</apex:selectList>
+	        				</apex:actionRegion>
+							</div>
+						</div>
+						</apex:outputPanel>
+
+						<apex:outputPanel rendered="{!paymentType == 'Credit Card'}">
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row reqd">
+									<span class="select_cover">
+									<apex:selectList value="{!cardType}" multiselect="false" size="1" title="Please enter your card type" required="true">
+										<apex:selectOption itemValue="" itemLabel="Card Type"/>
+										<apex:selectOptions value="{!creditCardOptions}"/>
+			        				</apex:selectList>
+			        				</span>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<div class="form_row reqd">
+									<apex:inputField value="{!acc.Name_On_Card__c}" html-placeholder="Card Name" html-title="Please enter your card name" required="true" />
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form_row reqd">
+									<apex:inputField value="{!acc.Card_Number__c}" html-placeholder="Card Number" html-title="Please enter your card number" required="true" />
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<h6 class="checkout_input_title">Card Expiry Date</h6>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="form_row reqd">
+									<span class="select_cover">
+										<apex:selectList value="{!acc.Card_Month_Expiry__c}" multiselect="false" size="1" required="true">
+											<apex:selectOptions value="{!monthOptions}"/>
+				        				</apex:selectList>
+									</span>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="form_row reqd">
+									<span class="select_cover">
+										<apex:selectList value="{!acc.Card_Year_Expiry__c}" multiselect="false" size="1" required="true">
+											<apex:selectOptions value="{!cardYearOptions}"/>
+				        				</apex:selectList>
+									</span>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-12 col-sm-12">
+								<div class="form_row reqd">
+								<apex:inputField value="{!acc.Card_CVN__c}" required="true" />
+									<span>(the last 3 digits on the back of your card)</span>
+								</div>
+							</div>
+						</apex:outputPanel>
+
+						<apex:outputPanel rendered="{!paymentType == 'Invoice'}">
+							<div class="col-sm-12">
+								<div class="form_row reqd">
+									<p>You will be issued with an invoice from GetMoreTraffic.</p>
+								</div>
+							</div>
+						</apex:outputPanel>
+
+                        <apex:outputPanel rendered="{!locale == 'NZD'}">
+							<div class="col-sm-12">
+								<div class="form_row reqd">
+		                        	<label style="font-weight: 300; margin-bottom: 10px">Are you registered for GST?</label>
+		                        	<apex:selectRadio value="{!signup.GST__c}">
+		                        		<apex:selectOption itemValue="true" itemLabel="Yes"/>
+		                        		<apex:selectOption itemValue="false" itemLabel="No"/>
+		                        	</apex:selectRadio>
+								</div>
+							</div>
+                        </apex:outputPanel>
+					</div>
+					</apex:outputPanel>
+					<div class="row checkout_buttons">
+						<div class="col-lg-6 col-md-4 col-sm-12">
+							<a href="#" class="btn_checkout_prev prev_secondstep">Forget Something?</a>
+						</div>
+						<div class="col-lg-6 col-md-8 col-sm-12 TAR">
+							<a href="#" id="third_step" class="btn_green btn_checkout_next">Proceed to Next Step</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="checkout_slide_addon" class="checkout_slide">
+					<h5 class="checkout_title">Add Ons</h5>
+			    	<apex:actionRegion >
+						<div id="addonFeature">
+						</div>
+						<apex:commandButton action="{!index}" value="Apply" styleClass="addon-apply" reRender="theCart,terms" />
+					</apex:actionRegion>
+				</div>
+
+				<div id="checkout_slide_4" class="checkout_slide">
+
+					<h5 class="checkout_title">Comments</h5>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form_row">
+								<apex:inputField value="{!signup.Comments__c}" style="width: 100%;"/>
+							</div>
+						</div>
+					</div>
+					<h5 class="checkout_title">Hang on in there, you're nearly done!</h5>
+
+					<apex:outputpanel id="terms">
+
+						<script type="text/javascript">
+						jQuery(function ($) {
+							// Visualforce doesn't put the 'required' attribute on required fields, so we do it here so that client-side validation works.
+							// This code is also in the main javascript file, however we also have to include it here so that when the 'terms' output 
+							// panel gets reloaded from the addons, the required attribute is added.
+							$('.reqd input, .reqd select').attr('required', true);
+						});
+						</script>
+					
+						<div class="row terms-block reqd">
+						<apex:repeat value="{!productFamilies}" var="family" >
+							<apex:outputPanel rendered="{!family == 'AdWords'}">
+								<apex:outputPanel rendered="{!Packages.size>1}"><h5>AdWords:</h5></apex:outputPanel>
+								<div class="col-sm-12 form_row">
+			                        <label class="checkout_checkbox"><apex:inputCheckbox value="{!termsAdwords1}" required="true"/> Your Google spend is separate to the weekly fee and is paid directly to Google.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsAdwords2}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsAdwords3}" required="true"/> Weekly management fee will be automatically debited in arrears seven days from today via your nominated billing method, weekly ongoing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsAdwords4}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox">
+									<apex:inputCheckbox value="{!termsAdwords5}" required="true"/>
+									<div>In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms/" target="_blank">AdWords Terms &amp; Conditions</a>.</div>
+									</label>
+								</div>
+							</apex:outputPanel>
+
+	                        <apex:outputPanel rendered="{!family == 'SEO'}">
+	                        	<apex:outputPanel rendered="{!Packages.size>1}"><h5>SEO:</h5></apex:outputPanel>
+	                        	<div class="col-sm-12 form_row">
+	                            	<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsSeo1}" required="true"/> The first months management will be deducted from your account via your nominated payment method.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+	                            	<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsSeo2}" required="true"/> Your Monthly management fee will be automatically debited in advance one month from today via your nominated billing method, ongoing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+	                            	<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsSeo3}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+	                            	<label class="checkout_checkbox">
+	                            	<apex:inputCheckbox value="{!termsSeo4}" required="true"/>
+	                            	<div>In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms-seo/" target="_blank">SEO Terms &amp; Conditions</a>.</div>
+	                            	</label>
+								</div>
+	                        </apex:outputPanel>
+
+	                        <apex:outputPanel rendered="{!family == 'ConvertoPages'}">
+		                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>ConvertoPages:</h5></apex:outputPanel>
+		                        <div class="col-sm-12 form_row">
+		                            <label class="checkout_checkbox"><apex:inputCheckbox value="{!termsWeb1}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+		                            <label class="checkout_checkbox"><apex:inputCheckbox value="{!termsWeb2}" required="true"/> Monthly management fee will be automatically debited in arrears one month from today via your nominated billing method, weekly ongoing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+		                            <label class="checkout_checkbox">
+		                            <apex:inputCheckbox value="{!termsWeb5}" required="true"/>
+		                            <div>In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms-go-pages/" target="_blank">GO! Pages Terms &amp; Conditions</a>.</div>
+		                            </label>
+								</div>
+	                        </apex:outputPanel>
+
+							<apex:outputPanel rendered="{!family == 'Facebook'}">
+								<apex:outputPanel rendered="{!Packages.size>1}"><h5>Facebook:</h5></apex:outputPanel>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsFacebook1}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsFacebook2}" required="true"/> Your Facebook advertising spend is separate to these fees and is paid directly to Facebook.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsFacebook3}" required="true"/> Weekly management fee will be automatically debited in arrears seven days from today via your nominated billing method, weekly ongoing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox"><apex:inputCheckbox value="{!termsFacebook4}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
+								</div>
+								<div class="col-sm-12 form_row">
+									<label class="checkout_checkbox">
+									<apex:inputCheckbox value="{!termsFacebook5}" required="true"/>
+									<div>In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms-facebook/" target="_blank">Terms &amp; Conditions</a>.</div>
+									</label>
+								</div>
+							</apex:outputPanel>
+
+						</apex:repeat>
+						</div>
+					</apex:outputpanel>
+
+					<div class="row checkout_buttons">
+						<div class="col-lg-6 col-md-4 col-sm-12">
+							<a href="#" class="btn_checkout_prev prev_fourthstep">Forget Something?</a>
+						</div>
+						<div class="col-lg-6 col-md-8 col-sm-12 TAR">
+							<apex:commandButton action="{!submitCheckout}" value="Signup!" styleClass="btn_green btn_checkout_submit" />
+						</div>
+					</div>
+				</div>
+				</apex:form>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<apex:outputpanel id="theCart">
+			<script type="text/javascript">
+			var checkoutData = { 
+				"siteName"	: "{!siteName}",
+				"locale" 	: "{!locale}",
+				"cart"		: {!jsonCart}
+			};
+
+			jQuery(function ($) {
+				// Load addon content from php. We pass the cart items to php so it can determine which addons to display.
+				// cartItems is populated in the javascript on the visualforce page.
+				$("#addonFeature").load(addonsURL, checkoutData, function(response, status, xhr) {
+					// Display addon tab if there is addon content
+					if ($.trim($("#addonFeature").html())){
+						$("#checkout_number_addon").removeClass('checkout_step_disabled');
+						$("#checkout_slide_addon").removeClass('checkout_slide_disabled');
+					} else {
+						$("#checkout_number_addon").addClass('checkout_step_disabled');
+						$("#checkout_slide_addon").addClass('checkout_slide_disabled');
+					}
+
+					var stepCount = 0;
+					jQuery('.checkout_step:not(.checkout_step_disabled)').each(function(){
+						stepCount++;
+						jQuery(this).find('.checkout_number').text(stepCount);
+					});
+				});
+			});
+			</script>
+			<div class="checkout_right">
+				<p>
+					<strong>Your Cart</strong><br />
+					Need to talk to someone? Call Us on 1300 332 256
+				</p>
+				<apex:form >
+				<div id="form_checkout_promo_holder">
+					<apex:inputText value="{!promocode}" id="newPromo" title="Please enter a valid promocode" styleClass="checkpromo" html-placeholder="Sales ID">
+						<apex:actionSupport event="onblur" action="{!applyPromocode}" reRender="theCart,slide-payment"/>
+					</apex:inputText>
+					<apex:commandButton action="{!applyPromocode}" value="APPLY" id="apply" styleClass="promocode button" reRender="theCart,slide-payment" />
+				</div>
+				</apex:form>
+				<div class="checkout_service_holder">
+					<div class="checkout_service">
+						<div class="checkout_service_left">
+							<span class="fw_700">SERVICE</span>
+						</div>
+					</div>
+					<div class="checkout_services">
+						<form id="product_data" name="product_data" action="" method="post">
+							<apex:repeat value="{!Packages}" var="items">
+								<apex:repeat value="{!items}" var="item">
+								<div class="checkout_service">
+									<div class="checkout_service_left">
+										<span class="name"><apex:outputText value="{!item.product.Name}" /></span><br />
+
+										<apex:outputPanel rendered="{!item.product.product_recurring__c == 'Yes' && item.product.recurring_period__c != null}">
+											<span class="checkout_period">{!item.product.recurring_period__c}</span>
+										</apex:outputPanel>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								</apex:repeat>
+							</apex:repeat>
+						</form>
+					</div>
+				</div>
+				<div class="checkout_prices">
+					<apex:repeat value="{!Totals}" var="totalId" >
+					<div class="checkout_price">
+						<div class="checkout_price_left"><span class="name">{!totalId} Total:</span></div>
+						<div class="checkout_price_right"><span class="price">${!Totals[totalId]}</span></div>
+					</div>
+					</apex:repeat>
+				</div>
+			</div>
+			</apex:outputpanel>
+		</div>
+	</div>
+
+	<div class="checkout_numbers top0">
+		<div id="checkout_number_1" class="checkout_step steps_active show" data-target-slide="checkout_slide_1">
+			<span class="checkout_number">1</span>
+			<div class="checkout_number_line"></div>
+		</div>
+		<div id="checkout_number_2" class="checkout_step" data-target-slide="checkout_slide_2">
+			<span class="checkout_number">2</span>
+			<div class="checkout_number_line"></div>
+		</div>
+		<div id="checkout_number_3" class="checkout_step" data-target-slide="checkout_slide_3">
+			<span class="checkout_number">3</span>
+			<div class="checkout_number_line"></div>
+		</div>
+		<div id="checkout_number_addon" class="checkout_step" data-target-slide="checkout_slide_addon">
+			<span class="checkout_number">4</span>
+			<div class="checkout_number_line"></div>
+		</div>
+		<div id="checkout_number_4" class="checkout_step" data-target-slide="checkout_slide_4">
+			<span class="checkout_number">4</span>
+			<div class="checkout_number_line"></div>
+		</div>
+	</div>
+
+
+</apex:outputPanel>
+
+</div><!-- container -->
+</div><!-- content -->
+</div><!-- wrapper -->
+
+</div><!-- page page-template -->
+
+</apex:page>

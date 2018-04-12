@@ -1,0 +1,30 @@
+<apex:page StandardController="SLXOpportunity__c" extensions="OpportunityContacts">
+<apex:pageblock >
+<apex:pageBlockTable value="{!contacts}" var="contact">
+    <apex:column headerValue="Contact Name">
+         <apex:outputLink value="https://ap1.salesforce.com/{!contact.Id}" target="_blank">{!contact.Name}</apex:outputLink>
+    </apex:column>
+
+    <apex:column headerValue="Department">
+        {!contact.Department}
+    </apex:column>
+
+    <apex:column headerValue="Phone">
+        {!contact.Phone}
+    </apex:column>
+    
+    <apex:column headerValue="Mobile">
+        {!contact.MobilePhone}
+    </apex:column>
+    
+    <apex:column headerValue="Email">
+        {!contact.Email}
+    </apex:column>
+
+    <apex:column headerValue="Title">
+        {!contact.Title}
+    </apex:column>
+
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:page>

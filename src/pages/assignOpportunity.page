@@ -1,0 +1,35 @@
+<apex:page StandardController="SLXOpportunity__c" sidebar="false" showHeader="false" extensions="assignOpportunity">
+<script>
+ if("{!$Request.success}" == "true") {
+        parent.window.close();
+        parent.window.opener.location.href = "/{!$Request.id}";          
+    }
+</script>
+
+
+
+Please Choose a Salesperson from the list:
+
+<apex:form >
+<apex:pageBlock >
+	<apex:pageBlockSection >
+    <apex:outputLabel >Salesperson : </apex:outputLabel>
+        <apex:selectList id="Salesperson" value="{!options}" size="1" >
+        <apex:selectOptions value="{!Salespersons}"/>
+    </apex:selectList> 
+    
+    
+    <apex:pageBlockSectionItem >
+        <apex:commandButton value="Assign" action="{!assign}"/>
+    </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+    
+    
+    
+</apex:pageBlock>    
+    
+</apex:form>
+
+
+</apex:page>

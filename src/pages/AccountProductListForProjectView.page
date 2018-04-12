@@ -1,0 +1,19 @@
+<apex:page standardController="SFDC_Projects__c" extensions="AccountProductListForProjectController">
+<style>
+	.fewerMore { display: none;}
+</style>
+<apex:form >
+	<apex:pageblock id="CustomList" >
+		<apex:pageBlockTable value="{!aps}" var="ap" rendered="{!NOT(ISNULL(aps))}">
+		        <apex:column value="{!ap.Name}"/>
+		        <apex:column value="{!ap.Product_Number__c}"/>
+		        <apex:column value="{!ap.Description__c}"/>
+		        <apex:column value="{!ap.Product_Price__c}"/>
+		        <apex:column value="{!ap.Recurring_Period__c}"/>
+		        <apex:column value="{!ap.Product_Status__c}"/>
+		        <apex:column value="{!ap.CreatedDate}"/>
+		</apex:pageBlockTable>
+		<apex:outputLabel value="No records to display" rendered="{!(ISNULL(aps))}" styleClass="noRowsHeader"></apex:outputLabel>
+	</apex:pageblock>
+</apex:form>
+</apex:page>

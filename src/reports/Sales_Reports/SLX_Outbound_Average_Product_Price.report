@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_43697195</developerName>
+        <masterLabel>Product Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CUST_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Basic Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic SME Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic SME Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic Trade Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic Trade Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Basic Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Basic</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Advanced SME Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced SME Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced Trade Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced Trade Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Advanced</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Advanced+ SME Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced+ SME Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced+ Trade Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Advanced+ Trade Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Advanced+</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Multi-network E-Commerce Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Multi-network E-Commerce Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Multi Network</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Search E-Commerce Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Search E-Commerce Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Search</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Adwords Shopping E-Commerce Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Adwords Shopping E-Commerce Weekly Management</sourceValue>
+            </sourceValues>
+            <value>Shopping</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ConvertoPages Custom Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ConvertoPages Monthly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ConvertoPages Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT - Google+ Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GO! Pages Advanced Weekly Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GO! Pages Basic Setup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GO! Pages Basic Weekly Management</sourceValue>
+            </sourceValues>
+            <value>GO! Pages</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Account_Product__c.Product_Price__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>Daily average package</description>
+    <filter>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>contains</operator>
+            <value>adwords</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <operator>notContain</operator>
+            <value>corporate,standard,optimsed,premium</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <operator>contains</operator>
+            <value>GetMoreTraffic</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_43697195</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>GMT Outbound Average Package</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

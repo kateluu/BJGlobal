@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Company__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.Lead_Status__c</field>
+    </columns>
+    <columns>
+        <field>Lead__c.From_Source__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead__c.Lead_Status__c</column>
+            <operator>notContain</operator>
+            <value>Double Up,Spam,Client Contact,sale,uncontactable</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead__c.From_Source__c</column>
+            <operator>notContain</operator>
+            <value>gmt,get more traffic,crank it,webinar,refer a friend,friend referrer,ad adviser,sponsoredlinx nz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead__c.From_Form__c</column>
+            <operator>notContain</operator>
+            <value>webinar,friend referrer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead__c.From_Form__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Google Partners Connect list</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Lead__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2015-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-09-01</startDate>
+    </timeFrameFilter>
+</Report>

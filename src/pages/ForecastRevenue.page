@@ -1,0 +1,233 @@
+<apex:page controller="ForecastRevenue">
+    <apex:form >
+        <apex:pageBlock Title="" id="cmBlock">
+            <apex:pageBlockSection collapsible="false" id="cmSection" rendered="{!IF(isCM, false, true)}">
+                <apex:pageblocksectionitem >
+                    <apex:outputLabel value="CM :"/> 
+                    <apex:selectList value="{!selectedCM}" size="1">
+                        <apex:actionSupport event="onchange"
+                                            action="{!loadCMs}"
+                                            rerender="revenueBlock, kpiBlock" 
+                                            status="status"/>
+                        <apex:selectOptions value="{!CMList}" />
+                    </apex:selectList>
+                </apex:pageblocksectionitem>
+                
+                <apex:actionStatus id="status" startText="LOADING ..." />
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+        <apex:pageBlock Title="Forecast Revenue" id="revenueBlock">
+            <apex:pageBlockButtons location="top">
+                    <apex:commandButton action="{!calculate}" value="Calculate" disabled="{!IF(selectedCM=null && isCM=false,true, false)}"/>
+            </apex:pageBlockButtons>
+        
+            <apex:pageBlockSection collapsible="false" id="theSection">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Forecast Revenue"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!revenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                 
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Last Month Revenue"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!lastMonthRevenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Weeks Left for This Month"/>
+                    <apex:outputText value="{0, number, 0.00}">
+                       <apex:param value="{!weeksTillEndOfMonth}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Weeks Left for This Year"/>
+                    <apex:outputText value="{0, number, 0.00}">
+                       <apex:param value="{!weeksTillEndOfYear}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Days Left for This Month"/>
+                    <apex:outputText value="{0, number, 0}">
+                       <apex:param value="{!daysTillEndOfMonth}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Days Left for This Year"/>
+                    <apex:outputText value="{0, number, 0}">
+                       <apex:param value="{!daysTillEndOfYear}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection> 
+            
+            <apex:pageBlockSection Title="Cancellation" collapsible="false" id="cancellationSection">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Cancellation Weekly Price"/>
+                    <apex:inputText value="{!cancelPrice}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Lost Revenue This Month"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!cancelRevenueMonthly}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Lost Revenue This Year"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!cancelRevenueYearly}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Revenue After Cancel"/>
+                    <apex:outputText value="{0, number,currency}">
+                       <apex:param value="{!minusCancelRevenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection Title="Pause" collapsible="false" id="PauseSection">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Pause Weekly Price"/>
+                    <apex:inputText value="{!pausePrice}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Pause Weeks"/>
+                    <apex:inputText value="{!pauseWeek}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Lost Revenue This Month"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!pauseRevenueMonthly}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Lost Revenue This Year"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!pauseRevenueYearly}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Revenue After Pause"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!minusPauseRevenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection collapsible="false" id="waiveSection" title="Waiver">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Credit/Waiver/Free Management"/>
+                    <apex:inputText value="{!waive}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Revenue After Waiver"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!minusWaiveRevenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection collapsible="false" id="refundSection" title="Refund">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Refund"/>
+                    <apex:inputText value="{!refund}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Revenue After Refund"/>
+                    <apex:outputText value="{0, number, currency}">
+                       <apex:param value="{!minusRefundRevenue}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+        <apex:pageBLock Title="Forecast KPI" id="kpiBlock">
+            <apex:pageBlockSection collapsible="false" id="cancelKPISection" title="Retention KPI">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Current Retention %"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!retentionRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Average Retention %(Last Three Months)"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!averageRetentionRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                  
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Cancels"/>
+                    <apex:inputText value="{!kpiCancels}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Rentention %"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!newRetentionRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection collapsible="false" id="pauseKPISection" title="Active KPI">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Current Active %"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!activeRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Average Active %(Last Three Months)"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!averageActiveRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Pause"/>
+                    <apex:inputText value="{!kpiPauses}"/>
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Active %"/>
+                    <apex:outputText value="{0, number, 0.00%}">
+                       <apex:param value="{!newActiveRate}" />
+                    </apex:outputText>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+            
+           <apex:pageBlockSection collapsible="false" id="eomKPISection" title="Forcast EOM Active Clients">
+                  <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Clients"/>
+                  <apex:inputText value="{!kpiNewClients}"/>
+                </apex:pageBlockSectionItem>
+                
+             
+            </apex:pageBlockSection>
+            
+            
+        
+        </apex:pageBLock>
+    </apex:form>
+</apex:page>

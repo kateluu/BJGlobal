@@ -1,0 +1,29 @@
+<apex:page controller="EricaPageController" >
+<style type="text/css">
+/*     .bPageBlock .pbTitle  {
+        width: 100%;    
+        text-align: center;
+    }
+     */
+</style>
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+
+<apex:form >
+<apex:pageBlock Title="Team List" id="cmBlock" rendered="{!display_list}">
+	<apex:outputPanel layout="block" >
+		<apex:selectList value="{!selected_mcc}" multiselect="false" size="1" id="mcc_select_list">
+			<apex:actionSupport event="onchange" action="{!updateEricaView}" reRender="erica_iframe, mcc_name"/>
+          	<apex:selectOptions value="{!mccList}"/>
+		</apex:selectList><p/>
+		</apex:outputPanel>
+           
+</apex:pageBlock>
+</apex:form>
+
+<apex:pageBlock Title="Evaluating Results in Client Accounts" id="Block">
+<apex:outputPanel layout="block" id="erica_iframe">
+<!-- <apex:outputText value="{!$CurrentPage.parameters.username}" id="mcc_name"/> -->
+<apex:iframe src="https://erica.sponsoredlinx.com.au/erica.php?username={!$CurrentPage.parameters.username}" height="1200px" scrolling="true"  rendered="{!display}" id="theIframe"/>
+</apex:outputPanel>
+</apex:pageBlock>
+</apex:page>

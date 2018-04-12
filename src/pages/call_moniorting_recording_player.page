@@ -1,0 +1,5 @@
+<apex:page showHeader="false" sidebar="false" standardController="Call_Monitoring__c">
+<apex:outputPanel id="theIframePlayer">
+<apex:iframe src="https://cloud12.contact-world.net/callcentre/callAnalytics/CallRecordingComments.aspx?guid={!Call_Monitoring__c.Call_Object_ID__c}" scrolling="true" id="theIframePlayer2"/>
+</apex:outputPanel> 
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder email for unpaid CC invoice for SponsoredLinx</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Reminder CC SponsoredLinx</name>
+    <style>none</style>
+    <subject>Invoice Reminder SponsoredLinx</subject>
+    <textOnly>Hi
+We have been unable to process last months/weeks management invoice on your credit card to a total of $[invoice-amount]
+Have you changed your credit card recently ?
+Your bank has advised us that this is due to [denial-reason]
+Could you please contact me as soon as possible?
+Thanking you.
+
+Grace James
+p: (07) 3892 7166
+w: sponsoredlinx.com.au
+e: grace.james@sponsoredlinx.com</textOnly>
+    <type>custom</type>
+</EmailTemplate>

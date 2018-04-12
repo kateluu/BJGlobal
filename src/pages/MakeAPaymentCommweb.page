@@ -1,0 +1,158 @@
+<apex:page standardController="Account" sidebar="true" showHeader="true" extensions="MakeAPaymentCommweb" action="{!PageLoad}">
+<apex:outputText value="{!account.Xero_Sync_ID__c} {!account.id} {!account.Unique_Id__c}" rendered="false"/>
+
+<script>          
+        var selectedChkbox;      
+        function deSelectOthers(chkBox) {
+            if (chkBox.checked) {
+                if ((chkBox != selectedChkbox) && (selectedChkbox != null)) {
+                    selectedChkbox.checked = false;
+                }
+                selectedChkbox = chkBox;
+            }            
+        }         
+    </script>               
+               
+ <apex:form >
+    <apex:commandButton value="Back to Account" action="{!returnToAccount}" status="status"/>
+    </apex:form>             
+         
+<apex:form rendered="{!incomplete}" >
+        <apex:inputHidden value="{!Account.Id}" id="accountid"/>
+                 
+        <apex:sectionHeader title="Make a Payment" subtitle="{!Account.Name}"/>
+        
+       <apex:outputtext >Unpaid Invoices
+       </apex:outputtext>
+        
+            <apex:pageblock title="Unpaid Invoices" >
+               <apex:pageBlockTable value="{!InvList}" var="inv" id="tableOfInvoices">
+					<apex:column HeaderValue="Invoice Name">{!inv.Account_Product__r.Name}</apex:column>
+				    <apex:column headerValue="Invoice No">{!inv.Invoice_Number__c}</apex:column>
+				    <apex:column headerValue="Payment Option">{!inv.Payment_Option__c}</apex:column>
+				    <apex:column headerValue="Total">${!inv.Invoice_Total__c}</apex:column>
+				    <apex:column headerValue="Currency">{!inv.CurrencyIsoCode}</apex:column>
+				    <apex:column headerValue="Amount Paid">${!inv.Amount_Paid__c}</apex:column>
+				    <apex:column headerValue="Amount Due">${!inv.Amount_Due__c}</apex:column>
+				    <apex:column headerValue="Due Date">{!inv.Due_Date__c}</apex:column>
+				</apex:pageBlockTable>
+            </apex:pageblock>
+            
+            <apex:pageBlock title="Recent Payments" >
+            	<apex:pageBlockTable value="{!listOfPayments}" var="pmt" id="tableOfPayments">
+            		<apex:column HeaderValue="Payment Name">{!pmt.Name}</apex:column>
+            		<apex:column headerValue="Payment Type">{!pmt.Payment_Type__c}</apex:column>
+            		<apex:column headerValue="Payment Option">{!pmt.Payment_Option__c}</apex:column>
+            		<apex:column headerValue="Invoice no">{!pmt.Invoice_Number__c}</apex:column>
+            		<apex:column headerValue="Payment Amount">{!pmt.Payment_Amount__c}</apex:column>
+            		<apex:column headerValue="Currency">{!pmt.CurrencyIsoCode}</apex:column>
+            		<apex:column headerValue="Payment Date">{!pmt.Payment_Date__c}</apex:column>
+            	</apex:pageBlockTable>
+            </apex:pageBlock>
+            <br></br><br></br>
+            
+<!-- <apex:outputpanel id="messages">
+            <apex:messages />
+            <apex:outputText >
+            {!message} 
+            </apex:outputText>
+            </apex:outputpanel> -->
+<apex:pageMessages id="showmsg"></apex:pageMessages>
+            <apex:pageblock id="PaymentTotal" title="Make a Payment">
+            <apex:outputText value="{!TESTMESSAGE}" /> 
+            <apex:pageBlockSection columns="2">
+            
+            	<apex:pageBlockSectionItem >
+					<apex:outputLabel >Invoice Number : </apex:outputLabel>
+            		<apex:selectList id="selectInvoiceNumber" value="{!invoiceNumber}" size="1" >
+                    	<apex:actionSupport event="onchange" action="{!ChangeInvoiceNumber}" rerender="PaymentTotal,ccinfo" status="status"/>
+        				<apex:selectOptions value="{!InvoiceNumbers}"/>
+        			</apex:selectList>
+				</apex:pageBlockSectionItem>
+            
+            	<apex:pageBlockSectionItem >
+					<apex:outputLabel >Amount Due : </apex:outputLabel>
+            		<apex:outputText value="{0,number,$#,###.##}"> 
+            			<apex:param value="{!invoiceTotal}" /> 
+            		</apex:outputText>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel >Payment Amount : </apex:outputLabel>
+            		<apex:inputText id="paymentAmount" value="{!paymentAmount}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel >Payment Reference : </apex:outputLabel>
+            		<apex:inputText id="paymentReference" value="{!paymentReference}" />
+				</apex:pageBlockSectionItem>
+				
+				
+				<apex:pageBlockSectionItem >
+				<apex:outputLabel >Payment Method : </apex:outputLabel>
+				     <apex:selectList id="selectPaymentType" value="{!PaymentType}" size="1" >
+                    		<apex:actionSupport event="onchange" action="{!ChangePaymentType}" rerender="ccinfo, showmsg" status="status"/>
+        					<apex:selectOptions value="{!PaymentTypes}"/>
+        	</apex:selectList> 
+				
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+				<apex:outputLabel >Payment Date </apex:outputLabel>
+				<apex:inputField value="{!inputPayment.Payment_Date__c}" >
+				</apex:inputField> 
+				</apex:pageBlockSectionItem>
+				
+				<!-- 
+				<apex:pageBlockSectionItem >
+				<apex:outputLabel >Payment Type </apex:outputLabel>
+				<apex:inputField value="{!inputPayment.Payment_Type__c}" >
+				</apex:inputField> 
+				</apex:pageBlockSectionItem>
+				 -->
+				
+				<apex:pageBlockSectionItem dataStyle="text-align:right" rendered="{!showPaymentButton}">
+				      <apex:actionStatus id="disablebtn">
+					     <apex:facet name="stop">     
+					           <apex:commandButton action="{!makeAPayment}" status="disablebtn" value="Make a Payment" disabled="false"     rerender="showmsg"/>     
+					     </apex:facet>     
+					     <apex:facet name="start">
+					      <apex:commandButton action="{!makeAPayment}" status="disablebtn" value="Processing..." disabled="true"/>                 
+					       </apex:facet>
+					</apex:actionStatus>
+				
+					
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+            </apex:pageblock>
+            
+            
+            
+            
+                        <apex:outputPanel id="ccinfo">
+         
+				
+		 <apex:pageblock rendered="{!CommwebPayment}">
+			<apex:pageblocksection title="Credit Card Details" collapsible="false">
+				<apex:inputField value="{!acc.Name_On_Card__c}" />
+				<apex:inputField value="{!acc.Card_Number__c}" />
+				<apex:inputField value="{!acc.Card_Month_Expiry__c}" />
+				<apex:inputField value="{!acc.Card_Year_Expiry__c}" />
+				<apex:inputField value="{!acc.Card_CVN__c}" />
+					<apex:actionStatus id="payment_status" startText="Loading......." />
+			</apex:pageblocksection>
+		</apex:pageblock>	
+
+	   
+            </apex:outputPanel>
+            
+            
+</apex:form>  
+<apex:pageblock rendered="{!complete}">
+Transaction Complete 
+<apex:form >
+<apex:commandButton value="Return to Account" action="{!returnToAccount}" status="close" />
+<apex:actionStatus id="close" startText="Closing......." />
+</apex:form>
+</apex:pageblock>      
+</apex:page>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder email for unpaid CC invoice for CrankIT</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Reminder CC CrankIT</name>
+    <style>none</style>
+    <subject>Invoice Reminder CrankIT</subject>
+    <textOnly>Hi
+We have been unable to process last months/weeks management invoice on your credit card to a total of $[invoice-amount]
+Have you changed your credit card recently ?
+Your bank has advised us that this is due to [denial-reason]
+Could you please contact me as soon as possible?
+Thanking you.
+
+Grace James  |  Accounts @ CrankIT
+P: 1300 85 86 69 |  www.crankit.com.au</textOnly>
+    <type>custom</type>
+</EmailTemplate>

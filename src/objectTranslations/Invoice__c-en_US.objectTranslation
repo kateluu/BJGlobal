@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoices</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Product --></label>
+        <name>Account_Product__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Amex --></label>
+        <name>Amex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Credited --></label>
+        <name>Amount_Credited__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Due --></label>
+        <name>Amount_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Paid --></label>
+        <name>Amount_Paid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount Refunded --></label>
+        <name>Amount_Refunded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Checked --></label>
+        <name>Checked__c</name>
+    </fields>
+    <fields>
+        <label><!-- CreditedEqualsPaid --></label>
+        <name>CreditedEqualsPaid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Overdue --></label>
+        <name>Days_Overdue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Processed --></label>
+        <name>Email_Processed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Invoice --></label>
+        <name>Exclude_Invoice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Reminder --></label>
+        <name>Exclude_Reminder__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Batch --></label>
+        <name>Invoice_Batch__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Number --></label>
+        <name>Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Total --></label>
+        <name>Invoice_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Date --></label>
+        <name>Issue_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Email Sent --></label>
+        <name>Last_Email_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- PaidEqualsTotal --></label>
+        <name>PaidEqualsTotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Batch --></label>
+        <name>Payment_Batch__c</name>
+        <relationshipLabel><!-- Invoices (Payment Batch) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Message --></label>
+        <name>Payment_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Option --></label>
+        <name>Payment_Option__c</name>
+        <picklistValues>
+            <masterLabel>Bill Buddy</masterLabel>
+            <translation><!-- Bill Buddy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheque</masterLabel>
+            <translation><!-- Cheque --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Commweb</masterLabel>
+            <translation><!-- Commweb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Debit</masterLabel>
+            <translation><!-- Direct Debit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EFT</masterLabel>
+            <translation><!-- EFT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eway</masterLabel>
+            <translation><!-- Eway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payment Response --></label>
+        <name>Payment_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Message --></label>
+        <name>Process_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Processed --></label>
+        <name>Processed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo --></label>
+        <name>Promo__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promocode --></label>
+        <name>Promocode__c</name>
+        <relationshipLabel><!-- Invoices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- RefundEqualsTotal --></label>
+        <name>RefundEqualsTotal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reminder Task Created --></label>
+        <name>Reminder_Task_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Invoice Number --></label>
+        <name>Salesforce_Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>AUTHORISED</masterLabel>
+            <translation><!-- AUTHORISED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAD DEBT/WRITTEN OFF</masterLabel>
+            <translation><!-- BAD DEBT/WRITTEN OFF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANCELLED</masterLabel>
+            <translation><!-- CANCELLED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHARGEBACK</masterLabel>
+            <translation><!-- CHARGEBACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDITED</masterLabel>
+            <translation><!-- CREDITED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO CHARGE</masterLabel>
+            <translation><!-- NO CHARGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAID</masterLabel>
+            <translation><!-- PAID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTIALLY CREDITED</masterLabel>
+            <translation><!-- PARTIALLY CREDITED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTIALLY PAID</masterLabel>
+            <translation><!-- PARTIALLY PAID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTIALLY REFUNDED</masterLabel>
+            <translation><!-- PARTIALLY REFUNDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REFUNDED</masterLabel>
+            <translation><!-- REFUNDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOID</masterLabel>
+            <translation><!-- VOID --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Xero Contact Id --></label>
+        <name>Xero_Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Xero Invoice Id --></label>
+        <name>Xero_Invoice_Id__c</name>
+    </fields>
+    <layouts>
+        <layout>Invoice Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Exclude_Email --></label>
+        <name>Exclude_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Exclude_Reminder --></label>
+        <name>Exclude_Reminder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Email --></label>
+        <name>Include_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Include_Reminder --></label>
+        <name>Include_Reminder</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PDF --></label>
+        <name>PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Invoice --></label>
+        <name>Send_Invoice</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Please_contact_client_Invoice_Outstanding_3_Weeks</name>
+        <subject><!-- Please Contact Client: Invoice Outstanding &gt; 3 Weeks --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

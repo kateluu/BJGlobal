@@ -1,0 +1,206 @@
+<apex:page showHeader="false" controller="SingleInvoiceController">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>[company-name] Invoice</title>
+    <style type="text/css">
+        *, body, table {
+            font-family: helvetica, arial, tahoma, verdana, serif;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+<table style="border: 1px solid #000;" border="0" cellpadding="10" cellspacing="0">
+    <tbody>
+        <tr>
+            <td>
+                <table width="700" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 5px; padding-right: 20px;" valign="top"><p align="left"><apex:OutputText >{!company.Logo_Code__c}</apex:OutputText></p></td>
+                            <td style="width: 690px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px;" colspan="2" width="690">
+                                <b>{!company.Business_Name__c}</b><br />
+                                {!company.Address__c}<br />
+                                ABN: 81 124 272 359<br />
+                            </td>
+                            <td style="width: 150px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px; text-align: right;" valign="top" width="150">Bill Enquiries<br />{!company.Phone__c}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+
+                <table width="700" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="width: 258px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 16px; text-align: left;" colspan="3"><b>Tax Invoice</b><br /><br /></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5" valign="top">
+                                <table style="min-height: 80px; width: 300px;" border="0" cellpadding="5" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 14px;"><b>Your Details:</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px; padding-top: 5px;">
+                                                {!account.Name}<br />
+                                                [contact-address]
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td style="padding: 2px 5px 2px 2px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: right;"><b>Account Number</b>:</td>
+                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: left;">{!invoice.Reference__c}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: right;"><b>Invoice Number</b>:</td>
+                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: left;">{!invoice.InvoiceNumber__c}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: right;"><b>Issue Date</b>:</td>
+                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: left;">
+                            <apex:outputText value="{0,date,dd-MM-yyyy}">
+                                <apex:param value="{!invoice.Date__c}" />
+                            </apex:outputText>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: right;"><b>Due Date</b>:</td>
+                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: left;">
+                            <apex:outputText value="{0,date,dd-MM-yyyy}">
+                                <apex:param value="{!invoice.DueDate__c}" />
+                            </apex:outputText>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: right;"><b>Amount Due</b>:</td>
+                            <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 13px; text-align: left;"><b>${!invoice.AmountDue__c}</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br />
+
+                <table width="700" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 10px; font-size: 15px; width: 670px; min-height: 7px;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style=" font-family: helvetica, arial, tahoma, verdana, serif; font-size: 14px;" colspan="2"><b>Account Activity</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px;"><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 5px auto 1px 10px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;"><b>Product</b></td>
+                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;"><b>Price</b></td>
+                                        </tr>
+[line-items]
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px;"><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">TOTAL</td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">${!invoice.Total__c}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">Amount paid</td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">${!invoice.AmountPaid__c}</td>
+                                        </tr>
+[amount-credited]
+                                        <tr>
+                                            <td style="text-align: right; padding: 2px 20px 2px 5px; width: 100%; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 14px;"><b>Amount due</b></td>
+                                            <td style="text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 14px;"><b>${!invoice.AmountDue__c}</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 2px 5px 2px 5px;"><br /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="padding: 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px;">
+                                                Note: all prices are 10% GST inclusive<br />
+                                                Breakdown: ${!invoice.SubTotal__c} Price + ${!invoice.TotalTax__c} GST = ${!invoice.Total__c} Total
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="padding-bottom: 5px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px;">
+                                <br />
+                                <b>Notes:</b>
+                                <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;1. All invoices can be found online at <a href="http://clientpanel.sponsoredlinx.com.au" target="_blank">http://clientpanel.sponsoredlinx.com.au</a>, using your login details.
+                                <br />
+                                <br />
+                                <b>Payment Options:</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #000; padding: 10px;min-height: 7px;">
+                                <table width="670" border="0" cellpadding="5" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center"><img src="http://clientpanel.sponsoredlinx.com/img/payment_dd.gif" alt="DIRECT DEBIT" width="55" height="55" /></td>
+                                            <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">
+                                                <b>DIRECT DEBIT</b><br />
+                                                Pay your bills automatically from a nominated bank account (including credit cards).<br />
+                                                Please call {!company.Phone__c} for more information.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="http://clientpanel.sponsoredlinx.com/img/payment_phone.gif" alt="PHONE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">
+                                                <b>PAY BY PHONE</b><br />
+                                                Call {!company.Phone__c} to make a payment by credit card<br />
+                                                Use Account No: {!invoice.Reference__c} or Invoice No: {!invoice.InvoiceNumber__c} as a reference and have your credit card ready when calling.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="http://clientpanel.sponsoredlinx.com/img/chq.gif" alt="PHONE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">
+                                                <b>PAY BY CHEQUE</b><br />
+                                                Make cheque payable to "{!company.Business_Name__c}"<br />
+                                                Post to PO BOX 1802, Sunnybank Hills 4109 QLD<br />
+                                                Please put your Account No: {!invoice.Reference__c} or Invoice No: {!invoice.InvoiceNumber__c} on the back of the cheque.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="81" align="center"><img src="http://clientpanel.sponsoredlinx.com/img/bank.gif" alt="PHONE" width="40" height="40" /></td>
+                                            <td width="447" style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;">
+                                                <b>DIRECT BANK DEPOSIT</b><br />
+                                                Remit to {!company.Business_Name__c}<br />
+                                                BSB: 014-286, Account Number: 2805 97402<br />
+                                                Please put your Account No: {!invoice.Reference__c} as a reference.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center"><img src="http://clientpanel.sponsoredlinx.com/img/payment_internet.gif" alt="INTERNET" width="40" height="40" /></td>
+                                            <td style="padding-bottom: 10px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 12px;" valign="top">
+                                                Please login to your SponsoredLinX client panel by visiting <a href="http://clientpanel.sponsoredlinx.com.au" target="_blank">http://clientpanel.sponsoredlinx.com.au</a> for more info.
+                                                If you have forgotten your login details, please contact us.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div style="width: 700px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 11px;">
+    <p>As per our terms and conditions located at <a href="http://www.sponsoredlinx.com/terms-and-conditions/" target="_blank">http://www.sponsoredlinx.com/terms-and-conditions/</a> all late payments may incur an additional late fee.<br />
+    Failure to pay this invoice beyond 30 days may result in this invoice being passed into marshall freeman for collection as per our terms and conditions.</p>
+</div>
+</body>
+</html>
+</apex:page>

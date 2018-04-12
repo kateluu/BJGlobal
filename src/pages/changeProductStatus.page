@@ -1,0 +1,100 @@
+<apex:page Controller="changeProductStatus" sidebar="false" showHeader="false">
+
+<apex:sectionHeader title="Change Product Status" />
+<apex:form >
+
+<apex:pageblock title="Product Details" id="productDetails">
+
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Company Name : " for="companyName" />  
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputText id="companyName" value="{!accountname}" />
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection> 
+    
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Current Product : " for="currentProduct" />    
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:outputText id="currentProduct" value="{!currentStatus} - {!productname}" />
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>  
+    
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Change Status To : " for="newProductStatus" /> 
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+            <apex:selectRadio id="newProductStatus" value="{!statusValue}">
+                <apex:selectOptions value="{!productStatusList}"/>
+                <apex:actionSupport event="onchange" rerender="productStatusDateBlock" />
+            </apex:selectRadio>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+</apex:pageblock>
+
+<apex:outputPanel id="productStatusDateBlock">
+
+    <apex:pageblock title="Pause Details" id="pauseProductStatus" rendered="{!statusValue == 'Paused'}">
+        <apex:pageBlockSection >
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Pause At : " for="pauseStatusDate" />
+                <apex:inputField id="pauseStatusDate" value="{!inputAccountProduct.pauseat__c}"/>
+            </apex:pageBlockSectionItem>
+             
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Activate At : " for="activeStatusDate" />
+                <apex:inputField id="activeStatusDate" value="{!inputAccountProduct.activeat__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Send Email : " for="sendPauseEmail" />
+                <apex:inputCheckbox id="sendPauseEmail" value="{!sendPauseEmail}"/>
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageBlockSection>
+    </apex:pageblock>
+    
+    <apex:pageblock title="Cancel Details" id="cancelProductStatus" rendered="{!statusValue == 'Cancelled'}" >
+        <apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Cancel At : " for="cancelStatusDate" />
+                <apex:inputField id="cancelStatusDate" value="{!inputAccountProduct.cancelat__c}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Send Email : " for="sendCancelEmail" />
+                <apex:selectList id="sendCancelEmail" value="{!cancelEmailType}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!cancelEmailTypeList}"/> 
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageblock>
+    
+    <apex:pageblock title="Active Details" id="activeProductStatus" rendered="{!statusValue == 'Active'}" >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Activate At : " for="activeStatusDate" />
+                <apex:inputField id="activeStatusDate" value="{!inputAccountProduct.activeat__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageblock>
+
+</apex:outputPanel>
+
+<apex:pageblock >
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem dataStyle="text-align:center">
+            <apex:commandButton value="Update Status" action="{!updateStatus}" status="status" rerender="debugWindow" />
+            <apex:actionStatus id="status" startText="Submitting New Status......." />
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    <apex:pageMessages id="debugWindow"></apex:pageMessages>
+</apex:pageblock>
+
+</apex:form>
+</apex:page>

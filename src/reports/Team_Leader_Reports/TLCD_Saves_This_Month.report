@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <operator>equals</operator>
+            <value>,Daniel Koperu,Benjamin Fisher,Suellen Downs,Milan Narayan,Christian Alexander,Nicholas Cioni,David French,Stuart Donaghy,Alister Dunlop,Sharene Moses,Stephanie Pohlman,Max Contador,Daniel Spiteri,Katie Currie,Steven Noronha,Louise Whitlock,Amie Jenkinson,Patrick Ryan,Timothy Gear</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Account_Resolution__c</column>
+            <operator>notEqual</operator>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.CaseType__c</column>
+            <operator>includes</operator>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Status__c</column>
+            <operator>equals</operator>
+            <value>Unresolved,Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TLCD - Saves (This Month)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Cases__c@Cases__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

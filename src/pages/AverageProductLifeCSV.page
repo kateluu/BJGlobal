@@ -1,0 +1,8 @@
+<apex:page controller="AverageProductLifeController" cache="true" contentType="text/csv#report.csv" language="en-US">
+	<apex:repeat value="{!result}" var="record" rendered="{!!(filterType == 'PP' && isComparePromo)}">
+		"{!record.name}","{!record.weeks}","{!record.quantity}"
+	</apex:repeat>
+	<apex:repeat value="{!compare}" var="record" rendered="{!(filterType == 'PP' && isComparePromo)}">
+		"{!record.name}","{!record.Normal}","{!record.NormalQuantity}","{!record.Discount}","{!record.DiscountQuantity}"
+	</apex:repeat>
+</apex:page>

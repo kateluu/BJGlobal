@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Reminder email for unpaid Non-CC invoice for GetMoreTraffic</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Reminder Non-CC GetMoreTraffic</name>
+    <style>none</style>
+    <subject>Invoice Reminder GetMoreTraffic</subject>
+    <textOnly>Hi
+We have not yet received payment for your invoice dated [invoice-issue-date] for $[invoice-amount]
+Could you please attend to this as soon as possible?
+I have attached this invoice for you in case the first one was misplaced.
+We would appreciate your prompt attention to this matter.
+If you have any queries please feel free to contact me or your Client Manager.
+Thanking you
+
+Grace James  |  Administrator @ Get More Traffic
+P: 1300 332 256 |  www.getmoretraffic.com.au</textOnly>
+    <type>custom</type>
+</EmailTemplate>

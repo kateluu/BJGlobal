@@ -1,0 +1,456 @@
+<apex:page standardController="Cases__c" extensions="manageCases">
+
+<script>
+    var newwindow;
+    function poptastic(url)
+    {
+        newwindow=window.open(url,"name","width=600,height=500,top=0,toolbar=no ,personalbar=no,location=no,directories=no,statusbar=no,menubar=no,status=no,re sizable=yes,left=60,screenX=60,top=100,screenY=100");
+        
+        if (window.focus) {newwindow.focus()}  
+        
+    }
+
+</script>
+
+
+
+
+	<apex:form >
+		<apex:outputPanel Id="selectCase">
+			<apex:pageBlock >
+				<apex:pageBlockSection columns="2" title="Select Case">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Select Case : " for="lookupCase" />
+						<apex:inputField id="lookupCase" value="{!lookupCase.X2012_Related_to_previous_case__c}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:commandButton value="Open Case" action="{!openCase}" status="updateCase" rerender="thisCase,productList,RefundInvoices,CreditInvoices" />
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+		</apex:outputPanel>
+	</apex:form>
+	<apex:outputText value="{!Cases__c.Account__c}" rendered="false"/>
+	
+<apex:form >
+<apex:outputPanel Id="productList">
+
+<apex:pageblock rendered="{!renderList}">
+<apex:pageBlockSection title="Selected Products" columns="1">
+<apex:outputText rendered="{!thisCase.Id == ''}">
+	Case needs to be saved before changing product Status.
+</apex:outputText>
+<apex:pageBlockTable value="{!accountProductList}" var="list"  style="">
+    <apex:column headerValue="Product Name">
+        {!list.Name}
+    </apex:column>
+
+    <apex:column headerValue="Description">
+        {!list.Description__c}
+    </apex:column>
+
+    <apex:column headerValue="P Number">
+        {!list.Product_Number__c}
+    </apex:column>
+    
+    <apex:column headerValue="Price">
+        {!list.Product_Price__c}
+    </apex:column>
+   
+    <apex:column headerValue="Status" rendered="{!thisCase.Id != ''}">
+    	<apex:commandLink onclick="poptastic('/apex/changeProductStatus?productid={!list.Id}&case={!thisCase.Name}&caseid={!thisCase.Id}')" rendered="{!list.Recurring_Frequency__c > 0}">{!list.Product_Status__c}</apex:commandLink>
+    </apex:column>	        
+    
+    <apex:column headerValue="Status" rendered="{!thisCase.Id == ''}">
+    	<apex:outputText rendered="{!list.Recurring_Frequency__c > 0}">{!list.Product_Status__c}</apex:outputText>
+    </apex:column>
+
+	<apex:column headerValue="Pause On">
+		{!DAY(list.pauseat__c)}/{!MONTH(list.pauseat__c)}/{!YEAR(list.pauseat__c)}
+		<!-- 
+		<apex:inputField value="{!list.pauseat__c}">
+			<apex:actionSupport event="onchange" action="{!clear}" rerender="Updated" /> 
+		</apex:inputField>
+		 -->
+    </apex:column>
+
+    <apex:column headerValue="Activate On">
+        {!DAY(list.activeat__c)}/{!MONTH(list.activeat__c)}/{!YEAR(list.activeat__c)}
+        <!-- 
+        <apex:inputField value="{!list.activeat__c}">
+        	<apex:actionSupport event="onchange" action="{!clear}" rerender="Updated" />
+        </apex:inputField>
+         -->
+    </apex:column>
+    
+    <apex:column headerValue="Cancel On">
+        {!DAY(list.cancelat__c)}/{!MONTH(list.cancelat__c)}/{!YEAR(list.cancelat__c)}
+        <!-- 
+        <apex:inputField value="{!list.cancelat__c}">
+        	<apex:actionSupport event="onchange" action="{!clear}" rerender="Updated" />
+        </apex:inputField>
+         -->
+    </apex:column>
+
+    <apex:column headerValue="Recurring">
+        {!list.Recurring_Frequency__c}
+    </apex:column>
+
+    <apex:column headerValue="Period">
+        {!list.Recurring_Period__c}
+    </apex:column>
+    
+    <apex:column headerValue="Created Date">
+        {!list.CreatedDate}
+    </apex:column>
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+<apex:commandButton value="Refresh" status="Refresh" action="{!updateProductList}" rerender="Updated,productList" />
+<!-- 
+<apex:commandButton value="Update" action="{!save}" status="updateCase" rerender="Updated,productList" />
+<apex:outputPanel Id="Updated">
+<apex:outputText value="{!updatedMsg}"/> 
+</apex:outputPanel>
+ -->
+</apex:pageblock>
+<apex:pageblock rendered="{!renderMsg}">
+There are no Account Products linked
+</apex:pageblock>
+</apex:outputPanel>
+</apex:form>
+	<apex:form >
+		<apex:outputPanel Id="thisCase">
+			<apex:actionstatus id="updateCase" startText="updating...">
+            <apex:facet name="stop"> 
+			<apex:pageBlock >
+			
+
+				<apex:pageBlockSection columns="2" title="Information">
+					<apex:pageBlockSectionItem >
+						<apex:commandButton value="Save Case" action="{!saveCase}" rerender="thisCase,productList" status="updateCase"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Related to previous case : " for="relatedToPreviousCase" />
+						<apex:inputField id="relatedToPreviousCase" value="{!thisCase.X2012_Related_to_previous_case__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Client Manager : " for="clientManager" />
+						<apex:inputField id="clientManager" value="{!thisCase.Client_Manager__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Account : " for="account" />
+						<apex:inputField id="account" value="{!thisCase.Account__c}"  required="true">
+							<apex:actionSupport event="onchange" action="{!accountChanged}"  rerender="productList,selectProduct,RefundInvoices,CreditInvoices" status="status"/>
+						</apex:inputField>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Owner : " for="owner" />
+						<apex:outputText id="owner" value="{!thisCase.Owner.FirstName} {!thisCase.Owner.LastName}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Daily Budget : " for="dailyBudget" />
+						<apex:inputField id="dailyBudget" value="{!thisCase.Daily_Budget__c}" />
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="SEO Package : " for="SEOPackage" />
+						<apex:inputField id="seoPackage" value="{!thisCase.SEO_Package__c}" />
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Case Number : " for="caseNumber" />
+						<apex:outputText id="caseNumber" value="{!thisCase.Name}" />
+					</apex:pageBlockSectionItem>
+					
+					
+					<apex:pageBlockSectionItem >
+				 		<apex:outputLabel >Account Products List : </apex:outputLabel>
+				 		<apex:outputPanel id="selectProduct">  
+					    <apex:selectList id="selectAccountProducts" value="{!SelectedAccountProducts}" size="1" multiselect="true" >
+	                    	 <apex:actionSupport event="onchange" action="{!updateProductList}" rerender="productList" status="status"/>
+	        				<apex:selectOptions value="{!AccountProducts}"/> 
+	        			</apex:selectList>
+	        			</apex:outputPanel> 
+					</apex:pageBlockSectionItem>
+					
+					
+					
+					
+				</apex:pageBlockSection>
+				
+				<apex:pageBlockSection columns="2" title="Cancellation Waiver">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Cancellation Waiver Requested by CM? : " for="cancellationWaiverRequestedByCM" />
+						<apex:inputField id="cancellationWaiverRequestedByCM" value="{!thisCase.X2012_Cancellation_Waiver_Requested__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Cancellation Waiver approved? : " for="cancellationWaiverApproved" />
+						<apex:inputField id="cancellationWaiverApproved" value="{!thisCase.X2012_Cancellation_Waiver_approved__c}"/>
+					</apex:pageBlockSectionItem>
+				
+				</apex:pageBlockSection>
+				
+				<apex:pageBlockSection columns="2" title="Description">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Case Type : " for="caseType" />
+						<apex:inputField id="caseType" value="{!thisCase.CaseType__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Original Request Date : " for="originalRequestDate" />
+						<apex:inputField id="originalRequestDate" value="{!thisCase.X2012_Original_Request_Date__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Cancellation Date : " for="cancellationDate" />
+						<apex:inputField id="cancellationDate" value="{!thisCase.Cancellation_Date__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Website URL : " for="websiteURL" />
+						<apex:inputField id="websiteURL" value="{!thisCase.X2012_Website_URL__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Case Origin : " for="caseOrigin" />
+						<apex:inputField id="caseOrigin" value="{!thisCase.Case_Origin__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Subject : " for="subject"/>
+						<apex:inputField id="subject" value="{!thisCase.Daily_Budget__c}"  />
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="E-mail or Phone Summary : " for="emailOrPhoneSummary" />
+						<apex:inputField id="emailOrPhoneSummary" value="{!thisCase.X2012_E_mail_or_Phone_Summary__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Description : " for="description" />
+						<apex:inputField id="description" value="{!thisCase.Description__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="CM Comments : " for="cmComments" />
+						<apex:inputField id="cmComments" value="{!thisCase.X2012_CM_Comments__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Internal Comments : " for="internalComments" />
+						<apex:inputField id="internalComments" value="{!thisCase.Internal_Comments__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Action Taken to Save : " for="actionTakenToSave" />
+						<apex:inputField id="actionTakenToSave" value="{!thisCase.X2012_Action_Taken_to_Save__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Competitor : " for="competitor" />
+						<apex:inputField id="competitor" value="{!thisCase.Competitor__c}"/>
+					</apex:pageBlockSectionItem>	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="CM Proposed Action : " for="cmProposedAction" />
+						<apex:inputField id="cmProposedAction" value="{!thisCase.X2012_CM_Proposed_Action__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Final Action (FOR MANAGERS) : " for="finalAction" />
+						<apex:inputField id="finalAction" value="{!thisCase.X2012_Final_Action_FOR_MANAGERS__c}">
+						<apex:actionSupport event="onchange" action="{!updateFinalActionTimestamp}" status="status" rerender="finalActionTimeRefresh"/>
+						</apex:inputField>
+					</apex:pageBlockSectionItem>
+					
+					
+					<apex:pageBlockSectionItem >
+					<apex:outputPanel id="finalActionTimeRefresh">
+						<apex:outputLabel value="Final Action Time : " for="finalActionTime" />
+						<apex:outputField id="finalActionTime" value="{!thisCase.Final_Action_Timestamp__c}"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					
+				</apex:pageBlockSection>
+				<apex:pageBlockSection columns="2" title="Additional">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Status : " for="Status" />
+						<apex:inputField id="Status" value="{!thisCase.Status__c}"/>
+					</apex:pageBlockSectionItem>	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Case Reason : " for="caseReason" />
+						<apex:inputField id="caseReason" value="{!thisCase.Case_Reason__c}"/>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+				
+				<apex:pageBlockSection columns="2" title="Case Resolution">
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Account Resolution : " for="accountResolution" />
+						<apex:inputField id="accountResolution" value="{!thisCase.Account_Resolution__c}"/>
+					</apex:pageBlockSectionItem>
+					
+		
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="2 Weeks' Notice to be applied? : " for="twoWeeksNoticeToBeApplied" />
+						<apex:inputField id="twoWeeksNoticeToBeApplied" value="{!thisCase.X2012_2_Weeks_Notice_to_be_applied__c}"/>
+					</apex:pageBlockSectionItem>
+					
+	
+										
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Billing Resolution : " for="billingResolution" />
+						<apex:inputField id="billingResolution" value="{!thisCase.Billing_Resolution__c}"/>
+					</apex:pageBlockSectionItem>	
+					
+	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Free Management Request Amount : " for="creditRequestAmount" />
+						<apex:inputField id="creditRequestAmount" value="{!thisCase.Credit_Amount__c}"/>
+					</apex:pageBlockSectionItem>
+										
+	
+										
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Client Manager Reassign : " for="clientManagerReassign" />
+						<apex:inputField id="clientManagerReassign" value="{!thisCase.Client_Manager_Reassign__c}"/>
+					</apex:pageBlockSectionItem>	
+									
+	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Refund Request Amount : " for="refundRequestAmount" />
+						<apex:inputField id="refundRequestAmount" value="{!thisCase.Refund_Amount__c}"/>
+					</apex:pageBlockSectionItem>
+										
+	
+										
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Reassign To : " for="reassignTo" />
+						<apex:inputField id="reassignTo" value="{!thisCase.Reassign_To__c}"/>
+					</apex:pageBlockSectionItem>	
+					
+	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Downgrade Amount : " for="downgradeAmount" />
+						<apex:inputField id="downgradeAmount" value="{!thisCase.Downgrade_Amount__c}"/>
+					</apex:pageBlockSectionItem>
+										
+	</apex:pageBlockSection>
+				
+				<apex:pageBlockSection columns="2" title="Refunds">
+									
+					
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Refund Invoices Start Date : " for="refundInvoicesStartDate" />
+						<apex:inputField id="refundInvoicesStartDate" value="{!thisCase.Refund_Invoices_Start_Date__c}"/>
+					</apex:pageBlockSectionItem>	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Refund Invoices End Date : " for="refundInvoicesEndDate" />
+						<apex:inputField id="refundInvoicesEndDate" value="{!thisCase.Refund_Invoices_End_Date__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Refund Invoice(s) : " for="refundInvoice" />
+						<apex:inputField id="refundInvoice" value="{!thisCase.X2012_Refund_Invoice_s__c}"/>
+					</apex:pageBlockSectionItem>
+					
+						
+				 
+				 	<apex:pageBlockSectionItem >
+				 		<apex:outputLabel >Select Refund Invoices : </apex:outputLabel>
+				 		<apex:outputPanel id="RefundInvoices">  
+					    <apex:selectList id="selectRefundInvoices" value="{!SelectedRefundInvoices}" size="1" multiselect="true" >
+	                    	<!-- <apex:actionSupport event="onchange" action="{!ChangePaymentType}" rerender="ccinfo" status="status"/> -->
+	        				<apex:selectOptions value="{!RefundInvoices}"/>
+	        			</apex:selectList> 
+	        			</apex:outputPanel>
+					</apex:pageBlockSectionItem>	
+					
+						
+				 </apex:pageBlockSection>
+				
+				<apex:pageBlockSection columns="2" title="Credits">
+					
+				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Credit Invoices Start Date : " for="creditInvoicesStartDate" />
+						<apex:inputField id="creditInvoicesStartDate" value="{!thisCase.Credit_Invoices_Start_Date__c}"/>
+					</apex:pageBlockSectionItem>	
+									
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Credit Invoices End Date : " for="creditInvoicesEndDate" />
+						<apex:inputField id="creditInvoicesEndDate" value="{!thisCase.Credit_Invoices_End_Date__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Credit Invoice(s) : " for="voidInvoice" />
+						<apex:inputField id="voidInvoice" value="{!thisCase.X2012_Void_Invoice_s__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel >Select Credit Invoices : </apex:outputLabel>
+						<apex:outputPanel id="CreditInvoices">    
+					    <apex:selectList id="selectCreditInvoices" value="{!SelectedCreditInvoices}" size="1" multiselect="true" >
+	                    	<!-- <apex:actionSupport event="onchange" action="{!ChangePaymentType}" rerender="ccinfo" status="status"/> -->
+	        				<apex:selectOptions value="{!CreditInvoices}"/>
+	        			</apex:selectList> 
+	        			</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+					
+						<apex:pageBlockSectionItem >
+						<apex:commandButton value="Save Case" action="{!saveCase}" rerender="thisCase,productList" status="updateCase"/>
+					</apex:pageBlockSectionItem>
+					
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+			</apex:facet>
+			</apex:actionstatus>
+			<!-- 
+			Refund<br/>
+			<apex:outputText >{!SelectedRefundInvoices}</apex:outputText><br/>
+			<apex:outputText >{!thisCase.Refund_Invoices_List__c}</apex:outputText><br/>
+			Credit<br/>
+			<apex:outputText >{!SelectedCreditInvoices}</apex:outputText><br/>
+			<apex:outputText >{!thisCase.Credit_Invoices_List__c}</apex:outputText><br/>
+			 -->
+			
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

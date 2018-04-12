@@ -1,0 +1,32 @@
+<apex:page standardController="seoThemeKeywords__c" extensions="BulkKeywordsInsert">
+
+    <apex:sectionHeader title="SEO Website" subtitle="{!website_name}"/>
+
+ <apex:form >
+    <apex:pageBlock title="New SEO Keywords">
+    	
+        <apex:pageBlockSection columns="1" id="sec">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Keywords (each keyword on a new line)</apex:outputLabel>
+                <apex:inputTextarea rows="30" cols="80" id="bulk_keywords" value="{!bulk_keywords}"/>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Override Website Geolocation?</apex:outputLabel>
+                <apex:inputField id="geolocation" value="{!seoThemeKeyword.Geolocation__c}" />
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+
+            </apex:pageBlockSectionItem>
+
+        </apex:pageBlockSection>
+
+        <apex:commandButton value="Save" action="{!save}"/>
+        <apex:commandButton value="Cancel" action="{!cancel}"/>
+
+        <apex:pageMessages ></apex:pageMessages> 
+       
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

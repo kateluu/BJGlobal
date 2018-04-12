@@ -1,0 +1,22 @@
+<apex:page standardController="seoWebsite__c" extensions="SeoWebsiteController" showHeader="false" sidebar="false">
+    
+    <apex:pageBlock title="SEO Prospect Keywords">
+        
+        <apex:pageBlockTable value="{!prospectKeywordsMap}" var="keyword">
+            
+        	<apex:column headerValue="Keyword" value="{!keyword['keyword']}" />
+
+        	<apex:column headerValue="Google Current" value="{!keyword['google_organic_position']}" />
+
+        	<apex:column headerValue="Google URL (relative)">
+        		<apex:outputLink value="{!keyword['google_organic_url']}">{!keyword['google_organic_url_relative']}</apex:outputLink>
+        	</apex:column>
+
+        	<apex:column headerValue="Last Crawled" value="{!keyword['last_crawl_date']}" />
+        	<apex:column headerValue="Geolocation" value="{!keyword['geolocation']}" />
+
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+
+
+</apex:page>

@@ -1,0 +1,31 @@
+<apex:page showHeader="false" sidebar="false" standardController="Task" extensions="TaskExtension" standardStylesheets="false">
+<apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+
+<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"/>
+<apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"/>
+
+<apex:outputPanel rendered="{!Task.CallDurationInSeconds != null && Task.CallDurationInSeconds > 0}">
+	<apex:outputPanel rendered="{!CallRecordingAccess == true}">
+		<script>
+		$(function(){
+			$('#callRecording source').on("error", function (e) {
+				$(this).parent('audio').after('<div class="alert alert-danger" role="alert"><strong>Oh snap!</strong> The call recording could not be found.</div>');
+				$(this).parent('audio').hide();
+		    });
+		});
+		console.log('call recording URL: {!CallRecordingURL}');
+		</script>
+
+		<audio id="callRecording" controls="controls" preload="none">
+		  <source src="{!CallRecordingURL}" type="audio/wav" />
+			Your browser does not support the audio element.
+		</audio>
+		<a class="btn btn-default btn-primary" href="{!CallRecordingURL}" title="Download"><span class="glyphicon glyphicon-save" aria-hidden="true"></span></a>
+	</apex:outputPanel>
+
+	<apex:outputPanel rendered="{!CallRecordingAccess == false}">
+		Sorry, you don't have access to this call recording.
+	</apex:outputPanel>
+</apex:outputPanel>
+
+</apex:page>

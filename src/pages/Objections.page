@@ -1,0 +1,644 @@
+<apex:page >
+<style type="text/css">
+.rich-tab-header {font-size:16px !important;}
+.rich-tab-active {font-size:16px !important;}
+</style>
+    <apex:tabPanel switchType="client" selectedTab="name2" id="theTabPanel"  style="font-size:14px;">
+        <apex:tab label="Ads" name="Ads" id="Ads"  style="font-size:14px;">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Ads"  >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I can’t see my ads</apex:outputLabel>
+                        <apex:outputText > 
+                            Explanation of campaign settings, rotational Ad display, budget restrictions, 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I don’t like my ads</apex:outputLabel>
+                        <apex:outputText > 
+                            Advise on why they are scripted that way, split testing of Ad copy, call to action/targeted, keyword oriented, dynamic keyword insertions 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why are my ads not promoting the business name?</apex:outputLabel>
+                        <apex:outputText > 
+                            Not a branding form of marketing - focused on ROI &#38; attracting a targeted audience based on your product - split testing ads (if they complain) 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why are there different AdGroups? Do I pay more for that</apex:outputLabel>
+                        <apex:outputText > 
+                            Explanation of campaign settings, rotational Ad display, budget restrictions, 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+        
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        </apex:tab>
+        
+        <apex:tab label="Billing" name="Billing" id="Billing"  style="font-size:14px;">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Billing">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I wasn’t told about SLX &#38; Google Billing</apex:outputLabel>
+                        <apex:outputText > 
+                            The salesperson should have explained this to you in your initial phone call when you signed up.  It does explain the difference in our terms and conditions and our management packages don't include Google spend as you can see on our website when you chose your package.  As a CM you also should have sent them an email with the housekeeping issues explained which outlines the costs.  If it is a new sale then I would suggest that if they are not happy and you feel that you cannot alleviate the situation, than send the sale back to the salesperson. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why am I paying so much to Google</apex:outputLabel>
+                        <apex:outputText > 
+                            Your spend is based on your chosen daily budget.  The reason they may be questioning how much they spend is more than likely because they are not getting any results.  You will have to refer to the ROI section at that point.  If that is not the case then you may need to look at reducing their daily budget. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why have I been charged for $100, then $250, then $500 by Google</apex:outputLabel>
+                        <apex:outputText > 
+                            Refer to "Post Pay Billing Option explained" in the nas drive under email templates or your canned responses. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why am I being charged by Google Singapore</apex:outputLabel>
+                        <apex:outputText > 
+                            Google's billing office is run out of Singapore because they are an International company and have offices all over the world, hence the reason why it shows up on your credit card statement as "Google Singapore".  If they ask why it is not billed out of Australia and want further info on the reasons why, then you could tell them "because it makes Google exempt from GST". 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="CancellationRequests" name="CancellationRequests" id="CancellationRequests"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Cancellation Requests">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I just want to cancel</apex:outputLabel>
+                        <apex:outputText > 
+                            Empathise, isolate, overcome strategy = let them talk - ask questions to identify the specific core reason for cancelling - understand their feelings, use examples of other similar situations, what you did for a solution there. Take notes, clarifying statements, don’t object - case studies.
+Template image of campaigns where certain strategies have worked. Do not assume the client knows everything - educate them - build value on their time - dazzle with exceptional customer service - refer to particular themes for ways to handle once you have identified the objection.
+Never overpromise - always follow up with an email following the conversation to re-iterate their goals - reassure - convey urgency, finish on a positive note - give them a task - make them work for you.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I am not getting sales</apex:outputLabel>
+                        <apex:outputText > 
+                            Refer to the section on ROI 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >My friend can do the optimisation for me</apex:outputLabel>
+                        <apex:outputText > 
+                            Ask the client what knowledge/qualifications does their friend have when it comes to Google AdWords.  If they say that their friend is really good at computers or something along those lines, let them know that AdWords optimisation is completely different to building websites, fixing computers etc. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Business has failed</apex:outputLabel>
+                        <apex:outputText > 
+                            Empathise with them as they would be going through a very hard time.  Mention that if they ever start a business up again or even get a job somewhere to give you a call so that you can take care of their advertising for them as you loved working with them. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Unable to justify the SLX management fees</apex:outputLabel>
+                        <apex:outputText > 
+                            Refer to the section on ROI 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Campaign getting sales - does not want to continue to pay SLX</apex:outputLabel>
+                        <apex:outputText > 
+                            Let the client know that by stopping management they will fall behind their competitors and their sales will more than likely drop.  Maybe mention that their once was a time that they weren't getting sales and you have got them to this place by continual optimisation.  If they are still persistent on cancelling then look at lowering their management package to try and save them. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I don’t think AdWords works for my industry</apex:outputLabel>
+                        <apex:outputText > 
+                            You will need to ascertain whether what they are saying is correct.  You may need to ask other CM's if they have taken care of similar industries and the results that they had achieved for their clients and then get back to your client with a potential fix to try and save them.  If they are truly in an industry that does not work then there may not be much that you can do. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Sales told me I only needed to do this for 4 weeks</apex:outputLabel>
+                        <apex:outputText > 
+                            Let the client know that you’re unsure why they would say that they only need to run the campaign for 4 weeks as optimisation is an ongoing process that requires more than 4 weeks.  Remind them that your job is building relationships with your clients and making their Google campaigns work forever onwards and that it is not common for clients to leave after 4 weeks.  Remind them that Google is very diverse and mention that they may fall behind their competitors if they are not having you manage their campaigns. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >My Accountant says its wasting money</apex:outputLabel>
+                        <apex:outputText > 
+                            Question what the accountants suggestions on other marketing avenues are - what are their marketing qualifications 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="Clicks" name="Clicks" id="Clicks"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Clicks">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why is my cost per click gone up since using SLX?</apex:outputLabel>
+                        <apex:outputText > 
+                            Greater focus on quality keywords, testing for better positions &#38; find ideal position for conversions - kick start the Google algorithms to ensure we are seen as serious bidders therefore rewarded by Google with higher QS 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why do I have to bid so much when my friend doesn't?</apex:outputLabel>
+                        <apex:outputText > 
+                            History of account, quality of keywords, positions, Quality Scores, management etc 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >My competitors keep clicking on my ads</apex:outputLabel>
+                        <apex:outputText > 
+                            Advise on Google's invalid clicks - automated clicking tools or traffic sources, robots, or other deceptive software. Artificial clicks are prohibited and an advertiser is not charged for these 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I see hundreds of clicks but not getting any enquiries through</apex:outputLabel>
+                        <apex:outputText > 
+                            The avg website &#38; campaign converts at 2.5%. Evaluate where the clients campaign stands | conversion code installation if not | website evaluation - is it optimised for conversions | landing pages - is the an effective reason to purchase | trust factors on site | product pricing | competitor analysis 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >The cost per conversion has increased, why?</apex:outputLabel>
+                        <apex:outputText > 
+                            Competitor watch - what are competitors doing with their products, websites - get the client to help figure out how to beat them - look into the keywords leading to conversions - are you wasting funds on words? 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I don’t want to pay $1 per click,</apex:outputLabel>
+                        <apex:outputText > 
+                            Advise on the Bidding structure of Google - auction - demand and competition dictates the price needed to gain positions - explain that this is short term - improved Quality Scores allow for lower CPC - we need to bid higher to be able to kick start Google Algorithms - this takes time and we
+can gradually reduce this over time once we improve. Discuss position vs cost vs traffic ie. Position 3 gets more traffic for the same budget and examples.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="Clients" name="Clients" id="Clients"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Clients">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Client keeps making changes in the campaign</apex:outputLabel>
+                        <apex:outputText > 
+                            Remind them that they are paying you for management of the campaign - their changes can cost them money particularly if they are detrimental and need to be amended therefore taking additional time and service. Impact on professional strategy, too many people touching the campaign can be detrimental - they can undo the good things that have been implemented, no ability to track the impact of each change if CM is unaware of them. Possible test of their changes.
+Split testing - remind that trained expert &#38; professional AdWords opinion on their changes. Constant changes - need sufficient sample data to identify what works and what doesn’t - analyst position - data evaluation - hence no change for the sake of change. Constructive criticism of their changes. Politely advise on changes. Google can ban ads with incorrect changes - not abiding by policies etc - our relationship with Google. Use change history to pick holes in their changes and alterations. AEA Backups as a save strategy if they don’t agree. Complete campaign history.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I made an error in the campaign - why haven’t you fixed it.</apex:outputLabel>
+                        <apex:outputText > 
+                            You could tell the client that you believed they made the change on purpose and are monitoring how it is going.  As you already have told them that they should let you know about any changes that they would like to make within the campaign.  If it has only just happened within the last 24-48 hours then you could mention that you don't log in everyday to their campaign and that is why you had not noticed the mistake. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Not being contacted by my Client Manager</apex:outputLabel>
+                        <apex:outputText > 
+                            Identify expectations - set the expectations based on their package. Time on the campaign versus time on the phone. Reiterate packages and what they are paying for - mgmt not phone calls. Discuss data and needing sufficient sample size - no point in talking weekly (what would you talk about)
+Ascertain whether you have dropped the ball as a CM - apologise and be accountable for that - reassurance of the work we do in the background on the campaign. Make sure to set these expectations in the initial call. Point out level of contact - always follow up with emails and record these.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Dictates how they want it done.</apex:outputLabel>
+                        <apex:outputText > 
+                            Split test their ideas, identify what they expect and want for the SLX fee - do they want an advisor? Constant changes? Someone to just do what they want? Allow them to run theirs - tell them that, if it doesn’t work - then use that to leverage doing it your way. Set long term goals with client.
+Make them focus on end results, not how to get it there - that is your job, new strategies for New Financial Year - use this time to discuss this.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Client discovered Change History
+</apex:outputLabel>
+                        <apex:outputText > 
+                            Use change history to advise on their detrimental changes, recent changes are not updated quickly when using AdWords editor; set up work in analytics is not traceable. Remind that campaigns do not need change for the sake of change - we are here to analyse and evaluate the data to see what works and what doesn’t - get them to help with negatives, search query reports etc, send through reports for them to prove your work - competitor analysis, analytics reports, opportunities reports - dimensions reports/Geographic’s etc. Remind that all service is personal not automated. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="Not As Much Traffic Coming Through" name="NotAsMuchTrafficComingThrough" id="NotAsMuchTrafficComingThrough"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Not As Much Traffic ComingThrough">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Not as much traffic coming through, why?</apex:outputLabel>
+                        <apex:outputText > 
+                            Eliminating irrelevant clicks, pull marketing strategy explanation, high volume of traffic we can afford to be really targeted, spend on keywords that work 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I used to get more clicks/enquiries when I did it myself</apex:outputLabel>
+                        <apex:outputText > 
+                            Establish other avenues of marketing they may be using, reduced irrelevant clicks etc, pause current campaign - use old campaign and ask if they notice a diff next time 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Sales told me you would do more for the setup</apex:outputLabel>
+                        <apex:outputText > 
+                            Follow protocol - analysing the data to determine what is working, need to test to ensure we are making the right changes, not an overnight process 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Why have you taken out my keywords "high heels' eg</apex:outputLabel>
+                        <apex:outputText > 
+                            The salesperson should have explained this to you in your initial phone call when you signed up.  It does explain the difference in our terms and conditions and our management packages don't include Google spend as you can see on our website when you chose your package.  As a CM you also should have sent them an email with the housekeeping issues explained which outlines the costs.  If it is a new sale then I would suggest that if they are not happy and you feel that you cannot alleviate the situation, than send the sale back to the salesperson. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="Pause" name="Pause" id="Pause"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Pause">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I'm too busy I cannot keep up with the demand.</apex:outputLabel>
+                        <apex:outputText > 
+                            Remind client that if they do not maintain presence on Google, their competitors will, reduction in budget to lower costs but keep a minimal presence. Keep optimising and having data coming through during the lower budget time to ensure you are easily able to increase and boost once busy periods are over, constant data and information during busier times to attract and develop a database to contact during quiet times.Travel operators - start advertising next year. Earlier booking deals etc. Maintenance Package. Expansions - are you looking at getting more staff? Advise on possibly reselling leads, agreements with other companies to work together - commission structures? Enabling customers to find you again - no presence at all they will be unable to find you. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I'm going on holidays and don’t want to pay for advertising</apex:outputLabel>
+                        <apex:outputText > 
+                            Maintenance - half budget, maintain presence on Google, other competitors analysis, auction insights,  pause campaign and continue to work on trends and reports for when they return. Build value into reports/services - setting these up etc. spring cleaning with keywords/campaign while on pause with AdWords - mgmt keeps going - opportunity to keep working and value add to the service. Promote courses/bookings for future ie. 2013. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >It’s a quiet period and I cant justify cost - it will be better next month</apex:outputLabel>
+                        <apex:outputText > 
+                            need as much advertising as possible to get ahead of competition and stay ahead - you will be in a better position when it gets busier - consistentmgmt so you don’t go backwards. Now is the time to install analytics, conversion tracking - while it is quiet - work on other areas necessary to continually improve. Decrease outlay on Google to keep up a presence and exposure in preparation for next month - keep quality data coming through - reduce mgmt/budget etc to maintenance for a set period of time. - Cap downgrades to 2-4 weeks. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >We are getting our website redone and need to pause until its finished</apex:outputLabel>
+                        <apex:outputText > 
+                            change campaign to Google’s places, Facebook pages etc. Keep business coming through - everydaymgmt/account not on, Google will penalise you. Competitors will get ahead while building historical data - is it down or being rebuilt? Create fear and urgency - Google trawling websites every few weeks losing out the longer your out. Quality Scores plummet w/ Google crawling site if URL has nothing on there - additional expense to get back to good later. Keep old site up while doing it - advise and refer to Doug. Reduce budget to send to old site 0- keep presence going. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Seasonal Businesses</apex:outputLabel>
+                        <apex:outputText > 
+                            promote next season 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Not getting business as the site is awful</apex:outputLabel>
+                        <apex:outputText > 
+                            Offer discount on websites etc - advise that current team evidently can’t make a website that converts - try something new and try Dougie's team. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="ROI" name="ROI" id="ROI"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="ROI">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Not getting sales.</apex:outputLabel>
+                        <apex:outputText > 
+                            Look through quality of traffic, search query reports, analytics - evaluate website &#38; sales strategy -encourage reasons for purchase, long term strategy - sign ups/newsletters etc. competitor analysis - what are they doing?? Competitor offers
+Find out why, website/prices analysis - how they purchase - phone, email, ecommerce, keyword review (specifics) analytics, educate on email remarketing - life value of client, demographics, refine settings as tight as possible. Identify sales/buying cycles 2mths? Get them to admit that.
+Brand awareness build reputation through constant display on Google, Identify lead to sales ratio - educate them. What do they do with leads? How long till they contact, how do they contact, Educate on Type of web visitor - different to retail store.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I'll put more into the budget when I see results.</apex:outputLabel>
+                        <apex:outputText > 
+                            Unable to evaluate Cost per acquisition while we are operating on a low budget - unable to get enough traffic through quickly enough to determine and analyse the data - potentially increase for a test period.
+15% of all searches are brand new, meaning constant need for negs, optimisations, constant evolution - 1000 new advertisers per week - we only take 2 from each industry - we will take on a competitor and may not be able to take them back on board.
+ 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I'm not getting calls.</apex:outputLabel>
+                        <apex:outputText > 
+                            Look at product, costing’s, are they competitive, evaluate website - is it optimised for conversions - do they have it prominently displayed | establish their phone msg, are they answering all calls? Is it a welcoming msg. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I’m seeing no results | what are you doing?</apex:outputLabel>
+                        <apex:outputText > 
+                            Look into previous statistics with client - educate them on the improvements made - what you have done to get them there - Traffic, Conversion, Retention - move on to look at conversion strategies 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="SLX Competitors MGMT Fees" name="SLXCompetitorsMGMTFees" id="SLXCompetitorsMGMTFees"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="SLX Competitors MGMT Fees">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Another company is offering me a better cost &#38; I don’t pay for Clicks</apex:outputLabel>
+                        <apex:outputText > 
+                            Advise on Google’s recommended resellers &#38; Google email with warning re. no company does not pay for clicks (create template for staff) 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I can learn how to do it myself on YouTube.</apex:outputLabel>
+                        <apex:outputText > 
+                            Value of the clients time - how much is their time worth, Are they able to combat against the 1000 new advertisers that come on board weekly with Google, 36 billion searches per day - 15% are brand new - constant need for optimisation, stay on top of Google algorithms we are trained by Google - up to date on all the latest changes - split testing, search query reporting 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >What are we paying you to do?</apex:outputLabel>
+                        <apex:outputText > 
+                            Establish their expectations, what did they think we would do? Run through inclusions in the pkg they have selected, advise on the additional services you provide because they are a good client. Ie. $69 pkg, let them know you run split testing which is only available in the $89 pkg 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    
+                    
+                    
+                    
+                    
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection columns="1" title="Competitor Rebuttal">
+                
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Reach Local</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Client manager is also a salesperson. The person you deal with is no the person that will manage your account</li>
+                            <li>Reporting combines all networks into 1 report</li>
+                            <li>Just a number! Reach advertises over 20,000+ clients!</li>
+                            <li>Charge a percentage on your clicks. Reported to be from 25% -> 100% mark up</li>
+                            <li>i.e You believe you are spending $1000 on clicks but really Reach is pocketing $500 of that and reporting $1,000 click spend</li>
+                            <li>Minimum term contracts</li>
+                            <li>Don’t get access to your own account</li>
+                            <li>Churn through staff very quickly so you won’t be able to rely on your manager</li>
+                            <li>Reports don’t show the keyword list!</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Sensis (aka Yellow Pages or Click Manager)</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Pay for the promotion of their site</li>
+                            <li>Split budget across multiple networks – Including their own network sensis.com</li>
+                            <li>Do not disclose the budget split between the various networks</li>
+                            <li>Yellow Pages and Google are direct competitors. Would they really promote a competitor?</li>
+                            <li>Arbitrage: Sensis advertise on Google for traffic to their website, where the user clicks the Sensis link, costing you more</li>
+                            <li>Don’t get access to your own account</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Your Marketing Sales</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Making false Google claims. “Google gave them a health check”</li>
+                            <li>Guarantee positions – Against 3rd party guidelines</li>
+                            <li>Guarantee percentage ROI increase without looking at the campaign</li>
+                            <li>CEO was a salesperson @ SLX. Appears he has copied a number of our business practices</li>
+                            <li>“Trained by Google Qualified Search Advertisers.” No such thing. At SLX you are managed BY a Google AdWords Qualified Individual.</li>
+                            <li>Packages include 3+ daily reviews. This is a waste of time, not enough data to make effective decisions. Also try calling them 3pm on a Sunday and asking for changes….</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Business Boom</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Ex SLX employee and he openly advertises this on his website</li>
+                            <li>Karl Wolfgramm: Claims to have done the course but was in fact a SLX employee , trained by SLX</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Advia and Force Media</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Trained ex – SLX staff</li>
+                            <li>Small company, where’s the credibility?</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Yodel</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>No longer a Premier partner, just a “Certified Partner.”</li>
+                            <li>Run by fullfilNET, a multi-national English company</li>
+                            <li>Consistently claimed to be Google. Documented all over the Internet.</li>
+                            <li>Lock you into contracts. Minimum term</li>
+                            <li>Say you budget for $100 a month and you only spend $20. Yodel pocket the other $80.</li>
+                            <li>Large number of negative reviews online.</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Dejan (SEM)</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Not a Google partner!</li>
+                            <li>While they may have some Google AdWords Qualified Individuals, the company itself has no affiliation</li>
+                            <li>Primarily an SEO company</li>
+                            <li>Way more expensive than SLX. Charge 495 per month for minimum package = $123+ per week!</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                
+                
+                
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+        
+        
+        <apex:tab label="Website" name="Website" id="Website"  style="font-size:14px;"> 
+                            <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="Website">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >AI do not want to make changes to the site</apex:outputLabel>
+                        <apex:outputText > 
+                            Educate on optimisation strategies - evaluate the competitions website &#38; value of investment 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I don’t believe that your advice will improve my conversions</apex:outputLabel>
+                        <apex:outputText > 
+                            Reassure the client of the training we receive from Google, our expertise within the industry - one of only 8 recommended resellers by Google. Provide statistics and examples of previous clients in other regions that have seen success through well-structured professional campaigns 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I built the site myself and it is fine</apex:outputLabel>
+                        <apex:outputText > 
+                            Don't let the client feel like you are pulling apart their pride and joy.  Let them know that part of your job consists of looking at websites all day long and therefore you can give them some helpful advice that will increase the potential of their website.  And will then in turn help them make more money/leads. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >I don’t know how to make changes to the site/insert codes etc.</apex:outputLabel>
+                        <apex:outputText > 
+                            Mention that we have web services in house that we can provide them with at a discounted rate. 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        
+        </apex:tab>
+        
+        
+        <apex:tab label="New Client Plan" name="NewClientPlan" id="NewClientPlan"  style="font-size:14px;"> 
+                    <apex:pageBlock >
+                <apex:pageBlockSection columns="1" title="New Client Plan">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 1 - TRACKING</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Initial report</li>
+                            <li>Client panel usage</li>
+                            <li>Implement tracking through analytical and/or conversion tracking</li>
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 2 - IDENTIFY RELEVANT TRAFFIC - SQR</apex:outputLabel>
+                        <apex:outputText >
+                            <li>Look at and through SQR</li>
+                            <li>Look for some negative keywords and add</li>
+                            <li>Begin to identify any trends</li> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 3 - CTR</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Look at your CTR aka your relevance to your traffic</li>
+                            <li>Who else is on the page?</li>
+                            <li>Talk to client about their closest competitors and look to do some research</li> 
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 4 - TRENDS</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Dimension analysis</li>
+                            <li>Location</li>
+                            <li>Time</li>
+                            <li>WEEKly traffic trends</li>
+                            <li>Any major trends</li>
+                            <li>DO NOT MAKE CHANGES</li>
+                            <li>Justify changing contact period from WEEKly to fortnightly by telling client you need more time to collect data and make important decisions that effect their ROI based on a good sample size</li>
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 6 - BUDGET AND COMPETITOR</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Look at how the budget is affecting data</li>
+                            <li>See if budget is hindering the campaign by limiting traffic</li>
+                            <li>Look at competitors; if and how they are responding to our changes</li>
+                            <li>See if certain competitors are high balling the Adwords market</li>
+                            <li>Make some budget recommendations to gain further market share</li>
+                            <li>Mainly discussing, also reinforce that we are still monitoring those trends</li>
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 8 - MAJOR OPTIMISATION OVERHAUL</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Improve for conversions</li>
+                            <li>With the last months data begin to implement optimisation techniques to improve conversions as a priority</li>
+                            <li>Split test ad analysis</li>
+                            <li>This is a trigger for referral marketing or upselling.</li>
+                            <li>Identify any opportunities for SEO or web conversion or mobile and and implement the current strategy. At the moment this is opportunities, in the future looks to be triggering email marketing campaigns for these clients</li>
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 10 - GETTING CLIENT PUMPED</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Discuss the initial results, if any, of the long term strategy we implemented last fortnight.</li>
+                            <li>Promote that next fortnight is the clients first major quarterly marketing report, maybe discuss</li>
+                        </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel >WEEK 12 - QUARTERLY MARKETING REPORT</apex:outputLabel>
+                        <apex:outputText > 
+                            <li>Client manager to work on creating the marketing report.</li>
+                            <li>This involves 5 fields to be filled in in salesforce</li>
+                                <ul>
+                                    <li>Beginning stats - comments on the data</li>
+                                    <li>Current stats - comments on the data</li>
+                                    <li>What we have done</li>
+                                    <li>Strategise moving forward</li>
+                                    <li>3 proposed goals</li>
+                                </ul>
+                            <li>This creates an open ended, quarterly focused ongoing management relationship</li>
+                            <li>Additionally we can promote testimonials for ecstatic clients</li>
+                            </apex:outputText>
+                    </apex:pageBlockSectionItem>
+                    
+                    
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+    </apex:tabPanel>
+   
+</apex:page>

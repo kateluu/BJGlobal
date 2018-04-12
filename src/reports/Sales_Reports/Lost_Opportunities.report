@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>SLXOpportunity__c.Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>SLXOpportunity__c.Status__c</column>
+            <operator>equals</operator>
+            <value>No Budget,Not Interested,Lost to Competitors</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_$Account.Active__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Lost Opportunities</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SLXOpportunity__c@SLXOpportunity__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SLXOpportunity__c.Close_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

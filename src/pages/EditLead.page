@@ -1,0 +1,242 @@
+<apex:page standardController="Lead__c" extensions="EditLead"> 
+
+	<apex:form >
+		<apex:outputPanel Id="thisCase" rendered="{!!finished}">
+			<apex:actionstatus id="updateCase" startText="updating...">
+            <apex:facet name="stop"> 
+			<apex:pageBlock >
+			
+ 
+				<apex:pageBlockSection columns="2" title="Lead">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Name : " for="Name" />
+						<apex:inputField id="Name" value="{!thisLead.Name}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Owner : " for="Owner" />
+						<apex:outputText id="Owner" value="{!thisLead.Owner.FirstName} {!thisLead.Owner.LastName}"/>
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Lead Status : " for="LeadStatus" />
+						<apex:inputField id="LeadStatus" value="{!thisLead.Lead_Status__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="From Source : " for="FromSource" />
+						<apex:inputField id="FromSource" value="{!thisLead.From_Source__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="First Name : " for="FirstName" />
+						<apex:inputField id="FirstName" value="{!thisLead.First_Name__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="From Form : " for="FromForm" />
+						<apex:inputField id="FromForm" value="{!thisLead.From_Form__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Last Name : " for="LastName" />
+						<apex:inputField id="LastName" value="{!thisLead.Last_Name__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="HTTP Referer : " for="HTTPReferer" />
+						<apex:inputField id="HTTPReferer" value="{!thisLead.HTTP_Referer__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Company : " for="Company" />
+						<apex:inputField id="Company" value="{!thisLead.Company__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="HTTP Useragent : " for="HTTPUserAgent" />
+						<apex:inputField id="HTTPUserAgenet" value="{!thisLead.HTTP_Useragent__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Phone : " for="Phone" />
+						<apex:inputField id="Phone" value="{!thisLead.Phone__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="IP Address : " for="IPAddress" />
+						<apex:inputField id="IPAddress" value="{!thisLead.IP_Address__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Email : " for="Email" />
+						<apex:inputField id="Email" value="{!thisLead.Email__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Session ID : " for="SessionID" />
+						<apex:inputField id="SessionID" value="{!thisLead.session_id__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Rating : " for="Rating" />
+						<apex:inputField id="Rating" value="{!thisLead.Rating__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Title : " for="Title" />
+						<apex:inputField id="Title" value="{!thisLead.Title__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Street : " for="Street" />
+						<apex:inputField id="Street" value="{!thisLead.Street__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Website : " for="Website" />
+						<apex:inputField id="Website" value="{!thisLead.Website__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="City : " for="City" />
+						<apex:inputField id="City" value="{!thisLead.City__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Post Code : " for="Postcode" />
+						<apex:inputField id="Postcode" value="{!thisLead.Post_Code__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Country : " for="Country" />
+						<apex:inputField id="Country" value="{!thisLead.Country__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Industry : " for="Industry" />
+						<apex:inputField id="Industry" value="{!thisLead.Industry__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Lead Value : " for="LeadValue" />
+						<apex:inputField id="LeadValue" value="{!thisLead.Lead_Value__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Description : " for="Description" />
+						<apex:inputField id="Description" value="{!thisLead.Description__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Followup : " for="Followup" />
+						<apex:inputField id="Followup" value="{!thisLead.Followup__c}"/>
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+						 <apex:outputLabel value="Assigned To : " for="AssignedTo" />
+<!-- 						<apex:inputField id="AssignedTo" value="{!thisLead.Assigned_To__c}"/>  -->
+						<apex:selectList id="AssignedTo" value="{!thisLead.Assigned_To_Id__c}" size="1" >
+	        				<apex:selectOptions value="{!Salespeople}"/>
+	        			</apex:selectList>
+						
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+					
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+									<apex:outputLabel value="Notes : " for="notes" />
+						<apex:inputField id="notes" value="{!thisLead.Notes__c}"/>
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					<!-- 	<apex:outputLabel value="Created By : " for="CreatedBy" />
+						<apex:inputField id="CreatedBy" value="{!thisLead.CreatedBy.FirstName}"/> -->
+					</apex:pageBlockSectionItem>
+	 				
+					<apex:pageBlockSectionItem >
+					<!-- 	<apex:outputLabel value="Last Modified By : " for="LastModifiedBy" />
+						<apex:inputField id="LastModifiedBy" value="{!thisLead.CreatedBy.Last_Modified_By__c}"/> -->
+					</apex:pageBlockSectionItem>
+					
+					<apex:pageBlockSectionItem >
+					<apex:commandButton value="Update" action="{!save}" status="update"/>
+					</apex:pageBlockSectionItem>
+	 
+				</apex:pageBlockSection>
+				
+			</apex:pageBlock>
+		</apex:facet>
+	</apex:actionstatus>
+	</apex:outputPanel>
+	</apex:form>
+
+<apex:form >
+<apex:outputPanel rendered="{!finished}">
+<apex:outputLabel >Email Sent</apex:outputLabel><br/>
+<!--  <apex:commandButton action="{!back}" value="Back"></apex:commandButton>  -->
+
+<apex:outputLink value="/a18/o">Back to List</apex:outputLink>
+
+<script>
+window.location.href='/a18/o';
+</script >
+
+</apex:outputPanel>
+</apex:form>
+
+
+
+
+</apex:page>

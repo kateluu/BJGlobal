@@ -1,0 +1,21 @@
+<apex:page controller="SignUpHistory">
+	<apex:form >
+		<apex:pageBlock Title="Sign Up Change History From Last Week">
+			<apex:pageBlockTable value="{!histories}" var="history">
+				<apex:column headerValue="Sign Up Name">
+					<apex:CommandLink onclick="window.open('/{!history.id}', '_blank'); return false;" >{!history.name}</apex:CommandLink>
+				</apex:column>
+				<apex:column headerValue="Account Name">
+					<apex:CommandLink onclick="window.open('/{!history.account}', '_blank'); return false;" >{!history.accountName}</apex:CommandLink>
+				</apex:column>
+				<apex:column headerValue="Time" value="{!history.timestamp}"/>
+				<apex:column headerValue="Old Promo Code" value="{!history.oldPromocode}"/>
+				<apex:column headerValue="New Promo Code" value="{!history.newPromocode}"/>
+				<apex:column headerValue="Old Salesperson" value="{!history.oldSalesperson}"/>
+				<apex:column headerValue="New Salesperson" value="{!history.newSalesperson}"/>
+				<apex:column headerValue="Assigned To" value="{!history.assignedTo}"/>
+				<apex:column headerValue="User" value="{!history.owner}"/>
+			</apex:pageBlockTable>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

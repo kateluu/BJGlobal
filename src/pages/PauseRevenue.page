@@ -1,0 +1,29 @@
+<apex:page controller="PauseRevenue">
+    <apex:form >
+        <apex:pageBlock title="Paused Revenue">
+            <apex:pageBlockTable value="{!teamAMap}" var="cm">  
+                <apex:column headerValue="Team A">  
+                  {!cm}  
+                </apex:column>  
+                <apex:column headerValue="Paused Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamAMap[cm]}" />
+                    </apex:outputText>
+                </apex:column>
+             </apex:pageBlockTable>
+             
+             <br/>
+             
+             <apex:pageBlockTable value="{!teamBMap}" var="cm">  
+                <apex:column headerValue="Team B">  
+                  {!cm}  
+                </apex:column>  
+                <apex:column headerValue="Paused Revenue" >  
+                    <apex:outputText value="{0,number,$#,###,###.00}">
+                        <apex:param value="{!teamBMap[cm]}" />
+                    </apex:outputText>
+                </apex:column>  
+             </apex:pageBlockTable> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

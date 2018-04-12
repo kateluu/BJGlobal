@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Xero Phone</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Xero Phones</value>
+    </caseValues>
+    <fields>
+        <label><!-- PhoneNumber --></label>
+        <name>PhoneNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- PhoneType --></label>
+        <name>PhoneType__c</name>
+        <picklistValues>
+            <masterLabel>DDI</masterLabel>
+            <translation><!-- DDI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEFAULT</masterLabel>
+            <translation><!-- DEFAULT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FAX</masterLabel>
+            <translation><!-- FAX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOBILE</masterLabel>
+            <translation><!-- MOBILE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Xero Contact --></label>
+        <name>Xero_Contact__c</name>
+        <relationshipLabel><!-- Xero Phones --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

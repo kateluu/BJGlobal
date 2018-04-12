@@ -1,0 +1,22 @@
+<apex:page StandardController="Credit__c" extensions="SendCredit">
+<apex:messages />
+    <apex:pageBlock title="Send Credit Note to {!acc.Contacts[0].Name} ">
+      <apex:form ><br/><br/>
+        
+        	<apex:outputLabel value="Send To" for="to"/>: <br/>     
+            <apex:outputText value="{!email}" id="to" />
+            <br/><br/>        
+        
+            <apex:outputLabel value="Subject" for="Subject"/>: <br/>     
+            <apex:outputText value="{!Subject}" id="Subject" ></apex:outputText>
+            <br/><br/>
+
+            <apex:outputLabel value="Body" for="Body"/>: <br/>     
+            <apex:inputTextarea value="{!body}" id="Body" rows="10" cols="80"/>           
+            <br/><br/>
+
+            <apex:commandButton value="Send Email" action="{!send}"/> 
+        </apex:form>
+           
+    </apex:pageBlock>
+</apex:page>

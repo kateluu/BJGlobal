@@ -1,0 +1,26 @@
+<apex:page controller="SendStatement">
+    <apex:messages />
+    <apex:pageBlock title="Send Account Statement to {!account.Contacts[0].Name} ">
+      
+
+       
+            
+        <apex:form ><br/><br/>
+        
+        	<apex:outputLabel value="Send To" for="to"/>: <br/>     
+            <apex:outputText value="{!account.Contacts[0].Email}" id="to" />
+            <br/><br/>
+        
+        
+            <apex:outputLabel value="Subject" for="Subject"/>: <br/>     
+            <apex:outputText value="{!Subject}" id="Subject" ></apex:outputText>
+            <br/><br/>
+
+            <apex:outputLabel value="Body" for="Body"/>: <br/>     
+            <apex:inputTextarea value="{!body}" id="Body" rows="10" cols="80"/>           
+            <br/><br/>
+
+            <apex:commandButton value="Send Email" action="{!send}"/> 
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

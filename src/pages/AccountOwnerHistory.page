@@ -1,0 +1,43 @@
+<apex:page controller="AccountNameHistory">
+<!--
+    // No longer used
+     <script>
+        function setFocusOnLoad() {} 
+    </script>
+    <apex:form >
+        <apex:pageBlock Title="Account Owner Change History">
+    <apex:pageBlockSection >    
+        <apex:pageBlockSectionItem >
+        <apex:outputLabel value="From : " for="startDate" />
+        <apex:inputField id="startDate" value="{!fromDate.Payment_Date__c}" />
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel value="To : " for="endDate" />
+        <apex:inputField id="endDate" value="{!toDate.Payment_Date__c}"/>
+    </apex:pageBlockSectionItem>
+    
+    <apex:pageBlockSectionItem >
+        <apex:commandButton value="Search" action="{!ShowAccounts}" rerender="search_result" status="status"/>
+    </apex:pageBlockSectionItem>
+    
+    <apex:actionStatus id="status" startText="Searching......." />
+    
+    </apex:pageBlockSection> 
+        <apex:pageBlock id="search_result">
+            <apex:pageBlockTable value="{!accounts}" var="account">
+                
+                <apex:column headervalue="Account" >
+                    <apex:CommandLink onclick="window.open('/{!account.AccountId}', '_blank'); return false;" >{!account.Account.Name}</apex:CommandLink>
+                </apex:column>
+                <apex:column headerValue="Time" value="{!account.CreatedDate}"/>
+                <apex:column headerValue="Modified By" value="{!account.CreatedBy.Name}"/>
+                <apex:column headerValue="Old Owner" value="{!account.OldValue}"/>
+                <apex:column headerValue="New Owner" value="{!account.NewValue}"/>
+                
+            </apex:pageBlockTable>
+            </apex:pageBlock>
+            
+        </apex:pageBlock>
+    </apex:form> -->
+</apex:page>

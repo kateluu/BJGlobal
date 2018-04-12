@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Cases__c.CaseType__c</column>
+            <operator>includes</operator>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Cases__c.Cancellation_Date__c</column>
+            <operator>equals</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <operator>contains</operator>
+            <value>Kerry Anderson,Amber Porter</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Today Sales Cancellation</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

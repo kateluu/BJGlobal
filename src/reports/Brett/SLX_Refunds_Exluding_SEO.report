@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account_Product__c$Name</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Invoices__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c.Invoices__r.Payments__r$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account_Product__c.Invoices__r.Payments__r$Payment_Amount__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c.Invoices__r.Payments__r$Payment_Type__c</column>
+            <operator>equals</operator>
+            <value>Refund</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Invoices__r$Invoice_Number__c</column>
+            <operator>notContain</operator>
+            <value>inv</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Name</column>
+            <operator>contains</operator>
+            <value>adwords,facebook,yahoo,google+,social media</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Account__c</column>
+            <operator>notContain</operator>
+            <value>getmoretraffic</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account_Product__c$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SLX Refunds Exluding SEO</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Products_with_Invoices_and_Payments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c.Invoices__r.Payments__r$Payment_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>
