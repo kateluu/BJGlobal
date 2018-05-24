@@ -14,7 +14,11 @@ public with sharing class SeoCompetitorController {
         this.competitorList = [SELECT Name FROM Competitor_Website__c WHERE SEO_Website__c = :seoWebsite.Id];
 
         // Add the keywordids that we want the data for
-        this.seoKeywords = [SELECT Id, Name, Google_Current__c FROM seoThemeKeywords__c WHERE seoWebsites__c = :seoWebsite.Id];
+        this.seoKeywords = [
+            SELECT Id, Name, Google_Current__c, Google_Volume__c, Google_Title__c, Google_Snippet__c, Google_Pos_1_URL__c, Google_Pos_1_Title__c, Google_Pos_1_Snippet__c, Geolocation_Effective__c
+            FROM seoThemeKeywords__c 
+            WHERE seoWebsites__c = :seoWebsite.Id
+            ORDER BY Google_Current__c ASC];
 
         newCompetitor = new Competitor_Website__c();
 

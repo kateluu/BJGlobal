@@ -1,5 +1,9 @@
-trigger signupInsertTrigger on Sign_Up__c (after insert) {
+/**
+ * Created by HanhLuu on 9/02/2018.
+ */
 
+trigger SignupInsertTrigger on Sign_Up__c (after insert) {
+    List<Task> calltasks = new List<Task>();
     for (Sign_Up__c signup : System.trigger.new){
 
         if (signup.Cart_SF__c != null){
@@ -61,14 +65,14 @@ trigger signupInsertTrigger on Sign_Up__c (after insert) {
                         // Credit card
                         invoice.Status__c             = 'PAID';
                         invoice.Amount_Paid__c        = accountProduct.Product_Price__c;
-                        // PaymentAttempts differentiate between Commweb and Commweb2 because they're different gateways, however from 
+                        // PaymentAttempts differentiate between Commweb and Commweb2 because they're different gateways, however from
                         // the invoice onwards we want to just display it as Commweb for accounts simplicity.
                         if (paymentAttempt.Payment_Option__c == 'Commweb2'){
                             invoice.Payment_Option__c     = 'Commweb';
                         } else {
                             invoice.Payment_Option__c     = paymentAttempt.Payment_Option__c;
                         }
-                    } 
+                    }
                     else if ( acc.Payment_Option__c == 'Other' || acc.Payment_Option__c == 'Direct Debit') {
                         // Direct debit
                         invoice.Status__c             = 'AUTHORISED';
@@ -76,7 +80,7 @@ trigger signupInsertTrigger on Sign_Up__c (after insert) {
                         invoice.Payment_Option__c     = 'Other';
                     } else {
                         system.debug('No payment attempt found');
-                        throw new CheckoutController.checkoutException('No payment attempt found');
+                        throw new customException('No payment attempt found');
                     }
 
                     invoice.Amount_Due__c         = invoice.Invoice_Total__c - invoice.Amount_Paid__c;
@@ -145,6 +149,14 @@ trigger signupInsertTrigger on Sign_Up__c (after insert) {
                 }
             }
         }
+//        if (NULL != signup.Team_Leader__c){
+//            Task callTass = new Task(Subject ='Setup Call To Client within 2 hours',  WhoId = signup.Team_Leader__c, Whatid=signup.id, Status = 'Not Started', Priority = 'High');
+//            calltasks.add(callTass);
+//        }
+//        if (calltasks.size()>0){
+//            insert calltasks;
+//        }
     }
+
 
 }

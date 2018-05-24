@@ -91,7 +91,9 @@ public class CasesProcessor {
         List<AccountShare> myAccountSharings= new List<AccountShare>(); 
 
         
-        List<Cases__c> myOldCases = [SELECT id, Account__r.Id, Account_Product__r.id, OwnerId,Account_Resolution__c , Case_Reason__c FROM Cases__c WHERE Id in :updateCaseIds];
+        List<Cases__c> myOldCases = [SELECT id, Account__r.Id, Account__r.BJB_Company__r.Name, Account_Product__r.id, OwnerId,Account_Resolution__c , Case_Reason__c FROM Cases__c WHERE Id in :updateCaseIds];
+
+        Map<id,Cases__c> myOldCasesMap = new Map<id,Cases__c>([SELECT id, Account__r.Id, Account__r.BJB_Company__r.Name, Account_Product__r.id, OwnerId,Account_Resolution__c , Case_Reason__c FROM Cases__c WHERE Id in :updateCaseIds]);
 
         // get new owner 
         List<id> newOwnerIDs = new List<id>();
@@ -101,25 +103,31 @@ public class CasesProcessor {
 
         // get cases owner manager
         Map<Id,User> newOwners = new Map<Id, User>([SELECT id, ManagerId FROM User WHERE isActive = true AND Id in :newOwnerIDs]);
-       
-        //get default resolution manager 
-        User defaultManager = [SELECT id FROM USER WHERE Name = 'Ben Bradshaw' AND IsActive = true];
 
-        //Map<id, id> newOwnerMans = new Map<id,id>();
-        //for(User item: newOwners){
-        //    newOwnerMans.put(item.id, item.ManagerId);
-        //}
+        String defaultSLX = (Default_Manager__c.getInstance('SLX_BTS_Manager') <> null)?(Default_Manager__c.getInstance('SLX_BTS_Manager')).Value__c:null;
+        System.debug('defaultSLX = ' + defaultSLX);
+        String defaultGMT = (Default_Manager__c.getInstance('GMT_BTS_Manager') <> null)?(Default_Manager__c.getInstance('GMT_BTS_Manager')).Value__c:null;
+        System.debug('defaultGMT = ' + defaultGMT);
 
         for(Cases__c item : myCases) {
             if((item.Status__c == 'Escalated') &&  ((item.Product_Type__c == 'Social Marketing') || (item.Product_Type__c == 'AdWords Management')) 
                 && (item.CaseType__c == 'Cancellation') &&  ( (item.Account_Resolution__c!= null && item.Account_Resolution__c.equals('Save')) || (item.Case_Reason__c!=null && item.Case_Reason__c.containsIgnoreCase('BTS'))) ){ 
-                
+
+                Cases__c oldCaseItem = myOldCasesMap.get(item.id);
                 isChanged = true;                
                 // update Resolution Manager
-                item.Resolution_Manager__c = newOwners.get(item.OwnerId).ManagerId;
-                if (item.Resolution_Manager__c  == null){
-                    item.Resolution_Manager__c = defaultManager.Id;
-                }                
+                item.Resolution_Manager__c = newOwners.get(item.OwnerId).ManagerId;                
+                if(item.Resolution_Manager__c  == null){                    
+                    if(oldCaseItem.Account__r.BJB_Company__r.Name != null){
+                        if(oldCaseItem.Account__r.BJB_Company__r.Name.startsWith('G')){
+                            item.Resolution_Manager__c = defaultGMT;
+                        }else{
+                            item.Resolution_Manager__c = defaultSLX;
+                        }                    
+                    }else{
+                        item.Resolution_Manager__c = defaultSLX;
+                    }
+                }
                 System.debug('item.Resolution_Manager__c = ' + item.Resolution_Manager__c);
 
                 //update case access                
@@ -149,15 +157,12 @@ public class CasesProcessor {
                 User resolutionMan = TriggerUtilities.getAvailableResolutionManagerByCap();
 
                 // update Resolution Manager
-                if( resolutionMan == null){                    
-                    resolutionMan= defaultManager;                 
-                }                
                 item.Resolution_Manager__c = resolutionMan.id;
                 System.debug('item.Resolution_Manager__c = ' + item.Resolution_Manager__c);
 
                 Cases__Share mySharing = new Cases__Share();
                 mySharing.ParentId = item.Id;
-                mySharing.UserOrGroupId = resolutionMan.id; 
+                mySharing.UserOrGroupId = (resolutionMan== null)?defaultGMT:resolutionMan.id; 
                 mySharing.AccessLevel = 'Edit';
                 mySharing.RowCause = Schema.Cases__Share.RowCause.Manual;
                 mySharings.add(mySharing);
@@ -165,7 +170,7 @@ public class CasesProcessor {
                 oldItem = myOldCases.get(loopOld++);
                 AccountShare myAccountSharing = new AccountShare();
                 myAccountSharing.AccountId = oldItem.Account__r.Id;
-                myAccountSharing.UserOrGroupId  = resolutionMan.id; 
+                myAccountSharing.UserOrGroupId  = (resolutionMan== null)?defaultGMT:resolutionMan.id; 
                 myAccountSharing.AccountAccessLevel = 'Read';
                 myAccountSharing.ContactAccessLevel = 'Read';
                 myAccountSharing.CaseAccessLevel = 'Read';

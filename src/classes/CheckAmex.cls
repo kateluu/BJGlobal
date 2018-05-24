@@ -6,7 +6,7 @@ public class CheckAmex {
 		//prefix: 34 or 37
 		ret = ret && (checkPrefix(card, '34') || checkPrefix(card, '37'));
 		//length: 15
-		ret = ret && card.length()==15;
+		//ret = ret && card.length()==15;
 
 		return ret;
 	}

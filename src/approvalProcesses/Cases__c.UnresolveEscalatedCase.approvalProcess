@@ -39,12 +39,12 @@
         <criteriaItems>
             <field>Cases__c.Refund_Amount__c</field>
             <operation>greaterThan</operation>
-            <value>AUD 300</value>
+            <value>AUD 250</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>UnresolveEscalatedCase</label>
-    <recordEditability>AdminOnly</recordEditability>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
     <showApprovalHistory>true</showApprovalHistory>
 </ApprovalProcess>

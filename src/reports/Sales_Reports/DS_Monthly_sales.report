@@ -48,7 +48,7 @@
         <criteriaItems>
             <column>Sign_Up__c$Salesperson__c</column>
             <operator>contains</operator>
-            <value>tate wotton,gretel phillips,daniel andreotti,simon golding,joshua beatty,ngawai mason,abigail harrison,lauren swinebank,scott dare</value>
+            <value>tate wotton,gretel phillips,daniel andreotti,simon golding,joshua beatty,ngawai mason,abigail harrison,Lauren Swidenbank,scott dare</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -79,6 +79,8 @@
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Sign_Up__c$CreatedDate</dateColumn>
-        <interval>INTERVAL_THISMONTH</interval>
+        <endDate>2018-03-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-03-01</startDate>
     </timeFrameFilter>
 </Report>

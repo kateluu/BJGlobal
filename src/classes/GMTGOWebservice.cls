@@ -66,14 +66,16 @@ global class GMTGOWebservice {
 
         Account[] A = new List<Account>();
         // return WebServiceAuthenticate Object
-        if(company == 'Get More Traffic')
-        {
-             A = [SELECT Account_No__c,password__c,Owner.Id FROM Account WHERE username__c =: username and BJB_Company__r.Name =: company limit 1];
-        }
-        else
-        {
-             A = [SELECT Account_No__c,password__c,Owner.Id FROM Account WHERE username__c =: username  and BJB_Company__r.Name IN ('SponsoredLinX New Zealand','SponsoredLinX') limit 1];
-        }
+        //if(company == 'Get More Traffic' || company == 'Get More Traffic New Zealand')
+        //{
+        //     A = [SELECT Account_No__c,password__c,Owner.Id FROM Account WHERE username__c =: username and BJB_Company__r.Name =: company limit 1];
+        //}
+        //else
+        //{
+        //     A = [SELECT Account_No__c,password__c,Owner.Id FROM Account WHERE username__c =: username  and BJB_Company__r.Name IN ('SponsoredLinX New Zealand','SponsoredLinX') limit 1];
+        //}
+        A = [SELECT Account_No__c,password__c,Owner.Id FROM Account WHERE username__c =: username limit 1];
+
         WebServiceAuthenticate auth_obj = new WebServiceAuthenticate();
         
         try{
@@ -247,9 +249,9 @@ global class GMTGOWebservice {
          uname = uname.replaceAll( '\\s+', '');
          uname = uname.tolowercase();
          //if(user.UserRole.Name.contains('GMT')){
-         //	returnobj.photo = 'https://getmoretraffic.com.au/clientmanagers/' + uname + '.jpg';	
+         //  returnobj.photo = 'https://getmoretraffic.com.au/clientmanagers/' + uname + '.jpg';  
          //}else{
-         	returnobj.photo = 'https://sponsoredlinx.com.au/clientmanagers/' + uname + '.jpg';	
+           returnobj.photo = 'https://sponsoredlinx.com.au/clientmanagers/' + uname + '.jpg';  
          //}
          
          return returnobj;
@@ -468,9 +470,9 @@ global class GMTGOWebservice {
             cnvleadsobj.hasconvertoproduct= 0;
             Account[] a = [SELECT Unique_Id__c,ID, Name FROM Account WHERE ID  =: accountid];
             if(a[0].Name.contains('GetMoreTraffic')){
-            	cnvleadsobj.allleads = 'https://bjbglobal.secure.force.com/checkoutgmt/?locale=AUD&do=addPackage&package=a1B6F000004I2q8,a1B6F000004I2po&accountid='+ a[0].ID +'&uid='+ a[0].Unique_Id__c +'&promocode=majordeal300';
+              cnvleadsobj.allleads = 'https://bjbglobal.secure.force.com/checkoutgmt/?locale=AUD&do=addPackage&package=a1B6F000004I2q8,a1B6F000004I2po&accountid='+ a[0].ID +'&uid='+ a[0].Unique_Id__c +'&promocode=majordeal300';
             }else{
-            	cnvleadsobj.allleads = 'https://bjbglobal.secure.force.com/checkoutslx/?locale=AUD&do=addPackage&package=a1B90000000Ry2o,a1B90000000Ry2t&accountid='+ a[0].ID +'&uid='+ a[0].Unique_Id__c +'&promocode=majordeal300';
+              cnvleadsobj.allleads = 'https://bjbglobal.secure.force.com/checkoutslx/?locale=AUD&do=addPackage&package=a1B90000000Ry2o,a1B90000000Ry2t&accountid='+ a[0].ID +'&uid='+ a[0].Unique_Id__c +'&promocode=majordeal300';
             }
         }
         return cnvleadsobj;

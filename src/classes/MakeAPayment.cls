@@ -1,6 +1,5 @@
 public with sharing class MakeAPayment {
 
-  public String TESTMESSAGE {get;set;}
   public boolean isTest {get;set;}
   public boolean generateErrors {get;set;}
 
@@ -14,23 +13,16 @@ public with sharing class MakeAPayment {
   public Boolean showPaymentButton {get;set;}
   public Boolean isCardPayment {get;set;}
   public Decimal invoiceTotal {get;set;}
-  public String invoiceNumber {get;set;}
   public String PaymentType {get;set;}
   public String PaymentReference {get;set;}
   public Boolean complete {get;set;}
   public Boolean incomplete {get;set;}
   public Payment__c inputPayment = new Payment__c();
-  public String invChecked {get;set;}
   public String invoiceId {get;set;}
-  public String cardName {get;set;}
-  public String cardNumber {get;set;}
-  public String cardMonthExpiry {get;set;}
-  public String cardYearExpiry {get;set;}
-  public String cardCVN {get;set;}
   public String message {get;set;}
   public String AccountProduct {get; set;}
-  public String ewayCompany {get; set;}
   public list<Payment__c> listOfPayments = new list<Payment__c>();
+  public CardDetails cardDetails {get; set;} {cardDetails = new CardDetails();}
 
   // Constructor
   public MakeAPayment(ApexPages.StandardController controller) {
@@ -54,7 +46,9 @@ public with sharing class MakeAPayment {
     String id = this.acc.Id;
     this.acc = [SELECT Id,
             Name,
+            Card_Token__c,
             Card_Number__c,
+            Card_Number_Masked__c,
             Name_On_Card__c,
             Card_Month_Expiry__c,
             Card_Year_Expiry__c,
@@ -151,10 +145,10 @@ public with sharing class MakeAPayment {
     inputPayment = value;
   }
 
-  public List<SelectOption> getInvoiceNumbers() {
+  public List<SelectOption> getInvoiceIds() {
     List<SelectOption> options = new List<SelectOption>();
     for(Invoice__c thisInvoice : this.invoice){
-      options.add(new SelectOption(thisInvoice.Invoice_Number__c,thisInvoice.Invoice_Number__c));
+      options.add(new SelectOption(thisInvoice.Id, thisInvoice.Invoice_Number__c + ' - ' + thisInvoice.Account_Product__r.Name));
     }
     return options;
   }
@@ -163,17 +157,12 @@ public with sharing class MakeAPayment {
     List<SelectOption> options = new List<SelectOption>();
     options.add(new SelectOption('','---None---'));
 
-    paymentGateway pay = new paymentGateway();
-    pay.setBjbCompany(this.acc.BJB_Company__r);
-
-    if (pay.gateway == 'Eway' || pay.gateway == 'Eway2'){
-      options.add(new SelectOption('Eway','Credit Card (Eway)'));
-      options.add(new SelectOption('Eway Failure','Credit Card (Eway Failure)'));
-    } else if (pay.gateway == 'Commweb' || pay.gateway == 'Commweb2' ){
-      options.add(new SelectOption('Commweb','Credit Card (Commweb)'));
-      options.add(new SelectOption('Commweb Failure','Credit Card (Commweb Failure)'));
+    if ( !String.isEmpty(this.acc.Card_Token__c) && !String.isEmpty(this.acc.Card_Number_Masked__c) ){
+      options.add(new SelectOption('CreditCardExisting', 'Credit Card - ' + this.acc.Card_Number_Masked__c + ' ('+this.acc.Card_Month_Expiry__c + '/' + this.acc.Card_Year_Expiry__c +')'));
     }
 
+    options.add(new SelectOption('CreditCardNew','Credit Card - New'));
+    options.add(new SelectOption('CreditCardFailure','Credit Card - Failure'));
     options.add(new SelectOption('Cheque','Cheque'));
     options.add(new SelectOption('EFT','EFT'));
     options.add(new SelectOption('Other','Other'));
@@ -276,7 +265,7 @@ public with sharing class MakeAPayment {
       this.checkInvoice = this.invoice;
 
       for (Invoice__c thisInvoice : this.Invoice){
-        this.invoiceNumber = thisInvoice.Invoice_Number__c;
+        this.invoiceId = thisInvoice.Id;
         list<Credit__c> RelatedCredits = new list<Credit__c>();
         System.debug('Date.Today ='+date.today());
         System.debug('thisInvoice.Account_Product__c = '+thisInvoice.Account_Product__c);
@@ -296,12 +285,14 @@ public with sharing class MakeAPayment {
           CreditPayment.CurrencyIsoCode = thisInvoice.CurrencyIsoCode;
           CreditPayment.Account_Product__c = thisInvoice.Account_Product__c;
           CreditPayment.Payment_Owner__c = thisInvoice.Account_Product__r.OwnerId;
+          
 
           decimal CreditLeft = thisRelatedCredit.Credit_Left__c;
           decimal InvoiceAmountDue = thisInvoice.Amount_Due__c;
           decimal InvoiceAmountPaid = thisInvoice.Amount_Paid__c;
           decimal CreditUsed = thisRelatedCredit.Credit_used__c;
           decimal InvoiceAmountCredited = thisInvoice.Amount_Credited__c;
+
 
           if (CreditLeft >= InvoiceAmountDue){
             CreditLeft = CreditLeft - InvoiceAmountDue;
@@ -353,45 +344,57 @@ public with sharing class MakeAPayment {
       return MakeAPaymentPage;
     }
 
-    ChangeInvoiceNumber();
+    ChangeInvoice();
     ChangePaymentType();
 
     return null;
   }
 
   // Change invoice number
-  public void ChangeInvoiceNumber() {
-    this.isCardPayment = false;
+  public void SelectInvoice() {
+    this.invoiceId = ApexPages.currentPage().getParameters().get('invoiceId');
+
+    system.debug('in SelectInvoice ' + this.invoiceId);
+
+    ChangeInvoice();
+  }
+
+  // Change invoice number
+  public void ChangeInvoice() {
+    system.debug('in ChangeInvoice ' + this.invoiceId);
+
     this.PaymentType = '';
-    this.cardName = '';
-    this.cardNumber = '';
-    this.cardMonthExpiry = '';
-    this.cardYearExpiry = '';
-    this.cardCVN = '';
     this.invoiceObj = new Invoice__c();
     for (Invoice__c thisInvoice : this.invoice){
-      if (thisInvoice.Invoice_Number__c == this.invoiceNumber) {
+
+      system.debug('Checking against invoice ' + thisInvoice.Id);
+      if (thisInvoice.Id == this.invoiceId) {
         this.invoiceObj = thisInvoice;
 
-        this.invoiceNumber         = thisInvoice.Invoice_Number__c;
+        system.debug('Found it! ' + thisInvoice.Invoice_Number__c);
+
         this.invoiceTotal         = thisInvoice.Amount_Due__c;
         this.paymentAmount         = thisInvoice.Amount_Due__c;
         this.PaymentReference     = thisInvoice.Invoice_Number__c;
-        this.PaymentType         = thisInvoice.Account_Product__r.Payment_Option__c;
         this.InvoiceId          = thisInvoice.Id;
         this.AccountProduct       = thisInvoice.Account_Product__c;
-        this.ewayCompany      = thisInvoice.Account_Product__r.SLX_Product__r.company_name__c;
+
+        if ( thisInvoice.Account_Product__r.Payment_Option__c == 'Eway' || thisInvoice.Account_Product__r.Payment_Option__c == 'Commweb' ){
+          if ( !String.isEmpty(this.acc.Card_Token__c) ){
+            this.PaymentType         = 'CreditCardExisting';
+          } else {
+            this.PaymentType         = 'CreditCardNew';
+          }
+        } else {
+          this.PaymentType         = thisInvoice.Account_Product__r.Payment_Option__c;
+        }
+
+        break;
       }
     }
+
     ChangePaymentType();
   }
-
-  // Update payment date
-  public PageReference updatePaymentDate() {
-    system.debug('NEW PAYMENT DATE = ' + this.inputPayment.Payment_Date__c);
-    return null;
-  }
-
 
   // Submit 'make a payment'
   public PageReference submitTestPayment() {
@@ -409,14 +412,11 @@ public with sharing class MakeAPayment {
     Contact contact;
 
     // Error checking
-    Boolean hasError    = false;
-
     try {
       contact = [SELECT Id,Name,FirstName, LastName, Email, MailingStreet, MailingCity, MailingPostalCode, MailingState,MailingCountry FROM Contact WHERE AccountId=:acc.Id and Title='Billing' limit 1];
     } catch (Exception e) {
       System.debug('Exception: '+e);
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Unable to load the Billing contact for this account'));
-      hasError = true;
     }
 
     if (this.invoiceTotal <= 0 || this.generateErrors == true) {
@@ -426,50 +426,45 @@ public with sharing class MakeAPayment {
     if (payAmount <= 0) {
       System.debug('Error: Please enter a positive number for payment');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a positive number for payment'));
-      hasError = true;
     }
 
-    if (this.isCardPayment &&  this.acc.Name_On_Card__c == null || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' &&  this.acc.Name_On_Card__c == null || this.generateErrors == true){
       System.debug('Error: Please enter the name on the credit card');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the name on the credit card'));
-      hasError = true;
     }
 
-    if (this.isCardPayment && this.acc.Card_Number__c == null || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Number__c == null || this.generateErrors == true){
       System.debug('Error: Please enter a card number');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a card number'));
-      hasError = true;
     }
 
-    if (this.isCardPayment && this.acc.Card_Month_Expiry__c == '' || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Month_Expiry__c == '' || this.generateErrors == true){
       System.debug('Error: Please enter the card month expiry');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card month expiry'));
-      hasError = true;
     }
 
-    if (this.isCardPayment && this.acc.Card_Year_Expiry__c == '' || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Year_Expiry__c == '' || this.generateErrors == true){
       System.debug('Error: Please enter the card year expiry');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card year expiry'));
-      hasError = true;
     }
 
-    if (this.PaymentType == null || this.generateErrors == true) {
+    if (this.PaymentType == 'CreditCardNew' || this.generateErrors == true) {
       System.debug('Error: Please select a payment type');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please select a payment type'));
-      hasError = true;
     }
 
     // create card transaction payment
     Payment_Attempt__c paymentAttempt = new Payment_Attempt__c();
 
     // "this.isCardPayment" indicates that the account for the invoice is marked as Eway or Commweb
-    if ( (this.isCardPayment == true && hasError == false) || this.generateErrors == true) {
+    if ( (this.isCardPayment && !ApexPages.hasMessages(ApexPages.Severity.ERROR) ) || this.generateErrors) {
         // New code - use standard paymentGateway class
         // Transact with the gateway
         paymentGateway pay = new paymentGateway();
         pay.setBjbCompany(this.acc.BJB_Company__r);
         pay.amount                      = payAmount;
         pay.currencyIsoCode             = this.acc.CurrencyIsoCode;
+        pay.customerCompanyName         = this.acc.Name;
         pay.customerFirstName           = contact.FirstName;
         pay.customerLastName            = contact.LastName;
         pay.customerEmail               = String.valueOf(contact.Email);
@@ -477,11 +472,19 @@ public with sharing class MakeAPayment {
         pay.customerCity                = contact.MailingCity;
         pay.customerState               = contact.MailingState;
         pay.customerPostcode            = contact.MailingPostalCode;
-        pay.cardHoldersName             = this.acc.Name_On_Card__c;
-        pay.cardNumber                  = this.acc.Card_Number__c;
-        pay.cardExpiryMonth             = this.acc.Card_Month_Expiry__c;
-        pay.cardExpiryYear              = this.acc.Card_Year_Expiry__c;
-        pay.cardCVN                     = this.acc.Card_CVN__c;
+
+        if (this.PaymentType == 'CreditCardExisting'){
+          // Use existing token.
+          pay.customerToken               = this.acc.Card_Token__c;
+        } else {
+          // Use new card details. This is just a one-off, so we won't save these details or update the token.
+          pay.cardNumber                  = this.cardDetails.Card_Number;
+          pay.cardCVN                     = this.cardDetails.Card_CVN;
+          pay.cardHoldersName             = this.cardDetails.Name_On_Card;
+          pay.cardExpiryMonth             = this.cardDetails.Card_Month_Expiry;
+          pay.cardExpiryYear              = this.cardDetails.Card_Year_Expiry;
+        }
+
         pay.customerInvoiceDescription  = this.acc.Unique_Id__c;
         pay.customerInvoiceRef          = this.PaymentReference;
         pay.uniqueAttemptId             = DateTime.now().format('yyyyMMdd');
@@ -495,6 +498,7 @@ public with sharing class MakeAPayment {
 
         try{
           paymentAttempt = pay.pay();
+          insert paymentAttempt;
         } catch (Exception e) {
           string errorDetail = 'Error in MakeAPayment: ' + e.getMessage() + '. On ' + e.getStackTraceString();
           Utility.notifySysadmin('Error in pay.pay', errorDetail);
@@ -506,7 +510,7 @@ public with sharing class MakeAPayment {
     // Create Payment__c record and update invoice
     Boolean createPaymentRecord = (paymentAttempt.Status__c == 'SUCCESS' || this.isCardPayment == false);
 
-    if ((hasError == false && createPaymentRecord == true) || this.generateErrors == true) {
+    if ((ApexPages.hasMessages(ApexPages.Severity.ERROR) == false && createPaymentRecord == true) || this.generateErrors == true) {
       List<Payment__c> thisPayments = new List<Payment__c>();
       Decimal totalPayAmount = payAmount;
       Decimal invPayment = 0;
@@ -559,7 +563,10 @@ public with sharing class MakeAPayment {
             payment.Payment_Type__c = this.inputPayment.Payment_Type__c;
             payment.Invoice_Number__c = listinv.Invoice_Number__c;
             payment.Payment_Date__c   = this.inputPayment.Payment_Date__c;
-            payment.Payment_Option__c = this.PaymentType;
+            payment.Payment_Option__c = paymentAttempt.Payment_Option__c ;
+            if(paymentAttempt.Payment_Option__c == null){
+              payment.Payment_Option__c = this.PaymentType;
+            }
             payment.Account_Product__c = listinv.Account_Product__c;
             payment.Payment_Owner__c = listinv.Account_Product__r.OwnerId;
             system.debug(payment);
@@ -597,7 +604,7 @@ public with sharing class MakeAPayment {
     }
 
     MakeAPaymentPage.getParameters().put('id',this.acc.id);
-    if (hasError){
+    if (ApexPages.hasMessages(ApexPages.Severity.ERROR)){
       MakeAPaymentPage.getParameters().put('msg','Transaction Failed');
       MakeAPaymentPage.setRedirect(true);
       ApexPages.currentPage().getParameters().put('msg','');
@@ -634,138 +641,12 @@ public with sharing class MakeAPayment {
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Unable to load the Billing contact for this account'));
       hasError = true;
     }
-//
-//    if (this.invoiceTotal <= 0 || this.generateErrors == true) {
-//      System.debug('Error: Please select atleast 1 unpaid invoice');
-//    }
-//
-//    if (payAmount <= 0) {
-//      System.debug('Error: Please enter a positive number for payment');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a positive number for payment'));
-//      hasError = true;
-//    }
-//
-//    if (this.isCardPayment &&  this.acc.Name_On_Card__c == null || this.generateErrors == true){
-//      System.debug('Error: Please enter the name on the credit card');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the name on the credit card'));
-//      hasError = true;
-//    }
-//
-//    if (this.isCardPayment && this.acc.Card_Number__c == null || this.generateErrors == true){
-//      System.debug('Error: Please enter a card number');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a card number'));
-//      hasError = true;
-//    }
-//
-//    if (this.isCardPayment && this.acc.Card_Month_Expiry__c == '' || this.generateErrors == true){
-//      System.debug('Error: Please enter the card month expiry');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card month expiry'));
-//      hasError = true;
-//    }
-//
-//    if (this.isCardPayment && this.acc.Card_Year_Expiry__c == '' || this.generateErrors == true){
-//      System.debug('Error: Please enter the card year expiry');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card year expiry'));
-//      hasError = true;
-//    }
-//
-//    if (this.PaymentType == null || this.generateErrors == true) {
-//      System.debug('Error: Please select a payment type');
-//      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please select a payment type'));
-//      hasError = true;
-//    }
 
     // create card transaction payment
     Payment_Attempt__c paymentAttempt = new Payment_Attempt__c();
 
     // "this.isCardPayment" indicates that the account for the invoice is marked as Eway or Commweb
-    if ( (this.isCardPayment == true && hasError == false) || this.generateErrors == true) {
-      if (this.PaymentType == 'Eway'){
-        // Old eway code - can actaully be removed to use the standard paymentGateway class in the other part of this if-statement,
-        // but for now we'll leave it here to avoid risk of breaking existing functionality.
-        // There is currently an "argument cannot be null" error for eway in the generic code later, so we'll still use this old code for now.
-        ewayResponse ewayRep = new ewayResponse();
-        ewayRep.setewayTrxnStatus('False');
-        try {
-          ewayPayment eway = new ewayPayment();
-
-          if (ewayCompany == 'Get More Traffic') {
-            eway.setMode('Get More Traffic');
-          } else {
-            eway.setMode('SponsoredLinx');
-          }
-
-          if (this.generateErrors == true){
-            eway.setMode('test');
-          }
-
-          String priceInCents = String.valueOf((payAmount.setScale(2) * 100).setScale(0));
-          System.debug('EWAY Payment Amount in cents: '+priceInCents);
-          eway.setewayTotalAmount(priceInCents);
-          eway.setewayCustomerFirstName(contact.FirstName);
-          eway.setewayCustomerLastName(contact.LastName);
-          eway.setewayCustomerEmail(String.valueOf(contact.Email));
-          eway.setewayCustomerAddress(contact.MailingStreet+' '+contact.MailingCity);
-          //eway.setewayCustomerPostcode(contact.PostalCode);
-          eway.setewayCustomerInvoiceDescription(acc.Unique_Id__c);
-          eway.setewayCustomerInvoiceRef(this.PaymentReference);
-          eway.setewayCardHoldersName(this.acc.Name_On_Card__c);
-          eway.setewayCardNumber(this.acc.Card_Number__c);
-          eway.setewayCardExpiryMonth(this.acc.Card_Month_Expiry__c);
-
-          eway.setewayCardExpiryYear(this.acc.Card_Year_Expiry__c.substring(2,4));
-          eway.setewayCVN(this.acc.Card_CVN__c);
-
-          //process eway response
-          System.debug('EWAY Payment: '+eway);
-          if (this.isTest || this.generateErrors == true) {
-            String xml = '';
-            xml += '<ewayResponse>';
-            xml += '  <ewayTrxnError></ewayTrxnError>';
-            xml += '  <ewayTrxnStatus>True</ewayTrxnStatus>';
-            xml += '  <ewayTrxnNumber>10002</ewayTrxnNumber>';
-            xml += '  <ewayTrxnOption1></ewayTrxnOption1>';
-            xml += '  <ewayTrxnOption2></ewayTrxnOption2>';
-            xml += '  <ewayTrxnOption3></ewayTrxnOption3>';
-            xml += '  <ewayReturnAmount>'+priceInCents+'</ewayReturnAmount>';
-            xml += '  <ewayAuthCode>123456</ewayAuthCode>';
-            xml += '  <ewayTrxnReference>987654321</ewayTrxnReference>';
-            xml += '</ewayResponse>';
-            Dom.Document domDoc = new Dom.Document();
-            domDoc.load(xml);
-            ewayRep.loadResponse(domDoc);
-          } else {
-            ewayRep = eway.makePayment();
-          }
-
-          System.debug('EWAY Response: '+ewayRep.getxmlString());
-
-          // Send a copy of every response to sysadmin
-          Utility.notifySysadmin('Eway Payment Response', ewayRep.getxmlString());
-
-          ApexPages.Message myMsg = new ApexPages.Message(ApexPages.Severity.INFO, 'Eway Response: '+ewayRep.getewayTrxnError());
-          ApexPages.addMessage(myMsg);
-        } catch (Exception e) {
-          System.debug('Exception: '+e);
-
-          System.debug('Error: Problem contacting gateway to make payment');
-          ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Problem contacting EWAY to make payment'));
-          ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,e.getMessage()));
-          hasError = true;
-        }
-
-        System.debug('hasError:'+hasError);
-        System.debug('ewayRep.getewayTrxnStatus():'+ewayRep.getewayTrxnStatus());
-
-        // Get variables from the response that we'll need later
-        paymentAttempt.Gateway_Transaction_Id__c = ewayRep.getewayTrxnNumber();
-        paymentAttempt.Response_Message__c = ewayRep.getewayTrxnError();
-        if (ewayRep.getewayTrxnStatus() == 'True'){
-          paymentAttempt.Status__c = 'SUCCESS';
-        } else {
-          paymentAttempt.Status__c = 'FAILURE';
-        }
-      } else {
+    if ( (this.isCardPayment && !hasError) || this.generateErrors) {
         // New code - use standard paymentGateway class
         // Transact with the gateway
         paymentGateway pay = new paymentGateway();
@@ -805,7 +686,6 @@ public with sharing class MakeAPayment {
 
           system.debug(errorDetail);
         }
-      }
     }
 
     // Create Payment__c record and update invoice
@@ -927,14 +807,10 @@ public with sharing class MakeAPayment {
     return AccountPage;
   }
 
-
   // Change payment type
   public PageReference ChangePaymentType() {
-    if (this.PaymentType == 'Eway' || this.PaymentType == 'Commweb') {
-      this.isCardPayment = true;
-    } else {
-      this.isCardPayment = false;
-    }
+    this.isCardPayment = (this.PaymentType == 'CreditCardNew' || this.PaymentType == 'CreditCardExisting') ? true : false;
+
     return null;
   }
 
@@ -966,11 +842,10 @@ public with sharing class MakeAPayment {
     testClass.setlistOfPayments(new list<Payment__c>{});
     testClass.returnToAccount();
     testClass.changePaymentType();
-    testClass.updatePaymentDate();
     testClass.getPaymentTypes();
     testClass.getinvoiceItems();
-    testClass.getInvoiceNumbers();
-    testClass.ChangeInvoiceNumber();
+    testClass.getInvoiceIds();
+    testClass.ChangeInvoice();
     Test.stopTest();
   }
 
@@ -1041,7 +916,7 @@ public with sharing class MakeAPayment {
     testClass.isTest = true;
     testClass.generateErrors = true;
 
-    testClass.invoiceNumber = testInv.Invoice_Number__c;
+    testClass.invoiceId = testInv.Id;
 
     testClass.setinvioce(listTestInv);
     testClass.Invoice = listTestInv;
@@ -1057,7 +932,7 @@ public with sharing class MakeAPayment {
     testClass.setInvList(listTestInv);
     testClass.getInvList();
     testClass.getAllInvoiceTotal();
-    testClass.ChangeInvoiceNumber();
+    testClass.ChangeInvoice();
     try{
       testClass.getUnpaidInvoiceTotal();
       testClass.paymentAmount = 0;
@@ -1065,7 +940,7 @@ public with sharing class MakeAPayment {
       testClass.paymentAmount = 20;
       testClass.submitPayment();
       testClass.getPaymentTypes();
-      testClass.getInvoiceNumbers();
+      testClass.getInvoiceIds();
       testClass.returnToAccount();
     } catch (Exception E) {}
 

@@ -54,6 +54,7 @@ private class batchPaymentsProcessTest {
 	    a.username__c           = 'username';
 	    a.password__c           = 'psw';
 	    a.Payment_Option__c     = 'Other';
+	    a.Card_Token__c   		= '987654321987654';
 	    a.Card_Year_Expiry__c   = '2014';
 	    a.Card_Number__c        = '123456789';
 	    a.Card_Month_Expiry__c  = '01';
@@ -61,6 +62,7 @@ private class batchPaymentsProcessTest {
 	    a.Name_On_Card__c       = 'Test';
 		a.Send_Invoice__c       = true;
 		a.CurrencyIsoCode 		='NZD';
+		a.BJB_Company__c 		= company.Id;
 		insert a;
 
         List<Contact> newContacts = new List<Contact>();

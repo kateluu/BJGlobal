@@ -6,6 +6,10 @@
         	<apex:outputLabel value="Send To" for="to"/>: <br/>     
             <apex:outputText value="{!email}" id="to" />
             <br/><br/>        
+
+            <apex:outputLabel value="CC To" for="ccEmail"/>: <br/>     
+            <apex:outputText value="{!ccEmail}" id="ccEmail" />
+            <br/><br/>        
         
             <apex:outputLabel value="Subject" for="Subject"/>: <br/>     
             <apex:outputText value="{!Subject}" id="Subject" ></apex:outputText>

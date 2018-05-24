@@ -83,9 +83,10 @@ global class pauseProductStatusBatch implements Database.batchable<Account_Produ
 				System.debug('task:'+task);
 				allTasks.add(task);
 				
-				//update product status
+				//update product status :  to make sure there’s only one notification in the outbound message when the product is updated
 				product.Product_Status__c = 'Paused';
-				allProducts.add(product);
+				update product;
+				//allProducts.add(product);
 			}
 		}
 		

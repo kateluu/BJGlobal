@@ -137,6 +137,21 @@
         </filters>
         <label>New Promo Code</label>
     </listViews>
+    <listViews>
+        <fullName>Support_View</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Promotions__c</columns>
+        <columns>Promocode_Description__c</columns>
+        <columns>IsActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Promocode_Description__c</field>
+            <operation>contains</operation>
+            <value>99</value>
+        </filters>
+        <label>Support View</label>
+    </listViews>
     <nameField>
         <label>Promocode Name</label>
         <trackHistory>false</trackHistory>

@@ -1,0 +1,104 @@
+<apex:page controller="ClientPanelAccountBilling" showHeader="false" sidebar="false" standardStyleSheets="false" cache="false" action="{!index}">
+
+	<apex:stylesheet value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/style.css.disabled" />
+	<apex:stylesheet value="https://clientpanel.sponsoredlinx.com.au/css/main.css" />
+
+	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-includes/js/jquery/jquery.js"/>
+	<apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
+
+<style>
+/* Styling to match clientpanel v.1 */
+table#billing tr td {
+	padding: 5px 10px;
+}
+
+table#general tr td input, table#contacts tr td input, table#billing tr td input, table#billing tr td select {
+	border: 1px solid #aaa;
+	padding: 5px 5px;
+	width: 200px;
+
+	-moz-box-shadow: 2px 2px 3px #ccc;
+	-webkit-box-shadow: 2px 2px 3px #ccc;
+	box-shadow: 2px 2px 3px #ccc;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#cccccc')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#cccccc');
+}
+
+input[type="submit"] {
+	font: bold 11px Verdana, Helvetica, Arial, sans-serif;
+	cursor: pointer;
+	color: #006699;
+	padding: 5px 20px;
+	border: 1px solid #bbb;
+	border-top: none;
+	text-shadow: 0px 1px 0px #ffffff;
+	filter: dropshadow(color=#ffffff,offX=0,offY=1);
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	background: #d7d7d7 url(https://clientpanel.sponsoredlinx.com.au/img/wbg.gif) repeat-x;
+
+	-moz-box-shadow: 2px 2px 2px #ccc;
+	-webkit-box-shadow: 2px 2px 2px #ccc;
+	box-shadow: 2px 2px 2px #ccc;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#cccccc')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#cccccc');
+}
+input[type="submit"]:hover {
+	color: #3399cc;
+}
+
+.messageCell h4{
+	color: #069;
+}
+</style>
+
+	<apex:pageMessages ></apex:pageMessages>
+
+	<apex:form id="checkout-form" styleClass="checkout-form" rendered="{! NOT(ISNULL(acc.Name)) }" >
+
+	<table id="billing" style="width: 430px; border-top: 1px dotted #999;" cellspacing="0">
+	<tr>
+	    <td><label for="name_on_card">Name on Card</label></td>
+	    <td><apex:inputField value="{!acc.Name_On_Card__c}" html-title="Please enter your card name" required="true" /></td>
+	</tr>
+	<tr>
+	    <td><label for="card_number">Card Number</label></td>
+	    <td><apex:inputText value="{!cardDetails.Card_Number}" required="true" /></td>
+	</tr>
+	<tr>
+	    <td><label for="card_month_expiry">Expiry Month</label></td>
+	    <td>
+			<apex:selectList value="{!acc.Card_Month_Expiry__c}" multiselect="false" size="1" style="width: 85px; display: inline-block" required="true">
+				<apex:selectOptions value="{!monthOptions}"/>
+			</apex:selectList>
+	    </td>
+	</tr>
+	<tr>
+	    <td><label for="card_year_expiry">Expiry Year</label></td>
+	    <td>
+			<apex:selectList value="{!acc.Card_Year_Expiry__c}" multiselect="false" size="1" style="width: 85px; display: inline-block" required="true">
+				<apex:selectOptions value="{!cardYearOptions}"/>
+			</apex:selectList>
+	    </td>
+	</tr>
+	<tr>
+	    <td style="border-bottom: 1px dotted #999;"><label for="card_cvn">Card CVN</label></td>
+	    <td style="border-bottom: 1px dotted #999;"><apex:inputText value="{!cardDetails.Card_CVN}" required="true" style="width: 85px;" /></td>
+	</tr>
+	<tr>
+	    <td style="border-bottom: 1px dotted #999; background: #eee;"></td>
+	    <td style="border-bottom: 1px dotted #999; background: #eee;"><apex:commandButton action="{!submitUpdateBilling}" value="Update Billing Details" styleClass=""/></td>
+	</tr>
+	</table>
+
+	</apex:form>
+
+
+</apex:page>

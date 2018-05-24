@@ -1,0 +1,31 @@
+<apex:page standardController="Account" sidebar="true" showHeader="true" extensions="AccountBilling">
+
+    <apex:sectionHeader title="Update Billing Details" subtitle="{!Account.Name}"/>
+
+    <apex:pageMessages id="showmsg"></apex:pageMessages>
+
+    <apex:form id="theForm">
+    	<apex:commandLink value="Back to Account" action="{!returnToAccount}" status="status"/>
+
+        <apex:inputHidden value="{!Account.Id}" id="accountid"/>
+
+        <apex:pageblock id="PaymentTotal" title="Credit Card Details">
+
+            <apex:outputPanel id="ccinfo">
+                <apex:pageblocksection collapsible="false" columns="2">
+                    <apex:inputField value="{!acc.Name_On_Card__c}"/>
+                    <apex:inputText value="{!cardDetails.Card_Number}" label="Card Number"/>
+                    <apex:inputField value="{!acc.Card_Month_Expiry__c}"/>
+                    <apex:inputField value="{!acc.Card_Year_Expiry__c}"/>
+                    <apex:inputText value="{!cardDetails.Card_CVN}" label="Card CVN" style="width: 50px;" />
+                </apex:pageblocksection>
+            </apex:outputPanel>
+
+	    	<apex:pageBlockButtons location="bottom">
+		    	<apex:commandButton action="{!submitUpdate}" value="Update" disabled="false" />
+		    </apex:pageBlockButtons>
+        </apex:pageblock>
+
+    </apex:form>
+
+</apex:page>

@@ -5,6 +5,10 @@
     <deployed>true</deployed>
     <description>Signups with Account Products and Cases</description>
     <join>
+        <join>
+            <outerJoin>false</outerJoin>
+            <relationship>Cases__r</relationship>
+        </join>
         <outerJoin>false</outerJoin>
         <relationship>Account_Products__r</relationship>
     </join>
@@ -12,22 +16,27 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
+            <field>Account__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Owner</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
+            <field>Adwords_Email__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
+            <field>Adwords_ID__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Assigned_To__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Completed_Date__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
@@ -37,32 +46,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
+            <field>CreatedDate</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
+            <field>Form_Name__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Opportunity__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Status__c</field>
+            <field>Invoiceno__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
@@ -72,12 +66,32 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Product_Type__c</field>
+            <field>LastActivityDate</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Signup_Date__c</field>
+            <field>LastModifiedBy</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Company__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
@@ -92,6 +106,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Product_Type__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Promocode__c</field>
             <table>Sign_Up__c</table>
         </columns>
@@ -102,32 +121,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Invoiceno__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Form_Name__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Company__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adwords_ID__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adwords_Email__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Signup_Checked_In_Xero__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Signup_Date__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Status__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <columns>
@@ -135,27 +149,17 @@
             <field>Xero_Invoices_Checked__c</field>
             <table>Sign_Up__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Assigned_To__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Completed_Date__c</field>
-            <table>Sign_Up__c</table>
-        </columns>
         <masterLabel>Sign Ups</masterLabel>
     </sections>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
+            <field>Account__c</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Owner</field>
+            <field>Id</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <columns>
@@ -165,172 +169,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Price__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>SLX_Product__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Status__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Cancellation_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Trial_End_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Last_Invoice_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Payment_Option__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Name_On_Card__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>End_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Start_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Card_Number__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Card_Month_Expiry__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Card_Year_Expiry__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Send_Invoice__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Last_Invoice_Number__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Recurring_Frequency__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Number__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Create_Invoice__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Recurring_Period__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Company__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Category__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Package__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Max_Usage__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Description__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>activeat__c</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>pauseat__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>cancelat__c</field>
-            <table>Sign_Up__c.Account_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adwords_ID__c</field>
+            <field>Adwords_Domain__c</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <columns>
@@ -340,7 +184,147 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Send_Report__c</field>
+            <field>Adwords_ID__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>cancelat__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Cancellation_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Card_Month_Expiry__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Card_Number__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Card_Year_Expiry__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Company__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Create_Invoice__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Description__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>End_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Last_Invoice_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Last_Invoice_Number__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Max_Usage__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name_On_Card__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>pauseat__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Payment_Option__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Category__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Number__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Package__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Price__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Status__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Recurring_Frequency__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Recurring_Period__c</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <columns>
@@ -350,9 +334,227 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Adwords_Domain__c</field>
+            <field>Send_Invoice__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Send_Report__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SLX_Product__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Start_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Trial_End_Date__c</field>
             <table>Sign_Up__c.Account_Products__r</table>
         </columns>
         <masterLabel>Account Products</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_2_Weeks_Notice_to_be_applied__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account_2__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account_Products_List__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>SEO_Package__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_Action_Taken_to_Save__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Cancel_by__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_Cancellation_Waiver_approved__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Cancelled_Revenue__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Status__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Subject__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Type__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Resolution_Manager__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner_Role__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>escalated_date__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Name</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account_Product__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account_Resolution__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Billing_Resolution__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Cancellation_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_Cancellation_Waiver_Requested__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Closed_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CaseType__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Open_Time__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Origin__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Response_Time__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Reason__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Manager1__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Closed_Date__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_CM_Proposed_Action__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contact__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CaseOwnerRole__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Case_Resolution__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Manager_Reassign__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Manager__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2012_CM_Comments__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Competitor__c</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+        </columns>
+        <masterLabel>Cases</masterLabel>
     </sections>
 </ReportType>

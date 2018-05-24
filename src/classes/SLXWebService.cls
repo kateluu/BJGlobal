@@ -306,7 +306,9 @@ OLD VERSION of the above function, using batches instead of Invoice__c.Issue_Dat
             AND 
                 (Invoice__c.Account__r.Send_Invoice__c = true 
                 OR  
-                Invoice__c.Payment_Option__c = 'Other')
+                Invoice__c.Payment_Option__c = 'Other'
+                OR  
+                Invoice__c.Payment_Option__c = 'EFT')
             AND
             	Invoice__c.Status__c != 'VOID'
             AND 

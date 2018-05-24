@@ -20,6 +20,7 @@ public with sharing class paymentGateway {
 
     public Decimal amount = 0.00;
     public String currencyIsoCode = 'AUD';
+    public String customerCompanyName = '';
     public String customerFirstName = '';
     public String customerLastName = '';
     public String customerEmail = '';
@@ -34,18 +35,14 @@ public with sharing class paymentGateway {
     public String uniqueAttemptId = '';
     public String transactionNo = '';
 
-
+    public String customerToken = '';
     public String cardHoldersName = '';
-    public String cardNumber = '';
+    public String cardNumber { get; set {cardNumber = (String.isEmpty(value) || value.contains('XXXX-XXXX-XXXX-') ) ? '' : value.replaceAll('[^0-9]', '');} }
+    public String cardCVN { get; set {cardCVN = String.isEmpty(value) ? '' : value.replaceAll('[^0-9]', '');} }
     public String cardExpiryMonth = '';
     public String cardExpiryYear = '';
-    public String cardCVN = '';
-
+    
     private transient Payment_Attempt__c paymentAttempt;
-
-    // Classes
-    public class paymentException extends Exception {
-    }
 
     public class paymentResponse {
         String status;
@@ -70,17 +67,98 @@ public with sharing class paymentGateway {
 
         // Use the default gateway and merchant for this company
         this.gateway = this.bjbCompany.Payment_Gateway__c;
+        System.debug('Payment Gateway = ' + this.gateway);
+    }
+
+    // Update the payment token in an account
+    public void updateAccountToken(Account account, String cardNumber, String cardCVN) {
+        // Mask the card number
+        account.Card_Number_Masked__c = cardNumber.left(2) + 'XX-XXXX-XXXX' + cardNumber.right(4);
+
+
+        // Get the bjbCompany for this account
+        Company__c[] bjbCompanys = [SELECT Id, Name, Business_Name__c, Checkout_Site__c, Checkout_Direct_Debit__c, CurrencyIsoCode, Payment_Gateway__c FROM Company__c WHERE Id =: account.BJB_Company__c LIMIT 1];
+        if (bjbCompanys.size() == 0){
+            throw new customException('Could not find company for this account');
+        }
+
+        Company__c bjbCompany = bjbCompanys[0];
+
+        // Get the billing contact for this account
+        Contact[] contacts = [SELECT Id, Name, FirstName, LastName, Email, MailingStreet, MailingCity, MailingPostalCode, MailingState, MailingCountry FROM Contact WHERE AccountId =: account.Id AND Title = 'Billing' LIMIT 1];
+        if (contacts.size() > 0){
+            Contact contact = contacts[0];
+
+            this.customerFirstName           = contact.FirstName;
+            this.customerLastName            = contact.LastName;
+            this.customerEmail               = String.valueOf(contact.Email);
+            this.customerStreet              = contact.MailingStreet;
+            this.customerCity                = contact.MailingCity;
+            this.customerState               = contact.MailingState;
+            this.customerPostcode            = contact.MailingPostalCode;
+        } else {
+            // Firstname and lastname are required fields, so as a fallback we'll set them to the card name
+            this.customerFirstName           = account.Name_On_Card__c;
+            this.customerLastName            = account.Name_On_Card__c;
+        }
+
+        String countrycode;
+        if (bjbCompany.CurrencyIsoCode == 'NZD'){
+            countrycode = 'NZ';
+        } else if (bjbCompany.CurrencyIsoCode == 'AUD'){
+            countrycode = 'AU';
+        }
+
+        this.setBjbCompany(bjbCompany);
+        this.customerCompanyName         = account.Name;
+        this.customerCountrycode         = countrycode;
+        this.cardNumber                  = cardNumber;
+        this.cardCVN                     = cardCVN;
+        this.cardHoldersName             = account.Name_On_Card__c;
+        this.cardExpiryMonth             = account.Card_Month_Expiry__c;
+        this.cardExpiryYear              = account.Card_Year_Expiry__c;
+        this.customerToken               = account.Card_Token__c;
+
+        this.createToken();
+
+        // Set the card token on the account. We don't save the account, because some code only wants this done temporarily for a one-off payment.
+        account.Card_Token__c = this.customerToken;
+
+        // Now that we've created the token, we can clear the card details that were used to create it.
+        // TODO: Uncomment once we're sure we can live without these.
+        account.Card_CVN__c             = null;
+        //account.Name_On_Card__c         = null;
+        //account.Card_Month_Expiry__c    = null;
+        //account.Card_Year_Expiry__c     = null;
+    }
+
+
+    // Create a token for these card details
+    public void createToken() {
+        // Process using the method for the selected gateway
+        if (this.gateway == 'Eway2') {
+            this.createTokenEway2();
+        } else if (this.gateway == 'Commweb2') {
+            this.createTokenCommWeb2();
+        } else if (this.gateway == 'Eway') {
+            this.customerToken = '';
+        } else if (this.gateway == 'Commweb') {
+            this.customerToken = '';
+        } else {
+            throw new customException('Unrecognised gateway');
+        }
     }
 
     // Process the payment
     public Payment_Attempt__c pay() {
-        system.debug('submitTestPayment :pay :pay');
         // Each time this method is called, it must log a Payment_Attempt__c record
         this.paymentAttempt = new Payment_Attempt__c();
 
         try {
-            // Error checking
-            validate();
+            // Validate
+            if (this.amount <= 0.00) {
+                throw new customException('Amount must be a positive decimal');
+            }
 
             // Create a this.paymentAttempt__c record to track this payment attempt
             // Note: We can't insert the payment attempt before using the payment gateway webservice because we'll get the error "You have uncommitted
@@ -105,7 +183,7 @@ public with sharing class paymentGateway {
             } else if (this.gateway == 'Commweb2') {
                 this.payCommWeb2();
             } else {
-                throw new paymentException('Unrecognised gateway');
+                throw new customException('Unrecognised gateway');
             }
         } catch (Exception e) {
             this.paymentAttempt.Status__c = 'FAILURE';
@@ -118,6 +196,14 @@ public with sharing class paymentGateway {
         return this.paymentAttempt;
     }
 
+    public String getCustomerInvoiceRef(){
+        if (this.customerInvoiceRef.indexOf('-')>-1){
+            return this.customerInvoiceRef.left(this.customerInvoiceRef.indexOf('-'));
+        }        
+        return this.customerInvoiceRef;
+    }
+
+
     // Process the refund
     public Payment_Attempt__c refund() {
         system.debug('paymentgetway:refund method');
@@ -125,8 +211,10 @@ public with sharing class paymentGateway {
         this.paymentAttempt = new Payment_Attempt__c();
 
         try {
-            // Error checking
-            // validate();
+            // Validate
+            if (this.amount <= 0.00) {
+                throw new customException('Amount must be a positive decimal');
+            }
 
             // Create a this.paymentAttempt__c record to track this payment attempt
             // Note: We can't insert the payment attempt before using the payment gateway webservice because we'll get the error "You have uncommitted
@@ -139,18 +227,18 @@ public with sharing class paymentGateway {
             this.paymentAttempt.Payment_Option__c = this.gateway;
             this.paymentAttempt.Payment_Type__c = 'Refund' ;
             this.paymentAttempt.Request_Time__c = datetime.now();
-            this.paymentAttempt.Invoice_Number__c = this.customerInvoiceRef;
+            this.paymentAttempt.Invoice_Number__c = getCustomerInvoiceRef();//this.customerInvoiceRef;
 
             // Process using the method for the selected gateway
             if (this.gateway == 'Eway2') {
                 this.isRefund = true;
                 this.payEway2();
             } else if (this.gateway == 'Commweb') {
-                this.refundCommWeb();
+                throw new customException('Unsupported gateway');
             } else if (this.gateway == 'Commweb2') {
                 this.refundCommWeb2();
             } else {
-                throw new paymentException('Unrecognised gateway');
+                throw new customException('Unrecognised gateway');
             }
         } catch (Exception e) {
             this.paymentAttempt.Status__c = 'FAILURE';
@@ -161,29 +249,6 @@ public with sharing class paymentGateway {
         }
 
         return this.paymentAttempt;
-    }
-
-    // Check whether we have all the data required to make the payment
-    public boolean validate() {
-        // Clean the data
-        // TODO: This should really be done when the data is originally set
-        
-        // strip non-numeric
-        if (this.cardCVN != null){
-            this.cardCVN    = this.cardCVN.replaceAll('[^0-9]', '');
-        }
-
-        // strip non-numeric
-        if (this.cardNumber != null){
-            this.cardNumber = this.cardNumber.replaceAll('[^0-9]', '');
-        }
-
-        // Validate
-        if (this.amount <= 0.00) {
-            throw new paymentException('Amount must be a positive decimal');
-        }
-
-        return true;
     }
 
     // Pay via Eway
@@ -281,11 +346,36 @@ public with sharing class paymentGateway {
         }
     }
 
+    // Create token via Eway Rapid API
+    private void createTokenEway2() {
+        // Load an Eway payment from these details
+        Eway2Payment eway = Eway2Payment.loadFromGateway(this);
+        Eway2Response ewayResp = eway.createToken();
+
+        if ( ewayResp.isSuccessful()) {
+            this.customerToken = eway.customerToken;
+        } else {
+            throw new customException(ewayResp.getErrorMessage());
+        }
+    }
+
+    // Create token via Commweb API
+    private void createTokenCommWeb2() {
+        // Load an Eway payment from these details
+        Commweb2Payment commweb = Commweb2Payment.loadFromGateway(this);
+        Commweb2Response commwebResp = commweb.createToken();
+
+        if ( commwebResp.isSuccessful()) {
+            this.customerToken = commweb.customerToken;
+        } else {
+            throw new customException(commwebResp.getErrorMessage());
+        }
+    }
+
     // Pay via Eway Rapid API (new)
     private void payEway2() {
         // Load an Eway payment from these details
         Eway2Payment eway = Eway2Payment.loadFromGateway(this);
-
         Eway2Response ewayResp;
 
         if (this.isRefund){
@@ -382,8 +472,7 @@ public with sharing class paymentGateway {
         Integer amountInCents = Integer.valueOf((this.amount.setScale(2) * 100).setScale(0));
 
         commweb.setAmount(String.valueOf(amountInCents));
-        commweb.setCommwebMerchTxnRef(this.customerInvoiceRef);
-        
+        commweb.setCommwebMerchTxnRef(getCustomerInvoiceRef()); //this.customerInvoiceRef
         commweb.setOrderInfo(this.customerInvoiceDescription);
         commweb.setCardNum(this.cardNumber);
         commweb.setTransactionNo(this.transactionNo);
@@ -458,25 +547,25 @@ public with sharing class paymentGateway {
 
 
     // Refund via CommWeb (New API)
-    private void refundCommWeb2() {
-        Commweb2Payment commweb = new Commweb2Payment();
+    private void refundCommWeb2() {        
+        commweb2Payment commweb = Commweb2Payment.loadFromGateway(this);
         Commweb2Response commwebResp = new Commweb2Response();
 
-        Integer amountInCents = Integer.valueOf((this.amount.setScale(2) * 100).setScale(0));
+        //Integer amountInCents = Integer.valueOf((this.amount.setScale(2) * 100).setScale(0));
 
-        commweb.setAmount(amountInCents, 'NZD');
-        commweb.setMerchTxnRef(this.customerInvoiceRef);
-        commweb.setOrderInfo(this.customerInvoiceDescription);
-        commweb.setUniqueAttemptId(this.uniqueAttemptId);
-        commweb.setCardNum(this.cardNumber);
-        commweb.setCardExpiry(this.cardExpiryMonth, this.cardExpiryYear.substring(2, 4));
-        commweb.setCardName(this.cardHoldersName);
-        commweb.setCardCvc(this.cardCVN);
-        commweb.setTransactionNo(this.transactionNo);
+        //commweb.setAmount(amountInCents, 'NZD');
+        //commweb.setMerchTxnRef(getCustomerInvoiceRef());
+        //commweb.setOrderInfo(this.customerInvoiceDescription);
+        //commweb.setUniqueAttemptId(this.uniqueAttemptId);
+        //commweb.setCardNum(this.cardNumber);
+        //commweb.setCardExpiry(this.cardExpiryMonth, this.cardExpiryYear.substring(2, 4));
+        //commweb.setCardName(this.cardHoldersName);
+        //commweb.setCardCvc(this.cardCVN);
+        //commweb.setTransactionNo(this.transactionNo);
 
-        if (this.testGateway > 0) {
-            commweb.setTestMode(this.testGateway, this.testType);
-        }
+        //if (this.testGateway > 0) {
+        //    commweb.setTestMode(this.testGateway, this.testType);
+        //}
 
         commwebResp = commweb.makeRefund();
         

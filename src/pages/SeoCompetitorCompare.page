@@ -1,62 +1,82 @@
-<apex:page standardController="seoWebsite__c" extensions="SeoCompetitorController" showHeader="true" sidebar="true">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://code.highcharts.com/4.2.7/highcharts.js"></script>
+<apex:page standardController="seoWebsite__c" extensions="SeoCompetitorController" showHeader="true" sidebar="true" title="Competitor Comparison - {!seoWebsite.name}">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/4.2.7/highcharts.js"></script>
 
     <apex:sectionHeader title="Competitor Comparison" subtitle="{!seoWebsite.name}"/>
 
     <apex:form >
-	    <apex:commandLink value="Back to Website" action="{!cancel}" status="status"/>
+        <apex:commandLink value="Back to Website" action="{!cancel}" status="status"/>
 
-	    <apex:pageMessages ></apex:pageMessages> 
-	</apex:form>
+        <apex:pageMessages ></apex:pageMessages>
+    </apex:form>
 
 
-	<apex:pageBlock title="Highest Ranking Domains For These Keywords">
-		<div id="DomainCompare" style="width:950px; height:340px;"></div>
-	</apex:pageBlock>
+    <apex:pageBlock title="Highest Ranking Domains For These Keywords">
+        <div id="DomainCompare" style="width:950px; height:340px;"></div>
+    </apex:pageBlock>
 
     <apex:form >
-		<apex:pageBlock title="Competitor Keyword Rankings" rendered="{!IF(seoWebsite.recordtype.name = 'SEO Websites', true, false)}">
+        <apex:pageBlock title="Competitor Keyword Rankings"
+                        rendered="{!IF(seoWebsite.recordtype.name = 'SEO Websites', true, false)}">
 
-			<apex:pageBlockSection columns="1">
-				<apex:pageBlockSectionItem >
-					<apex:outputLabel value="New Competitor Domain" for="newURL"/>
-					<apex:outputPanel layout="block">
-			            <apex:inputField label="URL" id="newURL" value="{!newCompetitor.Name}"/>
-			            <apex:commandButton value="Add" action="{!addRow}"/>
-			        </apex:outputPanel>
-		        </apex:pageBlockSectionItem>
-	        </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="New Competitor Domain" for="newURL"/>
+                    <apex:outputPanel layout="block">
+                        <apex:inputField label="URL" id="newURL" value="{!newCompetitor.Name}"/>
+                        <apex:commandButton value="Add" action="{!addRow}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
 
-	        <apex:pageBlockTable value="{!seoKeywords}" var="kw">
-	            <apex:column headerValue="Keyword" value="{!kw.Name}" />
+            <apex:pageBlockTable value="{!seoKeywords}" var="kw">
+                <apex:column headerValue="Keyword" value="{!kw.Name}"/>
 
-	            <apex:column headerValue="{!seoWebsite.website_url__c}">
-	            	<apex:outputText value="{!kw.Google_Current__c}" /> 
-	            </apex:column>
+                <apex:column headerValue="{!seoWebsite.website_url__c}">
+                    <apex:outputText value="{!kw.Google_Current__c}"/>
+                </apex:column>
 
-            	<apex:repeat value="{!competitorList}" var="competitor">
-		            <apex:column rendered="{!competitor.Name != null}">
-		            	<apex:facet name="header">
-		                    <apex:commandLink value="{!competitor.Name} [Del]" action="{!delRow}">
-		                        <apex:param value="{!competitor.Id}" name="competitorId" />
-		                    </apex:commandLink>
+                <apex:repeat value="{!competitorList}" var="competitor">
+                    <apex:column rendered="{!competitor.Name != null}">
+                        <apex:facet name="header">
+                            <apex:commandLink value="{!competitor.Name} [Del]" action="{!delRow}">
+                                <apex:param value="{!competitor.Id}" name="competitorId"/>
+                            </apex:commandLink>
 
-		            	</apex:facet>
- 		            	<apex:outputText value="{!CompetitorKeywords[kw.Name][competitor.Name]}" />
-		            </apex:column>
-            	</apex:repeat>
-	        </apex:pageBlockTable>
+                        </apex:facet>
+                        <apex:outputText value="{!CompetitorKeywords[kw.Name][competitor.Name]}"/>
+                    </apex:column>
+                </apex:repeat>
+            </apex:pageBlockTable>
 
-		</apex:pageBlock>
-	</apex:form>
-	
+        </apex:pageBlock>
+    </apex:form>
 
-<script language="javascript" type="text/javascript">
+
+    <apex:pageBlock title="Meta Comparison">
+
+        <apex:pageBlockTable value="{!seoKeywords}" var="kw">
+            <apex:column value="{!kw.Google_Volume__c}"/>
+            <apex:column headerValue="Keyword" value="{!kw.Name}"/>
+            <apex:column headerValue="Position" value="{!kw.Google_Current__c}"/>
+            <apex:column value="{!kw.Google_Title__c}"/>
+            <apex:column value="{!kw.Google_Snippet__c}"/>
+            <apex:column value="{!kw.Google_Pos_1_URL__c}"/>
+            <apex:column value="{!kw.Google_Pos_1_Title__c}"/>
+            <apex:column value="{!kw.Google_Pos_1_Snippet__c}"/>
+            <apex:column value="{!kw.Geolocation_Effective__c}"/>
+        </apex:pageBlockTable>
+
+    </apex:pageBlock>
+
+
+    <script language="javascript" type="text/javascript">
 $(function () {
 	/* URL: {!dataURL} */
     $('#DomainCompare').highcharts({!DomainChart});
 });
-</script>
+
+
+    </script>
 
 </apex:page>

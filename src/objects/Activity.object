@@ -287,6 +287,25 @@ MIN(5,
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Is_Mobile_Number__c</fullName>
+        <description>Identify if the customer number is mobile number</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISNULL(NVMContactWorld__Customer_Number__c)) 
+   &amp;&amp; 
+   (BEGINS(NVMContactWorld__Customer_Number__c,&apos;04&apos;)
+   &amp;&amp; (LEN(NVMContactWorld__Customer_Number__c) = 10))
+   ||
+   (BEGINS(NVMContactWorld__Customer_Number__c,&apos;+614&apos;)
+   &amp;&amp; (LEN(NVMContactWorld__Customer_Number__c) = 12))    
+   ||
+   (BEGINS(NVMContactWorld__Customer_Number__c,&apos;+642&apos;)
+   &amp;&amp; ((LEN(NVMContactWorld__Customer_Number__c) = 11) || (LEN(NVMContactWorld__Customer_Number__c) = 12))), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Identify if the customer number is mobile number</inlineHelpText>
+        <label>Is Mobile Number</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Mirrors_clients_talking_behaviour__c</fullName>
         <externalId>false</externalId>
         <label>Mirrors clients talking behaviour</label>

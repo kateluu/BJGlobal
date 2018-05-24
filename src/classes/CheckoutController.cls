@@ -15,6 +15,7 @@ public with sharing class CheckoutController {
     public String birthDay {get; set;}
     public String birthMonth {get; set;}
     public String birthYear {get; set;}
+    public CardDetails cardDetails {get; set;} {cardDetails = new CardDetails();}
 
     public Boolean mailing_address {get; set;}
 
@@ -53,9 +54,6 @@ public with sharing class CheckoutController {
 
     // Packages is the extended data about each product, loaded from the database.
     private List<List<CartItem>> packages;
-
-    // Classes
-    public class checkoutException extends Exception {}
 
     // Constructor
     public CheckoutController() {
@@ -332,24 +330,38 @@ public with sharing class CheckoutController {
             // Get the signup total.
             Decimal totalSetup = this.getTotalSetup();
 
-            // If there is no setup cost, no need to process payment
-            if (totalSetup > 0){
-                if (this.paymentType == 'Credit Card'){
-                    // Use your sponsoredlinx email with +testsuccess to test a success
-                    if ( signup.Email__c.endsWith('+testsuccess@sponsoredlinx.com') ){
-                        this.paymentTestType = paymentGateway.TEST_SUCCESS;
-                    } else if ( signup.Email__c.endsWith('+testfailure@sponsoredlinx.com') ){
-                        this.paymentTestType = paymentGateway.TEST_FAILURE;
+
+            if (this.paymentType == 'Credit Card'){
+                // Set the card token. This must happen even if there is zero amount to process.
+                paymentGateway pay = new paymentGateway();
+                pay.testGateway                 = (this.testGateway != null) ? this.testGateway : 0;
+                pay.testType                    = (this.paymentTestType != null) ? this.paymentTestType : 0;
+
+                // Generate the customer token
+                try {
+                    pay.updateAccountToken(acc, this.cardDetails.Card_Number, this.cardDetails.Card_CVN);
+
+                    // If there is no setup cost, no need to process payment
+                    if (totalSetup > 0){
+                        // Use your sponsoredlinx email with +testsuccess to test a success
+                        if ( signup.Email__c.endsWith('+testsuccess@sponsoredlinx.com') ){
+                            this.paymentTestType = paymentGateway.TEST_SUCCESS;
+                        } else if ( signup.Email__c.endsWith('+testfailure@sponsoredlinx.com') ){
+                            this.paymentTestType = paymentGateway.TEST_FAILURE;
+                        }
+
+                        paymentAttempt = this.processPayment(totalSetup);
+
+                        system.debug('paymentAttempt : ' + paymentAttempt);
+
+                        if (paymentAttempt.Status__c != 'SUCCESS') {
+                            String errorMessage = 'Sorry, an error occurred while processing payment: ' + paymentAttempt.Response_Message__c;
+                            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, errorMessage));
+                        }
                     }
-
-                    paymentAttempt = this.processPayment(totalSetup);
-
-                    system.debug('paymentAttempt : ' + paymentAttempt);
-
-                    if (paymentAttempt.Status__c != 'SUCCESS') {
-                        String errorMessage = 'Sorry, an error occurred while processing payment: ' + paymentAttempt.Response_Message__c;
-                        ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, errorMessage));
-                    }
+                } catch (Exception e) {
+                    String errorMessage = 'Sorry, an error occurred: ' + e.getMessage();
+                    ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, errorMessage));
                 }
             }
 
@@ -896,7 +908,7 @@ public with sharing class CheckoutController {
                     }
                 }
             } else {
-                throw new checkoutException('Unrecognised siteName');
+                throw new customException('Unrecognised siteName');
             }
 
             // Initialize a new cart
@@ -949,7 +961,7 @@ public with sharing class CheckoutController {
                 system.debug('Loading from existing account');
 
                 Account[] existingAccounts = [
-                SELECT Id, Name, username__c, Unique_Id__c, Industry, Number_of_Employees__c, Name_On_Card__c, Card_Number__c, Card_Month_Expiry__c, Card_Year_Expiry__c, Card_CVN__c, Company__c, Website, BillingStreet, BillingCity, BillingPostalCode, BillingState, Phone, GST__c 
+                SELECT Id, Name, username__c, Unique_Id__c, Industry, Number_of_Employees__c, Name_On_Card__c, Card_Number_Masked__c, Card_Month_Expiry__c, Card_Year_Expiry__c, Card_CVN__c, Card_Token__c, Company__c, Website, BillingStreet, BillingCity, BillingPostalCode, BillingState, Phone, GST__c, BJB_Company__c 
                 FROM Account 
                 WHERE id = :loadAccountId 
                 AND Unique_Id__c = :loadUid
@@ -1022,36 +1034,33 @@ public with sharing class CheckoutController {
         } 
 
         paymentGateway pay = new paymentGateway();
+        pay.testGateway                 = (this.testGateway != null) ? this.testGateway : 0;
+        pay.testType                    = (this.paymentTestType != null) ? this.paymentTestType : 0;
+
+        // Process payment
         pay.setBjbCompany(this.bjbCompany);
         pay.amount                      = totalSetup;
-        pay.currencyIsoCode             = signup.CurrencyIsoCode;
-        pay.customerFirstName           = signup.Firstname__c;
-        pay.customerLastName            = signup.Lastname__c;
-        pay.customerEmail               = signup.Email__c;
-        pay.customerStreet              = signup.Street__c;
-        pay.customerCity                = signup.City__c;
-        pay.customerState               = signup.State__c;
-        pay.customerPostcode            = signup.PostalCode__c;
+        pay.currencyIsoCode             = this.signup.CurrencyIsoCode;
+        pay.customerFirstName           = this.signup.Firstname__c;
+        pay.customerLastName            = this.signup.Lastname__c;
+        pay.customerEmail               = this.signup.Email__c;
+        pay.customerStreet              = this.signup.Street__c;
+        pay.customerCity                = this.signup.City__c;
+        pay.customerState               = this.signup.State__c;
+        pay.customerPostcode            = this.signup.PostalCode__c;
         pay.customerCountrycode         = countrycode;
         pay.customerIP                  = Utility.getUserIPAddress();
-        pay.cardHoldersName             = acc.Name_On_Card__c;
-        pay.cardNumber                  = acc.Card_Number__c;
-        pay.cardExpiryMonth             = acc.Card_Month_Expiry__c;
-        pay.cardExpiryYear              = acc.Card_Year_Expiry__c;
-        pay.cardCVN                     = acc.Card_CVN__c;
         pay.customerInvoiceDescription  = this.companyName + ' Invoice';
-        pay.customerInvoiceRef          = signup.Invoiceno__c;
+        pay.customerInvoiceRef          = this.signup.Invoiceno__c;
         pay.uniqueAttemptId             = '1';
+        pay.customerToken               = this.acc.Card_Token__c;
 
-        // Use a test gateway when in the sandbox or running a test method.
-        if ( this.testGateway != null ){
-            pay.testGateway                    = this.testGateway;
-        }
-
-        // When running a test method, we want to mock a success response
-        if ( this.paymentTestType != null ){
-            pay.testType                   = this.paymentTestType;
-        }
+        // No longer used as we're using the token
+        //pay.cardCVN                     = this.acc.Card_CVN__c;
+        //pay.cardHoldersName             = this.acc.Name_On_Card__c;
+        //pay.cardNumber                  = this.acc.Card_Number__c;
+        //pay.cardExpiryMonth             = this.acc.Card_Month_Expiry__c;
+        //pay.cardExpiryYear              = this.acc.Card_Year_Expiry__c;
 
         Payment_Attempt__c paymentAttempt;
 
@@ -1060,7 +1069,6 @@ public with sharing class CheckoutController {
 
             // Save the paymentAttempt
             try {
-                system.debug('in checkoutController before insert paymentAttempt');
                 insert paymentAttempt;
             } catch (Exception e) {
                 string errorDetail = 'Error: ' + e.getMessage() + '. On ' + e.getStackTraceString();
@@ -1106,7 +1114,7 @@ public with sharing class CheckoutController {
         Contact[] emailContacts = [SELECT Title, Id FROM Contact WHERE Title = 'Billing' AND Account.Id = :acc.Id LIMIT 1];
 
         if (emailContacts.size() == 0){
-            throw new checkoutException('Could not find billing contact for this account to send email');
+            throw new customException('Could not find billing contact for this account to send email');
         }
 
         Contact emailContact = emailContacts[0];
@@ -1198,10 +1206,12 @@ public with sharing class CheckoutController {
             templateName += 'nz';
         }
         
+        templateName += (Checkout_Notification_Template__c.getInstance(templateName) <> null)? Checkout_Notification_Template__c.getInstance(templateName).Current_Template_Version__c: '';
+
         EmailTemplate[] emailTemplates = [SELECT Id, Subject, HtmlValue, Body FROM EmailTemplate WHERE DeveloperName = :templateName LIMIT 1];
 
         if (emailTemplates.size() == 0){
-            throw new checkoutException('Could not load email template ' + templateName);
+            throw new customException('Could not load email template ' + templateName);
         }
 
         return emailTemplates[0];
@@ -1272,15 +1282,15 @@ public with sharing class CheckoutController {
     public List<SelectOption> getMonthOptions() {
         List<SelectOption> options = new List<SelectOption>();
         options.add(new SelectOption('','month'));
-        options.add(new SelectOption('1','1 - January'));
-        options.add(new SelectOption('2','2 - February'));
-        options.add(new SelectOption('3','3 - March'));
-        options.add(new SelectOption('4','4 - April'));
-        options.add(new SelectOption('5','5 - May'));
-        options.add(new SelectOption('6','6 - June'));
-        options.add(new SelectOption('7','7 - July'));
-        options.add(new SelectOption('8','8 - August'));
-        options.add(new SelectOption('9','9 - September'));
+        options.add(new SelectOption('01','1 - January'));
+        options.add(new SelectOption('02','2 - February'));
+        options.add(new SelectOption('03','3 - March'));
+        options.add(new SelectOption('04','4 - April'));
+        options.add(new SelectOption('05','5 - May'));
+        options.add(new SelectOption('06','6 - June'));
+        options.add(new SelectOption('07','7 - July'));
+        options.add(new SelectOption('08','8 - August'));
+        options.add(new SelectOption('09','9 - September'));
         options.add(new SelectOption('10','10 - October'));
         options.add(new SelectOption('11','11 - November'));
         options.add(new SelectOption('12','12 - December'));

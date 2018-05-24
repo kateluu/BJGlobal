@@ -28,6 +28,8 @@ public with sharing class MakeARefund {
     public boolean isEway{get;set;}
     public boolean isCommwebSLX{get;set;}
     public boolean isCommwebGMT{get;set;}
+    public Boolean showPaymentButton {get;set;}
+    
     
     public static String PAYMENT_TYPE = 'Refund';
     public static String PAYMENT_STATUS_REFUNDED = 'REFUNDED';
@@ -104,24 +106,28 @@ public with sharing class MakeARefund {
         this.inputPayment.Payment_Date__c = date.today();
         this.inputPayment.Payment_Type__c = 'Refund';
         this.isCardPayment = false;
+        this.showPaymentButton = true;
 
-
-        String message = '' + ApexPages.CurrentPage().GetParameters().Get('response');
+        String message           ='' + ApexPages.CurrentPage().GetParameters().Get('response');
+        String invoiceIds        ='' + ApexPages.CurrentPage().GetParameters().Get('invoiceIds');
+        String OKinvoiceIds      ='' + ApexPages.CurrentPage().GetParameters().Get('OKinvoiceIds');
+        String NOKinvoiceIds     ='' + ApexPages.CurrentPage().GetParameters().Get('NOKinvoiceIds');
         String pageHeaderReferer = ApexPages.currentPage().getHeaders().get('Referer');
+
         system.debug(message);
         system.debug(pageHeaderReferer);
         // Use the referrer parameter to only show the message when coming from Make a Payment page
         if (pageHeaderReferer != null && pageHeaderReferer.containsIgnoreCase('makearefund') && message != 'null') {
-            if (message == 'success') {
-                ApexPages.Message myMsg = new ApexPages.Message(ApexPages.severity.CONFIRM, 'Refund Transaction Completed');
+            if ( ApexPages.CurrentPage().GetParameters().Get('NOKinvoiceIds') == null || NOKinvoiceIds.equals('')) {
+                ApexPages.Message myMsg = new ApexPages.Message(ApexPages.severity.CONFIRM, ' Refund Transactions Completed. Successfully Refund Invoice Ids :' + OKinvoiceIds );
                 ApexPages.addMessage(myMsg);
             } else {
-                ApexPages.Message myMsg = new ApexPages.Message(ApexPages.Severity.ERROR, message);
+                ApexPages.Message myMsg = new ApexPages.Message(ApexPages.severity.CONFIRM, ' Successfully Refund Invoice Ids :' + OKinvoiceIds );
+                ApexPages.addMessage(myMsg);
+                myMsg = new ApexPages.Message(ApexPages.Severity.ERROR,  'Fail to Refund Invoice Ids : ' + NOKinvoiceIds);
                 ApexPages.addMessage(myMsg);
             }
         }
-
-
     }
 
     public PageReference updateInvoices() {
@@ -208,7 +214,7 @@ public with sharing class MakeARefund {
                     AND
                     (Status__c = 'PAID' OR Status__c = 'PARTIALLY PAID' OR Status__c = 'PARTIALLY REFUNDED')
                     order by
-                            Payment_Option__c,Issue_Date__c
+                            Issue_Date__c ASC
             ];
         
             for (Invoice__c thisInvoice : this.invoices) {
@@ -240,7 +246,7 @@ public with sharing class MakeARefund {
     public pageReference bulkEwayCommwebRefunds() {
         // Error checking
         Boolean hasError = false;
-
+        String refundInvoices = '';
         // set contact information
         Contact contact;
         try {
@@ -264,10 +270,15 @@ public with sharing class MakeARefund {
         Payment_Attempt__c paymentAttempt = new Payment_Attempt__c();
         List<Payment__c> refundPayments = new List<Payment__c>();
         List<Invoice__c> updateInvoices = new List<Invoice__c>();
+        String successRefundInvoiceIds ='';
+        String failedRefundInvoiceIds = '';
 
         if (!hasError) {
             this.message = '';
             for (RefundInvoice item : selectedInvoices) {
+
+                    if(refundInvoices.length()>0) refundInvoices += ',';
+                    refundInvoices += item.invoice.Invoice_Number__c ;
                     // actual refund transaction
                     // New code - use standard paymentGateway class
                     // Transaction with the gateway
@@ -288,14 +299,14 @@ public with sharing class MakeARefund {
                     refundPaymentGateway.cardExpiryYear = this.acc.Card_Year_Expiry__c;
                     refundPaymentGateway.cardCVN = this.acc.Card_CVN__c;
                     refundPaymentGateway.customerInvoiceDescription = this.acc.Unique_Id__c;
-                    refundPaymentGateway.customerInvoiceRef = item.invoice.Invoice_Number__c;
-        
+                    refundPaymentGateway.customerInvoiceRef = item.invoice.Invoice_Number__c;        
                     refundPaymentGateway.uniqueAttemptId = DateTime.now().format('yyyyMMdd');
                     refundPaymentGateway.transactionNo = item.invoice.payment_Response__c;
 
                     // Use a test gateway when in the sandbox or running a test method.
                     //if (this.isTest || this.generateErrors == true || utility.runningInASandbox()) {
                     if (this.isTest || this.generateErrors == true) {
+                        system.debug('MakeARefund CLass :: isTest ::GATEWAY_MOCK' +  paymentGateway.GATEWAY_MOCK);
                         refundPaymentGateway.testGateway = paymentGateway.GATEWAY_MOCK;
                         refundPaymentGateway.testType = paymentGateway.TEST_SUCCESS;
                     }
@@ -325,7 +336,7 @@ public with sharing class MakeARefund {
 
                         RefundPayment.Invoice__c            = item.invoice.Id;
                         RefundPayment.Invoice_Number__c     = item.invoice.Invoice_Number__c;                    
-                        RefundPayment.Payment_Option__c     = refundPaymentGateway.gateway ;//item.invoice.Account_Product__r.Payment_Option__c;
+                        RefundPayment.Payment_Option__c     = refundPaymentGateway.gateway ;
                         RefundPayment.CurrencyIsoCode       = item.invoice.CurrencyIsoCode;
                         RefundPayment.Account_Product__c    = item.invoice.Account_Product__c;
                         RefundPayment.Payment_Owner__c      = item.invoice.Account_Product__r.OwnerId;                    
@@ -338,6 +349,9 @@ public with sharing class MakeARefund {
                         system.debug(item.invoice.Invoice_Total__c);
                         system.debug(item.invoice.Amount_Refunded__c);                        
                         updateInvoices.add(item.invoice);
+                        successRefundInvoiceIds += item.invoice.Invoice_Number__c +', ';
+                    }else{
+                        failedRefundInvoiceIds += item.invoice.Invoice_Number__c + ' : ' +paymentAttempt.Response_Message__c +',\n ';
                     }
 
                 }
@@ -407,10 +421,15 @@ public with sharing class MakeARefund {
             return null;
         }
         
+        
         if (paymentAttempt.Status__c == 'SUCCESS') {
             MakeARefundPage.getParameters().put('response', 'success');
+            MakeARefundPage.getParameters().put('OKinvoiceIds',successRefundInvoiceIds);
+            MakeARefundPage.getParameters().put('NOKinvoiceIds', failedRefundInvoiceIds);
         } else {
             MakeARefundPage.getParameters().put('response', paymentAttempt.Response_Message__c);
+            MakeARefundPage.getParameters().put('OKinvoiceIds',successRefundInvoiceIds);
+            MakeARefundPage.getParameters().put('NOKinvoiceIds', failedRefundInvoiceIds);
         }
 
         //MakeARefundPage.getParameters().put('msg', this.message);
@@ -480,6 +499,7 @@ public with sharing class MakeARefund {
                     refundPaymentGateway.customerCity = contact.MailingCity;
                     refundPaymentGateway.customerState = contact.MailingState;
                     refundPaymentGateway.customerPostcode = contact.MailingPostalCode;
+
                     refundPaymentGateway.cardHoldersName = this.acc.Name_On_Card__c;
                     refundPaymentGateway.cardNumber = this.acc.Card_Number__c;
                     refundPaymentGateway.cardExpiryMonth = this.acc.Card_Month_Expiry__c;
@@ -608,11 +628,15 @@ public with sharing class MakeARefund {
             this.message = null;
             return null;
         }
-        
+
+                
         if (paymentAttempt.Status__c == 'SUCCESS') {
-            MakeARefundPage.getParameters().put('response', 'success');
+            MakeARefundPage.getParameters().put('response', 'success');            
+            MakeARefundPage.getParameters().put('OKinvoiceIds',this.invoiceNumber);
+
         } else {
-            MakeARefundPage.getParameters().put('response', paymentAttempt.Response_Message__c);
+            MakeARefundPage.getParameters().put('response', paymentAttempt.Response_Message__c);            
+            MakeARefundPage.getParameters().put('NOKinvoiceIds', this.invoiceNumber);
         }
 
         MakeARefundPage.setRedirect(true);

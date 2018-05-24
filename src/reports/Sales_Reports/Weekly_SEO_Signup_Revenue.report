@@ -16,10 +16,22 @@
         <field>Sign_Up__c$Name</field>
     </columns>
     <columns>
-        <field>Sign_Up__c.Account_Products__r$Name</field>
+        <field>Sign_Up__c$Status__c</field>
     </columns>
     <columns>
         <field>Sign_Up__c$Product_Type__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Product_Status__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r$Invoice_Number__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r$Status__c</field>
     </columns>
     <columns>
         <field>Sign_Up__c.Account_Products__r$Product_Price__c</field>
@@ -32,14 +44,14 @@
             <value>SEO</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Sign_Up__c$Invoiceno__c</column>
+            <column>Sign_Up__c.Account_Products__r.Invoices__r$Invoice_Number__c</column>
             <operator>contains</operator>
             <value>INV</value>
         </criteriaItems>
         <criteriaItems>
             <column>Sign_Up__c.Account_Products__r.Invoices__r$Status__c</column>
             <operator>notEqual</operator>
-            <value>AUTHORISED,REFUNDED</value>
+            <value>AUTHORISED,REFUNDED,PARTIALLY REFUNDED</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>

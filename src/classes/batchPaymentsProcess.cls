@@ -125,13 +125,13 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
     System.debug('Scope: ' + scope);
     Boolean paymentHalted = false;
 
-    ewayResponse ewayRep = new ewayResponse();
     List<Invoice__c> allInvoices = new List<Invoice__c>();
     List<Invoice_Payments__c> batchPayments = new List<Invoice_Payments__c>();
     List<Payment__c> listPayments = new List<Payment__c>();
     
     List<Credit__c> listUpdateCredit = new List<Credit__c>();
     List<Payment__c> listCreditPayment = new List<Payment__c>();
+    List<Account> listUpdateAccount = new List<Account>();
         
     for(Invoice__c current_invoice : scope) {
       System.debug('Current Invoice: ' + current_invoice);
@@ -216,11 +216,14 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
             SELECT
               Id,
               Name,
+              Card_Token__c,
               Name_On_Card__c,
               Card_Number__c,
+              Card_Number_Masked__c,
               Card_Month_Expiry__c,
               Unique_Id__c,
               Card_Year_Expiry__c,
+              BJB_Company__c,
               Card_CVN__c              
             FROM
               Account
@@ -229,7 +232,7 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
           ][0];
           Log += '| Account Found';
           
-          accountProduct = [SELECT Id, Name, Name_On_Card__c, Card_Number__c, Card_Month_Expiry__c, Card_Year_Expiry__c, Card_CVN__c FROM Account_Product__c WHERE Id =: current_invoice.Account_Product__c][0];
+          accountProduct = [SELECT Id, Name FROM Account_Product__c WHERE Id =: current_invoice.Account_Product__c][0];
           
           Log += '| AccountProduct Found';
         } catch (Exception e) {
@@ -273,41 +276,64 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
 
             // Transact with the gateway
 	        paymentGateway pay = new paymentGateway();
-	        pay.setBjbCompany(this.bjbCompany);
-	        pay.amount                      = current_invoice.Amount_Due__c;
-	        pay.currencyIsoCode             = current_invoice.CurrencyIsoCode;
-	        pay.customerFirstName           = contact.FirstName;
-	        pay.customerLastName            = contact.LastName;
-	        pay.customerEmail               = String.valueOf(contact.Email);
-	        pay.customerStreet              = contact.MailingStreet;
-	        pay.customerCity                = contact.MailingCity;
-	        pay.customerState               = contact.MailingState;
-	        pay.customerPostcode            = contact.MailingPostalCode;
-	        pay.customerCountrycode         = countrycode;
-	        pay.customerIP                  = null; // Because recurring payments aren't triggered by the customer, we don't want to include the user's IP.
-	        pay.cardHoldersName             = account.Name_On_Card__c;
-	        pay.cardNumber                  = account.Card_Number__c;
-	        pay.cardExpiryMonth             = account.Card_Month_Expiry__c;
-	        pay.cardExpiryYear              = account.Card_Year_Expiry__c;
-	        pay.cardCVN                     = account.Card_CVN__c;
-	        pay.customerInvoiceDescription  = current_invoice.Invoice_Number__c;
-	        pay.customerInvoiceRef          = current_invoice.Invoice_Number__c;
+
+          // Use a test gateway when in the sandbox or running a test method.
+          if (batchPaymentsProcess.isTest == true){
+            pay.testGateway                = paymentGateway.GATEWAY_LOCAL;
+            pay.testType                   = paymentGateway.TEST_SUCCESS;
+          }
+
+          // Temporary during token transition.
+          // If the _masked field has not yet been used, copy the card number from the old card_number field and generate a token.
+          //if (String.isEmpty(account.Card_Token__c) && !String.isEmpty(account.Card_Number__c) ){
+          //  // Generate a token (this also masks the card number)
+          //  try{
+          //    pay.updateAccountToken(account, account.Card_Number__c, account.Card_CVN__c);
+          //    listUpdateAccount.add(account);
+          //  } catch (Exception e) {
+          //      string errorDetail = 'Error in batchPaymentsProcess: For account '+account.Id+': ' + e.getMessage() + '. On ' + e.getStackTraceString();
+          //      Utility.notifySysadmin('Error in pay.updateAccountToken', errorDetail);
+
+          //      system.debug(errorDetail);
+
+          //      paymentAttempt.Status__c = 'FAILURE';
+          //      paymentAttempt.Response_Message__c = e.getMessage();
+          //  }
+          //}
+
+          if (paymentAttempt.Status__c != 'FAILURE'){
+  	        pay.setBjbCompany(this.bjbCompany);
+  	        pay.amount                      = current_invoice.Amount_Due__c;
+  	        pay.currencyIsoCode             = current_invoice.CurrencyIsoCode;
+            pay.customerCompanyName         = account.Name;
+  	        pay.customerFirstName           = contact.FirstName;
+  	        pay.customerLastName            = contact.LastName;
+  	        pay.customerEmail               = String.valueOf(contact.Email);
+  	        pay.customerStreet              = contact.MailingStreet;
+  	        pay.customerCity                = contact.MailingCity;
+  	        pay.customerState               = contact.MailingState;
+  	        pay.customerPostcode            = contact.MailingPostalCode;
+  	        pay.customerCountrycode         = countrycode;
+  	        pay.customerIP                  = null; // Because recurring payments aren't triggered by the customer, we don't want to include the user's IP.
+  	        pay.cardHoldersName             = account.Name_On_Card__c;
+  	        //pay.cardNumber                  = account.Card_Number__c;
+  	        pay.cardExpiryMonth             = account.Card_Month_Expiry__c;
+  	        pay.cardExpiryYear              = account.Card_Year_Expiry__c;
+  	        pay.cardCVN                     = account.Card_CVN__c;
+            pay.customerToken               = account.Card_Token__c;
+  	        pay.customerInvoiceDescription  = current_invoice.Invoice_Number__c;
+  	        pay.customerInvoiceRef          = current_invoice.Invoice_Number__c;
             pay.uniqueAttemptId             = PaymentBatchID;
 
-	        // Use a test gateway when in the sandbox or running a test method.
-            if (batchPaymentsProcess.isTest == true){
-            	pay.testGateway                = paymentGateway.GATEWAY_LOCAL;
-            	pay.testType                   = paymentGateway.TEST_SUCCESS;
-            }
+  	        try{
+  	            paymentAttempt = pay.pay();
+  	        } catch (Exception e) {
+  	            string errorDetail = 'Error in batchPaymentsProcess: For account '+account.Id+': ' + e.getMessage() + '. On ' + e.getStackTraceString();
+  	            Utility.notifySysadmin('Error in pay.pay', errorDetail);
 
-	        try{
-	            paymentAttempt = pay.pay();
-	        } catch (Exception e) {
-	            string errorDetail = 'Error in batchPaymentsProcess: ' + e.getMessage() + '. On ' + e.getStackTraceString();
-	            Utility.notifySysadmin('Error in pay.pay', errorDetail);
-
-	            system.debug(errorDetail);
-	        }
+  	            system.debug(errorDetail);
+  	        }
+          }
             
             if (paymentAttempt.Status__c == 'SUCCESS') {
             	current_invoice.Status__c = 'PAID';
@@ -328,7 +354,7 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
           }
         }
 
-        if((paymentHalted == false) || batchPaymentsProcess.isTest == true) {
+        if(paymentHalted == false || batchPaymentsProcess.isTest == true) {
           try {
             Log += '| Adding Payment Success Message';
 
@@ -347,18 +373,11 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
 				thisPayment.Payment_Batch__c = current_invoice.Payment_Batch__c;
 				thisPayment.Account__c = account.id;
 				thisPayment.Payment_Amount__c = current_invoice.Amount_Due__c;
-
 				thisPayment.Payment_Date__c   = Date.today();
 				thisPayment.Invoice_Number__c = current_invoice.Invoice_Number__c;
 				thisPayment.Account_Product__c = current_invoice.Account_Product__c;
 				thisPayment.Payment_Owner__c = current_invoice.Account_Product__r.OwnerId;
-
-				// PaymentAttempt differentiates between Commweb and Commweb2, but payment doesn't.
-				if (paymentAttempt.Payment_Option__c == 'Commweb2'){
-					thisPayment.Payment_Option__c = 'Commweb';
-				} else {
-					thisPayment.Payment_Option__c = paymentAttempt.Payment_Option__c;
-				}
+				thisPayment.Payment_Option__c = paymentAttempt.Payment_Option__c;
 				thisPayment.CurrencyIsoCode = paymentAttempt.CurrencyIsoCode;
 
 				listPayments.add(thisPayment);
@@ -401,9 +420,9 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
       Log += '|Invoice Added';
     }
     
+    update listUpdateAccount;
     update listUpdateCredit;
     insert listCreditPayment;
-        
 
     System.debug('All Invoices: ' + allInvoices);
     update allInvoices;

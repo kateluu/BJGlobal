@@ -15,7 +15,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>ISCHANGED(Name) || ISCHANGED(Geolocation__c)</formula>
+        <formula>ISCHANGED(Name) || ISCHANGED(Geolocation_Override__c)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

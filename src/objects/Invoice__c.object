@@ -45,7 +45,16 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Quick_View</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Quick_View</fullName>
+        <fields>Reference__c</fields>
+        <fields>Account__c</fields>
+        <fields>Name</fields>
+        <fields>Invoice_Number__c</fields>
+        <fields>Payment_Option__c</fields>
+        <label>Quick View</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -564,6 +573,29 @@
         <columns>Payment_Response__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Support_View</fullName>
+        <columns>NAME</columns>
+        <columns>Issue_Date__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Invoice_Batch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Payment_Message__c</columns>
+        <columns>Payment_Response__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Invoice_Number__c</field>
+            <operation>contains</operation>
+            <value>-</value>
+        </filters>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>test</value>
+        </filters>
+        <label>Support View</label>
     </listViews>
     <listViews>
         <fullName>Today</fullName>

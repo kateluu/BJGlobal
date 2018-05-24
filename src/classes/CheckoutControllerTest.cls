@@ -1,4 +1,4 @@
-@isTest
+@istest
 public with sharing class CheckoutControllerTest {
 
     static SLX_Product__c productMgmt;
@@ -32,25 +32,22 @@ public with sharing class CheckoutControllerTest {
             Access_Code__c      = 'exampleaccesscode',
             Password__c         = 'examplepassword'
         );
-
-        // Commweb 1
         insert new PaymentGateway__c(
-            Name                = 'Sponsoredlinx NZ',
+            Name                = 'Eway Rapid GMT AU',
             MerchantURL__c      = 'https://example.com',
             Access_Code__c      = 'exampleaccesscode',
-            Operation_ID__c     = 'exampleopid',
-            Password__c         = 'examplepassword'
-        );
-
-        insert new PaymentGateway__c(
-            Name                = 'Sponsoredlinx NZ Test',
-            MerchantURL__c      = 'https://example.com',
-            Access_Code__c      = 'exampleaccesscode',
-            Operation_ID__c     = 'exampleopid',
             Password__c         = 'examplepassword'
         );
 
         // Commweb2
+        insert new PaymentGateway__c(
+            Name                = 'Commweb SLX NZ',
+            MerchantURL__c      = 'https://example.com',
+            Access_Code__c      = 'exampleaccesscode',
+            Operation_ID__c     = 'exampleopid',
+            Password__c         = 'examplepassword'
+        );
+
         insert new PaymentGateway__c(
             Name                = 'Commweb GMT NZ',
             MerchantURL__c      = 'https://example.com',
@@ -76,14 +73,14 @@ public with sharing class CheckoutControllerTest {
                 Name = 'Get More Traffic',
                 Business_Name__c = 'GMT Australia',
                 Checkout_Site__c = 'checkout_GMT',
-                Payment_Gateway__c = 'Eway',
+                Payment_Gateway__c = 'Eway2',
                 CurrencyIsoCode  = 'AUD'
             ),
             new Company__c(
                 Name = 'SponsoredLinX New Zealand',
                 Business_Name__c = 'SponsoredLinX New Zealand',
                 Checkout_Site__c = 'checkout_SLX',
-                Payment_Gateway__c = 'CommWeb',
+                Payment_Gateway__c = 'CommWeb2',
                 CurrencyIsoCode  = 'NZD'
             ),
             new Company__c(
@@ -300,11 +297,8 @@ public with sharing class CheckoutControllerTest {
             username__c             = 'steve.existingclient@sponsoredlinx.com',
 //            Unique_Id__c            = '630278478',
             name_on_card__c         = 'Steve Clientman',
-            card_number__c          = '5454111122221111',
             card_month_expiry__c    = '9',
-            card_year_expiry__c     = '2028',
-            card_cvn__c             = '789'
-
+            card_year_expiry__c     = '2028'
         );
         insert new List<Account> {accountSalesperson, accountCompanySLX, accountCompanyGMT, existingAccount};
 
@@ -544,11 +538,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.paymenttype                 = 'Credit Card';
             controllerpage2.cardtype                    = 'Visa';
             controllerpage2.applypaymenttype();
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             controllerpage2.paymentTestType = paymentGateway.TEST_SUCCESS;
@@ -684,11 +678,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.paymenttype                 = 'Credit Card';
             controllerpage2.cardtype                    = 'Visa';
             controllerpage2.applypaymenttype();
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             controllerpage2.paymentTestType = paymentGateway.TEST_SUCCESS;
@@ -706,9 +700,9 @@ public with sharing class CheckoutControllerTest {
             system.assertNotEquals(null, signups[0].Invoiceno__c, 'Signup missing invoice number');
 
             // check that the account was created
-            account[] accounts = [SELECT id, name, payment_option__c, card_number__c FROM account WHERE username__c = :controllerpage2.signup.Email__c LIMIT 1];
+            account[] accounts = [SELECT id, name, payment_option__c, card_token__c FROM account WHERE username__c = :controllerpage2.signup.Email__c LIMIT 1];
             system.assertEquals(1, accounts.size(), 'account not created');
-            system.assertEquals(controllerpage2.acc.card_number__c, accounts[0].card_number__c, 'Card number in account does not match');
+            system.assertNotEquals(null, accounts[0].card_token__c, 'Card number in account does not match');
 
             // check that the account_products were created
             account_product__c[] accproducts = [SELECT id, name FROM account_product__c WHERE account__c = :accounts[0].id];
@@ -804,11 +798,11 @@ public with sharing class CheckoutControllerTest {
 
             controllerpage2.paymenttype                 = 'Credit Card';
             controllerpage2.applypaymenttype();
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // first test with a failure response from the gateway (should return null with page errors)
             controllerpage2.paymentTestType = paymentGateway.TEST_FAILURE;
@@ -1075,11 +1069,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.paymenttype                 = 'Credit Card';
             controllerpage2.cardtype                    = 'Visa';
             controllerpage2.applypaymenttype();
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             controllerpage2.paymentTestType = paymentGateway.TEST_SUCCESS;
@@ -1191,12 +1185,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.signup.city__c          = 'Fortitude Valley';
             controllerpage2.signup.postalcode__c    = '4006';
             controllerpage2.signup.state__c         = 'QLD';
-
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             pagereference resultsuccess = controllerpage2.submitCheckout();
@@ -1275,12 +1268,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.signup.city__c          = 'Fortitude Valley';
             controllerpage2.signup.postalcode__c    = '4006';
             controllerpage2.signup.state__c         = 'QLD';
-
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             pagereference resultsuccess = controllerpage2.submitCheckout();
@@ -1379,12 +1371,11 @@ public with sharing class CheckoutControllerTest {
             controllerpage2.signup.city__c          = 'Fortitude Valley';
             controllerpage2.signup.postalcode__c    = '4006';
             controllerpage2.signup.state__c         = 'QLD';
-
+            controllerpage2.cardDetails.card_number     = '4444333322221111';
+            controllerpage2.cardDetails.card_cvn        = '123';
             controllerpage2.acc.name_on_card__c         = 'Steve Clientman';
-            controllerpage2.acc.card_number__c          = '4444333322221111';
             controllerpage2.acc.card_month_expiry__c    = '5';
             controllerpage2.acc.card_year_expiry__c     = '2020';
-            controllerpage2.acc.card_cvn__c             = '123';
 
             // submit the checkout (should return a pagereference and no error messages)
             pagereference resultsuccess = controllerpage2.submitCheckout();

@@ -1,0 +1,138 @@
+<messaging:emailTemplate subject="Welcome to SponsoredLinX" recipientType="Contact" relatedToType="Sign_Up__c">
+
+<messaging:HtmlEmailBody >
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">
+    <tr>
+        <td>
+            <img src="http://www.sponsoredlinx.com.au/email/welcome/header.png" width="600" height="226" alt="SponsoredLinx Advanced Digital Marketing" style="display:block;"/></td>
+    </tr>
+    <tr>
+        <td>
+            <img src="http://www.sponsoredlinx.com.au/email/welcome/main_image.png" width="518" height="200" alt="Welcome to SLX" style="display:block; margin:30px auto 60px auto;"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px;">
+            
+                <p style="margin-bottom:30px; line-height:30px;"><b>Dear {!relatedTo.Firstname__c}</b></p>
+                <p style="margin-bottom:30px; line-height:30px;">Thank you for joining SponsoredLinx!</p>
+                <p style="margin-bottom:30px; line-height:30px;">We look forward to working alongside your business towards achieving your online marketing goals.</p>
+                <p style="margin-bottom:30px; line-height:30px;">You have signed up online for the following services:</p>
+
+
+                <!-- BEGIN services -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <apex:repeat var="ap" value="{!relatedTo.Account_Products__r}">
+                    <tr>
+                        <td width="1"><img src="http://www.sponsoredlinx.com.au/email/welcome/tick.png" width="16" valign="middle" height="16" style="display:block;"/></td>
+                        <td valign="top" style="font-family:Arial, Helvetica, sans-serif;font-size:18px; vertical-align:top;"> <b>{!ap.Name}</b></td>
+                    </tr>
+                    </apex:repeat>
+                </table>
+                <!-- END services -->
+
+                
+                <p style="margin-bottom:30px; line-height:30px;">Your Campaign Manager will be in contact with you shortly to assess your online marketing needs and start working on your new search engine marketing campaign.</p>
+         </td>
+    </tr>
+</table>
+
+<table width="100%" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    
+    <tr>
+        <td style="background:#0367b9; padding:30px 30px;">
+            <table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">
+                 <tr>
+                    <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px; color:white;">
+                        <p style="margin-bottom:30px; line-height:30px;">You can monitor the progress of your account setup by using the LinX app on your mobile device. Simply download the app and use your login provided:</p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr><td width="50%">
+                                <table>
+                                    <tr>
+                                        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px; color:white; padding-bottom:10px;"><img src="http://www.sponsoredlinx.com.au/email/welcome/user.png" width="12" height="16" style="padding-right:10px; text-align:left;"/>Username: {!relatedTo.Account__r.username__c}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px; color:white; padding-bottom:10px;"><img src="http://www.sponsoredlinx.com.au/email/welcome/lock.png" width="12" height="16" style="padding-right:10px; text-align:left;"/>Password: {!relatedTo.Account__r.password_on_signup__c}</td></tr>
+                                </table>                    
+                            </td>
+                            <td width="50%">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td colspan="2" style="padding-bottom:20px;">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td><img src="http://www.sponsoredlinx.com.au/email/welcome/linx_app.png" width="58" height="41" alt="LINX" style="text-align:left; padding-right:10px;"/></td>
+                                                <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px; color:white;">Learn more about our app by clicking here!</td>
+                                              </tr>
+                                            </table>
+                                        </td>                        
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://play.google.com/store/apps/details?id=com.linxapp"><img src="http://www.sponsoredlinx.com.au/email/welcome/google-play-badge.png" width="107" height="33" alt="Download on Google Play" style="display:block;"/></a></td>
+                                        <td><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1228592479&mt=8"><img src="http://www.sponsoredlinx.com.au/email/welcome/appstore.png" width="96" height="32" style="display:block;" alt="Download on the app store"/></a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                          </tr>
+                        </table>
+                 
+                 </td>
+                </tr>
+            </table>
+            
+        </td>
+    </tr>
+
+</table>
+    
+<table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">   
+
+    <tr>
+        <td style="padding:10px;">&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px;">
+            <p style="margin-bottom:30px; line-height:30px;">In the meantime, check out some of our recent success stories <a href="http://www.sponsoredlinx.com.au/success-stories">here</a></p>
+            <p style="margin-bottom:30px; line-height:30px;">The SponsoredLinx on-going search engine marketing management service is <b>free of contracts or fixed time periods.</b></p>
+            <p style="margin-bottom:30px; line-height:30px;">Lastly, if you haven't already, please take a moment to review the full terms and conditions of this advertising service located at <a href="http://www.sponsoredlinx.com.au/terms-and-conditions">Terms and Conditions.</a></p>
+            <p style="margin-bottom:30px; line-height:30px;">Kind regards,</p>
+            <p style="margin-bottom:30px; line-height:30px;">
+                <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name != null}">
+                  <span style="font-size:22px;"><b>{!relatedTo.Salesperson__r.Name}</b></span><br />
+                  Internet Marketing Consultant
+                </apex:outputPanel>
+              
+                <apex:outputPanel rendered="{!relatedTo.Salesperson__r.Name == null}">
+                  <span style="font-size:22px;"><b>SponsoredLinX</b></span><br />
+                  Search Engine Marketing
+                </apex:outputPanel>
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding:10px;">&nbsp;</td>
+    </tr>
+    
+</table>
+
+<table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">
+    <tr>
+        <td>
+            <a href="https://www.sponsoredlinx.com.au/optimisation-services/our-software/linx-app/" style="border: none;" target="_blank"><img src="http://www.sponsoredlinx.com.au/email/welcome/footer_banner.png" width="600" height="213" alt="SponsoredLinX" style="display:block;"/></a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
+</messaging:HtmlEmailBody>
+
+</messaging:emailTemplate>

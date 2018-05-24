@@ -679,7 +679,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>10</visibleLines>
@@ -1706,6 +1706,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <columns>CaseType__c</columns>
         <columns>OWNER.FIRST_NAME</columns>
         <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
         <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
         <columns>Resolution_Manager__c</columns>
         <columns>Case_Open_Time__c</columns>
@@ -1722,9 +1723,6 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
             <value>Alexandra Brown</value>
         </filters>
         <label>Alex Escalated Cases</label>
-        <sharedTo>
-            <group>Daniel_Carey</group>
-        </sharedTo>
     </listViews>
     <listViews>
         <fullName>All</fullName>
@@ -1818,7 +1816,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <filters>
             <field>OWNER.LAST_NAME</field>
             <operation>contains</operation>
-            <value>Porter,Andersen,Staunton,Lamers,Phillips,Wilson</value>
+            <value>staunton,anderson,wilson,watson,porter</value>
         </filters>
         <label>Back to Sales</label>
         <sharedTo>
@@ -1954,6 +1952,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     </listViews>
     <listViews>
         <fullName>Escalated</fullName>
+        <columns>Case_Reason__c</columns>
         <columns>NAME</columns>
         <columns>First_Success_Call__c</columns>
         <columns>Account__c</columns>
@@ -2244,6 +2243,15 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
             <role>Client_Manager_Team_A_Leader</role>
             <role>SLXAusClientOperationsManager</role>
             <role>SLX_Aus_SEO_Team_B_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Sales_Manager_Assistant_GMT_Cases</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Sales Manager Assistant GMT</label>
+        <queue>Sales_Manager_Assistant_GMT</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
         </sharedTo>
     </listViews>
     <listViews>

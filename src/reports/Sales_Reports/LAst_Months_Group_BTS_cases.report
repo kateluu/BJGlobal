@@ -9,6 +9,21 @@
     <columns>
         <field>Cases__c.CaseType__c</field>
     </columns>
+    <columns>
+        <field>Cases__c.X2012_CM_Comments__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.X2012_CM_Proposed_Action__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Refund_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Processing_Time__c</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Product_Active_Days__c</field>
+    </columns>
     <currency>AUD</currency>
     <filter>
         <criteriaItems>
@@ -28,6 +43,16 @@
         <field>CUST_CREATED_DATE</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Cases__c.Product_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_CREATED_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>LAst Months Group BTS cases</name>
     <params>
         <name>co</name>
@@ -36,6 +61,8 @@
     <reportType>CustomEntity$Cases__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
+    <sortColumn>Cases__c.Refund_Amount__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
         <interval>INTERVAL_LASTMONTH</interval>

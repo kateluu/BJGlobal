@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sign_Up__c$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Account__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Recurring_Period__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Company__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c$Product_Type__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c$Status__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Sign_Up__c.Account_Products__r.Cases__r$Product_Type__c</column>
+            <operator>equals</operator>
+            <value>AdWords Management,Social Marketing</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sign_Up__c$Account__c</column>
+            <operator>notContain</operator>
+            <value>GetMoreTraffic</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Sign_Up__c$Salesperson__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SLX Cancellation Last Month - By Sales</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Signups_with_Account_Products_and_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Sign_Up__c$Status__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Sign_Up__c.Account_Products__r.Cases__r$Cancellation_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -85,7 +85,7 @@
     <outboundMessages>
         <fullName>Adwords_Acc_Transfer</fullName>
         <apiVersion>42.0</apiVersion>
-        <endpointUrl>http://13.54.63.17/adwordsapi/transfer</endpointUrl>
+        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
         <fields>Adwords_ID__c</fields>
         <fields>BJB_Company__c</fields>
         <fields>Id</fields>
@@ -104,7 +104,7 @@
         </actions>
         <active>true</active>
         <description>Transfer clients account from HC mcc to CM&apos;s MCC when assigned</description>
-        <formula>AND(ISCHANGED(OwnerID1__c), Sign_up__r.Owner:User.LastName != &apos;Site Guest User&apos;, Processed__c = false,  RecordType.Name = &apos;Adwords Signup Notes&apos;)</formula>
+        <formula>AND(ischanged(OwnerID1__c), Sign_up__r.Owner:User.LastName != &apos;Site Guest User&apos;, Processed__c = false,  RecordType.Name = &apos;Adwords Signup Notes&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

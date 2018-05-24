@@ -67,7 +67,6 @@ private class SeoKeywordControllerTest {
 		// Create a test SEO keyword
 		seoThemeKeywords__c seoKeyword = new seoThemeKeywords__c();
 		seoKeyword.Name = 'My keyword';
-		seoKeyword.geolocation__c = 'Brisbane,Queensland,Australia';
 		seoKeyword.seoWebsites__c = seoWebsite.Id;
 		insert seoKeyword;
 

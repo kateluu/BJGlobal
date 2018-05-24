@@ -299,8 +299,9 @@ public with sharing class changeProductStatus {
 					toAddresses2.add('devteam@sponsoredlinx.com');
 				} else {
 					toAddresses2.add('accounts@sponsoredlinx.com');
-					toAddresses2.add('kate.lewis@sponsoredlinx.com');
+					toAddresses2.add('kate.lewis@sponsoredlinx.com');					
 					toAddresses2.add('tracey.daken@sponsoredlinx.com');
+					toAddresses2.add('monica.halim@sponsoredlinx.com');
 				}
 				mail2.setToAddresses(toAddresses2);
 				mail2.setSubject(email_subject);

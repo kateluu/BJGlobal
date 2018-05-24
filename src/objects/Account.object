@@ -262,6 +262,20 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>All_Active_Products__c</fullName>
+        <description>All Active Products</description>
+        <externalId>false</externalId>
+        <inlineHelpText>All Active Products</inlineHelpText>
+        <label>All Active Products</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Amex__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1684,6 +1698,26 @@
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Inactive_Accounts</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>email__c</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>extension__c</columns>
+        <columns>Active__c</columns>
+        <columns>ACCOUNT.CREATED_DATE</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Inactive Accounts</label>
+        <sharedTo>
+            <role>SLXSalesManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>MyAccounts</fullName>
         <columns>ACCOUNT.LAST_UPDATE</columns>
         <columns>ACCOUNT.NAME</columns>
@@ -1748,7 +1782,7 @@
         <label>ROI - Unhappy</label>
     </listViews>
     <listViews>
-        <fullName>SponsoredLinX</fullName>
+        <fullName>Sponsoredlinx</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>email__c</columns>
         <columns>ACCOUNT.PHONE1</columns>
@@ -1758,21 +1792,16 @@
         <columns>BJB_Company__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
             <field>BJB_Company__c</field>
-            <operation>contains</operation>
-            <value>Sponsored</value>
-        </filters>
-        <filters>
-            <field>CORE.USERS.FIRST_NAME</field>
             <operation>equals</operation>
-            <value>Nicholas</value>
+            <value>SponsoredLinX</value>
         </filters>
-        <filters>
-            <field>CORE.USERS.LAST_NAME</field>
-            <operation>equals</operation>
-            <value>Hadley</value>
-        </filters>
-        <label>SponsoredLinX Account</label>
+        <label>Sponsoredlinx</label>
         <sharedTo>
             <role>SLXSalesManager</role>
         </sharedTo>
@@ -1891,9 +1920,9 @@
     <validationRules>
         <fullName>CCDetailsNonEmpty</fullName>
         <active>true</active>
-        <errorConditionFormula>IF((ISPICKVAL(Payment_Option__c, &apos;Eway&apos;) || ISPICKVAL(Payment_Option__c, &apos;Commweb&apos;)) 
+        <errorConditionFormula>IF(((ISPICKVAL(Payment_Option__c, &apos;Eway&apos;) || ISPICKVAL(Payment_Option__c, &apos;Commweb&apos;)) &amp;&amp;(ISCHANGED(Card_Token__c)))
 &amp;&amp; (
-	(ISBLANK(Card_Number__c) &amp;&amp; ISBLANK(Card_Token__c)) ||
+	 ISBLANK(Card_Token__c) ||
 	ISBLANK(TEXT(Card_Month_Expiry__c)) ||
 	ISBLANK(TEXT(Card_Year_Expiry__c)) ||
 	ISBLANK(Name_On_Card__c)
@@ -2153,6 +2182,17 @@
         <masterLabel>Manage Credits</masterLabel>
         <openType>sidebar</openType>
         <page>Manage_Credits</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_Credit_Card</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Update Credit Card</masterLabel>
+        <openType>sidebar</openType>
+        <page>AccountBilling</page>
         <protected>false</protected>
     </webLinks>
     <webLinks>

@@ -737,6 +737,31 @@
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>ThisMonth_SponsoredLinX</fullName>
+        <columns>NAME</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Company__c</columns>
+        <columns>Email__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Assigned_To_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Company__c</field>
+            <operation>contains</operation>
+            <value>sponsoredlinx</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>ThisMonth_SponsoredLinX</label>
+        <sharedTo>
+            <group>Daniel_Andreotti</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>This_Months_Spam_Leads_SLX</fullName>
         <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
         <columns>NAME</columns>
@@ -788,6 +813,7 @@
         <columns>Lead_Status__c</columns>
         <columns>Assigned_To_Id__c</columns>
         <columns>CREATEDBY_USER</columns>
+        <columns>Company__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>

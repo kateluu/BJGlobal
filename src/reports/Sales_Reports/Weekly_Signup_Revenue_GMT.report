@@ -62,14 +62,14 @@
         <field>Sign_Up__c.Account_Products__r.Invoices__r$Status__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Weekly Signup Revenue GMT</name>
+    <name>GMT Weekly Signup Revenue</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
     <reportType>Signup_Invocies__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>Sign_Up__c$CreatedDate</dateColumn>
         <interval>INTERVAL_LASTWEEK</interval>

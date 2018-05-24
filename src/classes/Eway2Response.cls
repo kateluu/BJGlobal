@@ -16,14 +16,7 @@ public with sharing class Eway2Response {
 		this.responseBody = res.getBody();
 		this.params = (Map<String, Object>) JSON.deserializeUntyped(this.responseBody);
 
-		Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(this.responseBody);
-
-		system.debug('Errors: ' + m.get('Errors'));
-
-		Map<String, Object> customer = (Map<String, Object>) m.get('Customer');
-
-		system.debug('Customer: ' + customer);
-		system.debug('CardDetails: ' + customer.get('CardDetails'));
+		system.debug('Errors: ' + this.params.get('Errors'));
 	}
 
 	public void setErrors(String error) {
@@ -33,7 +26,9 @@ public with sharing class Eway2Response {
 	}
 
 	public Boolean isSuccessful() {
-		if ( (Boolean) this.params.get('TransactionStatus') == true ){
+		//if ( (Boolean) this.params.get('TransactionStatus') == true ){
+		// Can't use TransactionStatus because for "createToken" requests, it's false even on successful requests.
+		if ( this.params.get('ResponseCode') == '00' ){
 			return true;
 		} else {
 			return false;
@@ -351,10 +346,16 @@ public with sharing class Eway2Response {
 			'S9992' => 'Error connecting to Rapid gateway',
 			'S9993' => 'Authentication error',
 			'S9995' => 'Error converting to or from JSON, invalid parameter',
-			'S9996' => 'Rapid gateway server error'
+			'S9996' => 'Rapid gateway server error',
+			'W1'	=> 'Bank Unavailable', // Undocumented
+			'W2'	=> 'Bank Unavailable', // Undocumented
+			'W3'	=> 'Invalid Data Passed', // Undocumented
+			'W9'	=> 'Bank Unavailable' // Undocumented
 		};
 
-		return errorMessageMap.get(errorCode);
+		String errorMessage = Utility.ifnull(errorMessageMap.get(errorCode), 'Unknown error ' + errorCode);
+
+		return errorMessage;
 	}
 	
 }

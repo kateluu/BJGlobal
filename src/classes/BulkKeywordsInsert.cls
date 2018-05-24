@@ -1,16 +1,14 @@
 public with sharing class BulkKeywordsInsert {
 	public String bulk_keywords {set; get;}
-	public String website_name {get;set;}
-	private String website_id {get;set;}
 	public String geolocation {get;set;}
 	public seoThemeKeywords__c seoThemeKeyword {get;set;}
+	public seoWebsite__c seoWebsite {get;set;}
 
 	public BulkKeywordsInsert(ApexPages.StandardController controller){
 		seoThemeKeyword 	= (seoThemeKeywords__c)controller.getRecord();
-		this.website_id 	= seoThemeKeyword.seoWebsites__c;
 		
 		try{
-			this.website_name = [select Name from seoWebsite__c where id =: seoThemeKeyword.seoWebsites__c][0].Name;
+			this.seoWebsite = [select Id, Name, Geolocation__c FROM seoWebsite__c WHERE id =: seoThemeKeyword.seoWebsites__c][0];
 		}catch(Exception e){
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.WARNING, 'No SEO website found'));
 		}
@@ -23,14 +21,11 @@ public with sharing class BulkKeywordsInsert {
 			for(String keyword_name : keywords_array){
 				if(keyword_name.trim() != ''){
 					seoThemeKeywords__c keyword = new seoThemeKeywords__c();
-					keyword.seoWebsites__c      = this.website_id;
+					keyword.seoWebsites__c      = this.seoThemeKeyword.seoWebsites__c;
 					keyword.Name 				= keyword_name;
 
-					system.debug('geolocation: ' + this.geolocation);
-					system.debug('Geolocation__c: ' + this.seoThemeKeyword.Geolocation__c);
-
-					if (this.seoThemeKeyword.Geolocation__c != null){
-						keyword.Geolocation__c		= this.seoThemeKeyword.Geolocation__c;
+					if (this.seoThemeKeyword.Geolocation_Override__c != null && this.seoThemeKeyword.Geolocation_Override__c != this.seoWebsite.Geolocation__c){
+						keyword.Geolocation_Override__c		= this.seoThemeKeyword.Geolocation_Override__c;
 					}
 
 					keywords.add(keyword);	
@@ -41,13 +36,13 @@ public with sharing class BulkKeywordsInsert {
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'why not working here? '+e));
 			return null;
 		}
-		PageReference seoWebsitePage = new PageReference('/'+this.website_id);
+		PageReference seoWebsitePage = new PageReference('/'+this.seoThemeKeyword.seoWebsites__c);
         seoWebsitePage.setRedirect(true);
         return seoWebsitePage;
 	}
 	
 	public PageReference cancel(){
-		PageReference seoWebsitePage = new PageReference('/'+this.website_id);
+		PageReference seoWebsitePage = new PageReference('/'+this.seoThemeKeyword.seoWebsites__c);
         seoWebsitePage.setRedirect(true);
         return seoWebsitePage;
 	}
@@ -67,7 +62,6 @@ public with sharing class BulkKeywordsInsert {
 		seoThemeKeywords__c keyword = new seoThemeKeywords__c();
 		keyword.Name = 'test';
 		keyword.seoWebsites__c = seowebsite.Id;
-			
 		
 		ApexPages.standardController controller = new ApexPages.standardController(keyword);
 		BulkKeywordsInsert con = new BulkKeywordsInsert(controller);
@@ -82,10 +76,7 @@ public with sharing class BulkKeywordsInsert {
 	public static testMethod void bulkKeywordsInsertTest1() {
 		Test.StartTest();
 		
-		
 		seoThemeKeywords__c keyword = new seoThemeKeywords__c();
-		
-			
 		
 		ApexPages.standardController controller = new ApexPages.standardController(keyword);
 		BulkKeywordsInsert con = new BulkKeywordsInsert(controller);
@@ -96,13 +87,5 @@ public with sharing class BulkKeywordsInsert {
 			
 		Test.stopTest();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

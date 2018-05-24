@@ -1,25 +1,26 @@
-<apex:page controller="CheckoutController" showHeader="false" sidebar="false" standardStyleSheets="false" cache="false" action="{!index}">
+<apex:page controller="CheckoutController" showHeader="false" sidebar="false" standardStyleSheets="false" cache="false"
+           action="{!index}">
 
-	<apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
 
-	<apex:stylesheet value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/style.css" />
-	<apex:stylesheet value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/checkout.css?13" />
+    <apex:stylesheet value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/style.css"/>
+    <apex:stylesheet value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/checkout.css?13"/>
 
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-includes/js/jquery/jquery.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-includes/js/jquery/jquery.js"/>
 
-	<apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.matchHeight-min.js"/>
+    <apex:includeScript value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.matchHeight-min.js"/>
 
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.min.js"/>
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.center.js"/>
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.carousel.min.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.min.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.center.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.cycle2.carousel.min.js"/>
 
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.validate.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/jquery.validate.js"/>
 
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/stacktable.js"/>
-	<apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/checkout.js?13"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/stacktable.js"/>
+    <apex:includeScript value="https://www.sponsoredlinx.com.au/wp-content/themes/slx/js/checkout.js?13"/>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 var wrapperURL = "{!siteWrapperURL}";
 var addonsURL = "{!addonsURL}";
 // If we're not in an iframe, redirect to the checkout wrapper
@@ -35,33 +36,35 @@ jQuery(function ($) {
 	}
 });
 
-</script>
-
-<div class="page page-template page-template-page-checkout page-checkout-sf">
-
-<div id="wrapper">
-
-<div id="content">
-<div class="container">
-	<div class="row">
-		<div id="mainContent" class="col-sm-12">
-
-			<div class="the-content">
 
 
-<apex:pageMessages ></apex:pageMessages>
+    </script>
 
-<h2 id="MainHeader">Review Your Products</h2>
+    <div class="page page-template page-template-page-checkout page-checkout-sf">
 
-<apex:outputPanel rendered="{!IsCartEmpty == true}">
-	<span id="ErrorMessage">Your cart is currently empty</span>
-</apex:outputPanel>
+        <div id="wrapper">
 
-<apex:outputPanel rendered="{!IsCartEmpty == false}">
+            <div id="content">
+                <div class="container">
+                    <div class="row">
+                        <div id="mainContent" class="col-sm-12">
 
-	<div class="cart">
-		<apex:outputpanel id="theCart">
-		<script type="text/javascript">
+                            <div class="the-content">
+
+
+                                <apex:pageMessages ></apex:pageMessages>
+
+                                <h2 id="MainHeader">Review Your Products</h2>
+
+                                <apex:outputPanel rendered="{!IsCartEmpty == true}">
+                                    <span id="ErrorMessage">Your cart is currently empty</span>
+                                </apex:outputPanel>
+
+                                <apex:outputPanel rendered="{!IsCartEmpty == false}">
+
+                                    <div class="cart">
+                                        <apex:outputpanel id="theCart">
+                                            <script type="text/javascript">
 		// Whenever the cart is loaded/updated, we want to refresh the addons panel
 		var checkoutData = { 
 			"siteName"	: "{!siteName}",
@@ -81,469 +84,720 @@ jQuery(function ($) {
 				}
 			});
 		});
-		</script>
-
-		<div class="cart_table">
-			<div class="cart_head">
-				<div class="cart_left">Service</div>
-				<div class="cart_mid">Cost</div>
-				<div class="cart_right">Frequency</div>
-			</div>
-
-			<apex:repeat value="{!Packages}" var="items">
-				<apex:repeat value="{!items}" var="item" >
-				<div class="cart_body">
-					<div class="cart_left"><apex:outputText value="{!item.product.Name}" /></div>
-					<div class="cart_mid">
-						<apex:outputPanel rendered="{!item.priceNet != item.priceGross}">
-							now <span class="priceDiscounted">$<apex:outputText value="{!item.priceNet}" /></span>
-							<span class="priceWas">$<apex:outputText value="{!item.priceGross}" /></span>
-						</apex:outputPanel>
-
-						<apex:outputPanel rendered="{!item.priceNet == item.priceGross}">
-							<span class="priceNow">$<apex:outputText value="{!item.priceNet}" /></span>
-						</apex:outputPanel>		
-					</div>
-					<div class="cart_right">
-						<apex:outputText value="{!if(item.product.product_recurring__c == 'Yes' && item.product.recurring_period__c != null, item.product.recurring_period__c, 'One Off')}" />
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				</apex:repeat>
-			</apex:repeat>
-		</div>
-
-		<div class="cart_under_table row">
-			<div class="col-sm-6">
-				<div class="cart_promo">
-					<apex:form >
-					<div class="cart_promo_input">
-						<apex:inputText value="{!promocode}" id="newPromo" title="Please enter a valid promocode" styleClass="checkpromo" html-placeholder="Sales ID">
-							<apex:actionSupport event="onblur" action="{!applyPromocode}" reRender="theCart,slide-payment-left,slide-payment-right" />
-						</apex:inputText>
-					</div>
-					<div class="cart_promo_button">
-						<apex:commandButton action="{!applyPromocode}" value="Apply" id="apply" styleClass="promocode btn_cart_blue" reRender="theCart,slide-payment-left,slide-payment-right" />
-					</div>
-					</apex:form>
-				</div>
-			</div>
-			<div class="col-sm-6">
-
-				<apex:outputPanel rendered="{!TotalDiscountDescription != null}">
-					<div class="savings">{!TotalDiscountDescription}</div>
-				</apex:outputPanel>
-
-				<apex:repeat value="{!Totals}" var="totalId" >
-				<div class="cart_total">
-					<div class="cart_total_text">
-						<span class="bg_cart_blue">{!totalId} Total</span>
-					</div>
-					<div class="cart_total_number">
-						<input readonly="readonly" value="${!Totals[totalId]}" />
-					</div>
-				</div>
-				<div class="clearfix"></div>
-				</apex:repeat>
-			</div>
-		</div>
-		</apex:outputpanel>
-
-	</div>
-
-	<apex:form id="checkout-form" styleClass="checkout-form" >
-	<h2>Enter Your Details</h2>
-	<div class="checkout_holder">
-
-	    <div class="checkout_steps">
-	        <ul>
-	            <li id="checkout_step_1" class="checkout_step steps_active" data-target-slide="checkout_slide_1"><span>Your Details</span></li>
-	            <li id="checkout_step_2" class="checkout_step" data-target-slide="checkout_slide_2"><span>Billing/Mailing Address</span></li>
-	            <li id="checkout_step_3" class="checkout_step checkout_step_disabled" data-target-slide="checkout_slide_3"><span>Offers</span></li>
-	            <li id="checkout_step_4" class="checkout_step" data-target-slide="checkout_slide_4"><span>Payment Information</span></li>
-	            <li id="checkout_step_5" class="checkout_step" data-target-slide="checkout_slide_5"><span>Submit</span></li>
-	        </ul>
-	    </div>
-		<div class="checkout_block">
-			<div id="checkout_slide_1" class="checkout_slide">
-				<div class="row">
-					<div class="col-sm-6 checkout_block_left">
-						<h4>Your Details</h4>
-						<div class="form_group reqd">
-							<label class="form-label" for="firstname">First Name:</label>
-							<apex:inputField value="{!signup.Firstname__c}" required="true" />
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label" for="lastname">Last Name:</label>
-							<apex:inputField value="{!signup.Lastname__c}" required="true" />
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label" for="client_email">Client Email:</label>
-							<apex:inputField value="{!signup.Email__c}" required="true" />
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label" for="phone">Contact Phone:</label>
-							<apex:inputField value="{!signup.Phone__c}" required="true" />
-						</div>
-						<div class="form_group">
-							<label class="form-label" for="mobile">Mobile Phone: </label>
-							<apex:inputField value="{!signup.Mobile__c}"/>
-						</div>
-					</div>
-					<div class="col-sm-6 checkout_block_right">
-						<h4>Company Details</h4>
-						<div class="form_group reqd">
-							<label class="form-label" for="company">Company Name:</label>
-							<apex:inputField value="{!signup.Company__c}" required="true" />
-						</div>
-						<div class="form_group">
-							<label class="form-label" for="webaddress">Website:</label>
-							<apex:inputField value="{!signup.Website__c}"/>
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label" for="industry">Industry:</label>
-							<apex:inputField value="{!acc.Industry}"/>
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label" for="number_of_employee">Number of Employees:</label>
-							<apex:inputField value="{!acc.Number_of_Employees__c}"/>
-						</div>
-						<div class="submit_group TAL">
-							<p class="talk">Need to talk to someone? Call Us <span class="fw_regular">1300 859 600</span></p>
-						</div>
-						<div class="submit_group TAR">
-							<input class="btn_cart_orange next_slide" type="button" value="Next" />
-						</div>
-					</div>
-				</div>
-		    </div><!-- checkout_slide_1 -->
-
-		    <div id="checkout_slide_2" class="checkout_slide">
-				<div class="row">
-					<div class="col-sm-6 checkout_block_left">
-						<h4>Billing Address</h4>
-						<div class="form_group reqd">
-							<label class="form-label">Street:</label>
-							<apex:inputText value="{!signup.Street__c}" required="true" />
-						</div>
-
-						<div class="form_group reqd">
-							<label class="form-label">Suburb/town:</label>
-							<apex:inputField value="{!signup.City__c}" required="true" />
-						</div>
-						<div class="form_group reqd">
-							<label class="form-label">Postcode:</label>
-							<apex:inputField value="{!signup.PostalCode__c}" required="true" />
-						</div>
-
-						<apex:outputPanel rendered="{!locale == 'AUD'}">
-						<div class="form_group reqd">
-							<label class="form-label">State:</label>
-							<apex:selectList value="{!signup.State__c}" multiselect="false" size="1" title="Please choose your state" required="true" >
-								<apex:selectOptions value="{!stateOptions}"/>
-	        				</apex:selectList>
-						</div>
-						</apex:outputPanel>
-					</div>
-					<div class="col-sm-6 checkout_block_right">
-						<div>
-						<label style="font-weight:300">
-						<apex:actionRegion >
-							<apex:inputCheckbox value="{!mailing_address}" styleClass="mailing_address">
-								<apex:actionSupport event="onchange" action="{!index}" reRender="mailing-address-fields"/>
-							</apex:inputCheckbox>
-						</apex:actionRegion>
-						Mailing Address Same As Billing Address</label>
-						</div>
-
-						<apex:outputPanel id="mailing-address-fields">
-							<div class="form_group {!IF(mailing_address,'','reqd')}">
-							<label class="form-label">Street:</label>
-							<apex:inputText value="{!signup.MailingStreet__c}" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
-							</div>
-							<div class="form_group {!IF(mailing_address,'','reqd')}">
-							<label class="form-label">Suburb/town:</label>
-							<apex:inputText value="{!signup.MailingCity__c}" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
-							</div>
-							<div class="form_group {!IF(mailing_address,'','reqd')}">
-							<label class="form-label">Postcode:</label>
-							<apex:inputText value="{!signup.MailingPostalCode__c}" required="{!NOT(mailing_address)}" disabled="{!mailing_address}"/>
-							</div>
-
-							<apex:outputPanel rendered="{!locale == 'AUD'}">
-							<div class="form_group select {!IF(mailing_address,'','reqd')}">
-								<label class="form-label">State:</label>
-								<apex:selectList value="{!signup.MailingState__c}" multiselect="false" size="1" title="Please choose your state" required="{!NOT(mailing_address)}" disabled="{!mailing_address}">
-									<apex:selectOptions value="{!stateOptions}"/>
-		        				</apex:selectList>
-							</div>
-							</apex:outputPanel>
-						</apex:outputPanel>
 
 
-						<div class="submit_group TAL">
-							<p class="talk">Need to talk to someone? Call Us <span class="fw_regular">1300 859 600</span></p>
-						</div>
-                        <div class="submit_group TAR">
-                            <input class="btn_cart_orange next_slide" type="button" value="Next" />
-                        </div>
-					</div>
-				</div>
-		    </div><!-- checkout_slide_2 -->
+                                            </script>
+
+                                            <div class="cart_table">
+                                                <div class="cart_head">
+                                                    <div class="cart_left">Service</div>
+                                                    <div class="cart_mid">Cost</div>
+                                                    <div class="cart_right">Frequency</div>
+                                                </div>
+
+                                                <apex:repeat value="{!Packages}" var="items">
+                                                    <apex:repeat value="{!items}" var="item">
+                                                        <div class="cart_body">
+                                                            <div class="cart_left">
+                                                                <apex:outputText value="{!item.product.Name}"/>
+                                                            </div>
+                                                            <div class="cart_mid">
+                                                                <apex:outputPanel rendered="{!item.priceNet != item.priceGross}">
+                                                                    now <span class="priceDiscounted">$<apex:outputText value="{!item.priceNet}"/></span>
+                                                                    <span class="priceWas">$<apex:outputText value="{!item.priceGross}"/></span>
+                                                                </apex:outputPanel>
+
+                                                                <apex:outputPanel rendered="{!item.priceNet == item.priceGross}">
+                                                                    <span class="priceNow">$<apex:outputText value="{!item.priceNet}"/></span>
+                                                                </apex:outputPanel>
+                                                            </div>
+                                                            <div class="cart_right">
+                                                                <apex:outputText value="{!if(item.product.product_recurring__c == 'Yes' && item.product.recurring_period__c != null, item.product.recurring_period__c, 'One Off')}"/>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </apex:repeat>
+                                                </apex:repeat>
+                                            </div>
+
+                                            <div class="cart_under_table row">
+                                                <div class="col-sm-6">
+                                                    <div class="cart_promo">
+                                                        <apex:form >
+                                                            <div class="cart_promo_input">
+                                                                <apex:inputText value="{!promocode}" id="newPromo"
+                                                                                title="Please enter a valid promocode"
+                                                                                styleClass="checkpromo"
+                                                                                html-placeholder="Sales ID">
+                                                                    <apex:actionSupport event="onblur"
+                                                                                        action="{!applyPromocode}"
+                                                                                        reRender="theCart,slide-payment-left,slide-payment-right"/>
+                                                                </apex:inputText>
+                                                            </div>
+                                                            <div class="cart_promo_button">
+                                                                <apex:commandButton action="{!applyPromocode}"
+                                                                                    value="Apply" id="apply"
+                                                                                    styleClass="promocode btn_cart_blue"
+                                                                                    reRender="theCart,slide-payment-left,slide-payment-right"/>
+                                                            </div>
+                                                        </apex:form>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+
+                                                    <apex:outputPanel rendered="{!TotalDiscountDescription != null}">
+                                                        <div class="savings">{!TotalDiscountDescription}</div>
+                                                    </apex:outputPanel>
+
+                                                    <apex:repeat value="{!Totals}" var="totalId">
+                                                        <div class="cart_total">
+                                                            <div class="cart_total_text">
+                                                                <span class="bg_cart_blue">{!totalId} Total</span>
+                                                            </div>
+                                                            <div class="cart_total_number">
+                                                                <input readonly="readonly" value="${!Totals[totalId]}"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </apex:repeat>
+                                                </div>
+                                            </div>
+                                        </apex:outputpanel>
+
+                                    </div>
+
+                                    <apex:form id="checkout-form" styleClass="checkout-form">
+                                        <h2>Enter Your Details</h2>
+                                        <div class="checkout_holder">
+
+                                            <div class="checkout_steps">
+                                                <ul>
+                                                    <li id="checkout_step_1" class="checkout_step steps_active"
+                                                        data-target-slide="checkout_slide_1"><span>Your Details</span>
+                                                    </li>
+                                                    <li id="checkout_step_2" class="checkout_step"
+                                                        data-target-slide="checkout_slide_2"><span>Billing/Mailing Address</span>
+                                                    </li>
+                                                    <li id="checkout_step_3"
+                                                        class="checkout_step checkout_step_disabled"
+                                                        data-target-slide="checkout_slide_3"><span>Offers</span></li>
+                                                    <li id="checkout_step_4" class="checkout_step"
+                                                        data-target-slide="checkout_slide_4">
+                                                        <span>Payment Information</span></li>
+                                                    <li id="checkout_step_5" class="checkout_step"
+                                                        data-target-slide="checkout_slide_5"><span>Submit</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="checkout_block">
+                                                <div id="checkout_slide_1" class="checkout_slide">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 checkout_block_left">
+                                                            <h4>Your Details</h4>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="firstname">First
+                                                                    Name:</label>
+                                                                <apex:inputField value="{!signup.Firstname__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="lastname">Last
+                                                                    Name:</label>
+                                                                <apex:inputField value="{!signup.Lastname__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="client_email">Client
+                                                                    Email:</label>
+                                                                <apex:inputField value="{!signup.Email__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="phone">Contact
+                                                                    Phone:</label>
+                                                                <apex:inputField value="{!signup.Phone__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <label class="form-label" for="mobile">Mobile
+                                                                    Phone: </label>
+                                                                <apex:inputField value="{!signup.Mobile__c}"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6 checkout_block_right">
+                                                            <h4>Company Details</h4>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="company">Company
+                                                                    Name:</label>
+                                                                <apex:inputField value="{!signup.Company__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group">
+                                                                <label class="form-label"
+                                                                       for="webaddress">Website:</label>
+                                                                <apex:inputField value="{!signup.Website__c}"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label"
+                                                                       for="industry">Industry:</label>
+                                                                <apex:inputField value="{!acc.Industry}"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label" for="number_of_employee">Number
+                                                                    of Employees:</label>
+                                                                <apex:inputField value="{!acc.Number_of_Employees__c}"/>
+                                                            </div>
+                                                            <div class="submit_group TAL">
+                                                                <p class="talk">Need to talk to someone? Call Us <span
+                                                                        class="fw_regular">1300 859 600</span></p>
+                                                            </div>
+                                                            <div class="submit_group TAR">
+                                                                <input class="btn_cart_orange next_slide" type="button"
+                                                                       value="Next"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- checkout_slide_1 -->
+
+                                                <div id="checkout_slide_2" class="checkout_slide">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 checkout_block_left">
+                                                            <h4>Billing Address</h4>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label">Street:</label>
+                                                                <apex:inputText value="{!signup.Street__c}"
+                                                                                required="true"/>
+                                                            </div>
+
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label">Suburb/town:</label>
+                                                                <apex:inputField value="{!signup.City__c}"
+                                                                                 required="true"/>
+                                                            </div>
+                                                            <div class="form_group reqd">
+                                                                <label class="form-label">Postcode:</label>
+                                                                <apex:inputField value="{!signup.PostalCode__c}"
+                                                                                 required="true"/>
+                                                            </div>
+
+                                                            <apex:outputPanel rendered="{!locale == 'AUD'}">
+                                                                <div class="form_group reqd">
+                                                                    <label class="form-label">State:</label>
+                                                                    <apex:selectList value="{!signup.State__c}"
+                                                                                     multiselect="false" size="1"
+                                                                                     title="Please choose your state"
+                                                                                     required="true">
+                                                                        <apex:selectOptions value="{!stateOptions}"/>
+                                                                    </apex:selectList>
+                                                                </div>
+                                                            </apex:outputPanel>
+                                                        </div>
+                                                        <div class="col-sm-6 checkout_block_right">
+                                                            <div>
+                                                                <label style="font-weight:300">
+                                                                    <apex:actionRegion >
+                                                                        <apex:inputCheckbox value="{!mailing_address}"
+                                                                                            styleClass="mailing_address">
+                                                                            <apex:actionSupport event="onchange"
+                                                                                                action="{!index}"
+                                                                                                reRender="mailing-address-fields"/>
+                                                                        </apex:inputCheckbox>
+                                                                    </apex:actionRegion>
+                                                                    Mailing Address Same As Billing Address</label>
+                                                            </div>
+
+                                                            <apex:outputPanel id="mailing-address-fields">
+                                                                <div class="form_group {!IF(mailing_address,'','reqd')}">
+                                                                    <label class="form-label">Street:</label>
+                                                                    <apex:inputText value="{!signup.MailingStreet__c}"
+                                                                                    required="{!NOT(mailing_address)}"
+                                                                                    disabled="{!mailing_address}"/>
+                                                                </div>
+                                                                <div class="form_group {!IF(mailing_address,'','reqd')}">
+                                                                    <label class="form-label">Suburb/town:</label>
+                                                                    <apex:inputText value="{!signup.MailingCity__c}"
+                                                                                    required="{!NOT(mailing_address)}"
+                                                                                    disabled="{!mailing_address}"/>
+                                                                </div>
+                                                                <div class="form_group {!IF(mailing_address,'','reqd')}">
+                                                                    <label class="form-label">Postcode:</label>
+                                                                    <apex:inputText value="{!signup.MailingPostalCode__c}"
+                                                                            required="{!NOT(mailing_address)}"
+                                                                            disabled="{!mailing_address}"/>
+                                                                </div>
+
+                                                                <apex:outputPanel rendered="{!locale == 'AUD'}">
+                                                                    <div class="form_group select {!IF(mailing_address,'','reqd')}">
+                                                                        <label class="form-label">State:</label>
+                                                                        <apex:selectList value="{!signup.MailingState__c}"
+                                                                                multiselect="false" size="1"
+                                                                                title="Please choose your state"
+                                                                                required="{!NOT(mailing_address)}"
+                                                                                disabled="{!mailing_address}">
+                                                                            <apex:selectOptions value="{!stateOptions}"/>
+                                                                        </apex:selectList>
+                                                                    </div>
+                                                                </apex:outputPanel>
+                                                            </apex:outputPanel>
 
 
-		    <div id="checkout_slide_3" class="checkout_slide">
-		    	<apex:actionRegion >
-				<div id="addonFeature">
-				</div>
-
-				<div class="row">
-					<div class="col-sm-6">
-					</div>
-					<div class="col-sm-6 checkout_block_right">
-						<div class="submit_group TAL">
-							<p class="talk">Need to talk to someone? Call Us <span class="fw_regular">1300 859 600</span></p>
-						</div>
-		                <div class="submit_group TAR">
-		                    <apex:commandButton action="{!index}" value="Apply" styleClass="addon-apply" reRender="theCart,terms" />
-		                    <!--<apex:commandButton action="{!addPackage}" value="Next" id="addon-submit" styleClass="btn_cart_orange next_slide" reRender="theCart,terms" />-->
-		                    <input class="btn_cart_orange next_slide" type="button" value="Next" />
-		                </div>
-					</div>
-				</div>
-				</apex:actionRegion>
-			</div><!-- checkout_slide_3 -->
+                                                            <div class="submit_group TAL">
+                                                                <p class="talk">Need to talk to someone? Call Us <span
+                                                                        class="fw_regular">1300 859 600</span></p>
+                                                            </div>
+                                                            <div class="submit_group TAR">
+                                                                <input class="btn_cart_orange next_slide" type="button"
+                                                                       value="Next"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- checkout_slide_2 -->
 
 
-		    <div id="checkout_slide_4" class="checkout_slide">
-				<div class="row">
-					<div class="col-sm-6 checkout_block_left">
-						<apex:outputPanel id="slide-payment-left">
-						<h4>Payment Method</h4>
+                                                <div id="checkout_slide_3" class="checkout_slide">
+                                                    <apex:actionRegion >
+                                                        <div id="addonFeature">
+                                                        </div>
 
-						<apex:outputPanel rendered="{!paymentTypeOptions.size > 1}">
-						<div class="form_group reqd">
-							<label class="form-label">How would you like to pay?</label>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                            </div>
+                                                            <div class="col-sm-6 checkout_block_right">
+                                                                <div class="submit_group TAL">
+                                                                    <p class="talk">Need to talk to someone? Call Us
+                                                                        <span class="fw_regular">1300 859 600</span></p>
+                                                                </div>
+                                                                <div class="submit_group TAR">
+                                                                    <apex:commandButton action="{!index}" value="Apply"
+                                                                                        styleClass="addon-apply"
+                                                                                        reRender="theCart,terms"/>
+                                                                    <!--<apex:commandButton action="{!addPackage}" value="Next" id="addon-submit" styleClass="btn_cart_orange next_slide" reRender="theCart,terms" />-->
+                                                                    <input class="btn_cart_orange next_slide"
+                                                                           type="button" value="Next"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </apex:actionRegion>
+                                                </div><!-- checkout_slide_3 -->
 
-							<apex:actionRegion >
-								<apex:selectList value="{!paymentType}" multiselect="false" size="1" required="true">
-									<apex:selectOptions value="{!paymentTypeOptions}"/>
 
-									<apex:actionSupport event="onchange" action="{!applyPaymentType}" reRender="slide-payment-left,slide-payment-right"/>
-		        				</apex:selectList>
-	        				</apex:actionRegion>
-						</div>
-						</apex:outputPanel>
+                                                <div id="checkout_slide_4" class="checkout_slide">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 checkout_block_left">
+                                                            <apex:outputPanel id="slide-payment-left">
+                                                                <h4>Payment Method</h4>
 
-						<apex:outputPanel rendered="{!paymentType == 'Credit Card'}">
-						<div class="credit-card">
-							<div class="form_group reqd">
-								<label class="form-label">Card Type:</label>
-								<apex:selectList value="{!cardType}" multiselect="false" size="1" title="Please enter your card type" required="true">
-									<apex:selectOption itemValue="" itemLabel=""/>
-									<apex:selectOptions value="{!creditCardOptions}"/>
-		        				</apex:selectList>
-							</div>
-							<div class="form_group reqd">
-								<label class="form-label">Name on card:</label>
-								<apex:inputField value="{!acc.Name_On_Card__c}" html-title="Please enter your card name" required="true" />
-							</div>
-							<div class="form_group reqd">
-								<label class="form-label">Credit Card Number:</label>
-								<apex:inputField value="{!acc.Card_Number__c}" html-title="Please enter your card number" required="true" />
-							</div>
-						</div>
-						</apex:outputPanel>
+                                                                <apex:outputPanel rendered="{!paymentTypeOptions.size > 1}">
+                                                                    <div class="form_group reqd">
+                                                                        <label class="form-label">How would you like to
+                                                                            pay?</label>
 
-						<apex:outputPanel rendered="{!paymentType == 'Direct Debit'}">
-						<div class="direct-debit">
-							<div class="form_group reqd">
-								<label class="form-label">Date of Birth:</label>
-								<apex:selectList value="{!birthDay}" multiselect="false" size="1" title="Please enter your birth day" style="width: 75px; display: inline-block" required="true">
-									<apex:selectOptions value="{!dayOptions}"/>
-		        				</apex:selectList>
+                                                                        <apex:actionRegion >
+                                                                            <apex:selectList value="{!paymentType}"
+                                                                                             multiselect="false"
+                                                                                             size="1" required="true">
+                                                                                <apex:selectOptions value="{!paymentTypeOptions}"/>
 
-								<apex:selectList value="{!birthMonth}" multiselect="false" size="1" title="Please enter your birth month" style="width: 145px; display: inline-block" required="true">
-									<apex:selectOptions value="{!monthOptions}"/>
-		        				</apex:selectList>
+                                                                                <apex:actionSupport event="onchange"
+                                                                                                    action="{!applyPaymentType}"
+                                                                                                    reRender="slide-payment-left,slide-payment-right"/>
+                                                                            </apex:selectList>
+                                                                        </apex:actionRegion>
+                                                                    </div>
+                                                                </apex:outputPanel>
 
-								<apex:selectList value="{!birthYear}" multiselect="false" size="1" title="Please enter your birth year" style="width: 85px; display: inline-block" required="true">
-									<apex:selectOptions value="{!birthYearOptions}"/>
-		        				</apex:selectList>
-							</div>
-							<div class="form_group reqd">
-								<label class="form-label">Account Name:</label>
-								<apex:inputField value="{!signup.Direct_Debit_Account_Name__c}" html-title="Please enter your account name" required="true" />
-							</div>
-							<div class="form_group reqd">
-								<label class="form-label">BSB:</label>
-								<apex:actionRegion >
-									<apex:inputField value="{!acc.BSB__c}" html-title="Please enter your BSB" required="true" styleClass="field-bsb">
-									</apex:inputField>
-								</apex:actionRegion>
-							</div>
-							<div class="form_group reqd">
-								<label class="form-label">Account Number:</label>
-								<apex:inputField value="{!acc.Account_No__c}" html-title="Please enter your account number" required="true" styleClass="field-accno"/>
-							</div>
-						</div>
-						</apex:outputPanel>
-						
-						<apex:outputPanel rendered="{!paymentType == 'Invoice'}">
-							<p>You will be issued with an invoice from SponsoredLinX.</p>
-						</apex:outputPanel>
-						</apex:outputPanel>
-					</div>
-					<div class="col-sm-6 checkout_block_right">
-						<apex:outputPanel id="slide-payment-right">
-						<apex:outputPanel rendered="{!paymentType == 'Credit Card'}">
-						<div class="credit-card">
-							<div class="form_group reqd">
-								<label class="form-label">Card expiry date:</label>
+                                                                <apex:outputPanel rendered="{!paymentType == 'Credit Card'}">
+                                                                    <div class="credit-card">
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Card Type:</label>
+                                                                            <apex:selectList value="{!cardType}"
+                                                                                             multiselect="false"
+                                                                                             size="1"
+                                                                                             title="Please enter your card type"
+                                                                                             required="true">
+                                                                                <apex:selectOption itemValue=""
+                                                                                                   itemLabel=""/>
+                                                                                <apex:selectOptions value="{!creditCardOptions}"/>
+                                                                            </apex:selectList>
+                                                                        </div>
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Name on
+                                                                                card:</label>
+                                                                            <apex:inputField value="{!acc.Name_On_Card__c}"
+                                                                                    html-title="Please enter your card name"
+                                                                                    required="true"/>
+                                                                        </div>
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Credit Card
+                                                                                Number:</label>
+                                                                            <apex:inputText value="{!cardDetails.Card_Number}" required="true"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </apex:outputPanel>
 
-								<apex:selectList value="{!acc.Card_Month_Expiry__c}" multiselect="false" size="1" style="width: 145px; display: inline-block" required="true">
-									<apex:selectOptions value="{!monthOptions}"/>
-		        				</apex:selectList>
-								<apex:selectList value="{!acc.Card_Year_Expiry__c}" multiselect="false" size="1" style="width: 85px; display: inline-block" required="true">
-									<apex:selectOptions value="{!cardYearOptions}"/>
-		        				</apex:selectList>
-							</div>
+                                                                <apex:outputPanel rendered="{!paymentType == 'Direct Debit'}">
+                                                                    <div class="direct-debit">
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Date of
+                                                                                Birth:</label>
+                                                                            <apex:selectList value="{!birthDay}"
+                                                                                             multiselect="false"
+                                                                                             size="1"
+                                                                                             title="Please enter your birth day"
+                                                                                             style="width: 75px; display: inline-block"
+                                                                                             required="true">
+                                                                                <apex:selectOptions value="{!dayOptions}"/>
+                                                                            </apex:selectList>
 
-							<div class="form_group reqd">
-								<label class="form-label">CVN:</label>
-								<apex:inputField value="{!acc.Card_CVN__c}" required="true" />
-								<p class="cvn"><span>&nbsp;</span>(the last 3 digits on the back of your card)</p>
-							</div>
-						</div>
-						</apex:outputPanel>
-						
-						<apex:outputPanel rendered="{!paymentType == 'Direct Debit'}">
-						<h4>Direct Debit Agreement</h4>
-                        <div id="directdebit_terms" class="reqd">
-                            <label class="form-label">
-                            <apex:inputCheckbox value="{!termsDD1}" required="true" />
-                             I request and authorise <strong>BJB Global Pty Ltd (APCA ID 406-126) trading as SponsoredLinx</strong> to arrange, through its own financial institution, a debit to your nominated account any amount <strong>BJB Global Pty Ltd</strong> has deemed payable by <em>you</em>. This debit or charge will be made through the Bulk Electronic Clearing System (BECS) from your account held at the financial institution you have nominated here and will be subject to the terms and conditions of the <a href="https://www.sponsoredlinx.com.au/wp-content/themes/slx/pdf/DDRFormSLX.pdf" target="_blank">Direct Debit Request Service Agreement</a>.
-                            </label>
-                        </div>
-						</apex:outputPanel>
-						</apex:outputPanel>
+                                                                            <apex:selectList value="{!birthMonth}"
+                                                                                             multiselect="false"
+                                                                                             size="1"
+                                                                                             title="Please enter your birth month"
+                                                                                             style="width: 145px; display: inline-block"
+                                                                                             required="true">
+                                                                                <apex:selectOptions value="{!monthOptions}"/>
+                                                                            </apex:selectList>
 
-                        <div class="submit_group">
-                            <input class="btn_cart_orange next_slide" type="button" value="Next" />
-                        </div>
-					</div>
-				</div>
-			</div><!-- checkout_slide_4 -->
+                                                                            <apex:selectList value="{!birthYear}"
+                                                                                             multiselect="false"
+                                                                                             size="1"
+                                                                                             title="Please enter your birth year"
+                                                                                             style="width: 85px; display: inline-block"
+                                                                                             required="true">
+                                                                                <apex:selectOptions value="{!birthYearOptions}"/>
+                                                                            </apex:selectList>
+                                                                        </div>
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Account
+                                                                                Name:</label>
+                                                                            <apex:inputField value="{!signup.Direct_Debit_Account_Name__c}"
+                                                                                    html-title="Please enter your account name"
+                                                                                    required="true"/>
+                                                                        </div>
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">BSB:</label>
+                                                                            <apex:actionRegion >
+                                                                                <apex:inputField value="{!acc.BSB__c}"
+                                                                                                 html-title="Please enter your BSB"
+                                                                                                 required="true"
+                                                                                                 styleClass="field-bsb">
+                                                                                </apex:inputField>
+                                                                            </apex:actionRegion>
+                                                                        </div>
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Account
+                                                                                Number:</label>
+                                                                            <apex:inputField value="{!acc.Account_No__c}"
+                                                                                    html-title="Please enter your account number"
+                                                                                    required="true"
+                                                                                    styleClass="field-accno"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </apex:outputPanel>
 
-            <div id="checkout_slide_5" class="checkout_slide">
-                <div class="row">
-                    <div class="col-sm-6 checkout_block_left">
-                        <h4>Comments</h4>
-                        <div class="form_group">
-                            <label class="form-label" for="comments">Comments:</label>
-                            <apex:inputField value="{!signup.Comments__c}" style="width: 100%;"/>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 checkout_block_right terms-panel">
+                                                                <apex:outputPanel rendered="{!paymentType == 'Invoice'}">
+                                                                    <p>You will be issued with an invoice from
+                                                                        SponsoredLinX.</p>
+                                                                </apex:outputPanel>
+                                                            </apex:outputPanel>
+                                                        </div>
+                                                        <div class="col-sm-6 checkout_block_right">
+                                                            <apex:outputPanel id="slide-payment-right">
+                                                                <apex:outputPanel rendered="{!paymentType == 'Credit Card'}">
+                                                                    <div class="credit-card">
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">Card expiry
+                                                                                date:</label>
 
-                    <apex:outputpanel id="terms">
+                                                                            <apex:selectList value="{!acc.Card_Month_Expiry__c}"
+                                                                                    multiselect="false" size="1"
+                                                                                    style="width: 145px; display: inline-block"
+                                                                                    required="true">
+                                                                                <apex:selectOptions value="{!monthOptions}"/>
+                                                                            </apex:selectList>
+                                                                            <apex:selectList value="{!acc.Card_Year_Expiry__c}"
+                                                                                    multiselect="false" size="1"
+                                                                                    style="width: 85px; display: inline-block"
+                                                                                    required="true">
+                                                                                <apex:selectOptions value="{!cardYearOptions}"/>
+                                                                            </apex:selectList>
+                                                                        </div>
 
-						<script type="text/javascript">
+                                                                        <div class="form_group reqd">
+                                                                            <label class="form-label">CVN:</label>
+                                                                            <apex:inputText value="{!cardDetails.Card_CVN}" required="true"/>
+                                                                            <p class="cvn"><span>&nbsp;</span>(the last
+                                                                                3 digits on the back of your card)</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </apex:outputPanel>
+
+                                                                <apex:outputPanel rendered="{!paymentType == 'Direct Debit'}">
+                                                                    <h4>Direct Debit Agreement</h4>
+                                                                    <div id="directdebit_terms" class="reqd">
+                                                                        <label class="form-label">
+                                                                            <apex:inputCheckbox value="{!termsDD1}"
+                                                                                                required="true"/>
+                                                                            I request and authorise <strong>BJB Global
+                                                                            Pty Ltd (APCA ID 406-126) trading as
+                                                                            SponsoredLinx</strong> to arrange, through
+                                                                            its own financial institution, a debit to
+                                                                            your nominated account any amount <strong>BJB
+                                                                            Global Pty Ltd</strong> has deemed payable
+                                                                            by <em>you</em>. This debit or charge will
+                                                                            be made through the Bulk Electronic Clearing
+                                                                            System (BECS) from your account held at the
+                                                                            financial institution you have nominated
+                                                                            here and will be subject to the terms and
+                                                                            conditions of the <a
+                                                                                href="https://www.sponsoredlinx.com.au/wp-content/themes/slx/pdf/DDRFormSLX.pdf"
+                                                                                target="_blank">Direct Debit Request
+                                                                            Service Agreement</a>.
+                                                                        </label>
+                                                                    </div>
+                                                                </apex:outputPanel>
+                                                            </apex:outputPanel>
+
+                                                            <div class="submit_group">
+                                                                <input class="btn_cart_orange next_slide" type="button"
+                                                                       value="Next"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- checkout_slide_4 -->
+
+                                                <div id="checkout_slide_5" class="checkout_slide">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 checkout_block_left">
+                                                            <h4>Comments</h4>
+                                                            <div class="form_group">
+                                                                <label class="form-label"
+                                                                       for="comments">Comments:</label>
+                                                                <apex:inputField value="{!signup.Comments__c}"
+                                                                                 style="width: 100%;"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6 checkout_block_right terms-panel">
+
+                                                            <apex:outputpanel id="terms">
+
+                                                                <script type="text/javascript">
 						jQuery(function ($) {
 							// Visualforce doesn't put the 'required' attribute on required fields, so we do it here so that client-side validation works.
 							// This code is also in the main javascript file, however we also have to include it here so that when the 'terms' output 
 							// panel gets reloaded from the addons, the required attribute is added.
 							$('.reqd input, .reqd select').attr('required', true);
 						});
-						</script>
-
-						<apex:repeat value="{!productFamilies}" var="family" >
-
-                        <apex:outputPanel rendered="{!family == 'SEO'}">
-                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>SEO:</h5></apex:outputPanel>
-                        <div class="terms-block reqd">
-                            <label class="form-label"><apex:inputCheckbox value="{!termsSeo1}" required="true"/> The first months management will be deducted from your account via your nominated payment method.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsSeo2}" required="true"/> Your Monthly management fee will be automatically debited in advance one month from today via your nominated billing method, ongoing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsSeo3}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsSeo4}" required="true"/> In ticking this box, you agree to our <a href="{!siteWrapperURL}/seo-terms/" target="_blank">SEO Terms &amp; Conditions</a>.</label>
-                        </div>
-                        </apex:outputPanel>
-
-                        <apex:outputPanel rendered="{!family == 'Facebook'}">
-                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>Facebook:</h5></apex:outputPanel>
-                        <div class="terms-block reqd">
-                            <label class="form-label"><apex:inputCheckbox value="{!termsFacebook1}" required="true"/> Your Facebook advertising spend is separate to these fees and is paid directly to Facebook.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsFacebook2}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsFacebook3}" required="true"/> Ongoing management fees will be automatically debited in arrears via your nominated billing method.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsFacebook4}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsFacebook5}" required="true"/> In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms/" target="_blank">Facebook Terms &amp; Conditions</a>.</label>
-                        </div>
-                        </apex:outputPanel>
-
-                        <apex:outputPanel rendered="{!family == 'ConvertoPages'}">
-                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>ConvertoPages:</h5></apex:outputPanel>
-                        <div class="terms-block reqd">
-                            <label class="form-label"><apex:inputCheckbox value="{!termsWeb1}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsWeb2}" required="true"/> Monthly management fee will be automatically debited in arrears one month from today via your nominated billing method, weekly ongoing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsWeb3}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsWeb4}" required="true"/> I understand this service can only run on the ConvertoPage platform.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsWeb5}" required="true"/> In ticking this box, you agree to our <a href="{!siteWrapperURL}/convertopages-terms/" target="_blank">ConvertoPages Terms &amp; Conditions</a>.</label>
-                        </div>
-                        </apex:outputPanel>
-
-                        <apex:outputPanel rendered="{!family == 'AdWords'}">
-                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>AdWords:</h5></apex:outputPanel>
-                        <div class="terms-block reqd">
-                            <label class="form-label"><apex:inputCheckbox value="{!termsAdwords1}" required="true"/> Your Google spend is separate to the weekly fee and is paid directly to Google.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsAdwords2}" required="true"/> The initial set-up fee will be deducted from your account via your nominated payment method.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsAdwords3}" required="true"/> Weekly management fee will be automatically debited in arrears seven days from today via your nominated billing method, weekly ongoing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsAdwords4}" required="true"/> If you wish to cancel your service we require a minimum of two weeks notice in writing.</label>
-                            <label class="form-label"><apex:inputCheckbox value="{!termsAdwords5}" required="true"/> In ticking this box, you agree to our <a href="{!siteWrapperURL}/terms/" target="_blank">AdWords Terms &amp; Conditions</a>.</label>
-                        </div>
-                        </apex:outputPanel>
-
-                        <apex:outputPanel rendered="{!family == 'Video'}">
-                        <apex:outputPanel rendered="{!Packages.size>1}"><h5>Video:</h5></apex:outputPanel>
-                        <div class="terms-block reqd">
-                            <label class="form-label"><apex:inputCheckbox value="{!termsVideo1}" required="true"/> In ticking this box, you agree to our <a href="{!siteWrapperURL}/video-terms/" target="_blank">Video Terms &amp; Conditions</a>.</label>
-                        </div>
-                        </apex:outputPanel>
-                        </apex:repeat>
-
-                        <apex:outputPanel rendered="{!locale == 'NZD'}">
-                        	<label style="font-weight: 300; margin-bottom: 10px">Are you registered for GST?</label>
-                        	<apex:selectRadio value="{!signup.GST__c}">
-                        		<apex:selectOption itemValue="true" itemLabel="Yes"/>
-                        		<apex:selectOption itemValue="false" itemLabel="No"/>
-                        	</apex:selectRadio>
-                        </apex:outputPanel>
-
-					    <div class="submit_group">
-					        <apex:commandButton action="{!submitCheckout}" value="Signup!" styleClass="btn_cart_orange btn_checkout_submit" />
-
-					        <div class="submit" id="processing"><img style="height: 50px; width: auto; float: right; margin-right: 15px;" src="https://sponsoredlinx.com.au/wp-content/themes/slx/images/default.gif" /></div>
-					    </div>
-					</apex:outputpanel>
-                    </div>
-                </div>
-            </div><!-- checkout_slide_5 -->
-
-		</div>
-	</div>
-	</apex:form>
-
-</apex:outputPanel>
-
-			</div><!-- the-content -->
-
-		</div><!-- mainContent -->
-	</div><!-- row -->
-</div><!-- container -->
-</div><!-- content -->
-
-</div><!-- wrapper -->
 
 
-</div><!-- page page-template -->
+                                                                </script>
+
+                                                                <apex:repeat value="{!productFamilies}" var="family">
+
+                                                                    <apex:outputPanel rendered="{!family == 'SEO'}">
+                                                                        <apex:outputPanel rendered="{!Packages.size>1}">
+                                                                            <h5>SEO:</h5></apex:outputPanel>
+                                                                        <div class="terms-block reqd">
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsSeo1}"
+                                                                                                    required="true"/>
+                                                                                The first months management will be
+                                                                                deducted from your account via your
+                                                                                nominated payment method.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsSeo2}"
+                                                                                                    required="true"/>
+                                                                                Your Monthly management fee will be
+                                                                                automatically debited in advance one
+                                                                                month from today via your nominated
+                                                                                billing method, ongoing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsSeo3}"
+                                                                                                    required="true"/>
+                                                                                If you wish to cancel your service we
+                                                                                require a minimum of two weeks notice in
+                                                                                writing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsSeo4}"
+                                                                                                    required="true"/>
+                                                                                In ticking this box, you agree to our <a
+                                                                                    href="{!siteWrapperURL}/seo-terms/"
+                                                                                    target="_blank">SEO Terms &amp;
+                                                                                Conditions</a>.</label>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+
+                                                                    <apex:outputPanel rendered="{!family == 'Facebook'}">
+                                                                        <apex:outputPanel rendered="{!Packages.size>1}">
+                                                                            <h5>Facebook:</h5></apex:outputPanel>
+                                                                        <div class="terms-block reqd">
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsFacebook1}"
+                                                                                        required="true"/>
+                                                                                Your Facebook advertising spend is
+                                                                                separate to these fees and is paid
+                                                                                directly to Facebook.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsFacebook2}"
+                                                                                        required="true"/>
+                                                                                The initial set-up fee will be deducted
+                                                                                from your account via your nominated
+                                                                                payment method.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsFacebook3}"
+                                                                                        required="true"/>
+                                                                                Ongoing management fees will be
+                                                                                automatically debited in arrears via
+                                                                                your nominated billing method.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsFacebook4}"
+                                                                                        required="true"/>
+                                                                                If you wish to cancel your service we
+                                                                                require a minimum of two weeks notice in
+                                                                                writing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsFacebook5}"
+                                                                                        required="true"/>
+                                                                                In ticking this box, you agree to our <a
+                                                                                    href="{!siteWrapperURL}/terms/"
+                                                                                    target="_blank">Facebook Terms &amp;
+                                                                                Conditions</a>.</label>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+
+                                                                    <apex:outputPanel rendered="{!family == 'ConvertoPages'}">
+                                                                        <apex:outputPanel rendered="{!Packages.size>1}">
+                                                                            <h5>ConvertoPages:</h5></apex:outputPanel>
+                                                                        <div class="terms-block reqd">
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsWeb1}"
+                                                                                                    required="true"/>
+                                                                                The initial set-up fee will be deducted
+                                                                                from your account via your nominated
+                                                                                payment method.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsWeb2}"
+                                                                                                    required="true"/>
+                                                                                Monthly management fee will be
+                                                                                automatically debited in arrears one
+                                                                                month from today via your nominated
+                                                                                billing method, weekly ongoing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsWeb3}"
+                                                                                                    required="true"/>
+                                                                                If you wish to cancel your service we
+                                                                                require a minimum of two weeks notice in
+                                                                                writing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsWeb4}"
+                                                                                                    required="true"/>
+                                                                                I understand this service can only run
+                                                                                on the ConvertoPage platform.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsWeb5}"
+                                                                                                    required="true"/>
+                                                                                In ticking this box, you agree to our <a
+                                                                                    href="{!siteWrapperURL}/convertopages-terms/"
+                                                                                    target="_blank">ConvertoPages Terms
+                                                                                &amp; Conditions</a>.</label>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+
+                                                                    <apex:outputPanel rendered="{!family == 'AdWords'}">
+                                                                        <apex:outputPanel rendered="{!Packages.size>1}">
+                                                                            <h5>AdWords:</h5></apex:outputPanel>
+                                                                        <div class="terms-block reqd">
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsAdwords1}"
+                                                                                        required="true"/>
+                                                                                Your Google spend is separate to the
+                                                                                weekly fee and is paid directly to
+                                                                                Google.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsAdwords2}"
+                                                                                        required="true"/>
+                                                                                The initial set-up fee will be deducted
+                                                                                from your account via your nominated
+                                                                                payment method.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsAdwords3}"
+                                                                                        required="true"/>
+                                                                                Weekly management fee will be
+                                                                                automatically debited in arrears seven
+                                                                                days from today via your nominated
+                                                                                billing method, weekly ongoing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsAdwords4}"
+                                                                                        required="true"/>
+                                                                                If you wish to cancel your service we
+                                                                                require a minimum of two weeks notice in
+                                                                                writing.</label>
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsAdwords5}"
+                                                                                        required="true"/>
+                                                                                In ticking this box, you agree to our <a
+                                                                                    href="{!siteWrapperURL}/terms/"
+                                                                                    target="_blank">AdWords Terms &amp;
+                                                                                Conditions</a>.</label>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+
+                                                                    <apex:outputPanel rendered="{!family == 'Video'}">
+                                                                        <apex:outputPanel rendered="{!Packages.size>1}">
+                                                                            <h5>Video:</h5></apex:outputPanel>
+                                                                        <div class="terms-block reqd">
+                                                                            <label class="form-label">
+                                                                                <apex:inputCheckbox value="{!termsVideo1}"
+                                                                                        required="true"/>
+                                                                                In ticking this box, you agree to our <a
+                                                                                    href="{!siteWrapperURL}/video-terms/"
+                                                                                    target="_blank">Video Terms &amp;
+                                                                                Conditions</a>.</label>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+                                                                </apex:repeat>
+
+                                                                <apex:outputPanel rendered="{!locale == 'NZD'}">
+                                                                    <label style="font-weight: 300; margin-bottom: 10px">Are
+                                                                        you registered for GST?</label>
+                                                                    <apex:selectRadio value="{!signup.GST__c}">
+                                                                        <apex:selectOption itemValue="true"
+                                                                                           itemLabel="Yes"/>
+                                                                        <apex:selectOption itemValue="false"
+                                                                                           itemLabel="No"/>
+                                                                    </apex:selectRadio>
+                                                                </apex:outputPanel>
+
+                                                                <div class="submit_group">
+                                                                    <apex:commandButton action="{!submitCheckout}"
+                                                                                        value="Signup!"
+                                                                                        styleClass="btn_cart_orange btn_checkout_submit"/>
+
+                                                                    <div class="submit" id="processing"><img
+                                                                            style="height: 50px; width: auto; float: right; margin-right: 15px;"
+                                                                            src="https://sponsoredlinx.com.au/wp-content/themes/slx/images/default.gif"/>
+                                                                    </div>
+                                                                </div>
+                                                            </apex:outputpanel>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- checkout_slide_5 -->
+
+                                            </div>
+                                        </div>
+                                    </apex:form>
+
+                                </apex:outputPanel>
+
+                            </div><!-- the-content -->
+
+                        </div><!-- mainContent -->
+                    </div><!-- row -->
+                </div><!-- container -->
+            </div><!-- content -->
+
+        </div><!-- wrapper -->
+
+
+    </div><!-- page page-template -->
 
 </apex:page>

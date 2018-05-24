@@ -34,6 +34,13 @@ private class PaymentGatewayTest {
 			Access_Code__c		= 'exampleaccesscode',
 			Password__c			= 'examplepassword'
 		);
+
+		insert new PaymentGateway__c(
+			Name				= 'Commweb SLX NZ',
+			MerchantURL__c		= 'https://example.com',
+			Access_Code__c		= 'exampleaccesscode',
+			Password__c			= 'examplepassword'
+		);
     }
 
     // Get basic payment gateway data for text cases
@@ -120,6 +127,60 @@ private class PaymentGatewayTest {
 		payAttempt = payment.pay();
 		system.assertEquals('FAILURE', payAttempt.Status__c);
 	}
+
+
+	// Test updateAccountToken
+	@isTest 
+	static void test_updateAccountToken() {
+		init();
+		PaymentGateway payment;
+		Company__c myCom = new Company__c();
+		myCom.Name = 'SponsoredLinX';
+		myCom.Payment_Gateway__c = 'Eway2';
+		insert myCom;
+
+		Account existingAccount = new Account();
+		existingAccount.Name = 'Joe Smith';
+		existingAccount.Name_On_Card__c = 'Joe Smith';
+		existingAccount.Card_Month_Expiry__c = '12';
+		existingAccount.Card_Year_Expiry__c = '2025';
+		existingAccount.currencyIsoCode = 'AUD';
+		existingAccount.BJB_Company__c = myCom.Id;
+		insert existingAccount;
+
+        // Contacts should be created before Account Products
+        List<Contact> newContacts = new List<Contact>();
+        for (String contact_type : new List<String> {'Billing','Reports','Marketing'}){
+            newContacts.add( 
+                new Contact(
+                    FirstName         = 'Steve',
+                    LastName          = 'Existingclient',
+                    AccountId         = existingAccount.Id,
+                    Phone             = '0407040404',
+                    Email             = existingAccount.username__c,
+                    Title             = contact_type
+                )
+            );
+        }
+        insert newContacts;
+
+		test.starttest();
+
+		// Eway2
+		myCom.Payment_Gateway__c = 'Eway2';
+		payment = getBasePaymentGateway();
+
+		payment.updateAccountToken(existingAccount, '4444333322221111', '123');
+
+		// Commweb2
+		myCom.Name = 'SponsoredLinX New Zealand';
+		myCom.Payment_Gateway__c = 'Commweb2';
+		update myCom;
+		payment.updateAccountToken(existingAccount, '4444333322221111', '123');
+
+		test.stoptest();
+	}
+
 
 	// Test refunds
 	@isTest 

@@ -16,6 +16,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>DebHub</application>
+        <default>false</default>
+        <visible>false</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>Erica</application>
         <default>false</default>
         <visible>true</visible>
@@ -126,6 +131,14 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AccountBilling</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountBillingTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>AccountEmployeeTriggerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -142,7 +155,31 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>AccountProcessor</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountProcessorTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountProductHelper</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountProductHelperTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>AccountProductListForProjectController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountProductProcessor</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountProductProcessorTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -226,6 +263,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CardDetails</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Cart</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -294,6 +335,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ClientPanelAccountBilling</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ClientPanelAccountBillingTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CommunitiesLandingController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -327,6 +376,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Commweb2Payment</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Commweb2PaymentTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -906,6 +959,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>batchTokenUpdate</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>batchXeroInvoiceCreateBatch</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1329,6 +1386,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Adwords_Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.All_Active_Products__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1763,7 +1825,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Account_Product__c.Account_Unlinked__c</field>
+        <field>Account_Product__c.API_Response__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1792,6 +1854,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Adwords_Delinked__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account_Product__c.Adwords_Domain__c</field>
         <readable>true</readable>
@@ -1807,9 +1874,19 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Adwords_URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account_Product__c.Amex__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.BJB_Company__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -1844,6 +1921,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Product__c.Card_Year_Expiry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Change_made_by_us__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1932,6 +2014,41 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Product__c.Last_14_days_num_of_calls__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Last_14_days_num_of_emails__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Product__c.Last_21_days_num_of_calls__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Product__c.Last_21_days_num_of_emails__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Last_7_days_num_of_calls__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Last_7_days_num_of_emails__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Last_Adwords_Update__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account_Product__c.Last_Invoice_Date__c</field>
         <readable>true</readable>
@@ -1958,6 +2075,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account_Product__c.Minimum_contacts_required__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account_Product__c.Monthly_Price__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1979,7 +2101,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account_Product__c.No_Adwords_Change__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -2198,8 +2320,38 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account_Product__c.ocid__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account_Product__c.pauseat__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Watcher__c.Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Watcher__c.Last_14_days_num_of_calls__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account_Watcher__c.Last_14_days_num_of_emails__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Watcher__c.Last_7_days_num_of_calls__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Watcher__c.Last_7_days_num_of_emails__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -3874,6 +4026,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CM_Daily_Stats__c.Adwords_Acc_Activities__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.Call_Response_Time__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6785,6 +6942,11 @@
         <editable>false</editable>
         <field>Event.IsVisibleInSelfService</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.Is_Mobile_Number__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -12693,6 +12855,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Task.Is_Mobile_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Task.Mirrors_clients_talking_behaviour__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13747,8 +13914,13 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>seoThemeKeywords__c.Geolocation_Effective__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
-        <field>seoThemeKeywords__c.Geolocation__c</field>
+        <field>seoThemeKeywords__c.Geolocation_Override__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13822,6 +13994,21 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>seoThemeKeywords__c.Google_Pos_1_Snippet__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>seoThemeKeywords__c.Google_Pos_1_Title__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>seoThemeKeywords__c.Google_Pos_1_URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>seoThemeKeywords__c.Google_Result_Count__c</field>
         <readable>true</readable>
@@ -13843,6 +14030,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>seoThemeKeywords__c.Google_Snippet__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>seoThemeKeywords__c.Google_Stored_SERP__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13850,6 +14042,11 @@
         <editable>false</editable>
         <field>seoThemeKeywords__c.Google_Stored_URL__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>seoThemeKeywords__c.Google_Title__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -14161,6 +14358,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Account_Product__c-Account Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account_Watcher__c-Account Watcher Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Admin_Page__c-Admin Page Layout</layout>
@@ -15199,6 +15399,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>AccountBilling</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>AccountHierarchyPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -15297,6 +15501,10 @@
     <pageAccesses>
         <apexPage>ClientHistoryView</apexPage>
         <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>ClientPanelAccountBilling</apexPage>
+        <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>CommunitiesLanding</apexPage>
@@ -15789,6 +15997,10 @@
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Account_Watcher__c</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>CalendarSync</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
@@ -15847,6 +16059,10 @@
     <tabVisibilities>
         <tab>Promotions__c</tab>
         <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Questionnaire__c</tab>
+        <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>SEO_Report_Schedule__c</tab>

@@ -1,7 +1,8 @@
 public with sharing class SendInvoice {
 	public Invoice__c inv {set; get;}
 	public Account    acc     {set; get;}
-	public String email  {set; get;}
+	public String email  {set; get;}	
+	public String ccEmail  {set; get;}
 	public String subject {set; get;}
 	public String body {set; get;}
 	public Company__c company {set;get;}
@@ -42,6 +43,8 @@ public with sharing class SendInvoice {
 		this.acc   = [select Id, Name, Unique_Id__c, (select Email, Name from Contacts where Title = 'Billing') from Account where Id=:this.inv.Account__c];
 		
 		this.email = this.acc.Contacts[0].Email;
+
+		this.ccEmail = UserInfo.getUserEmail();
 		
 		this.subject = company.Business_Name__c + ' Invoice - ' + this.inv.Invoice_Number__c;
 		
@@ -83,9 +86,16 @@ public with sharing class SendInvoice {
 	        efa.setFileName(filename);
 	        efa.setBody(b);
 	        String[] toAddresses =  new String[] {this.acc.Contacts[0].Email};
+
+	        // get cc address
+	        String currentUserEmail = UserInfo.getUserEmail();
+			String[] ccAddresses = new String[] {currentUserEmail};
+
 	        //email.setSenderDisplayName(company.Business_Name__c);
+	        
 	        email.setSubject( this.subject);
 	        email.setToAddresses(toAddresses);
+	        email.setccAddresses(ccAddresses);
 	        email.setPlainTextBody(this.body );
 	        email.setReplyTo(company.Email__c);
 	        email.setUseSignature(false);
@@ -147,10 +157,7 @@ public with sharing class SendInvoice {
 		
 		ApexPages.standardController controller = new ApexPages.standardController(invoice1);
 		SendInvoice printInv =  new SendInvoice(controller);
-		printInv.Send();
-		
-		
-		
+		printInv.Send();			
 		Test.stopTest();
 	}
 	

@@ -5,9 +5,9 @@ global class scheduleProductStatusCheck implements Schedulable {
 		cancelProductStatusBatch cancelBatch = new cancelProductStatusBatch();
 		activateProductStatusBatch activeBatch = new activateProductStatusBatch();
 		
-		Database.executeBatch(pauseBatch, 10);
-		Database.executeBatch(cancelBatch, 10);
-		Database.executeBatch(activeBatch, 10);
+		Database.executeBatch(pauseBatch, 1);
+		Database.executeBatch(cancelBatch, 1);
+		Database.executeBatch(activeBatch, 1);
 		
 		Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
 		//String[] toAddresses2  = new String[] { 'accounts@sponsoredlinx.com' };

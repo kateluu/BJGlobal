@@ -5,6 +5,7 @@
     <customButtons>Make_a_Credit</customButtons>
     <customButtons>Manage_Credits</customButtons>
     <customButtons>Make_a_Refund</customButtons>
+    <customButtons>Update_Credit_Card</customButtons>
     <customButtons>Account_Statement</customButtons>
     <customButtons>Chargebacks</customButtons>
     <excludeButtons>DataDotComClean</excludeButtons>
@@ -102,6 +103,10 @@
                 <behavior>Edit</behavior>
                 <field>Latest_Escalated_Time__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>All_Active_Products__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -176,10 +181,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Name_On_Card__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Card_Number__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -580,6 +581,7 @@
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.LAST_UPDATE</fields>
         <fields>TASK.STATUS</fields>
+        <fields>ACTIVITY_SUBTYPE</fields>
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>

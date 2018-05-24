@@ -85,12 +85,15 @@ global class cancelProductStatusBatch implements Database.batchable<Account_Prod
 				//update product status
 				product.Product_Status__c = 'Cancelled';
 				product.pauseat__c = null;
-				allProducts.add(product);
+
+				//update product status :  to make sure there’s only one notification in the outbound message when the product is updated
+				//allProducts.add(product);
+				update product;				
 			}
 		}
 		
 		try {
-			update allProducts;
+			//update allProducts;
 			try {
 				insert allTasks;
 			} catch(Exception e) {

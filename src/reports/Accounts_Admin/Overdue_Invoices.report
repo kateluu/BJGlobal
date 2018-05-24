@@ -57,6 +57,7 @@
     <columns>
         <field>Invoice__c.Days_Overdue__c</field>
     </columns>
+    <currency>AUD</currency>
     <filter>
         <criteriaItems>
             <column>Invoice__c.Status__c</column>
@@ -82,7 +83,7 @@
     </params>
     <reportType>AccountCustomEntity$Invoice__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <sortColumn>Invoice__c.Due_Date__c</sortColumn>
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>

@@ -9,8 +9,8 @@
         <value>Account Products</value>
     </caseValues>
     <fields>
-        <label><!-- Account Unlinked --></label>
-        <name>Account_Unlinked__c</name>
+        <label><!-- API Response --></label>
+        <name>API_Response__c</name>
     </fields>
     <fields>
         <label><!-- Account --></label>
@@ -36,6 +36,10 @@
         <name>Adwords_Acc_Activity__c</name>
     </fields>
     <fields>
+        <label><!-- Adwords Delinked --></label>
+        <name>Adwords_Delinked__c</name>
+    </fields>
+    <fields>
         <label><!-- Adwords Domain --></label>
         <name>Adwords_Domain__c</name>
     </fields>
@@ -48,8 +52,16 @@
         <name>Adwords_ID__c</name>
     </fields>
     <fields>
+        <label><!-- Adwords URL --></label>
+        <name>Adwords_URL__c</name>
+    </fields>
+    <fields>
         <label><!-- Amex --></label>
         <name>Amex__c</name>
+    </fields>
+    <fields>
+        <label><!-- BJB Company --></label>
+        <name>BJB_Company__c</name>
     </fields>
     <fields>
         <label><!-- Bing ID --></label>
@@ -176,6 +188,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Change made by us --></label>
+        <name>Change_made_by_us__c</name>
+    </fields>
+    <fields>
         <label><!-- Chargebacks --></label>
         <name>Chargebacks__c</name>
     </fields>
@@ -248,6 +264,40 @@
         <name>Is_First_Owner_Assignment__c</name>
     </fields>
     <fields>
+        <help><!-- Last 14 days num of calls --></help>
+        <label><!-- Last 14 days num of calls --></label>
+        <name>Last_14_days_num_of_calls__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 14 days num of emails --></help>
+        <label><!-- Last 14 days num of emails --></label>
+        <name>Last_14_days_num_of_emails__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 21 days num of calls --></help>
+        <label><!-- Last 21 days num of calls --></label>
+        <name>Last_21_days_num_of_calls__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 21 days num of emails --></help>
+        <label><!-- Last 21 days num of emails --></label>
+        <name>Last_21_days_num_of_emails__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 7 days num of calls --></help>
+        <label><!-- Last 7 days num of calls --></label>
+        <name>Last_7_days_num_of_calls__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 7 days num of emails --></help>
+        <label><!-- Last 7 days num of emails --></label>
+        <name>Last_7_days_num_of_emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Adwords Update --></label>
+        <name>Last_Adwords_Update__c</name>
+    </fields>
+    <fields>
         <label><!-- Last Invoice Date --></label>
         <name>Last_Invoice_Date__c</name>
     </fields>
@@ -266,6 +316,10 @@
     <fields>
         <label><!-- Max Usage --></label>
         <name>Max_Usage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Contacts Required --></label>
+        <name>Minimum_contacts_required__c</name>
     </fields>
     <fields>
         <label><!-- Monthly Price --></label>
@@ -568,6 +622,10 @@
         <name>isUserActive__c</name>
     </fields>
     <fields>
+        <label><!-- ocid --></label>
+        <name>ocid__c</name>
+    </fields>
+    <fields>
         <label><!-- pauseat --></label>
         <name>pauseat__c</name>
     </fields>
@@ -580,6 +638,10 @@
         <sections>
             <label><!-- Admin Only --></label>
             <section>Admin Only</section>
+        </sections>
+        <sections>
+            <label><!-- Communication --></label>
+            <section>Communication</section>
         </sections>
         <sections>
             <label><!-- Custom Links --></label>

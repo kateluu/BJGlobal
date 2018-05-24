@@ -39,13 +39,8 @@
         </criteriaItems>
         <criteriaItems>
             <column>Cases__c.Case_Reason__c</column>
-            <operator>equals</operator>
-            <value>Client:Sold to pause</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>FK_NAME</column>
-            <operator>contains</operator>
-            <value>getmoretraffic</value>
+            <operator>includes</operator>
+            <value>Sales: Sold to pause</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -55,11 +50,11 @@
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
-        <dateGranularity>Week</dateGranularity>
+        <dateGranularity>Month</dateGranularity>
         <field>Cases__c.unresolved_date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Getmoretraffic sold to pause</name>
+    <name>Group sold to pause</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -69,6 +64,6 @@
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.unresolved_date__c</dateColumn>
-        <interval>INTERVAL_THISMONTH</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

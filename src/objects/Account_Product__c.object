@@ -56,14 +56,16 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Account_Unlinked__c</fullName>
-        <defaultValue>false</defaultValue>
+        <fullName>API_Response__c</fullName>
         <externalId>false</externalId>
-        <label>Account Unlinked</label>
+        <label>API Response</label>
+        <length>255</length>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Account__c</fullName>
@@ -139,6 +141,16 @@ IF(activeat__c &gt;= Last_Invoice_Date__c, Product_Price__c * (MOD(TODAY() - act
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Adwords_Delinked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Adwords Delinked</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Adwords_Domain__c</fullName>
         <externalId>false</externalId>
         <label>Adwords Domain</label>
@@ -173,6 +185,18 @@ IF(activeat__c &gt;= Last_Invoice_Date__c, Product_Price__c * (MOD(TODAY() - act
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Adwords_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ocid__c != &apos;&apos;, HYPERLINK(&quot;https://adwords.google.com/aw/overview?ocid=&quot;&amp;ocid__c&amp;&quot;&quot;, &apos;Link&apos;), &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Adwords URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Amex__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -181,6 +205,18 @@ IF(activeat__c &gt;= Last_Invoice_Date__c, Product_Price__c * (MOD(TODAY() - act
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BJB_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.BJB_Company__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BJB Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Bing_ID__c</fullName>
@@ -361,6 +397,16 @@ IF(activeat__c &gt;= Last_Invoice_Date__c, Product_Price__c * (MOD(TODAY() - act
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Change_made_by_us__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Change made by us</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Chargebacks__c</fullName>
@@ -573,6 +619,106 @@ Product_Price__c)
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Last_14_days_num_of_calls__c</fullName>
+        <description>Last 14 days num of calls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 14 days num of calls</inlineHelpText>
+        <label>Last 14 days num of calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_14_days_num_of_emails__c</fullName>
+        <description>Last 14 days num of emails</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 14 days num of emails</inlineHelpText>
+        <label>Last 14 days num of emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_21_days_num_of_calls__c</fullName>
+        <description>Last 21 days num of calls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 21 days num of calls</inlineHelpText>
+        <label>Last 21 days num of calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_21_days_num_of_emails__c</fullName>
+        <description>Last 21 days num of emails</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 21 days num of emails</inlineHelpText>
+        <label>Last 21 days num of emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_7_days_num_of_calls__c</fullName>
+        <description>Last 7 days num of calls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 7 days num of calls</inlineHelpText>
+        <label>Last 7 days num of calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_7_days_num_of_emails__c</fullName>
+        <description>Last 7 days num of emails</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 7 days num of emails</inlineHelpText>
+        <label>Last 7 days num of emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Adwords_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Adwords Update</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Last_Invoice_Date__c</fullName>
         <externalId>false</externalId>
         <label>Last Invoice Date</label>
@@ -633,6 +779,21 @@ Product_Price__c)
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Minimum_contacts_required__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(Active_Days__c &lt;=28,  (Last_7_days_num_of_calls__c +  Last_7_days_num_of_emails__c) &gt;= 1 ), true, 
+if(and(Active_Days__c &gt;28,Active_Days__c &lt;= 84,(Last_14_days_num_of_calls__c +  Last_14_days_num_of_emails__c) &gt;= 1 ), true, 
+if(and(Active_Days__c &gt;84,(Last_21_days_num_of_calls__c +  Last_21_days_num_of_emails__c) &gt;= 1 ), true, false
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Minimum Contacts Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Monthly_Price__c</fullName>
         <externalId>false</externalId>
         <formula>IF(ISPICKVAL(Recurring_Period__c, &apos;Weekly&apos;), Product_Price__c*52/12, 
@@ -688,16 +849,12 @@ Product_Price__c)
     <fields>
         <fullName>No_Adwords_Change__c</fullName>
         <externalId>false</externalId>
-        <formula>IF( Adwords_Acc_Activity__c &lt;=3,1,0 )</formula>
+        <formula>if( OR(Last_Adwords_Update__c == null, today() - Last_Adwords_Update__c &gt; 21), true, false)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>No Adwords Change</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>No_Charge__c</fullName>
@@ -1348,6 +1505,19 @@ IF(CONTAINS(Name,&quot;Converto&quot;), &apos;ConvertoPages&apos;, &apos;&apos;)
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ocid__c</fullName>
+        <description>equivalent to adwords id in the Adwords URL</description>
+        <externalId>false</externalId>
+        <label>ocid</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>pauseat__c</fullName>

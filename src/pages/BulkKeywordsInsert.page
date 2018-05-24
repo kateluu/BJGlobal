@@ -1,6 +1,6 @@
 <apex:page standardController="seoThemeKeywords__c" extensions="BulkKeywordsInsert">
 
-    <apex:sectionHeader title="SEO Website" subtitle="{!website_name}"/>
+    <apex:sectionHeader title="SEO Website" subtitle="{!seoWebsite.name}"/>
 
  <apex:form >
     <apex:pageBlock title="New SEO Keywords">
@@ -13,7 +13,7 @@
 
             <apex:pageBlockSectionItem >
                 <apex:outputLabel >Override Website Geolocation?</apex:outputLabel>
-                <apex:inputField id="geolocation" value="{!seoThemeKeyword.Geolocation__c}" />
+                <apex:inputField id="geolocation" value="{!seoThemeKeyword.Geolocation_Override__c}" />
             </apex:pageBlockSectionItem>
 
             <apex:pageBlockSectionItem >

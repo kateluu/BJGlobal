@@ -96,6 +96,10 @@
                 <behavior>Edit</behavior>
                 <field>Latest_Escalated_Time__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>All_Active_Products__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -439,6 +443,7 @@
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.LAST_UPDATE</fields>
         <fields>TASK.STATUS</fields>
+        <fields>ACTIVITY_SUBTYPE</fields>
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
@@ -542,6 +547,10 @@
         <fields>Status__c</fields>
         <fields>Voicemail_Link__c</fields>
         <relatedList>Voicemail__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Account_Watcher__c.Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

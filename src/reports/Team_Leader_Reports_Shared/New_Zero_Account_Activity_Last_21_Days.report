@@ -110,9 +110,9 @@
             <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Account.Sign_Ups__r.Account_Products__r$Adwords_Acc_Activity__c</column>
+            <column>Account.Sign_Ups__r.Account_Products__r$No_Adwords_Change__c</column>
             <operator>equals</operator>
-            <value>0</value>
+            <value>1</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account.Sign_Ups__r.Account_Products__r$Adwords_ID__c</column>
@@ -143,9 +143,9 @@
     </params>
     <reportType>Account_with_Products_with_Signup__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <timeFrameFilter>
-        <dateColumn>Account$Cancelled_Date__c</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
+        <dateColumn>Account.Sign_Ups__r.Account_Products__r$Last_Stats_Update__c</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
     </timeFrameFilter>
 </Report>

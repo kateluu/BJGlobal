@@ -6,28 +6,24 @@ public with sharing class SeoKeywordController {
 
     public SeoKeywordController(ApexPages.StandardController controller){
         // Load the keyword and website objects
-        if (!Test.isRunningTest()) controller.addFields(new String[]{'Id', 'Name', 'seoWebsites__c', 'geolocation__c', 'Sniper_Date__c'});
+        if (!Test.isRunningTest()) controller.addFields(new String[]{'Id', 'Name', 'seoWebsites__c', 'geolocation_effective__c', 'Sniper_Date__c'});
         seoThemeKeyword = (seoThemeKeywords__c)controller.getRecord();
         
-        this.seoWebsite = [SELECT Id, Name, geolocation__c, website_url__c, Searching_From__c, device__c FROM seoWebsite__c where id =: seoThemeKeyword.seoWebsites__c][0];
+        this.seoWebsite = [SELECT Id, Name, website_url__c, Searching_From__c, device__c FROM seoWebsite__c where id =: seoThemeKeyword.seoWebsites__c][0];
     }
 
 
     public String getSerpHistoryChart() {
         String chartURL = getSerpHistoryURL();
-        String chartData = slxConsole.getConsolePage(chartURL);        
+        String chartData = slxConsole.getConsolePage(chartURL);
         return chartData;
     }
     
     public String getSerpHistoryURL() {
         String geolocation = '';
 
-        if (seoWebsite.geolocation__c != null) {
-            geolocation = seoWebsite.geolocation__c;
-        }
-
-        if (seoThemeKeyword.geolocation__c != null) {
-            geolocation = seoThemeKeyword.geolocation__c;
+        if (seoThemeKeyword.geolocation_effective__c != null) {
+            geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
         return '/?c=seo&action=serpHistoryChart&keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
@@ -49,12 +45,8 @@ public with sharing class SeoKeywordController {
     public String getRankHistoryURL() {
         String geolocation = '';
 
-        if (seoWebsite.geolocation__c != null) {
-            geolocation = seoWebsite.geolocation__c;
-        }
-
-        if (seoThemeKeyword.geolocation__c != null) {
-            geolocation = seoThemeKeyword.geolocation__c;
+        if (seoThemeKeyword.geolocation_effective__c != null) {
+            geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
         return '/?c=seo&action=keywordRankHistoryChart&keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
@@ -76,12 +68,8 @@ public with sharing class SeoKeywordController {
     public String getLandingPagesHistoryChartURL() {
         String geolocation = '';
 
-        if (seoWebsite.geolocation__c != null) {
-            geolocation = seoWebsite.geolocation__c;
-        }
-
-        if (seoThemeKeyword.geolocation__c != null) {
-            geolocation = seoThemeKeyword.geolocation__c;
+        if (seoThemeKeyword.geolocation_effective__c != null) {
+            geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
         return '/?c=seo&action=serpHistoryChart&keyword=' 

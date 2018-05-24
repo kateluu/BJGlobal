@@ -176,6 +176,21 @@
         <operation>Null</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <outboundMessages>
+        <fullName>Move_paused_to_MOH</fullName>
+        <apiVersion>42.0</apiVersion>
+        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
+        <fields>Adwords_ID__c</fields>
+        <fields>BJB_Company__c</fields>
+        <fields>Id</fields>
+        <fields>OwnerId</fields>
+        <fields>Product_Status__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>ben@bjbglobal.com.au</integrationUser>
+        <name>Move paused to MOH</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
     <rules>
         <fullName>1st Management Invoice Not Paid Alert</fullName>
         <actions>
@@ -325,6 +340,33 @@
             <offsetFromField>Account_Product__c.activeat__c</offsetFromField>
             <timeLength>-4</timeLength>
             <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Move Paused%2FCancelled to MOH</fullName>
+        <actions>
+            <name>Move_paused_to_MOH</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account_Product__c.Product_Status__c</field>
+            <operation>equals</operation>
+            <value>Paused,Cancelled</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account_Product__c.Adwords_ID__c</field>
+            <operation>notEqual</operation>
+            <value>000-000-0000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account_Product__c.Adwords_ID__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>12</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
         </workflowTimeTriggers>
     </rules>
     <rules>
