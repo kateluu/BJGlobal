@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>GMT_Questionnaire_Form</fullName>
+        <description>GMT Questionnaire Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Projects/GMT_Webcontent_Questionnaire</template>
+    </alerts>
+    <alerts>
+        <fullName>GMT_Questionnaire_Reminder</fullName>
+        <description>GMT Questionnaire Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Projects/GMT_Questionnaire_Reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>SLX_Questionnaire_Form</fullName>
+        <description>SLX Questionnaire Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Projects/SLX_Webcontent_Questionnaire</template>
+    </alerts>
+    <alerts>
+        <fullName>SLX_Questionnaire_Reminder</fullName>
+        <description>SLX Questionnaire Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Projects/SLX_Questionnaire_reminder</template>
+    </alerts>
+    <alerts>
         <fullName>X60_Days_Pending_Project_Info_Alert</fullName>
         <ccEmails>molly.hanrahan@sponsoredlinx.com</ccEmails>
         <description>60 Days Pending Project Info Alert</description>

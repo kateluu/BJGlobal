@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_83793829</developerName>
+        <masterLabel>From Application</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ss_NonLogin__c.Application__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>null</sourceValue>
+            </sourceValues>
+            <value>Non Browser</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>ss_NonLogin__c.Username__c</field>
+    </columns>
+    <columns>
+        <field>ss_NonLogin__c.Firstname__c</field>
+    </columns>
+    <columns>
+        <field>ss_NonLogin__c.Lastname__c</field>
+    </columns>
+    <columns>
+        <field>ss_NonLogin__c.Profile__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>The report list out any user did not login to Salesforce System  via browser in daily schedule</description>
+    <filter>
+        <criteriaItems>
+            <column>ss_NonLogin__c.LastLogin__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ss_NonLogin__c.Lastname__c</column>
+            <operator>notContain</operator>
+            <value>USer,system</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Daily Non Login Tracking</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$ss_NonLogin__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

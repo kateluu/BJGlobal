@@ -1,4 +1,5 @@
 trigger accountProductStatusTrigger on Account_Product__c (after insert, after update) {
+    private final String CANCEL_EMAIL = 'cancellation@sponsoredlinx.com';
     /**
       This trigger will create a client history when the product status change
     **/
@@ -84,33 +85,42 @@ trigger accountProductStatusTrigger on Account_Product__c (after insert, after u
                 
                 //send reminder email to client when his facebook or adwords management service is being cancelled
                 if(newPro.product_status__c == 'Cancelled' && (newPro.name.contains('Facebook') || newPro.name.contains('Adwords'))) { 
-          Contact contact = [Select Id, Name, firstName, lastName, Email From Contact Where AccountId =:newPro.Account__c And Title = 'Billing' limit 1];
-          SLX_Product__c product = [select company_name__c from SLX_Product__c where id =: newPro.SLX_Product__c limit 1];
-             Company__c company = [select Name, Customer_Service_Email__c, Phone__c, Website__c from Company__c where Name =: product.company_name__c limit 1];
-       
-                  String template = 'Adwords_Account_Cancellation_Reminder';
-                  if(newPro.name.contains('Facebook')) {
-                    template = 'Facebook_Account_Cancellation_Reminder';
-                  }
-                  EmailTemplate email_template = [SELECT Id, Subject, Body FROM EmailTemplate WHERE DeveloperName =:template];
-          String body = email_template.Body;
-          String subject = email_template.Subject;
-          
-          body = body.replace('[FIRSTNAME]', contact.firstName);
-          body = body.replace('[PRODUCTNAME]', newPro.name);
-          body = body.replace('[COMPANY_NAME]', company.Name);
-          body = body.replace('[COMPANY_PHONE]', company.phone__c);
-          body = body.replace('[COMPANY_WEBSITE]', company.website__c);
-          body = body.replace('[CUSTOMER_SERVICE_EMAIL]', company.customer_service_email__c);
-        
-          Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-                  mail.setToAddresses(new String[] {contact.email});
-          mail.setReplyTo(company.customer_service_email__c);
-          mail.setSenderDisplayName('Customer Service');
-          mail.setSubject(subject);
-          mail.setPlainTextBody(body);
-          mail.setUseSignature(false);
-          Messaging.sendEmail(new Messaging.Email[] { mail });
+                    Contact contact = [Select Id, Name, firstName, lastName, Email From Contact Where AccountId =:newPro.Account__c And Title = 'Billing' limit 1];
+                    SLX_Product__c product = [select company_name__c from SLX_Product__c where id =: newPro.SLX_Product__c limit 1];
+                    Company__c company = [select Name, Customer_Service_Email__c, Phone__c, Website__c from Company__c where Name =: product.company_name__c limit 1];
+                 
+                    String template = 'Adwords_Account_Cancellation_Reminder';
+                    if(newPro.name.contains('Facebook')) {
+                      template = 'Facebook_Account_Cancellation_Reminder';
+                    }
+                    EmailTemplate email_template = [SELECT Id, Subject, Body FROM EmailTemplate WHERE DeveloperName =:template];
+                    String body = email_template.Body;
+                    String subject = email_template.Subject;
+                    
+                    body = body.replace('[FIRSTNAME]', contact.firstName);
+                    body = body.replace('[PRODUCTNAME]', newPro.name);
+                    body = body.replace('[COMPANY_NAME]', company.Name);
+                    body = body.replace('[COMPANY_PHONE]', company.phone__c);
+                    body = body.replace('[COMPANY_WEBSITE]', company.website__c);
+                    body = body.replace('[CUSTOMER_SERVICE_EMAIL]', company.customer_service_email__c);
+                  
+                    Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+                    
+                    mail.setTargetObjectId(contact.id);
+                    mail.setWhatId(newPro.Id);
+                    mail.setSaveAsActivity(true);                    
+                    mail.setToAddresses(new String[] {contact.email});
+                    mail.setCcAddresses(new String[]{CANCEL_EMAIL});
+                    mail.setReplyTo(company.customer_service_email__c);                    
+                    mail.setSenderDisplayName('Customer Service');
+                    mail.setSubject(subject);
+                    mail.setPlainTextBody(body);
+                    mail.setUseSignature(false);
+                    Messaging.sendEmail(new Messaging.Email[] { mail });
+
+
+                    // capture the email activity in account product history
+
                 }
             }
         }

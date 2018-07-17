@@ -76,9 +76,9 @@
     </types>
     <types>
         <members>Account</members>
+        <members>AccountBrand</members>
         <members>AccountContactRole</members>
         <members>Account_Product__c</members>
-        <members>Account_Watcher__c</members>
         <members>ActiveScratchOrg</members>
         <members>Activity</members>
         <members>Admin_Page__c</members>
@@ -170,6 +170,7 @@
         <members>OpportunityContactRole</members>
         <members>OpportunityLineItem</members>
         <members>PPC_Leads__c</members>
+        <members>Pardot_Auto_Convert_Add__c</members>
         <members>Partial_Signup__c</members>
         <members>PartnerFundAllocation</members>
         <members>PartnerFundClaim</members>
@@ -193,8 +194,10 @@
         <members>QuickText</members>
         <members>Quote</members>
         <members>QuoteLineItem</members>
+        <members>RecordAction</members>
         <members>Related_Website__c</members>
         <members>Report_SEO_Analysis__c</members>
+        <members>RequestsForAccessSIQ</members>
         <members>Reseller__c</members>
         <members>RunningMode__c</members>
         <members>SEO_Report_Schedule__c</members>
@@ -222,6 +225,7 @@
         <members>SocialPost</members>
         <members>Solution</members>
         <members>Spot_Check__c</members>
+        <members>StreamActivityAccess</members>
         <members>StreamingChannel</members>
         <members>SurveyQuestionResponse__c</members>
         <members>SurveyTaker__c</members>
@@ -240,6 +244,7 @@
         <members>UserProvisioningRequest</members>
         <members>UserTerritory2Association</members>
         <members>Voicemail__c</members>
+        <members>Web_Content__c</members>
         <members>WorkOrder</members>
         <members>WorkOrderLineItem</members>
         <members>Work_Request__c</members>
@@ -252,6 +257,7 @@
         <members>seoThemeKeywords__c</members>
         <members>seoWebsiteThemes__c</members>
         <members>seoWebsite__c</members>
+        <members>ss_NonLogin__c</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -286,6 +292,8 @@
         <members>Chatter_Usage_Dashboards/Chatter_Usage_Dashboard</members>
         <members>Client_Manager_Dashboard</members>
         <members>Client_Manager_Dashboard/Client_Manager_Dashboard</members>
+        <members>Client_Manager_Dashboard/Customer_Satisfaction_Dashboard</members>
+        <members>Client_Manager_Dashboard/SEO_Client_Manager_Dashboard</members>
         <members>Client_Operations_Manager_Dashboard</members>
         <members>Client_Operations_Manager_Dashboard/Client_Operations_Manager</members>
         <members>Client_Operations_Manager_Dashboard/Client_Operations_Manager_Friday_Dashboard</members>
@@ -293,6 +301,8 @@
         <members>Client_Operations_Manager_GMT/Client_Operations_Manager_GMT</members>
         <members>CompanyDashboards</members>
         <members>CompanyDashboards/BJBGlobalPerformanceDashboard</members>
+        <members>Digital_Strategy_Dashboard</members>
+        <members>Digital_Strategy_Dashboard/Digital_Strategy_Manager_Dashboard</members>
         <members>EOM</members>
         <members>EOM/EOM_Dashboard</members>
         <members>Marketing_Manager_Dashboard</members>
@@ -317,6 +327,7 @@
         <members>SalesDashboards/Group_Sales_Weekly</members>
         <members>SalesDashboards/SLX_Sales_Manager_Daily</members>
         <members>SalesDashboards/SLX_Sales_Manager_Weekly</members>
+        <members>SalesDashboards/Sales_Dashboard</members>
         <members>SalesDashboards/Sales_FY_dashboard</members>
         <members>SalesDashboards/Sales_Manager_Dashboard</members>
         <members>Team_Leader_Dashboard</members>
@@ -339,6 +350,9 @@
         <members>Appirio_Calendar_Sync/AppirioCalendarSyncLogo.png</members>
         <members>BLND_Logos_Identity</members>
         <members>BLND_Logos_Identity/BLND_DreamFactory_Logo.gif</members>
+        <members>BLND_Logos_Identity/Case_Severity_Green.png</members>
+        <members>BLND_Logos_Identity/Case_Severity_Red.png</members>
+        <members>BLND_Logos_Identity/Case_Severity_Yellow.png</members>
         <members>BLND_Logos_Identity/Erica_Logo.png</members>
         <members>BLND_Logos_Identity/GMT_Logo.png</members>
         <members>BLND_Logos_Identity/GMT_PNG_LOGO.png</members>
@@ -346,6 +360,8 @@
         <members>BLND_Logos_Identity/SLX_PNG_Logo.png</members>
         <members>BLND_Logos_Identity/SponsoredLinX_Logo_20120313_jpg.jpg</members>
         <members>BLND_Logos_Identity/sponsored_linx_jpg.jpg</members>
+        <members>Common_Daily_Task_Guide</members>
+        <members>Common_Daily_Task_Guide/Daily_Task_Guide.pdf</members>
         <members>Communities_Shared_Document_Folder</members>
         <members>Communities_Shared_Document_Folder/SLX_png.png</members>
         <members>Communities_Shared_Document_Folder/logo_sfdc_png.png</members>
@@ -428,6 +444,7 @@
         <members>Cases/SUPPORTSelfServiceResetPasswordSAMPLE</members>
         <members>Cases/SUPPORTWebtoCaseemailresponseSAMPLE</members>
         <members>Cases/Unresolve_Case_Request</members>
+        <members>Cases/Unresolve_Case_Save</members>
         <members>Cases/product_status_change_has_been_issued</members>
         <members>Cases/request_to_cancel_service</members>
         <members>Cases/request_to_cancel_service_without_2_weeks_payable</members>
@@ -452,6 +469,12 @@
         <members>Payment_Batches/Todays_Payment_Batches</members>
         <members>Projects</members>
         <members>Projects/Alert_Pending_Project_Info_for_60_Days</members>
+        <members>Projects/GMT_Questionnaire</members>
+        <members>Projects/GMT_Questionnaire_Reminder</members>
+        <members>Projects/GMT_Webcontent_Questionnaire</members>
+        <members>Projects/SLX_Questionnaire</members>
+        <members>Projects/SLX_Questionnaire_reminder</members>
+        <members>Projects/SLX_Webcontent_Questionnaire</members>
         <members>Sign_Up</members>
         <members>Sign_Up/Account_Built_Alert</members>
         <members>Sign_Up/Account_product_owner_inactive</members>
@@ -513,6 +536,7 @@
         <members>unfiled$public/AcceptanceEmail</members>
         <members>unfiled$public/CommunityChangePasswordEmailTemplate</members>
         <members>unfiled$public/CommunityForgotPasswordEmailTemplate</members>
+        <members>unfiled$public/CommunityLockoutEmailTemplate</members>
         <members>unfiled$public/CommunityWelcomeEmailTemplate</members>
         <members>unfiled$public/ContactFollowUpSAMPLE</members>
         <members>unfiled$public/DeactivationEmail</members>
@@ -642,7 +666,6 @@
     </types>
     <types>
         <members>Accounts_Admin</members>
-        <members>Accounts_Admin/Account_Without_CVN</members>
         <members>Accounts_Admin/Accounts_not_assoicated_with_BJB_Company</members>
         <members>Accounts_Admin/Accounts_with_Domain_Product</members>
         <members>Accounts_Admin/Active_Clients</members>
@@ -658,6 +681,7 @@
         <members>Accounts_Admin/Current_Management_Product_Status</members>
         <members>Accounts_Admin/Current_Paused_Admin</members>
         <members>Accounts_Admin/Current_Paused_SEO_inc_STP</members>
+        <members>Accounts_Admin/Daily_Non_Login_Tracking</members>
         <members>Accounts_Admin/Eway_Invoices_Approved_Last_Week</members>
         <members>Accounts_Admin/Facebook_Active_Clients</members>
         <members>Accounts_Admin/Google_Funds_Payments_Admin</members>
@@ -684,6 +708,11 @@
         <members>Active_Clients/GMT_History_Active_Number</members>
         <members>Active_Clients/SampleReportActiveUsers</members>
         <members>Active_Clients/SampleReportofAccounts</members>
+        <members>Aim_To_Remove</members>
+        <members>Aim_To_Remove/New_Zero_Impression</members>
+        <members>Aim_To_Remove/No_Activity_Accounts</members>
+        <members>Aim_To_Remove/Non_Login_Report</members>
+        <members>Aim_To_Remove/Snapshot_Non_Login_Report</members>
         <members>Brett</members>
         <members>Brett/Active_Clients_Active_Days</members>
         <members>Brett/Active_Clients_Payments</members>
@@ -718,7 +747,6 @@
         <members>Brett/Facebook_Payment_This_Month1</members>
         <members>Brett/Facebook_Payments</members>
         <members>Brett/GMT_NZ</members>
-        <members>Brett/GMT_Sign_Up_Setup_Monthly_prices</members>
         <members>Brett/Google_Funds_Payments</members>
         <members>Brett/History_Active_Clients_Number</members>
         <members>Brett/Industry_Active_Clients</members>
@@ -860,11 +888,13 @@
         <members>Chatter_Usage/Users_with_Followers</members>
         <members>Client_Manager_Reports</members>
         <members>Client_Manager_Reports/Account_Revenue</members>
+        <members>Client_Manager_Reports/Account_Without_Adwords</members>
+        <members>Client_Manager_Reports/Account_Without_Adwords_ID</members>
         <members>Client_Manager_Reports/Accounts_Without_Completed_Tasks</members>
         <members>Client_Manager_Reports/Accounts_Without_Open_Activities</members>
         <members>Client_Manager_Reports/Active_Clients_With_Last_Activity</members>
         <members>Client_Manager_Reports/Adwords_Product_Owner_Change_Last_Week</members>
-        <members>Client_Manager_Reports/Adwords_Product_Without_ID</members>
+        <members>Client_Manager_Reports/Alex_Conor_RM_Dashboard</members>
         <members>Client_Manager_Reports/Bing_Active_Products</members>
         <members>Client_Manager_Reports/Bing_Products_Missing_ID</members>
         <members>Client_Manager_Reports/Build_Check_Pending_CM_Action_CM</members>
@@ -876,18 +906,35 @@
         <members>Client_Manager_Reports/CMD_Open_Tasks_Next_Week</members>
         <members>Client_Manager_Reports/CMD_Open_Tasks_This_Week</members>
         <members>Client_Manager_Reports/CMD_Overdue_Tasks</members>
+        <members>Client_Manager_Reports/CMD_Pending_This_Month</members>
         <members>Client_Manager_Reports/CMD_Tasks_Completed</members>
         <members>Client_Manager_Reports/CMD_Total_Active_Clients</members>
         <members>Client_Manager_Reports/CMD_Total_Paused_Clients</members>
         <members>Client_Manager_Reports/CM_Activities</members>
+        <members>Client_Manager_Reports/CM_Call_Response_Time</members>
+        <members>Client_Manager_Reports/CM_Email_Activies</members>
+        <members>Client_Manager_Reports/CM_Total_Offsets</members>
+        <members>Client_Manager_Reports/CM_Zero_Impression_Last_7_Days</members>
+        <members>Client_Manager_Reports/Case_Escalated_By_RM</members>
         <members>Client_Manager_Reports/Cases_Escalated_Per_CM</members>
         <members>Client_Manager_Reports/Cases_New</members>
         <members>Client_Manager_Reports/Client</members>
+        <members>Client_Manager_Reports/Client_Resuming</members>
         <members>Client_Manager_Reports/Clients_havent_been_contacted</members>
+        <members>Client_Manager_Reports/DS_Email_Response_Time</members>
         <members>Client_Manager_Reports/Facebook_Pending_Linking</members>
+        <members>Client_Manager_Reports/Force_Pause_Warning</members>
+        <members>Client_Manager_Reports/Group_Customer_Index</members>
         <members>Client_Manager_Reports/KPI_Cancelled_Revenue_CM</members>
         <members>Client_Manager_Reports/Kylie_DC_calls</members>
+        <members>Client_Manager_Reports/Minimum_Contacts_Reports</members>
+        <members>Client_Manager_Reports/Missed_Calls</members>
+        <members>Client_Manager_Reports/Missing_AdWords_ID1</members>
+        <members>Client_Manager_Reports/My_Open_Tasks_by_Day_30_Days</members>
+        <members>Client_Manager_Reports/NVM_Call_Made</members>
+        <members>Client_Manager_Reports/NVM_Miss_Call</members>
         <members>Client_Manager_Reports/Next_30_Days_Activities</members>
+        <members>Client_Manager_Reports/No_Contact_Accounts</members>
         <members>Client_Manager_Reports/Overdue_Tasks1</members>
         <members>Client_Manager_Reports/Paused_Revenue_Last_Month_CM</members>
         <members>Client_Manager_Reports/Paused_Revenue_This_Month</members>
@@ -905,6 +952,9 @@
         <members>Client_Manager_Reports/Total_Refunds_Processed_This_Month</members>
         <members>Client_Manager_Reports/Total_Waivers_Processed_Last_Week</members>
         <members>Client_Manager_Reports/Total_Waivers_Processed_This_Month</members>
+        <members>Client_Manager_Reports/Zero_Account_Activity_Last_14_Days</members>
+        <members>Client_Manager_Reports/Zero_Acitivity_14_days</members>
+        <members>Client_Manager_Reports/Zero_Activity_21_days</members>
         <members>Client_Manager_Reports/unpaid_revenue</members>
         <members>Client_Managers</members>
         <members>Client_Managers/Completions_This_Month</members>
@@ -915,6 +965,7 @@
         <members>Client_Operations_Manager_Reports/Adwords_FB_Case_Volume</members>
         <members>Client_Operations_Manager_Reports/Adwords_Facebook_Active_Numbers</members>
         <members>Client_Operations_Manager_Reports/Adwords_Facebook_Active_Numer_Fri</members>
+        <members>Client_Operations_Manager_Reports/Adwords_Retention_w_w_o_Converto</members>
         <members>Client_Operations_Manager_Reports/Adwords_stats_by_Industry_1</members>
         <members>Client_Operations_Manager_Reports/Build_Check_Completed</members>
         <members>Client_Operations_Manager_Reports/CM_Office_Mismatched_Account_Acc_Prod</members>
@@ -939,7 +990,6 @@
         <members>Client_Operations_Manager_Reports/Last_months_Back_to_Sales</members>
         <members>Client_Operations_Manager_Reports/MCC_Conversion_Rate</members>
         <members>Client_Operations_Manager_Reports/Minimum_Contacts_Report</members>
-        <members>Client_Operations_Manager_Reports/Non_Login_Report</members>
         <members>Client_Operations_Manager_Reports/Not_Paying_SLX_Invoices_This_Month</members>
         <members>Client_Operations_Manager_Reports/Opportunity_clients2</members>
         <members>Client_Operations_Manager_Reports/Payment_Made_This_Month</members>
@@ -955,8 +1005,26 @@
         <members>Client_Operations_Manager_Reports/Unresolved_Cases_by_Owner</members>
         <members>Client_Operations_Manager_Reports/Unresolved_Pause_cases</members>
         <members>Client_Operations_Manager_Reports/Voided_Invoices_COM</members>
+        <members>Client_Operations_Manager_Reports/Weekly_Non_Login_Tracking</members>
         <members>Digital_Strategy</members>
+        <members>Digital_Strategy/Completed_Audits_LM</members>
+        <members>Digital_Strategy/Completed_Audits_TM</members>
+        <members>Digital_Strategy/Completed_Audits_TW</members>
+        <members>Digital_Strategy/Completed_Audits_yesterday</members>
         <members>Digital_Strategy/Dig_Strat_Last_Month1</members>
+        <members>Digital_Strategy/IT_Daily_Audit_Booked_2</members>
+        <members>Digital_Strategy/IT_Daily_Audit_Complete_2</members>
+        <members>Digital_Strategy/IT_Daily_Calls_Made</members>
+        <members>Digital_Strategy/IT_Daily_Sales_Revenue</members>
+        <members>Digital_Strategy/IT_Month_Sales_Revenue</members>
+        <members>Digital_Strategy/IT_Monthly_Audit_Booked_2</members>
+        <members>Digital_Strategy/IT_Monthly_Audit_Completed_2</members>
+        <members>Digital_Strategy/IT_Monthly_Call_Made</members>
+        <members>Digital_Strategy/IT_Weekly_Audit_Booked_2</members>
+        <members>Digital_Strategy/IT_Weekly_Audit_Complete_2</members>
+        <members>Digital_Strategy/IT_Weekly_Call_Made</members>
+        <members>Digital_Strategy/IT_Weekly_Sales_Revenue</members>
+        <members>Digital_Strategy/Opps_with_New_Status</members>
         <members>GMT_Manager_Call_Dashboard</members>
         <members>GMT_Manager_Call_Dashboard/Amy_outbound_calls_yesterday</members>
         <members>GMT_Manager_Call_Dashboard/Carrie_Outbound_Calls_yesterday</members>
@@ -984,6 +1052,7 @@
         <members>Marketing_Manager_Reports/AdWords_Inbound_Leads_SLX_NZ</members>
         <members>Marketing_Manager_Reports/Cancellation_By_Product_Type</members>
         <members>Marketing_Manager_Reports/Google_Partners_Connect_list</members>
+        <members>Marketing_Manager_Reports/IT_Monthly_SEO_From_Adwords</members>
         <members>Marketing_Manager_Reports/Inbound_Leads_SLX_AdWords</members>
         <members>Marketing_Manager_Reports/Inbound_Leads_SLX_NZ</members>
         <members>Marketing_Manager_Reports/Inbound_Leads_To_Sales</members>
@@ -994,8 +1063,11 @@
         <members>Marketing_Manager_Reports/Lindsey_s_Workable_Report</members>
         <members>Marketing_Manager_Reports/Questionnaire_by_Status</members>
         <members>Marketing_Manager_Reports/Sales_By_Source</members>
+        <members>Marketing_Manager_Reports/Sales_From_Adwords</members>
         <members>Marketing_Manager_Reports/Sales_Value_By_Product_Type</members>
+        <members>Marketing_Manager_Reports/This_Week_New_Leads</members>
         <members>NVM_Call_Data</members>
+        <members>NVM_Call_Data/Agent_Status_Report</members>
         <members>NVM_Call_Data/Average_Call_Duartion_User</members>
         <members>NVM_Call_Data/Average_Call_Duration_ACD</members>
         <members>NVM_Call_Data/CM_Queue_Daily_Report</members>
@@ -1012,6 +1084,7 @@
         <members>NVM_Call_Data/Calls_inbound_outbound</members>
         <members>NVM_Call_Data/Calls_to_Leads</members>
         <members>NVM_Call_Data/GMT_Inbound_Calls_Yesterday</members>
+        <members>NVM_Call_Data/Inbound_Call_Report</members>
         <members>NVM_Call_Data/Last_Week_ACD</members>
         <members>NVM_Call_Data/Resolution_managers</members>
         <members>NVM_Call_Data/Today_Inbound_Calls</members>
@@ -1047,6 +1120,7 @@
         <members>Revenue_Per_Product/Yahoo_Revenue_Last_FY</members>
         <members>SEO_Reports</members>
         <members>SEO_Reports/Active_Project_Without_Activities</members>
+        <members>SEO_Reports/Active_Project_Without_Activities_2</members>
         <members>SEO_Reports/Active_Projects_SEO</members>
         <members>SEO_Reports/Active_Total_SEO</members>
         <members>SEO_Reports/Actively_Managed_SEO_Clients</members>
@@ -1056,10 +1130,12 @@
         <members>SEO_Reports/Cancellations_SEO</members>
         <members>SEO_Reports/Completed_tasks</members>
         <members>SEO_Reports/Current_Paused_SEO1</members>
+        <members>SEO_Reports/Current_Pauses</members>
         <members>SEO_Reports/Latest_SEO_Stats</members>
         <members>SEO_Reports/Link_Building_Cost_Monthly_Report</members>
         <members>SEO_Reports/Monthly_KPI_Report_SEO</members>
         <members>SEO_Reports/Monthly_SEO_Revenue_Report</members>
+        <members>SEO_Reports/Nathan_Moody_November_Payments1</members>
         <members>SEO_Reports/Overdue_Tasks_SEO</members>
         <members>SEO_Reports/Pausing_History_SEO</members>
         <members>SEO_Reports/Pending_Project_Info_Today</members>
@@ -1126,7 +1202,12 @@
         <members>Sales_Reports/Adwords_Facebook_Sales1</members>
         <members>Sales_Reports/Adwords_vs_SEO_Growth_Report1</members>
         <members>Sales_Reports/Av_SEO_Package_Month</members>
+        <members>Sales_Reports/Average_Package_Price_DB</members>
         <members>Sales_Reports/Average_Package_Price_sales</members>
+        <members>Sales_Reports/Average_Package_Setup_DB</members>
+        <members>Sales_Reports/Average_Process_Time</members>
+        <members>Sales_Reports/BTS_Case_Cancellation_Processed</members>
+        <members>Sales_Reports/BTS_Cases</members>
         <members>Sales_Reports/BTS_save_rate_report</members>
         <members>Sales_Reports/Cancellations_This_Month1</members>
         <members>Sales_Reports/Cancelled_within_6_Week_Current_FY</members>
@@ -1179,6 +1260,7 @@
         <members>Sales_Reports/GMT_Payments1</members>
         <members>Sales_Reports/GMT_Products_by_Type</members>
         <members>Sales_Reports/GMT_STP_Last_Month_Group_by_Sales</members>
+        <members>Sales_Reports/GMT_Sign_Up_Setup_Monthly_prices</members>
         <members>Sales_Reports/GMT_This_weeks_paid_AW_FB_sales</members>
         <members>Sales_Reports/GMT_Todays_Paid_AW_FB_Sales</members>
         <members>Sales_Reports/GMT_Todays_Total_paid_sales</members>
@@ -1215,6 +1297,7 @@
         <members>Sales_Reports/Monthly_SEO_Signup_Revenue</members>
         <members>Sales_Reports/NZ_Payments</members>
         <members>Sales_Reports/New_Opportunities_Last_30_Days</members>
+        <members>Sales_Reports/Number_of_Daily_Sales_From_Adwords</members>
         <members>Sales_Reports/Old_Package_Product_Quantity</members>
         <members>Sales_Reports/Opportunities</members>
         <members>Sales_Reports/Opportunities_Created_Today</members>
@@ -1226,6 +1309,7 @@
         <members>Sales_Reports/SLX_Active_Clients1</members>
         <members>Sales_Reports/SLX_Av_AW_FB_Package</members>
         <members>Sales_Reports/SLX_Av_setup_Monthly</members>
+        <members>Sales_Reports/SLX_Average_Process_Time_DB</members>
         <members>Sales_Reports/SLX_Average_setup_Value_weekly</members>
         <members>Sales_Reports/SLX_Cancellation_Last_Month_Group_by_Sales</members>
         <members>Sales_Reports/SLX_Lead_status_weekly</members>
@@ -1246,6 +1330,8 @@
         <members>Sales_Reports/SLX_monthly_recurring_revenue</members>
         <members>Sales_Reports/SLX_outbound_daily</members>
         <members>Sales_Reports/SLX_outbound_monthly</members>
+        <members>Sales_Reports/SLX_sign_up_Setup_Monthly_prices</members>
+        <members>Sales_Reports/STP_Cases_Raised</members>
         <members>Sales_Reports/Sales_Cancellation_Today</members>
         <members>Sales_Reports/Salesrep_Active_Rate</members>
         <members>Sales_Reports/Setup_Invoices</members>
@@ -1261,6 +1347,7 @@
         <members>Sales_Reports/Todays_Av_Adwords_Setup_Price</members>
         <members>Sales_Reports/Todays_Paid_sales</members>
         <members>Sales_Reports/Total_Sales_Last_Month</members>
+        <members>Sales_Reports/Total_Sales_Last_Month_DB</members>
         <members>Sales_Reports/Total_workable_leads_last_90_days</members>
         <members>Sales_Reports/Totals_AW_FB_Sales_By_Company</members>
         <members>Sales_Reports/Unfiltered_lead_report_GMT</members>
@@ -1323,6 +1410,7 @@
         <members>Team_Leader_Reports/Team_B_Rev_Report</members>
         <members>Team_Leader_Reports/Team_B_Total_Active</members>
         <members>Team_Leader_Reports_Shared</members>
+        <members>Team_Leader_Reports_Shared/AW_Completions_SLX_Monthly</members>
         <members>Team_Leader_Reports_Shared/Accounts_Paused_Last_Month</members>
         <members>Team_Leader_Reports_Shared/Active_Facebook_Products</members>
         <members>Team_Leader_Reports_Shared/Active_Facebook_Products_without_Ads_ID</members>
@@ -1370,8 +1458,6 @@
         <members>Team_Leader_Reports_Shared/Historical_escalated_cases</members>
         <members>Team_Leader_Reports_Shared/Hosting_Clients</members>
         <members>Team_Leader_Reports_Shared/NPS_Last_7_Days</members>
-        <members>Team_Leader_Reports_Shared/New_Zero_Account_Activity_Last_21_Days</members>
-        <members>Team_Leader_Reports_Shared/New_Zero_Impression</members>
         <members>Team_Leader_Reports_Shared/Not_Contacted_Accounts_In_Last_Two_Weeks</members>
         <members>Team_Leader_Reports_Shared/Open_Tasks_All_Time</members>
         <members>Team_Leader_Reports_Shared/Opportunities_This_Month</members>
@@ -1407,6 +1493,7 @@
         <members>Team_Leader_Reports_Shared/Unresolved_Pause_Cases_Today</members>
         <members>Team_Leader_Reports_Shared/Zero00_Impression_Last_7_Days</members>
         <members>Team_Leader_Reports_Shared/Zero_Account_Activity_Last_21_Days</members>
+        <members>Team_Leader_Reports_Shared/Zero_Impression_Last_7_Days2</members>
         <members>Team_Leader_Reports_Shared/save_report_daily</members>
         <members>Total_Cancellations_SEO</members>
         <members>Total_Cancellations_SEO/Total_Cancellations_SEO_Last_Month</members>
@@ -1448,7 +1535,6 @@
         <members>William_Siu/Total_Active_Clients_by_CM1</members>
         <members>William_Siu/Total_Cancellations_By_CM</members>
         <members>Work_Load_Reports</members>
-        <members>Work_Load_Reports/CM_Email_Activies</members>
         <members>unfiled$public</members>
         <members>unfiled$public/SampleReportClosedSales</members>
         <members>unfiled$public/SampleReportCompletedActivities</members>
@@ -1497,8 +1583,8 @@
     </types>
     <types>
         <members>Account</members>
+        <members>AccountBrand</members>
         <members>Account_Product__c</members>
-        <members>Account_Watcher__c</members>
         <members>ActiveScratchOrg</members>
         <members>Admin_Page__c</members>
         <members>App_Notification__c</members>
@@ -1533,6 +1619,8 @@
         <members>Case</members>
         <members>Cases__c</members>
         <members>ChannelProgram</members>
+        <members>ChannelProgramLevel</members>
+        <members>ChannelProgramMember</members>
         <members>Checkout_Notification_Template__c</members>
         <members>Client_History__c</members>
         <members>Client_Login__c</members>
@@ -1565,6 +1653,7 @@
         <members>Mcc_login__c</members>
         <members>Opportunity</members>
         <members>PPC_Leads__c</members>
+        <members>Pardot_Auto_Convert_Add__c</members>
         <members>Partial_Signup__c</members>
         <members>PartnerFundAllocation</members>
         <members>PartnerFundClaim</members>
@@ -1585,6 +1674,7 @@
         <members>Quote</members>
         <members>Related_Website__c</members>
         <members>Report_SEO_Analysis__c</members>
+        <members>RequestsForAccessSIQ</members>
         <members>Reseller__c</members>
         <members>RunningMode__c</members>
         <members>SEO_Report_Schedule__c</members>
@@ -1607,6 +1697,7 @@
         <members>Signup_Payments__c</members>
         <members>SocialPost</members>
         <members>Spot_Check__c</members>
+        <members>StreamActivityAccess</members>
         <members>StreamingChannel</members>
         <members>SurveyQuestionResponse__c</members>
         <members>SurveyTaker__c</members>
@@ -1619,6 +1710,7 @@
         <members>User</members>
         <members>UserProvisioningRequest</members>
         <members>Voicemail__c</members>
+        <members>Web_Content__c</members>
         <members>WorkOrder</members>
         <members>Work_Request__c</members>
         <members>Xero_Address__c</members>
@@ -1630,6 +1722,7 @@
         <members>seoThemeKeywords__c</members>
         <members>seoWebsiteThemes__c</members>
         <members>seoWebsite__c</members>
+        <members>ss_NonLogin__c</members>
         <name>SharingRules</name>
     </types>
     <types>
@@ -1663,7 +1756,6 @@
     <types>
         <members>Account</members>
         <members>Account_Product__c</members>
-        <members>Account_Watcher__c</members>
         <members>ActiveScratchOrg</members>
         <members>Admin_Page__c</members>
         <members>App_Notification__c</members>
@@ -1749,6 +1841,7 @@
         <members>OpportunityLineItem</members>
         <members>Organization</members>
         <members>PPC_Leads__c</members>
+        <members>Pardot_Auto_Convert_Add__c</members>
         <members>Partial_Signup__c</members>
         <members>PartnerFundAllocation</members>
         <members>PartnerFundClaim</members>
@@ -1771,6 +1864,7 @@
         <members>QuoteLineItem</members>
         <members>Related_Website__c</members>
         <members>Report_SEO_Analysis__c</members>
+        <members>RequestsForAccessSIQ</members>
         <members>Reseller__c</members>
         <members>RunningMode__c</members>
         <members>SEO_Report_Schedule__c</members>
@@ -1795,6 +1889,7 @@
         <members>SocialPost</members>
         <members>Solution</members>
         <members>Spot_Check__c</members>
+        <members>StreamActivityAccess</members>
         <members>StreamingChannel</members>
         <members>SurveyQuestionResponse__c</members>
         <members>SurveyTaker__c</members>
@@ -1811,6 +1906,7 @@
         <members>UserLicense</members>
         <members>UserProvisioningRequest</members>
         <members>Voicemail__c</members>
+        <members>Web_Content__c</members>
         <members>WorkOrder</members>
         <members>WorkOrderLineItem</members>
         <members>Work_Request__c</members>
@@ -1823,6 +1919,7 @@
         <members>seoThemeKeywords__c</members>
         <members>seoWebsiteThemes__c</members>
         <members>seoWebsite__c</members>
+        <members>ss_NonLogin__c</members>
         <name>Workflow</name>
     </types>
     <types>

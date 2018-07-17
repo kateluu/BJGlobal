@@ -38,9 +38,6 @@
         <field>CUST_OWNER_NAME</field>
     </columns>
     <columns>
-        <field>Cases__c.Owner_Role__c</field>
-    </columns>
-    <columns>
         <field>CUST_CREATED_DATE</field>
     </columns>
     <columns>
@@ -61,7 +58,7 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>Kylie Vaughan,Daniel Carey</value>
+            <value>Alexandra Brown,Conor McCown-Butt,Cameron Asher,Carly Snyman</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -87,7 +84,7 @@
     </params>
     <reportType>CustomEntity$Cases__c@Cases__c.Account__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.escalated_date__c</dateColumn>
         <interval>INTERVAL_TODAY</interval>

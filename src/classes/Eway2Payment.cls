@@ -355,7 +355,9 @@ public with sharing class Eway2Payment {
 
   public void setCardExpiry(String month, String year) {
     // Pad month to two digits with left-side zeros
-    month = month.trim().leftPad(2).replaceAll(' ', '0');
+    if ( month != null && month.length()>2){
+      month = month.trim().leftPad(2).replaceAll(' ', '0');
+    }
 
     if (year != null && year.length() > 2){
       year = year.trim().substring(2,4);

@@ -134,6 +134,26 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Audit_Booked_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit Booked Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Audit_Completed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Audit Completed Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Client_Expectation__c</fullName>
         <externalId>false</externalId>
         <label>Client Expectation</label>
@@ -448,6 +468,10 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Audit Ran</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Follow Up</fullName>
                 <default>false</default>
             </picklistValues>
@@ -479,7 +503,7 @@
         </picklist>
         <required>false</required>
         <trackFeedHistory>true</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -513,10 +537,17 @@
     <listViews>
         <fullName>Digital</fullName>
         <columns>NAME</columns>
+        <columns>Status__c</columns>
         <filterScope>Mine</filterScope>
+        <filters>
+            <field>Send_to_Salesperson__c</field>
+            <operation>contains</operation>
+            <value>Gretel Phillips,Daniel Andreotti,Joshua Beatty</value>
+        </filters>
         <label>Digital Strategy</label>
         <sharedTo>
             <group>Allen_Johnstone</group>
+            <role>SLX_Aus_Receptionist</role>
         </sharedTo>
     </listViews>
     <listViews>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Closed_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Origin__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Reason__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c$Status__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>STP Cases Raised</description>
+    <filter>
+        <criteriaItems>
+            <column>Sign_Up__c$Status__c</column>
+            <operator>equals</operator>
+            <value>Sold to Pause</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sign_Up__c.Account_Products__r$Recurring_Period__c</column>
+            <operator>notEqual</operator>
+            <value>,N/A</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sign_Up__c$Product_Type__c</column>
+            <operator>notContain</operator>
+            <value>SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sign_Up__c.Account_Products__r.Cases__r$BJB_Company__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$BJB_Company__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Sign_Up__c.Account_Products__r.Cases__r$CaseType__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>STP Cases Raised</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Signups_with_Account_Products_and_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Sign_Up__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

@@ -388,6 +388,17 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>IsNew__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>The Flag will turn on once  the lead is created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Flag will turn on once  the lead is created</inlineHelpText>
+        <label>IsNew</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Jigsaw</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -585,6 +596,16 @@
         <trackHistory>true</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFSSDupeCatcher__Override_DupeCatcher__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead Override DupeCatcher</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Sales_Notes__c</fullName>
@@ -1477,7 +1498,7 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Lawrence</label>
+        <label>GMT - ZZZZZZZZ</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
@@ -1693,6 +1714,35 @@
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>GMT_Unassigned_New_Leads</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_TRANSFER</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <label>GMT - Unassigned New Leads</label>
+        <sharedTo>
+            <role>GMTSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>GMT_callum</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
@@ -1789,6 +1839,7 @@
         <columns>From_Source__c</columns>
         <columns>Sales_Notes__c</columns>
         <columns>Assigned_To__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>LEAD.CREATED_DATE</field>
@@ -1878,14 +1929,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>contains</operation>
-            <value>Ali Fazal</value>
+            <value>Harrison Sharp</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Ali Fazal</label>
+        <label>SLX - Harry</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -1903,7 +1954,6 @@
         <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__notes__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Assigned_To__c</field>
@@ -1915,7 +1965,7 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Francis</label>
+        <label>SLX - Z</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -1945,7 +1995,7 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Jarrad</label>
+        <label>SLX - Z</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -1964,6 +2014,7 @@
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Assigned_To__c</field>
@@ -2058,14 +2109,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Jamie Arthur</value>
+            <value>Joshua Hart</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Jamie</label>
+        <label>SLX - Yoshi</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2088,14 +2139,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>David Siddons</value>
+            <value>Raquel Surdam</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - David</label>
+        <label>SLX - Raquel</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2125,7 +2176,7 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Guy</label>
+        <label>SLX - z</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2244,7 +2295,7 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Nick</label>
+        <label>SLX - Z</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2267,14 +2318,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>contains</operation>
-            <value>Daniel Brown</value>
+            <value>Rishaad Mohammed</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Dan Brown</label>
+        <label>SLX - Rishaad</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2414,9 +2465,9 @@
             <value>TODAY</value>
         </filters>
         <filters>
-            <field>LEAD.LAST_NAME</field>
+            <field>LEAD.CONVERTED</field>
             <operation>equals</operation>
-            <value>UNKNOWN</value>
+            <value>1</value>
         </filters>
         <label>Todays Converted Leads</label>
         <sharedTo>
@@ -2440,6 +2491,7 @@
         <columns>Sales_Notes__c</columns>
         <columns>LEAD.UNREAD</columns>
         <columns>BJB_Company__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>LEAD.CREATED_DATE</field>

@@ -69,6 +69,34 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Business_Processing_Hour__c</fullName>
+        <description>The business hour difference between the call response time &amp; created time</description>
+        <externalId>false</externalId>
+        <formula>ROUND(8*( 
+(5*FLOOR((DATEVALUE(Response_Time__c)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(Response_Time__c)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(Response_Time__c -DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+- 
+(5*FLOOR((DATEVALUE(CreatedDate)-DATE(1996,01,01))/7) + 
+MIN(5, 
+MOD(DATEVALUE(CreatedDate)-DATE(1996,01,01), 7) + 
+MIN(1, 24/8*(MOD(CreatedDate-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;), 1))) 
+)) 
+), 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The business hour difference between the call response time &amp; created time</inlineHelpText>
+        <label>Business Processing Hour</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Call_Object_Identifier__c</fullName>
         <externalId>false</externalId>
         <label>Call Object Identifier</label>
@@ -180,6 +208,15 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Unreturnable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Unreturnable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Voicemail_Link__c</fullName>
         <description>Displays a link to the call recording link in ContactWorld</description>
         <externalId>false</externalId>
@@ -250,6 +287,7 @@
         <columns>CREATED_DATE</columns>
         <columns>Client_Manager__c</columns>
         <columns>Call_Object_Identifier__c</columns>
+        <columns>Business_Processing_Hour__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>

@@ -220,16 +220,18 @@ jQuery(function ($) {
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 col-sm-12">
-                                                        <div class="form_row {!IF(mailing_address,'','reqd')}">
-									<span class="select_cover">
-										<apex:selectList value="{!signup.MailingState__c}" multiselect="false" size="1"
-                                                         title="Please choose your state"
-                                                         required="{!NOT(mailing_address)}"
-                                                         disabled="{!mailing_address}">
-											<apex:selectOptions value="{!stateOptions}"/>
-				        				</apex:selectList>
-									</span>
-                                                        </div>
+                                                        <apex:outputPanel rendered="{!locale == 'AUD'}">
+                                                            <div class="form_row {!IF(mailing_address,'','reqd')}">
+                            									<span class="select_cover">
+                            										<apex:selectList value="{!signup.MailingState__c}" multiselect="false" size="1"
+                                                                                     title="Please choose your state"
+                                                                                     required="{!NOT(mailing_address)}"
+                                                                                     disabled="{!mailing_address}">
+                            											<apex:selectOptions value="{!stateOptions}"/>
+                            				        				</apex:selectList>
+                            									</span>
+                                                            </div>
+                                                        </apex:outputPanel>
                                                     </div>
                                                 </apex:outputPanel>
 

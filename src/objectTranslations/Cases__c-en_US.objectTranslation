@@ -59,6 +59,18 @@
         <relationshipLabel><!-- Cases --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Adwords ID --></label>
+        <name>Adwords_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adwords URL --></label>
+        <name>Adwords_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- BJB Company --></label>
+        <name>BJB_Company__c</name>
+    </fields>
+    <fields>
         <label><!-- Billing Resolution --></label>
         <name>Billing_Resolution__c</name>
         <picklistValues>
@@ -622,8 +634,22 @@
         <name>Internal_Comments__c</name>
     </fields>
     <fields>
+        <help><!-- Last 30days Calls --></help>
+        <label><!-- Last 30days Calls --></label>
+        <name>Last_30days_Calls__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last 30days Emails --></help>
+        <label><!-- Last 30days Emails --></label>
+        <name>Last_30days_Emails__c</name>
+    </fields>
+    <fields>
         <label><!-- Latest --></label>
         <name>Latest__c</name>
+    </fields>
+    <fields>
+        <label><!-- Linked to MCC --></label>
+        <name>Linked_to_MCC__c</name>
     </fields>
     <fields>
         <help><!-- Number of calls the sales team member had involved (made or received) --></help>
@@ -735,6 +761,10 @@
         <name>SEO_Package__c</name>
     </fields>
     <fields>
+        <label><!-- SSL --></label>
+        <name>SSL__c</name>
+    </fields>
+    <fields>
         <label><!-- Sales Person --></label>
         <name>Sales_Person__c</name>
     </fields>
@@ -802,6 +832,10 @@
         <name>Unresolved_by_Role__c</name>
     </fields>
     <fields>
+        <label><!-- Urgent Flag --></label>
+        <name>Urgent_Flag__c</name>
+    </fields>
+    <fields>
         <label><!-- Waiver Request Amount --></label>
         <name>Waiver_Request_Amount__c</name>
     </fields>
@@ -824,17 +858,17 @@
     </fields>
     <fields>
         <help><!-- If you have attempted to save the client, please detail your save strategy. --></help>
-        <label><!-- Action Taken to Save --></label>
+        <label><!-- Save Strategy Suggestions --></label>
         <name>X2012_Action_Taken_to_Save__c</name>
     </fields>
     <fields>
         <help><!-- Please enter any comments regarding the case. --></help>
-        <label><!-- CM Comments --></label>
+        <label><!-- Account Information/ Concerns --></label>
         <name>X2012_CM_Comments__c</name>
     </fields>
     <fields>
         <help><!-- Please enter your proposed action to resolve this case. --></help>
-        <label><!-- CM Proposed Action --></label>
+        <label><!-- Extra Notes For RM --></label>
         <name>X2012_CM_Proposed_Action__c</name>
     </fields>
     <fields>
@@ -848,7 +882,7 @@
     </fields>
     <fields>
         <help><!-- Please enter a transcript of the customer&apos;s complaint. --></help>
-        <label><!-- E-mail or Phone Summary --></label>
+        <label><!-- Client Cancel Reasons/ Emails --></label>
         <name>X2012_E_mail_or_Phone_Summary__c</name>
     </fields>
     <fields>
@@ -990,6 +1024,61 @@
         <sections>
             <label><!-- Saved Details --></label>
             <section>Saved Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Restructured Case Layout</layout>
+        <sections>
+            <label><!-- Account Product Details --></label>
+            <section>Account Product Details</section>
+        </sections>
+        <sections>
+            <label><!-- Account Products List --></label>
+            <section>Account Products List</section>
+        </sections>
+        <sections>
+            <label><!-- Adwords Account Metrics --></label>
+            <section>Adwords Account Metrics</section>
+        </sections>
+        <sections>
+            <label><!-- Cancellation Waiver --></label>
+            <section>Cancellation Waiver</section>
+        </sections>
+        <sections>
+            <label><!-- Case Processing Information --></label>
+            <section>Case Processing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Case Resolution --></label>
+            <section>Case Resolution</section>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <section>Contacts</section>
+        </sections>
+        <sections>
+            <label><!-- Credits --></label>
+            <section>Credits</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Invoices List --></label>
+            <section>Invoices List</section>
+        </sections>
+        <sections>
+            <label><!-- Saved Details --></label>
+            <section>Saved Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Control Information --></label>
+            <section>System Control Information</section>
         </sections>
     </layouts>
     <startsWith>Consonant</startsWith>

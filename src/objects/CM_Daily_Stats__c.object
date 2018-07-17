@@ -91,9 +91,48 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Call_Response_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(  Call_Response_Time__c &gt;=4 , 0 , 
+if( Call_Response_Time__c &gt;= 2 , 0.5,
+if( Call_Response_Time__c &gt;= 1 , 1 ,
+   1.2
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Call Response Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Call_Response_Time__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Average missed call response time from last 3 days</inlineHelpText>
         <label>Call Response Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Client_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( No_Contact_Clients__c /  Active_Clients__c &gt;=0.2 , 0 , 
+if(No_Contact_Clients__c /  Active_Clients__c&gt;= 0.1 , 0.5 , 
+ 1
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Client Score</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -116,14 +155,22 @@
     <fields>
         <fullName>Customer_Service_Index__c</fullName>
         <externalId>false</externalId>
+        <formula>Email_Sent_Cap__c * 0.1 + 
+Outbound_Talk_Cap__c *0.15 +
+(NPS__c / 10) *0.1 +
+Email_Response_Cap__c *0.125 +
+Call_Response_Cap__c *0.15 +
+Contact_Client_Cap__c *0.1 +
+No_Adwords_Cap__c * 0.15 +
+Missed_Call_Cap__c *0.125</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Customer Service Index</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
+        <type>Percent</type>
     </fields>
     <fields>
         <fullName>Email_Received__c</fullName>
@@ -138,9 +185,46 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Email_Response_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Email_Response_Time__c &gt;=4 , 0 , 
+if(Email_Response_Time__c &gt;= 2 , 0.5 ,
+if(Email_Response_Time__c &gt;= 1 , 1 ,
+   1.2
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email Response Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Email_Response_Time__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Average email response time from last 7 days</inlineHelpText>
         <label>Email Response Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Sent_Cap__c</fullName>
+        <description>value after apply cap for email sent</description>
+        <externalId>false</externalId>
+        <formula>if(Email_Sent__c/Active_Clients__c &lt; 1.5 ,1*Email_Sent__c/Active_Clients__c , 1.5)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>value after apply cap for email sent</inlineHelpText>
+        <label>Email Sent Score</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -152,6 +236,7 @@
     <fields>
         <fullName>Email_Sent__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Email Sent from last 7 days</inlineHelpText>
         <label>Email Sent</label>
         <precision>18</precision>
         <required>false</required>
@@ -197,9 +282,42 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Missed_Call_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if ( No_of_Missed_Calls__c = 0, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Missed Call Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>NPS__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>NPS score from last 30 days</inlineHelpText>
         <label>NPS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Adwords_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(  No_Change_Accounts__c / Active_Clients__c &gt;=0.2 , 0 , 
+if(No_Change_Accounts__c / Active_Clients__c&gt;= 0.1 , 0.5, 1
+
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No Adwords Score</label>
         <precision>18</precision>
         <required>false</required>
         <scale>2</scale>
@@ -211,6 +329,7 @@
     <fields>
         <fullName>No_Change_Accounts__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>No adwords change from last 21 days</inlineHelpText>
         <label>No Change Accounts</label>
         <precision>18</precision>
         <required>false</required>
@@ -221,8 +340,49 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>No_Contact_Clients__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Clients who didn&apos;t meet the minimum contacts requirement</inlineHelpText>
+        <label>No Contact Clients</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_Missed_Calls__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Missed calls from last 3 days</inlineHelpText>
+        <label>Missed Calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outbound_Talk_Cap__c</fullName>
+        <externalId>false</externalId>
+        <formula>if((Total_Talk_Minutes__c/Active_Clients__c)/4 &lt; 1.5,(Total_Talk_Minutes__c/Active_Clients__c)/4, 1.5)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Talk Minutes Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Outbound_Talk_Minutes__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Outbound talk time from last 7 days</inlineHelpText>
         <label>Outbound Talk Minutes</label>
         <precision>18</precision>
         <required>false</required>
@@ -296,7 +456,109 @@
         <trackTrending>false</trackTrending>
         <type>Percent</type>
     </fields>
+    <fields>
+        <fullName>isActive__c</fullName>
+        <description>The field value is true when it will be show up in Spinify</description>
+        <externalId>false</externalId>
+        <formula>If( DATEVALUE(CreatedDate )= TODAY()+(-1), true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The field value is true when it will be show up in Spinify</inlineHelpText>
+        <label>isActive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isGMT__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(CONTAINS(Role__c , &apos;gmt&apos;) ||CONTAINS(Role__c , &apos;GMT&apos;)  , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>isGMT</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
     <label>Workload Index(Project Einstein)</label>
+    <listViews>
+        <fullName>Customer_Service_Index_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Role__c</columns>
+        <columns>isGMT__c</columns>
+        <columns>isActive__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Customer_Service_Index__c</columns>
+        <columns>Active_Clients__c</columns>
+        <columns>Email_Sent__c</columns>
+        <columns>Outbound_Talk_Minutes__c</columns>
+        <columns>Email_Response_Time__c</columns>
+        <columns>Call_Response_Time__c</columns>
+        <columns>No_Contact_Clients__c</columns>
+        <columns>No_Change_Accounts__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <filters>
+            <field>Total_Emails__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>isGMT__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Customer Service Index - GMT</label>
+        <sharedTo>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>Client_Manager_Team_C_Leader</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Customer_Service_Index_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>isGMT__c</columns>
+        <columns>Role__c</columns>
+        <columns>isActive__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Customer_Service_Index__c</columns>
+        <columns>Active_Clients__c</columns>
+        <columns>Email_Sent__c</columns>
+        <columns>Total_Talk_Minutes__c</columns>
+        <columns>Email_Response_Time__c</columns>
+        <columns>Call_Response_Time__c</columns>
+        <columns>No_Contact_Clients__c</columns>
+        <columns>No_Change_Accounts__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <filters>
+            <field>Total_Emails__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Role__c</field>
+            <operation>notContain</operation>
+            <value>gmt</value>
+        </filters>
+        <label>Customer Service Index - SLX</label>
+        <sharedTo>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>Client_Manager_Team_B_Leader</role>
+            <role>Client_Manager_Team_C_Leader</role>
+        </sharedTo>
+    </listViews>
     <listViews>
         <fullName>Workload_Index_GMT</fullName>
         <columns>NAME</columns>
@@ -335,6 +597,7 @@
     <listViews>
         <fullName>Workload_Index_SLX</fullName>
         <columns>NAME</columns>
+        <columns>isActive__c</columns>
         <columns>Workload_Index__c</columns>
         <columns>Active_Clients__c</columns>
         <columns>Email_Received__c</columns>
@@ -347,11 +610,6 @@
         <columns>Email_Response_Time__c</columns>
         <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>YESTERDAY</value>
-        </filters>
         <filters>
             <field>Total_Emails__c</field>
             <operation>greaterThan</operation>

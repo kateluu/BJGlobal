@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_61733718</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account_Product__c$Owner_Role__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <value>SLX Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <value>SLX Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <value>SLX Team C</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Leader</sourceValue>
+            </sourceValues>
+            <value>GMT Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Member</sourceValue>
+            </sourceValues>
+            <value>GMT Team B</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SLX (Aus) SEO Team A Account Manager</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SLX (Aus) SEO Team A Manager</sourceValue>
+            </sourceValues>
+            <value>SEO Team A</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SLX (Aus) SEO Team B Account Manager</sourceValue>
+            </sourceValues>
+            <value>SEO Team B</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account_Product__c$Name</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c$Adwords_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c$Account__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Status__c</column>
+            <operator>equals</operator>
+            <value>Escalated,Unresolved</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>Account_Product__c$Id</primaryTableColumn>
+        <relatedTable>Cases__c</relatedTable>
+        <relatedTableJoinColumn>Account_Product__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account_Product__c$Product_Status__c</column>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Recurring_Period__c</column>
+            <operator>equals</operator>
+            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$No_Adwords_Change__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Adwords_ID__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Active_Days__c</column>
+            <operator>greaterThan</operator>
+            <value>3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c$Name</column>
+            <operator>contains</operator>
+            <value>adwords</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_61733718</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account_Product__c$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Zero Activity 21 days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Products_with_Cases__c</reportType>
+    <scope>team</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account_Product__c$Last_Stats_Update__c</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

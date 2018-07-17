@@ -9,6 +9,7 @@
     <columns>
         <field>Cases__c.Cancellation_Date__c</field>
     </columns>
+    <currency>AUD</currency>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -21,7 +22,7 @@
         <value>1</value>
     </params>
     <reportType>CustomEntity$Cases__c@Cases__c.Account__c</reportType>
-    <scope>user</scope>
+    <scope>team</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.Cancellation_Date__c</dateColumn>

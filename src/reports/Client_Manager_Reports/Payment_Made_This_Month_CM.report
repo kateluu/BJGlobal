@@ -5,8 +5,9 @@
         <developerName>BucketField_90975051</developerName>
         <masterLabel>Team</masterLabel>
         <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
         <sourceColumnName>Account_Product__c.Invoices__r.Payments__r$Payment_Owner_Role__c</sourceColumnName>
-        <useOther>false</useOther>
+        <useOther>true</useOther>
         <values>
             <sourceValues>
                 <sourceValue>Client Manager GMT Team A Leader</sourceValue>
@@ -14,16 +15,10 @@
             <sourceValues>
                 <sourceValue>Client Manager GMT Team A Member</sourceValue>
             </sourceValues>
-            <value>GMT Team A</value>
-        </values>
-        <values>
             <sourceValues>
-                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+                <sourceValue>GMT Australia</sourceValue>
             </sourceValues>
-            <sourceValues>
-                <sourceValue>Client Manager GMT Team B Member</sourceValue>
-            </sourceValues>
-            <value>GMT Team B</value>
+            <value>GMT</value>
         </values>
         <values>
             <sourceValues>
@@ -68,13 +63,10 @@
             <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team A Account Manager</sourceValue>
             </sourceValues>
-            <value>SEO Team A</value>
-        </values>
-        <values>
             <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team B Account Manager</sourceValue>
             </sourceValues>
-            <value>SEO Team B</value>
+            <value>SEO</value>
         </values>
     </buckets>
     <columns>
@@ -111,7 +103,7 @@
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Account_Product__c$Owner</field>
+        <field>Account_Product__c.Invoices__r.Payments__r$Payment_Owner__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Payment Made This Month</name>

@@ -115,6 +115,10 @@
                 <behavior>Edit</behavior>
                 <field>All_Active_Products__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>AF__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -475,7 +479,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>SLXOpportunity__c.Assign_to__c</relatedList>
+        <relatedList>SLXOpportunity__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -518,10 +522,6 @@
         <fields>Status__c</fields>
         <fields>Voicemail_Link__c</fields>
         <relatedList>Voicemail__c.Account__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Account_Watcher__c.Account__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

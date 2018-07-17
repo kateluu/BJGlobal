@@ -847,11 +847,21 @@ Product_Price__c)
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>No_Adwords_Change_14__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( OR(Last_Adwords_Update__c == null, today() - Last_Adwords_Update__c &gt; 14), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No Adwords Change - 14</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>No_Adwords_Change__c</fullName>
         <externalId>false</externalId>
         <formula>if( OR(Last_Adwords_Update__c == null, today() - Last_Adwords_Update__c &gt; 21), true, false)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>No Adwords Change</label>
+        <label>No Adwords Change - 21</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -1206,6 +1216,16 @@ IF(CONTAINS(Name,&quot;Converto&quot;), &apos;ConvertoPages&apos;, &apos;&apos;)
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Recurring__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(!ISPICKVAL(Recurring_Period__c, &apos;&apos;), !ISPICKVAL(Recurring_Period__c, &apos;N/A&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Recurring</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Relationship_Discount__c</fullName>

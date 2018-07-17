@@ -57,7 +57,7 @@
             <sourceValues>
                 <sourceValue>Client Manager GMT Team A Member</sourceValue>
             </sourceValues>
-            <value>GMT Team A</value>
+            <value>GMT</value>
         </values>
         <values>
             <sourceValues>
@@ -73,37 +73,28 @@
         </values>
         <values>
             <sourceValues>
-                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
-            </sourceValues>
-            <sourceValues>
-                <sourceValue>Client Manager GMT Team B Member</sourceValue>
-            </sourceValues>
-            <value>GMT Team B</value>
-        </values>
-        <values>
-            <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team A Account Manager</sourceValue>
             </sourceValues>
             <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team A Manager</sourceValue>
             </sourceValues>
-            <value>SEO Team A</value>
-        </values>
-        <values>
+            <sourceValues>
+                <sourceValue>Adwords &amp; SEO Client Manger</sourceValue>
+            </sourceValues>
             <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team B Account Manager</sourceValue>
             </sourceValues>
             <sourceValues>
                 <sourceValue>SLX (Aus) SEO Team B Manager</sourceValue>
             </sourceValues>
-            <sourceValues>
-                <sourceValue>Adwords &amp; SEO Client Manger</sourceValue>
-            </sourceValues>
-            <value>SEO Team B</value>
+            <value>SEO</value>
         </values>
     </buckets>
     <columns>
         <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Cases__c.Account__c</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
@@ -155,7 +146,7 @@
     </params>
     <reportType>CustomEntity$Cases__c</reportType>
     <scope>team</scope>
-    <showDetails>false</showDetails>
+    <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.unresolved_date__c</dateColumn>
         <interval>INTERVAL_THISMONTH</interval>

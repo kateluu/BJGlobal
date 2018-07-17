@@ -98,12 +98,6 @@
         <field>CONTACT</field>
     </columns>
     <columns>
-        <field>LEAD</field>
-    </columns>
-    <columns>
-        <field>OPPORTUNITY</field>
-    </columns>
-    <columns>
         <field>Activity.NVMContactWorld__CW_Call_Start_Time__c</field>
     </columns>
     <columns>
@@ -147,7 +141,6 @@
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Activity.NVMContactWorld__CW_Call_Start_Time__c</dateColumn>
-        <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2015-01-28</startDate>
+        <interval>INTERVAL_TODAY</interval>
     </timeFrameFilter>
 </Report>

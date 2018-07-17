@@ -1,0 +1,71 @@
+<messaging:emailTemplate subject="Welcome to SponsoredLinX" recipientType="Contact" relatedToType="SFDC_Projects__c">
+
+<messaging:HtmlEmailBody >
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+    a.button {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        background-color: #1a75ff; 
+        color: #ffffff;
+        width: 300px;
+        height: 150px;
+        padding: 10px; 
+        border-radius: 5px;
+        margin-left: 50%;
+    }
+
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">
+    <tr>
+        <td>
+            <img src="http://getmoretraffic.com.au/email/welcome/header.png" width="600" height="226" alt="Get More Traffic" style="display:block;"/></td>
+    </tr>
+    <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px;">
+            
+                <p style="margin-bottom:30px; line-height:30px;"><b>Dear {!relatedTo.Account__r.Name} ,</b></p>
+                <p style="margin-bottom:30px; line-height:30px;">Thank you for choosing Get More Traffic to create great content for your website!</p>
+                <p style="margin-bottom:30px; line-height:30px;">Our in-house writers are eagerly awaiting your response to our questionnaire so they can begin creating content that will help drive more qualified leads to your business.Please ensure you take the time to complete the questionnaire so we can develop creative and relevant content for your website.</p>
+        </td>
+    </tr>                
+</table>
+    
+<table width="600" height="auto" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin:0 auto;">   
+
+    <tr>
+        <td style="padding:10px;">&nbsp;</td>
+    </tr>
+    
+    <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif;font-size:18px;">
+            <p style="margin-bottom:30px; line-height:30px;">If you have any questions regarding the content pack or the questionnaire please don’t hesitate to contact your client manager. </p>
+            <p style="margin-bottom:30px; line-height:30px;">Have a great day,</p>
+            <p style="margin-bottom:30px; line-height:30px;">
+                  <span style="font-size:22px;color:#00b300;"><b>The GetMoreTraffic Team</b></span><br/>
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding:10px;width:100%">
+        <a class="btn" href="https://getmoretraffic.com.au/questionnaire?accId={!relatedTo.Account__c}&projectId={!relatedTo.Id}" style="background-color: #00b300; color: #ffffff;width:500px;height: 150px;padding: 10px; border-radius: 5px;margin-left: 120;">
+            Click Here To Visit Our Questionnaire
+        </a>
+        </td>
+    </tr>
+    
+</table>
+</body>
+</html>
+
+</messaging:HtmlEmailBody>
+
+</messaging:emailTemplate>

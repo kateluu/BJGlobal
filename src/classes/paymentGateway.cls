@@ -73,7 +73,7 @@ public with sharing class paymentGateway {
     // Update the payment token in an account
     public void updateAccountToken(Account account, String cardNumber, String cardCVN) {
         // Mask the card number
-        account.Card_Number_Masked__c = cardNumber.left(2) + 'XX-XXXX-XXXX' + cardNumber.right(4);
+        account.Card_Number_Masked__c = cardNumber.left(2) + 'XX-XXXX-XXXX-' + cardNumber.right(4);
 
 
         // Get the bjbCompany for this account

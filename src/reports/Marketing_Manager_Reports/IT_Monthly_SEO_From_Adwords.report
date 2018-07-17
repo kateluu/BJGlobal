@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sign_Up__c$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r$Name</field>
+    </columns>
+    <currency>AUD</currency>
+    <format>Tabular</format>
+    <name>IT Monthly SEO From Adwords</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Signups_with_Account_Products_and_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Sign_Up__c$Completed_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

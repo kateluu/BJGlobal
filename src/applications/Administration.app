@@ -30,6 +30,6 @@
     <tab>Voicemail__c</tab>
     <tab>Client_History__c</tab>
     <tab>Daily_Stats__c</tab>
-    <tab>Account_Watcher__c</tab>
     <tab>Questionnaire__c</tab>
+    <tab>ss_NonLogin__c</tab>
 </CustomApplication>

@@ -447,6 +447,17 @@ MIN(5,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>NVMStatsSF__NVM_Agent__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Owner:User.NVMContactWorld__NVM_Agent_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>NVM Agent ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>TL_Notes__c</fullName>
         <externalId>false</externalId>
         <label>TL Notes</label>

@@ -3,11 +3,36 @@
     <backgroundEndColor>#FFFFFF</backgroundEndColor>
     <backgroundFadeDirection>TopToBottom</backgroundFadeDirection>
     <backgroundStartColor>#66FF99</backgroundStartColor>
-    <dashboardType>MyTeamUser</dashboardType>
-    <description>Client Manager Dashboard - Updated 27-9-2012</description>
+    <dashboardType>LoggedInUser</dashboardType>
+    <description>Client Manager Dashboard - Updated 20-6-2018</description>
     <isGridLayout>false</isGridLayout>
     <leftSection>
         <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <aggregate>Sum</aggregate>
+                <axisBinding>y</axisBinding>
+                <column>Account_Product__c.Invoices__r.Payments__r$Payment_Amount__c</column>
+            </chartSummary>
+            <componentType>Donut</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingColumn>BucketField_90975051</groupingColumn>
+            <header>Earnt Revenue</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Payment_Made_This_Month_CM</report>
+            <showPercentage>true</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>This Month - Team Level</title>
+            <useReportChart>false</useReportChart>
+        </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Gauge</componentType>
@@ -24,25 +49,7 @@
             <showPercentage>false</showPercentage>
             <showTotal>true</showTotal>
             <showValues>false</showValues>
-            <title>Total</title>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Gauge</componentType>
-            <displayUnits>Auto</displayUnits>
-            <gaugeMax>22.0</gaugeMax>
-            <gaugeMin>0.0</gaugeMin>
-            <header>Paused Clients</header>
-            <indicatorBreakpoint1>10.0</indicatorBreakpoint1>
-            <indicatorBreakpoint2>18.0</indicatorBreakpoint2>
-            <indicatorHighColor>#C25454</indicatorHighColor>
-            <indicatorLowColor>#54C254</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/CMD_Total_Paused_Clients</report>
-            <showPercentage>false</showPercentage>
-            <showTotal>true</showTotal>
-            <showValues>false</showValues>
-            <title>Total</title>
+            <title>This Month - Team Level</title>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -72,91 +79,93 @@
             <expandOthers>false</expandOthers>
             <header>Open Tasks</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/CMD_Open_Tasks_This_Week</report>
+            <report>Client_Manager_Reports/Next_30_Days_Activities</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>This Week</title>
+            <title>Open Tasks - Next 30 Days</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Donut</componentType>
+            <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
+            <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
-            <header>Sign Up Completion</header>
+            <header>Pending Signup</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/CMD_Completions_This_Month</report>
+            <report>Client_Manager_Reports/CMD_Pending_This_Month</report>
             <showPercentage>false</showPercentage>
-            <showTotal>true</showTotal>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>This Month</title>
+            <title>This Month - Team Level</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Credits Processed This Month</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Total_Credit_Processed_Last_Week_cm</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>NVM Call Made</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/NVM_Call_Made</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
+            <title>This Week - Team Level</title>
+            <useReportChart>false</useReportChart>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Waivers Processed This Month</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Total_Waivers_Processed_This_Month</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>No Activity</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Zero_Acitivity_14_days</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Refunds Processed This Month</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Total_Refunds_Processed_This_Month</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
-            <sortBy>RowLabelAscending</sortBy>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Paused Revenue - This Month</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Paused_Revenue_This_Month</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
-            <sortBy>RowLabelAscending</sortBy>
+            <title>Last 14 days</title>
+            <useReportChart>false</useReportChart>
         </components>
     </leftSection>
     <middleSection>
         <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>FORMULA1</column>
+            </chartSummary>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingColumn>CUST_OWNER_NAME</groupingColumn>
+            <header>Total Offsets</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Total_Offsets_This_Month</report>
+            <showPercentage>true</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>This Month - Team Level</title>
+            <useReportChart>false</useReportChart>
+        </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Gauge</componentType>
@@ -173,7 +182,7 @@
             <showPercentage>false</showPercentage>
             <showTotal>true</showTotal>
             <showValues>false</showValues>
-            <title>This Months</title>
+            <title>This Months - Team Level</title>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -192,110 +201,6 @@
             <showTotal>true</showTotal>
             <showValues>false</showValues>
             <title>In Last 28 Days</title>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Column</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <header>Open Tasks</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/CMD_Open_Tasks_Next_Week</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>Next Week</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Resumed Clients who haven&apos;t been contacted</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Clients_havent_been_contacted</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
-            <sortBy>RowLabelAscending</sortBy>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Spot Check - Pending CM Action</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Spot_Check_Pending_CM_Action_CM</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
-            <sortBy>RowLabelAscending</sortBy>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Table</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <header>Build Check - Pending CM Action</header>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/Build_Check_Pending_CM_Action_CM</report>
-            <showPicturesOnTables>true</showPicturesOnTables>
-            <sortBy>RowLabelAscending</sortBy>
-        </components>
-    </middleSection>
-    <rightSection>
-        <columnSize>Wide</columnSize>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Pie</componentType>
-            <displayUnits>Integer</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>true</expandOthers>
-            <header>Unpaid Revenue</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/unpaid_revenue</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>This Month</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <chartSummary>
-                <axisBinding>y</axisBinding>
-                <column>RowCount</column>
-            </chartSummary>
-            <componentType>Pie</componentType>
-            <displayUnits>Integer</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>false</expandOthers>
-            <groupingColumn>Cases__c.CaseType__c</groupingColumn>
-            <header>New Cancel Cases</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/Cases_New</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>All TIme</title>
-            <useReportChart>false</useReportChart>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -322,16 +227,96 @@
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
+            <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
-            <header>Open Tasks</header>
+            <header>Clients without AdwordID</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Client_Manager_Reports/Next_30_Days_Activities</report>
+            <report>Client_Manager_Reports/Account_Without_Adwords</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Open Tasks - Next 30 Days</title>
+            <title>This Month - Team Level</title>
             <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Ad Words Billing Down</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/CM_Zero_Impression_Last_7_Days</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Last 7 days - Team Level</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingColumn>Account_Product__c$Owner</groupingColumn>
+            <header>No Activity</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Zero_Activity_21_days</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Last 21 days</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>true</expandOthers>
+            <header>Unpaid Revenue</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/unpaid_revenue</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>This Month - Team Level</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Gauge</componentType>
+            <displayUnits>Auto</displayUnits>
+            <gaugeMax>22.0</gaugeMax>
+            <gaugeMin>0.0</gaugeMin>
+            <header>Paused Clients</header>
+            <indicatorBreakpoint1>10.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>18.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>Client_Manager_Reports/CMD_Total_Paused_Clients</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>false</showValues>
+            <title>This Month - Team Level</title>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -339,17 +324,77 @@
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
-            <footer>Enter these clients&apos; CID into their account product.</footer>
-            <header>Clients not linked to Weekly Reports</header>
+            <header>Resumed Clients</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#C25454</indicatorLowColor>
             <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Client_Manager_Reports/CMD_Clients_not_on_Weekly_Reports</report>
+            <report>Client_Manager_Reports/Client_Resuming</report>
             <showPicturesOnTables>true</showPicturesOnTables>
             <sortBy>RowLabelAscending</sortBy>
+            <title>This Month</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingColumn>DUE_DATE</groupingColumn>
+            <header>Open Tasks</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/CMD_Open_Tasks_Next_Week</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Next 7 days</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Open Tasks</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Next_30_Days_Activities</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Next 30 days</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Force Pause Warning</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/Force_Pause_Warning</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Last week</title>
+            <useReportChart>false</useReportChart>
         </components>
     </rightSection>
-    <runningUser>ryan.goldsworthy@sponsoredlinx.com</runningUser>
+    <runningUser>david.powell@sponsoredlinx.com</runningUser>
     <textColor>#000000</textColor>
     <title>Client Manager Dashboard</title>
     <titleColor>#000000</titleColor>

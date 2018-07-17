@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>emailAlertSelection</name>
+            <value>
+                <stringValue>Account_Card_Number_Change</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myRule_1_A2</name>
+        <label>Account Card Number is changed</label>
+        <locationX>100</locationX>
+        <locationY>300</locationY>
+        <actionName>Account.Account_Card_Number_Change</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
     <assignments>
         <name>myVariable_waitStartTimeAssignment</name>
         <label>myVariable_waitStartTimeAssignment</label>
@@ -44,7 +64,7 @@
             <label>Card number modified</label>
         </rules>
     </decisions>
-    <description>Masks the &quot;Account Card Mask&quot; field on save - disable send notification</description>
+    <description>Masks the &quot;Account Card Mask&quot; field on save</description>
     <formulas>
         <processMetadataValues>
             <name>originalFormula</name>
@@ -52,7 +72,7 @@
                 <stringValue>IF(ISBLANK([Account].Card_Number_Masked__c), &apos;&apos;, LEFT([Account].Card_Number_Masked__c, 2) + &apos;XX-XXXX-XXXX-&apos; + RIGHT([Account].Card_Number_Masked__c, 4))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A2_5590597334</name>
+        <name>formula_2_myRule_1_A1_4466350663</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.Card_Number_Masked__c}), &apos;&apos;, LEFT({!myVariable_current.Card_Number_Masked__c}, 2) + &apos;XX-XXXX-XXXX-&apos; + RIGHT({!myVariable_current.Card_Number_Masked__c}, 4))</expression>
     </formulas>
@@ -116,86 +136,12 @@
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
-        <label>Copy into old card number field</label>
+        <label>Mask card number</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <connector>
             <targetReference>myRule_1_A2</targetReference>
         </connector>
-        <filters>
-            <processMetadataValues>
-                <name>implicit</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </processMetadataValues>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>myVariable_current.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <processMetadataValues>
-                <name>dataType</name>
-                <value>
-                    <stringValue>String</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>isRequired</name>
-                <value>
-                    <booleanValue>false</booleanValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideLabel</name>
-                <value>
-                    <stringValue>Card Number</stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>leftHandSideReferenceTo</name>
-                <value>
-                    <stringValue></stringValue>
-                </value>
-            </processMetadataValues>
-            <processMetadataValues>
-                <name>rightHandSideType</name>
-                <value>
-                    <stringValue>Reference</stringValue>
-                </value>
-            </processMetadataValues>
-            <field>Card_Number__c</field>
-            <value>
-                <elementReference>myVariable_current.Card_Number_Masked__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Account</object>
-    </recordUpdates>
-    <recordUpdates>
-        <processMetadataValues>
-            <name>evaluationType</name>
-            <value>
-                <stringValue>always</stringValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>isChildRelationship</name>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </processMetadataValues>
-        <processMetadataValues>
-            <name>reference</name>
-            <value>
-                <stringValue>[Account]</stringValue>
-            </value>
-        </processMetadataValues>
-        <name>myRule_1_A2</name>
-        <label>Mask card number</label>
-        <locationX>100</locationX>
-        <locationY>300</locationY>
         <filters>
             <processMetadataValues>
                 <name>implicit</name>
@@ -242,7 +188,7 @@
             </processMetadataValues>
             <field>Card_Number_Masked__c</field>
             <value>
-                <elementReference>formula_2_myRule_1_A2_5590597334</elementReference>
+                <elementReference>formula_2_myRule_1_A1_4466350663</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>

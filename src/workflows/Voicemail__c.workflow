@@ -33,6 +33,48 @@
         <senderType>CurrentUser</senderType>
         <template>AssignedNotification/ASAP_Response_Miss_Call_Notification</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Change_Status</fullName>
+        <field>Status__c</field>
+        <literalValue>Closed</literalValue>
+        <name>Change Status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Unreachable</fullName>
+        <field>Unreturnable__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Unreachable</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto Close Anonymous Call</fullName>
+        <actions>
+            <name>Change_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Unreachable</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Voicemail__c.Mobile_Phone__c</field>
+            <operation>contains</operation>
+            <value>anonymous</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Voicemail__c.Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <description>Auto Close Anonymous Call</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
     <rules>
         <fullName>Miss Call Notification</fullName>
         <actions>

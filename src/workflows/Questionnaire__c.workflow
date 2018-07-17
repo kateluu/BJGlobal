@@ -2,6 +2,7 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>Questionnaire_Completed_Alert</fullName>
+        <ccEmails>shanan.howe@sponsoredlinx.com</ccEmails>
         <description>Questionnaire Completed Alert</description>
         <protected>false</protected>
         <recipients>
@@ -11,6 +12,16 @@
         <senderType>CurrentUser</senderType>
         <template>Convertopages/New_Questionnaire</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Update_Status_To_Default</fullName>
+        <field>Status__c</field>
+        <literalValue>Project Ready</literalValue>
+        <name>Update Status To Default</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
     <rules>
         <fullName>Send New Questionnaire to Doug</fullName>
         <actions>
@@ -29,5 +40,20 @@
             <value>Yes</value>
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Status Default Value</fullName>
+        <actions>
+            <name>Update_Status_To_Default</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Questionnaire__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Project Ready,In Progress,Complete</value>
+        </criteriaItems>
+        <description>Prevent User create questionnaire without status value</description>
+        <triggerType>onCreateOnly</triggerType>
     </rules>
 </Workflow>

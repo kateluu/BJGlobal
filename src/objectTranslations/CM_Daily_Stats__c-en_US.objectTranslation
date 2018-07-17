@@ -21,8 +21,17 @@
         <name>Adwords_Acc_Activities__c</name>
     </fields>
     <fields>
+        <label><!-- Call Response Score --></label>
+        <name>Call_Response_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- Average missed call response time from last 3 days --></help>
         <label><!-- Call Response Time --></label>
         <name>Call_Response_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Client Score --></label>
+        <name>Contact_Client_Cap__c</name>
     </fields>
     <fields>
         <label><!-- Credits Issued --></label>
@@ -37,10 +46,21 @@
         <name>Email_Received__c</name>
     </fields>
     <fields>
+        <label><!-- Email Response Score --></label>
+        <name>Email_Response_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- Average email response time from last 7 days --></help>
         <label><!-- Email Response Time --></label>
         <name>Email_Response_Time__c</name>
     </fields>
     <fields>
+        <help><!-- value after apply cap for email sent --></help>
+        <label><!-- Email Sent Score --></label>
+        <name>Email_Sent_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email Sent from last 7 days --></help>
         <label><!-- Email Sent --></label>
         <name>Email_Sent__c</name>
     </fields>
@@ -57,14 +77,39 @@
         <name>Inbound_Talk_Minutes__c</name>
     </fields>
     <fields>
+        <label><!-- Missed Call Score --></label>
+        <name>Missed_Call_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- NPS score from last 30 days --></help>
         <label><!-- NPS --></label>
         <name>NPS__c</name>
     </fields>
     <fields>
+        <label><!-- No Adwords Score --></label>
+        <name>No_Adwords_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- No adwords change from last 21 days --></help>
         <label><!-- No Change Accounts --></label>
         <name>No_Change_Accounts__c</name>
     </fields>
     <fields>
+        <help><!-- Clients who didn&apos;t meet the minimum contacts requirement --></help>
+        <label><!-- No Contact Clients --></label>
+        <name>No_Contact_Clients__c</name>
+    </fields>
+    <fields>
+        <help><!-- Missed calls from last 3 days --></help>
+        <label><!-- Missed Calls --></label>
+        <name>No_of_Missed_Calls__c</name>
+    </fields>
+    <fields>
+        <label><!-- Talk Minutes Score --></label>
+        <name>Outbound_Talk_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- Outbound talk time from last 7 days --></help>
         <label><!-- Outbound Talk Minutes --></label>
         <name>Outbound_Talk_Minutes__c</name>
     </fields>
@@ -88,5 +133,25 @@
         <label><!-- Workload Index --></label>
         <name>Workload_Index__c</name>
     </fields>
+    <fields>
+        <help><!-- The field value is true when it will be show up in Spinify --></help>
+        <label><!-- isActive --></label>
+        <name>isActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- isGMT --></label>
+        <name>isGMT__c</name>
+    </fields>
+    <layouts>
+        <layout>CM Daily Stat Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Service Index --></label>
+            <section>Customer Service Index</section>
+        </sections>
+    </layouts>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

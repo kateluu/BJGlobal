@@ -91,6 +91,11 @@
         <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
+        <application>standard__LightningInstrumentation</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
         <visible>true</visible>
@@ -419,6 +424,14 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DailyLoginHistory</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DailyLoginHistoryTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DailyStats</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -648,6 +661,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>ProductActiveDaysTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>QuestionnaireController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>QuestionnaireControllerTest</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1330,6 +1351,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.AF__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.AccountNumber</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -1696,6 +1722,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.SEO_Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.SFSSDupeCatcher__Override_DupeCatcher__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2100,6 +2131,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account_Product__c.No_Adwords_Change_14__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account_Product__c.No_Adwords_Change__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2191,6 +2227,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account_Product__c.Recurring_Period__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account_Product__c.Recurring__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2327,31 +2368,6 @@
         <editable>true</editable>
         <field>Account_Product__c.pauseat__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account_Watcher__c.Account__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account_Watcher__c.Last_14_days_num_of_calls__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Account_Watcher__c.Last_14_days_num_of_emails__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account_Watcher__c.Last_7_days_num_of_calls__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Account_Watcher__c.Last_7_days_num_of_emails__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4030,7 +4046,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CM_Daily_Stats__c.Call_Response_Cap__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CM_Daily_Stats__c.Call_Response_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.Contact_Client_Cap__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4050,7 +4076,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CM_Daily_Stats__c.Email_Response_Cap__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CM_Daily_Stats__c.Email_Response_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.Email_Sent_Cap__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4075,12 +4111,37 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CM_Daily_Stats__c.Missed_Call_Cap__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CM_Daily_Stats__c.NPS__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CM_Daily_Stats__c.No_Adwords_Cap__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CM_Daily_Stats__c.No_Change_Accounts__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.No_Contact_Clients__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.No_of_Missed_Calls__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.Outbound_Talk_Cap__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4111,6 +4172,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CM_Daily_Stats__c.Workload_Index__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.isActive__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CM_Daily_Stats__c.isGMT__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4445,6 +4516,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Campaign.HierarchyTotalLandingPageFormSubmissions</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Campaign.HierarchyTotalLandingPageViews</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Campaign.HierarchyUniqueEmailOpens</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4526,6 +4607,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Campaign.TotalFormViews</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Campaign.TotalLandingPageFormSubmissions</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Campaign.TotalLandingPageViews</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4754,6 +4845,21 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.Adwords_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.Adwords_URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.BJB_Company__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Cases__c.Billing_Resolution__c</field>
         <readable>true</readable>
@@ -4915,8 +5021,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Cases__c.Last_30days_Calls__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.Last_30days_Emails__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Cases__c.Latest__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.Linked_to_MCC__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -5035,6 +5156,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Cases__c.SSL__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Cases__c.Sales_Person__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5086,6 +5212,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Cases__c.Unresolved_by_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Cases__c.Urgent_Flag__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5641,6 +5772,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.SEO_Product__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.SFSSDupeCatcher__Override_DupeCatcher__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7019,6 +7155,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.NVMStatsSF__NVM_Agent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Event.TL_Notes__c</field>
         <readable>true</readable>
@@ -7405,6 +7546,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.IsNew__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Jigsaw</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7471,6 +7617,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.SFGA__Web_Source__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.SFSSDupeCatcher__Override_DupeCatcher__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8236,6 +8387,66 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Partial_Signup__c.webaddress__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundAllocation.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundClaim.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundClaim.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.Activity</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.AllocationId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.Amount</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.BudgetId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.CampaignId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.DesiredOutcome</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerFundRequest.Status</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PartnerMarketingBudget.Description</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10744,6 +10955,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>SFDC_Projects__c.Web_Questionnaire__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>SFDC_Projects__c.Webmaster_Password__c</field>
         <readable>true</readable>
@@ -11121,6 +11337,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>SLXOpportunity__c.Assign_to__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SLXOpportunity__c.Audit_Booked_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>SLXOpportunity__c.Audit_Completed_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12924,6 +13150,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.NVMStatsSF__NVM_Agent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Task.TL_Notes__c</field>
         <readable>true</readable>
@@ -13144,6 +13375,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Voicemail__c.Business_Processing_Hour__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Voicemail__c.Call_Object_Identifier__c</field>
         <readable>true</readable>
@@ -13189,9 +13425,74 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Voicemail__c.Unreturnable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Voicemail__c.Voicemail_Link__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Account__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Business_since__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Competitor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Email__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Main_audiences__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Main_industry__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Objectives__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Project__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Selling_Point__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Slogan__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Target_location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Web_Content__c.Website_URL__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -14353,14 +14654,59 @@
         <field>seoWebsite__c.website_url__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Alias__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ss_NonLogin__c.Application__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Firstname__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.LastLogin__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Lastname__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Profile__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Username__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.Weekday__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>ss_NonLogin__c.isActive__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Account_Product__c-Account Product Layout</layout>
+        <layout>AccountBrand-Account BrandLayout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Account_Watcher__c-Account Watcher Layout</layout>
+        <layout>Account_Product__c-Account Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Admin_Page__c-Admin Page Layout</layout>
@@ -14798,6 +15144,9 @@
         <layout>Voicemail__c-Voicemail Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Web_Content__c-Web Content Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>WorkOrder-Work Order Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -14861,7 +15210,111 @@
         <layout>seoWebsite__c-seoWebsite Layout</layout>
         <recordType>seoWebsite__c.SEO_Websites</recordType>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>ss_NonLogin__c-SnapshotNonLogin Layout</layout>
+    </layoutAssignments>
     <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>18.232.28.189</endAddress>
+        <startAddress>18.232.28.189</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>18.232.248.67</endAddress>
+        <startAddress>18.232.248.67</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>18.236.48.198</endAddress>
+        <startAddress>18.236.48.198</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>34.208.83.105</endAddress>
+        <startAddress>34.208.83.105</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>34.213.32.13</endAddress>
+        <startAddress>34.213.32.13</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>34.216.141.17</endAddress>
+        <startAddress>34.216.141.17</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.160.68.143</endAddress>
+        <startAddress>35.160.68.143</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.162.236.194</endAddress>
+        <startAddress>35.162.236.194</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.164.165.226</endAddress>
+        <startAddress>35.164.165.226</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.164.251.63</endAddress>
+        <startAddress>35.164.251.63</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.164.254.110</endAddress>
+        <startAddress>35.164.254.110</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.172.247.215</endAddress>
+        <startAddress>35.172.247.215</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.174.78.146</endAddress>
+        <startAddress>35.174.78.146</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.174.85.220</endAddress>
+        <startAddress>35.174.85.220</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.174.150.168</endAddress>
+        <startAddress>35.174.150.168</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>35.174.151.106</endAddress>
+        <startAddress>35.174.151.106</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>52.21.28.50</endAddress>
+        <startAddress>52.21.28.50</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>52.21.178.134</endAddress>
+        <startAddress>52.21.178.134</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>52.42.59.7</endAddress>
+        <startAddress>52.42.59.7</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>Pardot Public</description>
+        <endAddress>52.202.69.186</endAddress>
+        <startAddress>52.202.69.186</startAddress>
+    </loginIpRanges>
+    <loginIpRanges>
+        <description>kerry</description>
         <endAddress>58.96.32.6</endAddress>
         <startAddress>58.96.32.6</startAddress>
     </loginIpRanges>
@@ -14870,22 +15323,27 @@
         <startAddress>58.96.56.70</startAddress>
     </loginIpRanges>
     <loginIpRanges>
+        <description>GMT</description>
         <endAddress>61.69.104.42</endAddress>
         <startAddress>61.69.104.42</startAddress>
     </loginIpRanges>
     <loginIpRanges>
+        <description>Pardot Connector</description>
         <endAddress>136.147.96.23</endAddress>
         <startAddress>136.147.96.20</startAddress>
     </loginIpRanges>
     <loginIpRanges>
+        <description>Pardot Connector</description>
         <endAddress>136.147.104.23</endAddress>
         <startAddress>136.147.104.20</startAddress>
     </loginIpRanges>
     <loginIpRanges>
+        <description>kerry</description>
         <endAddress>180.189.152.14</endAddress>
         <startAddress>180.189.152.14</startAddress>
     </loginIpRanges>
     <loginIpRanges>
+        <description>Valley</description>
         <endAddress>203.174.180.250</endAddress>
         <startAddress>203.174.180.250</startAddress>
     </loginIpRanges>
@@ -15006,9 +15464,9 @@
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
-        <modifyAllRecords>true</modifyAllRecords>
+        <modifyAllRecords>false</modifyAllRecords>
         <object>Lead</object>
-        <viewAllRecords>true</viewAllRecords>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -15465,6 +15923,14 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>QuestionnaireGMT</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>QuestionnaireSLX</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>Respond</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -15776,10 +16242,6 @@
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>Account_Watcher__c</tab>
-        <visibility>DefaultOff</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>CM_Daily_Stats__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -15881,6 +16343,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>seoWebsite__c</tab>
+        <visibility>DefaultOff</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>ss_NonLogin__c</tab>
         <visibility>DefaultOff</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -16083,6 +16549,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SelectFilesFromSalesforce</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_2637056</developerName>
+        <masterLabel>Company</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_OWNER_ROLE</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager Team A  Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager Team C Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Resolution Manager Team C</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SponsoredLinX - Receptionist - AU</sourceValue>
+            </sourceValues>
+            <value>SLX</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team A Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Client Manager GMT Team B Member</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT Receptionist</sourceValue>
+            </sourceValues>
+            <value>GMT</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>NVMStatsSF__NVM_Agent_Summary__c.NVMStatsSF__Agent__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_ROLE</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>NVMStatsSF__NVM_Agent_Summary__c.NVMStatsSF__Number_of_Inbound_Calls_FORMULA__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>NVMStatsSF__NVM_Agent_Summary__c.NVMStatsSF__Number_of_No_Answers__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_2637056</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NVM Miss Call</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$NVMStatsSF__NVM_Agent_Summary__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>NVMStatsSF__NVM_Agent_Summary__c.NVMStatsSF__First_Login_Time__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

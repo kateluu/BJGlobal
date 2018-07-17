@@ -40,6 +40,7 @@ public with sharing class CheckoutController {
     public Boolean termsSeo4 {get; set;}
     public Boolean termsSeo5 {get; set;}
     public Boolean termsVideo1 {get; set;}
+    public Lead existingLead{get;set;}
 
     public Boolean termsDD1 {get; set;}
 
@@ -392,6 +393,7 @@ public with sharing class CheckoutController {
 
             // If errors were found, redisplay the page instead of inserting the order
             if ( ApexPages.hasMessages(ApexPages.Severity.ERROR) ){
+                system.debug('ApexPages.Severity.ERROR = ' + ApexPages.Severity.ERROR);
                 return null;
             }
 
@@ -419,6 +421,8 @@ public with sharing class CheckoutController {
 
             // Create the account
             upsert acc;
+
+
 
             // Contacts should be created before Account Products
             Map<String, sObject> contactMap = Utility.getSObjectMap('Title', [SELECT Title, Id FROM Contact WHERE Account.Id = :acc.Id]);
@@ -448,6 +452,45 @@ public with sharing class CheckoutController {
             }
             insert newContacts;
 
+            
+            String isAutoConvertTurnOn =  (Pardot_Auto_Convert_Add__c.getValues('IsTurnOn') == null)?'False':Pardot_Auto_Convert_Add__c.getValues('IsTurnOn').Value__c;
+            String autoConvert = (Pardot_Auto_Convert_Add__c.getValues('Convert') == null)?'kate.luu@sponsoredlinx.com':Pardot_Auto_Convert_Add__c.getValues('Convert').Value__c;
+            System.debug('isTurnOn = ' + isAutoConvertTurnOn + 'autoConvert address = ' + autoConvert + ' signup.Email__c = ' +  signup.Email__c);
+
+            //if (isAutoConvertTurnOn.equalsIgnoreCase('True') && signup.Email__c.equalsIgnoreCase(autoConvert)){
+            if (isAutoConvertTurnOn.equalsIgnoreCase('True')){
+                try{
+                    //check if there is any existing lead with email                     
+                    Lead existingLead = [SELECT Id, ConvertedAccountId, ConvertedContactId, Email  FROM Lead WHERE  Email = :signup.Email__c ];
+
+                    if (existingLead!= null){
+                        Contact marketingContact = [SELECT id FROM Contact WHERE email = :signup.Email__c AND AccountId = :acc.Id AND Title = 'Marketing'];
+                        if(marketingContact != null){
+                            Database.LeadConvert lc = new Database.LeadConvert();
+                            lc.setLeadId(existingLead.id);
+                            lc.setAccountId(acc.Id);
+                            lc.setContactId(marketingContact.id);
+                            lc.setDoNotCreateOpportunity(true);
+
+                            LeadStatus convertStatus = [SELECT Id, MasterLabel FROM LeadStatus WHERE IsConverted=true LIMIT 1];
+                            lc.setConvertedStatus(convertStatus.MasterLabel);
+
+                            Database.LeadConvertResult lcr = Database.convertLead(lc);
+                            System.debug('lcr.isSuccess() = ' + lcr.isSuccess());
+                            if(lcr.isSuccess() == true){
+                                System.debug('Existing lead had been converted successfully');
+                            }else{
+                                System.debug('Fail to convert the existing lead ID = ' + existingLead.id + ' contact id = ' + marketingContact.id);
+                            }
+                        }
+                    }
+                }catch(Exception ex){
+                     System.debug(' Error message  = ' +  ex.getMessage());
+                     System.debug(' acc.Id  = ' +   acc.Id );  
+                }
+            }
+            
+
             // Create the signup
             signup.Status__c            = 'New';
             signup.Username__c          = signup.Email__c;
@@ -459,8 +502,9 @@ public with sharing class CheckoutController {
             signup.BJB_Company__c       = bjbCompany.Id;
             signup.Form_Name__c         = 'Checkout';
           //  signup.Ownerid              = '00590000000Vmmq';
-
+            system.debug('mycart.myPackageData.promocode= ' + mycart.myPackageData.promocode);
             if (mycart.myPackageData.promocode != null) {
+
                 for ( Promocode__c promocode : [SELECT Id, Name, Account__c, Account__r.Name FROM Promocode__c WHERE IsActive__c = true AND Name = :mycart.myPackageData.promocode LIMIT 1] ) {
                     signup.Promocode__c         = promocode.Id;
 
@@ -473,6 +517,7 @@ public with sharing class CheckoutController {
             }
 
             // Default to the company name as salesperson until override by promocode account
+            system.debug('Salesperson__c= ' + signup.Salesperson__c);
             if (signup.Salesperson__c == null){
                 Account[] companyAccounts = [SELECT Id FROM Account WHERE Name = :this.companyName LIMIT 1];
                 if (companyAccounts.size() > 0){
@@ -482,6 +527,7 @@ public with sharing class CheckoutController {
                 }
             }
 
+            system.debug('this.paymentTestType = ' + this.paymentTestType);
             if (this.paymentTestType != null){
                 signup.Is_Test__c = true;
             }
@@ -495,6 +541,7 @@ public with sharing class CheckoutController {
 
             boolean containsFacebook = false;
 
+            system.debug('items = ' + items.size());
             for (CartItem myCartItem : items){
                 signup.Product_Type__c = myCartItem.getProductType();
 
@@ -511,6 +558,7 @@ public with sharing class CheckoutController {
 
             String baseInvoiceNum = signup.Invoiceno__c;
 
+            system.debug('mycart.myPackageData.addons = ' + mycart.myPackageData.addons);
             if (mycart.myPackageData.addons != null) {
                 // Suffix the invoice number of the main product with "-1", and second product with "-2", etc. 
                 signup.Invoiceno__c = baseInvoiceNum + '-1';
@@ -518,6 +566,7 @@ public with sharing class CheckoutController {
 
             // Insert the signup. The signupInsertTrigger creates all the account_products, invoices etc.
             insert signup;
+
 
             try {
                 sendSignupWelcomeEmail(signup);
@@ -528,6 +577,7 @@ public with sharing class CheckoutController {
 
             // If there were addon packages, insert them as separate signups
             integer signupCount = 1;
+            system.debug('mycart.myPackageData.addons = ' + mycart.myPackageData.addons.size());
             if (mycart.myPackageData.addons != null) {
                 for (Cart.cartPackageData addonPackageData : mycart.myPackageData.addons){
                     // Create a cart with just the packagedata of the addon package
@@ -588,6 +638,7 @@ public with sharing class CheckoutController {
             saveCart();
 
             // Redirect to the success page on the main site. We pass details of the transaction for the tracking code.
+            system.debug(' this.siteName = ' +this.siteName);
             String successPath = '/signup-thanks/';
             if (this.siteName == 'checkout_GMT') {
                 successPath = '/success/';

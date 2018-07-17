@@ -30,6 +30,8 @@ public with sharing class ActivityReport{
     for(User u : teamAdwordsAndSEO){
       emailMap.put(u.name, u.email);
     }
+
+
     
     Map<string, report> result = new Map<string, report>();
     system.debug(emailMap.keyset());
@@ -368,7 +370,7 @@ public with sharing class ActivityReport{
     emailBody += '</table>';
     
     mail = new Messaging.SingleEmailMessage();
-    User[] TLC = [select name, email from user where isActive = true and (UserRole.name like '%Client Manager Team C Leader%' or UserRole.Name = 'Client Resolution Manager Team C')];
+    User[] TLC = [select name, email from user where isActive = true and (UserRole.name like '%Client Manager Team C Leader%' Or UserRole.name like '%PPC Manager%' or UserRole.Name = 'Client Resolution Manager Team C')];
     if(isTest) {
       toAddresses = new String[] {'hanh.luu@sponsoredlinx.com'};
     } else {
@@ -553,6 +555,10 @@ public with sharing class ActivityReport{
     emailBody += '</tbody>';
     emailBody += '</table>';
     allCMEmailBody += '<br><br><br>' + emailBody;
+
+
+
+
     
     mail = new Messaging.SingleEmailMessage();
     User[] COM = [select name, email from user where isActive = true and UserRole.name like '%Client Operations Manager%'];
@@ -561,13 +567,18 @@ public with sharing class ActivityReport{
     } else {
       toAddresses = new List<String>();
       toAddresses.add('benbjb@sponsoredlinx.com');
+      
+      // Add more Amber by request on 22 June 2018, to get whole CM floor reports
+      toAddresses.add('amber.porter@sponsoredlinx.com');      
       for(User u : COM) {
         toAddresses.add(u.email);
       }
     }
+
+    
     mail.setToAddresses(toAddresses);
       system.debug('email address : toAddresses = '  + toAddresses);
-    String[] bccAddresses = new String[] { 'salesforce@sponsoredlinx.com' };
+    String[] bccAddresses = new String[] { 'salesforce@sponsoredlinx.com'};
     mail.setBccAddresses(bccAddresses);
     mail.setSenderDisplayName('Daily Report');
     mail.setSubject('Client Managers Daily Report');

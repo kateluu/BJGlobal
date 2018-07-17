@@ -12,46 +12,6 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Account__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
@@ -62,7 +22,82 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Assign_to__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Close_Date__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contact_Name__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contact_Phone_Number__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Discounts__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Importance__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opp_Type__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Product_Type__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <columns>
@@ -72,7 +107,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Product_Type__c</field>
+            <field>Send_to_Salesperson__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <columns>
@@ -87,27 +122,12 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Opp_Type__c</field>
+            <field>Adwords_ID__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Importance__c</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Assign_to__c</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Discounts__c</field>
-            <table>SLXOpportunity__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Send_to_Salesperson__c</field>
+            <field>Adwords_Keyword__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <columns>
@@ -117,12 +137,32 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Contact_Name__c</field>
+            <field>Audit_Completed_Date__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Contact_Phone_Number__c</field>
+            <field>Audit_Booked_Date__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CurrencyIsoCode</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Adwords_Daily_Budget__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contact_Email__c</field>
+            <table>SLXOpportunity__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sales_Team__c</field>
             <table>SLXOpportunity__c</table>
         </columns>
         <masterLabel>Opportunities</masterLabel>

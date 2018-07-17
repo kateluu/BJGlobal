@@ -99,7 +99,7 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>ben brown,Alexandra Brown,tuifao pi</value>
+            <value>Alexandra Brown,Conor McCown-Butt,Cameron Asher,Carly Snyman</value>
         </criteriaItems>
         <criteriaItems>
             <column>Cases__c.Account_Resolution__c</column>
@@ -120,11 +120,9 @@
     </params>
     <reportType>CustomEntity$Cases__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
+    <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.unresolved_date__c</dateColumn>
-        <endDate>2018-03-30</endDate>
-        <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2018-03-26</startDate>
+        <interval>INTERVAL_THISWEEK</interval>
     </timeFrameFilter>
 </Report>

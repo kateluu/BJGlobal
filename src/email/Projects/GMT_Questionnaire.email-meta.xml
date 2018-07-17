@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>GMT Questionnaire</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>GMT Questionnaire</name>
+    <style>none</style>
+    <subject>Questionnaire Form For Web Content Package</subject>
+    <textOnly>Hi ,
+
+Thank you for joining Get More Traffic!
+
+Please complete the questionnaire form for the web content package via the below URL.
+http://bjbglobal.force.com/questionnaireGMT?accId={!SFDC_Projects__c.AccountId__c}&amp;projectId={!SFDC_Projects__c.Id}
+
+
+Regards,
+SponsoredLinx Sales Team</textOnly>
+    <type>custom</type>
+</EmailTemplate>

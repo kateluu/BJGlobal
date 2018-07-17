@@ -14,6 +14,20 @@
         </criteriaItems>
     </sharingCriteriaRules>
     <sharingCriteriaRules>
+        <fullName>Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>to checkout</description>
+        <label>Share</label>
+        <sharedTo>
+            <group>Checkout_user</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>CreatedById</field>
+            <operation>equals</operation>
+            <value>0056F000007l52i</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
         <fullName>Share_GMT_leads_with_GMT_sales</fullName>
         <accessLevel>Edit</accessLevel>
         <label>Share GMT leads with GMT sales</label>

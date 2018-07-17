@@ -32,7 +32,7 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>Kylie Vaughan,Daniel Carey,Ben Brown,Tuifao Pi,Alexandra Brown</value>
+            <value>Alexandra Brown,Conor McCown-Butt</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -53,8 +53,6 @@
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Cases__c.escalated_date__c</dateColumn>
-        <endDate>2018-04-03</endDate>
-        <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2018-04-03</startDate>
+        <interval>INTERVAL_THISWEEK</interval>
     </timeFrameFilter>
 </Report>

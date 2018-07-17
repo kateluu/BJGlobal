@@ -428,29 +428,24 @@ public with sharing class MakeAPayment {
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a positive number for payment'));
     }
 
-    if (this.PaymentType == 'CreditCardNew' &&  this.acc.Name_On_Card__c == null || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' &&  this.cardDetails.Name_On_Card == null){
       System.debug('Error: Please enter the name on the credit card');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the name on the credit card'));
     }
 
-    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Number__c == null || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.cardDetails.Card_Number == null){
       System.debug('Error: Please enter a card number');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter a card number'));
     }
 
-    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Month_Expiry__c == '' || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.cardDetails.Card_Month_Expiry == ''){
       System.debug('Error: Please enter the card month expiry');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card month expiry'));
     }
 
-    if (this.PaymentType == 'CreditCardNew' && this.acc.Card_Year_Expiry__c == '' || this.generateErrors == true){
+    if (this.PaymentType == 'CreditCardNew' && this.cardDetails.Card_Year_Expiry == ''){
       System.debug('Error: Please enter the card year expiry');
       ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please enter the card year expiry'));
-    }
-
-    if (this.PaymentType == 'CreditCardNew' || this.generateErrors == true) {
-      System.debug('Error: Please select a payment type');
-      ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR,'Error: Please select a payment type'));
     }
 
     // create card transaction payment

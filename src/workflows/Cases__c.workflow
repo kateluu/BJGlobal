@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
+        <fullName>Case_Unresolved</fullName>
+        <description>Case Unresolved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SLX_CM_Group</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>david.powell@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Cases/Unresolve_Case_Save</template>
+    </alerts>
+    <alerts>
         <fullName>New_assignment_notification</fullName>
         <description>New assignment notification to Amber</description>
         <protected>false</protected>
@@ -131,6 +149,22 @@
         <operation>Formula</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <outboundMessages>
+        <fullName>Move_Escalated_Cases_TO_RM_MCC</fullName>
+        <apiVersion>43.0</apiVersion>
+        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
+        <fields>Adwords_ID__c</fields>
+        <fields>BJB_Company__c</fields>
+        <fields>Id</fields>
+        <fields>Linked_to_MCC__c</fields>
+        <fields>Name</fields>
+        <fields>OwnerId</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>ben@bjbglobal.com.au</integrationUser>
+        <name>Move Escalated Cases TO RM MCC</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
     <rules>
         <fullName>Closed Cases</fullName>
         <actions>
@@ -209,6 +243,54 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Move Escalated Cases TO RM MCC</fullName>
+        <actions>
+            <name>Move_Escalated_Cases_TO_RM_MCC</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Cases__c.Resolution_Manager__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>AdWords Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.CaseType__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Account_Resolution__c</field>
+            <operation>notEqual</operation>
+            <value>Save</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Case Owner Once Case Unresolved</fullName>
+        <actions>
+            <name>Case_Unresolved</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Cases__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Unresolved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Account_Resolution__c</field>
+            <operation>equals</operation>
+            <value>Save</value>
+        </criteriaItems>
+        <description>Notify Case Owner Once Case Unresolved</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Saved by Date</fullName>
         <actions>
             <name>Mark_as_Saved</name>
@@ -242,6 +324,11 @@
             <field>Cases__c.Resolution_Manager__c</field>
             <operation>notEqual</operation>
             <value>Null</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Name</field>
+            <operation>notEqual</operation>
+            <value>98510</value>
         </criteriaItems>
         <description>Sendout assigned email to RM if there is any escalated case assigned to him</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>

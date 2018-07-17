@@ -693,6 +693,8 @@ IF((Google_Results_Page1__c + Google_Results_Page2__c) &gt; 1, IMAGE(&apos;https
 IF(Google_URL__c != null &amp;&amp; Google_URL_Landing_1__c != null &amp;&amp; Google_URL__c != Google_URL_Landing_1__c &amp;&amp;  seoWebsites__r.Account__c != NULL, &apos; &apos; + IMAGE(&apos;/img/msg_icons/warning16.png&apos;,&apos;Landing page does not match site-search landing page&apos;), &apos;&apos;)
 &amp; &apos; &apos; &amp;
 IF(Google_Knowledge_Panel__c == &apos;2&apos;, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/knowledge-on.png&apos;, &apos;Knowledge panel&apos;,16,16), IF(Google_Knowledge_Panel__c == &apos;3&apos;, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/knowledge-off.png&apos;, &apos;Knowledge panel&apos;,16,16), &apos;&apos;))
+&amp; &apos; &apos; &amp; 
+IF( Has_Place__c, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/maps-off.png&apos;, &apos;Maps&apos;,16,16), &apos;&apos;) 
 &amp; &apos; &apos; &amp;
 IF(Google_Keyword_Showing__c != &apos;&apos; &amp;&amp; Google_Keyword_Showing__c != Name, IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/switch.png&apos;, &apos;Showing results for &apos; + Google_Keyword_Showing__c,16,16) + Google_Keyword_Showing__c, &apos;&apos;)
 &amp; &apos; &apos; &amp; 

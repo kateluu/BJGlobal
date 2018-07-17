@@ -149,6 +149,42 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Adwords_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Product__r.Adwords_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Adwords ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Adwords_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Product__r.Adwords_URL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Adwords URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BJB_Company__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.BJB_Company__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BJB Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Billing_Resolution__c</fullName>
         <externalId>false</externalId>
         <label>Billing Resolution</label>
@@ -988,6 +1024,36 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <visibleLines>6</visibleLines>
     </fields>
     <fields>
+        <fullName>Last_30days_Calls__c</fullName>
+        <description>Last 30days Calls</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 30days Calls</inlineHelpText>
+        <label>Last 30days Calls</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_30days_Emails__c</fullName>
+        <description>Last 30days Emails</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last 30days Emails</inlineHelpText>
+        <label>Last 30days Emails</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Latest__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -996,6 +1062,18 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Linked_to_MCC__c</fullName>
+        <externalId>false</externalId>
+        <label>Linked to MCC</label>
+        <length>254</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Num_Of_Calls__c</fullName>
@@ -1309,6 +1387,20 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>SSL__c</fullName>
+        <externalId>false</externalId>
+        <formula>now()-escalated_date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SSL</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Sales_Person__c</fullName>
         <externalId>false</externalId>
         <formula>Account__r.Sales_Person__r.Name</formula>
@@ -1472,6 +1564,22 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Urgent_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(SSL__c &gt;10,IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileDownload?file=0156F00000DeVWL&apos;, &apos;high&apos; , 20, 20),
+IF(SSL__c &gt;5,IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileDownload?file=0156F00000DeVWC&apos;, &apos;low&apos; , 20, 20),
+IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileDownload?file=0156F00000DeVWG&apos;, &apos;low&apos; , 20, 20)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Urgent Flag</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Waiver_Request_Amount__c</fullName>
         <externalId>false</externalId>
         <label>Waiver Request Amount</label>
@@ -1516,7 +1624,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <description>Action Taken to Save</description>
         <externalId>false</externalId>
         <inlineHelpText>If you have attempted to save the client, please detail your save strategy.</inlineHelpText>
-        <label>Action Taken to Save</label>
+        <label>Save Strategy Suggestions</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1530,7 +1638,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <description>CM Comments</description>
         <externalId>false</externalId>
         <inlineHelpText>Please enter any comments regarding the case.</inlineHelpText>
-        <label>CM Comments</label>
+        <label>Account Information/ Concerns</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1544,7 +1652,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <description>CM Proposed Action</description>
         <externalId>false</externalId>
         <inlineHelpText>Please enter your proposed action to resolve this case.</inlineHelpText>
-        <label>CM Proposed Action</label>
+        <label>Extra Notes For RM</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1581,7 +1689,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <description>E-mail or Phone Summary</description>
         <externalId>false</externalId>
         <inlineHelpText>Please enter a transcript of the customer&apos;s complaint.</inlineHelpText>
-        <label>E-mail or Phone Summary</label>
+        <label>Client Cancel Reasons/ Emails</label>
         <length>32768</length>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -1698,6 +1806,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     <label>Cases</label>
     <listViews>
         <fullName>Alex_Escalated_Cases</fullName>
+        <columns>Urgent_Flag__c</columns>
         <columns>NAME</columns>
         <columns>Account__c</columns>
         <columns>X2012_Original_Request_Date__c</columns>
@@ -1722,7 +1831,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
             <operation>equals</operation>
             <value>Alexandra Brown</value>
         </filters>
-        <label>Alex Escalated Cases</label>
+        <label>Alex Brown Case List To Action</label>
     </listViews>
     <listViews>
         <fullName>All</fullName>
@@ -1769,7 +1878,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <filters>
             <field>Resolution_Manager__c</field>
             <operation>equals</operation>
-            <value>kylie vaughan,ben brown,tuifao pi,amber porter,courtney leech</value>
+            <value>Cameron</value>
         </filters>
         <label>RM TEAM CASES - All</label>
         <sharedTo>
@@ -1896,6 +2005,35 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Carly_Snyman_Case_List_To_Action</fullName>
+        <columns>Urgent_Flag__c</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CaseType__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Carly Snyman</value>
+        </filters>
+        <label>Carly Snyman Case List To Action</label>
+    </listViews>
+    <listViews>
         <fullName>Charge_Backs</fullName>
         <columns>NAME</columns>
         <columns>Account__c</columns>
@@ -1952,25 +2090,26 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     </listViews>
     <listViews>
         <fullName>Escalated</fullName>
-        <columns>Case_Reason__c</columns>
         <columns>NAME</columns>
-        <columns>First_Success_Call__c</columns>
+        <columns>Urgent_Flag__c</columns>
         <columns>Account__c</columns>
         <columns>X2012_Original_Request_Date__c</columns>
-        <columns>CaseType__c</columns>
-        <columns>CREATED_DATE</columns>
-        <columns>OWNER.FIRST_NAME</columns>
+        <columns>escalated_date__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>X2012_E_mail_or_Phone_Summary__c</columns>
+        <columns>X2012_CM_Comments__c</columns>
+        <columns>X2012_Action_Taken_to_Save__c</columns>
         <columns>X2012_CM_Proposed_Action__c</columns>
-        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>Resolution_Manager__c</columns>
-        <columns>Case_Open_Time__c</columns>
-        <columns>Product_Type__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Status__c</field>
             <operation>contains</operation>
             <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>contains</operation>
+            <value>conor</value>
         </filters>
         <label>All Escalated Cases</label>
         <sharedTo>
@@ -2015,7 +2154,6 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     </listViews>
     <listViews>
         <fullName>GMT_Team_A_Escalated</fullName>
-        <booleanFilter>1 AND 2</booleanFilter>
         <columns>NAME</columns>
         <columns>Account__c</columns>
         <columns>CaseType__c</columns>
@@ -2033,9 +2171,9 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
             <value>Escalated</value>
         </filters>
         <filters>
-            <field>CaseOwnerRole__c</field>
-            <operation>contains</operation>
-            <value>GMT Team A</value>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Cameron Asher</value>
         </filters>
         <label>GMT Team A Escalated</label>
         <sharedTo>
@@ -2153,6 +2291,36 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
             <role>BJBGlobalCEO</role>
             <role>Client_Manager_GMT_Team_B_Leader</role>
             <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Escalated</fullName>
+        <columns>NAME</columns>
+        <columns>Urgent_Flag__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>Processing_Time__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>contains</operation>
+            <value>conor</value>
+        </filters>
+        <label>New Escalated Cases</label>
+        <sharedTo>
+            <group>David_Powell</group>
+            <group>William_Zhang</group>
         </sharedTo>
     </listViews>
     <listViews>
@@ -2512,6 +2680,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     <listViews>
         <fullName>Unresolved</fullName>
         <columns>NAME</columns>
+        <columns>Account_Resolution__c</columns>
         <columns>CaseType__c</columns>
         <columns>Account__c</columns>
         <columns>Subject__c</columns>
@@ -2625,10 +2794,14 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
     <validationRules>
         <fullName>Check_Have_Confirmed_When_Unresolved</fullName>
         <active>true</active>
-        <errorConditionFormula>AND(ISPICKVAL(Status__c , &apos;Unresolved&apos;),
+        <errorConditionFormula>AND( NOT( 
+INCLUDES(CaseType__c, &apos;Upgrade&apos;)|| 
+INCLUDES(CaseType__c, &apos;Downgrade&apos;) 
+), 
+AND(ISPICKVAL(Status__c , &apos;Unresolved&apos;),
 AND(ISBLANK(If_no_please_explain__c), Have_Confirmed_to_Turn_Off_AdWords_Acct__c =false),
 NOT(CONTAINS(  Owner_Role__c , &quot;SEO&quot;))
-)</errorConditionFormula>
+))</errorConditionFormula>
         <errorDisplayField>Have_Confirmed_to_Turn_Off_AdWords_Acct__c</errorDisplayField>
         <errorMessage>Have you confirmed if client would like Adwords Account turned off, if no, please explain</errorMessage>
     </validationRules>

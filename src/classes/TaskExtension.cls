@@ -39,7 +39,7 @@ public with sharing class TaskExtension {
 
         User taskOwner = [SELECT Id, Extension, UserRoleId FROM User WHERE Id = :myTask.OwnerId LIMIT 1];
 
-        if ( taskOwner.Id ==  UserInfo.getUserId() || isRoleAncestor(taskOwner.UserRoleId, UserInfo.getUserRoleId()) ){
+        if ( taskOwner.Id ==  UserInfo.getUserId() || isRoleAncestor(taskOwner.UserRoleId, UserInfo.getUserRoleId()) || isAccessibleIfDigitalTeam(taskOwner.UserRoleId) ){
             return true;
         }
 
@@ -63,6 +63,21 @@ public with sharing class TaskExtension {
         }
 
         return false;
+    }
+
+    private Boolean isAccessibleIfDigitalTeam(String taskOwnerRoleId){
+        // if login user role is belong to digital strategy team, she can not access to any SEO call records
+        //get seo call records
+        Map<Id, UserRole> seoRoles = new Map<Id, UserRole>([SELECT Id, DeveloperName, Name FROM UserRole WHERE Name LIKE '%SEO%']);
+
+        //get digital role 
+        Map<Id, UserRole> digitalRoles = new Map<Id, UserRole>([SELECT Id, DeveloperName, Name FROM UserRole WHERE Name LIKE '%Digital Strategy%']);
+        if (digitalRoles.containsKey(UserInfo.getUserRoleId()) ){
+            if(seoRoles.containsKey(taskOwnerRoleId)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

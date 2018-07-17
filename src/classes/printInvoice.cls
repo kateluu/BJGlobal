@@ -65,10 +65,6 @@ public with sharing class printInvoice {
                         	Name =: this.invoice.Account_Product__r.SLX_Product__r.company_name__c
 						];
 							
-		priceBreakDown = 'Tax breakdown: $' + (invoice.Invoice_Total__c*10/11).setScale(2, RoundingMode.HALF_UP) + ' Price + $'
-							+ (invoice.Invoice_Total__c/11).setScale(2, RoundingMode.HALF_UP) + ' GST = $' 
-							+ invoice.Invoice_Total__c + ' Total';
-		
 		Payment__c[] payments = [select 
 							Id,
 							Payment_Date__c, 
@@ -103,12 +99,21 @@ public with sharing class printInvoice {
 			trans.add(t);
 		}
 							
-		if ((invoice.Account__r.website != null && invoice.Account__r.website.endsWithIgnoreCase('.nz') == true) || this.company.name == 'SponsoredLinX New Zealand') {
+		if ((invoice.Account__r.website != null && invoice.Account__r.website.endsWithIgnoreCase('.nz') == true) || this.company.name.containsIgnoreCase('New Zealand')) {
 			isNewZealand = true;
 		} else {
 			isNewZealand = false;
 		}
 		
+		if(isNewZealand){
+			priceBreakDown = 'There is no GST included in the invoice amount';
+		}else{
+			priceBreakDown = 'Tax breakdown: $' + (invoice.Invoice_Total__c*10/11).setScale(2, RoundingMode.HALF_UP) + ' Price + $'
+							+ (invoice.Invoice_Total__c/11).setScale(2, RoundingMode.HALF_UP) + ' GST = $' 
+							+ invoice.Invoice_Total__c + ' Total';
+		}
+
+
 		if (invoice.Account_Product__r.recurring_period__c == 'Weekly') {
 			Date endDate = invoice.Issue_Date__c.addDays(-1);
 			Date startDate = endDate.addDays(-6);
