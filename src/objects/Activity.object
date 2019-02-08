@@ -115,6 +115,18 @@ TEXT(FLOOR(CallDurationInSeconds/3600)) + &quot;:&quot; + TEXT( FLOOR(MOD(CallDu
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Call_Duration_min__c</fullName>
+        <externalId>false</externalId>
+        <formula>ROUND(CallDurationInSeconds / 60, 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Call Duration (min)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Call_Monitored__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -285,6 +297,14 @@ MIN(5,
         </picklist>
         <required>false</required>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsToday__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  DATEVALUE(CreatedDate) =TODAY() , TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsToday</label>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Is_Mobile_Number__c</fullName>
@@ -464,6 +484,47 @@ MIN(5,
         <required>false</required>
         <type>TextArea</type>
     </fields>
+    <fields>
+        <fullName>isOwnerActive__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.IsActive</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>isOwnerActive</label>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>Erin_Overdue_Tasks</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>TASK.SUBJECT</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.FULL_NAME</field>
+            <operation>contains</operation>
+            <value>Erin</value>
+        </filters>
+        <label>Erin Tasks</label>
+        <sharedTo>
+            <role>BJBGlobalAccountsAdmin</role>
+        </sharedTo>
+    </listViews>
     <listViews>
         <fullName>My_Calls_This_Week</fullName>
         <columns>TASK.SUBJECT</columns>
@@ -536,6 +597,45 @@ MIN(5,
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Today_Calls</fullName>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <columns>TASK.SUBJECT</columns>
+        <columns>CORE.USERS.FIRST_NAME</columns>
+        <columns>CORE.USERS.LAST_NAME</columns>
+        <columns>Call_Duration_min__c</columns>
+        <columns>TASK.WHO_NAME</columns>
+        <columns>TASK.WHAT_NAME</columns>
+        <columns>TASK.DUE_DATE</columns>
+        <columns>TASK.STATUS</columns>
+        <columns>TASK.PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>TASK.LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>TASK.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CALLTYPE</field>
+            <operation>equals</operation>
+            <value>1,2</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.FIRST_NAME</field>
+            <operation>contains</operation>
+            <value>Alexandra</value>
+        </filters>
+        <filters>
+            <field>TASK.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today Calls</label>
+    </listViews>
+    <listViews>
         <fullName>Today_Overdue_Tasks</fullName>
         <columns>TASK.SUBJECT</columns>
         <columns>TASK.WHO_NAME</columns>
@@ -565,39 +665,6 @@ MIN(5,
         <label>Grace Tasks</label>
         <sharedTo>
             <roleAndSubordinates>BJBGlobalAccountsAdmin</roleAndSubordinates>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>Tracey_Overdue_Tasks</fullName>
-        <columns>TASK.SUBJECT</columns>
-        <columns>TASK.WHO_NAME</columns>
-        <columns>CORE.USERS.FULL_NAME</columns>
-        <columns>TASK.WHAT_NAME</columns>
-        <columns>TASK.DUE_DATE</columns>
-        <columns>TASK.STATUS</columns>
-        <columns>TASK.PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>TASK.LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER.ALIAS</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>ACTIVITY.TASK</field>
-            <operation>equals</operation>
-            <value>1</value>
-        </filters>
-        <filters>
-            <field>TASK.CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>CORE.USERS.FULL_NAME</field>
-            <operation>contains</operation>
-            <value>Tracey</value>
-        </filters>
-        <label>Tracey Tasks</label>
-        <sharedTo>
-            <role>BJBGlobalAccountsAdmin</role>
         </sharedTo>
     </listViews>
     <listViews>

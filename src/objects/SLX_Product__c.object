@@ -67,6 +67,37 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>Bill_Pending_Time__c</fullName>
+        <description>If the billing circle does not start straight away after product created, here is the time to calculate invoice due date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the billing circle does not start straight away after product created, here is the time to calculate invoice due date</inlineHelpText>
+        <label>Bill Pending Time</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Billed_In_Advance__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Bill in advance, not arrears.</description>
@@ -181,6 +212,14 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Instagram</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIFM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Engage</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -712,13 +751,40 @@ If you are creating a new product you need to ask Monica (or other Account peopl
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
+    <listViews>
+        <fullName>DIFM</fullName>
+        <columns>NAME</columns>
+        <columns>IsActive__c</columns>
+        <columns>ProductCode__c</columns>
+        <columns>Product_Family__c</columns>
+        <columns>Product_Package__c</columns>
+        <columns>product_recurring__c</columns>
+        <columns>recurring_period__c</columns>
+        <columns>product_price__c</columns>
+        <columns>company_name__c</columns>
+        <columns>Xero_Account_Code__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Billed_In_Advance__c</columns>
+        <columns>Bill_Pending_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>startsWith</operation>
+            <value>DIFM</value>
+        </filters>
+        <label>DIFM</label>
+    </listViews>
     <nameField>
         <label>Product Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>BJB Products</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>CURRENCY_ISO_CODE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>product_price__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CURRENCY_ISO_CODE</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>Currency_Validation</fullName>

@@ -52,7 +52,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -245,9 +245,19 @@ if(CONTAINS(Account_Product__r.Name,&apos;Adwords&apos;), &apos;AdWords&apos;,
         <type>Lookup</type>
     </fields>
     <label>Survey Trigger</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Survey_Type__c</columns>
+        <columns>Survey_Sent__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>ST - {000000}</displayFormat>
-        <label>Survery Name</label>
+        <label>SurveryTrigger Name</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>

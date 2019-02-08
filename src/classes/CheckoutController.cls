@@ -1234,6 +1234,7 @@ public with sharing class CheckoutController {
         Map<String,String> templateMap = new Map<String,String>{
             'AdWords Management'    => 'signup_generic',
             'Social Marketing'      => 'signup_facebook',
+            'Social Engage'      => 'signup_social_engage',
             'SEO'                   => 'signup_seo',
             'ConvertoPages'         => 'signup_converto',
             'Google+'               => 'signup_googleplus'
@@ -1313,6 +1314,7 @@ public with sharing class CheckoutController {
         List<SelectOption> options = new List<SelectOption>();
         options.add(new SelectOption('Mastercard','Mastercard'));
         options.add(new SelectOption('Visa','Visa'));
+        options.add(new SelectOption('Amex','Amex'));
         return options;
     }
 

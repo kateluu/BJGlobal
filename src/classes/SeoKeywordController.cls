@@ -26,7 +26,7 @@ public with sharing class SeoKeywordController {
             geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
-        return '/?c=seo&action=serpHistoryChart&keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
+        return '/seo/serpHistoryChart?keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
         + '&searchFilter='+EncodingUtil.urlEncode(seoWebsite.Searching_From__c, 'UTF-8')
         + '&geolocation='+EncodingUtil.urlEncode(geolocation, 'UTF-8')
         + '&device='+EncodingUtil.urlEncode(Utility.ifnull(seoWebsite.device__c,''), 'UTF-8')
@@ -49,7 +49,7 @@ public with sharing class SeoKeywordController {
             geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
-        return '/?c=seo&action=keywordRankHistoryChart&keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
+        return '/seo/keywordRankHistoryChart?keyword=' + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
         + '&searchFilter='+EncodingUtil.urlEncode(seoWebsite.Searching_From__c, 'UTF-8')
         + '&geolocation='+EncodingUtil.urlEncode(geolocation, 'UTF-8')
         + '&device='+EncodingUtil.urlEncode(Utility.ifnull(seoWebsite.device__c,''), 'UTF-8')
@@ -72,7 +72,7 @@ public with sharing class SeoKeywordController {
             geolocation = seoThemeKeyword.geolocation_effective__c;
         }
         
-        return '/?c=seo&action=serpHistoryChart&keyword=' 
+        return '/seo/serpHistoryChart?keyword=' 
         + EncodingUtil.urlEncode(seoThemeKeyword.Name, 'UTF-8') 
         + '&sitesearch=1&searchFilter='+EncodingUtil.urlEncode(seoWebsite.Searching_From__c, 'UTF-8')
         + '&geolocation='+EncodingUtil.urlEncode(geolocation, 'UTF-8')

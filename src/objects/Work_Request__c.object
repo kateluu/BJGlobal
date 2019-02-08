@@ -208,7 +208,7 @@
         <picklist>
             <picklistValues>
                 <fullName>Client Manager</fullName>
-                <default>false</default>
+                <default>true</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Sales</fullName>
@@ -220,6 +220,26 @@
             </picklistValues>
             <picklistValues>
                 <fullName>IT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Admin &amp; Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Strategy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruitment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -263,6 +283,20 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <defaultValue>IF( $RecordType.Name = &apos;Marketing Work Request&apos;, &apos;slxmarketing@sponsoredlinx.com&apos;, &apos;&apos;)</defaultValue>
+        <description>Marketing Default Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Marketing Default Email</inlineHelpText>
+        <label>Email To</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>FTP_Hosting_Logins__c</fullName>
@@ -539,6 +573,7 @@
     </fields>
     <fields>
         <fullName>Subject__c</fullName>
+        <defaultValue>IF( $RecordType.Name  = &apos;Marketing Work Request&apos;, &apos;Marketing Request : &apos;, &apos;&apos;)</defaultValue>
         <externalId>false</externalId>
         <label>Subject</label>
         <length>100</length>

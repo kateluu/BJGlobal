@@ -42,6 +42,7 @@ global class  InvoiceCreateIterable implements Iterator<Account_Product__c>{
 									   a.Payment_Option__c, 
 									   a.No_Charge__c,
 									   a.Account__r.website
+
 								From 
 									   Account_Product__c a
 								Where 
@@ -54,6 +55,8 @@ global class  InvoiceCreateIterable implements Iterator<Account_Product__c>{
       							and
       									(NOT ((Name Like '%ConvertoPages%' or Name Like 'GO%') and Product_Price__c = 0))];
       								
+
+	
 		this.i = 0;
 	}
 

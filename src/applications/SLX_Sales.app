@@ -10,4 +10,5 @@
     <tab>Work_Request__c</tab>
     <tab>Voicemail__c</tab>
     <tab>Lead__c</tab>
+    <tab>standard-report</tab>
 </CustomApplication>

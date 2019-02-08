@@ -4,7 +4,9 @@ global class activateProductStatusIterable implements Iterator<Account_Product__
     Integer i {get;set;}
     
     public activateProductStatusIterable() {
-        this.activateProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c, activeat__c, Sold_to_Pause__c, last_invoice_date__c FROM Account_Product__c WHERE activeat__c=today and Product_Status__c != 'Active'];
+        this.activateProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c, activeat__c, Sold_to_Pause__c, last_invoice_date__c , Last_Paid_Date__c , From_Last_Paid_Date__c, TP_Record_Id__c
+                                FROM Account_Product__c 
+                                WHERE activeat__c=today and Product_Status__c != 'Active'];
         this.i = 0;
     }
     global boolean hasNext() {

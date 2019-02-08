@@ -1,0 +1,245 @@
+25.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:09:21.0 (544788)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+14:09:21.0 (585575)|EXECUTION_STARTED
+14:09:21.0 (591233)|CODE_UNIT_STARTED|[EXTERNAL]|06690000002H8AP|VF: /apex/InvoiceListForCase
+14:09:21.0 (12405834)|SYSTEM_MODE_ENTER|true
+14:09:21.0 (12878225)|HEAP_ALLOCATE|[72]|Bytes:3
+14:09:21.0 (12924217)|HEAP_ALLOCATE|[77]|Bytes:152
+14:09:21.0 (12938480)|HEAP_ALLOCATE|[342]|Bytes:408
+14:09:21.0 (12951006)|HEAP_ALLOCATE|[355]|Bytes:408
+14:09:21.0 (12962641)|HEAP_ALLOCATE|[467]|Bytes:48
+14:09:21.0 (12991573)|HEAP_ALLOCATE|[139]|Bytes:6
+14:09:21.0 (13008081)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+14:09:21.0 (13014622)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+14:09:21.0 (13018751)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (13023076)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:564
+14:09:21.0 (13031934)|METHOD_ENTRY|[1]|01p90000002RRLj|InvoiceListForCase.InvoiceListForCase()
+14:09:21.0 (13039473)|STATEMENT_EXECUTE|[1]
+14:09:21.0 (13044398)|STATEMENT_EXECUTE|[1]
+14:09:21.0 (13072470)|HEAP_ALLOCATE|[50]|Bytes:5
+14:09:21.0 (13097205)|HEAP_ALLOCATE|[56]|Bytes:5
+14:09:21.0 (13105495)|HEAP_ALLOCATE|[64]|Bytes:7
+14:09:21.0 (13122385)|SYSTEM_MODE_ENTER|false
+14:09:21.0 (13137936)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:09:21.0 (13142710)|STATEMENT_EXECUTE|[79]
+14:09:21.0 (13148306)|SYSTEM_MODE_EXIT|false
+14:09:21.0 (13156733)|METHOD_EXIT|[1]|InvoiceListForCase
+14:09:21.0 (13169915)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:09:21.0 (13185205)|VARIABLE_SCOPE_BEGIN|[16]|this|InvoiceListForCase|true|false
+14:09:21.0 (13231275)|VARIABLE_ASSIGNMENT|[16]|this|{}|0x7c0d4bb
+14:09:21.0 (13247917)|VARIABLE_SCOPE_BEGIN|[16]|controller|ApexPages.StandardController|true|false
+14:09:21.0 (13517140)|VARIABLE_ASSIGNMENT|[16]|controller|"StandardController [null]"|0x45aa2154
+14:09:21.0 (13535996)|SYSTEM_MODE_ENTER|false
+14:09:21.0 (13544230)|HEAP_ALLOCATE|[17]|Bytes:5
+14:09:21.0 (13549582)|STATEMENT_EXECUTE|[1]
+14:09:21.0 (13553150)|HEAP_ALLOCATE|[17]|Bytes:5
+14:09:21.0 (13556385)|STATEMENT_EXECUTE|[2]
+14:09:21.0 (13580353)|HEAP_ALLOCATE|[17]|Bytes:6
+14:09:21.0 (13646948)|STATEMENT_EXECUTE|[16]
+14:09:21.0 (13649661)|STATEMENT_EXECUTE|[17]
+14:09:21.0 (20464541)|HEAP_ALLOCATE|[17]|Bytes:12
+14:09:21.0 (20508509)|VARIABLE_SCOPE_BEGIN|[17]|ca|Cases__c|true|false
+14:09:21.0 (20547298)|VARIABLE_ASSIGNMENT|[17]|ca|{"CurrencyIsoCode":"AUD","Id":"a0K6F00000ioapPUAQ"}|0x792c63bb
+14:09:21.0 (20555234)|STATEMENT_EXECUTE|[18]
+14:09:21.0 (20580880)|HEAP_ALLOCATE|[18]|Bytes:55
+14:09:21.0 (20614318)|HEAP_ALLOCATE|[18]|Bytes:4
+14:09:21.0 (20634785)|HEAP_ALLOCATE|[18]|Bytes:7
+14:09:21.0 (21019204)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT id, Account__c FROM Cases__c WHERE id = :tmpVar1
+14:09:21.0 (23471276)|SOQL_EXECUTE_END|[18]|Rows:1
+14:09:21.0 (23500905)|HEAP_ALLOCATE|[18]|Bytes:8
+14:09:21.0 (23520915)|HEAP_ALLOCATE|[18]|Bytes:87
+14:09:21.0 (23617380)|HEAP_ALLOCATE|[18]|Bytes:8
+14:09:21.0 (23639819)|HEAP_ALLOCATE|[18]|Bytes:34
+14:09:21.0 (23709578)|HEAP_ALLOCATE|[18]|Bytes:16
+14:09:21.0 (23755210)|VARIABLE_ASSIGNMENT|[18]|ca|{"Id":"a0K6F00000ioapPUAQ","Account__c":"0016F00002LndmnQAB","CurrencyIsoCode":"AUD"}|0x1ddf9bb8
+14:09:21.0 (23768550)|STATEMENT_EXECUTE|[20]
+14:09:21.0 (23782955)|HEAP_ALLOCATE|[20]|Bytes:394
+14:09:21.0 (23806896)|HEAP_ALLOCATE|[20]|Bytes:4
+14:09:21.0 (26993649)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+14:09:21.0 (36583828)|SOQL_EXECUTE_END|[20]|Rows:4
+14:09:21.0 (36631219)|HEAP_ALLOCATE|[20]|Bytes:20
+14:09:21.0 (36691500)|HEAP_ALLOCATE|[20]|Bytes:2526
+14:09:21.0 (36803143)|HEAP_ALLOCATE|[20]|Bytes:20
+14:09:21.0 (36824704)|VARIABLE_SCOPE_BEGIN|[20]|invoices|List<Invoice__c>|true|false
+14:09:21.0 (37026686)|VARIABLE_ASSIGNMENT|[20]|invoices|[{"Id":"a0E6F00002G41yCUAR","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000938148","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-04T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-04T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}},{"Id":"a0E6F000020DW4gUAG","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000875193","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-03T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}},{"Id":"a0E6F00001zarlmUAA","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000871917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-26T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}},{"Id":"a0E6F00001yBBG1UAO","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"INV060618064368-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-06T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-06-06T00:00:00.000Z","Account_Product__c":"a076F00000nM5wwQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wwQAC","CurrencyIsoCode":"AUD"}}]|0x37070950
+14:09:21.0 (37065391)|STATEMENT_EXECUTE|[41]
+14:09:21.0 (37089618)|HEAP_ALLOCATE|[41]|Bytes:4
+14:09:21.0 (37259522)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7c0d4bb
+14:09:21.0 (37286718)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (37297572)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x36295cf9
+14:09:21.0 (37315422)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x7c0d4bb
+14:09:21.0 (37328082)|STATEMENT_EXECUTE|[43]
+14:09:21.0 (37342233)|VARIABLE_SCOPE_BEGIN|[43]|i|Integer|false|false
+14:09:21.0 (37351807)|HEAP_ALLOCATE|[43]|Bytes:4
+14:09:21.0 (37361263)|VARIABLE_ASSIGNMENT|[43]|i|0
+14:09:21.0 (37597293)|HEAP_ALLOCATE|[44]|Bytes:5
+14:09:21.0 (37626985)|HEAP_ALLOCATE|[44]|Bytes:64
+14:09:21.0 (37638980)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+14:09:21.0 (37693386)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002G41yCUAR","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000938148","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-04T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-04T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0xe4c0ee6
+14:09:21.0 (37707216)|STATEMENT_EXECUTE|[44]
+14:09:21.0 (37709498)|STATEMENT_EXECUTE|[45]
+14:09:21.0 (37718818)|HEAP_ALLOCATE|[45]|Bytes:4
+14:09:21.0 (37727374)|VARIABLE_ASSIGNMENT|[45]|i|1
+14:09:21.0 (37733438)|STATEMENT_EXECUTE|[46]
+14:09:21.0 (37779552)|USER_DEBUG|[46]|DEBUG|1
+14:09:21.0 (37790041)|STATEMENT_EXECUTE|[47]
+14:09:21.0 (37867792)|HEAP_ALLOCATE|[47]|Bytes:112
+14:09:21.0 (37876587)|HEAP_ALLOCATE|[47]|Bytes:5
+14:09:21.0 (37894142)|HEAP_ALLOCATE|[47]|Bytes:12
+14:09:21.0 (37914028)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (37938734)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (37967688)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x2b1ca933
+14:09:21.0 (37992501)|STATEMENT_EXECUTE|[79]
+14:09:21.0 (37994643)|STATEMENT_EXECUTE|[80]
+14:09:21.0 (38002040)|STATEMENT_EXECUTE|[81]
+14:09:21.0 (38009351)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (38017291)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (38032343)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x2b1ca933
+14:09:21.0 (38037995)|STATEMENT_EXECUTE|[48]
+14:09:21.0 (38091897)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2b1ca933
+14:09:21.0 (38144084)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002G41yCUAR","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000938148","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-04T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-04T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0xe4c0ee6
+14:09:21.0 (38194590)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002G41yCUAR","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000938148","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-04T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-04T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x2b1ca933
+14:09:21.0 (38315489)|STATEMENT_EXECUTE|[51]
+14:09:21.0 (38326297)|HEAP_ALLOCATE|[52]|Bytes:4
+14:09:21.0 (38404773)|HEAP_ALLOCATE|[54]|Bytes:6
+14:09:21.0 (38438560)|HEAP_ALLOCATE|[56]|Bytes:3
+14:09:21.0 (38468803)|HEAP_ALLOCATE|[58]|Bytes:7
+14:09:21.0 (38490981)|STATEMENT_EXECUTE|[58]
+14:09:21.0 (38493382)|STATEMENT_EXECUTE|[59]
+14:09:21.0 (38502413)|HEAP_ALLOCATE|[59]|Bytes:7
+14:09:21.0 (38548035)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0xe4c0ee6"}|0x2b1ca933
+14:09:21.0 (38560324)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:09:21.0 (38570736)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x2b1ca933
+14:09:21.0 (38581065)|STATEMENT_EXECUTE|[72]
+14:09:21.0 (38614457)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x36295cf9"}|0x7c0d4bb
+14:09:21.0 (38639617)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (38656902)|HEAP_ALLOCATE|[44]|Bytes:5
+14:09:21.0 (38670952)|HEAP_ALLOCATE|[44]|Bytes:64
+14:09:21.0 (38679548)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+14:09:21.0 (38731280)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000020DW4gUAG","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000875193","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-03T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x163ab203
+14:09:21.0 (38745573)|STATEMENT_EXECUTE|[44]
+14:09:21.0 (38747482)|STATEMENT_EXECUTE|[45]
+14:09:21.0 (38755207)|HEAP_ALLOCATE|[45]|Bytes:4
+14:09:21.0 (38763196)|VARIABLE_ASSIGNMENT|[45]|i|2
+14:09:21.0 (38767361)|STATEMENT_EXECUTE|[46]
+14:09:21.0 (38780316)|USER_DEBUG|[46]|DEBUG|2
+14:09:21.0 (38788857)|STATEMENT_EXECUTE|[47]
+14:09:21.0 (38795831)|HEAP_ALLOCATE|[47]|Bytes:12
+14:09:21.0 (38802111)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (38809352)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (38826424)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x5ef9f888
+14:09:21.0 (38842322)|STATEMENT_EXECUTE|[79]
+14:09:21.0 (38844234)|STATEMENT_EXECUTE|[80]
+14:09:21.0 (38849573)|STATEMENT_EXECUTE|[81]
+14:09:21.0 (38855118)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (38862123)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (38875005)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x5ef9f888
+14:09:21.0 (38880631)|STATEMENT_EXECUTE|[48]
+14:09:21.0 (38896083)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5ef9f888
+14:09:21.0 (38941553)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000020DW4gUAG","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000875193","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-03T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x163ab203
+14:09:21.0 (38987959)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000020DW4gUAG","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000875193","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-03T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x5ef9f888
+14:09:21.0 (39016223)|STATEMENT_EXECUTE|[51]
+14:09:21.0 (39076546)|STATEMENT_EXECUTE|[58]
+14:09:21.0 (39078718)|STATEMENT_EXECUTE|[59]
+14:09:21.0 (39102028)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x163ab203"}|0x5ef9f888
+14:09:21.0 (39112819)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:09:21.0 (39121177)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x5ef9f888
+14:09:21.0 (39129948)|STATEMENT_EXECUTE|[72]
+14:09:21.0 (39145942)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x36295cf9"}|0x7c0d4bb
+14:09:21.0 (39161015)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (39176568)|HEAP_ALLOCATE|[44]|Bytes:5
+14:09:21.0 (39191812)|HEAP_ALLOCATE|[44]|Bytes:64
+14:09:21.0 (39203718)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+14:09:21.0 (39272832)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00001zarlmUAA","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000871917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-26T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x1dfbd3c4
+14:09:21.0 (39291768)|STATEMENT_EXECUTE|[44]
+14:09:21.0 (39294105)|STATEMENT_EXECUTE|[45]
+14:09:21.0 (39303939)|HEAP_ALLOCATE|[45]|Bytes:4
+14:09:21.0 (39314842)|VARIABLE_ASSIGNMENT|[45]|i|3
+14:09:21.0 (39321242)|STATEMENT_EXECUTE|[46]
+14:09:21.0 (39337669)|USER_DEBUG|[46]|DEBUG|3
+14:09:21.0 (39350656)|STATEMENT_EXECUTE|[47]
+14:09:21.0 (39361429)|HEAP_ALLOCATE|[47]|Bytes:12
+14:09:21.0 (39369432)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (39376994)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (39399750)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x866b5d2
+14:09:21.0 (39416820)|STATEMENT_EXECUTE|[79]
+14:09:21.0 (39418754)|STATEMENT_EXECUTE|[80]
+14:09:21.0 (39424480)|STATEMENT_EXECUTE|[81]
+14:09:21.0 (39431739)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (39443092)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (39465186)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x866b5d2
+14:09:21.0 (39475177)|STATEMENT_EXECUTE|[48]
+14:09:21.0 (39496487)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x866b5d2
+14:09:21.0 (39543680)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001zarlmUAA","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000871917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-26T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x1dfbd3c4
+14:09:21.0 (39590558)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00001zarlmUAA","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"000871917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-26T00:00:00.000Z","Account_Product__c":"a076F00000nM5wvQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wvQAC","CurrencyIsoCode":"AUD"}}|0x866b5d2
+14:09:21.0 (39621109)|STATEMENT_EXECUTE|[51]
+14:09:21.0 (39680354)|STATEMENT_EXECUTE|[58]
+14:09:21.0 (39682525)|STATEMENT_EXECUTE|[59]
+14:09:21.0 (39706686)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x1dfbd3c4"}|0x866b5d2
+14:09:21.0 (39716811)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:09:21.0 (39724895)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x866b5d2
+14:09:21.0 (39733356)|STATEMENT_EXECUTE|[72]
+14:09:21.0 (39749603)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x36295cf9"}|0x7c0d4bb
+14:09:21.0 (39764078)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (39779677)|HEAP_ALLOCATE|[44]|Bytes:5
+14:09:21.0 (39792614)|HEAP_ALLOCATE|[44]|Bytes:64
+14:09:21.0 (39801088)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+14:09:21.0 (39861826)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00001yBBG1UAO","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"INV060618064368-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-06T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-06-06T00:00:00.000Z","Account_Product__c":"a076F00000nM5wwQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wwQAC","CurrencyIsoCode":"AUD"}}|0x6d200bd2
+14:09:21.0 (39876185)|STATEMENT_EXECUTE|[44]
+14:09:21.0 (39878055)|STATEMENT_EXECUTE|[45]
+14:09:21.0 (39885468)|HEAP_ALLOCATE|[45]|Bytes:4
+14:09:21.0 (39893588)|VARIABLE_ASSIGNMENT|[45]|i|4
+14:09:21.0 (39897743)|STATEMENT_EXECUTE|[46]
+14:09:21.0 (39910135)|USER_DEBUG|[46]|DEBUG|4
+14:09:21.0 (39918242)|STATEMENT_EXECUTE|[47]
+14:09:21.0 (39924985)|HEAP_ALLOCATE|[47]|Bytes:12
+14:09:21.0 (39931419)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (39941553)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (39964587)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7f6748d8
+14:09:21.0 (39981035)|STATEMENT_EXECUTE|[79]
+14:09:21.0 (39983003)|STATEMENT_EXECUTE|[80]
+14:09:21.0 (39988789)|STATEMENT_EXECUTE|[81]
+14:09:21.0 (39994821)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+14:09:21.0 (40002077)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+14:09:21.0 (40016997)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7f6748d8
+14:09:21.0 (40022523)|STATEMENT_EXECUTE|[48]
+14:09:21.0 (40037526)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7f6748d8
+14:09:21.0 (40082264)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001yBBG1UAO","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"INV060618064368-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-06T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-06-06T00:00:00.000Z","Account_Product__c":"a076F00000nM5wwQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wwQAC","CurrencyIsoCode":"AUD"}}|0x6d200bd2
+14:09:21.0 (40127491)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00001yBBG1UAO","Name":"Country 2 Coast Elec (18 more) ...","Invoice_Number__c":"INV060618064368-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-06T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-06-06T00:00:00.000Z","Account_Product__c":"a076F00000nM5wwQAC","Reference__c":"462520","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000nM5wwQAC","CurrencyIsoCode":"AUD"}}|0x7f6748d8
+14:09:21.0 (40168526)|STATEMENT_EXECUTE|[51]
+14:09:21.0 (40225876)|STATEMENT_EXECUTE|[58]
+14:09:21.0 (40227963)|STATEMENT_EXECUTE|[59]
+14:09:21.0 (40252465)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x6d200bd2"}|0x7f6748d8
+14:09:21.0 (40262899)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:09:21.0 (40274486)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7f6748d8
+14:09:21.0 (40287213)|STATEMENT_EXECUTE|[72]
+14:09:21.0 (40314713)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x36295cf9"}|0x7c0d4bb
+14:09:21.0 (40337094)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:09:21.0 (40353725)|HEAP_ALLOCATE|[44]|Bytes:5
+14:09:21.0 (40368069)|VARIABLE_ASSIGNMENT|[44]|inv|null|
+14:09:21.0 (40374253)|STATEMENT_EXECUTE|[75]
+14:09:21.0 (40412395)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x36295cf9"}|0x7c0d4bb
+14:09:21.0 (40709425)|USER_DEBUG|[75]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002G41yCUAR, Name=Country 2 Coast Electrical Contractors, Invoice_Number__c=000938148, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-11-04 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-11-04 00:00:00, Account_Product__c=a076F00000nM5wvQAC, Reference__c=462520, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000020DW4gUAG, Name=Country 2 Coast Electrical Contractors, Invoice_Number__c=000875193, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-07-03 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-07-03 00:00:00, Account_Product__c=a076F00000nM5wvQAC, Reference__c=462520, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00001zarlmUAA, Name=Country 2 Coast Electrical Contractors, Invoice_Number__c=000871917, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-06-26 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-06-26 00:00:00, Account_Product__c=a076F00000nM5wvQAC, Reference__c=462520, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00001yBBG1UAO, Name=Country 2 Coast Electrical Contractors, Invoice_Number__c=INV060618064368-1, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=149.50, Amount_Refunded__c=0.00, Due_Date__c=2018-06-06 00:00:00, Invoice_Total__c=149.50, Issue_Date__c=2018-06-06 00:00:00, Account_Product__c=a076F00000nM5wwQAC, Reference__c=462520, Status__c=PAID, CurrencyIsoCode=AUD}])
+14:09:21.0 (40744686)|SYSTEM_MODE_EXIT|false
+14:09:21.0 (40869551)|SYSTEM_MODE_ENTER|true
+14:09:21.0 (51841008)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000002H8AP
+14:09:21.0 (54662407)|VF_SERIALIZE_VIEWSTATE_END
+14:09:21.57 (57402770)|CUMULATIVE_LIMIT_USAGE
+14:09:21.57 (57402770)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:09:21.57 (57402770)|CUMULATIVE_LIMIT_USAGE_END
+
+14:09:21.0 (57445035)|CODE_UNIT_FINISHED|VF: /apex/InvoiceListForCase
+14:09:21.0 (58283707)|EXECUTION_FINISHED

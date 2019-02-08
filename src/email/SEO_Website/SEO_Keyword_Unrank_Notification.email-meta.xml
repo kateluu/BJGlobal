@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SEO Notification for increase in unranked keywords</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SEO Keyword Unrank Notification</name>
+    <style>none</style>
+    <subject>SEO Notification for increase in unranked keywords</subject>
+    <textOnly>Increase in unranked keywords
+
+SEO Website  URL  Project Owner Name  Keywords  Google Unranked Count 2DayAgo  Google Unranked Count  Google Unranked Increase 2days
+{!Snapshot_Keyword_Unrank__c.SEO_Website__c}  {!Snapshot_Keyword_Unrank__c.URL__c}  {!Snapshot_Keyword_Unrank__c.Project_Owner_Name__c}  {!Snapshot_Keyword_Unrank__c.Keyword_Count__c}  {!Snapshot_Keyword_Unrank__c.Google_Unranked_Count_DaysAgo2__c}  {!Snapshot_Keyword_Unrank__c.Google_Unranked_Count__c}  {!Snapshot_Keyword_Unrank__c.Google_Unranked_Increase_2_days__c}
+
+Copyright © 2000-2018 Disrupt Digital, inc. All rights reserved</textOnly>
+    <type>custom</type>
+</EmailTemplate>

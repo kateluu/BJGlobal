@@ -143,20 +143,28 @@
                     <td style="border-right: 1px dashed; border-bottom: 1px dashed; max-width: 400px">{!invoice.Account_Product__r.Description__c}</td>
                     <td style="text-align: center; border-right: 1px dashed black; border-bottom: 1px dashed black">{!dateRange}</td>
                     <td style="text-align: center; border-bottom: 1px dashed black" class="digit">
+                        
                         <apex:outputText value="{0,number,$#,###.00}">
-                            <apex:param value="{!IF(invoice.Amex__c, invoice.Invoice_Total__c/1.030, invoice.Invoice_Total__c)}" />
+                            <apex:param value="{!IF(invoice.Amex__c,(IF (invoice.IsNewSurcharge__c, invoice.Invoice_Total__c/1.017, invoice.Invoice_Total__c/1.030)), invoice.Invoice_Total__c)}" />
                         </apex:outputText>
+                        
                     </td>
                 </tr>
                 <tr style="display:{!IF(invoice.Amex__c, 'table-row', 'None')};">
                     <td style="border-right: 1px dashed; border-bottom: 1px dashed">Amex Surcharge</td>
                     <td style="text-align: center; border-right: 1px dashed; border-bottom: 1px dashed">--</td>
-                    <td style="border-right: 1px dashed; border-bottom: 1px dashed; max-width: 400px">3.0% Amex Surcharge</td>
+                    <td style="border-right: 1px dashed; border-bottom: 1px dashed; max-width: 400px">
+                        
+                        <apex:outputText value="{!IF(invoice.IsNewSurcharge__c,'1.7% Amex Surcharge','3.0% Amex Surcharge')}"/>                    
+                        
+                    </td>
                     <td style="text-align: center; border-right: 1px dashed black; border-bottom: 1px dashed black">--</td>
                     <td style="text-align: center; border-bottom: 1px dashed black" class="digit">
+                        
                         <apex:outputText value="{0,number,$#,###.00}">
-                            <apex:param value="{!invoice.Invoice_Total__c*0.030/1.030}" />
+                            <apex:param value="{!IF(invoice.IsNewSurcharge__c,invoice.Invoice_Total__c*0.017/1.017,invoice.Invoice_Total__c*0.030/1.030)}" />
                         </apex:outputText>
+                        
                     </td>
                 </tr>
             </tbody>

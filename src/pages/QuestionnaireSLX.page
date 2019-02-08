@@ -67,40 +67,40 @@
                 <div class='desc'> *Required </div>
 
                 <apex:pageBlockSection columns="1" rendered="{!if(step ='1', true, false)}" >
-                        <label class="form-label" for="audience">1. Tell us a little more about your main target audience? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. Male & Female, 30-50 years of age, Home Owners etc"/>
+                        <label class="form-label" for="audience">1. Tell us a little more about your main target audience. </label>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Male & female, 30-50 years of age, home owners etc"/>
                         <apex:inputField value="{!obj.Main_audiences__c}"  required="true" label=""  styleClass="question_textarea"/>
 
                         <label class="form-label" for="location">2. Where is your target location? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. We Hope To Target Australian & New Zealand Customers."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We hope to target Australian & New Zealand customers."/>
                         <apex:inputField value="{!obj.Target_location__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="slogan">3. What are the key messages that represent your business? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. Friendly & Professional, Experts In The Field, Quality Products & Services."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Friendly & professional, experts in the field, quality products & services."/>
                         <apex:inputField value="{!obj.Slogan__c}"  required="true" label="" styleClass="question_textarea"/>
 
                         <label class="form-label" for="business">4. How long has your business been operating? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. We Have Been Established Since 1989."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We have been established since 1989."/>
                         <apex:inputField value="{!obj.Business_since__c}"  required="true" label="" styleClass="question_text"/>
 
                         <label class="form-label" for="selling">5. What are your key selling points?  </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. We Provide A High Quality Products & Solutions For All Of Our Customers."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We provide high quality products & solutions for all of our customers."/>
                         <apex:inputField value="{!obj.Selling_Point__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="industry">6. What is the main industry you operate in? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. We Operate In The Customer Service Industry."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We operate in the customer service industry."/>
                         <apex:inputField value="{!obj.Main_industry__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
-                        <label class="form-label" for="competitor">7. What/Who are your major competitors? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. Our Main Competitors Are Company A & Company B."/>
+                        <label class="form-label" for="competitor">7. Who are your major competitors? </label>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Our main competitors are company A & company B."/>
                         <apex:inputField value="{!obj.Competitor__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="objectives">8. What are your key website objectives? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="E.g. To Prompt Customers To Contact Us, Clearly Display Products/Services."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We hope to prompt customers to contact us, clearly display products/services."/>
                         <apex:inputField value="{!obj.Objectives__c}"  required="true" label="" styleClass="question_textarea"/>
 
 

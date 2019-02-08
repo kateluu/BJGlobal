@@ -28,7 +28,7 @@ public class CartItem {
     // Get the type of product for this cart item (refers to list in sign_up__c.Product_Type__c)
     // This picklist is different to the one in slx_product__c.Product_Family__c, so we need to do some conversions
     public string getProductType(){
-        // Start with the product family and then modify into product type
+        // Start with the product family and then modify into product type        
         String productType = this.product.Product_Family__c;
 
         if ( productType == 'Adwords' ){
@@ -37,7 +37,7 @@ public class CartItem {
             productType = 'Social Marketing';
         } else if ( productType == 'AdMob' ){
             productType = 'Admob Management';
-        } else if ( productType == 'Web' ){
+        }else if ( productType == 'Web' ){
             productType = 'ConvertoPages';
         }
 
@@ -56,6 +56,14 @@ public class CartItem {
         }
 
         return chargeable;
+    }
+
+
+    public Integer isPendingBillCircle(){
+        Integer pending = 0;
+        system.debug('this.product.Bill_Pending_Time__c = ' + this.product.Bill_Pending_Time__c);
+        pending = ( this.product.Bill_Pending_Time__c == null)?0:Integer.valueOf(this.product.Bill_Pending_Time__c);
+        return pending;
     }
 
     // Apply a promotion to discount this item

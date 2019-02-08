@@ -9,10 +9,22 @@
         <value>SEO Keywords</value>
     </caseValues>
     <fields>
+        <help><!-- The Google Ads competitiveness for this keyword. In rough terms, this often correlates to higher SEO competitiveness. --></help>
         <label><!-- Competitiveness --></label>
         <name>Adwords_Competition__c</name>
     </fields>
     <fields>
+        <help><!-- The number of backlinks pointing to our landing page, according to Ahrefs. --></help>
+        <label><!-- Backlinks --></label>
+        <name>Ahrefs_Backlinks__c</name>
+    </fields>
+    <fields>
+        <help><!-- The &quot;URL rank&quot; for this landing page, according to Ahrefs. --></help>
+        <label><!-- URL Rank --></label>
+        <name>Ahrefs_Url_Rank__c</name>
+    </fields>
+    <fields>
+        <help><!-- If our result for this keyword contains an amp (Accelerated Mobile Page), this is the URL for the amp page. --></help>
         <label><!-- Amp URL --></label>
         <name>Amp_URL__c</name>
     </fields>
@@ -37,10 +49,12 @@
         <name>Bing__c</name>
     </fields>
     <fields>
+        <help><!-- The geolocation that will be used when crawling this keyword. If no geolocation override is set on this keyword, it will default to the website geolocation. --></help>
         <label><!-- Geolocation Effective --></label>
         <name>Geolocation_Effective__c</name>
     </fields>
     <fields>
+        <help><!-- Override the website-level geolocation setting for this keyword. Useful for national clients that have keywords targeting different cities. --></help>
         <label><!-- Geolocation Override --></label>
         <name>Geolocation_Override__c</name>
     </fields>
@@ -49,8 +63,25 @@
         <name>Google_Current_Page__c</name>
     </fields>
     <fields>
+        <help><!-- The current ranking for this website&apos;s domain on this keyword. --></help>
         <label><!-- Current --></label>
         <name>Google_Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google 1 Day Ago --></label>
+        <name>Google_DaysAgo1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google 2 Days Ago --></label>
+        <name>Google_DaysAgo2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google 7 Days Ago --></label>
+        <name>Google_DaysAgo7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geo Variance --></label>
+        <name>Google_Geo_Variance__c</name>
     </fields>
     <fields>
         <label><!-- Google Keyword Including --></label>
@@ -65,6 +96,7 @@
         <name>Google_Knowledge_Panel__c</name>
     </fields>
     <fields>
+        <help><!-- Ranking for this keyword when the last fortnightly SEO report was sent to the client. --></help>
         <label><!-- Google Last Report --></label>
         <name>Google_Last_Report__c</name>
     </fields>
@@ -77,6 +109,7 @@
         <name>Google_Month6__c</name>
     </fields>
     <fields>
+        <help><!-- This website&apos;s ranking for this keyword when the keyword was added. --></help>
         <label><!-- Original --></label>
         <name>Google_Original__c</name>
     </fields>
@@ -101,18 +134,26 @@
         <name>Google_Places__c</name>
     </fields>
     <fields>
+        <help><!-- The snippet Google displays for the result in position 1 --></help>
         <label><!-- Google Pos 1 Snippet --></label>
         <name>Google_Pos_1_Snippet__c</name>
     </fields>
     <fields>
+        <help><!-- The title Google displays for the result in position 1 --></help>
         <label><!-- Google Pos 1 Title --></label>
         <name>Google_Pos_1_Title__c</name>
     </fields>
     <fields>
+        <help><!-- The URL of the result in position 1 --></help>
         <label><!-- Google Pos 1 URL --></label>
         <name>Google_Pos_1_URL__c</name>
     </fields>
     <fields>
+        <label><!-- Google Pos 1 Word Count --></label>
+        <name>Google_Pos_1_Word_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of google results for this keyword. Keywords with more results tend to be more competitive (among other factors). --></help>
         <label><!-- Google Total Results --></label>
         <name>Google_Result_Count__c</name>
     </fields>
@@ -129,10 +170,12 @@
         <name>Google_Sitelinks__c</name>
     </fields>
     <fields>
+        <help><!-- The text snippet Google is displaying on the result page for our result. --></help>
         <label><!-- Google Snippet --></label>
         <name>Google_Snippet__c</name>
     </fields>
     <fields>
+        <help><!-- View the Google result page as it appeared when crawled. --></help>
         <label><!-- SERP Snapshot --></label>
         <name>Google_Stored_SERP__c</name>
     </fields>
@@ -141,14 +184,17 @@
         <name>Google_Stored_URL__c</name>
     </fields>
     <fields>
+        <help><!-- The title Google is displaying on the result page for our result. --></help>
         <label><!-- Google Title --></label>
         <name>Google_Title__c</name>
     </fields>
     <fields>
+        <help><!-- The highest rank at which there is regular movement. Ranks above this may be difficult to obtain. --></help>
         <label><!-- Top Unstable Rank --></label>
         <name>Google_Top_Unstable_Rank__c</name>
     </fields>
     <fields>
+        <help><!-- The last time Google crawled/cached this landing page. --></help>
         <label><!-- Google Cached --></label>
         <name>Google_URL_Cache_Time__c</name>
     </fields>
@@ -197,10 +243,12 @@
         <name>Google_URL_Relative__c</name>
     </fields>
     <fields>
+        <help><!-- The URL of our landing page that is ranking for this keyword. --></help>
         <label><!-- Google URL --></label>
         <name>Google_URL__c</name>
     </fields>
     <fields>
+        <help><!-- The volume of searches for this keyword on Google. --></help>
         <label><!-- Search Volume --></label>
         <name>Google_Volume__c</name>
     </fields>
@@ -209,22 +257,40 @@
         <name>Google_Yesterday__c</name>
     </fields>
     <fields>
+        <help><!-- The number of positions by which our ranking has moved up/down since the last fortnightly SEO report. --></help>
         <label><!-- Since last rpt --></label>
         <name>Google__c</name>
     </fields>
     <fields>
-        <label><!-- GMB --></label>
+        <help><!-- Whether the results page contains a &quot;maps&quot; section. --></help>
+        <label><!-- Has Maps --></label>
         <name>Has_Place__c</name>
     </fields>
     <fields>
+        <help><!-- Whether the results page contains a &quot;shopping&quot; section. --></help>
+        <label><!-- Has Shopping --></label>
+        <name>Has_Shopping__c</name>
+    </fields>
+    <fields>
+        <help><!-- How recently the Ahrefs data for this keyword was updated. --></help>
+        <label><!-- Last Ahrefs Date --></label>
+        <name>Last_Ahrefs_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- When we last crawled this keyword on Google. Keywords for existing clients are crawled daily. --></help>
         <label><!-- Last Crawl Date --></label>
         <name>Last_Crawl_Date__c</name>
     </fields>
     <fields>
+        <help><!-- Various icons to indicate:
+Sniper has been ordered.
+Multiple results for our website on page 1.
+Is there a maps section for this keyword. --></help>
         <label><!-- Flags --></label>
         <name>Priority_Flag__c</name>
     </fields>
     <fields>
+        <help><!-- For CM&apos;s personal use to flag certain keywords as higher priority than others. --></help>
         <label><!-- Priority --></label>
         <name>Priority__c</name>
         <picklistValues>
@@ -241,28 +307,24 @@
         </picklistValues>
     </fields>
     <fields>
+        <help><!-- The average word count on the landing pages of the top 3 positions for this keyword. Our landing page should aim to have at least this word count to be competitive. --></help>
+        <label><!-- Required Word Count --></label>
+        <name>Required_Word_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date when sniper was ordered for this keyword. --></help>
         <label><!-- Sniper Date --></label>
         <name>Sniper_Date__c</name>
     </fields>
     <fields>
-        <label><!-- Yahoo Current --></label>
-        <name>Yahoo_Current__c</name>
+        <help><!-- The number of words our landing page is short of the landing pages in top 3 positions. --></help>
+        <label><!-- Word Count Deficit --></label>
+        <name>Word_Count_Deficit__c</name>
     </fields>
     <fields>
-        <label><!-- Yahoo Last Report --></label>
-        <name>Yahoo_Last_Report__c</name>
-    </fields>
-    <fields>
-        <label><!-- Yahoo Original --></label>
-        <name>Yahoo_Original__c</name>
-    </fields>
-    <fields>
-        <label><!-- Yahoo Yesterday --></label>
-        <name>Yahoo_Yesterday__c</name>
-    </fields>
-    <fields>
-        <label><!-- Yahoo --></label>
-        <name>Yahoo__c</name>
+        <help><!-- The word count on our website&apos;s landing page for this keyword. --></help>
+        <label><!-- Word Count --></label>
+        <name>Word_Count__c</name>
     </fields>
     <fields>
         <label><!-- original_crawl --></label>
@@ -285,8 +347,24 @@
             <section>Custom Links</section>
         </sections>
         <sections>
+            <label><!-- Keyword --></label>
+            <section>Keyword</section>
+        </sections>
+        <sections>
+            <label><!-- Landing Page --></label>
+            <section>Landing Page</section>
+        </sections>
+        <sections>
             <label><!-- Landing Pages --></label>
             <section>Landing Pages</section>
+        </sections>
+        <sections>
+            <label><!-- Meta --></label>
+            <section>Meta</section>
+        </sections>
+        <sections>
+            <label><!-- Ranking --></label>
+            <section>Ranking</section>
         </sections>
         <sections>
             <label><!-- SERP History --></label>

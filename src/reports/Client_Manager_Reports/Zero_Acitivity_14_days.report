@@ -73,13 +73,25 @@
         </values>
     </buckets>
     <columns>
+        <field>Account_Product__c$Account__c</field>
+    </columns>
+    <columns>
         <field>Account_Product__c$Name</field>
     </columns>
     <columns>
         <field>Account_Product__c$Adwords_ID__c</field>
     </columns>
     <columns>
-        <field>Account_Product__c$Account__c</field>
+        <field>Account_Product__c$ocid__c</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c$Last_Adwords_Update__c</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c$Last_Stats_Update__c</field>
+    </columns>
+    <columns>
+        <field>Account_Product__c$Adwords_URL__c</field>
     </columns>
     <crossFilters>
         <criteriaItems>
@@ -145,6 +157,8 @@
     <reportType>Account_Products_with_Cases__c</reportType>
     <scope>team</scope>
     <showDetails>false</showDetails>
+    <sortColumn>Account_Product__c$Last_Stats_Update__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Account_Product__c$Last_Stats_Update__c</dateColumn>
         <interval>INTERVAL_LAST7</interval>

@@ -1,0 +1,540 @@
+24.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:44:40.0 (110821)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+14:44:40.0 (157406)|EXECUTION_STARTED
+14:44:40.0 (163633)|CODE_UNIT_STARTED|[EXTERNAL]|06690000001JylY|VF: /apex/sfInvoiceList
+14:44:40.0 (10705374)|SYSTEM_MODE_ENTER|true
+14:44:40.0 (11072999)|HEAP_ALLOCATE|[72]|Bytes:3
+14:44:40.0 (11104314)|HEAP_ALLOCATE|[77]|Bytes:152
+14:44:40.0 (11117165)|HEAP_ALLOCATE|[342]|Bytes:408
+14:44:40.0 (11130341)|HEAP_ALLOCATE|[355]|Bytes:408
+14:44:40.0 (11141906)|HEAP_ALLOCATE|[467]|Bytes:48
+14:44:40.0 (11167121)|HEAP_ALLOCATE|[139]|Bytes:6
+14:44:40.0 (11181106)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+14:44:40.0 (11186450)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+14:44:40.0 (11190159)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (11194693)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:538
+14:44:40.0 (11204894)|METHOD_ENTRY|[1]|01p90000001RtUP|sfInvoiceList.sfInvoiceList()
+14:44:40.0 (11211822)|STATEMENT_EXECUTE|[1]
+14:44:40.0 (11217976)|STATEMENT_EXECUTE|[1]
+14:44:40.0 (11242597)|HEAP_ALLOCATE|[50]|Bytes:5
+14:44:40.0 (11260154)|HEAP_ALLOCATE|[56]|Bytes:5
+14:44:40.0 (11269057)|HEAP_ALLOCATE|[64]|Bytes:7
+14:44:40.0 (11283254)|SYSTEM_MODE_ENTER|false
+14:44:40.0 (11293454)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:44:40.0 (11297810)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (11301532)|SYSTEM_MODE_EXIT|false
+14:44:40.0 (11308781)|METHOD_EXIT|[1]|sfInvoiceList
+14:44:40.0 (11320761)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:44:40.0 (11333405)|VARIABLE_SCOPE_BEGIN|[17]|this|sfInvoiceList|true|false
+14:44:40.0 (11371696)|VARIABLE_ASSIGNMENT|[17]|this|{}|0x78a80c3f
+14:44:40.0 (11379385)|VARIABLE_SCOPE_BEGIN|[17]|controller|ApexPages.StandardController|true|false
+14:44:40.0 (11632778)|VARIABLE_ASSIGNMENT|[17]|controller|"StandardController [null]"|0x46d8f3fc
+14:44:40.0 (11647999)|SYSTEM_MODE_ENTER|false
+14:44:40.0 (11655577)|HEAP_ALLOCATE|[18]|Bytes:5
+14:44:40.0 (11660738)|STATEMENT_EXECUTE|[1]
+14:44:40.0 (11663807)|HEAP_ALLOCATE|[18]|Bytes:5
+14:44:40.0 (11668406)|STATEMENT_EXECUTE|[2]
+14:44:40.0 (11689109)|HEAP_ALLOCATE|[18]|Bytes:6
+14:44:40.0 (11742293)|STATEMENT_EXECUTE|[17]
+14:44:40.0 (11744606)|STATEMENT_EXECUTE|[18]
+14:44:40.0 (18059109)|HEAP_ALLOCATE|[18]|Bytes:12
+14:44:40.0 (18103073)|VARIABLE_SCOPE_BEGIN|[18]|acc|Account|true|false
+14:44:40.0 (18134816)|VARIABLE_ASSIGNMENT|[18]|acc|{"CurrencyIsoCode":"AUD","Id":"0016F00002R7nhBQAR"}|0x7491d3c
+14:44:40.0 (18143680)|STATEMENT_EXECUTE|[19]
+14:44:40.0 (18157097)|HEAP_ALLOCATE|[19]|Bytes:394
+14:44:40.0 (18176519)|HEAP_ALLOCATE|[19]|Bytes:4
+14:44:40.0 (18189971)|HEAP_ALLOCATE|[19]|Bytes:7
+14:44:40.0 (19748438)|SOQL_EXECUTE_BEGIN|[19]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+14:44:40.0 (33156251)|SOQL_EXECUTE_END|[19]|Rows:13
+14:44:40.0 (33189745)|HEAP_ALLOCATE|[19]|Bytes:56
+14:44:40.0 (33308541)|HEAP_ALLOCATE|[19]|Bytes:7522
+14:44:40.0 (33381895)|HEAP_ALLOCATE|[19]|Bytes:56
+14:44:40.0 (33406340)|VARIABLE_SCOPE_BEGIN|[19]|invoices|List<Invoice__c>|true|false
+14:44:40.0 (33436157)|VARIABLE_ASSIGNMENT|[19]|invoices|"List of size 13 too large to display"|0x760e9b14
+14:44:40.0 (33445150)|STATEMENT_EXECUTE|[40]
+14:44:40.0 (33463762)|HEAP_ALLOCATE|[40]|Bytes:4
+14:44:40.0 (33583034)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x78a80c3f
+14:44:40.0 (33606276)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (33617338)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x458a8d25
+14:44:40.0 (33633119)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x78a80c3f
+14:44:40.0 (33645628)|STATEMENT_EXECUTE|[42]
+14:44:40.0 (33657906)|VARIABLE_SCOPE_BEGIN|[42]|i|Integer|false|false
+14:44:40.0 (33667306)|HEAP_ALLOCATE|[42]|Bytes:4
+14:44:40.0 (33675691)|VARIABLE_ASSIGNMENT|[42]|i|0
+14:44:40.0 (33886056)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (33908030)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (33916988)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (33986413)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002FeXtkUAF","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000935920","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x52d008e8
+14:44:40.0 (34000777)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (34003529)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (34011862)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (34019871)|VARIABLE_ASSIGNMENT|[44]|i|1
+14:44:40.0 (34024291)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (34061651)|USER_DEBUG|[45]|DEBUG|1
+14:44:40.0 (34071665)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (34129716)|HEAP_ALLOCATE|[46]|Bytes:112
+14:44:40.0 (34137675)|HEAP_ALLOCATE|[46]|Bytes:5
+14:44:40.0 (34151796)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (34168576)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (34191262)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (34221888)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x1335c9a1
+14:44:40.0 (34251511)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (34255461)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (34262874)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (34270911)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (34280999)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (34298932)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x1335c9a1
+14:44:40.0 (34305837)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (34366794)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1335c9a1
+14:44:40.0 (34428049)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002FeXtkUAF","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000935920","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x52d008e8
+14:44:40.0 (34479693)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002FeXtkUAF","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000935920","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x1335c9a1
+14:44:40.0 (34635528)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (34649986)|HEAP_ALLOCATE|[51]|Bytes:4
+14:44:40.0 (34733169)|HEAP_ALLOCATE|[53]|Bytes:6
+14:44:40.0 (34784077)|HEAP_ALLOCATE|[55]|Bytes:3
+14:44:40.0 (34826884)|HEAP_ALLOCATE|[57]|Bytes:7
+14:44:40.0 (34848859)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (34850919)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (34859624)|HEAP_ALLOCATE|[58]|Bytes:7
+14:44:40.0 (34906111)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x52d008e8"}|0x1335c9a1
+14:44:40.0 (34917996)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (34928978)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x1335c9a1
+14:44:40.0 (34938988)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (34968941)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (34991282)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (35007804)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (35021496)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (35029599)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (35080465)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002EWeVOUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000931326","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x26c084fa
+14:44:40.0 (35093645)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (35095370)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (35101835)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (35109769)|VARIABLE_ASSIGNMENT|[44]|i|2
+14:44:40.0 (35114312)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (35125612)|USER_DEBUG|[45]|DEBUG|2
+14:44:40.0 (35135113)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (35141865)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (35147971)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (35155740)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (35175919)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x4885cbb
+14:44:40.0 (35197189)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (35199267)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (35204000)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (35210378)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (35218287)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (35240972)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x4885cbb
+14:44:40.0 (35247156)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (35264891)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x4885cbb
+14:44:40.0 (35333760)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002EWeVOUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000931326","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x26c084fa
+14:44:40.0 (35391407)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002EWeVOUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000931326","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x4885cbb
+14:44:40.0 (35422013)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (35476742)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (35479012)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (35500934)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x26c084fa"}|0x4885cbb
+14:44:40.0 (35515335)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (35523712)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x4885cbb
+14:44:40.0 (35532189)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (35548654)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (35563288)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (35578164)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (35592776)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (35601094)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (35649249)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002DViPSUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000927696","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x648d9c89
+14:44:40.0 (35662227)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (35663991)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (35669870)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (35676928)|VARIABLE_ASSIGNMENT|[44]|i|3
+14:44:40.0 (35680826)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (35691016)|USER_DEBUG|[45]|DEBUG|3
+14:44:40.0 (35699166)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (35705411)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (35710934)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (35718296)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (35733427)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x3cf4be34
+14:44:40.0 (35747860)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (35749817)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (35754165)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (35760558)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (35768186)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (35781795)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x3cf4be34
+14:44:40.0 (35787765)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (35807961)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cf4be34
+14:44:40.0 (35856150)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002DViPSUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000927696","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x648d9c89
+14:44:40.0 (35903335)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002DViPSUA1","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000927696","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x3cf4be34
+14:44:40.0 (35939564)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (36004041)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (36006964)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (36028777)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x648d9c89"}|0x3cf4be34
+14:44:40.0 (36039255)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (36047343)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x3cf4be34
+14:44:40.0 (36056256)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (36072143)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (36086724)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (36102157)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (36127994)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (36135983)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (36184549)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002CQBngUAH","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000923873","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x58b7bf0f
+14:44:40.0 (36197250)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (36198838)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (36204449)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (36211385)|VARIABLE_ASSIGNMENT|[44]|i|4
+14:44:40.0 (36216191)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (36225936)|USER_DEBUG|[45]|DEBUG|4
+14:44:40.0 (36234052)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (36240131)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (36245510)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (36252469)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (36267810)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x29f576ef
+14:44:40.0 (36281813)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (36283778)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (36288089)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (36293876)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (36301015)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (36314089)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x29f576ef
+14:44:40.0 (36320594)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (36334327)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29f576ef
+14:44:40.0 (36376836)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002CQBngUAH","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000923873","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x58b7bf0f
+14:44:40.0 (36422344)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002CQBngUAH","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000923873","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x29f576ef
+14:44:40.0 (36450991)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (36502581)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (36504555)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (36528999)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x58b7bf0f"}|0x29f576ef
+14:44:40.0 (36538478)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (36546884)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x29f576ef
+14:44:40.0 (36554747)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (36569965)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (36585368)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (36600411)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (36611315)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (36618055)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (36665436)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002BEugXUAT","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000920366","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0xaf27bb9
+14:44:40.0 (36678390)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (36680089)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (36686061)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (36692949)|VARIABLE_ASSIGNMENT|[44]|i|5
+14:44:40.0 (36696985)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (36705949)|USER_DEBUG|[45]|DEBUG|5
+14:44:40.0 (36713439)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (36719471)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (36725015)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (36731473)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (36746270)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x74cfe299
+14:44:40.0 (36760137)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (36762134)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (36766485)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (36772530)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (36779121)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (36793151)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x74cfe299
+14:44:40.0 (36798440)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (36812323)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x74cfe299
+14:44:40.0 (36856023)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002BEugXUAT","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000920366","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0xaf27bb9
+14:44:40.0 (36900674)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002BEugXUAT","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000920366","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x74cfe299
+14:44:40.0 (36925376)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (36974914)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (36976727)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (36995142)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0xaf27bb9"}|0x74cfe299
+14:44:40.0 (37005817)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (37014304)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x74cfe299
+14:44:40.0 (37029118)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (37044595)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (37059287)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (37072818)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (37084863)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (37091631)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (37138315)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002A3hJqUAJ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000917109","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x2837c949
+14:44:40.0 (37151082)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (37152898)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (37158682)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (37165519)|VARIABLE_ASSIGNMENT|[44]|i|6
+14:44:40.0 (37169412)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (37180094)|USER_DEBUG|[45]|DEBUG|6
+14:44:40.0 (37187742)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (37193723)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (37198757)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (37206226)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (37221149)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x3264153f
+14:44:40.0 (37235102)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (37236990)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (37244704)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (37250641)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (37258581)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (37274818)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x3264153f
+14:44:40.0 (37281071)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (37294917)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3264153f
+14:44:40.0 (37336815)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002A3hJqUAJ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000917109","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x2837c949
+14:44:40.0 (37381170)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002A3hJqUAJ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000917109","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x3264153f
+14:44:40.0 (37406490)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (37471969)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (37474177)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (37495459)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2837c949"}|0x3264153f
+14:44:40.0 (37505749)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (37519052)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x3264153f
+14:44:40.0 (37527510)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (37547443)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (37569947)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (37589534)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (37602862)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (37609614)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (37656963)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000028ykrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000913617","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x20d67112
+14:44:40.0 (37671620)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (37673429)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (37679187)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (37686760)|VARIABLE_ASSIGNMENT|[44]|i|7
+14:44:40.0 (37691194)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (37704038)|USER_DEBUG|[45]|DEBUG|7
+14:44:40.0 (37712566)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (37718539)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (37723671)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (37731068)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (37749390)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x2b780859
+14:44:40.0 (37763117)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (37765094)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (37769319)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (37775283)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (37782126)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (37795022)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x2b780859
+14:44:40.0 (37800695)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (37814371)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2b780859
+14:44:40.0 (37857207)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000028ykrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000913617","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x20d67112
+14:44:40.0 (37903461)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000028ykrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000913617","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x2b780859
+14:44:40.0 (37930586)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (37981151)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (37982996)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (38001790)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x20d67112"}|0x2b780859
+14:44:40.0 (38011665)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (38019598)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x2b780859
+14:44:40.0 (38028119)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (38043268)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (38058193)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (38071686)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (38082377)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (38090113)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (38138298)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000027rwrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000910412","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x45fcedc0
+14:44:40.0 (38151560)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (38153117)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (38158324)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (38165759)|VARIABLE_ASSIGNMENT|[44]|i|8
+14:44:40.0 (38169660)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (38178694)|USER_DEBUG|[45]|DEBUG|8
+14:44:40.0 (38186075)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (38191864)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (38197508)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (38205401)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (38220148)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x29b841d7
+14:44:40.0 (38233492)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (38235352)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (38239569)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (38245113)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (38252974)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (38266915)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x29b841d7
+14:44:40.0 (38273002)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (38286281)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29b841d7
+14:44:40.0 (38327994)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000027rwrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000910412","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x45fcedc0
+14:44:40.0 (38373756)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000027rwrVUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000910412","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x29b841d7
+14:44:40.0 (38399210)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (38448442)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (38450337)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (38468236)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x45fcedc0"}|0x29b841d7
+14:44:40.0 (38477648)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (38485168)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x29b841d7
+14:44:40.0 (38493478)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (38512153)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (38526740)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (38540511)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (38551127)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (38557751)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (38613069)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000026cwkQUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000907043","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-05T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x5c4a6975
+14:44:40.0 (38632132)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (38633781)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (38639457)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (38647080)|VARIABLE_ASSIGNMENT|[44]|i|9
+14:44:40.0 (38651835)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (38661382)|USER_DEBUG|[45]|DEBUG|9
+14:44:40.0 (38668904)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (38674755)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (38679930)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (38686382)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (38702869)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x22e8a553
+14:44:40.0 (38716424)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (38718435)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (38722664)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (38730592)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (38741481)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (38764829)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x22e8a553
+14:44:40.0 (38773939)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (38790561)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22e8a553
+14:44:40.0 (38833771)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000026cwkQUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000907043","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-05T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x5c4a6975
+14:44:40.0 (38877603)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000026cwkQUAQ","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000907043","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-05T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x22e8a553
+14:44:40.0 (38902830)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (38972126)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (38974265)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (38993755)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x5c4a6975"}|0x22e8a553
+14:44:40.0 (39003909)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (39012472)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x22e8a553
+14:44:40.0 (39020679)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (39035598)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (39049732)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (39063538)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (39074672)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (39082093)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (39129086)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000025U43CUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000903328","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-29T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x4aa19e34
+14:44:40.0 (39142286)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (39144053)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (39149407)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (39156550)|VARIABLE_ASSIGNMENT|[44]|i|10
+14:44:40.0 (39160351)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (39169480)|USER_DEBUG|[45]|DEBUG|10
+14:44:40.0 (39177503)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (39183406)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (39189085)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (39196228)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (39211336)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x303781dc
+14:44:40.0 (39225460)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (39227306)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (39231420)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (39237328)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (39248096)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (39261096)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x303781dc
+14:44:40.0 (39267504)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (39281209)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x303781dc
+14:44:40.0 (39322984)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000025U43CUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000903328","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-29T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x4aa19e34
+14:44:40.0 (39367029)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000025U43CUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000903328","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-29T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x303781dc
+14:44:40.0 (39391770)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (39442477)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (39444364)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (39462839)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4aa19e34"}|0x303781dc
+14:44:40.0 (39472470)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (39480469)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x303781dc
+14:44:40.0 (39488599)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (39504785)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (39524224)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (39537232)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (39548130)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (39554681)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (39603264)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000024Lz9TUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000900231","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-22T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x59ec3893
+14:44:40.0 (39614850)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (39616470)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (39621916)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (39631814)|VARIABLE_ASSIGNMENT|[44]|i|11
+14:44:40.0 (39636170)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (39645406)|USER_DEBUG|[45]|DEBUG|11
+14:44:40.0 (39653194)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (39659412)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (39664889)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (39671628)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (39685964)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x5be67d43
+14:44:40.0 (39699461)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (39701541)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (39705657)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (39711157)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (39717776)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (39731174)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x5be67d43
+14:44:40.0 (39736548)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (39750307)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5be67d43
+14:44:40.0 (39791897)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000024Lz9TUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000900231","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-22T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x59ec3893
+14:44:40.0 (39836504)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000024Lz9TUAS","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000900231","Amount_Credited__c":99.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-22T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"CREDITED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x5be67d43
+14:44:40.0 (39859566)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (39908947)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (39911189)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (39929400)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x59ec3893"}|0x5be67d43
+14:44:40.0 (39938369)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (39945325)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x5be67d43
+14:44:40.0 (39953628)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (39968303)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (39981985)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (39994583)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (40005548)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (40012635)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (40072339)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000023Ly74UAC","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000897113","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-15T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x7b5c5c83
+14:44:40.0 (40085559)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (40087250)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (40092937)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (40103254)|VARIABLE_ASSIGNMENT|[44]|i|12
+14:44:40.0 (40108147)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (40117624)|USER_DEBUG|[45]|DEBUG|12
+14:44:40.0 (40124959)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (40130470)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (40135583)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (40143595)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (40158792)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x303b2911
+14:44:40.0 (40171853)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (40173814)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (40178143)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (40183886)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (40191305)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (40204288)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x303b2911
+14:44:40.0 (40209888)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (40223150)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x303b2911
+14:44:40.0 (40266063)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000023Ly74UAC","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000897113","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-15T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x7b5c5c83
+14:44:40.0 (40310581)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000023Ly74UAC","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"000897113","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-08-15T00:00:00.000Z","Account_Product__c":"a076F00000lUjFjQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFjQAK","CurrencyIsoCode":"AUD"}}|0x303b2911
+14:44:40.0 (40335398)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (40384977)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (40386815)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (40404768)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x7b5c5c83"}|0x303b2911
+14:44:40.0 (40414260)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (40422159)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x303b2911
+14:44:40.0 (40429912)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (40444184)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (40457584)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (40470459)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (40481810)|HEAP_ALLOCATE|[43]|Bytes:64
+14:44:40.0 (40488201)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:44:40.0 (40541073)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000022jCezUAE","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"INV080818045037-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-08T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-08-08T00:00:00.000Z","Account_Product__c":"a076F00000lUjFkQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFkQAK","CurrencyIsoCode":"AUD"}}|0x7452835c
+14:44:40.0 (40553420)|STATEMENT_EXECUTE|[43]
+14:44:40.0 (40555078)|STATEMENT_EXECUTE|[44]
+14:44:40.0 (40560636)|HEAP_ALLOCATE|[44]|Bytes:4
+14:44:40.0 (40567054)|VARIABLE_ASSIGNMENT|[44]|i|13
+14:44:40.0 (40571249)|STATEMENT_EXECUTE|[45]
+14:44:40.0 (40580248)|USER_DEBUG|[45]|DEBUG|13
+14:44:40.0 (40590365)|STATEMENT_EXECUTE|[46]
+14:44:40.0 (40596131)|HEAP_ALLOCATE|[46]|Bytes:12
+14:44:40.0 (40601892)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (40608937)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:44:40.0 (40623926)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x579ec078
+14:44:40.0 (40636714)|STATEMENT_EXECUTE|[77]
+14:44:40.0 (40638520)|STATEMENT_EXECUTE|[78]
+14:44:40.0 (40642791)|STATEMENT_EXECUTE|[79]
+14:44:40.0 (40648286)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:44:40.0 (40655732)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:44:40.0 (40668776)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x579ec078
+14:44:40.0 (40674681)|STATEMENT_EXECUTE|[47]
+14:44:40.0 (40688223)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x579ec078
+14:44:40.0 (40731359)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000022jCezUAE","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"INV080818045037-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-08T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-08-08T00:00:00.000Z","Account_Product__c":"a076F00000lUjFkQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFkQAK","CurrencyIsoCode":"AUD"}}|0x7452835c
+14:44:40.0 (40776539)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000022jCezUAE","Name":"Melbourne Chauffeure (11 more) ...","Invoice_Number__c":"INV080818045037-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":149.50,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-08T00:00:00.000Z","Invoice_Total__c":149.50,"Issue_Date__c":"2018-08-08T00:00:00.000Z","Account_Product__c":"a076F00000lUjFkQAK","Reference__c":"472165","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000lUjFkQAK","CurrencyIsoCode":"AUD"}}|0x579ec078
+14:44:40.0 (40815578)|STATEMENT_EXECUTE|[50]
+14:44:40.0 (40866419)|STATEMENT_EXECUTE|[57]
+14:44:40.0 (40868251)|STATEMENT_EXECUTE|[58]
+14:44:40.0 (40890164)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x7452835c"}|0x579ec078
+14:44:40.0 (40900531)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:44:40.0 (40909255)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x579ec078
+14:44:40.0 (40917183)|STATEMENT_EXECUTE|[71]
+14:44:40.0 (40932270)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (40946549)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:44:40.0 (40960027)|HEAP_ALLOCATE|[43]|Bytes:5
+14:44:40.0 (40972130)|VARIABLE_ASSIGNMENT|[43]|inv|null|
+14:44:40.0 (40978581)|STATEMENT_EXECUTE|[74]
+14:44:40.0 (41008392)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x458a8d25"}|0x78a80c3f
+14:44:40.0 (41578360)|USER_DEBUG|[74]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002FeXtkUAF, Name=Melbourne Chauffeured transport, Invoice_Number__c=000935920, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-31 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-31 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002EWeVOUA1, Name=Melbourne Chauffeured transport, Invoice_Number__c=000931326, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-24 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-24 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002DViPSUA1, Name=Melbourne Chauffeured transport, Invoice_Number__c=000927696, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-17 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-17 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002CQBngUAH, Name=Melbourne Chauffeured transport, Invoice_Number__c=000923873, Amount_Credited__c=99.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-10 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-10 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=CREDITED, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002BEugXUAT, Name=Melbourne Chauffeured transport, Invoice_Number__c=000920366, Amount_Credited__c=99.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-03 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-03 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=CREDITED, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002A3hJqUAJ, Name=Melbourne Chauffeured transport, Invoice_Number__c=000917109, Amount_Credited__c=99.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-26 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-26 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=CREDITED, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000028ykrVUAQ, Name=Melbourne Chauffeured transport, Invoice_Number__c=000913617, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-19 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-19 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000027rwrVUAQ, Name=Melbourne Chauffeured transport, Invoice_Number__c=000910412, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-12 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-12 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000026cwkQUAQ, Name=Melbourne Chauffeured transport, Invoice_Number__c=000907043, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-05 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-05 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000025U43CUAS, Name=Melbourne Chauffeured transport, Invoice_Number__c=000903328, Amount_Credited__c=99.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-08-29 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-08-29 00:00:00, Account_Product__c=a076F00000lUjFjQAK, Reference__c=472165, Status__c=CREDITED, CurrencyIsoCode=AUD}], ...)
+14:44:40.0 (41640054)|SYSTEM_MODE_EXIT|false
+14:44:40.0 (41742345)|SYSTEM_MODE_ENTER|true
+14:44:40.0 (63971531)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000001JylY
+14:44:40.0 (66942210)|VF_SERIALIZE_VIEWSTATE_END
+14:44:40.69 (69760182)|CUMULATIVE_LIMIT_USAGE
+14:44:40.69 (69760182)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 13 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:44:40.69 (69760182)|CUMULATIVE_LIMIT_USAGE_END
+
+14:44:40.0 (69792390)|CODE_UNIT_FINISHED|VF: /apex/sfInvoiceList
+14:44:40.0 (70609910)|EXECUTION_FINISHED

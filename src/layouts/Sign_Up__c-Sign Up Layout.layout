@@ -84,6 +84,14 @@
                 <behavior>Edit</behavior>
                 <field>Is_Setup_Task_Created__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>From_Channel__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Web_Questionnaire__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -142,11 +150,11 @@
                 <field>Date_Assigned__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Account_Built__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>Account_Built_Date__c</field>
             </layoutItems>
         </layoutColumns>
@@ -422,6 +430,10 @@
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Survey_Trigger__c.Sign_Up__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Web_Content__c.Sign_Up__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

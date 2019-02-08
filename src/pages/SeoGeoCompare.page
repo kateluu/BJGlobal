@@ -10,16 +10,20 @@
 		<apex:pageBlock >
 	    	<apex:pageBlockSection columns="1">
 				<apex:pageBlockSectionItem >
-		    		<c:MultiselectPicklist leftLabel="Available Geolocations" leftOption="{!allGeo}" rightLabel="Selected Geolocations" rightOption="{!selectedGeo}" size="8" width="280px" showUpDownButtons="true"/>
+		    		<c:MultiselectPicklist leftLabel="Available Geolocations" leftOption="{!allGeo}" rightLabel="Selected Geolocations" rightOption="{!selectedGeo}" size="16" width="280px" showUpDownButtons="true"/>
 				</apex:pageBlockSectionItem>
 
+<!-- 				<apex:pageBlockSectionItem >
+		    		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=12ORMteAosObyMdtqV78oz_BAJa9Zg2CA" width="480" height="320"></iframe>
+				</apex:pageBlockSectionItem> -->
+
 		    	<apex:pageBlockSectionItem >
-		    		
-		    	<apex:outputLabel value="Device" for="deviceSelect"/>
+		    		<apex:outputLabel value="Device" for="deviceSelect"/>
 			        <apex:selectList value="{!device}" multiselect="false" size="1" id="deviceSelect">
 			            <apex:selectOptions value="{!deviceOptions}"/>
 			        </apex:selectList>
 			    </apex:pageBlockSectionItem>
+
 			</apex:pageBlockSection>
 
 	    	<apex:pageBlockButtons location="bottom">

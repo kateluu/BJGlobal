@@ -61,6 +61,7 @@
     <fields>
         <fullName>Adwords_Competition__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The Google Ads competitiveness for this keyword. In rough terms, this often correlates to higher SEO competitiveness.</inlineHelpText>
         <label>Competitiveness</label>
         <precision>3</precision>
         <required>false</required>
@@ -71,8 +72,35 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Ahrefs_Backlinks__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of backlinks pointing to our landing page, according to Ahrefs.</inlineHelpText>
+        <label>Backlinks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ahrefs_Url_Rank__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The &quot;URL rank&quot; for this landing page, according to Ahrefs.</inlineHelpText>
+        <label>URL Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Amp_URL__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>If our result for this keyword contains an amp (Accelerated Mobile Page), this is the URL for the amp page.</inlineHelpText>
         <label>Amp URL</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -150,6 +178,7 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
         <externalId>false</externalId>
         <formula>IF(ISBLANK(TEXT(Geolocation_Override__c)), TEXT(seoWebsites__r.Geolocation__c), TEXT(Geolocation_Override__c))</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The geolocation that will be used when crawling this keyword. If no geolocation override is set on this keyword, it will default to the website geolocation.</inlineHelpText>
         <label>Geolocation Effective</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -161,6 +190,7 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
         <fullName>Geolocation_Override__c</fullName>
         <externalId>false</externalId>
         <globalPicklist>geolocations</globalPicklist>
+        <inlineHelpText>Override the website-level geolocation setting for this keyword. Useful for national clients that have keywords targeting different cities.</inlineHelpText>
         <label>Geolocation Override</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -182,6 +212,7 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
     <fields>
         <fullName>Google_Current__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The current ranking for this website&apos;s domain on this keyword.</inlineHelpText>
         <label>Current</label>
         <precision>18</precision>
         <required>false</required>
@@ -190,6 +221,53 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_DaysAgo1__c</fullName>
+        <externalId>false</externalId>
+        <label>Google 1 Day Ago</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_DaysAgo2__c</fullName>
+        <externalId>false</externalId>
+        <label>Google 2 Days Ago</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_DaysAgo7__c</fullName>
+        <externalId>false</externalId>
+        <label>Google 7 Days Ago</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Geo_Variance__c</fullName>
+        <externalId>false</externalId>
+        <label>Geo Variance</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
     </fields>
     <fields>
         <fullName>Google_Keyword_Including__c</fullName>
@@ -227,6 +305,7 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
     <fields>
         <fullName>Google_Last_Report__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Ranking for this keyword when the last fortnightly SEO report was sent to the client.</inlineHelpText>
         <label>Google Last Report</label>
         <precision>18</precision>
         <required>false</required>
@@ -263,6 +342,7 @@ IF(Bing_Current__c = 100,&apos;~&apos;,TEXT(Bing_Current__c)) ) )</formula>
     <fields>
         <fullName>Google_Original__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>This website&apos;s ranking for this keyword when the keyword was added.</inlineHelpText>
         <label>Original</label>
         <precision>18</precision>
         <required>false</required>
@@ -340,6 +420,7 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
     <fields>
         <fullName>Google_Pos_1_Snippet__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The snippet Google displays for the result in position 1</inlineHelpText>
         <label>Google Pos 1 Snippet</label>
         <length>1000</length>
         <trackHistory>false</trackHistory>
@@ -350,6 +431,7 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
     <fields>
         <fullName>Google_Pos_1_Title__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The title Google displays for the result in position 1</inlineHelpText>
         <label>Google Pos 1 Title</label>
         <length>255</length>
         <required>false</required>
@@ -361,6 +443,7 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
     <fields>
         <fullName>Google_Pos_1_URL__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The URL of the result in position 1</inlineHelpText>
         <label>Google Pos 1 URL</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -368,8 +451,21 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
         <type>Url</type>
     </fields>
     <fields>
+        <fullName>Google_Pos_1_Word_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Pos 1 Word Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Google_Result_Count__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>Total number of google results for this keyword. Keywords with more results tend to be more competitive (among other factors).</inlineHelpText>
         <label>Google Total Results</label>
         <precision>18</precision>
         <required>false</required>
@@ -415,6 +511,7 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
     <fields>
         <fullName>Google_Snippet__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The text snippet Google is displaying on the result page for our result.</inlineHelpText>
         <label>Google Snippet</label>
         <length>1000</length>
         <trackHistory>false</trackHistory>
@@ -426,15 +523,10 @@ IF(Google_Places_Current__c = 100,&apos;~&apos;,TEXT(Google_Places_Current__c)) 
         <fullName>Google_Stored_SERP__c</fullName>
         <externalId>false</externalId>
         <formula>IF( TODAY() - Last_Crawl_Date__c &lt;= 7 &amp;&amp; Google_Stored_URL__c != &apos;&apos;, 
-&apos;Page &apos;+
-HYPERLINK(Google_Stored_URL__c+&apos;.page-1.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;1&apos;)+&apos; &apos;+
-HYPERLINK(Google_Stored_URL__c+&apos;.page-2.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;2&apos;)+&apos; &apos;+
-HYPERLINK(Google_Stored_URL__c+&apos;.page-3.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;3&apos;)+&apos; &apos;+
-HYPERLINK(Google_Stored_URL__c+&apos;.page-4.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;4&apos;)
-+ IF(Google_Current_Page__c &gt;= 5, &apos; &apos;+HYPERLINK(Google_Stored_URL__c+&apos;.page-5.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,&apos;5&apos;), &apos;&apos;)
-+ IF(Google_Current_Page__c &gt;= 6 &amp;&amp; Google_Current_Page__c &lt;= 10, &apos; ... &apos;+HYPERLINK(Google_Stored_URL__c+&apos;.page-&apos;+TEXT(Google_Current_Page__c)+&apos;.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;,TEXT(Google_Current_Page__c)), &apos;&apos;)
+HYPERLINK(Google_Stored_URL__c+&apos;.page-1.&apos;+TEXT(Last_Crawl_Date__c)+&apos;.html&apos;, TEXT(Last_Crawl_Date__c))
 , &apos;&apos;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>View the Google result page as it appeared when crawled.</inlineHelpText>
         <label>SERP Snapshot</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -456,6 +548,7 @@ HYPERLINK(Google_Stored_URL__c+&apos;.page-4.&apos;+TEXT(Last_Crawl_Date__c)+&ap
     <fields>
         <fullName>Google_Title__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The title Google is displaying on the result page for our result.</inlineHelpText>
         <label>Google Title</label>
         <length>255</length>
         <required>false</required>
@@ -466,8 +559,8 @@ HYPERLINK(Google_Stored_URL__c+&apos;.page-4.&apos;+TEXT(Last_Crawl_Date__c)+&ap
     </fields>
     <fields>
         <fullName>Google_Top_Unstable_Rank__c</fullName>
-        <description>The highest rank at which there is regular movement. Ranks above this may be difficult to obtain.</description>
         <externalId>false</externalId>
+        <inlineHelpText>The highest rank at which there is regular movement. Ranks above this may be difficult to obtain.</inlineHelpText>
         <label>Top Unstable Rank</label>
         <precision>2</precision>
         <required>false</required>
@@ -480,6 +573,7 @@ HYPERLINK(Google_Stored_URL__c+&apos;.page-4.&apos;+TEXT(Last_Crawl_Date__c)+&ap
     <fields>
         <fullName>Google_URL_Cache_Time__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The last time Google crawled/cached this landing page.</inlineHelpText>
         <label>Google Cached</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -613,6 +707,7 @@ LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL__c,  seoWebsites__r.
     <fields>
         <fullName>Google_URL__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The URL of our landing page that is ranking for this keyword.</inlineHelpText>
         <label>Google URL</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -622,6 +717,7 @@ LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL__c,  seoWebsites__r.
     <fields>
         <fullName>Google_Volume__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The volume of searches for this keyword on Google.</inlineHelpText>
         <label>Search Volume</label>
         <precision>9</precision>
         <required>false</required>
@@ -652,6 +748,7 @@ LEFT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Google_URL__c,  seoWebsites__r.
 IF(Google_Last_Report__c &lt; Google_Current__c , &apos;(&apos; +IMAGE(&apos;https://sponsoredlinx.com.au/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Google_Current__c - Google_Last_Report__c) +&apos;)&apos;, 
 
 IF(Google_Current__c = 100,&apos;~&apos;,&apos;&apos;) ) )</formula>
+        <inlineHelpText>The number of positions by which our ranking has moved up/down since the last fortnightly SEO report.</inlineHelpText>
         <label>Since last rpt</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -663,14 +760,36 @@ IF(Google_Current__c = 100,&apos;~&apos;,&apos;&apos;) ) )</formula>
         <fullName>Has_Place__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
-        <label>GMB</label>
+        <inlineHelpText>Whether the results page contains a &quot;maps&quot; section.</inlineHelpText>
+        <label>Has Maps</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Has_Shopping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether the results page contains a &quot;shopping&quot; section.</inlineHelpText>
+        <label>Has Shopping</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Ahrefs_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How recently the Ahrefs data for this keyword was updated.</inlineHelpText>
+        <label>Last Ahrefs Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>Last_Crawl_Date__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>When we last crawled this keyword on Google. Keywords for existing clients are crawled daily.</inlineHelpText>
         <label>Last Crawl Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -702,6 +821,10 @@ IF(ISNULL(Last_Crawl_Date__c), &apos;[crawling]&apos;,
 IF(Last_Crawl_Date__c != TODAY(), &apos;[crawled:&apos;+TEXT(DAY(Last_Crawl_Date__c))+&apos;/&apos;+TEXT(MONTH(Last_Crawl_Date__c))+&apos;/&apos;+TEXT(YEAR(Last_Crawl_Date__c))+&apos;]&apos;, &apos;&apos;)
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Various icons to indicate:
+Sniper has been ordered.
+Multiple results for our website on page 1.
+Is there a maps section for this keyword.</inlineHelpText>
         <label>Flags</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -712,6 +835,7 @@ IF(Last_Crawl_Date__c != TODAY(), &apos;[crawled:&apos;+TEXT(DAY(Last_Crawl_Date
     <fields>
         <fullName>Priority__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>For CM&apos;s personal use to flag certain keywords as higher priority than others.</inlineHelpText>
         <label>Priority</label>
         <picklist>
             <picklistValues>
@@ -734,9 +858,22 @@ IF(Last_Crawl_Date__c != TODAY(), &apos;[crawled:&apos;+TEXT(DAY(Last_Crawl_Date
         <type>Picklist</type>
     </fields>
     <fields>
-        <fullName>Sniper_Date__c</fullName>
-        <description>Date when sniper was ordered for this keyword</description>
+        <fullName>Required_Word_Count__c</fullName>
         <externalId>false</externalId>
+        <inlineHelpText>The average word count on the landing pages of the top 3 positions for this keyword. Our landing page should aim to have at least this word count to be competitive.</inlineHelpText>
+        <label>Required Word Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sniper_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when sniper was ordered for this keyword.</inlineHelpText>
         <label>Sniper Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -744,69 +881,31 @@ IF(Last_Crawl_Date__c != TODAY(), &apos;[crawled:&apos;+TEXT(DAY(Last_Crawl_Date
         <type>Date</type>
     </fields>
     <fields>
-        <fullName>Yahoo_Current__c</fullName>
+        <fullName>Word_Count_Deficit__c</fullName>
         <externalId>false</externalId>
-        <label>Yahoo Current</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Yahoo_Last_Report__c</fullName>
-        <externalId>false</externalId>
-        <label>Yahoo Last Report</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Yahoo_Original__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>Yahoo Original</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Yahoo_Yesterday__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>Yahoo Yesterday</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Yahoo__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(Yahoo_Last_Report__c &gt; Yahoo_Current__c , TEXT(Yahoo_Current__c) + &apos; (&apos; + IMAGE(&apos;http://sponsoredlinx.com/seobot/images/uparrow.png&apos;, &apos;&apos;,10,10) + TEXT(Yahoo_Last_Report__c - Yahoo_Current__c) + &apos;)&apos;, 
-
-IF(Yahoo_Last_Report__c &lt; Yahoo_Current__c , TEXT(Yahoo_Current__c) + &apos; (&apos; +IMAGE(&apos;http://sponsoredlinx.com/seobot/images/downarrow.png&apos;, &apos;&apos;,10,10) + TEXT(Yahoo_Current__c - Yahoo_Last_Report__c) +&apos;)&apos;, 
-
-IF(Yahoo_Current__c = 100,&apos;~&apos;,TEXT(Yahoo_Current__c)) ) )</formula>
+        <formula>IF(Required_Word_Count__c &gt; Word_Count__c, Required_Word_Count__c - Word_Count__c, null)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Yahoo</label>
+        <inlineHelpText>The number of words our landing page is short of the landing pages in top 3 positions.</inlineHelpText>
+        <label>Word Count Deficit</label>
+        <precision>18</precision>
         <required>false</required>
+        <scale>0</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Text</type>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Word_Count__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The word count on our website&apos;s landing page for this keyword.</inlineHelpText>
+        <label>Word Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -902,7 +1001,7 @@ if(records.length&lt;1) {
         <description>Queue the keyword for recrawling.</description>
         <displayType>massActionButton</displayType>
         <linkType>javascript</linkType>
-        <masterLabel>Recrawl Keyword</masterLabel>
+        <masterLabel>Recrawl Selected Keywords</masterLabel>
         <openType>onClickJavaScript</openType>
         <protected>false</protected>
         <requireRowSelection>true</requireRowSelection>

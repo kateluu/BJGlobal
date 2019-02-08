@@ -14,6 +14,7 @@
     <apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/gmt/js/jquery.validate.min.js"/>
     <apex:includeScript value="https://getmoretraffic.com.au/wp-content/themes/gmt/js/checkout-dev.js?3"/>    
     <style type="text/css">
+/*        
         input.question_text {
             margin-left:10px; 
             height: 30px; 
@@ -55,7 +56,69 @@
         html, body { 
         background: #eef0ec;
         }
+*/
 
+        input.question_text {
+            margin-left:10px;
+           margin-bottom:40px; 
+            height: 40px; 
+            width: 100%;
+           border:none;
+        }
+        textarea.question_textarea {
+            margin-left:10px; 
+            margin-bottom:40px;
+            height: 40px; 
+            width: 100%;
+            border:none;
+        }
+        div.question_form{
+            margin-left: 750px;
+        }
+        div.desc{
+            color:#db4437;;
+        }
+        label.form-label{
+            font-size: 20px;
+            line-height: 135%;
+            width: 100%;
+            margin-top: 10px;
+        }
+        label.form-label::after {
+            color: red;
+            content: " *";
+        }
+
+        label.form-label-desc{
+            font-size: 15px;
+            line-height: 135%;
+            width: 100%;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        .detailList{
+            width:97%;
+        }
+        .data2Col {
+            padding-bottom: 7px;
+        }
+        input[type=button]{
+            border-radius: 3px!important;   
+            border:none;
+            background-color: #78C817!important;    
+            box-shadow: 0 3px 0 0 #45720E!important;        
+            margin-bottom: 20px;
+            margin-left: 10px!important;
+            padding: 15px 85px!important;
+            width: auto!Important;
+            min-width: 200px;
+            font-weight: 500;
+            margin-top: 30px!important; 
+        }
+        html, body { 
+                background: #eef0ec;
+        }
     </style>
 
         <apex:pageMessages ></apex:pageMessages>
@@ -68,39 +131,39 @@
                 <apex:pageBlockSection columns="1" rendered="{!if(step ='1', true, false)}" >
                         
                         <label class="form-label" for="audience">1. Tell us a little more about your main tearget audience? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - Male & Female, 30-50 years of age, Home Owners etc"/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Male & Female, 30-50 years of age, Home Owners etc"/>
                         <apex:inputField value="{!obj.Main_audiences__c}"  required="true" label=""  styleClass="question_textarea"/>
 
                         <label class="form-label" for="location">2. What is your target location? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - We Hope To Target Australian & New Zealand Customers."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We Hope To Target Australian & New Zealand Customers."/>
                         <apex:inputField value="{!obj.Target_location__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="slogan">3. What are the key messages that represent your business? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - Friendly & Professional, Experts In The Field, Quality Products & Services."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Friendly & Professional, Experts In The Field, Quality Products & Services."/>
                         <apex:inputField value="{!obj.Slogan__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="business">4. How long has your business been operating? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - We Have Been Established Since 1989."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We Have Been Established Since 1989."/>
                         <apex:inputField value="{!obj.Business_since__c}"  required="true" label="" styleClass="question_text"/>
 
                         <label class="form-label" for="selling">5. What are your key selling points?  </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - We Provide A High Quality Products & Solutions For All Of Our Customers."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We Provide A High Quality Products & Solutions For All Of Our Customers."/>
                         <apex:inputField value="{!obj.Selling_Point__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="industry">6. What is the main industry you operate in? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - We Operate In The Customer Service Industry."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" We Operate In The Customer Service Industry."/>
                         <apex:inputField value="{!obj.Main_industry__c}"  required="true" label="" styleClass="question_textarea"/>
 
 
                         <label class="form-label" for="competitor">7. Who are your major competitors? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - Our Main Competitors Are Company A & Company B."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" Our Main Competitors Are Company A & Company B."/>
                         <apex:inputField value="{!obj.Competitor__c}"  required="true" label="" styleClass="question_textarea"/>
 
                         <label class="form-label" for="objectives">8. What are your key website objectives? </label>
-                        <apex:outputLabel styleclass="form-label-desc" value="For Example - To Prompt Customers To Contact Us, Clearly Display Products/Services."/>
+                        <apex:outputLabel styleclass="form-label-desc" value=" To Prompt Customers To Contact Us, Clearly Display Products/Services."/>
                         <apex:inputField value="{!obj.Objectives__c}"  required="true" label="" styleClass="question_textarea"/>
 
 

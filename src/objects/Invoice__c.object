@@ -272,6 +272,17 @@
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>IsNewSurcharge__c</fullName>
+        <description>If the new surcharge should apply to the invoice</description>
+        <externalId>false</externalId>
+        <formula>IF( Issue_Date__c &gt;= DATE(2018,8,1), true, false)</formula>
+        <inlineHelpText>If the new surcharge should apply to the invoice</inlineHelpText>
+        <label>IsNewSurcharge</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Issue_Date__c</fullName>
         <externalId>false</externalId>
         <label>Issue Date</label>
@@ -564,6 +575,7 @@
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
         <columns>Issue_Date__c</columns>
         <columns>Invoice_Number__c</columns>
         <columns>Due_Date__c</columns>
@@ -573,6 +585,52 @@
         <columns>Payment_Response__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>DIFM</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
+        <columns>Issue_Date__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Invoice_Batch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Payment_Message__c</columns>
+        <columns>Payment_Response__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Product__c</field>
+            <operation>contains</operation>
+            <value>DIFM</value>
+        </filters>
+        <label>DIFM</label>
+    </listViews>
+    <listViews>
+        <fullName>ForTesting</fullName>
+        <columns>Account_Product__c</columns>
+        <columns>NAME</columns>
+        <columns>Issue_Date__c</columns>
+        <columns>Invoice_Number__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Invoice_Batch__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Payment_Message__c</columns>
+        <columns>Payment_Response__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Amount_Paid__c</columns>
+        <columns>Amount_Due__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account_Product__c</field>
+            <operation>contains</operation>
+            <value>SEO</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <label>ForTesting</label>
     </listViews>
     <listViews>
         <fullName>Support_View</fullName>
@@ -600,22 +658,30 @@
     <listViews>
         <fullName>Today</fullName>
         <columns>NAME</columns>
-        <columns>Issue_Date__c</columns>
         <columns>Invoice_Number__c</columns>
+        <columns>Issue_Date__c</columns>
         <columns>Due_Date__c</columns>
         <columns>Invoice_Batch__c</columns>
         <columns>CREATED_DATE</columns>
         <columns>Payment_Message__c</columns>
         <columns>Payment_Response__c</columns>
+        <columns>Amex__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Amount_Due__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
-            <field>LAST_UPDATE</field>
+            <field>CREATED_DATE</field>
             <operation>equals</operation>
-            <value>TODAY</value>
+            <value>THIS_WEEK</value>
         </filters>
         <filters>
             <field>Amount_Paid__c</field>
             <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Amex__c</field>
+            <operation>equals</operation>
+            <value>1</value>
         </filters>
         <label>Today</label>
     </listViews>

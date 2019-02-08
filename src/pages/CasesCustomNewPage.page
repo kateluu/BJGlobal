@@ -1,0 +1,8 @@
+<apex:page standardController="Cases__c"  recordSetVar="myCases" extensions="CasesExtension">
+  <script>      
+     
+    window.top.location.href = '/a0K/e?CF00N6F00000H4XpE={!myProduct.Name}&CF00N6F00000H4XpE_lkid={!myProduct.id}&retURL=%2F{!myProduct.id}&CF00N90000001tTi3={!myProduct.Account__r.Name}';
+  </script>  
+
+  
+</apex:page>

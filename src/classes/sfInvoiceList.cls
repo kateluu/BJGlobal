@@ -2,13 +2,15 @@ public with sharing class sfInvoiceList {
 	public List<InvRow> irs {get; set;}
 	
 	/*
-	#71D08E
-	#BCBAE8
-	#9453C6
-	#9D9634
-	#4FC4C4
-	#D5B581
-	#FCFCF7
+	#33ccff DIFM
+	#FFFF66 social
+	#71D08E seo
+	#BCBAE8 adwords
+	#D2EBC2 facebook
+	#E7B6C7 yahoo
+	#4FC4C4 web
+	#D5B581 hosting
+	#FCFCF7 other
 	*/
 	
 	
@@ -46,7 +48,11 @@ public with sharing class sfInvoiceList {
 			if(inv.Account_Product__c == null || inv.Account_Product__r.Name == null) {
 				ir.color = '#FCFCF7';
 			} else {
-				if(inv.Account_Product__r.Name.containsIgnoreCase('seo')) {
+				if(inv.Account_Product__r.Name.containsIgnoreCase('DIFM')) {
+					ir.color = '#33ccff';
+				}else if(inv.Account_Product__r.Name.containsIgnoreCase('social')) {
+					ir.color = '#FFFF66';
+				}else if(inv.Account_Product__r.Name.containsIgnoreCase('seo')) {
 					ir.color = '#71D08E';
 				} else if(inv.Account_Product__r.Name.containsIgnoreCase('adwords')) {
 					ir.color = '#BCBAE8';

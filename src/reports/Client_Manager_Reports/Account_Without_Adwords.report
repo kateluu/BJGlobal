@@ -79,10 +79,17 @@
         <field>FK_NAME</field>
     </columns>
     <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
         <field>Account_Product__c.Adwords_ID__c</field>
     </columns>
     <currency>AUD</currency>
     <filter>
+        <booleanFilter>(1 OR 4)  AND 2 AND 3 AND 5</booleanFilter>
         <criteriaItems>
             <column>Account_Product__c.Adwords_ID__c</column>
             <operator>equals</operator>
@@ -94,9 +101,19 @@
             <value>Active</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Account_Product__c.Recurring_Period__c</column>
+            <column>Account_Product__c.Recurring__c</column>
             <operator>equals</operator>
-            <value>Weekly,Fortnightly,Monthly,Quarterly,Half Yearly,Yearly,2 Yearly</value>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Adwords_ID__c</column>
+            <operator>equals</operator>
+            <value>111-111-1111,000-000-0000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Product__c.Product_Type__c</column>
+            <operator>equals</operator>
+            <value>AdWords Management</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -105,7 +122,12 @@
         <field>BucketField_82533074</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Account Without Adwords</name>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Account Without Adwords ID</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -115,6 +137,6 @@
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
-        <interval>INTERVAL_THISMONTH</interval>
+        <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

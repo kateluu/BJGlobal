@@ -39,13 +39,21 @@ public class TriggerUtilities {
         try {
             System.debug('TriggerUtilities::getAvailableResultionManagerByCap');
 
-            List<User> managers = [
+            // exlcude a certain RM out of the auto assignment loop 
+            // added on 8 NOv, 2018
+            List<String> exclusiveRM = new List<String>();
+            if (Default_Manager__c.getInstance('Exclusive Resolution Manager')!= null  &&  Default_Manager__c.getInstance('Exclusive Resolution Manager').value__c!= null){
+                exclusiveRM =Default_Manager__c.getInstance('Exclusive Resolution Manager').value__c.split(',');
+            }
+            List<User> managers  = [
                     SELECT id, username, profile.name, isActive
                     FROM User
                     WHERE isActive = true
                     AND profile.name = 'Resolution Manager'
+                    AND id NOT IN :exclusiveRM
                     ORDER BY username
             ];
+
 
             AggregateResult[] caseNums = [
                     SELECT Resolution_Manager__c, count(Id) sum

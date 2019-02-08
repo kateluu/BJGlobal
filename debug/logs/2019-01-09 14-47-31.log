@@ -1,0 +1,2308 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:47:27.0 (113478)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+14:47:27.0 (149935)|EXECUTION_STARTED
+14:47:27.0 (154749)|CODE_UNIT_STARTED|[EXTERNAL]|01p6F000009vCEd|batchPaymentsProcess
+14:47:27.0 (1800315)|HEAP_ALLOCATE|[72]|Bytes:3
+14:47:27.0 (1878397)|HEAP_ALLOCATE|[77]|Bytes:152
+14:47:27.0 (1897819)|HEAP_ALLOCATE|[342]|Bytes:408
+14:47:27.0 (1910120)|HEAP_ALLOCATE|[355]|Bytes:408
+14:47:27.0 (1920901)|HEAP_ALLOCATE|[467]|Bytes:48
+14:47:27.0 (1948991)|HEAP_ALLOCATE|[139]|Bytes:6
+14:47:27.0 (2076009)|HEAP_ALLOCATE|[50]|Bytes:5
+14:47:27.0 (2101668)|HEAP_ALLOCATE|[56]|Bytes:5
+14:47:27.0 (2110249)|HEAP_ALLOCATE|[64]|Bytes:7
+14:47:27.0 (3081178)|VARIABLE_SCOPE_BEGIN|[3]|batchPaymentsProcess.isTest|Boolean|false|true
+14:47:27.0 (4057593)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:455
+14:47:27.0 (6340824)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+14:47:27.0 (6364068)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+14:47:27.0 (6370513)|STATEMENT_EXECUTE|[15]
+14:47:27.0 (6379570)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+14:47:27.0 (6387289)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:47:27.0 (6391537)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (6398492)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+14:47:27.0 (6487210)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x403babe6
+14:47:27.0 (6499581)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+14:47:27.0 (6659999)|VARIABLE_ASSIGNMENT|[31]|jobId|"7076F0000B0PqjTQQS"
+14:47:27.0 (6667733)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+14:47:27.0 (6676619)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+14:47:27.0 (7409078)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:84
+14:47:27.0 (7430196)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+14:47:27.0 (7437637)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:73
+14:47:27.0 (7452891)|METHOD_ENTRY|[1]|01p6F000009vCEd|batchPaymentsProcess.batchPaymentsProcess()
+14:47:27.0 (7462105)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (7467057)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (7469083)|STATEMENT_EXECUTE|[3]
+14:47:27.0 (7497852)|HEAP_ALLOCATE|[3]|Bytes:5
+14:47:27.0 (7517788)|VARIABLE_ASSIGNMENT|[3]|batchPaymentsProcess.isTest|false
+14:47:27.0 (7528965)|METHOD_EXIT|[1]|batchPaymentsProcess
+14:47:27.0 (7538415)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:52
+14:47:27.0 (7544871)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:47:27.0 (7569432)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:47:27.0 (7581752)|VARIABLE_SCOPE_BEGIN|[124]|this|batchPaymentsProcess|true|false
+14:47:27.0 (7703594)|VARIABLE_ASSIGNMENT|[124]|this|{"batch_date":"2019-01-09T00:00:00.000Z","bjbCompany":"0x527739ef","companyName":"SponsoredLinX","invoice_batch_exist":false,"invoice_batch_name":"SLX Wednesday 2019-0 (24 more) ...","InvoiceBatchId":"a0F6F00000uikQFUAY","Log":"","payment_batch_exist":false,"payment_batch_name":"SLX Wednesday 2019-0 (24 more) ...","PaymentBatchId":"a0F6F00000uikSuUAI","paymentMethod":"Eway","period":"Today"}|0xddacbcb
+14:47:27.0 (7722207)|VARIABLE_SCOPE_BEGIN|[124]|info|Database.BatchableContext|true|false
+14:47:27.0 (7813799)|VARIABLE_ASSIGNMENT|[124]|info|{"jobId":"7076F0000B0PqjTQQS"}|0x403babe6
+14:47:27.0 (7825123)|VARIABLE_SCOPE_BEGIN|[124]|scope|List<Invoice__c>|true|false
+14:47:27.0 (7903209)|VARIABLE_ASSIGNMENT|[124]|scope|[{"Id":"a0E6F00002QwH64UAF","Name":"Natural Health Pract (3 more) ...","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"0019000000Sy5jfAAB","Account_Product__c":"a079000000BPNjyAAH","Amount_Credited__c":0.00,"Amount_Due__c":89.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972114","Invoice_Total__c":89.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"189473","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a079000000BPNjyAAH","OwnerId":"0056F000009LzUGQA0"}}]|0x10a3350d
+14:47:27.0 (7930402)|STATEMENT_EXECUTE|[124]
+14:47:27.0 (7933511)|STATEMENT_EXECUTE|[125]
+14:47:27.0 (7945290)|HEAP_ALLOCATE|[125]|Bytes:7
+14:47:27.0 (10224010)|HEAP_ALLOCATE|[125]|Bytes:522
+14:47:27.0 (10300506)|HEAP_ALLOCATE|[125]|Bytes:529
+14:47:27.0 (10344166)|USER_DEBUG|[125]|DEBUG|Scope: (Invoice__c:{Id=a0E6F00002QwH64UAF, Name=Natural Health Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0019000000Sy5jfAAB, Account_Product__c=a079000000BPNjyAAH, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972114, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=189473, CurrencyIsoCode=AUD})
+14:47:27.0 (10367327)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (10386159)|VARIABLE_SCOPE_BEGIN|[126]|paymentHalted|Boolean|false|false
+14:47:27.0 (10408475)|HEAP_ALLOCATE|[126]|Bytes:5
+14:47:27.0 (10425495)|VARIABLE_ASSIGNMENT|[126]|paymentHalted|false
+14:47:27.0 (10432790)|STATEMENT_EXECUTE|[128]
+14:47:27.0 (10467354)|HEAP_ALLOCATE|[128]|Bytes:4
+14:47:27.0 (10581999)|VARIABLE_SCOPE_BEGIN|[128]|allInvoices|List<Invoice__c>|true|false
+14:47:27.0 (10595548)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (10607814)|VARIABLE_ASSIGNMENT|[128]|allInvoices|[]|0x7045ed26
+14:47:27.0 (10614002)|STATEMENT_EXECUTE|[129]
+14:47:27.0 (10688176)|HEAP_ALLOCATE|[129]|Bytes:4
+14:47:27.0 (10728873)|VARIABLE_SCOPE_BEGIN|[129]|batchPayments|List<Invoice_Payments__c>|true|false
+14:47:27.0 (10738184)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (10745897)|VARIABLE_ASSIGNMENT|[129]|batchPayments|[]|0x3d944521
+14:47:27.0 (10751842)|STATEMENT_EXECUTE|[130]
+14:47:27.0 (10809542)|HEAP_ALLOCATE|[130]|Bytes:4
+14:47:27.0 (10853381)|VARIABLE_SCOPE_BEGIN|[130]|listPayments|List<Payment__c>|true|false
+14:47:27.0 (10862515)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (10869884)|VARIABLE_ASSIGNMENT|[130]|listPayments|[]|0x557af71a
+14:47:27.0 (10875801)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (10917802)|HEAP_ALLOCATE|[132]|Bytes:4
+14:47:27.0 (10945834)|VARIABLE_SCOPE_BEGIN|[132]|listUpdateCredit|List<Credit__c>|true|false
+14:47:27.0 (10954956)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (10961869)|VARIABLE_ASSIGNMENT|[132]|listUpdateCredit|[]|0x4fb1d669
+14:47:27.0 (10967747)|STATEMENT_EXECUTE|[133]
+14:47:27.0 (10978638)|HEAP_ALLOCATE|[133]|Bytes:4
+14:47:27.0 (10992016)|VARIABLE_SCOPE_BEGIN|[133]|listCreditPayment|List<Payment__c>|true|false
+14:47:27.0 (10999674)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (11005253)|VARIABLE_ASSIGNMENT|[133]|listCreditPayment|[]|0x10422e64
+14:47:27.0 (11012434)|STATEMENT_EXECUTE|[134]
+14:47:27.0 (11052441)|HEAP_ALLOCATE|[134]|Bytes:4
+14:47:27.0 (11081001)|VARIABLE_SCOPE_BEGIN|[134]|listUpdateAccount|List<Account>|true|false
+14:47:27.0 (11089213)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (11095857)|VARIABLE_ASSIGNMENT|[134]|listUpdateAccount|[]|0xf60cc00
+14:47:27.0 (11278717)|HEAP_ALLOCATE|[136]|Bytes:5
+14:47:27.0 (11303498)|HEAP_ALLOCATE|[136]|Bytes:80
+14:47:27.0 (11315177)|VARIABLE_SCOPE_BEGIN|[136]|current_invoice|Invoice__c|true|false
+14:47:27.0 (11386318)|VARIABLE_ASSIGNMENT|[136]|current_invoice|{"Id":"a0E6F00002QwH64UAF","Name":"Natural Health Pract (3 more) ...","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"0019000000Sy5jfAAB","Account_Product__c":"a079000000BPNjyAAH","Amount_Credited__c":0.00,"Amount_Due__c":89.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972114","Invoice_Total__c":89.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"189473","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a079000000BPNjyAAH","OwnerId":"0056F000009LzUGQA0"}}|0x4d539374
+14:47:27.0 (11400893)|STATEMENT_EXECUTE|[136]
+14:47:27.0 (11402803)|STATEMENT_EXECUTE|[137]
+14:47:27.0 (11411519)|HEAP_ALLOCATE|[137]|Bytes:17
+14:47:27.0 (11532489)|HEAP_ALLOCATE|[137]|Bytes:520
+14:47:27.0 (11550161)|HEAP_ALLOCATE|[137]|Bytes:537
+14:47:27.0 (11562874)|USER_DEBUG|[137]|DEBUG|Current Invoice: Invoice__c:{Id=a0E6F00002QwH64UAF, Name=Natural Health Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0019000000Sy5jfAAB, Account_Product__c=a079000000BPNjyAAH, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972114, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=189473, CurrencyIsoCode=AUD}
+14:47:27.0 (11576663)|STATEMENT_EXECUTE|[138]
+14:47:27.0 (11587231)|HEAP_ALLOCATE|[138]|Bytes:24
+14:47:27.0 (11612428)|HEAP_ALLOCATE|[138]|Bytes:3
+14:47:27.0 (11658231)|HEAP_ALLOCATE|[138]|Bytes:18
+14:47:27.0 (11677749)|HEAP_ALLOCATE|[138]|Bytes:54
+14:47:27.0 (11683911)|HEAP_ALLOCATE|[138]|Bytes:54
+14:47:27.0 (11702607)|VARIABLE_ASSIGNMENT|[138]|this.Log|"Current Invoice Numb (34 more) ..."|0xddacbcb
+14:47:27.0 (11710626)|STATEMENT_EXECUTE|[139]
+14:47:27.0 (11723112)|HEAP_ALLOCATE|[139]|Bytes:5
+14:47:27.0 (11735455)|VARIABLE_ASSIGNMENT|[139]|paymentHalted|false
+14:47:27.0 (11740423)|STATEMENT_EXECUTE|[142]
+14:47:27.0 (11753493)|HEAP_ALLOCATE|[142]|Bytes:4
+14:47:27.0 (11772658)|VARIABLE_SCOPE_BEGIN|[142]|AvailableCredits|List<Credit__c>|true|false
+14:47:27.0 (11786146)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (11794130)|VARIABLE_ASSIGNMENT|[142]|AvailableCredits|[]|0x445a4612
+14:47:27.0 (11800208)|STATEMENT_EXECUTE|[143]
+14:47:27.0 (11806134)|HEAP_ALLOCATE|[143]|Bytes:218
+14:47:27.0 (11825270)|HEAP_ALLOCATE|[143]|Bytes:4
+14:47:27.0 (11840511)|HEAP_ALLOCATE|[143]|Bytes:7
+14:47:27.0 (11874352)|HEAP_ALLOCATE|[143]|Bytes:7
+14:47:27.0 (11901110)|HEAP_ALLOCATE|[143]|Bytes:7
+14:47:27.0 (11908230)|HEAP_ALLOCATE|[143]|Bytes:4
+14:47:27.0 (12471107)|SOQL_EXECUTE_BEGIN|[143]|Aggregations:0|SELECT Id, Name, Account__c, Account_Product__c, Amount__c, Valid_From__c, Credit_Used__c, Credit_Left__c FROM Credit__c WHERE (Account_Product__c = :tmpVar1 AND Valid_From__c <= :tmpVar2 AND Credit_Left__c > :tmpVar3)
+14:47:27.0 (19032882)|SOQL_EXECUTE_END|[143]|Rows:0
+14:47:27.0 (19071034)|HEAP_ALLOCATE|[143]|Bytes:4
+14:47:27.0 (19088111)|HEAP_ALLOCATE|[143]|Bytes:0
+14:47:27.0 (19141268)|HEAP_ALLOCATE|[143]|Bytes:4
+14:47:27.0 (19184540)|VARIABLE_ASSIGNMENT|[143]|AvailableCredits|[]|0x22a80526
+14:47:27.0 (19377861)|HEAP_ALLOCATE|[145]|Bytes:5
+14:47:27.0 (19403643)|VARIABLE_ASSIGNMENT|[145]|thisAvailableCredits|null|
+14:47:27.0 (19412242)|STATEMENT_EXECUTE|[145]
+14:47:27.0 (19421503)|STATEMENT_EXECUTE|[203]
+14:47:27.0 (19434565)|HEAP_ALLOCATE|[203]|Bytes:18
+14:47:27.0 (19451031)|HEAP_ALLOCATE|[203]|Bytes:72
+14:47:27.0 (19488029)|VARIABLE_ASSIGNMENT|[203]|this.Log|"Current Invoice Numb (52 more) ..."|0xddacbcb
+14:47:27.0 (19500081)|STATEMENT_EXECUTE|[205]
+14:47:27.0 (19510436)|HEAP_ALLOCATE|[205]|Bytes:24
+14:47:27.0 (19552845)|HEAP_ALLOCATE|[205]|Bytes:28
+14:47:27.0 (19586897)|USER_DEBUG|[205]|DEBUG|Invoice Payment Option: Eway
+14:47:27.0 (19668546)|HEAP_ALLOCATE|[207]|Bytes:28
+14:47:27.0 (19691295)|HEAP_ALLOCATE|[207]|Bytes:28
+14:47:27.0 (19695177)|HEAP_ALLOCATE|[207]|Bytes:28
+14:47:27.0 (19775234)|STATEMENT_EXECUTE|[207]
+14:47:27.0 (19781952)|STATEMENT_EXECUTE|[208]
+14:47:27.0 (19790441)|HEAP_ALLOCATE|[208]|Bytes:16
+14:47:27.0 (19802020)|HEAP_ALLOCATE|[208]|Bytes:20
+14:47:27.0 (19818884)|USER_DEBUG|[208]|DEBUG|This invoice is Eway
+14:47:27.0 (19827153)|STATEMENT_EXECUTE|[210]
+14:47:27.0 (19858192)|HEAP_ALLOCATE|[210]|Bytes:4
+14:47:27.0 (19960008)|VARIABLE_SCOPE_BEGIN|[210]|account|Account|true|false
+14:47:27.0 (19979362)|VARIABLE_ASSIGNMENT|[210]|account|{}|0xdfeebaa
+14:47:27.0 (19985619)|STATEMENT_EXECUTE|[211]
+14:47:27.0 (20021716)|HEAP_ALLOCATE|[211]|Bytes:4
+14:47:27.0 (20066974)|VARIABLE_SCOPE_BEGIN|[211]|contact|Contact|true|false
+14:47:27.0 (20079901)|VARIABLE_ASSIGNMENT|[211]|contact|{}|0x79b18bce
+14:47:27.0 (20086115)|STATEMENT_EXECUTE|[212]
+14:47:27.0 (20113319)|HEAP_ALLOCATE|[212]|Bytes:4
+14:47:27.0 (20155757)|VARIABLE_SCOPE_BEGIN|[212]|accountProduct|Account_Product__c|true|false
+14:47:27.0 (20168086)|VARIABLE_ASSIGNMENT|[212]|accountProduct|{}|0x3431dd5a
+14:47:27.0 (20174022)|STATEMENT_EXECUTE|[213]
+14:47:27.0 (20175769)|STATEMENT_EXECUTE|[213]
+14:47:27.0 (20177422)|STATEMENT_EXECUTE|[215]
+14:47:27.0 (20184069)|HEAP_ALLOCATE|[215]|Bytes:205
+14:47:27.0 (20202699)|HEAP_ALLOCATE|[215]|Bytes:4
+14:47:27.0 (20968923)|SOQL_EXECUTE_BEGIN|[215]|Aggregations:0|SELECT Id, Name, Card_Token__c, Name_On_Card__c, Card_Number__c, Card_Number_Masked__c, Card_Month_Expiry__c, Unique_Id__c, Card_Year_Expiry__c, BJB_Company__c, Card_CVN__c FROM Account WHERE Id = :tmpVar1
+14:47:27.0 (28652667)|SOQL_EXECUTE_END|[215]|Rows:1
+14:47:27.0 (28683258)|HEAP_ALLOCATE|[215]|Bytes:8
+14:47:27.0 (28705767)|HEAP_ALLOCATE|[215]|Bytes:277
+14:47:27.0 (28735480)|HEAP_ALLOCATE|[215]|Bytes:8
+14:47:27.0 (28763432)|HEAP_ALLOCATE|[232]|Bytes:40
+14:47:27.0 (28813396)|VARIABLE_ASSIGNMENT|[215]|account|{"Id":"0019000000Sy5jfAAB","Name":"Natural Health Pract (3 more) ...","Card_Token__c":"509973231677","Name_On_Card__c":"RA SANCHEZ","Card_Number_Masked__c":"XXXX-XXXX-XXXX-9979","Card_Month_Expiry__c":"12","Unique_Id__c":"189473","Card_Year_Expiry__c":"2018","BJB_Company__c":"a0C90000002PU4fEAG"}|0x74625e70
+14:47:27.0 (28825020)|STATEMENT_EXECUTE|[233]
+14:47:27.0 (28840957)|HEAP_ALLOCATE|[233]|Bytes:15
+14:47:27.0 (28857411)|HEAP_ALLOCATE|[233]|Bytes:87
+14:47:27.0 (28877676)|VARIABLE_ASSIGNMENT|[233]|this.Log|"Current Invoice Numb (67 more) ..."|0xddacbcb
+14:47:27.0 (28883971)|STATEMENT_EXECUTE|[235]
+14:47:27.0 (28889767)|HEAP_ALLOCATE|[235]|Bytes:59
+14:47:27.0 (28908836)|HEAP_ALLOCATE|[235]|Bytes:4
+14:47:27.0 (29553633)|SOQL_EXECUTE_BEGIN|[235]|Aggregations:0|SELECT Id, Name FROM Account_Product__c WHERE Id = :tmpVar1
+14:47:27.0 (32241182)|SOQL_EXECUTE_END|[235]|Rows:1
+14:47:27.0 (32262632)|HEAP_ALLOCATE|[235]|Bytes:8
+14:47:27.0 (32281721)|HEAP_ALLOCATE|[235]|Bytes:69
+14:47:27.0 (32351838)|HEAP_ALLOCATE|[235]|Bytes:8
+14:47:27.0 (32419789)|HEAP_ALLOCATE|[235]|Bytes:12
+14:47:27.0 (32460768)|VARIABLE_ASSIGNMENT|[235]|accountProduct|{"Id":"a079000000BPNjyAAH","Name":"Adwords Optimised Ma (8 more) ..."}|0x6fe6bdc3
+14:47:27.0 (32471802)|STATEMENT_EXECUTE|[237]
+14:47:27.0 (32489839)|HEAP_ALLOCATE|[237]|Bytes:22
+14:47:27.0 (32503281)|HEAP_ALLOCATE|[237]|Bytes:109
+14:47:27.0 (32526396)|VARIABLE_ASSIGNMENT|[237]|this.Log|"Current Invoice Numb (89 more) ..."|0xddacbcb
+14:47:27.0 (32537999)|STATEMENT_EXECUTE|[248]
+14:47:27.0 (32540653)|STATEMENT_EXECUTE|[248]
+14:47:27.0 (32542861)|STATEMENT_EXECUTE|[249]
+14:47:27.0 (32551401)|HEAP_ALLOCATE|[249]|Bytes:192
+14:47:27.0 (32574621)|HEAP_ALLOCATE|[249]|Bytes:4
+14:47:27.0 (33316394)|SOQL_EXECUTE_BEGIN|[249]|Aggregations:0|SELECT Id, Name, FirstName, LastName, Email, MailingStreet, MailingCity, MailingPostalCode, MailingState, MailingCountry FROM Contact WHERE (AccountId = :tmpVar1 AND Title = 'Billing') LIMIT 1
+14:47:27.0 (38477193)|SOQL_EXECUTE_END|[249]|Rows:1
+14:47:27.0 (38514358)|HEAP_ALLOCATE|[249]|Bytes:8
+14:47:27.0 (38539100)|HEAP_ALLOCATE|[249]|Bytes:224
+14:47:27.0 (38588016)|HEAP_ALLOCATE|[249]|Bytes:8
+14:47:27.0 (38604159)|HEAP_ALLOCATE|[249]|Bytes:33
+14:47:27.0 (38639910)|HEAP_ALLOCATE|[249]|Bytes:40
+14:47:27.0 (38683451)|VARIABLE_ASSIGNMENT|[249]|contact|{"Id":"0039000000SiefOAAR","Name":"RODD SANCHEZ","FirstName":"RODD","LastName":"SANCHEZ","Email":"rodd.sanchez@gmail.c (2 more) ...","MailingStreet":"PO BOX 595","MailingCity":"SYLVANIA SOUTHGATE","MailingPostalCode":"2224","MailingState":"NSW"}|0x22f37b24
+14:47:27.0 (38693848)|STATEMENT_EXECUTE|[250]
+14:47:27.0 (38708110)|HEAP_ALLOCATE|[250]|Bytes:15
+14:47:27.0 (38719768)|HEAP_ALLOCATE|[250]|Bytes:124
+14:47:27.0 (38738552)|VARIABLE_ASSIGNMENT|[250]|this.Log|"Current Invoice Numb (104 more) ..."|0xddacbcb
+14:47:27.0 (38746579)|STATEMENT_EXECUTE|[261]
+14:47:27.0 (38755330)|VARIABLE_SCOPE_BEGIN|[261]|TimedOut|Boolean|false|false
+14:47:27.0 (38767956)|HEAP_ALLOCATE|[261]|Bytes:5
+14:47:27.0 (38775341)|VARIABLE_ASSIGNMENT|[261]|TimedOut|false
+14:47:27.0 (38785596)|STATEMENT_EXECUTE|[262]
+14:47:27.0 (38846921)|HEAP_ALLOCATE|[262]|Bytes:4
+14:47:27.0 (38918088)|VARIABLE_SCOPE_BEGIN|[262]|paymentAttempt|Payment_Attempt__c|true|false
+14:47:27.0 (38933890)|VARIABLE_ASSIGNMENT|[262]|paymentAttempt|{}|0x35890d1b
+14:47:27.0 (38944071)|STATEMENT_EXECUTE|[263]
+14:47:27.0 (38945912)|STATEMENT_EXECUTE|[264]
+14:47:27.0 (38947431)|STATEMENT_EXECUTE|[264]
+14:47:27.0 (38949024)|STATEMENT_EXECUTE|[265]
+14:47:27.0 (38956714)|HEAP_ALLOCATE|[265]|Bytes:18
+14:47:27.0 (39067361)|HEAP_ALLOCATE|[265]|Bytes:267
+14:47:27.0 (39086089)|HEAP_ALLOCATE|[265]|Bytes:285
+14:47:27.0 (39101634)|USER_DEBUG|[265]|DEBUG|Account Response: Account:{Id=0019000000Sy5jfAAB, Name=Natural Health Practice, Card_Token__c=509973231677, Name_On_Card__c=RA SANCHEZ, Card_Number_Masked__c=XXXX-XXXX-XXXX-9979, Card_Month_Expiry__c=12, Unique_Id__c=189473, Card_Year_Expiry__c=2018, BJB_Company__c=a0C90000002PU4fEAG}
+14:47:27.0 (39113601)|STATEMENT_EXECUTE|[266]
+14:47:27.0 (39120362)|HEAP_ALLOCATE|[266]|Bytes:18
+14:47:27.0 (39178695)|HEAP_ALLOCATE|[266]|Bytes:214
+14:47:27.0 (39191959)|HEAP_ALLOCATE|[266]|Bytes:232
+14:47:27.0 (39201273)|USER_DEBUG|[266]|DEBUG|Contact Response: Contact:{Id=0039000000SiefOAAR, Name=RODD SANCHEZ, FirstName=RODD, LastName=SANCHEZ, Email=rodd.sanchez@gmail.com, MailingStreet=PO BOX 595, MailingCity=SYLVANIA SOUTHGATE, MailingPostalCode=2224, MailingState=NSW}
+14:47:27.0 (39211281)|STATEMENT_EXECUTE|[267]
+14:47:27.0 (39219417)|HEAP_ALLOCATE|[267]|Bytes:18
+14:47:27.0 (39228262)|HEAP_ALLOCATE|[267]|Bytes:142
+14:47:27.0 (39247878)|VARIABLE_ASSIGNMENT|[267]|this.Log|"Current Invoice Numb (122 more) ..."|0xddacbcb
+14:47:27.0 (39258572)|STATEMENT_EXECUTE|[270]
+14:47:27.0 (39267342)|VARIABLE_SCOPE_BEGIN|[270]|countrycode|String|false|false
+14:47:27.0 (39281733)|VARIABLE_ASSIGNMENT|[270]|countrycode|null
+14:47:27.0 (40244686)|HEAP_ALLOCATE|[271]|Bytes:3
+14:47:27.0 (40275931)|HEAP_ALLOCATE|[273]|Bytes:3
+14:47:27.0 (40286081)|STATEMENT_EXECUTE|[273]
+14:47:27.0 (40288329)|STATEMENT_EXECUTE|[274]
+14:47:27.0 (40297669)|HEAP_ALLOCATE|[274]|Bytes:2
+14:47:27.0 (40312248)|VARIABLE_ASSIGNMENT|[274]|countrycode|"AU"
+14:47:27.0 (40321376)|STATEMENT_EXECUTE|[278]
+14:47:27.0 (44767038)|VARIABLE_SCOPE_BEGIN|[12]|paymentGateway.GATEWAY_LOCAL|Integer|false|true
+14:47:27.0 (44789512)|VARIABLE_SCOPE_BEGIN|[11]|paymentGateway.GATEWAY_MOCK|Integer|false|true
+14:47:27.0 (44798438)|VARIABLE_SCOPE_BEGIN|[10]|paymentGateway.GATEWAY_REAL|Integer|false|true
+14:47:27.0 (44805925)|VARIABLE_SCOPE_BEGIN|[6]|paymentGateway.TEST_DECLINE|Integer|false|true
+14:47:27.0 (44813973)|VARIABLE_SCOPE_BEGIN|[7]|paymentGateway.TEST_EXPIRED|Integer|false|true
+14:47:27.0 (44822048)|VARIABLE_SCOPE_BEGIN|[5]|paymentGateway.TEST_FAILURE|Integer|false|true
+14:47:27.0 (44830151)|VARIABLE_SCOPE_BEGIN|[4]|paymentGateway.TEST_SUCCESS|Integer|false|true
+14:47:27.0 (44837407)|VARIABLE_SCOPE_BEGIN|[8]|paymentGateway.TEST_TIMEOUT|Integer|false|true
+14:47:27.0 (44850826)|HEAP_ALLOCATE|[278]|Bytes:15
+14:47:27.0 (44862750)|HEAP_ALLOCATE|[278]|Bytes:236
+14:47:27.0 (44868881)|HEAP_ALLOCATE|[278]|Bytes:77
+14:47:27.0 (44873408)|HEAP_ALLOCATE|[278]|Bytes:58
+14:47:27.0 (44896519)|METHOD_ENTRY|[1]|01p6F000006He6O|paymentGateway.paymentGateway()
+14:47:27.0 (44904099)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (44908441)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (45692361)|SYSTEM_MODE_ENTER|false
+14:47:27.0 (45708680)|HEAP_ALLOCATE|[4]|Bytes:5
+14:47:27.0 (45718531)|STATEMENT_EXECUTE|[4]
+14:47:27.0 (45735199)|HEAP_ALLOCATE|[4]|Bytes:4
+14:47:27.0 (45755733)|VARIABLE_ASSIGNMENT|[4]|paymentGateway.TEST_SUCCESS|3
+14:47:27.0 (45761691)|STATEMENT_EXECUTE|[5]
+14:47:27.0 (45767779)|HEAP_ALLOCATE|[5]|Bytes:4
+14:47:27.0 (45775136)|VARIABLE_ASSIGNMENT|[5]|paymentGateway.TEST_FAILURE|4
+14:47:27.0 (45784906)|STATEMENT_EXECUTE|[6]
+14:47:27.0 (45792345)|HEAP_ALLOCATE|[6]|Bytes:4
+14:47:27.0 (45802866)|VARIABLE_ASSIGNMENT|[6]|paymentGateway.TEST_DECLINE|5
+14:47:27.0 (45810534)|STATEMENT_EXECUTE|[7]
+14:47:27.0 (45819383)|HEAP_ALLOCATE|[7]|Bytes:4
+14:47:27.0 (45831656)|VARIABLE_ASSIGNMENT|[7]|paymentGateway.TEST_EXPIRED|6
+14:47:27.0 (45837659)|STATEMENT_EXECUTE|[8]
+14:47:27.0 (45842990)|HEAP_ALLOCATE|[8]|Bytes:4
+14:47:27.0 (45850097)|VARIABLE_ASSIGNMENT|[8]|paymentGateway.TEST_TIMEOUT|7
+14:47:27.0 (45854930)|STATEMENT_EXECUTE|[10]
+14:47:27.0 (45859533)|HEAP_ALLOCATE|[10]|Bytes:4
+14:47:27.0 (45865435)|VARIABLE_ASSIGNMENT|[10]|paymentGateway.GATEWAY_REAL|0
+14:47:27.0 (45869140)|STATEMENT_EXECUTE|[11]
+14:47:27.0 (45873281)|HEAP_ALLOCATE|[11]|Bytes:4
+14:47:27.0 (45879480)|VARIABLE_ASSIGNMENT|[11]|paymentGateway.GATEWAY_MOCK|1
+14:47:27.0 (45883896)|STATEMENT_EXECUTE|[12]
+14:47:27.0 (45888172)|HEAP_ALLOCATE|[12]|Bytes:4
+14:47:27.0 (45894454)|VARIABLE_ASSIGNMENT|[12]|paymentGateway.GATEWAY_LOCAL|2
+14:47:27.0 (45898356)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (45903315)|SYSTEM_MODE_EXIT|false
+14:47:27.0 (45914727)|METHOD_EXIT|[1]|paymentGateway
+14:47:27.0 (45935660)|HEAP_ALLOCATE|[278]|Bytes:116
+14:47:27.0 (45953010)|CONSTRUCTOR_ENTRY|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:47:27.0 (45984655)|VARIABLE_SCOPE_BEGIN|[55]|this|paymentGateway|true|false
+14:47:27.0 (46062203)|VARIABLE_ASSIGNMENT|[55]|this|{}|0x3a909ec3
+14:47:27.0 (46074817)|SYSTEM_MODE_ENTER|false
+14:47:27.0 (46081570)|HEAP_ALLOCATE|[21]|Bytes:5
+14:47:27.0 (46086355)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (46089402)|HEAP_ALLOCATE|[21]|Bytes:5
+14:47:27.0 (46092597)|STATEMENT_EXECUTE|[15]
+14:47:27.0 (46097609)|STATEMENT_EXECUTE|[16]
+14:47:27.0 (46100655)|STATEMENT_EXECUTE|[17]
+14:47:27.0 (46103455)|STATEMENT_EXECUTE|[18]
+14:47:27.0 (46106339)|STATEMENT_EXECUTE|[19]
+14:47:27.0 (46109344)|STATEMENT_EXECUTE|[21]
+14:47:27.0 (46114287)|HEAP_ALLOCATE|[21]|Bytes:4
+14:47:27.0 (46135015)|HEAP_ALLOCATE|[21]|Bytes:28
+14:47:27.0 (46158287)|VARIABLE_ASSIGNMENT|[21]|this.amount|0.00|0x3a909ec3
+14:47:27.0 (46168022)|STATEMENT_EXECUTE|[22]
+14:47:27.0 (46182341)|VARIABLE_ASSIGNMENT|[22]|this.currencyIsoCode|"AUD"|0x3a909ec3
+14:47:27.0 (46187890)|STATEMENT_EXECUTE|[23]
+14:47:27.0 (46196753)|VARIABLE_ASSIGNMENT|[23]|this.customerCompanyName|""|0x3a909ec3
+14:47:27.0 (46202019)|STATEMENT_EXECUTE|[24]
+14:47:27.0 (46208744)|VARIABLE_ASSIGNMENT|[24]|this.customerFirstName|""|0x3a909ec3
+14:47:27.0 (46214958)|STATEMENT_EXECUTE|[25]
+14:47:27.0 (46221590)|VARIABLE_ASSIGNMENT|[25]|this.customerLastName|""|0x3a909ec3
+14:47:27.0 (46226933)|STATEMENT_EXECUTE|[26]
+14:47:27.0 (46233082)|VARIABLE_ASSIGNMENT|[26]|this.customerEmail|""|0x3a909ec3
+14:47:27.0 (46238561)|STATEMENT_EXECUTE|[27]
+14:47:27.0 (46241747)|STATEMENT_EXECUTE|[28]
+14:47:27.0 (46248101)|VARIABLE_ASSIGNMENT|[28]|this.customerStreet|""|0x3a909ec3
+14:47:27.0 (46253348)|STATEMENT_EXECUTE|[29]
+14:47:27.0 (46259555)|VARIABLE_ASSIGNMENT|[29]|this.customerCity|""|0x3a909ec3
+14:47:27.0 (46264044)|STATEMENT_EXECUTE|[30]
+14:47:27.0 (46270283)|VARIABLE_ASSIGNMENT|[30]|this.customerState|""|0x3a909ec3
+14:47:27.0 (46275573)|STATEMENT_EXECUTE|[31]
+14:47:27.0 (46281762)|VARIABLE_ASSIGNMENT|[31]|this.customerPostcode|""|0x3a909ec3
+14:47:27.0 (46286727)|STATEMENT_EXECUTE|[32]
+14:47:27.0 (46292893)|VARIABLE_ASSIGNMENT|[32]|this.customerCountrycode|""|0x3a909ec3
+14:47:27.0 (46298697)|STATEMENT_EXECUTE|[33]
+14:47:27.0 (46305138)|VARIABLE_ASSIGNMENT|[33]|this.customerInvoiceDescription|""|0x3a909ec3
+14:47:27.0 (46310176)|STATEMENT_EXECUTE|[34]
+14:47:27.0 (46316271)|VARIABLE_ASSIGNMENT|[34]|this.customerInvoiceRef|""|0x3a909ec3
+14:47:27.0 (46322010)|STATEMENT_EXECUTE|[35]
+14:47:27.0 (46330108)|VARIABLE_ASSIGNMENT|[35]|this.uniqueAttemptId|""|0x3a909ec3
+14:47:27.0 (46335153)|STATEMENT_EXECUTE|[36]
+14:47:27.0 (46342222)|VARIABLE_ASSIGNMENT|[36]|this.transactionNo|""|0x3a909ec3
+14:47:27.0 (46347506)|STATEMENT_EXECUTE|[38]
+14:47:27.0 (46354000)|VARIABLE_ASSIGNMENT|[38]|this.customerToken|""|0x3a909ec3
+14:47:27.0 (46359053)|STATEMENT_EXECUTE|[39]
+14:47:27.0 (46364996)|VARIABLE_ASSIGNMENT|[39]|this.cardHoldersName|""|0x3a909ec3
+14:47:27.0 (46369377)|STATEMENT_EXECUTE|[40]
+14:47:27.0 (46372416)|STATEMENT_EXECUTE|[41]
+14:47:27.0 (46375289)|STATEMENT_EXECUTE|[42]
+14:47:27.0 (46381160)|VARIABLE_ASSIGNMENT|[42]|this.cardExpiryMonth|""|0x3a909ec3
+14:47:27.0 (46386069)|STATEMENT_EXECUTE|[43]
+14:47:27.0 (46391903)|VARIABLE_ASSIGNMENT|[43]|this.cardExpiryYear|""|0x3a909ec3
+14:47:27.0 (46397277)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (46419220)|STATEMENT_EXECUTE|[55]
+14:47:27.0 (46420982)|STATEMENT_EXECUTE|[56]
+14:47:27.0 (46565613)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (46583451)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|false
+14:47:27.0 (46592022)|HEAP_ALLOCATE|[17]|Bytes:5
+14:47:27.0 (46600169)|VARIABLE_ASSIGNMENT|[17]|this.isRefund|false|0x3a909ec3
+14:47:27.0 (46612378)|STATEMENT_EXECUTE|[57]
+14:47:27.0 (46688669)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (46703038)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:47:27.0 (46712743)|VARIABLE_ASSIGNMENT|[18]|this.testType|null|0x3a909ec3
+14:47:27.0 (46721373)|STATEMENT_EXECUTE|[58]
+14:47:27.0 (46797301)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (46812042)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|0
+14:47:27.0 (46822461)|VARIABLE_ASSIGNMENT|[19]|this.testGateway|0|0x3a909ec3
+14:47:27.0 (46833106)|SYSTEM_MODE_EXIT|false
+14:47:27.0 (46841438)|CONSTRUCTOR_EXIT|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:47:27.0 (46849770)|VARIABLE_SCOPE_BEGIN|[278]|pay|paymentGateway|true|false
+14:47:27.0 (46906448)|VARIABLE_ASSIGNMENT|[278]|pay|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (46922862)|STATEMENT_EXECUTE|[281]
+14:47:27.0 (46933867)|STATEMENT_EXECUTE|[304]
+14:47:27.0 (46935666)|STATEMENT_EXECUTE|[305]
+14:47:27.0 (46964106)|METHOD_ENTRY|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:47:27.0 (46982746)|VARIABLE_SCOPE_BEGIN|[63]|this|paymentGateway|true|false
+14:47:27.0 (47037840)|VARIABLE_ASSIGNMENT|[63]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (47049401)|VARIABLE_SCOPE_BEGIN|[63]|company|Company__c|true|false
+14:47:27.0 (47072832)|VARIABLE_ASSIGNMENT|[63]|company|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x527739ef
+14:47:27.0 (47085191)|SYSTEM_MODE_ENTER|false
+14:47:27.0 (47091836)|HEAP_ALLOCATE|[64]|Bytes:5
+14:47:27.0 (47097290)|STATEMENT_EXECUTE|[63]
+14:47:27.0 (47099220)|STATEMENT_EXECUTE|[64]
+14:47:27.0 (47174279)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (47200467)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x527739ef
+14:47:27.0 (47221907)|VARIABLE_ASSIGNMENT|[15]|this.bjbCompany|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x3a909ec3
+14:47:27.0 (47232931)|STATEMENT_EXECUTE|[66]
+14:47:27.0 (47273648)|VARIABLE_ASSIGNMENT|[66]|this.currencyIsoCode|"AUD"|0x3a909ec3
+14:47:27.0 (47280313)|STATEMENT_EXECUTE|[69]
+14:47:27.0 (47349772)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x527739ef","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (47439385)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x527739ef","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (47454590)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Eway2"
+14:47:27.0 (47464291)|VARIABLE_ASSIGNMENT|[16]|this.gateway|"Eway2"|0x3a909ec3
+14:47:27.0 (47472373)|STATEMENT_EXECUTE|[70]
+14:47:27.0 (47479091)|HEAP_ALLOCATE|[70]|Bytes:18
+14:47:27.0 (47545168)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x527739ef","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (47566746)|HEAP_ALLOCATE|[70]|Bytes:23
+14:47:27.0 (47581904)|USER_DEBUG|[70]|DEBUG|Payment Gateway = Eway2
+14:47:27.0 (47592862)|SYSTEM_MODE_EXIT|false
+14:47:27.0 (47600488)|METHOD_EXIT|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:47:27.0 (47606286)|STATEMENT_EXECUTE|[306]
+14:47:27.0 (47627521)|HEAP_ALLOCATE|[306]|Bytes:28
+14:47:27.0 (47640172)|VARIABLE_ASSIGNMENT|[306]|this.amount|89.00|0x3a909ec3
+14:47:27.0 (47646056)|STATEMENT_EXECUTE|[307]
+14:47:27.0 (47672341)|VARIABLE_ASSIGNMENT|[307]|this.currencyIsoCode|"AUD"|0x3a909ec3
+14:47:27.0 (47678918)|STATEMENT_EXECUTE|[308]
+14:47:27.0 (47703027)|VARIABLE_ASSIGNMENT|[308]|this.customerCompanyName|"Natural Health Pract (3 more) ..."|0x3a909ec3
+14:47:27.0 (47709776)|STATEMENT_EXECUTE|[309]
+14:47:27.0 (47733842)|VARIABLE_ASSIGNMENT|[309]|this.customerFirstName|"RODD"|0x3a909ec3
+14:47:27.0 (47740384)|STATEMENT_EXECUTE|[310]
+14:47:27.0 (47757801)|VARIABLE_ASSIGNMENT|[310]|this.customerLastName|"SANCHEZ"|0x3a909ec3
+14:47:27.0 (47765060)|STATEMENT_EXECUTE|[311]
+14:47:27.0 (47818711)|HEAP_ALLOCATE|[311]|Bytes:22
+14:47:27.0 (47838004)|VARIABLE_ASSIGNMENT|[311]|this.customerEmail|"rodd.sanchez@gmail.c (2 more) ..."|0x3a909ec3
+14:47:27.0 (47844468)|STATEMENT_EXECUTE|[312]
+14:47:27.0 (47867557)|VARIABLE_ASSIGNMENT|[312]|this.customerStreet|"PO BOX 595"|0x3a909ec3
+14:47:27.0 (47874228)|STATEMENT_EXECUTE|[313]
+14:47:27.0 (47891003)|VARIABLE_ASSIGNMENT|[313]|this.customerCity|"SYLVANIA SOUTHGATE"|0x3a909ec3
+14:47:27.0 (47896831)|STATEMENT_EXECUTE|[314]
+14:47:27.0 (47912400)|VARIABLE_ASSIGNMENT|[314]|this.customerState|"NSW"|0x3a909ec3
+14:47:27.0 (47918814)|STATEMENT_EXECUTE|[315]
+14:47:27.0 (47934051)|VARIABLE_ASSIGNMENT|[315]|this.customerPostcode|"2224"|0x3a909ec3
+14:47:27.0 (47940590)|STATEMENT_EXECUTE|[316]
+14:47:27.0 (47948307)|VARIABLE_ASSIGNMENT|[316]|this.customerCountrycode|"AU"|0x3a909ec3
+14:47:27.0 (47954566)|STATEMENT_EXECUTE|[317]
+14:47:27.0 (47962309)|VARIABLE_ASSIGNMENT|[317]|this.customerIP|null|0x3a909ec3
+14:47:27.0 (47967526)|STATEMENT_EXECUTE|[318]
+14:47:27.0 (47985286)|VARIABLE_ASSIGNMENT|[318]|this.cardHoldersName|"RA SANCHEZ"|0x3a909ec3
+14:47:27.0 (47991834)|STATEMENT_EXECUTE|[320]
+14:47:27.0 (48006662)|VARIABLE_ASSIGNMENT|[320]|this.cardExpiryMonth|"12"|0x3a909ec3
+14:47:27.0 (48012914)|STATEMENT_EXECUTE|[321]
+14:47:27.0 (48028345)|VARIABLE_ASSIGNMENT|[321]|this.cardExpiryYear|"2018"|0x3a909ec3
+14:47:27.0 (48035539)|STATEMENT_EXECUTE|[322]
+14:47:27.0 (48131534)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x3a909ec3
+14:47:27.0 (48148143)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:47:27.0 (48157391)|SYSTEM_MODE_ENTER|false
+14:47:27.0 (48163693)|HEAP_ALLOCATE|[41]|Bytes:5
+14:47:27.0 (48168574)|STATEMENT_EXECUTE|[41]
+14:47:27.0 (48170265)|STATEMENT_EXECUTE|[41]
+14:47:27.0 (48208395)|VARIABLE_ASSIGNMENT|[41]|this.cardCVN|""|0x3a909ec3
+14:47:27.0 (48217022)|SYSTEM_MODE_EXIT|false
+14:47:27.0 (48225152)|STATEMENT_EXECUTE|[323]
+14:47:27.0 (48255232)|VARIABLE_ASSIGNMENT|[323]|this.customerToken|"509973231677"|0x3a909ec3
+14:47:27.0 (48266889)|STATEMENT_EXECUTE|[324]
+14:47:27.0 (48286587)|VARIABLE_ASSIGNMENT|[324]|this.customerInvoiceDescription|"000972114"|0x3a909ec3
+14:47:27.0 (48296169)|STATEMENT_EXECUTE|[325]
+14:47:27.0 (48312787)|VARIABLE_ASSIGNMENT|[325]|this.customerInvoiceRef|"000972114"|0x3a909ec3
+14:47:27.0 (48323106)|STATEMENT_EXECUTE|[326]
+14:47:27.0 (48341767)|VARIABLE_ASSIGNMENT|[326]|this.uniqueAttemptId|"a0F6F00000uikSuUAI"|0x3a909ec3
+14:47:27.0 (48352071)|STATEMENT_EXECUTE|[328]
+14:47:27.0 (48354362)|STATEMENT_EXECUTE|[328]
+14:47:27.0 (48356466)|STATEMENT_EXECUTE|[329]
+14:47:27.0 (48373528)|METHOD_ENTRY|[329]|01p6F000006He6O|paymentGateway.pay()
+14:47:27.0 (48400134)|VARIABLE_SCOPE_BEGIN|[153]|this|paymentGateway|true|false
+14:47:27.0 (48514929)|VARIABLE_ASSIGNMENT|[153]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (48546946)|SYSTEM_MODE_ENTER|false
+14:47:27.0 (48558448)|HEAP_ALLOCATE|[155]|Bytes:5
+14:47:27.0 (48566697)|STATEMENT_EXECUTE|[153]
+14:47:27.0 (48569196)|STATEMENT_EXECUTE|[155]
+14:47:27.0 (48608209)|HEAP_ALLOCATE|[155]|Bytes:4
+14:47:27.0 (48664978)|VARIABLE_ASSIGNMENT|[155]|this.paymentAttempt|{}|0x3a909ec3
+14:47:27.0 (48675693)|STATEMENT_EXECUTE|[157]
+14:47:27.0 (48677852)|STATEMENT_EXECUTE|[157]
+14:47:27.0 (48693443)|HEAP_ALLOCATE|[159]|Bytes:28
+14:47:27.0 (48760023)|STATEMENT_EXECUTE|[159]
+14:47:27.0 (48768695)|STATEMENT_EXECUTE|[166]
+14:47:27.0 (48775851)|HEAP_ALLOCATE|[166]|Bytes:11
+14:47:27.0 (49745754)|VARIABLE_ASSIGNMENT|[166]|this.Status__c|"IN PROGRESS"|0x29121af
+14:47:27.0 (49756915)|STATEMENT_EXECUTE|[167]
+14:47:27.0 (49815439)|VARIABLE_ASSIGNMENT|[167]|this.Payment_Amount__c|89.00|0x29121af
+14:47:27.0 (49822816)|STATEMENT_EXECUTE|[168]
+14:47:27.0 (49929460)|VARIABLE_ASSIGNMENT|[168]|this.CurrencyIsoCode|"AUD"|0x29121af
+14:47:27.0 (49936993)|STATEMENT_EXECUTE|[169]
+14:47:27.0 (49946160)|HEAP_ALLOCATE|[169]|Bytes:1
+14:47:27.0 (49961704)|HEAP_ALLOCATE|[169]|Bytes:12
+14:47:27.0 (50001216)|VARIABLE_ASSIGNMENT|[169]|this.Payment_Name__c|"RODD SANCHEZ"|0x29121af
+14:47:27.0 (50009272)|STATEMENT_EXECUTE|[170]
+14:47:27.0 (50044756)|VARIABLE_ASSIGNMENT|[170]|this.Payment_Email__c|"rodd.sanchez@gmail.c (2 more) ..."|0x29121af
+14:47:27.0 (50051472)|STATEMENT_EXECUTE|[171]
+14:47:27.0 (50150034)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (50224185)|VARIABLE_ASSIGNMENT|[171]|this.Payment_Option__c|"Eway2"|0x29121af
+14:47:27.0 (50231466)|STATEMENT_EXECUTE|[172]
+14:47:27.0 (50325943)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (50359442)|HEAP_ALLOCATE|[172]|Bytes:7
+14:47:27.0 (50402748)|VARIABLE_ASSIGNMENT|[172]|this.Payment_Type__c|"Payment"|0x29121af
+14:47:27.0 (50409885)|STATEMENT_EXECUTE|[173]
+14:47:27.0 (50456162)|HEAP_ALLOCATE|[173]|Bytes:56
+14:47:27.0 (50521264)|VARIABLE_ASSIGNMENT|[173]|this.Request_Time__c|"2019-01-09T04:47:27.788Z"|0x29121af
+14:47:27.0 (50528781)|STATEMENT_EXECUTE|[174]
+14:47:27.0 (50566505)|VARIABLE_ASSIGNMENT|[174]|this.Invoice_Number__c|"000972114"|0x29121af
+14:47:27.0 (50656779)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (50678660)|HEAP_ALLOCATE|[177]|Bytes:4
+14:47:27.0 (50773256)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (50797907)|HEAP_ALLOCATE|[179]|Bytes:5
+14:47:27.0 (50808755)|STATEMENT_EXECUTE|[179]
+14:47:27.0 (50810682)|STATEMENT_EXECUTE|[180]
+14:47:27.0 (50825597)|METHOD_ENTRY|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:47:27.0 (50845990)|VARIABLE_SCOPE_BEGIN|[376]|this|paymentGateway|true|false
+14:47:27.0 (50921082)|VARIABLE_ASSIGNMENT|[376]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (50942393)|HEAP_ALLOCATE|[378]|Bytes:5
+14:47:27.0 (50947674)|STATEMENT_EXECUTE|[376]
+14:47:27.0 (50949362)|STATEMENT_EXECUTE|[378]
+14:47:27.0 (54104733)|VARIABLE_SCOPE_BEGIN|[10]|Eway2Payment.API_VERSION|String|false|true
+14:47:27.0 (54126634)|HEAP_ALLOCATE|[378]|Bytes:117
+14:47:27.0 (54136505)|HEAP_ALLOCATE|[378]|Bytes:67
+14:47:27.0 (54156542)|METHOD_ENTRY|[6]|01p6F000009rYF7|Eway2Payment.Eway2Payment()
+14:47:27.0 (54163005)|STATEMENT_EXECUTE|[6]
+14:47:27.0 (54166821)|STATEMENT_EXECUTE|[6]
+14:47:27.0 (54174557)|HEAP_ALLOCATE|[10]|Bytes:5
+14:47:27.0 (54179833)|STATEMENT_EXECUTE|[10]
+14:47:27.0 (54190211)|HEAP_ALLOCATE|[10]|Bytes:2
+14:47:27.0 (54205185)|VARIABLE_ASSIGNMENT|[10]|Eway2Payment.API_VERSION|"31"
+14:47:27.0 (54217306)|METHOD_EXIT|[6]|Eway2Payment
+14:47:27.0 (54236278)|METHOD_ENTRY|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:47:27.0 (54255461)|VARIABLE_SCOPE_BEGIN|[59]|gateway|paymentGateway|true|false
+14:47:27.0 (54352246)|VARIABLE_ASSIGNMENT|[59]|gateway|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (54371814)|HEAP_ALLOCATE|[60]|Bytes:5
+14:47:27.0 (54377157)|STATEMENT_EXECUTE|[59]
+14:47:27.0 (54378798)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (57346201)|HEAP_ALLOCATE|[60]|Bytes:132
+14:47:27.0 (57380008)|CONSTRUCTOR_ENTRY|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:47:27.0 (57494080)|VARIABLE_SCOPE_BEGIN|[53]|this|Eway2Payment|true|false
+14:47:27.0 (57559189)|VARIABLE_ASSIGNMENT|[53]|this|{}|0x273e4b82
+14:47:27.0 (57576455)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (57585166)|STATEMENT_EXECUTE|[6]
+14:47:27.0 (57590126)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (57594801)|STATEMENT_EXECUTE|[16]
+14:47:27.0 (57607539)|STATEMENT_EXECUTE|[17]
+14:47:27.0 (57612489)|STATEMENT_EXECUTE|[18]
+14:47:27.0 (57616758)|STATEMENT_EXECUTE|[19]
+14:47:27.0 (57621126)|STATEMENT_EXECUTE|[20]
+14:47:27.0 (57625171)|STATEMENT_EXECUTE|[21]
+14:47:27.0 (57629530)|STATEMENT_EXECUTE|[22]
+14:47:27.0 (57633953)|STATEMENT_EXECUTE|[23]
+14:47:27.0 (57638297)|STATEMENT_EXECUTE|[24]
+14:47:27.0 (57643075)|STATEMENT_EXECUTE|[25]
+14:47:27.0 (57646396)|STATEMENT_EXECUTE|[26]
+14:47:27.0 (57649302)|STATEMENT_EXECUTE|[27]
+14:47:27.0 (57652035)|STATEMENT_EXECUTE|[28]
+14:47:27.0 (57655001)|STATEMENT_EXECUTE|[29]
+14:47:27.0 (57657879)|STATEMENT_EXECUTE|[30]
+14:47:27.0 (57661278)|STATEMENT_EXECUTE|[31]
+14:47:27.0 (57664234)|STATEMENT_EXECUTE|[32]
+14:47:27.0 (57667330)|STATEMENT_EXECUTE|[33]
+14:47:27.0 (57670090)|STATEMENT_EXECUTE|[34]
+14:47:27.0 (57673222)|STATEMENT_EXECUTE|[35]
+14:47:27.0 (57676393)|STATEMENT_EXECUTE|[36]
+14:47:27.0 (57679382)|STATEMENT_EXECUTE|[37]
+14:47:27.0 (57682663)|STATEMENT_EXECUTE|[38]
+14:47:27.0 (57685666)|STATEMENT_EXECUTE|[39]
+14:47:27.0 (57689209)|STATEMENT_EXECUTE|[40]
+14:47:27.0 (57692182)|STATEMENT_EXECUTE|[41]
+14:47:27.0 (57695061)|STATEMENT_EXECUTE|[42]
+14:47:27.0 (57697950)|STATEMENT_EXECUTE|[43]
+14:47:27.0 (57701046)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (57703890)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (57711576)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (57714631)|STATEMENT_EXECUTE|[48]
+14:47:27.0 (57745266)|STATEMENT_EXECUTE|[53]
+14:47:27.0 (57746979)|STATEMENT_EXECUTE|[54]
+14:47:27.0 (57755966)|HEAP_ALLOCATE|[54]|Bytes:22
+14:47:27.0 (57763519)|HEAP_ALLOCATE|[54]|Bytes:2
+14:47:27.0 (57785499)|METHOD_ENTRY|[1]|01p6F000009rYF8|Eway2Response.Eway2Response()
+14:47:27.0 (57791716)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (57795191)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (57800573)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (57809559)|METHOD_EXIT|[1]|Eway2Response
+14:47:27.0 (57824044)|HEAP_ALLOCATE|[54]|Bytes:16
+14:47:27.0 (57834516)|CONSTRUCTOR_ENTRY|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:47:27.0 (57852364)|VARIABLE_SCOPE_BEGIN|[7]|this|Eway2Response|true|false
+14:47:27.0 (57878759)|VARIABLE_ASSIGNMENT|[7]|this|{}|0x5501aed4
+14:47:27.0 (57888940)|HEAP_ALLOCATE|[5]|Bytes:5
+14:47:27.0 (57893060)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (57895954)|HEAP_ALLOCATE|[5]|Bytes:5
+14:47:27.0 (57898846)|STATEMENT_EXECUTE|[3]
+14:47:27.0 (57903842)|STATEMENT_EXECUTE|[4]
+14:47:27.0 (57906906)|STATEMENT_EXECUTE|[5]
+14:47:27.0 (57922638)|HEAP_ALLOCATE|[5]|Bytes:4
+14:47:27.0 (57946050)|VARIABLE_ASSIGNMENT|[5]|this.params|{}|0x5501aed4
+14:47:27.0 (57962830)|STATEMENT_EXECUTE|[7]
+14:47:27.0 (57971708)|CONSTRUCTOR_EXIT|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:47:27.0 (57985988)|VARIABLE_ASSIGNMENT|[54]|this.response|0x5501aed4|0x273e4b82
+14:47:27.0 (57992420)|STATEMENT_EXECUTE|[56]
+14:47:27.0 (58005925)|VARIABLE_ASSIGNMENT|[56]|this.currencyCode|"AUD"|0x273e4b82
+14:47:27.0 (58015155)|CONSTRUCTOR_EXIT|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:47:27.0 (58022283)|VARIABLE_SCOPE_BEGIN|[60]|eway|Eway2Payment|true|false
+14:47:27.0 (58050318)|VARIABLE_ASSIGNMENT|[60]|eway|{"currencyCode":"AUD","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (58161939)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (58218958)|HEAP_ALLOCATE|[62]|Bytes:16
+14:47:27.0 (58325955)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (58347908)|HEAP_ALLOCATE|[64]|Bytes:13
+14:47:27.0 (58361036)|STATEMENT_EXECUTE|[64]
+14:47:27.0 (58363198)|STATEMENT_EXECUTE|[65]
+14:47:27.0 (58369672)|HEAP_ALLOCATE|[65]|Bytes:17
+14:47:27.0 (58396895)|METHOD_ENTRY|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:47:27.0 (58424427)|VARIABLE_SCOPE_BEGIN|[104]|this|Eway2Payment|true|false
+14:47:27.0 (58453301)|VARIABLE_ASSIGNMENT|[104]|this|{"currencyCode":"AUD","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (58461632)|VARIABLE_SCOPE_BEGIN|[104]|merchantName|String|false|false
+14:47:27.0 (58471660)|VARIABLE_ASSIGNMENT|[104]|merchantName|"Eway Rapid SLX AU"
+14:47:27.0 (58482519)|HEAP_ALLOCATE|[106]|Bytes:5
+14:47:27.0 (58487682)|STATEMENT_EXECUTE|[104]
+14:47:27.0 (58489451)|STATEMENT_EXECUTE|[106]
+14:47:27.0 (59674484)|HEAP_ALLOCATE|[106]|Bytes:56
+14:47:27.0 (59699142)|VARIABLE_SCOPE_BEGIN|[106]|merchantConfig|PaymentGateway__c|true|false
+14:47:27.0 (59776995)|VARIABLE_ASSIGNMENT|[106]|merchantConfig|{"LastModifiedDate":"2018-03-20T03:55:30.000Z","IsDeleted":false,"MerchantURL__c":"https://api.ewaypaym (20 more) ...","Access_Code__c":"F9802AULee2iddqRMaI7 (50 more) ...","CurrencyIsoCode":"AUD","SetupOwnerId":"00D90000000IJSaEAO","Name":"Eway Rapid SLX AU","SystemModstamp":"2018-05-24T08:56:42.000Z","CreatedById":"00590000000VmmqAAC","CreatedDate":"2018-03-20T03:55:30.000Z","Id":"a2c6F0000062AY3QAM","LastModifiedById":"00590000000VmmqAAC","Password__c":"KY0jzPzu"}|0x24ac5d21
+14:47:27.0 (59797044)|STATEMENT_EXECUTE|[108]
+14:47:27.0 (59805628)|STATEMENT_EXECUTE|[112]
+14:47:27.0 (59821263)|VARIABLE_ASSIGNMENT|[112]|this.merchantName|"Eway Rapid SLX AU"|0x273e4b82
+14:47:27.0 (59827958)|STATEMENT_EXECUTE|[113]
+14:47:27.0 (59867297)|VARIABLE_ASSIGNMENT|[113]|this.gatewayUrl|"https://api.ewaypaym (20 more) ..."|0x273e4b82
+14:47:27.0 (59874777)|STATEMENT_EXECUTE|[114]
+14:47:27.0 (59893785)|VARIABLE_ASSIGNMENT|[114]|this.merchantId|"F9802AULee2iddqRMaI7 (50 more) ..."|0x273e4b82
+14:47:27.0 (59900438)|STATEMENT_EXECUTE|[115]
+14:47:27.0 (59915551)|VARIABLE_ASSIGNMENT|[115]|this.password|"KY0jzPzu"|0x273e4b82
+14:47:27.0 (59929961)|METHOD_EXIT|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:47:27.0 (59937646)|STATEMENT_EXECUTE|[70]
+14:47:27.0 (60005159)|HEAP_ALLOCATE|[70]|Bytes:28
+14:47:27.0 (60024408)|HEAP_ALLOCATE|[70]|Bytes:28
+14:47:27.0 (60047787)|HEAP_ALLOCATE|[70]|Bytes:28
+14:47:27.0 (60065898)|HEAP_ALLOCATE|[70]|Bytes:28
+14:47:27.0 (60093829)|VARIABLE_SCOPE_BEGIN|[70]|amountInCents|Integer|false|false
+14:47:27.0 (60102553)|HEAP_ALLOCATE|[70]|Bytes:4
+14:47:27.0 (60109776)|VARIABLE_ASSIGNMENT|[70]|amountInCents|8900
+14:47:27.0 (60115124)|STATEMENT_EXECUTE|[72]
+14:47:27.0 (60132350)|METHOD_ENTRY|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:47:27.0 (60150650)|VARIABLE_SCOPE_BEGIN|[331]|this|Eway2Payment|true|false
+14:47:27.0 (60193959)|VARIABLE_ASSIGNMENT|[331]|this|{"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (60204357)|VARIABLE_SCOPE_BEGIN|[331]|amount|Integer|false|false
+14:47:27.0 (60213705)|VARIABLE_ASSIGNMENT|[331]|amount|8900
+14:47:27.0 (60218670)|VARIABLE_SCOPE_BEGIN|[331]|currencyCode|String|false|false
+14:47:27.0 (60230000)|VARIABLE_ASSIGNMENT|[331]|currencyCode|"AUD"
+14:47:27.0 (60245823)|HEAP_ALLOCATE|[332]|Bytes:5
+14:47:27.0 (60253190)|STATEMENT_EXECUTE|[331]
+14:47:27.0 (60255719)|STATEMENT_EXECUTE|[332]
+14:47:27.0 (60264245)|HEAP_ALLOCATE|[332]|Bytes:4
+14:47:27.0 (60273165)|VARIABLE_ASSIGNMENT|[332]|this.amount|8900|0x273e4b82
+14:47:27.0 (60279858)|STATEMENT_EXECUTE|[333]
+14:47:27.0 (60288116)|VARIABLE_ASSIGNMENT|[333]|this.currencyCode|"AUD"|0x273e4b82
+14:47:27.0 (60301036)|METHOD_EXIT|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:47:27.0 (60309756)|STATEMENT_EXECUTE|[73]
+14:47:27.0 (60331778)|METHOD_ENTRY|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:47:27.0 (60351027)|VARIABLE_SCOPE_BEGIN|[322]|this|Eway2Payment|true|false
+14:47:27.0 (60391775)|VARIABLE_ASSIGNMENT|[322]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (60401327)|VARIABLE_SCOPE_BEGIN|[322]|merchTxnRef|String|false|false
+14:47:27.0 (60409757)|VARIABLE_ASSIGNMENT|[322]|merchTxnRef|"000972114"
+14:47:27.0 (60419458)|HEAP_ALLOCATE|[323]|Bytes:5
+14:47:27.0 (60424677)|STATEMENT_EXECUTE|[322]
+14:47:27.0 (60426400)|STATEMENT_EXECUTE|[323]
+14:47:27.0 (60437225)|VARIABLE_ASSIGNMENT|[323]|this.merchTxnRef|"000972114"|0x273e4b82
+14:47:27.0 (60448381)|METHOD_EXIT|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:47:27.0 (60454438)|STATEMENT_EXECUTE|[74]
+14:47:27.0 (60466930)|METHOD_ENTRY|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:47:27.0 (60481553)|VARIABLE_SCOPE_BEGIN|[326]|this|Eway2Payment|true|false
+14:47:27.0 (60518581)|VARIABLE_ASSIGNMENT|[326]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (60528368)|VARIABLE_SCOPE_BEGIN|[326]|OrderInfo|String|false|false
+14:47:27.0 (60537484)|VARIABLE_ASSIGNMENT|[326]|OrderInfo|"000972114"
+14:47:27.0 (60546888)|HEAP_ALLOCATE|[327]|Bytes:5
+14:47:27.0 (60551471)|STATEMENT_EXECUTE|[326]
+14:47:27.0 (60553118)|STATEMENT_EXECUTE|[327]
+14:47:27.0 (60562839)|VARIABLE_ASSIGNMENT|[327]|this.orderInfo|"000972114"|0x273e4b82
+14:47:27.0 (60572206)|METHOD_EXIT|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:47:27.0 (60577282)|STATEMENT_EXECUTE|[75]
+14:47:27.0 (60672066)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (60699548)|METHOD_ENTRY|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:47:27.0 (60707124)|VARIABLE_SCOPE_BEGIN|[344]|this|Eway2Payment|true|false
+14:47:27.0 (60743459)|VARIABLE_ASSIGNMENT|[344]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (60751979)|VARIABLE_SCOPE_BEGIN|[344]|CardNum|String|false|false
+14:47:27.0 (60760302)|VARIABLE_ASSIGNMENT|[344]|CardNum|null
+14:47:27.0 (60768800)|HEAP_ALLOCATE|[345]|Bytes:5
+14:47:27.0 (60772867)|STATEMENT_EXECUTE|[344]
+14:47:27.0 (60774613)|STATEMENT_EXECUTE|[345]
+14:47:27.0 (60788990)|VARIABLE_ASSIGNMENT|[345]|this.cardNum|null|0x273e4b82
+14:47:27.0 (60798602)|METHOD_EXIT|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:47:27.0 (60804386)|STATEMENT_EXECUTE|[76]
+14:47:27.0 (60816679)|METHOD_ENTRY|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:47:27.0 (60832159)|VARIABLE_SCOPE_BEGIN|[356]|this|Eway2Payment|true|false
+14:47:27.0 (60868980)|VARIABLE_ASSIGNMENT|[356]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (60878358)|VARIABLE_SCOPE_BEGIN|[356]|month|String|false|false
+14:47:27.0 (60887176)|VARIABLE_ASSIGNMENT|[356]|month|"12"
+14:47:27.0 (60891423)|VARIABLE_SCOPE_BEGIN|[356]|year|String|false|false
+14:47:27.0 (60899722)|VARIABLE_ASSIGNMENT|[356]|year|"2018"
+14:47:27.0 (60907933)|HEAP_ALLOCATE|[358]|Bytes:5
+14:47:27.0 (60912346)|STATEMENT_EXECUTE|[356]
+14:47:27.0 (60950821)|STATEMENT_EXECUTE|[358]
+14:47:27.0 (60970713)|STATEMENT_EXECUTE|[362]
+14:47:27.0 (60972359)|STATEMENT_EXECUTE|[363]
+14:47:27.0 (60989542)|HEAP_ALLOCATE|[363]|Bytes:4
+14:47:27.0 (61007469)|HEAP_ALLOCATE|[363]|Bytes:2
+14:47:27.0 (61019490)|VARIABLE_ASSIGNMENT|[363]|year|"18"
+14:47:27.0 (61024838)|STATEMENT_EXECUTE|[366]
+14:47:27.0 (61034135)|VARIABLE_ASSIGNMENT|[366]|this.cardExpiryMonth|"12"|0x273e4b82
+14:47:27.0 (61040335)|STATEMENT_EXECUTE|[367]
+14:47:27.0 (61047158)|VARIABLE_ASSIGNMENT|[367]|this.cardExpiryYear|"18"|0x273e4b82
+14:47:27.0 (61056865)|METHOD_EXIT|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:47:27.0 (61062139)|STATEMENT_EXECUTE|[77]
+14:47:27.0 (61073562)|METHOD_ENTRY|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:47:27.0 (61086894)|VARIABLE_SCOPE_BEGIN|[340]|this|Eway2Payment|true|false
+14:47:27.0 (61127414)|VARIABLE_ASSIGNMENT|[340]|this|{"amount":8900,"cardExpiryMonth":"12","cardExpiryYear":"18","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (61137714)|VARIABLE_SCOPE_BEGIN|[340]|cardName|String|false|false
+14:47:27.0 (61146541)|VARIABLE_ASSIGNMENT|[340]|cardName|"RA SANCHEZ"
+14:47:27.0 (61155494)|HEAP_ALLOCATE|[341]|Bytes:5
+14:47:27.0 (61160407)|STATEMENT_EXECUTE|[340]
+14:47:27.0 (61162298)|STATEMENT_EXECUTE|[341]
+14:47:27.0 (61171465)|VARIABLE_ASSIGNMENT|[341]|this.cardName|"RA SANCHEZ"|0x273e4b82
+14:47:27.0 (61181439)|METHOD_EXIT|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:47:27.0 (61186184)|STATEMENT_EXECUTE|[78]
+14:47:27.0 (61271858)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (61296571)|METHOD_ENTRY|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:47:27.0 (61303280)|VARIABLE_SCOPE_BEGIN|[348]|this|Eway2Payment|true|false
+14:47:27.0 (61343604)|VARIABLE_ASSIGNMENT|[348]|this|{"amount":8900,"cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (61353240)|VARIABLE_SCOPE_BEGIN|[348]|cardCvc|String|false|false
+14:47:27.0 (61361561)|VARIABLE_ASSIGNMENT|[348]|cardCvc|""
+14:47:27.0 (61370285)|HEAP_ALLOCATE|[349]|Bytes:5
+14:47:27.0 (61374690)|STATEMENT_EXECUTE|[348]
+14:47:27.0 (61376411)|STATEMENT_EXECUTE|[349]
+14:47:27.0 (61385664)|VARIABLE_ASSIGNMENT|[349]|this.cardCvc|""|0x273e4b82
+14:47:27.0 (61394642)|METHOD_EXIT|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:47:27.0 (61399847)|STATEMENT_EXECUTE|[79]
+14:47:27.0 (61410982)|METHOD_ENTRY|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:47:27.0 (61425528)|VARIABLE_SCOPE_BEGIN|[374]|this|Eway2Payment|true|false
+14:47:27.0 (61466665)|VARIABLE_ASSIGNMENT|[374]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (61476671)|VARIABLE_SCOPE_BEGIN|[374]|customerCompanyName|String|false|false
+14:47:27.0 (61486791)|VARIABLE_ASSIGNMENT|[374]|customerCompanyName|"Natural Health Pract (3 more) ..."
+14:47:27.0 (61495442)|HEAP_ALLOCATE|[375]|Bytes:5
+14:47:27.0 (61500037)|STATEMENT_EXECUTE|[374]
+14:47:27.0 (61501811)|STATEMENT_EXECUTE|[375]
+14:47:27.0 (64111116)|HEAP_ALLOCATE|[375]|Bytes:43
+14:47:27.0 (64123957)|HEAP_ALLOCATE|[375]|Bytes:3
+14:47:27.0 (64142484)|METHOD_ENTRY|[1]|01p6F000006uYhT|Utility.Utility()
+14:47:27.0 (64148419)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (64153072)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (64160038)|HEAP_ALLOCATE|[375]|Bytes:5
+14:47:27.0 (64169845)|METHOD_EXIT|[1]|Utility
+14:47:27.0 (64194640)|METHOD_ENTRY|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64212836)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (64229292)|VARIABLE_ASSIGNMENT|[44]|s1|"Natural Health Pract (3 more) ..."
+14:47:27.0 (64234415)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (64243571)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (64257709)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (64263731)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (64265436)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (64275504)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (64287635)|VARIABLE_ASSIGNMENT|[45]|result|"Natural Health Pract (3 more) ..."
+14:47:27.0 (64293396)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (64297344)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (64306646)|METHOD_EXIT|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64335469)|HEAP_ALLOCATE|[375]|Bytes:23
+14:47:27.0 (64356063)|VARIABLE_ASSIGNMENT|[375]|this.customerCompanyName|"Natural Health Pract (3 more) ..."|0x273e4b82
+14:47:27.0 (64367287)|METHOD_EXIT|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:47:27.0 (64372403)|STATEMENT_EXECUTE|[80]
+14:47:27.0 (64388424)|METHOD_ENTRY|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:47:27.0 (64410559)|VARIABLE_SCOPE_BEGIN|[378]|this|Eway2Payment|true|false
+14:47:27.0 (64474187)|VARIABLE_ASSIGNMENT|[378]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCompanyName":"Natural Health Pract (3 more) ...","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (64485697)|VARIABLE_SCOPE_BEGIN|[378]|customerFirstName|String|false|false
+14:47:27.0 (64494626)|VARIABLE_ASSIGNMENT|[378]|customerFirstName|"RODD"
+14:47:27.0 (64504437)|HEAP_ALLOCATE|[379]|Bytes:5
+14:47:27.0 (64509608)|STATEMENT_EXECUTE|[378]
+14:47:27.0 (64511472)|STATEMENT_EXECUTE|[379]
+14:47:27.0 (64537206)|METHOD_ENTRY|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64549234)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (64558002)|VARIABLE_ASSIGNMENT|[44]|s1|"RODD"
+14:47:27.0 (64562756)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (64569921)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (64577989)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (64582257)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (64583817)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (64598491)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (64608425)|VARIABLE_ASSIGNMENT|[45]|result|"RODD"
+14:47:27.0 (64613050)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (64616732)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (64624152)|METHOD_EXIT|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64652353)|HEAP_ALLOCATE|[379]|Bytes:4
+14:47:27.0 (64671553)|VARIABLE_ASSIGNMENT|[379]|this.customerFirstName|"RODD"|0x273e4b82
+14:47:27.0 (64684959)|METHOD_EXIT|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:47:27.0 (64690465)|STATEMENT_EXECUTE|[81]
+14:47:27.0 (64704399)|METHOD_ENTRY|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:47:27.0 (64719568)|VARIABLE_SCOPE_BEGIN|[382]|this|Eway2Payment|true|false
+14:47:27.0 (64768157)|VARIABLE_ASSIGNMENT|[382]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCompanyName":"Natural Health Pract (3 more) ...","customerFirstName":"RODD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (64794137)|VARIABLE_SCOPE_BEGIN|[382]|customerLastName|String|false|false
+14:47:27.0 (64803534)|VARIABLE_ASSIGNMENT|[382]|customerLastName|"SANCHEZ"
+14:47:27.0 (64813284)|HEAP_ALLOCATE|[383]|Bytes:5
+14:47:27.0 (64817950)|STATEMENT_EXECUTE|[382]
+14:47:27.0 (64819719)|STATEMENT_EXECUTE|[383]
+14:47:27.0 (64828987)|METHOD_ENTRY|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64838841)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (64847564)|VARIABLE_ASSIGNMENT|[44]|s1|"SANCHEZ"
+14:47:27.0 (64852443)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (64859685)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (64866786)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (64870835)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (64872426)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (64877403)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (64887138)|VARIABLE_ASSIGNMENT|[45]|result|"SANCHEZ"
+14:47:27.0 (64892099)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (64895473)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (64901927)|METHOD_EXIT|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (64916267)|HEAP_ALLOCATE|[383]|Bytes:7
+14:47:27.0 (64930401)|VARIABLE_ASSIGNMENT|[383]|this.customerLastName|"SANCHEZ"|0x273e4b82
+14:47:27.0 (64940040)|METHOD_EXIT|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:47:27.0 (64945194)|STATEMENT_EXECUTE|[82]
+14:47:27.0 (64958109)|METHOD_ENTRY|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:47:27.0 (64972150)|VARIABLE_SCOPE_BEGIN|[386]|this|Eway2Payment|true|false
+14:47:27.0 (65021650)|VARIABLE_ASSIGNMENT|[386]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCompanyName":"Natural Health Pract (3 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (65034309)|VARIABLE_SCOPE_BEGIN|[386]|customerEmail|String|false|false
+14:47:27.0 (65044470)|VARIABLE_ASSIGNMENT|[386]|customerEmail|"rodd.sanchez@gmail.c (2 more) ..."
+14:47:27.0 (65053541)|HEAP_ALLOCATE|[387]|Bytes:5
+14:47:27.0 (65057930)|STATEMENT_EXECUTE|[386]
+14:47:27.0 (65059559)|STATEMENT_EXECUTE|[387]
+14:47:27.0 (65067642)|METHOD_ENTRY|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65079008)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (65101421)|VARIABLE_ASSIGNMENT|[44]|s1|"rodd.sanchez@gmail.c (2 more) ..."
+14:47:27.0 (65106211)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (65116272)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (65123761)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (65128033)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (65129499)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (65134605)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (65144872)|VARIABLE_ASSIGNMENT|[45]|result|"rodd.sanchez@gmail.c (2 more) ..."
+14:47:27.0 (65149909)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (65153137)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (65159385)|METHOD_EXIT|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65173283)|HEAP_ALLOCATE|[387]|Bytes:22
+14:47:27.0 (65188193)|VARIABLE_ASSIGNMENT|[387]|this.customerEmail|"rodd.sanchez@gmail.c (2 more) ..."|0x273e4b82
+14:47:27.0 (65196654)|METHOD_EXIT|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:47:27.0 (65201537)|STATEMENT_EXECUTE|[83]
+14:47:27.0 (65215026)|METHOD_ENTRY|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:47:27.0 (65229733)|VARIABLE_SCOPE_BEGIN|[390]|this|Eway2Payment|true|false
+14:47:27.0 (65282016)|VARIABLE_ASSIGNMENT|[390]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCompanyName":"Natural Health Pract (3 more) ...","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (65293876)|VARIABLE_SCOPE_BEGIN|[390]|customerStreet|String|false|false
+14:47:27.0 (65302809)|VARIABLE_ASSIGNMENT|[390]|customerStreet|"PO BOX 595"
+14:47:27.0 (65314628)|HEAP_ALLOCATE|[391]|Bytes:5
+14:47:27.0 (65319189)|STATEMENT_EXECUTE|[390]
+14:47:27.0 (65320855)|STATEMENT_EXECUTE|[391]
+14:47:27.0 (65329128)|METHOD_ENTRY|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65337564)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (65346665)|VARIABLE_ASSIGNMENT|[44]|s1|"PO BOX 595"
+14:47:27.0 (65353243)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (65361077)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (65368117)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (65371729)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (65373271)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (65378290)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (65386700)|VARIABLE_ASSIGNMENT|[45]|result|"PO BOX 595"
+14:47:27.0 (65391063)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (65394444)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (65400427)|METHOD_EXIT|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65426586)|HEAP_ALLOCATE|[391]|Bytes:10
+14:47:27.0 (65442165)|VARIABLE_ASSIGNMENT|[391]|this.customerStreet|"PO BOX 595"|0x273e4b82
+14:47:27.0 (65450785)|METHOD_EXIT|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:47:27.0 (65455513)|STATEMENT_EXECUTE|[84]
+14:47:27.0 (65468286)|METHOD_ENTRY|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:47:27.0 (65482098)|VARIABLE_SCOPE_BEGIN|[394]|this|Eway2Payment|true|false
+14:47:27.0 (65532297)|VARIABLE_ASSIGNMENT|[394]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCompanyName":"Natural Health Pract (3 more) ...","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerStreet":"PO BOX 595","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (65543720)|VARIABLE_SCOPE_BEGIN|[394]|customerCity|String|false|false
+14:47:27.0 (65552237)|VARIABLE_ASSIGNMENT|[394]|customerCity|"SYLVANIA SOUTHGATE"
+14:47:27.0 (65560908)|HEAP_ALLOCATE|[395]|Bytes:5
+14:47:27.0 (65565337)|STATEMENT_EXECUTE|[394]
+14:47:27.0 (65567039)|STATEMENT_EXECUTE|[395]
+14:47:27.0 (65575027)|METHOD_ENTRY|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65596460)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (65606290)|VARIABLE_ASSIGNMENT|[44]|s1|"SYLVANIA SOUTHGATE"
+14:47:27.0 (65610541)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (65617363)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (65626927)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (65630873)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (65632350)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (65637428)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (65646195)|VARIABLE_ASSIGNMENT|[45]|result|"SYLVANIA SOUTHGATE"
+14:47:27.0 (65650851)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (65654083)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (65660205)|METHOD_EXIT|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65673845)|HEAP_ALLOCATE|[395]|Bytes:18
+14:47:27.0 (65687286)|VARIABLE_ASSIGNMENT|[395]|this.customerCity|"SYLVANIA SOUTHGATE"|0x273e4b82
+14:47:27.0 (65695181)|METHOD_EXIT|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:47:27.0 (65699817)|STATEMENT_EXECUTE|[85]
+14:47:27.0 (65712197)|METHOD_ENTRY|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:47:27.0 (65725629)|VARIABLE_SCOPE_BEGIN|[398]|this|Eway2Payment|true|false
+14:47:27.0 (65777484)|VARIABLE_ASSIGNMENT|[398]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerStreet":"PO BOX 595","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (65793171)|VARIABLE_SCOPE_BEGIN|[398]|customerState|String|false|false
+14:47:27.0 (65801084)|VARIABLE_ASSIGNMENT|[398]|customerState|"NSW"
+14:47:27.0 (65809709)|HEAP_ALLOCATE|[399]|Bytes:5
+14:47:27.0 (65814522)|STATEMENT_EXECUTE|[398]
+14:47:27.0 (65816073)|STATEMENT_EXECUTE|[399]
+14:47:27.0 (65823778)|METHOD_ENTRY|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65832722)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (65840617)|VARIABLE_ASSIGNMENT|[44]|s1|"NSW"
+14:47:27.0 (65844642)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (65861961)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (65868982)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (65872550)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (65874231)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (65879412)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (65887414)|VARIABLE_ASSIGNMENT|[45]|result|"NSW"
+14:47:27.0 (65892113)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (65895488)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (65901559)|METHOD_EXIT|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (65918082)|HEAP_ALLOCATE|[399]|Bytes:3
+14:47:27.0 (65931839)|VARIABLE_ASSIGNMENT|[399]|this.customerState|"NSW"|0x273e4b82
+14:47:27.0 (65940124)|METHOD_EXIT|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:47:27.0 (65944689)|STATEMENT_EXECUTE|[86]
+14:47:27.0 (65957247)|METHOD_ENTRY|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:47:27.0 (65970659)|VARIABLE_SCOPE_BEGIN|[402]|this|Eway2Payment|true|false
+14:47:27.0 (66022842)|VARIABLE_ASSIGNMENT|[402]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerState":"NSW","customerStreet":"PO BOX 595","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (66035145)|VARIABLE_SCOPE_BEGIN|[402]|customerPostcode|String|false|false
+14:47:27.0 (66042892)|VARIABLE_ASSIGNMENT|[402]|customerPostcode|"2224"
+14:47:27.0 (66051414)|HEAP_ALLOCATE|[403]|Bytes:5
+14:47:27.0 (66055943)|STATEMENT_EXECUTE|[402]
+14:47:27.0 (66057746)|STATEMENT_EXECUTE|[403]
+14:47:27.0 (66065615)|METHOD_ENTRY|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (66074090)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (66082158)|VARIABLE_ASSIGNMENT|[44]|s1|"2224"
+14:47:27.0 (66086842)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (66103096)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:47:27.0 (66110403)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (66114250)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (66115851)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (66120904)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (66129709)|VARIABLE_ASSIGNMENT|[45]|result|"2224"
+14:47:27.0 (66134082)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (66137294)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (66143660)|METHOD_EXIT|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (66156606)|HEAP_ALLOCATE|[403]|Bytes:4
+14:47:27.0 (66169808)|VARIABLE_ASSIGNMENT|[403]|this.customerPostcode|"2224"|0x273e4b82
+14:47:27.0 (66177992)|METHOD_EXIT|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:47:27.0 (66182398)|STATEMENT_EXECUTE|[87]
+14:47:27.0 (66194605)|METHOD_ENTRY|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:47:27.0 (66207646)|VARIABLE_SCOPE_BEGIN|[406]|this|Eway2Payment|true|false
+14:47:27.0 (66261649)|VARIABLE_ASSIGNMENT|[406]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (66274455)|VARIABLE_SCOPE_BEGIN|[406]|customerCountrycode|String|false|false
+14:47:27.0 (66281774)|VARIABLE_ASSIGNMENT|[406]|customerCountrycode|"AU"
+14:47:27.0 (66290274)|HEAP_ALLOCATE|[407]|Bytes:5
+14:47:27.0 (66294347)|STATEMENT_EXECUTE|[406]
+14:47:27.0 (66295983)|STATEMENT_EXECUTE|[407]
+14:47:27.0 (66322835)|HEAP_ALLOCATE|[407]|Bytes:2
+14:47:27.0 (66337436)|VARIABLE_ASSIGNMENT|[407]|this.customerCountrycode|"au"|0x273e4b82
+14:47:27.0 (66346371)|METHOD_EXIT|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:47:27.0 (66350660)|STATEMENT_EXECUTE|[88]
+14:47:27.0 (66364905)|METHOD_ENTRY|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:47:27.0 (66377442)|VARIABLE_SCOPE_BEGIN|[370]|this|Eway2Payment|true|false
+14:47:27.0 (66432622)|VARIABLE_ASSIGNMENT|[370]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4"}|0x273e4b82
+14:47:27.0 (66444538)|VARIABLE_SCOPE_BEGIN|[370]|transNo|String|false|false
+14:47:27.0 (66452319)|VARIABLE_ASSIGNMENT|[370]|transNo|""
+14:47:27.0 (66461175)|HEAP_ALLOCATE|[371]|Bytes:5
+14:47:27.0 (66465148)|STATEMENT_EXECUTE|[370]
+14:47:27.0 (66466799)|STATEMENT_EXECUTE|[371]
+14:47:27.0 (66477404)|VARIABLE_ASSIGNMENT|[371]|this.transactionNo|""|0x273e4b82
+14:47:27.0 (66486091)|METHOD_EXIT|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:47:27.0 (66490784)|STATEMENT_EXECUTE|[89]
+14:47:27.0 (66501567)|VARIABLE_ASSIGNMENT|[89]|this.customerToken|"509973231677"|0x273e4b82
+14:47:27.0 (66507024)|STATEMENT_EXECUTE|[93]
+14:47:27.0 (66517801)|METHOD_ENTRY|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:47:27.0 (66530579)|VARIABLE_SCOPE_BEGIN|[410]|this|Eway2Payment|true|false
+14:47:27.0 (66585779)|VARIABLE_ASSIGNMENT|[410]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (66597981)|VARIABLE_SCOPE_BEGIN|[410]|customerIP|String|false|false
+14:47:27.0 (66605417)|VARIABLE_ASSIGNMENT|[410]|customerIP|null
+14:47:27.0 (66613315)|HEAP_ALLOCATE|[411]|Bytes:5
+14:47:27.0 (66617895)|STATEMENT_EXECUTE|[410]
+14:47:27.0 (66619522)|STATEMENT_EXECUTE|[411]
+14:47:27.0 (66628959)|VARIABLE_ASSIGNMENT|[411]|this.customerIP|null|0x273e4b82
+14:47:27.0 (66637228)|METHOD_EXIT|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:47:27.0 (66733572)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (66754820)|STATEMENT_EXECUTE|[95]
+14:47:27.0 (66759381)|STATEMENT_EXECUTE|[99]
+14:47:27.0 (66766586)|METHOD_EXIT|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:47:27.0 (66772689)|VARIABLE_SCOPE_BEGIN|[378]|eway|Eway2Payment|true|false
+14:47:27.0 (66832048)|VARIABLE_ASSIGNMENT|[378]|eway|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (66843972)|STATEMENT_EXECUTE|[379]
+14:47:27.0 (66850758)|VARIABLE_SCOPE_BEGIN|[379]|ewayResp|Eway2Response|true|false
+14:47:27.0 (66859174)|VARIABLE_ASSIGNMENT|[379]|ewayResp|null|
+14:47:27.0 (66939615)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x527739ef","cardCVN":"","cardExpiryMonth":"12","cardExpiryYear":"2018","cardHoldersName":"RA SANCHEZ","currencyIsoCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"AU","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerInvoiceDescription":"000972114","customerInvoiceRef":"000972114","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x29121af","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x3a909ec3
+14:47:27.0 (66957307)|STATEMENT_EXECUTE|[383]
+14:47:27.0 (66958992)|STATEMENT_EXECUTE|[384]
+14:47:27.0 (66968886)|METHOD_ENTRY|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:47:27.0 (66980327)|VARIABLE_SCOPE_BEGIN|[204]|this|Eway2Payment|true|false
+14:47:27.0 (67035369)|VARIABLE_ASSIGNMENT|[204]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (67053244)|HEAP_ALLOCATE|[205]|Bytes:5
+14:47:27.0 (67057668)|STATEMENT_EXECUTE|[204]
+14:47:27.0 (67059552)|STATEMENT_EXECUTE|[205]
+14:47:27.0 (67065709)|HEAP_ALLOCATE|[205]|Bytes:14
+14:47:27.0 (67075778)|VARIABLE_ASSIGNMENT|[205]|this.command|"ProcessPayment"|0x273e4b82
+14:47:27.0 (67081500)|STATEMENT_EXECUTE|[208]
+14:47:27.0 (67092047)|METHOD_ENTRY|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:47:27.0 (67103614)|VARIABLE_SCOPE_BEGIN|[415]|this|Eway2Payment|true|false
+14:47:27.0 (67158310)|VARIABLE_ASSIGNMENT|[415]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","command":"ProcessPayment","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (67174536)|HEAP_ALLOCATE|[417]|Bytes:5
+14:47:27.0 (67179110)|STATEMENT_EXECUTE|[415]
+14:47:27.0 (67180784)|STATEMENT_EXECUTE|[417]
+14:47:27.0 (67186806)|HEAP_ALLOCATE|[417]|Bytes:11
+14:47:27.0 (67201388)|METHOD_ENTRY|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:47:27.0 (67213491)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:47:27.0 (67269192)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","command":"ProcessPayment","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (67282129)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:47:27.0 (67290610)|VARIABLE_ASSIGNMENT|[436]|field|"merchTxnRef"
+14:47:27.0 (67294432)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:47:27.0 (67301709)|VARIABLE_ASSIGNMENT|[436]|value|"000972114"
+14:47:27.0 (67306520)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:47:27.0 (67313633)|VARIABLE_ASSIGNMENT|[436]|length|40
+14:47:27.0 (67318863)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:47:27.0 (67332609)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:47:27.0 (67341634)|HEAP_ALLOCATE|[437]|Bytes:5
+14:47:27.0 (67346769)|STATEMENT_EXECUTE|[436]
+14:47:27.0 (67348337)|STATEMENT_EXECUTE|[437]
+14:47:27.0 (67354181)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:47:27.0 (67362575)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:47:27.0 (67366962)|STATEMENT_EXECUTE|[439]
+14:47:27.0 (67368829)|STATEMENT_EXECUTE|[439]
+14:47:27.0 (67370440)|STATEMENT_EXECUTE|[440]
+14:47:27.0 (67394799)|HEAP_ALLOCATE|[440]|Bytes:9
+14:47:27.0 (67408405)|VARIABLE_ASSIGNMENT|[440]|value|"000972114"
+14:47:27.0 (67415099)|STATEMENT_EXECUTE|[442]
+14:47:27.0 (67435948)|STATEMENT_EXECUTE|[448]
+14:47:27.0 (67440268)|STATEMENT_EXECUTE|[455]
+14:47:27.0 (67470362)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:47:27.0 (67484690)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:47:27.0 (67505121)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x3302d006"}|0x5501aed4
+14:47:27.0 (67511711)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:47:27.0 (67519138)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:47:27.0 (67527751)|HEAP_ALLOCATE|[23]|Bytes:5
+14:47:27.0 (67532541)|STATEMENT_EXECUTE|[22]
+14:47:27.0 (67535152)|STATEMENT_EXECUTE|[23]
+14:47:27.0 (67544484)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:47:27.0 (67549679)|STATEMENT_EXECUTE|[457]
+14:47:27.0 (67556774)|METHOD_EXIT|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:47:27.0 (67561694)|STATEMENT_EXECUTE|[418]
+14:47:27.0 (67566690)|HEAP_ALLOCATE|[418]|Bytes:9
+14:47:27.0 (67576277)|METHOD_ENTRY|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:47:27.0 (67585654)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:47:27.0 (67643806)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","command":"ProcessPayment","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (67656803)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:47:27.0 (67664806)|VARIABLE_ASSIGNMENT|[436]|field|"orderInfo"
+14:47:27.0 (67668659)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:47:27.0 (67676263)|VARIABLE_ASSIGNMENT|[436]|value|"000972114"
+14:47:27.0 (67681070)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:47:27.0 (67688546)|VARIABLE_ASSIGNMENT|[436]|length|64
+14:47:27.0 (67693467)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:47:27.0 (67700573)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:47:27.0 (67707761)|HEAP_ALLOCATE|[437]|Bytes:5
+14:47:27.0 (67712147)|STATEMENT_EXECUTE|[436]
+14:47:27.0 (67713660)|STATEMENT_EXECUTE|[437]
+14:47:27.0 (67719561)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:47:27.0 (67727932)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:47:27.0 (67731864)|STATEMENT_EXECUTE|[439]
+14:47:27.0 (67733382)|STATEMENT_EXECUTE|[439]
+14:47:27.0 (67734816)|STATEMENT_EXECUTE|[440]
+14:47:27.0 (67747498)|HEAP_ALLOCATE|[440]|Bytes:9
+14:47:27.0 (67758440)|VARIABLE_ASSIGNMENT|[440]|value|"000972114"
+14:47:27.0 (67763933)|STATEMENT_EXECUTE|[442]
+14:47:27.0 (67777319)|STATEMENT_EXECUTE|[448]
+14:47:27.0 (67785611)|STATEMENT_EXECUTE|[455]
+14:47:27.0 (67792116)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:47:27.0 (67798062)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:47:27.0 (67814909)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x3302d006"}|0x5501aed4
+14:47:27.0 (67821303)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:47:27.0 (67828374)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:47:27.0 (67835880)|HEAP_ALLOCATE|[23]|Bytes:5
+14:47:27.0 (67840182)|STATEMENT_EXECUTE|[22]
+14:47:27.0 (67842012)|STATEMENT_EXECUTE|[23]
+14:47:27.0 (67849843)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:47:27.0 (67854379)|STATEMENT_EXECUTE|[457]
+14:47:27.0 (67860536)|METHOD_EXIT|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:47:27.0 (67889323)|STATEMENT_EXECUTE|[420]
+14:47:27.0 (67897179)|HEAP_ALLOCATE|[428]|Bytes:6
+14:47:27.0 (67914695)|STATEMENT_EXECUTE|[428]
+14:47:27.0 (67918312)|STATEMENT_EXECUTE|[432]
+14:47:27.0 (67930679)|METHOD_ENTRY|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (67942880)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:47:27.0 (67960306)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x3302d006"}|0x5501aed4
+14:47:27.0 (67970556)|HEAP_ALLOCATE|[60]|Bytes:5
+14:47:27.0 (67974696)|STATEMENT_EXECUTE|[59]
+14:47:27.0 (67976370)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (67982103)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:47:27.0 (67990354)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:47:27.0 (68041197)|STATEMENT_EXECUTE|[62]
+14:47:27.0 (68043707)|STATEMENT_EXECUTE|[64]
+14:47:27.0 (68052129)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:47:27.0 (68057872)|STATEMENT_EXECUTE|[74]
+14:47:27.0 (68064988)|METHOD_EXIT|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (68071334)|HEAP_ALLOCATE|[432]|Bytes:5
+14:47:27.0 (68077456)|METHOD_EXIT|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:47:27.0 (68086614)|METHOD_ENTRY|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (68095287)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:47:27.0 (68111858)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x3302d006"}|0x5501aed4
+14:47:27.0 (68120381)|HEAP_ALLOCATE|[60]|Bytes:5
+14:47:27.0 (68124875)|STATEMENT_EXECUTE|[59]
+14:47:27.0 (68126364)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (68131756)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:47:27.0 (68140814)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:47:27.0 (68153358)|STATEMENT_EXECUTE|[62]
+14:47:27.0 (68154981)|STATEMENT_EXECUTE|[64]
+14:47:27.0 (68160853)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:47:27.0 (68164996)|STATEMENT_EXECUTE|[74]
+14:47:27.0 (68171031)|METHOD_EXIT|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (68175892)|STATEMENT_EXECUTE|[210]
+14:47:27.0 (68179394)|STATEMENT_EXECUTE|[216]
+14:47:27.0 (68193477)|HEAP_ALLOCATE|[216]|Bytes:4
+14:47:27.0 (68216776)|VARIABLE_ASSIGNMENT|[216]|this.requestParams|{}|0x273e4b82
+14:47:27.0 (68222484)|STATEMENT_EXECUTE|[217]
+14:47:27.0 (68229382)|HEAP_ALLOCATE|[217]|Bytes:6
+14:47:27.0 (68258727)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68266926)|STATEMENT_EXECUTE|[218]
+14:47:27.0 (68273326)|HEAP_ALLOCATE|[218]|Bytes:19
+14:47:27.0 (68299604)|HEAP_ALLOCATE|[218]|Bytes:4
+14:47:27.0 (68312812)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68318222)|STATEMENT_EXECUTE|[219]
+14:47:27.0 (68324554)|HEAP_ALLOCATE|[219]|Bytes:20
+14:47:27.0 (68342615)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68351488)|STATEMENT_EXECUTE|[220]
+14:47:27.0 (68360585)|HEAP_ALLOCATE|[220]|Bytes:21
+14:47:27.0 (68389374)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68399755)|STATEMENT_EXECUTE|[221]
+14:47:27.0 (68409959)|HEAP_ALLOCATE|[221]|Bytes:26
+14:47:27.0 (68439181)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68449002)|STATEMENT_EXECUTE|[222]
+14:47:27.0 (68459402)|HEAP_ALLOCATE|[222]|Bytes:24
+14:47:27.0 (68486830)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68516445)|STATEMENT_EXECUTE|[224]
+14:47:27.0 (68519165)|STATEMENT_EXECUTE|[226]
+14:47:27.0 (68530083)|HEAP_ALLOCATE|[226]|Bytes:15
+14:47:27.0 (68538577)|HEAP_ALLOCATE|[226]|Bytes:9
+14:47:27.0 (68569114)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68581020)|STATEMENT_EXECUTE|[227]
+14:47:27.0 (68591836)|HEAP_ALLOCATE|[227]|Bytes:24
+14:47:27.0 (68622654)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:47:27.0 (68637111)|STATEMENT_EXECUTE|[246]
+14:47:27.0 (68651252)|STATEMENT_EXECUTE|[265]
+14:47:27.0 (68653623)|STATEMENT_EXECUTE|[267]
+14:47:27.0 (68668663)|METHOD_ENTRY|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:47:27.0 (68689671)|VARIABLE_SCOPE_BEGIN|[461]|this|Eway2Payment|true|false
+14:47:27.0 (68811178)|VARIABLE_ASSIGNMENT|[461]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"12","cardExpiryYear":"18","cardName":"RA SANCHEZ","command":"ProcessPayment","currencyCode":"AUD","customerCity":"SYLVANIA SOUTHGATE","customerCompanyName":"Natural Health Pract (3 more) ...","customerCountrycode":"au","customerEmail":"rodd.sanchez@gmail.c (2 more) ...","customerFirstName":"RODD","customerLastName":"SANCHEZ","customerPostcode":"2224","customerState":"NSW","customerStreet":"PO BOX 595","customerToken":"509973231677","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972114","orderInfo":"000972114","password":"KY0jzPzu","requestParams":"0x288c40e7","response":"0x5501aed4","transactionNo":""}|0x273e4b82
+14:47:27.0 (68834345)|HEAP_ALLOCATE|[463]|Bytes:5
+14:47:27.0 (68840135)|STATEMENT_EXECUTE|[461]
+14:47:27.0 (68841975)|STATEMENT_EXECUTE|[463]
+14:47:27.0 (68868842)|METHOD_ENTRY|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:47:27.0 (68887471)|VARIABLE_SCOPE_BEGIN|[118]|params|Map<String,String>|true|false
+14:47:27.0 (68907655)|VARIABLE_ASSIGNMENT|[118]|params|"Map of size 8 too large to display"|0x288c40e7
+14:47:27.0 (68921666)|HEAP_ALLOCATE|[120]|Bytes:5
+14:47:27.0 (68927870)|STATEMENT_EXECUTE|[118]
+14:47:27.0 (68930004)|STATEMENT_EXECUTE|[120]
+14:47:27.0 (68939453)|VARIABLE_SCOPE_BEGIN|[120]|queryString|String|false|false
+14:47:27.0 (68952341)|VARIABLE_ASSIGNMENT|[120]|queryString|""
+14:47:27.0 (68971513)|HEAP_ALLOCATE|[121]|Bytes:4
+14:47:27.0 (69077496)|HEAP_ALLOCATE|[121]|Bytes:191
+14:47:27.0 (69106871)|HEAP_ALLOCATE|[121]|Bytes:32
+14:47:27.0 (69143391)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (69160515)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (69171719)|VARIABLE_ASSIGNMENT|[121]|key|"Method"
+14:47:27.0 (69176861)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (69208068)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (69226636)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (69252546)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (69266308)|VARIABLE_ASSIGNMENT|[126]|value|"ProcessPayment"
+14:47:27.0 (69271234)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (69275493)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (69280726)|HEAP_ALLOCATE|[132]|Bytes:1
+14:47:27.0 (69285923)|HEAP_ALLOCATE|[132]|Bytes:5
+14:47:27.0 (69346417)|HEAP_ALLOCATE|[132]|Bytes:15
+14:47:27.0 (69363428)|SYSTEM_METHOD_ENTRY|[1]|EncodingUtil.EncodingUtil()
+14:47:27.0 (69370142)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (69379758)|SYSTEM_METHOD_EXIT|[1]|EncodingUtil
+14:47:27.0 (69394554)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69462513)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69472332)|HEAP_ALLOCATE|[132]|Bytes:21
+14:47:27.0 (69479112)|HEAP_ALLOCATE|[132]|Bytes:21
+14:47:27.0 (69489436)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (1 more) ..."
+14:47:27.0 (69502948)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (69514763)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (69524529)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.TotalAmount"
+14:47:27.0 (69529304)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (69545839)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (69547530)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (69554375)|HEAP_ALLOCATE|[123]|Bytes:1
+14:47:27.0 (69560290)|HEAP_ALLOCATE|[123]|Bytes:22
+14:47:27.0 (69569582)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (2 more) ..."
+14:47:27.0 (69576477)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (69593579)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (69608563)|VARIABLE_ASSIGNMENT|[126]|value|"8900"
+14:47:27.0 (69615944)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (69622325)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (69630938)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69654701)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69660403)|HEAP_ALLOCATE|[132]|Bytes:24
+14:47:27.0 (69665117)|HEAP_ALLOCATE|[132]|Bytes:46
+14:47:27.0 (69673573)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (26 more) ..."
+14:47:27.0 (69684857)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (69694123)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (69703059)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.CurrencyCode"
+14:47:27.0 (69708677)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (69724832)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (69726445)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (69733534)|HEAP_ALLOCATE|[123]|Bytes:47
+14:47:27.0 (69742111)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (27 more) ..."
+14:47:27.0 (69746456)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (69757089)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (69767262)|VARIABLE_ASSIGNMENT|[126]|value|"AUD"
+14:47:27.0 (69774081)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (69784563)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (69794880)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69826581)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69834930)|HEAP_ALLOCATE|[132]|Bytes:24
+14:47:27.0 (69841225)|HEAP_ALLOCATE|[132]|Bytes:71
+14:47:27.0 (69850118)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (51 more) ..."
+14:47:27.0 (69861330)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (69870465)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (69880232)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceNumbe (1 more) ..."
+14:47:27.0 (69884958)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (69898944)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (69900550)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (69907682)|HEAP_ALLOCATE|[123]|Bytes:72
+14:47:27.0 (69919890)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (52 more) ..."
+14:47:27.0 (69924047)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (69934909)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (69943681)|VARIABLE_ASSIGNMENT|[126]|value|"000972114"
+14:47:27.0 (69947927)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (69951316)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (69956735)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69977226)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (69982524)|HEAP_ALLOCATE|[132]|Bytes:31
+14:47:27.0 (69987357)|HEAP_ALLOCATE|[132]|Bytes:103
+14:47:27.0 (69995604)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (83 more) ..."
+14:47:27.0 (70005690)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (70014633)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (70024000)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceDescr (6 more) ..."
+14:47:27.0 (70028145)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (70040541)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (70042161)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (70048266)|HEAP_ALLOCATE|[123]|Bytes:104
+14:47:27.0 (70056332)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (84 more) ..."
+14:47:27.0 (70060153)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (70069801)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (70078154)|VARIABLE_ASSIGNMENT|[126]|value|"000972114"
+14:47:27.0 (70082588)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (70086052)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (70091157)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70122374)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70127916)|HEAP_ALLOCATE|[132]|Bytes:36
+14:47:27.0 (70133063)|HEAP_ALLOCATE|[132]|Bytes:140
+14:47:27.0 (70141674)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (120 more) ..."
+14:47:27.0 (70151365)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (70159806)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (70170620)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceRefer (4 more) ..."
+14:47:27.0 (70176675)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (70190501)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (70192066)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (70201648)|HEAP_ALLOCATE|[123]|Bytes:141
+14:47:27.0 (70210014)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (121 more) ..."
+14:47:27.0 (70214309)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (70224444)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (70233058)|VARIABLE_ASSIGNMENT|[126]|value|"000972114"
+14:47:27.0 (70238471)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (70242203)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (70248038)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70268735)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70273753)|HEAP_ALLOCATE|[132]|Bytes:34
+14:47:27.0 (70278129)|HEAP_ALLOCATE|[132]|Bytes:175
+14:47:27.0 (70286084)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (155 more) ..."
+14:47:27.0 (70295784)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (70303750)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (70312643)|VARIABLE_ASSIGNMENT|[121]|key|"TransactionType"
+14:47:27.0 (70317001)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (70329026)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (70330583)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (70337054)|HEAP_ALLOCATE|[123]|Bytes:176
+14:47:27.0 (70344812)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (156 more) ..."
+14:47:27.0 (70348979)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (70358510)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (70366590)|VARIABLE_ASSIGNMENT|[126]|value|"Recurring"
+14:47:27.0 (70370890)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (70374289)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (70379608)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70398937)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70403864)|HEAP_ALLOCATE|[132]|Bytes:25
+14:47:27.0 (70408744)|HEAP_ALLOCATE|[132]|Bytes:201
+14:47:27.0 (70415686)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (181 more) ..."
+14:47:27.0 (70425656)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (70433534)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:47:27.0 (70443738)|VARIABLE_ASSIGNMENT|[121]|key|"Customer.TokenCustom (4 more) ..."
+14:47:27.0 (70447926)|STATEMENT_EXECUTE|[121]
+14:47:27.0 (70459437)|STATEMENT_EXECUTE|[122]
+14:47:27.0 (70461010)|STATEMENT_EXECUTE|[123]
+14:47:27.0 (70467124)|HEAP_ALLOCATE|[123]|Bytes:202
+14:47:27.0 (70475053)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (182 more) ..."
+14:47:27.0 (70478834)|STATEMENT_EXECUTE|[126]
+14:47:27.0 (70488420)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:47:27.0 (70497237)|VARIABLE_ASSIGNMENT|[126]|value|"509973231677"
+14:47:27.0 (70501502)|STATEMENT_EXECUTE|[127]
+14:47:27.0 (70504743)|STATEMENT_EXECUTE|[132]
+14:47:27.0 (70509859)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70539674)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:47:27.0 (70545357)|HEAP_ALLOCATE|[132]|Bytes:37
+14:47:27.0 (70550165)|HEAP_ALLOCATE|[132]|Bytes:239
+14:47:27.0 (70557830)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (219 more) ..."
+14:47:27.0 (70570192)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (70579352)|VARIABLE_ASSIGNMENT|[121]|key|null
+14:47:27.0 (70585311)|STATEMENT_EXECUTE|[135]
+14:47:27.0 (70595371)|METHOD_EXIT|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:47:27.0 (70613011)|VARIABLE_ASSIGNMENT|[463]|this.requestBody|"Method=ProcessPaymen (219 more) ..."|0x273e4b82
+14:47:27.0 (70625088)|METHOD_ENTRY|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:47:27.0 (70644592)|HEAP_ALLOCATE|[61]|Bytes:5
+14:47:27.0 (70649326)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (70651217)|STATEMENT_EXECUTE|[61]
+14:47:27.0 (70657142)|HEAP_ALLOCATE|[61]|Bytes:46
+14:47:27.0 (70671879)|HEAP_ALLOCATE|[61]|Bytes:4
+14:47:27.0 (75058867)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:47:27.0 (77596573)|SOQL_EXECUTE_END|[61]|Rows:1
+14:47:27.0 (77628653)|HEAP_ALLOCATE|[61]|Bytes:8
+14:47:27.0 (77648922)|HEAP_ALLOCATE|[61]|Bytes:50
+14:47:27.0 (77742386)|HEAP_ALLOCATE|[61]|Bytes:8
+14:47:27.0 (77760456)|HEAP_ALLOCATE|[61]|Bytes:38
+14:47:27.0 (77831701)|HEAP_ALLOCATE|[61]|Bytes:12
+14:47:27.0 (77887713)|METHOD_EXIT|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:47:27.0 (77902912)|STATEMENT_EXECUTE|[465]
+14:47:27.0 (77912179)|STATEMENT_EXECUTE|[470]
+14:47:27.0 (77952546)|VARIABLE_SCOPE_BEGIN|[470]|req|System.HttpRequest|true|false
+14:47:27.0 (78031909)|VARIABLE_ASSIGNMENT|[470]|req|"System.HttpRequest[Endpoint=null, Method=null]"|0x56e541b
+14:47:27.0 (78040744)|STATEMENT_EXECUTE|[471]
+14:47:27.0 (78112801)|STATEMENT_EXECUTE|[472]
+14:47:27.0 (78119979)|HEAP_ALLOCATE|[472]|Bytes:4
+14:47:27.0 (78142692)|STATEMENT_EXECUTE|[473]
+14:47:27.0 (78148061)|HEAP_ALLOCATE|[473]|Bytes:13
+14:47:27.0 (78153508)|HEAP_ALLOCATE|[473]|Bytes:6
+14:47:27.0 (78159441)|HEAP_ALLOCATE|[473]|Bytes:1
+14:47:27.0 (78174555)|HEAP_ALLOCATE|[473]|Bytes:79
+14:47:27.0 (78249269)|HEAP_ALLOCATE|[473]|Bytes:4
+14:47:27.0 (78291665)|METHOD_ENTRY|[473]||System.EncodingUtil.base64Encode(Blob)
+14:47:27.0 (78351511)|METHOD_EXIT|[473]||System.EncodingUtil.base64Encode(Blob)
+14:47:27.0 (78360000)|HEAP_ALLOCATE|[473]|Bytes:114
+14:47:27.0 (78388278)|STATEMENT_EXECUTE|[474]
+14:47:27.0 (78396168)|HEAP_ALLOCATE|[474]|Bytes:17
+14:47:27.0 (78424223)|STATEMENT_EXECUTE|[475]
+14:47:27.0 (78447412)|STATEMENT_EXECUTE|[476]
+14:47:27.0 (78470413)|STATEMENT_EXECUTE|[479]
+14:47:27.0 (78495979)|VARIABLE_SCOPE_BEGIN|[479]|h|System.Http|true|false
+14:47:27.0 (78541976)|VARIABLE_ASSIGNMENT|[479]|h|"System.Http[]"|0x1b69b2c2
+14:47:27.0 (78549759)|STATEMENT_EXECUTE|[480]
+14:47:27.0 (78599903)|CALLOUT_REQUEST|[480]|System.HttpRequest[Endpoint=https://api.ewaypayments.com/Transaction, Method=POST]
+14:47:27.0 (846060030)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1261
+14:47:27.0 (846177210)|CALLOUT_RESPONSE|[480]|System.HttpResponse[Status=OK, StatusCode=200]
+14:47:27.0 (846199913)|HEAP_ALLOCATE|[480]|Bytes:798
+14:47:27.0 (846240021)|VARIABLE_SCOPE_BEGIN|[480]|res|System.HttpResponse|true|false
+14:47:27.0 (846345103)|VARIABLE_ASSIGNMENT|[480]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x21a4a198
+14:47:27.0 (846359982)|STATEMENT_EXECUTE|[482]
+14:47:27.0 (846381587)|HEAP_ALLOCATE|[482]|Bytes:16
+14:47:27.0 (846492164)|HEAP_ALLOCATE|[482]|Bytes:792
+14:47:27.0 (846533485)|METHOD_ENTRY|[482]||System.EncodingUtil.urlDecode(String, String)
+14:47:27.0 (846651631)|METHOD_EXIT|[482]||System.EncodingUtil.urlDecode(String, String)
+14:47:27.0 (846689900)|HEAP_ALLOCATE|[482]|Bytes:808
+14:47:27.0 (846711422)|USER_DEBUG|[482]|DEBUG|Eway2 Response: {"AuthorisationCode":null,"ResponseCode":null,"ResponseMessage":null,"TransactionID":null,"TransactionStatus":null,"TransactionType":"Recurring","BeagleScore":null,"Verification":null,"Customer":{"CardDetails":{"Number":null,"Name":null,"ExpiryMonth":null,"ExpiryYear":null,"StartMonth":null,"StartYear":null,"IssueNumber":null},"TokenCustomerID":509973231677,"Reference":null,"Title":null,"FirstName":null,"LastName":null,"CompanyName":null,"JobDescription":null,"Street1":null,"Street2":null,"City":null,"State":null,"PostalCode":null,"Country":null,"Email":null,"Phone":null,"Mobile":null,"Comments":null,"Fax":null,"Url":null},"Payment":{"TotalAmount":8900,"InvoiceNumber":"000972114","InvoiceDescription":"000972114","InvoiceReference":"000972114","CurrencyCode":"AUD"},"Errors":"V6102"}
+14:47:27.0 (846735888)|STATEMENT_EXECUTE|[484]
+14:47:27.0 (846775092)|METHOD_ENTRY|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:47:27.0 (846815041)|VARIABLE_SCOPE_BEGIN|[10]|this|Eway2Response|true|false
+14:47:27.0 (846875120)|VARIABLE_ASSIGNMENT|[10]|this|{"params":"0x3302d006"}|0x5501aed4
+14:47:27.0 (846886531)|VARIABLE_SCOPE_BEGIN|[10]|res|System.HttpResponse|true|false
+14:47:27.0 (846947973)|VARIABLE_ASSIGNMENT|[10]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x21a4a198
+14:47:27.0 (846969084)|HEAP_ALLOCATE|[12]|Bytes:5
+14:47:27.0 (846977146)|STATEMENT_EXECUTE|[10]
+14:47:27.0 (847014297)|STATEMENT_EXECUTE|[12]
+14:47:27.0 (847024843)|STATEMENT_EXECUTE|[16]
+14:47:27.0 (847084882)|HEAP_ALLOCATE|[16]|Bytes:792
+14:47:27.0 (847115919)|VARIABLE_ASSIGNMENT|[16]|this.responseBody|"{\"AuthorisationCode\" (772 more) ..."|0x5501aed4
+14:47:27.0 (847125798)|STATEMENT_EXECUTE|[17]
+14:47:27.0 (847220301)|HEAP_ALLOCATE|[17]|Bytes:24
+14:47:27.0 (847242141)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+14:47:27.0 (847248271)|STATEMENT_EXECUTE|[1]
+14:47:27.0 (847258465)|SYSTEM_METHOD_EXIT|[1]|JSON
+14:47:27.0 (847273301)|METHOD_ENTRY|[17]||System.JSON.deserializeUntyped(String)
+14:47:27.0 (848648933)|HEAP_ALLOCATE|[74]|Bytes:4
+14:47:27.0 (848689830)|HEAP_ALLOCATE|[11]|Bytes:12
+14:47:27.0 (851914514)|METHOD_EXIT|[17]||System.JSON.deserializeUntyped(String)
+14:47:27.0 (852009598)|VARIABLE_ASSIGNMENT|[17]|this.params|"Map of size 11 too large to display"|0x5501aed4
+14:47:27.0 (852027799)|STATEMENT_EXECUTE|[19]
+14:47:27.0 (852048949)|HEAP_ALLOCATE|[19]|Bytes:8
+14:47:27.0 (852065540)|HEAP_ALLOCATE|[19]|Bytes:6
+14:47:27.0 (852142392)|HEAP_ALLOCATE|[19]|Bytes:5
+14:47:27.0 (852165758)|HEAP_ALLOCATE|[19]|Bytes:13
+14:47:27.0 (852190252)|USER_DEBUG|[19]|DEBUG|Errors: V6102
+14:47:27.0 (852219900)|METHOD_EXIT|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:47:27.0 (852230755)|STATEMENT_EXECUTE|[486]
+14:47:27.0 (852242252)|HEAP_ALLOCATE|[486]|Bytes:21
+14:47:27.0 (852272701)|METHOD_ENTRY|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (852302201)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:47:27.0 (852366611)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (852392373)|HEAP_ALLOCATE|[60]|Bytes:5
+14:47:27.0 (852401123)|STATEMENT_EXECUTE|[59]
+14:47:27.0 (852403623)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (852416819)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:47:27.0 (852436048)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:47:27.0 (852459113)|STATEMENT_EXECUTE|[65]
+14:47:27.0 (852461962)|STATEMENT_EXECUTE|[67]
+14:47:27.0 (852480358)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (852507234)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:47:27.0 (852546794)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (852572591)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (852581017)|STATEMENT_EXECUTE|[43]
+14:47:27.0 (852583558)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (852635425)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:47:27.0 (852654967)|VARIABLE_ASSIGNMENT|[45]|errorCode|"V6102"
+14:47:27.0 (852665086)|STATEMENT_EXECUTE|[48]
+14:47:27.0 (852673561)|STATEMENT_EXECUTE|[52]
+14:47:27.0 (852676327)|STATEMENT_EXECUTE|[54]
+14:47:27.0 (852684062)|HEAP_ALLOCATE|[54]|Bytes:1
+14:47:27.0 (852759533)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (852771099)|HEAP_ALLOCATE|[54]|Bytes:8
+14:47:27.0 (852807576)|VARIABLE_ASSIGNMENT|[54]|errorCode|"V6102"
+14:47:27.0 (852816186)|STATEMENT_EXECUTE|[56]
+14:47:27.0 (852831603)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (852844110)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:47:27.0 (852861926)|VARIABLE_ASSIGNMENT|[67]|errorCode|"V6102"
+14:47:27.0 (852870020)|STATEMENT_EXECUTE|[69]
+14:47:27.0 (852872349)|STATEMENT_EXECUTE|[70]
+14:47:27.0 (852892505)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:47:27.0 (852917073)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:47:27.0 (852958072)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (852971592)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:47:27.0 (853004898)|VARIABLE_ASSIGNMENT|[78]|errorCode|"V6102"
+14:47:27.0 (853023182)|HEAP_ALLOCATE|[80]|Bytes:5
+14:47:27.0 (853031682)|STATEMENT_EXECUTE|[78]
+14:47:27.0 (853034697)|STATEMENT_EXECUTE|[80]
+14:47:27.0 (853060856)|HEAP_ALLOCATE|[80]|Bytes:4
+14:47:27.0 (853077167)|HEAP_ALLOCATE|[81]|Bytes:5
+14:47:27.0 (853084723)|HEAP_ALLOCATE|[81]|Bytes:20
+14:47:27.0 (853139767)|HEAP_ALLOCATE|[82]|Bytes:5
+14:47:27.0 (853148185)|HEAP_ALLOCATE|[82]|Bytes:26
+14:47:27.0 (853166798)|HEAP_ALLOCATE|[83]|Bytes:5
+14:47:27.0 (853174910)|HEAP_ALLOCATE|[83]|Bytes:27
+14:47:27.0 (853189358)|HEAP_ALLOCATE|[84]|Bytes:5
+14:47:27.0 (853196603)|HEAP_ALLOCATE|[84]|Bytes:13
+14:47:27.0 (853210838)|HEAP_ALLOCATE|[85]|Bytes:5
+14:47:27.0 (853217556)|HEAP_ALLOCATE|[85]|Bytes:24
+14:47:27.0 (853231668)|HEAP_ALLOCATE|[86]|Bytes:5
+14:47:27.0 (853252421)|HEAP_ALLOCATE|[86]|Bytes:15
+14:47:27.0 (853268951)|HEAP_ALLOCATE|[87]|Bytes:5
+14:47:27.0 (853276261)|HEAP_ALLOCATE|[87]|Bytes:24
+14:47:27.0 (853290798)|HEAP_ALLOCATE|[88]|Bytes:5
+14:47:27.0 (853297344)|HEAP_ALLOCATE|[88]|Bytes:11
+14:47:27.0 (853311170)|HEAP_ALLOCATE|[89]|Bytes:5
+14:47:27.0 (853318257)|HEAP_ALLOCATE|[89]|Bytes:12
+14:47:27.0 (853332889)|HEAP_ALLOCATE|[90]|Bytes:5
+14:47:27.0 (853340210)|HEAP_ALLOCATE|[90]|Bytes:13
+14:47:27.0 (853355030)|HEAP_ALLOCATE|[91]|Bytes:5
+14:47:27.0 (853362575)|HEAP_ALLOCATE|[91]|Bytes:5
+14:47:27.0 (853375590)|HEAP_ALLOCATE|[92]|Bytes:5
+14:47:27.0 (853381937)|HEAP_ALLOCATE|[92]|Bytes:21
+14:47:27.0 (853396904)|HEAP_ALLOCATE|[93]|Bytes:5
+14:47:27.0 (853404230)|HEAP_ALLOCATE|[93]|Bytes:19
+14:47:27.0 (853419984)|HEAP_ALLOCATE|[94]|Bytes:5
+14:47:27.0 (853427781)|HEAP_ALLOCATE|[94]|Bytes:19
+14:47:27.0 (853457150)|HEAP_ALLOCATE|[95]|Bytes:5
+14:47:27.0 (853464952)|HEAP_ALLOCATE|[95]|Bytes:14
+14:47:27.0 (853480944)|HEAP_ALLOCATE|[96]|Bytes:5
+14:47:27.0 (853488144)|HEAP_ALLOCATE|[96]|Bytes:19
+14:47:27.0 (853507411)|HEAP_ALLOCATE|[97]|Bytes:5
+14:47:27.0 (853514825)|HEAP_ALLOCATE|[97]|Bytes:9
+14:47:27.0 (853529034)|HEAP_ALLOCATE|[98]|Bytes:5
+14:47:27.0 (853535736)|HEAP_ALLOCATE|[98]|Bytes:15
+14:47:27.0 (853550217)|HEAP_ALLOCATE|[99]|Bytes:5
+14:47:27.0 (853556374)|HEAP_ALLOCATE|[99]|Bytes:25
+14:47:27.0 (853570779)|HEAP_ALLOCATE|[100]|Bytes:5
+14:47:27.0 (853579244)|HEAP_ALLOCATE|[100]|Bytes:15
+14:47:27.0 (853605351)|HEAP_ALLOCATE|[101]|Bytes:5
+14:47:27.0 (853612830)|HEAP_ALLOCATE|[101]|Bytes:21
+14:47:27.0 (853626143)|HEAP_ALLOCATE|[102]|Bytes:5
+14:47:27.0 (853632692)|HEAP_ALLOCATE|[102]|Bytes:28
+14:47:27.0 (853646124)|HEAP_ALLOCATE|[103]|Bytes:5
+14:47:27.0 (853652750)|HEAP_ALLOCATE|[103]|Bytes:31
+14:47:27.0 (853666451)|HEAP_ALLOCATE|[104]|Bytes:5
+14:47:27.0 (853673220)|HEAP_ALLOCATE|[104]|Bytes:12
+14:47:27.0 (853686717)|HEAP_ALLOCATE|[105]|Bytes:5
+14:47:27.0 (853692958)|HEAP_ALLOCATE|[105]|Bytes:28
+14:47:27.0 (853706127)|HEAP_ALLOCATE|[106]|Bytes:5
+14:47:27.0 (853711981)|HEAP_ALLOCATE|[106]|Bytes:21
+14:47:27.0 (853724183)|HEAP_ALLOCATE|[107]|Bytes:5
+14:47:27.0 (853730283)|HEAP_ALLOCATE|[107]|Bytes:28
+14:47:27.0 (853742437)|HEAP_ALLOCATE|[108]|Bytes:5
+14:47:27.0 (853753130)|HEAP_ALLOCATE|[108]|Bytes:44
+14:47:27.0 (853767091)|HEAP_ALLOCATE|[109]|Bytes:5
+14:47:27.0 (853772934)|HEAP_ALLOCATE|[109]|Bytes:28
+14:47:27.0 (853785611)|HEAP_ALLOCATE|[110]|Bytes:5
+14:47:27.0 (853792293)|HEAP_ALLOCATE|[110]|Bytes:49
+14:47:27.0 (853804529)|HEAP_ALLOCATE|[111]|Bytes:5
+14:47:27.0 (853811207)|HEAP_ALLOCATE|[111]|Bytes:27
+14:47:27.0 (853824038)|HEAP_ALLOCATE|[112]|Bytes:5
+14:47:27.0 (853830486)|HEAP_ALLOCATE|[112]|Bytes:17
+14:47:27.0 (853842427)|HEAP_ALLOCATE|[113]|Bytes:5
+14:47:27.0 (853849126)|HEAP_ALLOCATE|[113]|Bytes:22
+14:47:27.0 (853861846)|HEAP_ALLOCATE|[114]|Bytes:5
+14:47:27.0 (853868189)|HEAP_ALLOCATE|[114]|Bytes:9
+14:47:27.0 (853881782)|HEAP_ALLOCATE|[115]|Bytes:5
+14:47:27.0 (853888036)|HEAP_ALLOCATE|[115]|Bytes:20
+14:47:27.0 (853901252)|HEAP_ALLOCATE|[116]|Bytes:5
+14:47:27.0 (853907466)|HEAP_ALLOCATE|[116]|Bytes:11
+14:47:27.0 (853920783)|HEAP_ALLOCATE|[117]|Bytes:5
+14:47:27.0 (853927693)|HEAP_ALLOCATE|[117]|Bytes:21
+14:47:27.0 (853940286)|HEAP_ALLOCATE|[118]|Bytes:5
+14:47:27.0 (853946290)|HEAP_ALLOCATE|[118]|Bytes:31
+14:47:27.0 (853960330)|HEAP_ALLOCATE|[119]|Bytes:5
+14:47:27.0 (853967283)|HEAP_ALLOCATE|[119]|Bytes:18
+14:47:27.0 (853981713)|HEAP_ALLOCATE|[120]|Bytes:5
+14:47:27.0 (853988996)|HEAP_ALLOCATE|[120]|Bytes:17
+14:47:27.0 (854003178)|HEAP_ALLOCATE|[121]|Bytes:5
+14:47:27.0 (854010879)|HEAP_ALLOCATE|[121]|Bytes:18
+14:47:27.0 (854025242)|HEAP_ALLOCATE|[122]|Bytes:5
+14:47:27.0 (854031472)|HEAP_ALLOCATE|[122]|Bytes:12
+14:47:27.0 (854044620)|HEAP_ALLOCATE|[123]|Bytes:5
+14:47:27.0 (854051467)|HEAP_ALLOCATE|[123]|Bytes:13
+14:47:27.0 (854065286)|HEAP_ALLOCATE|[124]|Bytes:5
+14:47:27.0 (854072159)|HEAP_ALLOCATE|[124]|Bytes:14
+14:47:27.0 (854085762)|HEAP_ALLOCATE|[125]|Bytes:5
+14:47:27.0 (854092093)|HEAP_ALLOCATE|[125]|Bytes:36
+14:47:27.0 (854105614)|HEAP_ALLOCATE|[126]|Bytes:5
+14:47:27.0 (854111468)|HEAP_ALLOCATE|[126]|Bytes:34
+14:47:27.0 (854124081)|HEAP_ALLOCATE|[127]|Bytes:5
+14:47:27.0 (854130279)|HEAP_ALLOCATE|[127]|Bytes:15
+14:47:27.0 (854143144)|HEAP_ALLOCATE|[128]|Bytes:5
+14:47:27.0 (854148957)|HEAP_ALLOCATE|[128]|Bytes:25
+14:47:27.0 (854169296)|HEAP_ALLOCATE|[129]|Bytes:5
+14:47:27.0 (854176941)|HEAP_ALLOCATE|[129]|Bytes:24
+14:47:27.0 (854193528)|HEAP_ALLOCATE|[130]|Bytes:5
+14:47:27.0 (854200764)|HEAP_ALLOCATE|[130]|Bytes:15
+14:47:27.0 (854214431)|HEAP_ALLOCATE|[131]|Bytes:5
+14:47:27.0 (854220036)|HEAP_ALLOCATE|[131]|Bytes:18
+14:47:27.0 (854232866)|HEAP_ALLOCATE|[132]|Bytes:5
+14:47:27.0 (854240089)|HEAP_ALLOCATE|[132]|Bytes:25
+14:47:27.0 (854253235)|HEAP_ALLOCATE|[133]|Bytes:5
+14:47:27.0 (854259708)|HEAP_ALLOCATE|[133]|Bytes:35
+14:47:27.0 (854272840)|HEAP_ALLOCATE|[134]|Bytes:5
+14:47:27.0 (854277728)|HEAP_ALLOCATE|[134]|Bytes:12
+14:47:27.0 (854288704)|HEAP_ALLOCATE|[135]|Bytes:5
+14:47:27.0 (854294457)|HEAP_ALLOCATE|[135]|Bytes:18
+14:47:27.0 (854305357)|HEAP_ALLOCATE|[136]|Bytes:5
+14:47:27.0 (854310755)|HEAP_ALLOCATE|[136]|Bytes:20
+14:47:27.0 (854322177)|HEAP_ALLOCATE|[137]|Bytes:5
+14:47:27.0 (854327068)|HEAP_ALLOCATE|[137]|Bytes:19
+14:47:27.0 (854337945)|HEAP_ALLOCATE|[138]|Bytes:5
+14:47:27.0 (854343711)|HEAP_ALLOCATE|[138]|Bytes:23
+14:47:27.0 (854354951)|HEAP_ALLOCATE|[139]|Bytes:5
+14:47:27.0 (854360054)|HEAP_ALLOCATE|[139]|Bytes:27
+14:47:27.0 (854369802)|HEAP_ALLOCATE|[140]|Bytes:5
+14:47:27.0 (854375515)|HEAP_ALLOCATE|[140]|Bytes:37
+14:47:27.0 (854385660)|HEAP_ALLOCATE|[141]|Bytes:5
+14:47:27.0 (854391253)|HEAP_ALLOCATE|[141]|Bytes:21
+14:47:27.0 (854402507)|HEAP_ALLOCATE|[142]|Bytes:5
+14:47:27.0 (854407967)|HEAP_ALLOCATE|[142]|Bytes:13
+14:47:27.0 (854419439)|HEAP_ALLOCATE|[143]|Bytes:5
+14:47:27.0 (854425371)|HEAP_ALLOCATE|[143]|Bytes:12
+14:47:27.0 (854436621)|HEAP_ALLOCATE|[144]|Bytes:5
+14:47:27.0 (854443874)|HEAP_ALLOCATE|[144]|Bytes:16
+14:47:27.0 (854455583)|HEAP_ALLOCATE|[145]|Bytes:5
+14:47:27.0 (854460615)|HEAP_ALLOCATE|[145]|Bytes:31
+14:47:27.0 (854471308)|HEAP_ALLOCATE|[146]|Bytes:5
+14:47:27.0 (854476875)|HEAP_ALLOCATE|[146]|Bytes:33
+14:47:27.0 (854488304)|HEAP_ALLOCATE|[147]|Bytes:5
+14:47:27.0 (854493777)|HEAP_ALLOCATE|[147]|Bytes:21
+14:47:27.0 (854505358)|HEAP_ALLOCATE|[148]|Bytes:6
+14:47:27.0 (854510391)|HEAP_ALLOCATE|[148]|Bytes:16
+14:47:27.0 (854522066)|HEAP_ALLOCATE|[149]|Bytes:5
+14:47:27.0 (854529059)|HEAP_ALLOCATE|[149]|Bytes:19
+14:47:27.0 (854539802)|HEAP_ALLOCATE|[150]|Bytes:5
+14:47:27.0 (854545147)|HEAP_ALLOCATE|[150]|Bytes:23
+14:47:27.0 (854556589)|HEAP_ALLOCATE|[151]|Bytes:5
+14:47:27.0 (854561499)|HEAP_ALLOCATE|[151]|Bytes:21
+14:47:27.0 (854573066)|HEAP_ALLOCATE|[152]|Bytes:5
+14:47:27.0 (854579930)|HEAP_ALLOCATE|[152]|Bytes:23
+14:47:27.0 (854592412)|HEAP_ALLOCATE|[153]|Bytes:5
+14:47:27.0 (854598339)|HEAP_ALLOCATE|[153]|Bytes:16
+14:47:27.0 (854609240)|HEAP_ALLOCATE|[154]|Bytes:5
+14:47:27.0 (854614096)|HEAP_ALLOCATE|[154]|Bytes:31
+14:47:27.0 (854625174)|HEAP_ALLOCATE|[155]|Bytes:5
+14:47:27.0 (854630803)|HEAP_ALLOCATE|[155]|Bytes:16
+14:47:27.0 (854642996)|HEAP_ALLOCATE|[156]|Bytes:6
+14:47:27.0 (854647945)|HEAP_ALLOCATE|[156]|Bytes:12
+14:47:27.0 (854659426)|HEAP_ALLOCATE|[157]|Bytes:5
+14:47:27.0 (854664624)|HEAP_ALLOCATE|[157]|Bytes:28
+14:47:27.0 (854676708)|HEAP_ALLOCATE|[158]|Bytes:5
+14:47:27.0 (854682966)|HEAP_ALLOCATE|[158]|Bytes:17
+14:47:27.0 (854694910)|HEAP_ALLOCATE|[159]|Bytes:5
+14:47:27.0 (854700086)|HEAP_ALLOCATE|[159]|Bytes:25
+14:47:27.0 (854711463)|HEAP_ALLOCATE|[160]|Bytes:5
+14:47:27.0 (854733301)|HEAP_ALLOCATE|[160]|Bytes:29
+14:47:27.0 (854764178)|HEAP_ALLOCATE|[161]|Bytes:5
+14:47:27.0 (854769748)|HEAP_ALLOCATE|[161]|Bytes:29
+14:47:27.0 (854778956)|HEAP_ALLOCATE|[162]|Bytes:5
+14:47:27.0 (854783129)|HEAP_ALLOCATE|[162]|Bytes:23
+14:47:27.0 (854794143)|HEAP_ALLOCATE|[163]|Bytes:5
+14:47:27.0 (854798744)|HEAP_ALLOCATE|[163]|Bytes:26
+14:47:27.0 (854806809)|HEAP_ALLOCATE|[164]|Bytes:5
+14:47:27.0 (854811451)|HEAP_ALLOCATE|[164]|Bytes:46
+14:47:27.0 (854819111)|HEAP_ALLOCATE|[165]|Bytes:5
+14:47:27.0 (854823474)|HEAP_ALLOCATE|[165]|Bytes:41
+14:47:27.0 (854832080)|HEAP_ALLOCATE|[166]|Bytes:5
+14:47:27.0 (854836133)|HEAP_ALLOCATE|[166]|Bytes:47
+14:47:27.0 (854844339)|HEAP_ALLOCATE|[167]|Bytes:5
+14:47:27.0 (854847869)|HEAP_ALLOCATE|[167]|Bytes:44
+14:47:27.0 (854855864)|HEAP_ALLOCATE|[168]|Bytes:5
+14:47:27.0 (854859838)|HEAP_ALLOCATE|[168]|Bytes:41
+14:47:27.0 (854867456)|HEAP_ALLOCATE|[169]|Bytes:5
+14:47:27.0 (854871012)|HEAP_ALLOCATE|[169]|Bytes:43
+14:47:27.0 (854878376)|HEAP_ALLOCATE|[170]|Bytes:5
+14:47:27.0 (854882310)|HEAP_ALLOCATE|[170]|Bytes:30
+14:47:27.0 (854890713)|HEAP_ALLOCATE|[171]|Bytes:5
+14:47:27.0 (854894515)|HEAP_ALLOCATE|[171]|Bytes:29
+14:47:27.0 (854902146)|HEAP_ALLOCATE|[172]|Bytes:5
+14:47:27.0 (854905790)|HEAP_ALLOCATE|[172]|Bytes:20
+14:47:27.0 (854913361)|HEAP_ALLOCATE|[173]|Bytes:5
+14:47:27.0 (854917066)|HEAP_ALLOCATE|[173]|Bytes:61
+14:47:27.0 (854925268)|HEAP_ALLOCATE|[174]|Bytes:5
+14:47:27.0 (854929107)|HEAP_ALLOCATE|[174]|Bytes:59
+14:47:27.0 (854937096)|HEAP_ALLOCATE|[175]|Bytes:5
+14:47:27.0 (854941986)|HEAP_ALLOCATE|[175]|Bytes:57
+14:47:27.0 (854949635)|HEAP_ALLOCATE|[176]|Bytes:5
+14:47:27.0 (854953528)|HEAP_ALLOCATE|[176]|Bytes:59
+14:47:27.0 (854961650)|HEAP_ALLOCATE|[177]|Bytes:5
+14:47:27.0 (854965350)|HEAP_ALLOCATE|[177]|Bytes:41
+14:47:27.0 (854976533)|HEAP_ALLOCATE|[178]|Bytes:5
+14:47:27.0 (854980823)|HEAP_ALLOCATE|[178]|Bytes:43
+14:47:27.0 (854988203)|HEAP_ALLOCATE|[179]|Bytes:5
+14:47:27.0 (854991731)|HEAP_ALLOCATE|[179]|Bytes:44
+14:47:27.0 (854999804)|HEAP_ALLOCATE|[180]|Bytes:5
+14:47:27.0 (855004140)|HEAP_ALLOCATE|[180]|Bytes:42
+14:47:27.0 (855013407)|HEAP_ALLOCATE|[181]|Bytes:5
+14:47:27.0 (855017715)|HEAP_ALLOCATE|[181]|Bytes:26
+14:47:27.0 (855025485)|HEAP_ALLOCATE|[182]|Bytes:5
+14:47:27.0 (855029164)|HEAP_ALLOCATE|[182]|Bytes:22
+14:47:27.0 (855037048)|HEAP_ALLOCATE|[183]|Bytes:5
+14:47:27.0 (855041189)|HEAP_ALLOCATE|[183]|Bytes:23
+14:47:27.0 (855049738)|HEAP_ALLOCATE|[184]|Bytes:5
+14:47:27.0 (855053681)|HEAP_ALLOCATE|[184]|Bytes:33
+14:47:27.0 (855061486)|HEAP_ALLOCATE|[185]|Bytes:5
+14:47:27.0 (855065004)|HEAP_ALLOCATE|[185]|Bytes:16
+14:47:27.0 (855072652)|HEAP_ALLOCATE|[186]|Bytes:5
+14:47:27.0 (855076544)|HEAP_ALLOCATE|[186]|Bytes:34
+14:47:27.0 (855084527)|HEAP_ALLOCATE|[187]|Bytes:5
+14:47:27.0 (855088468)|HEAP_ALLOCATE|[187]|Bytes:52
+14:47:27.0 (855096115)|HEAP_ALLOCATE|[188]|Bytes:5
+14:47:27.0 (855104661)|HEAP_ALLOCATE|[189]|Bytes:5
+14:47:27.0 (855108685)|HEAP_ALLOCATE|[189]|Bytes:33
+14:47:27.0 (855116545)|HEAP_ALLOCATE|[190]|Bytes:5
+14:47:27.0 (855120499)|HEAP_ALLOCATE|[190]|Bytes:23
+14:47:27.0 (855128210)|HEAP_ALLOCATE|[191]|Bytes:5
+14:47:27.0 (855131895)|HEAP_ALLOCATE|[191]|Bytes:21
+14:47:27.0 (855139536)|HEAP_ALLOCATE|[192]|Bytes:5
+14:47:27.0 (855143515)|HEAP_ALLOCATE|[192]|Bytes:26
+14:47:27.0 (855151735)|HEAP_ALLOCATE|[193]|Bytes:5
+14:47:27.0 (855155613)|HEAP_ALLOCATE|[193]|Bytes:32
+14:47:27.0 (855163199)|HEAP_ALLOCATE|[194]|Bytes:5
+14:47:27.0 (855166613)|HEAP_ALLOCATE|[194]|Bytes:23
+14:47:27.0 (855174561)|HEAP_ALLOCATE|[195]|Bytes:5
+14:47:27.0 (855178677)|HEAP_ALLOCATE|[195]|Bytes:17
+14:47:27.0 (855186275)|HEAP_ALLOCATE|[196]|Bytes:5
+14:47:27.0 (855190020)|HEAP_ALLOCATE|[196]|Bytes:16
+14:47:27.0 (855197493)|HEAP_ALLOCATE|[197]|Bytes:5
+14:47:27.0 (855201196)|HEAP_ALLOCATE|[197]|Bytes:19
+14:47:27.0 (855211835)|HEAP_ALLOCATE|[198]|Bytes:5
+14:47:27.0 (855217795)|HEAP_ALLOCATE|[198]|Bytes:26
+14:47:27.0 (855231084)|HEAP_ALLOCATE|[199]|Bytes:5
+14:47:27.0 (855236633)|HEAP_ALLOCATE|[199]|Bytes:47
+14:47:27.0 (855250182)|HEAP_ALLOCATE|[200]|Bytes:5
+14:47:27.0 (855257065)|HEAP_ALLOCATE|[200]|Bytes:28
+14:47:27.0 (855270879)|HEAP_ALLOCATE|[201]|Bytes:5
+14:47:27.0 (855277697)|HEAP_ALLOCATE|[201]|Bytes:16
+14:47:27.0 (855291541)|HEAP_ALLOCATE|[202]|Bytes:5
+14:47:27.0 (855297950)|HEAP_ALLOCATE|[202]|Bytes:18
+14:47:27.0 (855311841)|HEAP_ALLOCATE|[203]|Bytes:5
+14:47:27.0 (855317831)|HEAP_ALLOCATE|[203]|Bytes:16
+14:47:27.0 (855331799)|HEAP_ALLOCATE|[204]|Bytes:5
+14:47:27.0 (855337799)|HEAP_ALLOCATE|[204]|Bytes:25
+14:47:27.0 (855350125)|HEAP_ALLOCATE|[205]|Bytes:5
+14:47:27.0 (855355221)|HEAP_ALLOCATE|[205]|Bytes:22
+14:47:27.0 (855367658)|HEAP_ALLOCATE|[206]|Bytes:5
+14:47:27.0 (855373799)|HEAP_ALLOCATE|[206]|Bytes:89
+14:47:27.0 (855386125)|HEAP_ALLOCATE|[207]|Bytes:5
+14:47:27.0 (855392183)|HEAP_ALLOCATE|[207]|Bytes:27
+14:47:27.0 (855404457)|HEAP_ALLOCATE|[208]|Bytes:5
+14:47:27.0 (855410247)|HEAP_ALLOCATE|[208]|Bytes:34
+14:47:27.0 (855423254)|HEAP_ALLOCATE|[209]|Bytes:5
+14:47:27.0 (855429050)|HEAP_ALLOCATE|[209]|Bytes:29
+14:47:27.0 (855441584)|HEAP_ALLOCATE|[210]|Bytes:5
+14:47:27.0 (855447247)|HEAP_ALLOCATE|[210]|Bytes:32
+14:47:27.0 (855464028)|HEAP_ALLOCATE|[211]|Bytes:5
+14:47:27.0 (855470860)|HEAP_ALLOCATE|[211]|Bytes:28
+14:47:27.0 (855484102)|HEAP_ALLOCATE|[212]|Bytes:5
+14:47:27.0 (855489823)|HEAP_ALLOCATE|[212]|Bytes:16
+14:47:27.0 (855501428)|HEAP_ALLOCATE|[213]|Bytes:5
+14:47:27.0 (855505430)|HEAP_ALLOCATE|[213]|Bytes:29
+14:47:27.0 (855513200)|HEAP_ALLOCATE|[214]|Bytes:5
+14:47:27.0 (855517739)|HEAP_ALLOCATE|[214]|Bytes:28
+14:47:27.0 (855538936)|HEAP_ALLOCATE|[215]|Bytes:5
+14:47:27.0 (855543270)|HEAP_ALLOCATE|[215]|Bytes:23
+14:47:27.0 (855550891)|HEAP_ALLOCATE|[216]|Bytes:5
+14:47:27.0 (855554274)|HEAP_ALLOCATE|[216]|Bytes:19
+14:47:27.0 (855562724)|HEAP_ALLOCATE|[217]|Bytes:5
+14:47:27.0 (855566979)|HEAP_ALLOCATE|[217]|Bytes:16
+14:47:27.0 (855574457)|HEAP_ALLOCATE|[218]|Bytes:5
+14:47:27.0 (855578253)|HEAP_ALLOCATE|[218]|Bytes:19
+14:47:27.0 (855585588)|HEAP_ALLOCATE|[219]|Bytes:5
+14:47:27.0 (855589511)|HEAP_ALLOCATE|[219]|Bytes:20
+14:47:27.0 (855597258)|HEAP_ALLOCATE|[220]|Bytes:5
+14:47:27.0 (855601351)|HEAP_ALLOCATE|[220]|Bytes:23
+14:47:27.0 (855609385)|HEAP_ALLOCATE|[221]|Bytes:5
+14:47:27.0 (855613262)|HEAP_ALLOCATE|[221]|Bytes:23
+14:47:27.0 (855621021)|HEAP_ALLOCATE|[222]|Bytes:5
+14:47:27.0 (855624524)|HEAP_ALLOCATE|[222]|Bytes:17
+14:47:27.0 (855632981)|HEAP_ALLOCATE|[223]|Bytes:5
+14:47:27.0 (855636634)|HEAP_ALLOCATE|[223]|Bytes:27
+14:47:27.0 (855643753)|HEAP_ALLOCATE|[224]|Bytes:5
+14:47:27.0 (855647263)|HEAP_ALLOCATE|[224]|Bytes:26
+14:47:27.0 (855655937)|HEAP_ALLOCATE|[225]|Bytes:5
+14:47:27.0 (855660155)|HEAP_ALLOCATE|[225]|Bytes:29
+14:47:27.0 (855667992)|HEAP_ALLOCATE|[226]|Bytes:5
+14:47:27.0 (855671308)|HEAP_ALLOCATE|[226]|Bytes:23
+14:47:27.0 (855679217)|HEAP_ALLOCATE|[227]|Bytes:5
+14:47:27.0 (855683107)|HEAP_ALLOCATE|[227]|Bytes:24
+14:47:27.0 (855690923)|HEAP_ALLOCATE|[228]|Bytes:5
+14:47:27.0 (855694382)|HEAP_ALLOCATE|[228]|Bytes:20
+14:47:27.0 (855701581)|HEAP_ALLOCATE|[229]|Bytes:5
+14:47:27.0 (855705321)|HEAP_ALLOCATE|[229]|Bytes:51
+14:47:27.0 (855724580)|HEAP_ALLOCATE|[230]|Bytes:6
+14:47:27.0 (855730892)|HEAP_ALLOCATE|[230]|Bytes:20
+14:47:27.0 (855741105)|HEAP_ALLOCATE|[231]|Bytes:5
+14:47:27.0 (855745677)|HEAP_ALLOCATE|[231]|Bytes:26
+14:47:27.0 (855753221)|HEAP_ALLOCATE|[232]|Bytes:5
+14:47:27.0 (855756852)|HEAP_ALLOCATE|[232]|Bytes:25
+14:47:27.0 (855764517)|HEAP_ALLOCATE|[233]|Bytes:5
+14:47:27.0 (855768181)|HEAP_ALLOCATE|[233]|Bytes:28
+14:47:27.0 (855776522)|HEAP_ALLOCATE|[234]|Bytes:5
+14:47:27.0 (855780479)|HEAP_ALLOCATE|[234]|Bytes:22
+14:47:27.0 (855789755)|HEAP_ALLOCATE|[235]|Bytes:5
+14:47:27.0 (855793629)|HEAP_ALLOCATE|[235]|Bytes:19
+14:47:27.0 (855801583)|HEAP_ALLOCATE|[236]|Bytes:5
+14:47:27.0 (855809855)|HEAP_ALLOCATE|[237]|Bytes:5
+14:47:27.0 (855813976)|HEAP_ALLOCATE|[237]|Bytes:26
+14:47:27.0 (855821742)|HEAP_ALLOCATE|[238]|Bytes:5
+14:47:27.0 (855825311)|HEAP_ALLOCATE|[238]|Bytes:28
+14:47:27.0 (855832673)|HEAP_ALLOCATE|[239]|Bytes:5
+14:47:27.0 (855837353)|HEAP_ALLOCATE|[239]|Bytes:31
+14:47:27.0 (855845122)|HEAP_ALLOCATE|[240]|Bytes:5
+14:47:27.0 (855848553)|HEAP_ALLOCATE|[240]|Bytes:24
+14:47:27.0 (855856518)|HEAP_ALLOCATE|[241]|Bytes:5
+14:47:27.0 (855860555)|HEAP_ALLOCATE|[241]|Bytes:24
+14:47:27.0 (855869845)|HEAP_ALLOCATE|[242]|Bytes:5
+14:47:27.0 (855873772)|HEAP_ALLOCATE|[242]|Bytes:21
+14:47:27.0 (855882123)|HEAP_ALLOCATE|[243]|Bytes:5
+14:47:27.0 (855885799)|HEAP_ALLOCATE|[243]|Bytes:22
+14:47:27.0 (855893407)|HEAP_ALLOCATE|[244]|Bytes:5
+14:47:27.0 (855896763)|HEAP_ALLOCATE|[244]|Bytes:27
+14:47:27.0 (855904828)|HEAP_ALLOCATE|[245]|Bytes:5
+14:47:27.0 (855908562)|HEAP_ALLOCATE|[245]|Bytes:22
+14:47:27.0 (855915913)|HEAP_ALLOCATE|[246]|Bytes:5
+14:47:27.0 (855919398)|HEAP_ALLOCATE|[246]|Bytes:22
+14:47:27.0 (855927284)|HEAP_ALLOCATE|[247]|Bytes:5
+14:47:27.0 (855930932)|HEAP_ALLOCATE|[247]|Bytes:23
+14:47:27.0 (855939116)|HEAP_ALLOCATE|[248]|Bytes:5
+14:47:27.0 (855942553)|HEAP_ALLOCATE|[248]|Bytes:25
+14:47:27.0 (855950320)|HEAP_ALLOCATE|[249]|Bytes:5
+14:47:27.0 (855953590)|HEAP_ALLOCATE|[249]|Bytes:20
+14:47:27.0 (855961432)|HEAP_ALLOCATE|[250]|Bytes:5
+14:47:27.0 (855965449)|HEAP_ALLOCATE|[250]|Bytes:20
+14:47:27.0 (855973508)|HEAP_ALLOCATE|[251]|Bytes:5
+14:47:27.0 (855977750)|HEAP_ALLOCATE|[251]|Bytes:33
+14:47:27.0 (855984889)|HEAP_ALLOCATE|[252]|Bytes:5
+14:47:27.0 (855988464)|HEAP_ALLOCATE|[252]|Bytes:32
+14:47:27.0 (855996012)|HEAP_ALLOCATE|[253]|Bytes:5
+14:47:27.0 (856000527)|HEAP_ALLOCATE|[253]|Bytes:31
+14:47:27.0 (856009031)|HEAP_ALLOCATE|[254]|Bytes:5
+14:47:27.0 (856012405)|HEAP_ALLOCATE|[254]|Bytes:31
+14:47:27.0 (856019962)|HEAP_ALLOCATE|[255]|Bytes:5
+14:47:27.0 (856023347)|HEAP_ALLOCATE|[255]|Bytes:28
+14:47:27.0 (856031467)|HEAP_ALLOCATE|[256]|Bytes:5
+14:47:27.0 (856035478)|HEAP_ALLOCATE|[256]|Bytes:29
+14:47:27.0 (856042899)|HEAP_ALLOCATE|[257]|Bytes:5
+14:47:27.0 (856046304)|HEAP_ALLOCATE|[257]|Bytes:34
+14:47:27.0 (856053755)|HEAP_ALLOCATE|[258]|Bytes:5
+14:47:27.0 (856057662)|HEAP_ALLOCATE|[258]|Bytes:29
+14:47:27.0 (856065713)|HEAP_ALLOCATE|[259]|Bytes:5
+14:47:27.0 (856069523)|HEAP_ALLOCATE|[259]|Bytes:29
+14:47:27.0 (856077226)|HEAP_ALLOCATE|[260]|Bytes:5
+14:47:27.0 (856080446)|HEAP_ALLOCATE|[260]|Bytes:31
+14:47:27.0 (856088697)|HEAP_ALLOCATE|[261]|Bytes:5
+14:47:27.0 (856092106)|HEAP_ALLOCATE|[261]|Bytes:38
+14:47:27.0 (856100285)|HEAP_ALLOCATE|[262]|Bytes:5
+14:47:27.0 (856104619)|HEAP_ALLOCATE|[262]|Bytes:27
+14:47:27.0 (856112291)|HEAP_ALLOCATE|[263]|Bytes:5
+14:47:27.0 (856115763)|HEAP_ALLOCATE|[263]|Bytes:28
+14:47:27.0 (856123063)|HEAP_ALLOCATE|[264]|Bytes:5
+14:47:27.0 (856127119)|HEAP_ALLOCATE|[264]|Bytes:35
+14:47:27.0 (856134849)|HEAP_ALLOCATE|[265]|Bytes:5
+14:47:27.0 (856138257)|HEAP_ALLOCATE|[265]|Bytes:17
+14:47:27.0 (856145734)|HEAP_ALLOCATE|[266]|Bytes:5
+14:47:27.0 (856149109)|HEAP_ALLOCATE|[266]|Bytes:25
+14:47:27.0 (856156942)|HEAP_ALLOCATE|[267]|Bytes:5
+14:47:27.0 (856160934)|HEAP_ALLOCATE|[267]|Bytes:24
+14:47:27.0 (856168346)|HEAP_ALLOCATE|[268]|Bytes:5
+14:47:27.0 (856172048)|HEAP_ALLOCATE|[268]|Bytes:24
+14:47:27.0 (856179339)|HEAP_ALLOCATE|[269]|Bytes:5
+14:47:27.0 (856183130)|HEAP_ALLOCATE|[269]|Bytes:23
+14:47:27.0 (856190812)|HEAP_ALLOCATE|[270]|Bytes:5
+14:47:27.0 (856194512)|HEAP_ALLOCATE|[270]|Bytes:25
+14:47:27.0 (856202168)|HEAP_ALLOCATE|[271]|Bytes:5
+14:47:27.0 (856205726)|HEAP_ALLOCATE|[271]|Bytes:16
+14:47:27.0 (856213101)|HEAP_ALLOCATE|[272]|Bytes:5
+14:47:27.0 (856216726)|HEAP_ALLOCATE|[272]|Bytes:18
+14:47:27.0 (856225113)|HEAP_ALLOCATE|[273]|Bytes:5
+14:47:27.0 (856229190)|HEAP_ALLOCATE|[273]|Bytes:27
+14:47:27.0 (856243801)|HEAP_ALLOCATE|[274]|Bytes:5
+14:47:27.0 (856247885)|HEAP_ALLOCATE|[274]|Bytes:17
+14:47:27.0 (856255690)|HEAP_ALLOCATE|[275]|Bytes:5
+14:47:27.0 (856259821)|HEAP_ALLOCATE|[275]|Bytes:18
+14:47:27.0 (856267286)|HEAP_ALLOCATE|[276]|Bytes:5
+14:47:27.0 (856270663)|HEAP_ALLOCATE|[276]|Bytes:50
+14:47:27.0 (856278215)|HEAP_ALLOCATE|[277]|Bytes:5
+14:47:27.0 (856281742)|HEAP_ALLOCATE|[277]|Bytes:55
+14:47:27.0 (856288831)|HEAP_ALLOCATE|[278]|Bytes:5
+14:47:27.0 (856292175)|HEAP_ALLOCATE|[278]|Bytes:30
+14:47:27.0 (856299559)|HEAP_ALLOCATE|[279]|Bytes:5
+14:47:27.0 (856302801)|HEAP_ALLOCATE|[279]|Bytes:24
+14:47:27.0 (856310252)|HEAP_ALLOCATE|[280]|Bytes:5
+14:47:27.0 (856314808)|HEAP_ALLOCATE|[280]|Bytes:43
+14:47:27.0 (856323623)|HEAP_ALLOCATE|[281]|Bytes:5
+14:47:27.0 (856327668)|HEAP_ALLOCATE|[281]|Bytes:43
+14:47:27.0 (856335199)|HEAP_ALLOCATE|[282]|Bytes:5
+14:47:27.0 (856339066)|HEAP_ALLOCATE|[282]|Bytes:49
+14:47:27.0 (856346320)|HEAP_ALLOCATE|[283]|Bytes:5
+14:47:27.0 (856349755)|HEAP_ALLOCATE|[283]|Bytes:49
+14:47:27.0 (856357899)|HEAP_ALLOCATE|[284]|Bytes:5
+14:47:27.0 (856361738)|HEAP_ALLOCATE|[284]|Bytes:47
+14:47:27.0 (856369435)|HEAP_ALLOCATE|[285]|Bytes:5
+14:47:27.0 (856372633)|HEAP_ALLOCATE|[285]|Bytes:46
+14:47:27.0 (856380596)|HEAP_ALLOCATE|[286]|Bytes:5
+14:47:27.0 (856384677)|HEAP_ALLOCATE|[286]|Bytes:44
+14:47:27.0 (856392347)|HEAP_ALLOCATE|[287]|Bytes:5
+14:47:27.0 (856395905)|HEAP_ALLOCATE|[287]|Bytes:53
+14:47:27.0 (856403269)|HEAP_ALLOCATE|[288]|Bytes:5
+14:47:27.0 (856407315)|HEAP_ALLOCATE|[288]|Bytes:66
+14:47:27.0 (856415411)|HEAP_ALLOCATE|[289]|Bytes:5
+14:47:27.0 (856419199)|HEAP_ALLOCATE|[289]|Bytes:107
+14:47:27.0 (856427570)|HEAP_ALLOCATE|[290]|Bytes:5
+14:47:27.0 (856431779)|HEAP_ALLOCATE|[290]|Bytes:33
+14:47:27.0 (856440138)|HEAP_ALLOCATE|[291]|Bytes:5
+14:47:27.0 (856443421)|HEAP_ALLOCATE|[291]|Bytes:48
+14:47:27.0 (856451817)|HEAP_ALLOCATE|[292]|Bytes:5
+14:47:27.0 (856456042)|HEAP_ALLOCATE|[292]|Bytes:40
+14:47:27.0 (856463374)|HEAP_ALLOCATE|[293]|Bytes:5
+14:47:27.0 (856467056)|HEAP_ALLOCATE|[293]|Bytes:31
+14:47:27.0 (856474877)|HEAP_ALLOCATE|[294]|Bytes:5
+14:47:27.0 (856479375)|HEAP_ALLOCATE|[294]|Bytes:60
+14:47:27.0 (856487310)|HEAP_ALLOCATE|[295]|Bytes:5
+14:47:27.0 (856490927)|HEAP_ALLOCATE|[295]|Bytes:34
+14:47:27.0 (856498636)|HEAP_ALLOCATE|[296]|Bytes:5
+14:47:27.0 (856502149)|HEAP_ALLOCATE|[296]|Bytes:34
+14:47:27.0 (856510309)|HEAP_ALLOCATE|[297]|Bytes:5
+14:47:27.0 (856514090)|HEAP_ALLOCATE|[297]|Bytes:73
+14:47:27.0 (856521221)|HEAP_ALLOCATE|[298]|Bytes:5
+14:47:27.0 (856524651)|HEAP_ALLOCATE|[298]|Bytes:39
+14:47:27.0 (856532093)|HEAP_ALLOCATE|[299]|Bytes:5
+14:47:27.0 (856535938)|HEAP_ALLOCATE|[299]|Bytes:44
+14:47:27.0 (856544065)|HEAP_ALLOCATE|[300]|Bytes:5
+14:47:27.0 (856548206)|HEAP_ALLOCATE|[300]|Bytes:30
+14:47:27.0 (856555813)|HEAP_ALLOCATE|[301]|Bytes:5
+14:47:27.0 (856559122)|HEAP_ALLOCATE|[301]|Bytes:29
+14:47:27.0 (856566835)|HEAP_ALLOCATE|[302]|Bytes:5
+14:47:27.0 (856570210)|HEAP_ALLOCATE|[302]|Bytes:47
+14:47:27.0 (856578198)|HEAP_ALLOCATE|[303]|Bytes:5
+14:47:27.0 (856581402)|HEAP_ALLOCATE|[303]|Bytes:39
+14:47:27.0 (856588900)|HEAP_ALLOCATE|[304]|Bytes:5
+14:47:27.0 (856592295)|HEAP_ALLOCATE|[304]|Bytes:18
+14:47:27.0 (856600096)|HEAP_ALLOCATE|[305]|Bytes:5
+14:47:27.0 (856603814)|HEAP_ALLOCATE|[305]|Bytes:45
+14:47:27.0 (856611098)|HEAP_ALLOCATE|[306]|Bytes:5
+14:47:27.0 (856614559)|HEAP_ALLOCATE|[306]|Bytes:47
+14:47:27.0 (856622190)|HEAP_ALLOCATE|[307]|Bytes:5
+14:47:27.0 (856625767)|HEAP_ALLOCATE|[307]|Bytes:24
+14:47:27.0 (856633715)|HEAP_ALLOCATE|[308]|Bytes:5
+14:47:27.0 (856637757)|HEAP_ALLOCATE|[308]|Bytes:34
+14:47:27.0 (856645399)|HEAP_ALLOCATE|[309]|Bytes:5
+14:47:27.0 (856649231)|HEAP_ALLOCATE|[309]|Bytes:21
+14:47:27.0 (856656620)|HEAP_ALLOCATE|[310]|Bytes:5
+14:47:27.0 (856660473)|HEAP_ALLOCATE|[310]|Bytes:47
+14:47:27.0 (856681811)|HEAP_ALLOCATE|[311]|Bytes:5
+14:47:27.0 (856686391)|HEAP_ALLOCATE|[311]|Bytes:54
+14:47:27.0 (856694916)|HEAP_ALLOCATE|[312]|Bytes:5
+14:47:27.0 (856699016)|HEAP_ALLOCATE|[312]|Bytes:33
+14:47:27.0 (856706745)|HEAP_ALLOCATE|[313]|Bytes:5
+14:47:27.0 (856713853)|HEAP_ALLOCATE|[313]|Bytes:38
+14:47:27.0 (856722613)|HEAP_ALLOCATE|[314]|Bytes:5
+14:47:27.0 (856727560)|HEAP_ALLOCATE|[314]|Bytes:31
+14:47:27.0 (856734925)|HEAP_ALLOCATE|[315]|Bytes:5
+14:47:27.0 (856738416)|HEAP_ALLOCATE|[315]|Bytes:41
+14:47:27.0 (856746394)|HEAP_ALLOCATE|[316]|Bytes:5
+14:47:27.0 (856750820)|HEAP_ALLOCATE|[316]|Bytes:47
+14:47:27.0 (856758762)|HEAP_ALLOCATE|[317]|Bytes:5
+14:47:27.0 (856762115)|HEAP_ALLOCATE|[317]|Bytes:55
+14:47:27.0 (856769575)|HEAP_ALLOCATE|[318]|Bytes:5
+14:47:27.0 (856773573)|HEAP_ALLOCATE|[318]|Bytes:51
+14:47:27.0 (856782213)|HEAP_ALLOCATE|[319]|Bytes:5
+14:47:27.0 (856787364)|HEAP_ALLOCATE|[319]|Bytes:29
+14:47:27.0 (856797320)|HEAP_ALLOCATE|[320]|Bytes:5
+14:47:27.0 (856801378)|HEAP_ALLOCATE|[320]|Bytes:81
+14:47:27.0 (856809605)|HEAP_ALLOCATE|[321]|Bytes:5
+14:47:27.0 (856813428)|HEAP_ALLOCATE|[321]|Bytes:25
+14:47:27.0 (856821390)|HEAP_ALLOCATE|[322]|Bytes:5
+14:47:27.0 (856825438)|HEAP_ALLOCATE|[322]|Bytes:24
+14:47:27.0 (856833297)|HEAP_ALLOCATE|[323]|Bytes:5
+14:47:27.0 (856837267)|HEAP_ALLOCATE|[323]|Bytes:29
+14:47:27.0 (856844519)|HEAP_ALLOCATE|[324]|Bytes:5
+14:47:27.0 (856848145)|HEAP_ALLOCATE|[324]|Bytes:31
+14:47:27.0 (856856681)|HEAP_ALLOCATE|[325]|Bytes:5
+14:47:27.0 (856860551)|HEAP_ALLOCATE|[325]|Bytes:30
+14:47:27.0 (856868222)|HEAP_ALLOCATE|[326]|Bytes:5
+14:47:27.0 (856871579)|HEAP_ALLOCATE|[326]|Bytes:20
+14:47:27.0 (856879253)|HEAP_ALLOCATE|[327]|Bytes:5
+14:47:27.0 (856883240)|HEAP_ALLOCATE|[327]|Bytes:19
+14:47:27.0 (856891143)|HEAP_ALLOCATE|[328]|Bytes:5
+14:47:27.0 (856894512)|HEAP_ALLOCATE|[328]|Bytes:34
+14:47:27.0 (856901729)|HEAP_ALLOCATE|[329]|Bytes:5
+14:47:27.0 (856905247)|HEAP_ALLOCATE|[329]|Bytes:30
+14:47:27.0 (856913461)|HEAP_ALLOCATE|[330]|Bytes:5
+14:47:27.0 (856917153)|HEAP_ALLOCATE|[330]|Bytes:31
+14:47:27.0 (856924671)|HEAP_ALLOCATE|[331]|Bytes:5
+14:47:27.0 (856928063)|HEAP_ALLOCATE|[331]|Bytes:21
+14:47:27.0 (856935632)|HEAP_ALLOCATE|[332]|Bytes:5
+14:47:27.0 (856939733)|HEAP_ALLOCATE|[332]|Bytes:24
+14:47:27.0 (856947127)|HEAP_ALLOCATE|[333]|Bytes:5
+14:47:27.0 (856951393)|HEAP_ALLOCATE|[333]|Bytes:22
+14:47:27.0 (856958744)|HEAP_ALLOCATE|[334]|Bytes:5
+14:47:27.0 (856962292)|HEAP_ALLOCATE|[334]|Bytes:25
+14:47:27.0 (856970330)|HEAP_ALLOCATE|[335]|Bytes:5
+14:47:27.0 (856974011)|HEAP_ALLOCATE|[335]|Bytes:21
+14:47:27.0 (856981790)|HEAP_ALLOCATE|[336]|Bytes:5
+14:47:27.0 (856985983)|HEAP_ALLOCATE|[336]|Bytes:46
+14:47:27.0 (856993658)|HEAP_ALLOCATE|[337]|Bytes:5
+14:47:27.0 (856997043)|HEAP_ALLOCATE|[337]|Bytes:48
+14:47:27.0 (857004941)|HEAP_ALLOCATE|[338]|Bytes:5
+14:47:27.0 (857009689)|HEAP_ALLOCATE|[338]|Bytes:42
+14:47:27.0 (857017470)|HEAP_ALLOCATE|[339]|Bytes:5
+14:47:27.0 (857021031)|HEAP_ALLOCATE|[339]|Bytes:45
+14:47:27.0 (857028666)|HEAP_ALLOCATE|[340]|Bytes:5
+14:47:27.0 (857032825)|HEAP_ALLOCATE|[340]|Bytes:54
+14:47:27.0 (857040475)|HEAP_ALLOCATE|[341]|Bytes:5
+14:47:27.0 (857044572)|HEAP_ALLOCATE|[341]|Bytes:43
+14:47:27.0 (857052920)|HEAP_ALLOCATE|[342]|Bytes:5
+14:47:27.0 (857056224)|HEAP_ALLOCATE|[342]|Bytes:33
+14:47:27.0 (857064170)|HEAP_ALLOCATE|[343]|Bytes:5
+14:47:27.0 (857067671)|HEAP_ALLOCATE|[343]|Bytes:20
+14:47:27.0 (857075685)|HEAP_ALLOCATE|[344]|Bytes:5
+14:47:27.0 (857079863)|HEAP_ALLOCATE|[344]|Bytes:14
+14:47:27.0 (857087303)|HEAP_ALLOCATE|[345]|Bytes:5
+14:47:27.0 (857090864)|HEAP_ALLOCATE|[345]|Bytes:33
+14:47:27.0 (857098504)|HEAP_ALLOCATE|[346]|Bytes:5
+14:47:27.0 (857102360)|HEAP_ALLOCATE|[346]|Bytes:33
+14:47:27.0 (857110620)|HEAP_ALLOCATE|[347]|Bytes:5
+14:47:27.0 (857114022)|HEAP_ALLOCATE|[347]|Bytes:20
+14:47:27.0 (857121419)|HEAP_ALLOCATE|[348]|Bytes:5
+14:47:27.0 (857124820)|HEAP_ALLOCATE|[348]|Bytes:51
+14:47:27.0 (857133268)|HEAP_ALLOCATE|[349]|Bytes:5
+14:47:27.0 (857137393)|HEAP_ALLOCATE|[349]|Bytes:26
+14:47:27.0 (857144807)|HEAP_ALLOCATE|[350]|Bytes:2
+14:47:27.0 (857149165)|HEAP_ALLOCATE|[350]|Bytes:16
+14:47:27.0 (857156584)|HEAP_ALLOCATE|[351]|Bytes:2
+14:47:27.0 (857164717)|HEAP_ALLOCATE|[352]|Bytes:2
+14:47:27.0 (857168078)|HEAP_ALLOCATE|[352]|Bytes:19
+14:47:27.0 (857176394)|HEAP_ALLOCATE|[353]|Bytes:2
+14:47:27.0 (857189147)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:47:27.0 (857277067)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0x4fdacf7b
+14:47:27.0 (857286420)|STATEMENT_EXECUTE|[356]
+14:47:27.0 (857349760)|HEAP_ALLOCATE|[356]|Bytes:14
+14:47:27.0 (857363175)|HEAP_ALLOCATE|[356]|Bytes:19
+14:47:27.0 (857377403)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (857387580)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (857402996)|VARIABLE_ASSIGNMENT|[44]|s1|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (857409180)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (857417811)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error V6102"
+14:47:27.0 (857432885)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (857438800)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (857440848)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (857448482)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (857460348)|VARIABLE_ASSIGNMENT|[45]|result|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (857466091)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (857469516)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (857481433)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (857488364)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:47:27.0 (857499048)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (857504315)|STATEMENT_EXECUTE|[358]
+14:47:27.0 (857513069)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:47:27.0 (857523010)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (857527970)|STATEMENT_EXECUTE|[74]
+14:47:27.0 (857536329)|METHOD_EXIT|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (857546608)|HEAP_ALLOCATE|[486]|Bytes:45
+14:47:27.0 (857563905)|USER_DEBUG|[486]|DEBUG|Eway2 error message: Invalid CARD EXPIRY YEAR
+14:47:27.0 (857572489)|STATEMENT_EXECUTE|[488]
+14:47:27.0 (857588372)|METHOD_EXIT|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:47:27.0 (857595562)|STATEMENT_EXECUTE|[270]
+14:47:27.0 (857604073)|METHOD_EXIT|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:47:27.0 (857643110)|VARIABLE_ASSIGNMENT|[384]|ewayResp|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (857657019)|METHOD_ENTRY|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:47:27.0 (857677574)|HEAP_ALLOCATE|[61]|Bytes:5
+14:47:27.0 (857683099)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (857684907)|STATEMENT_EXECUTE|[61]
+14:47:27.0 (857704440)|HEAP_ALLOCATE|[61]|Bytes:4
+14:47:27.0 (857854621)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:47:27.0 (859449800)|SOQL_EXECUTE_END|[61]|Rows:1
+14:47:27.0 (859481137)|HEAP_ALLOCATE|[61]|Bytes:8
+14:47:27.0 (859500065)|HEAP_ALLOCATE|[61]|Bytes:50
+14:47:27.0 (859542393)|HEAP_ALLOCATE|[61]|Bytes:8
+14:47:27.0 (859577487)|HEAP_ALLOCATE|[61]|Bytes:12
+14:47:27.0 (859609894)|METHOD_EXIT|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:47:27.0 (859624242)|STATEMENT_EXECUTE|[388]
+14:47:27.0 (859634778)|STATEMENT_EXECUTE|[393]
+14:47:27.0 (859782210)|VARIABLE_ASSIGNMENT|[393]|this.Response__c|"{\"AuthorisationCode\" (772 more) ..."|0x29121af
+14:47:27.0 (859810854)|STATEMENT_EXECUTE|[394]
+14:47:27.0 (859835878)|METHOD_ENTRY|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (859865247)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:47:27.0 (859920630)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (859942101)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (859950323)|STATEMENT_EXECUTE|[43]
+14:47:27.0 (859953566)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (859985216)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:47:27.0 (860002726)|VARIABLE_ASSIGNMENT|[45]|errorCode|"V6102"
+14:47:27.0 (860010969)|STATEMENT_EXECUTE|[48]
+14:47:27.0 (860018520)|STATEMENT_EXECUTE|[52]
+14:47:27.0 (860020812)|STATEMENT_EXECUTE|[54]
+14:47:27.0 (860066674)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (860077709)|HEAP_ALLOCATE|[54]|Bytes:8
+14:47:27.0 (860108877)|VARIABLE_ASSIGNMENT|[54]|errorCode|"V6102"
+14:47:27.0 (860118341)|STATEMENT_EXECUTE|[56]
+14:47:27.0 (860133334)|METHOD_EXIT|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (860217283)|VARIABLE_ASSIGNMENT|[394]|this.Response_Code__c|"V6102"|0x29121af
+14:47:27.0 (860229508)|STATEMENT_EXECUTE|[395]
+14:47:27.0 (860263282)|METHOD_ENTRY|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (860285657)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:47:27.0 (860328972)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (860349318)|HEAP_ALLOCATE|[60]|Bytes:5
+14:47:27.0 (860356928)|STATEMENT_EXECUTE|[59]
+14:47:27.0 (860359569)|STATEMENT_EXECUTE|[60]
+14:47:27.0 (860370257)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:47:27.0 (860400348)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:47:27.0 (860425102)|STATEMENT_EXECUTE|[65]
+14:47:27.0 (860427863)|STATEMENT_EXECUTE|[67]
+14:47:27.0 (860441522)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (860451988)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:47:27.0 (860487582)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (860505806)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (860513314)|STATEMENT_EXECUTE|[43]
+14:47:27.0 (860515824)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (860539643)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:47:27.0 (860557971)|VARIABLE_ASSIGNMENT|[45]|errorCode|"V6102"
+14:47:27.0 (860566240)|STATEMENT_EXECUTE|[48]
+14:47:27.0 (860573491)|STATEMENT_EXECUTE|[52]
+14:47:27.0 (860575811)|STATEMENT_EXECUTE|[54]
+14:47:27.0 (860608334)|HEAP_ALLOCATE|[54]|Bytes:5
+14:47:27.0 (860617098)|HEAP_ALLOCATE|[54]|Bytes:8
+14:47:27.0 (860644242)|VARIABLE_ASSIGNMENT|[54]|errorCode|"V6102"
+14:47:27.0 (860653461)|STATEMENT_EXECUTE|[56]
+14:47:27.0 (860667419)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:47:27.0 (860678212)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:47:27.0 (860693090)|VARIABLE_ASSIGNMENT|[67]|errorCode|"V6102"
+14:47:27.0 (860701141)|STATEMENT_EXECUTE|[69]
+14:47:27.0 (860703572)|STATEMENT_EXECUTE|[70]
+14:47:27.0 (860718092)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:47:27.0 (860728512)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:47:27.0 (860769067)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (860780857)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:47:27.0 (860794864)|VARIABLE_ASSIGNMENT|[78]|errorCode|"V6102"
+14:47:27.0 (860809420)|HEAP_ALLOCATE|[80]|Bytes:5
+14:47:27.0 (860817147)|STATEMENT_EXECUTE|[78]
+14:47:27.0 (860820126)|STATEMENT_EXECUTE|[80]
+14:47:27.0 (860839214)|HEAP_ALLOCATE|[80]|Bytes:4
+14:47:27.0 (862699483)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:47:27.0 (862781510)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0x424f17d0
+14:47:27.0 (862790469)|STATEMENT_EXECUTE|[356]
+14:47:27.0 (862818131)|HEAP_ALLOCATE|[356]|Bytes:19
+14:47:27.0 (862834345)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (862842868)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:47:27.0 (862855563)|VARIABLE_ASSIGNMENT|[44]|s1|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (862860958)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:47:27.0 (862868994)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error V6102"
+14:47:27.0 (862881318)|HEAP_ALLOCATE|[45]|Bytes:5
+14:47:27.0 (862886578)|STATEMENT_EXECUTE|[44]
+14:47:27.0 (862888336)|STATEMENT_EXECUTE|[45]
+14:47:27.0 (862895300)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:47:27.0 (862906532)|VARIABLE_ASSIGNMENT|[45]|result|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (862911267)|STATEMENT_EXECUTE|[46]
+14:47:27.0 (862914895)|STATEMENT_EXECUTE|[47]
+14:47:27.0 (862924182)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:47:27.0 (862931014)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:47:27.0 (862941083)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (862945684)|STATEMENT_EXECUTE|[358]
+14:47:27.0 (862953580)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:47:27.0 (862962085)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Invalid CARD EXPIRY  (4 more) ..."
+14:47:27.0 (862966855)|STATEMENT_EXECUTE|[74]
+14:47:27.0 (862974213)|METHOD_EXIT|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:47:27.0 (863064435)|VARIABLE_ASSIGNMENT|[395]|this.Response_Message__c|"Invalid CARD EXPIRY  (4 more) ..."|0x29121af
+14:47:27.0 (863072212)|STATEMENT_EXECUTE|[396]
+14:47:27.0 (863091463)|METHOD_ENTRY|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:47:27.0 (863114833)|VARIABLE_SCOPE_BEGIN|[38]|this|Eway2Response|true|false
+14:47:27.0 (863146227)|VARIABLE_ASSIGNMENT|[38]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (863160626)|HEAP_ALLOCATE|[39]|Bytes:5
+14:47:27.0 (863167057)|STATEMENT_EXECUTE|[38]
+14:47:27.0 (863169240)|STATEMENT_EXECUTE|[39]
+14:47:27.0 (863180883)|HEAP_ALLOCATE|[39]|Bytes:13
+14:47:27.0 (863259088)|METHOD_EXIT|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:47:27.0 (863320587)|VARIABLE_ASSIGNMENT|[396]|this.Gateway_Transaction_Id__c|null|0x29121af
+14:47:27.0 (863327494)|STATEMENT_EXECUTE|[397]
+14:47:27.0 (863341498)|METHOD_ENTRY|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:47:27.0 (863357069)|VARIABLE_SCOPE_BEGIN|[28]|this|Eway2Response|true|false
+14:47:27.0 (863382485)|VARIABLE_ASSIGNMENT|[28]|this|{"params":"0x40205733","responseBody":"{\"AuthorisationCode\" (772 more) ..."}|0x5501aed4
+14:47:27.0 (863394739)|HEAP_ALLOCATE|[31]|Bytes:5
+14:47:27.0 (863399378)|STATEMENT_EXECUTE|[28]
+14:47:27.0 (863403933)|HEAP_ALLOCATE|[31]|Bytes:12
+14:47:27.0 (863432841)|STATEMENT_EXECUTE|[33]
+14:47:27.0 (863434959)|STATEMENT_EXECUTE|[34]
+14:47:27.0 (863442272)|HEAP_ALLOCATE|[34]|Bytes:5
+14:47:27.0 (863450220)|METHOD_EXIT|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:47:27.0 (863457691)|HEAP_ALLOCATE|[397]|Bytes:7
+14:47:27.0 (863503917)|VARIABLE_ASSIGNMENT|[397]|this.Status__c|"FAILURE"|0x29121af
+14:47:27.0 (863516970)|METHOD_EXIT|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:47:27.0 (863523374)|STATEMENT_EXECUTE|[196]
+14:47:27.0 (863532196)|SYSTEM_MODE_EXIT|false
+14:47:27.0 (863543001)|METHOD_EXIT|[329]|01p6F000006He6O|paymentGateway.pay()
+14:47:27.0 (863624028)|VARIABLE_ASSIGNMENT|[329]|paymentAttempt|{"Status__c":"FAILURE","Payment_Amount__c":89.00,"CurrencyIsoCode":"AUD","Payment_Name__c":"RODD SANCHEZ","Payment_Email__c":"rodd.sanchez@gmail.c (2 more) ...","Payment_Option__c":"Eway2","Payment_Type__c":"Payment","Request_Time__c":"2019-01-09T04:47:27.788Z","Invoice_Number__c":"000972114","Response__c":"{\"AuthorisationCode\" (772 more) ...","Response_Code__c":"V6102","Response_Message__c":"Invalid CARD EXPIRY  (4 more) ..."}|0x29121af
+14:47:27.0 (863673526)|HEAP_ALLOCATE|[338]|Bytes:7
+14:47:27.0 (863705331)|STATEMENT_EXECUTE|[338]
+14:47:27.0 (863713976)|STATEMENT_EXECUTE|[342]
+14:47:27.0 (863725531)|HEAP_ALLOCATE|[342]|Bytes:18
+14:47:27.0 (863749165)|HEAP_ALLOCATE|[342]|Bytes:810
+14:47:27.0 (863779534)|USER_DEBUG|[342]|DEBUG|Gateway Response: {"AuthorisationCode":null,"ResponseCode":null,"ResponseMessage":null,"TransactionID":null,"TransactionStatus":null,"TransactionType":"Recurring","BeagleScore":null,"Verification":null,"Customer":{"CardDetails":{"Number":null,"Name":null,"ExpiryMonth":null,"ExpiryYear":null,"StartMonth":null,"StartYear":null,"IssueNumber":null},"TokenCustomerID":509973231677,"Reference":null,"Title":null,"FirstName":null,"LastName":null,"CompanyName":null,"JobDescription":null,"Street1":null,"Street2":null,"City":null,"State":null,"PostalCode":null,"Country":null,"Email":null,"Phone":null,"Mobile":null,"Comments":null,"Fax":null,"Url":null},"Payment":{"TotalAmount":8900,"InvoiceNumber":"000972114","InvoiceDescription":"000972114","InvoiceReference":"000972114","CurrencyCode":"AUD"},"Errors":"V6102"}
+14:47:27.0 (863797358)|STATEMENT_EXECUTE|[343]
+14:47:27.0 (863809356)|HEAP_ALLOCATE|[343]|Bytes:29
+14:47:27.0 (863821026)|HEAP_ALLOCATE|[343]|Bytes:821
+14:47:27.0 (863826058)|HEAP_ALLOCATE|[343]|Bytes:963
+14:47:27.0 (863844469)|VARIABLE_ASSIGNMENT|[343]|this.Log|"Current Invoice Numb (943 more) ..."|0xddacbcb
+14:47:27.0 (863855176)|STATEMENT_EXECUTE|[357]
+14:47:27.0 (863856955)|STATEMENT_EXECUTE|[358]
+14:47:27.0 (863858788)|STATEMENT_EXECUTE|[358]
+14:47:27.0 (863860538)|STATEMENT_EXECUTE|[359]
+14:47:27.0 (863866741)|HEAP_ALLOCATE|[359]|Bytes:32
+14:47:27.0 (863873375)|HEAP_ALLOCATE|[359]|Bytes:995
+14:47:27.0 (863882811)|VARIABLE_ASSIGNMENT|[359]|this.Log|"Current Invoice Numb (975 more) ..."|0xddacbcb
+14:47:27.0 (863904990)|STATEMENT_EXECUTE|[390]
+14:47:27.0 (863906885)|STATEMENT_EXECUTE|[391]
+14:47:27.0 (863913619)|HEAP_ALLOCATE|[391]|Bytes:9
+14:47:27.0 (863931974)|HEAP_ALLOCATE|[391]|Bytes:33
+14:47:27.0 (863971950)|HEAP_ALLOCATE|[391]|Bytes:-4
+14:47:27.0 (863993729)|VARIABLE_ASSIGNMENT|[391]|this.Payment_Message__c|"FAILURE: Invalid CAR (13 more) ..."|0x4d539374
+14:47:27.0 (864000811)|STATEMENT_EXECUTE|[392]
+14:47:27.0 (864027353)|HEAP_ALLOCATE|[392]|Bytes:-4
+14:47:27.0 (864037069)|VARIABLE_ASSIGNMENT|[392]|this.Payment_Response__c|null|0x4d539374
+14:47:27.0 (864046364)|STATEMENT_EXECUTE|[393]
+14:47:27.0 (864057515)|HEAP_ALLOCATE|[393]|Bytes:10
+14:47:27.0 (864066930)|HEAP_ALLOCATE|[393]|Bytes:1005
+14:47:27.0 (864079841)|VARIABLE_ASSIGNMENT|[393]|this.Log|"Current Invoice Numb (985 more) ..."|0xddacbcb
+14:47:27.0 (864085897)|STATEMENT_EXECUTE|[394]
+14:47:27.0 (864090967)|HEAP_ALLOCATE|[394]|Bytes:6
+14:47:27.0 (864120748)|VARIABLE_ASSIGNMENT|[394]|this.Process_Message__c|"UnPaid"|0x4d539374
+14:47:27.0 (864129295)|STATEMENT_EXECUTE|[416]
+14:47:27.0 (864152454)|VARIABLE_ASSIGNMENT|[416]|this.Processed__c|true|0x4d539374
+14:47:27.0 (864158916)|STATEMENT_EXECUTE|[418]
+14:47:27.0 (864197943)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (864207742)|STATEMENT_EXECUTE|[419]
+14:47:27.0 (864216683)|HEAP_ALLOCATE|[419]|Bytes:14
+14:47:27.0 (864224045)|HEAP_ALLOCATE|[419]|Bytes:1019
+14:47:27.0 (864234929)|VARIABLE_ASSIGNMENT|[419]|this.Log|"Current Invoice Numb (999 more) ..."|0xddacbcb
+14:47:27.0 (864254255)|HEAP_ALLOCATE|[136]|Bytes:5
+14:47:27.0 (864269900)|VARIABLE_ASSIGNMENT|[136]|current_invoice|null|
+14:47:27.0 (864277350)|STATEMENT_EXECUTE|[422]
+14:47:27.0 (864387140)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (864396178)|STATEMENT_EXECUTE|[423]
+14:47:27.0 (864429810)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (864435837)|STATEMENT_EXECUTE|[424]
+14:47:27.0 (864468855)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (864474536)|STATEMENT_EXECUTE|[426]
+14:47:27.0 (864480739)|HEAP_ALLOCATE|[426]|Bytes:14
+14:47:27.0 (864613100)|HEAP_ALLOCATE|[426]|Bytes:590
+14:47:27.0 (864630390)|HEAP_ALLOCATE|[426]|Bytes:604
+14:47:27.0 (864641135)|USER_DEBUG|[426]|DEBUG|All Invoices: (Invoice__c:{Id=a0E6F00002QwH64UAF, Name=Natural Health Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0019000000Sy5jfAAB, Account_Product__c=a079000000BPNjyAAH, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972114, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=true, Process_Message__c=UnPaid, Reference__c=189473, CurrencyIsoCode=AUD, Payment_Message__c=FAILURE: Invalid CARD EXPIRY YEAR, Payment_Response__c=null})
+14:47:27.0 (864655416)|STATEMENT_EXECUTE|[427]
+14:47:27.0 (864691189)|DML_BEGIN|[427]|Op:Update|Type:Invoice__c|Rows:1
+14:47:27.0 (864719742)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:47:27.0 (899659134)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VDtL
+14:47:27.0 (915928473)|WF_RULE_EVAL_BEGIN|Workflow
+14:47:27.0 (916053025)|WF_CRITERIA_BEGIN|[Invoice: Natural Health Practice a0E6F00002QwH64]|Automatic Tasks for Outstanding Invoices|01Q6F0000019daX|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:27.0 (921093928)|WF_RULE_NOT_EVALUATED
+14:47:27.0 (921124973)|WF_CRITERIA_BEGIN|[Invoice: Natural Health Practice a0E6F00002QwH64]|Sign_Up_Invoice3016F000000hF9P|01Q6F0000013738|ON_ALL_CHANGES|0
+14:47:27.0 (921225076)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:47:27.0 (921236044)|WF_CRITERIA_END|true
+14:47:27.0 (922139266)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:47:27.0 (922171992)|WF_ACTION| Flow Trigger: 1;
+14:47:27.0 (922178997)|WF_RULE_EVAL_END
+14:47:27.0 (923371723)|WF_FLOW_ACTION_BEGIN|09L6F000000gHqq
+14:47:27.925 (925329284)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000Pjga|3016F000000hF9P
+14:47:27.925 (926249613)|FLOW_CREATE_INTERVIEW_END|1487969d344a23549fd71b687f5e16830ef6405-794c|Sign Up Invoice
+14:47:27.926 (926679686)|FLOW_START_INTERVIEWS_BEGIN|1
+14:47:27.926 (926705596)|FLOW_START_INTERVIEW_BEGIN|1487969d344a23549fd71b687f5e16830ef6405-794c|Sign Up Invoice
+14:47:27.926 (974583404)|FLOW_START_INTERVIEW_END|1487969d344a23549fd71b687f5e16830ef6405-794c|Sign Up Invoice
+14:47:27.926 (974614427)|FLOW_START_INTERVIEWS_END|1
+14:47:27.0 (975802093)|WF_FLOW_ACTION_END|09L6F000000gHqq
+14:47:27.0 (975838628)|WF_TIME_TRIGGERS_BEGIN
+14:47:27.0 (978728953)|WF_ACTIONS_END| Flow Trigger: 1;
+14:47:27.0 (978755284)|CODE_UNIT_FINISHED|Workflow:01I90000000VDtL
+14:47:27.0 (990005973)|DML_END|[427]
+14:47:27.0 (990082148)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:47:27.0 (990117190)|STATEMENT_EXECUTE|[429]
+14:47:27.0 (990148296)|HEAP_ALLOCATE|[429]|Bytes:14
+14:47:27.0 (990264823)|HEAP_ALLOCATE|[429]|Bytes:2
+14:47:27.0 (990297926)|HEAP_ALLOCATE|[429]|Bytes:16
+14:47:27.0 (990327836)|USER_DEBUG|[429]|DEBUG|All Payments: ()
+14:47:27.0 (990342555)|STATEMENT_EXECUTE|[430]
+14:47:27.0 (990420522)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (990433112)|STATEMENT_EXECUTE|[431]
+14:47:27.0 (990487010)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:47:27.0 (990498834)|STATEMENT_EXECUTE|[433]
+14:47:27.0 (990509109)|HEAP_ALLOCATE|[433]|Bytes:88
+14:47:27.0 (990547686)|HEAP_ALLOCATE|[433]|Bytes:4
+14:47:27.0 (991083658)|SOQL_EXECUTE_BEGIN|[433]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:47:28.0 (1000020972)|SOQL_EXECUTE_END|[433]|Rows:1
+14:47:28.0 (1000075329)|HEAP_ALLOCATE|[433]|Bytes:8
+14:47:28.0 (1000104653)|HEAP_ALLOCATE|[433]|Bytes:140
+14:47:28.0 (1000217582)|HEAP_ALLOCATE|[433]|Bytes:8
+14:47:28.0 (1000241222)|HEAP_ALLOCATE|[433]|Bytes:42
+14:47:28.0 (1000310431)|HEAP_ALLOCATE|[433]|Bytes:20
+14:47:28.0 (1000324074)|VARIABLE_SCOPE_BEGIN|[433]|updateNewPayBatch|Invoice_Batch__c|true|false
+14:47:28.0 (1000377502)|VARIABLE_ASSIGNMENT|[433]|updateNewPayBatch|{"Id":"a0F6F00000uikSuUAI","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Payments Complete"}|0x69c0a025
+14:47:28.0 (1000390764)|STATEMENT_EXECUTE|[434]
+14:47:28.0 (1000403936)|HEAP_ALLOCATE|[434]|Bytes:3
+14:47:28.0 (1000480609)|VARIABLE_ASSIGNMENT|[434]|this.Batch_Processed__c|"Yes"|0x69c0a025
+14:47:28.0 (1000491027)|STATEMENT_EXECUTE|[435]
+14:47:28.0 (1000501732)|HEAP_ALLOCATE|[435]|Bytes:17
+14:47:28.0 (1000543664)|VARIABLE_ASSIGNMENT|[435]|this.status__c|"Payments Complete"|0x69c0a025
+14:47:28.0 (1000554746)|STATEMENT_EXECUTE|[436]
+14:47:28.0 (1000609335)|HEAP_ALLOCATE|[436]|Bytes:8
+14:47:28.0 (1000626807)|DML_BEGIN|[436]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:47:28.0 (1000659516)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:47:28.0 (1014209939)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:47:28.0 (1019871097)|WF_RULE_EVAL_BEGIN|Workflow
+14:47:28.0 (1019905087)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1021378771)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:47:28.0 (1021399315)|WF_RULE_EVAL_VALUE|2
+14:47:28.0 (1021406683)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:47:28.0 (1021411286)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:47:28.0 (1021416127)|WF_CRITERIA_END|false
+14:47:28.0 (1021427190)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1021476927)|WF_RULE_NOT_EVALUATED
+14:47:28.0 (1021482994)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1021536884)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:47:28.0 (1021548127)|WF_RULE_EVAL_VALUE|2
+14:47:28.0 (1021554001)|WF_RULE_EVAL_VALUE|1
+14:47:28.0 (1021558478)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:47:28.0 (1021561596)|WF_CRITERIA_END|false
+14:47:28.0 (1021571438)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:47:28.0 (1021581514)|WF_ACTION| None
+14:47:28.0 (1021585936)|WF_RULE_EVAL_END
+14:47:28.0 (1021646826)|WF_ACTIONS_END| None
+14:47:28.0 (1021656144)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:47:28.0 (1022784949)|DML_END|[436]
+14:47:28.0 (1022807307)|STATEMENT_EXECUTE|[438]
+14:47:28.0 (1022839976)|HEAP_ALLOCATE|[438]|Bytes:4
+14:47:28.0 (1023067353)|SOQL_EXECUTE_BEGIN|[438]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:47:28.0 (1025466965)|SOQL_EXECUTE_END|[438]|Rows:1
+14:47:28.0 (1025492081)|HEAP_ALLOCATE|[438]|Bytes:8
+14:47:28.0 (1025513837)|HEAP_ALLOCATE|[438]|Bytes:137
+14:47:28.0 (1025549189)|HEAP_ALLOCATE|[438]|Bytes:8
+14:47:28.0 (1025584022)|HEAP_ALLOCATE|[438]|Bytes:20
+14:47:28.0 (1025595813)|VARIABLE_SCOPE_BEGIN|[438]|updateInvoiceBatch|Invoice_Batch__c|true|false
+14:47:28.0 (1025630193)|VARIABLE_ASSIGNMENT|[438]|updateInvoiceBatch|{"Id":"a0F6F00000uikQFUAY","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Batch Approved"}|0x30aaaa25
+14:47:28.0 (1025639789)|STATEMENT_EXECUTE|[439]
+14:47:28.0 (1025698239)|VARIABLE_ASSIGNMENT|[439]|this.Batch_Processed__c|"Yes"|0x30aaaa25
+14:47:28.0 (1025705139)|STATEMENT_EXECUTE|[440]
+14:47:28.0 (1025737410)|HEAP_ALLOCATE|[440]|Bytes:8
+14:47:28.0 (1025754186)|DML_BEGIN|[440]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:47:28.0 (1025780389)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:47:28.0 (1035679158)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:47:28.0 (1040479823)|WF_RULE_EVAL_BEGIN|Workflow
+14:47:28.0 (1040509786)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1040601184)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:47:28.0 (1040617481)|WF_RULE_EVAL_VALUE|1
+14:47:28.0 (1040625217)|WF_CRITERIA_END|false
+14:47:28.0 (1040637615)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1040707096)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains SLX] 
+AND [Invoice Batch : Batch Status equals Payments Complete] 
+AND [Invoice Batch : Invoice Batch Name does not contain NZ]
+14:47:28.0 (1040723650)|WF_RULE_EVAL_VALUE|1
+14:47:28.0 (1040729150)|WF_CRITERIA_END|false
+14:47:28.0 (1040764159)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:47:28.0 (1040823072)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:47:28.0 (1040837154)|WF_RULE_EVAL_VALUE|1
+14:47:28.0 (1040842231)|WF_CRITERIA_END|false
+14:47:28.0 (1040854602)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:47:28.0 (1040867634)|WF_ACTION| None
+14:47:28.0 (1040873730)|WF_RULE_EVAL_END
+14:47:28.0 (1040943704)|WF_ACTIONS_END| None
+14:47:28.0 (1040956838)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:47:28.0 (1041611931)|DML_END|[440]
+14:47:28.51 (1051645269)|CUMULATIVE_LIMIT_USAGE
+14:47:28.51 (1051645269)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:47:28.51 (1051645269)|CUMULATIVE_LIMIT_USAGE_END
+
+14:47:28.0 (1051701049)|CODE_UNIT_FINISHED|batchPaymentsProcess
+14:47:28.0 (1052733137)|EXECUTION_FINISHED

@@ -26,7 +26,7 @@ public with sharing class SeoGeoController {
         List<Schema.PicklistEntry> ple = geoField.getPicklistValues();
 
         for( Schema.PicklistEntry f : ple){
-            allGeo.add(new SelectOption(f.getLabel(), f.getValue()));
+            allGeo.add(new SelectOption(f.getValue(), f.getLabel()));
         }
     }
 
@@ -43,15 +43,23 @@ public with sharing class SeoGeoController {
     private String getKeywordIdQueryString() {
         String keywordQueryString = '';
 
-        // Add the keywordids that we want the data for
-        List<seoThemeKeywords__c> seoKeywords = [SELECT Id FROM seoThemeKeywords__c WHERE seoWebsites__c = :ApexPages.currentPage().getParameters().get('id') ORDER BY Google_Current__c];
+        List<seoThemeKeywords__c> seoKeywords;
+
+        // Add the keywordids that we want the data for.
+        if (ApexPages.currentPage().getParameters().get('keywordid') != null){
+            // Optionally restrict to a single keyword
+            seoKeywords = [SELECT Id FROM seoThemeKeywords__c WHERE seoWebsites__c = :ApexPages.currentPage().getParameters().get('id') AND Id = :ApexPages.currentPage().getParameters().get('keywordid') ORDER BY Google_Current__c];
+        } else {
+            // Otherwise use all keywords for this website
+            seoKeywords = [SELECT Id FROM seoThemeKeywords__c WHERE seoWebsites__c = :ApexPages.currentPage().getParameters().get('id') ORDER BY Google_Current__c];
+        }
 
         if ( seoKeywords.size() > 0 ) {
             for (seoThemeKeywords__c seoKeyword : seoKeywords){
                 keywordQueryString += '&k[]=' + EncodingUtil.urlEncode(seoKeyword.Id, 'UTF-8');
             }
         }
-        
+
         return keywordQueryString;
     }
 
@@ -96,7 +104,7 @@ public with sharing class SeoGeoController {
     // Get geo comparison url
     public String getGeoURL() {
         // Build the URL for the console
-        String consolePath = '/?c=seo&action=keywordGeoCompare&output=table&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
+        String consolePath = '/seo/keywordGeoCompare?output=table&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
 
         for ( SelectOption so : selectedGeo ) {
             consolePath += '&g[]=' + EncodingUtil.urlEncode(so.getValue(), 'UTF-8');

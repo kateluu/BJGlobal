@@ -111,12 +111,12 @@ public class CasesProcessor {
 
         for(Cases__c item : myCases) {
             if((item.Status__c == 'Escalated') &&  ((item.Product_Type__c == 'Social Marketing') || (item.Product_Type__c == 'AdWords Management')) 
-                && (item.CaseType__c == 'Cancellation') &&  ( (item.Account_Resolution__c!= null && item.Account_Resolution__c.equals('Save')) || (item.Case_Reason__c!=null && item.Case_Reason__c.containsIgnoreCase('BTS'))) ){ 
+                && (item.CaseType__c.containsIgnoreCase('Cancellation')) &&  (item.Case_Reason__c!=null && item.Case_Reason__c.containsIgnoreCase('BTS')) ){ 
 
                 Cases__c oldCaseItem = myOldCasesMap.get(item.id);
                 isChanged = true;                
                 // update Resolution Manager
-                item.Resolution_Manager__c = newOwners.get(item.OwnerId).ManagerId;                
+                //item.Resolution_Manager__c = newOwners.get(item.OwnerId).ManagerId;                
                 if(item.Resolution_Manager__c  == null){                    
                     if(oldCaseItem.Account__r.BJB_Company__r.Name != null){
                         if(oldCaseItem.Account__r.BJB_Company__r.Name.startsWith('G')){
@@ -152,7 +152,7 @@ public class CasesProcessor {
                 
 
             }else if((item.Status__c == 'Escalated') && (item.Resolution_Manager__c == null) && ((item.Product_Type__c == 'Social Marketing') || (item.Product_Type__c == 'AdWords Management')) 
-                && (item.CaseType__c == 'Cancellation')){            
+                && (item.CaseType__c.containsIgnoreCase('Cancellation'))){            
                 isChanged = true;            
                 User resolutionMan = TriggerUtilities.getAvailableResolutionManagerByCap();
 

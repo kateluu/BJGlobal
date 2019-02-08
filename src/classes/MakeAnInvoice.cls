@@ -113,9 +113,18 @@ public with sharing class MakeAnInvoice {
     		//}
     		//check Amex user
     		if(acc.Amex__c == true){
-  				inv.Invoice_Total__c      	= inv.Invoice_Total__c*1.035;
+                Date myDate = Date.newInstance(2018, 8, 1);
+                if (inv.Issue_Date__c >= myDate){
+                    // Amex charge change from 1st August 2018
+                    inv.Invoice_Total__c      	= inv.Invoice_Total__c*(1+ Decimal.valueof(Pardot_Auto_Convert_Add__c.getValues('Amex Surcharge').value__c)); 
+                }
+                else{
+                    inv.Invoice_Total__c          = inv.Invoice_Total__c*(1+ Decimal.valueof(Pardot_Auto_Convert_Add__c.getValues('Old Amex Surcharge').value__c)); 
+                }
+                  
   				inv.Invoice_Total__c		= inv.Invoice_Total__c.setScale(2);
   				inv.Amex__c					= true;
+                
   			}
 	        inv.Amount_Due__c = inv.Invoice_Total__c;
 	        inv.Payment_Option__c = accProduct.Payment_Option__c;

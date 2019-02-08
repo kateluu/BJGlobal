@@ -10,6 +10,32 @@
         <masterLabel>Percentage</masterLabel>
         <scale>2</scale>
     </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_19143950</developerName>
+        <masterLabel>App</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.BJB_Company__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SponsoredLinX</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SponsoredLinX New Zealand</sourceValue>
+            </sourceValues>
+            <value>LinX</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Get More Traffic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Get More Traffic New Zealand</sourceValue>
+            </sourceValues>
+            <value>GMT GO</value>
+        </values>
+    </buckets>
     <columns>
         <field>USERS.NAME</field>
     </columns>
@@ -23,19 +49,19 @@
             <operator>notEqual</operator>
             <value>Employee</value>
         </criteriaItems>
-        <criteriaItems>
-            <column>ACCOUNT.NAME</column>
-            <operator>notContain</operator>
-            <value>getmoretraffic</value>
-        </criteriaItems>
     </filter>
     <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_19143950</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Account.App_Installed__c</field>
         <sortOrder>Desc</sortOrder>
     </groupingsDown>
-    <name>LinX APP Installations</name>
+    <name>APP Installations</name>
     <params>
         <name>co</name>
         <value>1</value>
@@ -45,6 +71,6 @@
     <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>
-        <interval>INTERVAL_LASTWEEK</interval>
+        <interval>INTERVAL_LASTMONTH</interval>
     </timeFrameFilter>
 </Report>

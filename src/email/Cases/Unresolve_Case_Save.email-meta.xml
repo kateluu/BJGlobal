@@ -4,6 +4,6 @@
     <encodingKey>ISO-8859-1</encodingKey>
     <name>Unresolve Case Save</name>
     <style>none</style>
-    <subject>Case # {!Cases__c.Name} SAVED</subject>
+    <subject>Case # {!Cases__c.Name} SAVED - Owner: {!Cases__c.OwnerFullName}</subject>
     <type>text</type>
 </EmailTemplate>

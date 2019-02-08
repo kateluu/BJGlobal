@@ -18,15 +18,15 @@ private class QuestionnaireControllerTest
 
 		Account acc = new Account();
 		acc.name = 'acc1';
+		acc.email__c ='test@salesforce.com';
 		acc.BJB_Company__c  = company2.Id;
 		insert acc;
 		
 		
-		SFDC_Projects__c p = new SFDC_Projects__c();
+		Sign_Up__c p = new Sign_Up__c();
     	p.account__c = acc.id;
-    	p.name = 'name';
-    	p.Sold_by__c = 'ss';
-    	p.Phone_Number__c = '123456789';
+    	p.name = 'name';    	
+    	//p.Phone_Number__c = '123456789';
     	p.Email__c = 'fdas@jlkdfs.com';
     	insert p;
 	}
@@ -36,7 +36,7 @@ private class QuestionnaireControllerTest
 	{
 		QuestionnaireController ques = new QuestionnaireController();
 		Account acc =[SELECT id FROM Account limit 1];
-		SFDC_Projects__c p = [SELECT id FROM SFDC_Projects__c limit 1];
+		Sign_Up__c p = [SELECT id FROM Sign_Up__c limit 1];
 		ApexPages.currentPage().getParameters().put('accId', acc.id);
 		ApexPages.currentPage().getParameters().put('projectId', p.id);
 		ques.save();

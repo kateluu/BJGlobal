@@ -6,9 +6,6 @@
     <customButtons>Manage_Credits</customButtons>
     <customButtons>Make_a_Refund</customButtons>
     <customButtons>Account_Statement</customButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -106,6 +103,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>AF__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SEO_Account_Manager__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -395,6 +396,7 @@
         <fields>FromSource__c</fields>
         <fields>IPAddress__c</fields>
         <fields>CREATEDBY_USER</fields>
+        <fields>Is_Addon__c</fields>
         <relatedList>Sign_Up__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>

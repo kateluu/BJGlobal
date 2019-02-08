@@ -1,0 +1,16 @@
+<apex:page showHeader="true" sidebar="true" tabStyle="Account" StandardController="Account">
+    <apex:sectionHeader title="NVM Console" subtitle="Teamleaders"/>
+    <apex:pageBlock title="New Voice Media Console">        
+        <apex:outputPanel style="align-self: center;" > 
+            <table border="1" style="width: 100%; background-color:#000000; border-collapse: collapse; align-items: center;text-align: center; padding:5px; padding-bottom: 5px; font-size: 12pt; ">
+                <tbody>
+                    <tr>
+                        <td style="width: 34%;" ><apex:outputLink onclick="window.open('https://cloud12.contact-world.net/CallCentre/portal/realtime')" style="color: #ffffff;"> NVM Home Page     </apex:outputLink></td>
+                        <td style="width: 34%;"><apex:outputLink onclick="window.open('https://cloud12.contact-world.net/CallCentre/portal/dashboards')" style="color: #ffffff;"> NVM Dashboards    </apex:outputLink></td>
+                        <td style="width: 34%;"><apex:outputLink onclick="window.open('https://cloud12.contact-world.net/CallCentre/portal/realtime')" style="color: #ffffff;"> NVM RealTime Status </apex:outputLink></td>
+                    </tr>
+                </tbody>
+            </table>
+        </apex:outputPanel>
+    </apex:pageBlock>
+</apex:page>

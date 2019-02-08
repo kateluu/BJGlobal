@@ -4,7 +4,7 @@ global class cancelProductStatusIterable implements Iterator<Account_Product__c>
 	Integer i {get;set;}
 	
 	public cancelProductStatusIterable() {
-		this.cancelProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c FROM Account_Product__c WHERE cancelat__c = today and Product_Status__c != 'Cancelled'];
+		this.cancelProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c,  Last_Paid_Date__c , From_Last_Paid_Date__c, cancelat__c, TP_Record_Id__c FROM Account_Product__c WHERE cancelat__c = today and Product_Status__c != 'Cancelled'];
 		this.i = 0;		
 	}
 	global boolean hasNext() {

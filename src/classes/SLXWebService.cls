@@ -1445,8 +1445,17 @@ OLD VERSION of the above function, using batches instead of Invoice__c.Issue_Dat
     static testMethod void getTodayInvoiceListTest() {
         Test.startTest();
 
-        Account account = new Account(name='test',company__c='test',username__c='test',password__c='test',Name_On_Card__c='test test',Card_Number__c='1111222233334444',Card_Month_Expiry__c='02',Card_Year_Expiry__c='11',Xero_Sync_ID__c='E786047F-6DD3-4D62-B28D-6100D373AA08');
+        Account account = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
         insert account;
+
+        List<Account_Product__c> testProducts = new List<Account_Product__c>();
+        for(Integer i=0;i<1;i++) {                              
+            Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = account.id , 
+                          recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Traditional Products').getRecordTypeId());
+            testProducts.add(item);
+        }
+        insert testProducts; 
+
         Contact contact = new Contact(FirstName='test',LastName='test',Title='Billing',Email='Email@email.com',MailingStreet='MailingStreet',MailingCity='MailingCity',MailingPostalCode='MailingPostalCode',MailingState='MailingState',MailingCountry='MailingCountry',AccountId=account.Id);
         insert contact;
 
@@ -1466,6 +1475,7 @@ OLD VERSION of the above function, using batches instead of Invoice__c.Issue_Dat
         invoice1.Payment_Batch__c = null;
         invoice1.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
         invoice1.Account__c = account.Id;
+        invoice1.Account_Product__c = testProducts.get(0).Id;
         invoice1.Amount_Due__c = 4.50;
 
         Invoice__c invoice2 = new Invoice__c();
@@ -1476,6 +1486,7 @@ OLD VERSION of the above function, using batches instead of Invoice__c.Issue_Dat
         invoice2.Payment_Batch__c = null;
         invoice2.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
         invoice2.Account__c = account.Id;
+        invoice2.Account_Product__c = testProducts.get(0).Id;
         invoice2.Amount_Due__c = 3.50;
 
         Invoice__c invoice3 = new Invoice__c();
@@ -1486,6 +1497,7 @@ OLD VERSION of the above function, using batches instead of Invoice__c.Issue_Dat
         invoice3.Payment_Batch__c = null;
         invoice3.Xero_Contact_Id__c = 'E786047F-6FF3-4D62-B28D-6100D373AA08';
         invoice3.Account__c = account.Id;
+        invoice3.Account_Product__c = testProducts.get(0).Id;
         invoice3.Amount_Due__c = 1.50;
 
         insert invoice1;

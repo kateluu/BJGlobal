@@ -13,7 +13,7 @@
         </recipients>
         <senderAddress>signup@sponsoredlinx.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>Projects/GMT_Webcontent_Questionnaire</template>
+        <template>Sign_Up/GMT_Webcontent_Questionnaire</template>
     </alerts>
     <alerts>
         <fullName>GMT_Questionnaire_Reminder</fullName>
@@ -28,7 +28,28 @@
         </recipients>
         <senderAddress>signup@sponsoredlinx.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>Projects/GMT_Questionnaire_Reminder</template>
+        <template>Sign_Up/GMT_Questionnaire_Reminder</template>
+    </alerts>
+    <alerts>
+        <fullName>New_SEO_Content_Project_Notification</fullName>
+        <description>New SEO Content Project Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Projects/SEO_Content_Pack</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_new_DIFM_project_to_Web_Team_Manager</fullName>
+        <description>Notify new DIFM project to Web Team Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Projects/DIFM_Project</template>
     </alerts>
     <alerts>
         <fullName>SLX_Questionnaire_Form</fullName>
@@ -43,7 +64,7 @@
         </recipients>
         <senderAddress>signup@sponsoredlinx.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>Projects/SLX_Webcontent_Questionnaire</template>
+        <template>Sign_Up/SLX_Webcontent_Questionnaire</template>
     </alerts>
     <alerts>
         <fullName>SLX_Questionnaire_Reminder</fullName>
@@ -58,7 +79,7 @@
         </recipients>
         <senderAddress>signup@sponsoredlinx.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>Projects/SLX_Questionnaire_reminder</template>
+        <template>Sign_Up/SLX_Questionnaire_reminder</template>
     </alerts>
     <alerts>
         <fullName>X60_Days_Pending_Project_Info_Alert</fullName>
@@ -71,6 +92,16 @@
         <senderType>CurrentUser</senderType>
         <template>Projects/Alert_Pending_Project_Info_for_60_Days</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Update_Owner_Email</fullName>
+        <description>Update Owner Email</description>
+        <field>Owner_Email__c</field>
+        <formula>Owner:User.Email</formula>
+        <name>Update Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
     <fieldUpdates>
         <fullName>Update_Pending_Project_Info_Date</fullName>
         <field>Pending_Project_Info_Date__c</field>
@@ -158,6 +189,36 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Notify new DIFM project</fullName>
+        <actions>
+            <name>Notify_new_DIFM_project_to_Web_Team_Manager</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SFDC_Projects__c.Project_Type__c</field>
+            <operation>equals</operation>
+            <value>DIFM</value>
+        </criteriaItems>
+        <description>Notify new DIFM to web team</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify new seo content pack</fullName>
+        <actions>
+            <name>New_SEO_Content_Project_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SFDC_Projects__c.Project_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO Content Pack</value>
+        </criteriaItems>
+        <description>Notify new seo content pack to web team</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
         <fullName>Pending Project Info Date</fullName>
         <actions>
             <name>Update_Pending_Project_Info_Date</name>
@@ -213,6 +274,20 @@
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
+    <rules>
+        <fullName>Project Update Owner Email</fullName>
+        <actions>
+            <name>Update_Owner_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>SFDC_Projects__c.OwnerId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update Owner Email</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
     <tasks>
         <fullName>First_Call</fullName>
         <assignedToType>owner</assignedToType>
@@ -225,8 +300,7 @@
     </tasks>
     <tasks>
         <fullName>INTERNAL_Level_1_Audit</fullName>
-        <assignedTo>tom.caffrey@sponsoredlinx.com</assignedTo>
-        <assignedToType>user</assignedToType>
+        <assignedToType>owner</assignedToType>
         <dueDateOffset>1</dueDateOffset>
         <notifyAssignee>false</notifyAssignee>
         <priority>Normal</priority>

@@ -13,6 +13,11 @@
             <operator>equals</operator>
             <value>Not Started</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Activity.isOwnerActive__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>

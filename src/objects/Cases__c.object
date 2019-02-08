@@ -75,7 +75,7 @@
         <label>Account Product</label>
         <referenceTo>Account_Product__c</referenceTo>
         <relationshipLabel>Cases</relationshipLabel>
-        <relationshipName>Cases</relationshipName>
+        <relationshipName>CustomCases</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
@@ -149,6 +149,58 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Advanced_Client_Cancel_Reasons__c</fullName>
+        <description>Advanced Client Cancel Reasons</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advanced Client Cancel Reasons</inlineHelpText>
+        <label>Advanced Client Cancel Reasons</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advanced_Extra_CM_Notes__c</fullName>
+        <description>Advanced Extra CM Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advanced Extra CM Notes</inlineHelpText>
+        <label>Advanced Extra CM Notes</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advanced_Resolution_Manager_Notes__c</fullName>
+        <description>Advanced Resolution Manager Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advanced Resolution Manager Notes</inlineHelpText>
+        <label>Advanced Resolution Manager Notes</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Advcanced_CM_Concerns__c</fullName>
+        <description>Advanced Account Info/Concerns with formatted text</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advanced Account Info/Concerns with formatted text</inlineHelpText>
+        <label>Advanced Account Info/Concerns</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
         <fullName>Adwords_ID__c</fullName>
         <externalId>false</externalId>
         <formula>Account_Product__r.Adwords_ID__c</formula>
@@ -183,6 +235,21 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BTS__c</fullName>
+        <externalId>false</externalId>
+        <formula>or(
+includes(Case_Reason__c, &apos;BTS:Act of God&apos;),
+includes(Case_Reason__c, &apos;BTS:Issues re SLX or Google Fees/Budget&apos;),
+includes(Case_Reason__c, &apos;BTS:Signup not compl by Decision maker&apos;),
+includes(Case_Reason__c, &apos;BTS:Technical/Legal/Industry std issues&apos;)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BTS</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Billing_Resolution__c</fullName>
@@ -363,7 +430,7 @@
         </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>10</visibleLines>
@@ -377,6 +444,16 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Case_Contact_History__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Contact History</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
     </fields>
     <fields>
         <fullName>Case_Open_Time__c</fullName>
@@ -492,6 +569,26 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>CM:Previous CM Not Completed Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM:Previous CM Insuffient Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM:Previous CM Account Mistakes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM:Previous CM To Many Reassigns</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM:Previous CM Lack Of ROI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>CM: Didn&apos;t see account was down</fullName>
                 <default>false</default>
             </picklistValues>
@@ -512,11 +609,75 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>CM: AdWords Acc Not Performing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Insufficent Budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Acc Run Time Insufficent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Niche Industry Lack Of Searches</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Client Not Answering Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Poor Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Client Not Cooperating</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Impossible To Educate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: To Many Reassigns</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>CM: Resume off pause - now cancelling</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>CM: CM error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Lack Of Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Lack Of Account Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Budget Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Targeting Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Billing Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Mistakes In Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CM: Cm Didn&apos;t See Account Down</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -560,6 +721,10 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Client:Shutting Down Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Client:Cannot get in contact with client</fullName>
                 <default>false</default>
             </picklistValues>
@@ -568,11 +733,27 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
                 <default>false</default>
             </picklistValues>
             <picklistValues>
+                <fullName>Client:Can Not Afford Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Can Not Afford Google Spend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
                 <fullName>Client:Client illness</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Client:Competitor had better offer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Gone To Competitor For Holistic Package</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Client:Gone To Competitor Cheaper Package</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -990,6 +1171,18 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <type>DateTime</type>
     </fields>
     <fields>
+        <fullName>Has_the_save_strategy_been_implemented__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Has the save strategy been implemented</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the save strategy been implemented</inlineHelpText>
+        <label>save strategy implemented?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Have_Confirmed_to_Turn_Off_AdWords_Acct__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1142,6 +1335,20 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Owner_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The manager of case owner</description>
+        <externalId>false</externalId>
+        <label>Owner Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CasesOwnerManagers</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Owner_Role__c</fullName>
@@ -1439,7 +1646,7 @@ MIN(1, 24/8*(MOD(escalated_date__c-DATETIMEVALUE(&apos;1996-01-01 22:00:00&apos;
         <relationshipName>Cases2</relationshipName>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
+        <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -1805,12 +2012,76 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
     </fields>
     <label>Cases</label>
     <listViews>
-        <fullName>Alex_Escalated_Cases</fullName>
+        <fullName>APAC_Back_To_Sales_GMT</fullName>
+        <columns>Urgent_Flag__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Account__c</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>BTS__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>BJB_Company__c</field>
+            <operation>contains</operation>
+            <value>Get More Traffic</value>
+        </filters>
+        <label>Back To Sales For GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+            <group>Cody_Peche</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Back_To_Sales_SLX</fullName>
+        <columns>Urgent_Flag__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Account__c</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>BJB_Company__c</field>
+            <operation>contains</operation>
+            <value>Sponsoredlinx</value>
+        </filters>
+        <filters>
+            <field>BTS__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Back To Sales For SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Alex_Case_List_To_Action</fullName>
         <columns>Urgent_Flag__c</columns>
         <columns>NAME</columns>
         <columns>Account__c</columns>
+        <columns>Cancel_by__c</columns>
         <columns>X2012_Original_Request_Date__c</columns>
+        <columns>Status__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>escalated_date__c</columns>
         <columns>LAST_UPDATE</columns>
         <columns>CaseType__c</columns>
         <columns>OWNER.FIRST_NAME</columns>
@@ -1818,8 +2089,6 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <columns>Resolution_Manager_Notes__c</columns>
         <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
         <columns>Resolution_Manager__c</columns>
-        <columns>Case_Open_Time__c</columns>
-        <columns>Product_Type__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Status__c</field>
@@ -1828,7 +2097,7 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         </filters>
         <filters>
             <field>Resolution_Manager__c</field>
-            <operation>equals</operation>
+            <operation>contains</operation>
             <value>Alexandra Brown</value>
         </filters>
         <label>Alex Brown Case List To Action</label>
@@ -1849,6 +2118,11 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <columns>X2012_Cancellation_Waiver_approved__c</columns>
         <columns>X2012_Cancellation_Waiver_Requested__c</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_MONTHS:6</value>
+        </filters>
         <label>All</label>
         <sharedTo>
             <role>SLX_Aus_Receptionist</role>
@@ -1914,8 +2188,10 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <columns>CaseType__c</columns>
         <columns>Account__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
         <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
-        <columns>Sales_Person__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Product_Type__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Status__c</field>
@@ -1923,9 +2199,9 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
             <value>Escalated</value>
         </filters>
         <filters>
-            <field>OWNER.LAST_NAME</field>
-            <operation>contains</operation>
-            <value>staunton,anderson,wilson,watson,porter</value>
+            <field>BTS__c</field>
+            <operation>equals</operation>
+            <value>1</value>
         </filters>
         <label>Back to Sales</label>
         <sharedTo>
@@ -2005,35 +2281,6 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Carly_Snyman_Case_List_To_Action</fullName>
-        <columns>Urgent_Flag__c</columns>
-        <columns>NAME</columns>
-        <columns>Account__c</columns>
-        <columns>X2012_Original_Request_Date__c</columns>
-        <columns>CREATED_DATE</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>CaseType__c</columns>
-        <columns>OWNER.FIRST_NAME</columns>
-        <columns>X2012_CM_Proposed_Action__c</columns>
-        <columns>Resolution_Manager_Notes__c</columns>
-        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
-        <columns>Resolution_Manager__c</columns>
-        <columns>Case_Open_Time__c</columns>
-        <columns>Product_Type__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Status__c</field>
-            <operation>equals</operation>
-            <value>Escalated</value>
-        </filters>
-        <filters>
-            <field>Resolution_Manager__c</field>
-            <operation>equals</operation>
-            <value>Carly Snyman</value>
-        </filters>
-        <label>Carly Snyman Case List To Action</label>
-    </listViews>
-    <listViews>
         <fullName>Charge_Backs</fullName>
         <columns>NAME</columns>
         <columns>Account__c</columns>
@@ -2059,16 +2306,42 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>Conor_Escalated_Cases</fullName>
+        <columns>Urgent_Flag__c</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Cancel_by__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Conor McCown-Butt</value>
+        </filters>
+        <label>Conor Case List To Action</label>
+    </listViews>
+    <listViews>
         <fullName>Daniel_s_Escalated_Cases</fullName>
         <columns>NAME</columns>
         <columns>Account__c</columns>
         <columns>X2012_Original_Request_Date__c</columns>
         <columns>CREATED_DATE</columns>
         <columns>LAST_UPDATE</columns>
+        <columns>Cancel_by__c</columns>
         <columns>CaseType__c</columns>
         <columns>OWNER.FIRST_NAME</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
         <columns>X2012_CM_Proposed_Action__c</columns>
-        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
         <columns>Resolution_Manager__c</columns>
         <columns>Case_Open_Time__c</columns>
         <columns>Product_Type__c</columns>
@@ -2081,9 +2354,9 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <filters>
             <field>Resolution_Manager__c</field>
             <operation>equals</operation>
-            <value>Ben Brown</value>
+            <value>Roxanne Edmonds</value>
         </filters>
-        <label>Ben Brown&apos;s  Escalated Cases</label>
+        <label>Rox&apos;s Escalated Cases</label>
         <sharedTo>
             <group>Daniel_Carey</group>
         </sharedTo>
@@ -2091,15 +2364,19 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
     <listViews>
         <fullName>Escalated</fullName>
         <columns>NAME</columns>
+        <columns>Cancel_by__c</columns>
         <columns>Urgent_Flag__c</columns>
+        <columns>Resolution_Manager__c</columns>
         <columns>Account__c</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
         <columns>X2012_Original_Request_Date__c</columns>
         <columns>escalated_date__c</columns>
-        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>LAST_UPDATE</columns>
         <columns>X2012_E_mail_or_Phone_Summary__c</columns>
         <columns>X2012_CM_Comments__c</columns>
         <columns>X2012_Action_Taken_to_Save__c</columns>
         <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Status__c</field>
@@ -2109,7 +2386,22 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <filters>
             <field>Resolution_Manager__c</field>
             <operation>contains</operation>
-            <value>conor</value>
+            <value>,Nurmala,Conor,Kylie,Alex,David</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <filters>
+            <field>CaseType__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </filters>
+        <filters>
+            <field>OWNER.FIRST_NAME</field>
+            <operation>notContain</operation>
+            <value>Toby,Amber,James,Ben,Michael,Cody,Stephen</value>
         </filters>
         <label>All Escalated Cases</label>
         <sharedTo>
@@ -2318,10 +2610,31 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
             <value>conor</value>
         </filters>
         <label>New Escalated Cases</label>
-        <sharedTo>
-            <group>David_Powell</group>
-            <group>William_Zhang</group>
-        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>New_Escalated_Edited</fullName>
+        <columns>NAME</columns>
+        <columns>Urgent_Flag__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>escalated_date__c</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>UPDATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>API</value>
+        </filters>
+        <label>Escalated Cases - Edited</label>
     </listViews>
     <listViews>
         <fullName>NotEscalated</fullName>
@@ -2344,6 +2657,81 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
             <value>Escalated</value>
         </filters>
         <label>All Not Escalated Cases</label>
+        <sharedTo>
+            <role>BJBGlobalCEO</role>
+            <role>SLXAusClientOperationsManager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Nurmala_Escalated_Cases</fullName>
+        <columns>Urgent_Flag__c</columns>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Cancel_by__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager_Notes__c</columns>
+        <columns>X2012_Action_Taken_to_Save__c</columns>
+        <columns>Case_Reason__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>contains</operation>
+            <value>Nurmala</value>
+        </filters>
+        <label>Nurmala Case List To Action</label>
+    </listViews>
+    <listViews>
+        <fullName>RM_TEAM_CASES_All</fullName>
+        <columns>NAME</columns>
+        <columns>First_Success_Call__c</columns>
+        <columns>Account__c</columns>
+        <columns>X2012_Original_Request_Date__c</columns>
+        <columns>CaseType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>X2012_CM_Proposed_Action__c</columns>
+        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Resolution_Manager__c</columns>
+        <columns>Case_Open_Time__c</columns>
+        <columns>Product_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Escalated</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Cameron Asher</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>equals</operation>
+            <value>Alexandra Brown</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>contains</operation>
+            <value>Conor</value>
+        </filters>
+        <filters>
+            <field>Resolution_Manager__c</field>
+            <operation>contains</operation>
+            <value>Darcia</value>
+        </filters>
+        <label>RM TEAM CASES - All</label>
         <sharedTo>
             <role>BJBGlobalCEO</role>
             <role>SLXAusClientOperationsManager</role>
@@ -2647,37 +3035,6 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Tuis_Escalated_Cases</fullName>
-        <columns>NAME</columns>
-        <columns>Account__c</columns>
-        <columns>CaseType__c</columns>
-        <columns>X2012_Original_Request_Date__c</columns>
-        <columns>CREATED_DATE</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>OWNER.FIRST_NAME</columns>
-        <columns>X2012_CM_Proposed_Action__c</columns>
-        <columns>X2012_Final_Action_FOR_MANAGERS__c</columns>
-        <columns>Resolution_Manager__c</columns>
-        <columns>Case_Open_Time__c</columns>
-        <columns>Product_Type__c</columns>
-        <columns>LAST_ACTIVITY</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Status__c</field>
-            <operation>equals</operation>
-            <value>Escalated</value>
-        </filters>
-        <filters>
-            <field>Resolution_Manager__c</field>
-            <operation>equals</operation>
-            <value>Tuifao Pi</value>
-        </filters>
-        <label>Tuis Escalated Cases</label>
-        <sharedTo>
-            <group>Daniel_Carey</group>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>Unresolved</fullName>
         <columns>NAME</columns>
         <columns>Account_Resolution__c</columns>
@@ -2711,6 +3068,15 @@ IMAGE(&apos;https://sponsoredlinx--c.ap4.content.force.com/servlet/servlet.FileD
         <filterScope>Queue</filterScope>
         <label>UnresolvedApprovalTeam</label>
         <queue>UnresolvedApprovalTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>UnresolvedDSApprovalTeam_Cases</fullName>
+        <filterScope>Queue</filterScope>
+        <label>UnresolvedDSApprovalTeam</label>
+        <queue>UnresolvedDSApprovalTeam</queue>
         <sharedTo>
             <allInternalUsers></allInternalUsers>
         </sharedTo>
@@ -2858,4 +3224,17 @@ CONTAINS(Product_Type__c, &apos;Social&apos;)
 &amp;&amp; (NOT(ISCHANGED(Status__c)))</errorConditionFormula>
         <errorMessage>Sorry. It is an escalated case , please contact the Resolution Manager to request any update. Thanks</errorMessage>
     </validationRules>
+    <webLinks>
+        <fullName>New_Cases</fullName>
+        <availability>online</availability>
+        <description>The custom button support prepopulate look relation fields when create a new case</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Cases</masterLabel>
+        <openType>sidebar</openType>
+        <page>CasesCustomNewPage</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
 </CustomObject>

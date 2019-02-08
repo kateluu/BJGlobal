@@ -116,7 +116,7 @@
     <groupingsDown>
         <dateGranularity>Week</dateGranularity>
         <field>Cases__c.Cancellation_Date__c</field>
-        <sortOrder>Asc</sortOrder>
+        <sortOrder>Desc</sortOrder>
     </groupingsDown>
     <name>SLX outbound sales BTS report</name>
     <params>
@@ -128,8 +128,6 @@
     <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
-        <endDate>2018-06-30</endDate>
-        <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2017-11-01</startDate>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

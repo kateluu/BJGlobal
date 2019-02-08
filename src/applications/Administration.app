@@ -3,22 +3,23 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>Administration</label>
     <logo>BLND_Logos_Identity/SLX_Logo.png</logo>
+    <tab>activities__Activities</tab>
     <tab>standard-Chatter</tab>
     <tab>standard-File</tab>
-    <tab>Lead__c</tab>
-    <tab>SLXOpportunity__c</tab>
-    <tab>SLX_Product__c</tab>
     <tab>Sign_Up__c</tab>
-    <tab>Promocode__c</tab>
     <tab>standard-Account</tab>
-    <tab>Invoice_Batch__c</tab>
-    <tab>Cases__c</tab>
-    <tab>seoWebsite__c</tab>
     <tab>Account_Product__c</tab>
+    <tab>Cases__c</tab>
+    <tab>standard-report</tab>
     <tab>Invoice__c</tab>
+    <tab>Invoice_Batch__c</tab>
     <tab>Payments</tab>
-    <tab>Account_Search</tab>
+    <tab>SFDC_Projects__c</tab>
     <tab>Sign_Up_History</tab>
+    <tab>Promocode__c</tab>
+    <tab>SLX_Product__c</tab>
+    <tab>seoWebsite__c</tab>
+    <tab>Account_Search</tab>
     <tab>Promotions__c</tab>
     <tab>Company__c</tab>
     <tab>Mcc_login__c</tab>
@@ -32,4 +33,7 @@
     <tab>Daily_Stats__c</tab>
     <tab>Questionnaire__c</tab>
     <tab>ss_NonLogin__c</tab>
+    <tab>Web_Content__c</tab>
+    <tab>NVM_Information</tab>
+    <tab>Signup_Payments__c</tab>
 </CustomApplication>

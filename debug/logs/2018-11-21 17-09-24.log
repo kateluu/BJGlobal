@@ -1,0 +1,245 @@
+36.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+17:09:23.0 (444593)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+17:09:23.0 (497667)|EXECUTION_STARTED
+17:09:23.0 (502544)|CODE_UNIT_STARTED|[EXTERNAL]|TRIGGERS
+17:09:23.0 (539760)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000001IGJa|LinkCaseCallstoContact on Task trigger event BeforeInsert|__sfdc_trigger/LinkCaseCallstoContact
+17:09:23.0 (599157)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:09:23.0 (1078630)|HEAP_ALLOCATE|[72]|Bytes:3
+17:09:23.0 (1132723)|HEAP_ALLOCATE|[77]|Bytes:152
+17:09:23.0 (1156551)|HEAP_ALLOCATE|[342]|Bytes:408
+17:09:23.0 (1178613)|HEAP_ALLOCATE|[355]|Bytes:408
+17:09:23.0 (1199684)|HEAP_ALLOCATE|[467]|Bytes:48
+17:09:23.0 (1238363)|HEAP_ALLOCATE|[139]|Bytes:6
+17:09:23.0 (1260450)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+17:09:23.0 (1280823)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (1293581)|VARIABLE_SCOPE_BEGIN|[1]|this|LinkCaseCallstoContact|true|false
+17:09:23.0 (1349281)|VARIABLE_ASSIGNMENT|[1]|this|{}|0xd209788
+17:09:23.0 (1430165)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (1440721)|VARIABLE_SCOPE_BEGIN|[1]|this|LinkCaseCallstoContact|true|false
+17:09:23.0 (1458779)|VARIABLE_ASSIGNMENT|[1]|this|{}|0xd209788
+17:09:23.0 (1471587)|STATEMENT_EXECUTE|[1]
+17:09:23.0 (1510082)|HEAP_ALLOCATE|[50]|Bytes:5
+17:09:23.0 (1541230)|HEAP_ALLOCATE|[56]|Bytes:5
+17:09:23.0 (1553990)|HEAP_ALLOCATE|[64]|Bytes:7
+17:09:23.0 (1970462)|HEAP_ALLOCATE|[2]|Bytes:5
+17:09:23.0 (2026411)|HEAP_ALLOCATE|[2]|Bytes:4
+17:09:23.0 (2046418)|VARIABLE_SCOPE_BEGIN|[2]|tsk|Task|true|false
+17:09:23.0 (18203260)|VARIABLE_ASSIGNMENT|[2]|tsk|{"WhatId":"0016F00002zxANhQAM","CallType":"Outbound","IsHighPriority":false,"IsClosed":false,"NVMStatsSF__NVM_Agent__c":"19","Is_Mobile_Number__c":true,"OwnerId":"0056F00000A9HoPQAV","IsToday__c":false,"IsReminderSet":false,"Status":"Completed","IsDeleted":false,"NVMContactWorld__CW_Call_Start_Time__c":"2018-11-21T07:09:22.000Z","ActivityDate":"2018-11-21T00:00:00.000Z","Priority":"Normal","IsVisibleInSelfService":false,"NVMContactWorld__Was_Call_Recorded__c":false,"CurrencyIsoCode":"AUD","IsRecurrence":false,"Subject":"Outbound call to +61 (9 more) ...","IsArchived":false,"CallObject":"0167351a-1840-53ea-4 (16 more) ...","NVMContactWorld__Customer_Number__c":"+61412945681","NVMContactWorld__ContactWorld_Number__c":"61731530806","Day_of_the_Week__c":"Wednesday","Call_Duration_min__c":0.00,"Call_Monitored__c":false}|0xfa5c40
+17:09:23.0 (18246134)|STATEMENT_EXECUTE|[2]
+17:09:23.0 (18307342)|HEAP_ALLOCATE|[4]|Bytes:8
+17:09:23.0 (18382641)|STATEMENT_EXECUTE|[4]
+17:09:23.0 (18386010)|STATEMENT_EXECUTE|[5]
+17:09:23.0 (19593470)|USER_DEBUG|[5]|DEBUG|Task:{Id=null, WhoId=null, WhatId=0016F00002zxANhQAM, Subject=Outbound call to +61412945681, ActivityDate=2018-11-21 00:00:00, Status=Completed, Priority=Normal, IsHighPriority=false, OwnerId=0056F00000A9HoPQAV, Description=null, CurrencyIsoCode=AUD, Type=null, IsDeleted=false, AccountId=null, IsClosed=false, CreatedDate=null, CreatedById=null, LastModifiedDate=null, LastModifiedById=null, SystemModstamp=null, IsArchived=false, IsVisibleInSelfService=false, CallDurationInSeconds=null, CallType=Outbound, CallDisposition=null, CallObject=0167351a-1840-53ea-46bd-33721999056b, ReminderDateTime=null, IsReminderSet=false, ConnectionReceivedId=null, ConnectionSentId=null, RecurrenceActivityId=null, IsRecurrence=false, RecurrenceStartDateOnly=null, RecurrenceEndDateOnly=null, RecurrenceTimeZoneSidKey=null, RecurrenceType=null, RecurrenceInterval=null, RecurrenceDayOfWeekMask=null, RecurrenceDayOfMonth=null, RecurrenceInstance=null, RecurrenceMonthOfYear=null, RecurrenceRegeneratedType=null, TaskSubtype=null, NVMContactWorld__ACD__c=null, NVMContactWorld__CW_Call_End_Time__c=null, NVMContactWorld__CW_Call_Start_Time__c=2018-11-21 07:09:22, NVMContactWorld__CallRingTimeInSeconds__c=null, NVMContactWorld__CallTalkTimeInSeconds__c=null, NVMContactWorld__ContactWorld_Number__c=61731530806, NVMContactWorld__Customer_Number__c=+61412945681, NVMContactWorld__InteractionQuality__c=null, NVMContactWorld__Service_Name__c=null, NVMContactWorld__Was_Call_Recorded__c=false, Call_Monitored__c=false, Monitored_By__c=null, Call_Outcome_Result__c=null, Monitored_Date__c=null, Demonstrate_active_listening__c=null, Communication_is_clear_positive_confiden__c=null, Mirrors_clients_talking_behaviour__c=null, Built_Rapport__c=null, Allow_customer_to_present_concerns__c=null, Gave_correct_answers_and_infomations__c=null, CM_advised_what_will_happen_next__c=null, TL_Notes__c=null, Day_of_the_Week__c=Wednesday, Email_Received_Date__c=null, Email_Response_Time__c=null, Call_Duration_converted__c=null, Email_Received_Date_Business_Hour__c=null, NVMStatsSF__NVM_Agent__c=19, Is_Mobile_Number__c=true, Call_Duration_min__c=0.00, IsToday__c=false}
+17:09:23.0 (19650420)|STATEMENT_EXECUTE|[6]
+17:09:23.0 (19653876)|STATEMENT_EXECUTE|[6]
+17:09:23.0 (19656342)|STATEMENT_EXECUTE|[7]
+17:09:23.0 (19671207)|HEAP_ALLOCATE|[7]|Bytes:65
+17:09:23.0 (19697384)|HEAP_ALLOCATE|[7]|Bytes:4
+17:09:23.0 (19715078)|HEAP_ALLOCATE|[7]|Bytes:7
+17:09:23.0 (22689153)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT Id, Account__c, phone__c FROM Cases__c WHERE id = :tmpVar1
+17:09:23.0 (25138962)|SOQL_EXECUTE_END|[7]|Rows:0
+17:09:23.0 (25177702)|HEAP_ALLOCATE|[7]|Bytes:4
+17:09:23.0 (25192452)|HEAP_ALLOCATE|[7]|Bytes:0
+17:09:23.0 (25271843)|HEAP_ALLOCATE|[7]|Bytes:4
+17:09:23.0 (25292592)|HEAP_ALLOCATE|[7]|Bytes:34
+17:09:23.0 (25396216)|HEAP_ALLOCATE|[7]|Bytes:46
+17:09:23.0 (25441211)|VARIABLE_SCOPE_BEGIN|[14]|e|Exception|true|false
+17:09:23.0 (25904588)|VARIABLE_ASSIGNMENT|[14]|e|"common.apex.runtime.impl.ExecutionException: List has no rows for assignment to SObject"|0x481bcd95
+17:09:23.0 (25919344)|STATEMENT_EXECUTE|[14]
+17:09:23.0 (25922716)|STATEMENT_EXECUTE|[15]
+17:09:23.0 (25993102)|HEAP_ALLOCATE|[15]|Bytes:42
+17:09:23.0 (26024041)|USER_DEBUG|[15]|DEBUG|List has no rows for assignment to SObject
+17:09:23.0 (26053705)|HEAP_ALLOCATE|[2]|Bytes:5
+17:09:23.0 (26076106)|VARIABLE_ASSIGNMENT|[2]|tsk|null|
+17:09:23.26 (26092185)|CUMULATIVE_LIMIT_USAGE
+17:09:23.26 (26092185)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:09:23.26 (26092185)|CUMULATIVE_LIMIT_USAGE_END
+
+17:09:23.0 (27219131)|CODE_UNIT_FINISHED|LinkCaseCallstoContact on Task trigger event BeforeInsert|__sfdc_trigger/LinkCaseCallstoContact
+17:09:23.0 (30418044)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000001IKsI|TaskTrigger on Task trigger event BeforeInsert|__sfdc_trigger/TaskTrigger
+17:09:23.0 (30473400)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:09:23.0 (30590003)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (30611627)|VARIABLE_SCOPE_BEGIN|[5]|this|TaskTrigger|true|false
+17:09:23.0 (30662853)|VARIABLE_ASSIGNMENT|[5]|this|{}|0x2c5ecbb0
+17:09:23.0 (30760476)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (30774523)|VARIABLE_SCOPE_BEGIN|[5]|this|TaskTrigger|true|false
+17:09:23.0 (30798385)|VARIABLE_ASSIGNMENT|[5]|this|{}|0x2c5ecbb0
+17:09:23.0 (30812310)|STATEMENT_EXECUTE|[5]
+17:09:23.0 (30847372)|STATEMENT_EXECUTE|[6]
+17:09:23.0 (30850627)|STATEMENT_EXECUTE|[7]
+17:09:23.0 (33170466)|VARIABLE_SCOPE_BEGIN|[2]|TaskHelper.TASK_STATUS|String|false|true
+17:09:23.0 (33187123)|VARIABLE_SCOPE_BEGIN|[3]|TaskHelper.TASK_SUBJECT|String|false|true
+17:09:23.0 (33195186)|VARIABLE_SCOPE_BEGIN|[4]|TaskHelper.TASK_TYPE|String|false|true
+17:09:23.0 (33233348)|HEAP_ALLOCATE|[7]|Bytes:4
+17:09:23.0 (33243546)|HEAP_ALLOCATE|[7]|Bytes:2
+17:09:23.0 (33264378)|METHOD_ENTRY|[1]|01p6F000009rWtF|TaskHelper.TaskHelper()
+17:09:23.0 (33272460)|STATEMENT_EXECUTE|[1]
+17:09:23.0 (33276816)|STATEMENT_EXECUTE|[1]
+17:09:23.0 (33278376)|STATEMENT_EXECUTE|[2]
+17:09:23.0 (33290350)|HEAP_ALLOCATE|[2]|Bytes:9
+17:09:23.0 (33312401)|VARIABLE_ASSIGNMENT|[2]|TaskHelper.TASK_STATUS|"Completed"
+17:09:23.0 (33318054)|STATEMENT_EXECUTE|[3]
+17:09:23.0 (33323300)|HEAP_ALLOCATE|[3]|Bytes:16
+17:09:23.0 (33331897)|VARIABLE_ASSIGNMENT|[3]|TaskHelper.TASK_SUBJECT|"Outbound call to"
+17:09:23.0 (33336591)|STATEMENT_EXECUTE|[4]
+17:09:23.0 (33344117)|VARIABLE_ASSIGNMENT|[4]|TaskHelper.TASK_TYPE|"Outbound"
+17:09:23.0 (33352264)|METHOD_EXIT|[1]|TaskHelper
+17:09:23.0 (33365047)|HEAP_ALLOCATE|[7]|Bytes:4
+17:09:23.0 (33380501)|CONSTRUCTOR_ENTRY|[7]|01p6F000009rWtF|<init>()|TaskHelper
+17:09:23.0 (33410968)|VARIABLE_SCOPE_BEGIN|[1]|this|TaskHelper|true|false
+17:09:23.0 (33435594)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40a6c597
+17:09:23.0 (33447479)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+17:09:23.0 (33483134)|STATEMENT_EXECUTE|[1]
+17:09:23.0 (33488744)|CONSTRUCTOR_EXIT|[7]|01p6F000009rWtF|<init>()|TaskHelper
+17:09:23.0 (33496921)|VARIABLE_SCOPE_BEGIN|[7]|helper|TaskHelper|true|false
+17:09:23.0 (33511103)|VARIABLE_ASSIGNMENT|[7]|helper|{}|0x40a6c597
+17:09:23.0 (33516732)|STATEMENT_EXECUTE|[8]
+17:09:23.0 (33572851)|METHOD_ENTRY|[8]|01p6F000009rWtF|TaskHelper.setupContactToReurnCallTasks(List<Task>)
+17:09:23.0 (33597281)|VARIABLE_SCOPE_BEGIN|[11]|this|TaskHelper|true|false
+17:09:23.0 (33611119)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x40a6c597
+17:09:23.0 (33617422)|VARIABLE_SCOPE_BEGIN|[11]|newTasks|List<Task>|true|false
+17:09:23.0 (34927361)|VARIABLE_ASSIGNMENT|[11]|newTasks|[{"WhatId":"0016F00002zxANhQAM","CallType":"Outbound","IsHighPriority":false,"IsClosed":false,"NVMStatsSF__NVM_Agent__c":"19","Is_Mobile_Number__c":true,"OwnerId":"0056F00000A9HoPQAV","IsToday__c":false,"IsReminderSet":false,"Status":"Completed","IsDeleted":false,"NVMContactWorld__CW_Call_Start_Time__c":"2018-11-21T07:09:22.000Z","ActivityDate":"2018-11-21T00:00:00.000Z","Priority":"Normal","IsVisibleInSelfService":false,"NVMContactWorld__Was_Call_Recorded__c":false,"CurrencyIsoCode":"AUD","IsRecurrence":false,"Subject":"Outbound call to +61 (9 more) ...","IsArchived":false,"CallObject":"0167351a-1840-53ea-4 (16 more) ...","NVMContactWorld__Customer_Number__c":"+61412945681","NVMContactWorld__ContactWorld_Number__c":"61731530806","Day_of_the_Week__c":"Wednesday","Call_Duration_min__c":0.00,"Call_Monitored__c":false}]|0x70471a40
+17:09:23.0 (34950201)|STATEMENT_EXECUTE|[11]
+17:09:23.0 (34952593)|STATEMENT_EXECUTE|[12]
+17:09:23.0 (34974717)|HEAP_ALLOCATE|[12]|Bytes:4
+17:09:23.0 (35026386)|VARIABLE_SCOPE_BEGIN|[12]|voicemailIds|List<Id>|true|false
+17:09:23.0 (35053628)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (35065723)|VARIABLE_ASSIGNMENT|[12]|voicemailIds|[]|0x6bbf3a2
+17:09:23.0 (35072223)|STATEMENT_EXECUTE|[13]
+17:09:23.0 (35088207)|HEAP_ALLOCATE|[13]|Bytes:4
+17:09:23.0 (35102088)|VARIABLE_SCOPE_BEGIN|[13]|contactIds|Map<Id,Id>|true|false
+17:09:23.0 (35117226)|VARIABLE_ASSIGNMENT|[13]|contactIds|{}|0x5b310ccf
+17:09:23.0 (35122816)|STATEMENT_EXECUTE|[14]
+17:09:23.0 (35133065)|HEAP_ALLOCATE|[14]|Bytes:4
+17:09:23.0 (35152771)|VARIABLE_SCOPE_BEGIN|[14]|results|List<Task>|true|false
+17:09:23.0 (35161179)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:09:23.0 (35168935)|VARIABLE_ASSIGNMENT|[14]|results|[]|0x437c5c54
+17:09:23.0 (35214640)|HEAP_ALLOCATE|[16]|Bytes:5
+17:09:23.0 (35235803)|HEAP_ALLOCATE|[16]|Bytes:4
+17:09:23.0 (35244904)|VARIABLE_SCOPE_BEGIN|[16]|item|Task|true|false
+17:09:23.0 (36013254)|VARIABLE_ASSIGNMENT|[16]|item|{"WhatId":"0016F00002zxANhQAM","CallType":"Outbound","IsHighPriority":false,"IsClosed":false,"NVMStatsSF__NVM_Agent__c":"19","Is_Mobile_Number__c":true,"OwnerId":"0056F00000A9HoPQAV","IsToday__c":false,"IsReminderSet":false,"Status":"Completed","IsDeleted":false,"NVMContactWorld__CW_Call_Start_Time__c":"2018-11-21T07:09:22.000Z","ActivityDate":"2018-11-21T00:00:00.000Z","Priority":"Normal","IsVisibleInSelfService":false,"NVMContactWorld__Was_Call_Recorded__c":false,"CurrencyIsoCode":"AUD","IsRecurrence":false,"Subject":"Outbound call to +61 (9 more) ...","IsArchived":false,"CallObject":"0167351a-1840-53ea-4 (16 more) ...","NVMContactWorld__Customer_Number__c":"+61412945681","NVMContactWorld__ContactWorld_Number__c":"61731530806","Day_of_the_Week__c":"Wednesday","Call_Duration_min__c":0.00,"Call_Monitored__c":false}|0xfa5c40
+17:09:23.0 (36031677)|STATEMENT_EXECUTE|[16]
+17:09:23.0 (36171774)|STATEMENT_EXECUTE|[17]
+17:09:23.0 (36174447)|STATEMENT_EXECUTE|[18]
+17:09:23.0 (36208351)|HEAP_ALLOCATE|[18]|Bytes:18
+17:09:23.0 (36224776)|HEAP_ALLOCATE|[18]|Bytes:18
+17:09:23.0 (36230445)|VARIABLE_SCOPE_BEGIN|[18]|voicemailId|String|false|false
+17:09:23.0 (36242965)|VARIABLE_ASSIGNMENT|[18]|voicemailId|"0016F00002zxANhQAM"
+17:09:23.0 (36247397)|STATEMENT_EXECUTE|[19]
+17:09:23.0 (36253871)|HEAP_ALLOCATE|[19]|Bytes:57
+17:09:23.0 (36275126)|HEAP_ALLOCATE|[19]|Bytes:18
+17:09:23.0 (36285320)|HEAP_ALLOCATE|[19]|Bytes:75
+17:09:23.0 (36301275)|USER_DEBUG|[19]|DEBUG|TaskHelper :: setupContactToReurnCallTasks :: item.WhatId0016F00002zxANhQAM
+17:09:23.0 (36311662)|HEAP_ALLOCATE|[20]|Bytes:12
+17:09:23.0 (36927767)|HEAP_ALLOCATE|[20]|Bytes:4
+17:09:23.0 (36964107)|HEAP_ALLOCATE|[20]|Bytes:3
+17:09:23.0 (36987316)|STATEMENT_EXECUTE|[20]
+17:09:23.0 (37007477)|HEAP_ALLOCATE|[16]|Bytes:5
+17:09:23.0 (37024617)|VARIABLE_ASSIGNMENT|[16]|item|null|
+17:09:23.0 (37030224)|STATEMENT_EXECUTE|[28]
+17:09:23.0 (37036283)|HEAP_ALLOCATE|[28]|Bytes:72
+17:09:23.0 (37049769)|HEAP_ALLOCATE|[28]|Bytes:4
+17:09:23.0 (38198605)|SOQL_EXECUTE_BEGIN|[28]|Aggregations:0|SELECT Id, Account__c, Contact__c FROM Voicemail__c WHERE id IN :tmpVar1
+17:09:23.0 (41676438)|SOQL_EXECUTE_END|[28]|Rows:0
+17:09:23.0 (41722828)|HEAP_ALLOCATE|[28]|Bytes:4
+17:09:23.0 (41741329)|HEAP_ALLOCATE|[28]|Bytes:0
+17:09:23.0 (41817073)|HEAP_ALLOCATE|[28]|Bytes:4
+17:09:23.0 (41841834)|VARIABLE_SCOPE_BEGIN|[28]|voicemails|List<Voicemail__c>|true|false
+17:09:23.0 (41880732)|VARIABLE_ASSIGNMENT|[28]|voicemails|[]|0x3e9ace48
+17:09:23.0 (42108704)|HEAP_ALLOCATE|[29]|Bytes:5
+17:09:23.0 (42135018)|VARIABLE_ASSIGNMENT|[29]|item|null|
+17:09:23.0 (42144327)|STATEMENT_EXECUTE|[29]
+17:09:23.0 (42192015)|HEAP_ALLOCATE|[34]|Bytes:5
+17:09:23.0 (42216029)|HEAP_ALLOCATE|[34]|Bytes:4
+17:09:23.0 (42227089)|VARIABLE_SCOPE_BEGIN|[34]|item|Task|true|false
+17:09:23.0 (43442959)|VARIABLE_ASSIGNMENT|[34]|item|{"WhatId":"0016F00002zxANhQAM","CallType":"Outbound","IsHighPriority":false,"IsClosed":false,"NVMStatsSF__NVM_Agent__c":"19","Is_Mobile_Number__c":true,"OwnerId":"0056F00000A9HoPQAV","IsToday__c":false,"IsReminderSet":false,"Status":"Completed","IsDeleted":false,"NVMContactWorld__CW_Call_Start_Time__c":"2018-11-21T07:09:22.000Z","ActivityDate":"2018-11-21T00:00:00.000Z","Priority":"Normal","IsVisibleInSelfService":false,"NVMContactWorld__Was_Call_Recorded__c":false,"CurrencyIsoCode":"AUD","IsRecurrence":false,"Subject":"Outbound call to +61 (9 more) ...","IsArchived":false,"CallObject":"0167351a-1840-53ea-4 (16 more) ...","NVMContactWorld__Customer_Number__c":"+61412945681","NVMContactWorld__ContactWorld_Number__c":"61731530806","Day_of_the_Week__c":"Wednesday","Call_Duration_min__c":0.00,"Call_Monitored__c":false}|0xfa5c40
+17:09:23.0 (43463481)|STATEMENT_EXECUTE|[34]
+17:09:23.0 (43465735)|STATEMENT_EXECUTE|[35]
+17:09:23.0 (44243105)|VARIABLE_ASSIGNMENT|[35]|this.WhoId|null|0xfa5c40
+17:09:23.0 (44270629)|HEAP_ALLOCATE|[34]|Bytes:5
+17:09:23.0 (44288813)|VARIABLE_ASSIGNMENT|[34]|item|null|
+17:09:23.0 (44302813)|METHOD_EXIT|[8]|01p6F000009rWtF|TaskHelper.setupContactToReurnCallTasks(List<Task>)
+17:09:23.44 (44316669)|CUMULATIVE_LIMIT_USAGE
+17:09:23.44 (44316669)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:09:23.44 (44316669)|CUMULATIVE_LIMIT_USAGE_END
+
+17:09:23.0 (45395892)|CODE_UNIT_FINISHED|TaskTrigger on Task trigger event BeforeInsert|__sfdc_trigger/TaskTrigger
+17:09:23.0 (52934627)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Task:new
+17:09:23.0 (52954674)|VALIDATION_RULE|03d6F000000qFaO|Finish_all_call_monitor_field
+17:09:23.0 (53458181)|VALIDATION_FORMULA|AND(!ISBLANK(Monitored_By__c),
+    OR(ISBLANK( TEXT(CM_advised_what_will_happen_next__c)),
+       ISBLANK( TEXT(Allow_customer_to_present_concerns__c) ),
+       ISBLANK( TEXT(Communication_is_clear_positive_confiden__c) ),
+       ISBLANK( TEXT(Demonstrate_active_listening__c )),
+       ISBLANK( TEXT(Gave_correct_answers_and_infomations__c) ),
+       ISBLANK( TEXT(Mirrors_clients_talking_behaviour__c) ) ))|CM_advised_what_will_happen_next__c=null , Demonstrate_active_listening__c=null , Communication_is_clear_positive_confiden__c=null , Allow_customer_to_present_concerns__c=null , Gave_correct_answers_and_infomations__c=null , Mirrors_clients_talking_behaviour__c=null , Monitored_By__c=null
+17:09:23.0 (53476125)|VALIDATION_PASS
+17:09:23.0 (53479443)|VALIDATION_RULE|03d900000009JbB|Interac_Quality_Must_Be_Between_1_and_10
+17:09:23.0 (53568973)|VALIDATION_FORMULA|NVMContactWorld__InteractionQuality__c < 1  &#124;&#124;  NVMContactWorld__InteractionQuality__c > 10|NVMContactWorld__InteractionQuality__c=null
+17:09:23.0 (53579880)|VALIDATION_PASS
+17:09:23.0 (53789007)|CODE_UNIT_FINISHED|Validation:Task:new
+17:09:23.0 (110021262)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Task
+17:09:23.0 (121316010)|WF_RULE_EVAL_BEGIN|Workflow
+17:09:23.0 (121367055)|WF_CRITERIA_BEGIN|[Task:  00T6F00005909Et]|Update Call Monitor Details|01Q6F0000002Tdt|ON_CREATE_OR_TRIGGERING_UPDATE|0
+17:09:23.0 (126210408)|WF_RULE_FILTER|[Task : Monitored By not equal to ]
+17:09:23.0 (126239351)|WF_RULE_EVAL_VALUE|
+17:09:23.0 (126245407)|WF_CRITERIA_END|false
+17:09:23.0 (126262545)|WF_CRITERIA_BEGIN|[Task:  00T6F00005909Et]|Update_Callback_Request_Due_Date3016F0000005i0e|01Q6F0000019gyq|ON_CREATE_ONLY|0
+17:09:23.0 (126359725)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+17:09:23.0 (126369981)|WF_CRITERIA_END|true
+17:09:23.0 (127299680)|WF_CRITERIA_BEGIN|[Task:  00T6F00005909Et]|Call Back Request From LinX|01Q6F000001EY2L|ON_CREATE_OR_TRIGGERING_UPDATE|0
+17:09:23.0 (127390288)|WF_RULE_FILTER|[Task : Subject equals Callback Request]
+17:09:23.0 (127410740)|WF_RULE_EVAL_VALUE|Outbound call to +61412945681
+17:09:23.0 (127416961)|WF_CRITERIA_END|false
+17:09:23.0 (127427265)|WF_CRITERIA_BEGIN|[Task:  00T6F00005909Et]|Call_Monitor3016F00000054R3|01Q6F000000oOu7|ON_ALL_CHANGES|0
+17:09:23.0 (127481712)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+17:09:23.0 (127490993)|WF_CRITERIA_END|true
+17:09:23.0 (127519086)|WF_SPOOL_ACTION_BEGIN|Workflow
+17:09:23.0 (127552775)|WF_ACTION| Flow Trigger: 2;
+17:09:23.0 (127558825)|WF_RULE_EVAL_END
+17:09:23.0 (129051816)|WF_FLOW_ACTION_BEGIN|09L6F000000PWtL
+17:09:23.131 (131382653)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000091km|3016F0000005i0e
+17:09:23.131 (132341865)|FLOW_CREATE_INTERVIEW_END|6617c4963e8afa01ce1e469f20c8167350c17d-7ee9|Update Callback Request Due Date
+17:09:23.132 (132806525)|FLOW_START_INTERVIEWS_BEGIN|1
+17:09:23.132 (132831271)|FLOW_START_INTERVIEW_BEGIN|6617c4963e8afa01ce1e469f20c8167350c17d-7ee9|Update Callback Request Due Date
+17:09:23.132 (135726572)|FLOW_START_INTERVIEW_END|6617c4963e8afa01ce1e469f20c8167350c17d-7ee9|Update Callback Request Due Date
+17:09:23.132 (135756189)|FLOW_START_INTERVIEWS_END|1
+17:09:23.0 (137071156)|WF_FLOW_ACTION_END|09L6F000000PWtL
+17:09:23.0 (137101496)|WF_FLOW_ACTION_BEGIN|09L6F000000PGTV
+17:09:23.138 (138785607)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F0000008usA|3016F00000054R3
+17:09:23.138 (139725511)|FLOW_CREATE_INTERVIEW_END|6618c4963e8afa01ce1e469f20c8167350c17d-7efe|Call Monitoring
+17:09:23.140 (140183871)|FLOW_START_INTERVIEWS_BEGIN|1
+17:09:23.140 (140215363)|FLOW_START_INTERVIEW_BEGIN|6618c4963e8afa01ce1e469f20c8167350c17d-7efe|Call Monitoring
+17:09:23.140 (144026879)|FLOW_START_INTERVIEW_END|6618c4963e8afa01ce1e469f20c8167350c17d-7efe|Call Monitoring
+17:09:23.140 (144061128)|FLOW_START_INTERVIEWS_END|1
+17:09:23.0 (144747756)|WF_FLOW_ACTION_END|09L6F000000PGTV
+17:09:23.0 (144911560)|WF_ACTIONS_END| Flow Trigger: 2;
+17:09:23.0 (144925078)|CODE_UNIT_FINISHED|Workflow:Task
+17:09:23.0 (177704155)|CODE_UNIT_FINISHED|TRIGGERS
+17:09:23.0 (177721493)|EXECUTION_FINISHED

@@ -1,0 +1,2316 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:46:03.0 (163874)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+14:46:03.0 (244109)|EXECUTION_STARTED
+14:46:03.0 (252088)|CODE_UNIT_STARTED|[EXTERNAL]|01p6F000009vCEd|batchPaymentsProcess
+14:46:03.0 (4548536)|HEAP_ALLOCATE|[72]|Bytes:3
+14:46:03.0 (4628287)|HEAP_ALLOCATE|[77]|Bytes:152
+14:46:03.0 (4645897)|HEAP_ALLOCATE|[342]|Bytes:408
+14:46:03.0 (4660179)|HEAP_ALLOCATE|[355]|Bytes:408
+14:46:03.0 (4672152)|HEAP_ALLOCATE|[467]|Bytes:48
+14:46:03.0 (4701287)|HEAP_ALLOCATE|[139]|Bytes:6
+14:46:03.0 (4842812)|HEAP_ALLOCATE|[50]|Bytes:5
+14:46:03.0 (4871716)|HEAP_ALLOCATE|[56]|Bytes:5
+14:46:03.0 (4880833)|HEAP_ALLOCATE|[64]|Bytes:7
+14:46:03.0 (5940241)|VARIABLE_SCOPE_BEGIN|[3]|batchPaymentsProcess.isTest|Boolean|false|true
+14:46:03.0 (8413290)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:455
+14:46:03.0 (11245690)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+14:46:03.0 (11287159)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+14:46:03.0 (11296429)|STATEMENT_EXECUTE|[15]
+14:46:03.0 (11311685)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+14:46:03.0 (11324088)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:46:03.0 (11333056)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (11342325)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+14:46:03.0 (11410145)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x19be7db6
+14:46:03.0 (11421954)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+14:46:03.0 (11550824)|VARIABLE_ASSIGNMENT|[31]|jobId|"7076F0000B0PqjTQQS"
+14:46:03.0 (11561934)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+14:46:03.0 (11576459)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+14:46:03.0 (12592957)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:84
+14:46:03.0 (12615045)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+14:46:03.0 (12622526)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:73
+14:46:03.0 (12638378)|METHOD_ENTRY|[1]|01p6F000009vCEd|batchPaymentsProcess.batchPaymentsProcess()
+14:46:03.0 (12647798)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (12653571)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (12657747)|STATEMENT_EXECUTE|[3]
+14:46:03.0 (12689292)|HEAP_ALLOCATE|[3]|Bytes:5
+14:46:03.0 (12711250)|VARIABLE_ASSIGNMENT|[3]|batchPaymentsProcess.isTest|false
+14:46:03.0 (12723937)|METHOD_EXIT|[1]|batchPaymentsProcess
+14:46:03.0 (12733775)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:52
+14:46:03.0 (12739584)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:46:03.0 (12766008)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:46:03.0 (12778909)|VARIABLE_SCOPE_BEGIN|[124]|this|batchPaymentsProcess|true|false
+14:46:03.0 (12900236)|VARIABLE_ASSIGNMENT|[124]|this|{"batch_date":"2019-01-09T00:00:00.000Z","bjbCompany":"0x25d4d889","companyName":"SponsoredLinX","invoice_batch_exist":false,"invoice_batch_name":"SLX Wednesday 2019-0 (24 more) ...","InvoiceBatchId":"a0F6F00000uikQFUAY","Log":"","payment_batch_exist":false,"payment_batch_name":"SLX Wednesday 2019-0 (24 more) ...","PaymentBatchId":"a0F6F00000uikSuUAI","paymentMethod":"Eway","period":"Today"}|0x7d8e0a23
+14:46:03.0 (12921595)|VARIABLE_SCOPE_BEGIN|[124]|info|Database.BatchableContext|true|false
+14:46:03.0 (13011314)|VARIABLE_ASSIGNMENT|[124]|info|{"jobId":"7076F0000B0PqjTQQS"}|0x19be7db6
+14:46:03.0 (13024918)|VARIABLE_SCOPE_BEGIN|[124]|scope|List<Invoice__c>|true|false
+14:46:03.0 (13117993)|VARIABLE_ASSIGNMENT|[124]|scope|[{"Id":"a0E6F00002QwH5tUAF","Name":"JT Legal Practice","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"00190000008J8wDAAS","Account_Product__c":"a0790000002OGubAAG","Amount_Credited__c":0.00,"Amount_Due__c":89.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972103","Invoice_Total__c":89.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"138691","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a0790000002OGubAAG","OwnerId":"0056F0000063DJ2QAM"}}]|0x17b79be9
+14:46:03.0 (13147631)|STATEMENT_EXECUTE|[124]
+14:46:03.0 (13151505)|STATEMENT_EXECUTE|[125]
+14:46:03.0 (13165357)|HEAP_ALLOCATE|[125]|Bytes:7
+14:46:03.0 (15498153)|HEAP_ALLOCATE|[125]|Bytes:516
+14:46:03.0 (15559892)|HEAP_ALLOCATE|[125]|Bytes:523
+14:46:03.0 (15596372)|USER_DEBUG|[125]|DEBUG|Scope: (Invoice__c:{Id=a0E6F00002QwH5tUAF, Name=JT Legal Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=00190000008J8wDAAS, Account_Product__c=a0790000002OGubAAG, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972103, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=138691, CurrencyIsoCode=AUD})
+14:46:03.0 (15621756)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (15643131)|VARIABLE_SCOPE_BEGIN|[126]|paymentHalted|Boolean|false|false
+14:46:03.0 (15661248)|HEAP_ALLOCATE|[126]|Bytes:5
+14:46:03.0 (15679708)|VARIABLE_ASSIGNMENT|[126]|paymentHalted|false
+14:46:03.0 (15687937)|STATEMENT_EXECUTE|[128]
+14:46:03.0 (15708857)|HEAP_ALLOCATE|[128]|Bytes:4
+14:46:03.0 (15779103)|VARIABLE_SCOPE_BEGIN|[128]|allInvoices|List<Invoice__c>|true|false
+14:46:03.0 (15795349)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (15813417)|VARIABLE_ASSIGNMENT|[128]|allInvoices|[]|0x152fa0ab
+14:46:03.0 (15824015)|STATEMENT_EXECUTE|[129]
+14:46:03.0 (15920239)|HEAP_ALLOCATE|[129]|Bytes:4
+14:46:03.0 (15981283)|VARIABLE_SCOPE_BEGIN|[129]|batchPayments|List<Invoice_Payments__c>|true|false
+14:46:03.0 (15999321)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (16012584)|VARIABLE_ASSIGNMENT|[129]|batchPayments|[]|0x25226374
+14:46:03.0 (16023726)|STATEMENT_EXECUTE|[130]
+14:46:03.0 (16107569)|HEAP_ALLOCATE|[130]|Bytes:4
+14:46:03.0 (16163687)|VARIABLE_SCOPE_BEGIN|[130]|listPayments|List<Payment__c>|true|false
+14:46:03.0 (16180982)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (16192416)|VARIABLE_ASSIGNMENT|[130]|listPayments|[]|0x66dfb8d2
+14:46:03.0 (16201694)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (16269303)|HEAP_ALLOCATE|[132]|Bytes:4
+14:46:03.0 (16322143)|VARIABLE_SCOPE_BEGIN|[132]|listUpdateCredit|List<Credit__c>|true|false
+14:46:03.0 (16337703)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (16348826)|VARIABLE_ASSIGNMENT|[132]|listUpdateCredit|[]|0x1912efc6
+14:46:03.0 (16358787)|STATEMENT_EXECUTE|[133]
+14:46:03.0 (16378340)|HEAP_ALLOCATE|[133]|Bytes:4
+14:46:03.0 (16410822)|VARIABLE_SCOPE_BEGIN|[133]|listCreditPayment|List<Payment__c>|true|false
+14:46:03.0 (16424917)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (16435448)|VARIABLE_ASSIGNMENT|[133]|listCreditPayment|[]|0x71d03eb7
+14:46:03.0 (16445521)|STATEMENT_EXECUTE|[134]
+14:46:03.0 (16494177)|HEAP_ALLOCATE|[134]|Bytes:4
+14:46:03.0 (16546488)|VARIABLE_SCOPE_BEGIN|[134]|listUpdateAccount|List<Account>|true|false
+14:46:03.0 (16562124)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (16572956)|VARIABLE_ASSIGNMENT|[134]|listUpdateAccount|[]|0x47dfda3a
+14:46:03.0 (16821322)|HEAP_ALLOCATE|[136]|Bytes:5
+14:46:03.0 (16854685)|HEAP_ALLOCATE|[136]|Bytes:80
+14:46:03.0 (16870790)|VARIABLE_SCOPE_BEGIN|[136]|current_invoice|Invoice__c|true|false
+14:46:03.0 (16965182)|VARIABLE_ASSIGNMENT|[136]|current_invoice|{"Id":"a0E6F00002QwH5tUAF","Name":"JT Legal Practice","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"00190000008J8wDAAS","Account_Product__c":"a0790000002OGubAAG","Amount_Credited__c":0.00,"Amount_Due__c":89.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972103","Invoice_Total__c":89.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"138691","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a0790000002OGubAAG","OwnerId":"0056F0000063DJ2QAM"}}|0x226af2cf
+14:46:03.0 (16989091)|STATEMENT_EXECUTE|[136]
+14:46:03.0 (16992746)|STATEMENT_EXECUTE|[137]
+14:46:03.0 (17006342)|HEAP_ALLOCATE|[137]|Bytes:17
+14:46:03.0 (17210539)|HEAP_ALLOCATE|[137]|Bytes:514
+14:46:03.0 (17240055)|HEAP_ALLOCATE|[137]|Bytes:531
+14:46:03.0 (17259854)|USER_DEBUG|[137]|DEBUG|Current Invoice: Invoice__c:{Id=a0E6F00002QwH5tUAF, Name=JT Legal Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=00190000008J8wDAAS, Account_Product__c=a0790000002OGubAAG, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972103, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=138691, CurrencyIsoCode=AUD}
+14:46:03.0 (17283620)|STATEMENT_EXECUTE|[138]
+14:46:03.0 (17303369)|HEAP_ALLOCATE|[138]|Bytes:24
+14:46:03.0 (17338543)|HEAP_ALLOCATE|[138]|Bytes:3
+14:46:03.0 (17394479)|HEAP_ALLOCATE|[138]|Bytes:18
+14:46:03.0 (17430579)|HEAP_ALLOCATE|[138]|Bytes:54
+14:46:03.0 (17440471)|HEAP_ALLOCATE|[138]|Bytes:54
+14:46:03.0 (17466364)|VARIABLE_ASSIGNMENT|[138]|this.Log|"Current Invoice Numb (34 more) ..."|0x7d8e0a23
+14:46:03.0 (17476607)|STATEMENT_EXECUTE|[139]
+14:46:03.0 (17492990)|HEAP_ALLOCATE|[139]|Bytes:5
+14:46:03.0 (17505017)|VARIABLE_ASSIGNMENT|[139]|paymentHalted|false
+14:46:03.0 (17513090)|STATEMENT_EXECUTE|[142]
+14:46:03.0 (17532365)|HEAP_ALLOCATE|[142]|Bytes:4
+14:46:03.0 (17563387)|VARIABLE_SCOPE_BEGIN|[142]|AvailableCredits|List<Credit__c>|true|false
+14:46:03.0 (17578607)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:03.0 (17590705)|VARIABLE_ASSIGNMENT|[142]|AvailableCredits|[]|0x1b5df2b2
+14:46:03.0 (17601148)|STATEMENT_EXECUTE|[143]
+14:46:03.0 (17611085)|HEAP_ALLOCATE|[143]|Bytes:218
+14:46:03.0 (17634706)|HEAP_ALLOCATE|[143]|Bytes:4
+14:46:03.0 (17650081)|HEAP_ALLOCATE|[143]|Bytes:7
+14:46:03.0 (17697405)|HEAP_ALLOCATE|[143]|Bytes:7
+14:46:03.0 (17747743)|HEAP_ALLOCATE|[143]|Bytes:7
+14:46:03.0 (17762006)|HEAP_ALLOCATE|[143]|Bytes:4
+14:46:03.0 (19419951)|SOQL_EXECUTE_BEGIN|[143]|Aggregations:0|SELECT Id, Name, Account__c, Account_Product__c, Amount__c, Valid_From__c, Credit_Used__c, Credit_Left__c FROM Credit__c WHERE (Account_Product__c = :tmpVar1 AND Valid_From__c <= :tmpVar2 AND Credit_Left__c > :tmpVar3)
+14:46:03.0 (26494110)|SOQL_EXECUTE_END|[143]|Rows:0
+14:46:03.0 (26568726)|HEAP_ALLOCATE|[143]|Bytes:4
+14:46:03.0 (26590202)|HEAP_ALLOCATE|[143]|Bytes:0
+14:46:03.0 (26636267)|HEAP_ALLOCATE|[143]|Bytes:4
+14:46:03.0 (26727056)|VARIABLE_ASSIGNMENT|[143]|AvailableCredits|[]|0x6cdf6418
+14:46:03.0 (27049747)|HEAP_ALLOCATE|[145]|Bytes:5
+14:46:03.0 (27088158)|VARIABLE_ASSIGNMENT|[145]|thisAvailableCredits|null|
+14:46:03.0 (27101699)|STATEMENT_EXECUTE|[145]
+14:46:03.0 (27117496)|STATEMENT_EXECUTE|[203]
+14:46:03.0 (27134344)|HEAP_ALLOCATE|[203]|Bytes:18
+14:46:03.0 (27152430)|HEAP_ALLOCATE|[203]|Bytes:72
+14:46:03.0 (27185516)|VARIABLE_ASSIGNMENT|[203]|this.Log|"Current Invoice Numb (52 more) ..."|0x7d8e0a23
+14:46:03.0 (27196083)|STATEMENT_EXECUTE|[205]
+14:46:03.0 (27207831)|HEAP_ALLOCATE|[205]|Bytes:24
+14:46:03.0 (27256313)|HEAP_ALLOCATE|[205]|Bytes:28
+14:46:03.0 (27303623)|USER_DEBUG|[205]|DEBUG|Invoice Payment Option: Eway
+14:46:03.0 (27444406)|HEAP_ALLOCATE|[207]|Bytes:28
+14:46:03.0 (27473235)|HEAP_ALLOCATE|[207]|Bytes:28
+14:46:03.0 (27479437)|HEAP_ALLOCATE|[207]|Bytes:28
+14:46:03.0 (27621158)|STATEMENT_EXECUTE|[207]
+14:46:03.0 (27626500)|STATEMENT_EXECUTE|[208]
+14:46:03.0 (27640172)|HEAP_ALLOCATE|[208]|Bytes:16
+14:46:03.0 (27660199)|HEAP_ALLOCATE|[208]|Bytes:20
+14:46:03.0 (27691589)|USER_DEBUG|[208]|DEBUG|This invoice is Eway
+14:46:03.0 (27706478)|STATEMENT_EXECUTE|[210]
+14:46:03.0 (27745997)|HEAP_ALLOCATE|[210]|Bytes:4
+14:46:03.0 (27877356)|VARIABLE_SCOPE_BEGIN|[210]|account|Account|true|false
+14:46:03.0 (27909705)|VARIABLE_ASSIGNMENT|[210]|account|{}|0x54d484a5
+14:46:03.0 (27921416)|STATEMENT_EXECUTE|[211]
+14:46:03.0 (27987439)|HEAP_ALLOCATE|[211]|Bytes:4
+14:46:03.0 (28094319)|VARIABLE_SCOPE_BEGIN|[211]|contact|Contact|true|false
+14:46:03.0 (28123027)|VARIABLE_ASSIGNMENT|[211]|contact|{}|0x70ba81e8
+14:46:03.0 (28134620)|STATEMENT_EXECUTE|[212]
+14:46:03.0 (28204987)|HEAP_ALLOCATE|[212]|Bytes:4
+14:46:03.0 (28303265)|VARIABLE_SCOPE_BEGIN|[212]|accountProduct|Account_Product__c|true|false
+14:46:03.0 (28347346)|VARIABLE_ASSIGNMENT|[212]|accountProduct|{}|0x77585d7f
+14:46:03.0 (28357692)|STATEMENT_EXECUTE|[213]
+14:46:03.0 (28361158)|STATEMENT_EXECUTE|[213]
+14:46:03.0 (28364116)|STATEMENT_EXECUTE|[215]
+14:46:03.0 (28392309)|HEAP_ALLOCATE|[215]|Bytes:205
+14:46:03.0 (28422565)|HEAP_ALLOCATE|[215]|Bytes:4
+14:46:03.0 (30733840)|SOQL_EXECUTE_BEGIN|[215]|Aggregations:0|SELECT Id, Name, Card_Token__c, Name_On_Card__c, Card_Number__c, Card_Number_Masked__c, Card_Month_Expiry__c, Unique_Id__c, Card_Year_Expiry__c, BJB_Company__c, Card_CVN__c FROM Account WHERE Id = :tmpVar1
+14:46:03.0 (41031147)|SOQL_EXECUTE_END|[215]|Rows:1
+14:46:03.0 (41087271)|HEAP_ALLOCATE|[215]|Bytes:8
+14:46:03.0 (41118614)|HEAP_ALLOCATE|[215]|Bytes:272
+14:46:03.0 (41174047)|HEAP_ALLOCATE|[215]|Bytes:8
+14:46:03.0 (41215979)|HEAP_ALLOCATE|[232]|Bytes:40
+14:46:03.0 (41281580)|VARIABLE_ASSIGNMENT|[215]|account|{"Id":"00190000008J8wDAAS","Name":"JT Legal Practice","Card_Token__c":"969862261448","Name_On_Card__c":"Joey Nguyen","Card_Number_Masked__c":"XXXX-XXXX-XXXX-0077","Card_Month_Expiry__c":"07","Unique_Id__c":"138691","Card_Year_Expiry__c":"2019","BJB_Company__c":"a0C90000002PU4fEAG"}|0x403ad2ec
+14:46:03.0 (41300906)|STATEMENT_EXECUTE|[233]
+14:46:03.0 (41326728)|HEAP_ALLOCATE|[233]|Bytes:15
+14:46:03.0 (41356964)|HEAP_ALLOCATE|[233]|Bytes:87
+14:46:03.0 (41391479)|VARIABLE_ASSIGNMENT|[233]|this.Log|"Current Invoice Numb (67 more) ..."|0x7d8e0a23
+14:46:03.0 (41402613)|STATEMENT_EXECUTE|[235]
+14:46:03.0 (41414605)|HEAP_ALLOCATE|[235]|Bytes:59
+14:46:03.0 (41439957)|HEAP_ALLOCATE|[235]|Bytes:4
+14:46:03.0 (42366929)|SOQL_EXECUTE_BEGIN|[235]|Aggregations:0|SELECT Id, Name FROM Account_Product__c WHERE Id = :tmpVar1
+14:46:03.0 (48323548)|SOQL_EXECUTE_END|[235]|Rows:1
+14:46:03.0 (48389161)|HEAP_ALLOCATE|[235]|Bytes:8
+14:46:03.0 (48419708)|HEAP_ALLOCATE|[235]|Bytes:69
+14:46:03.0 (48503990)|HEAP_ALLOCATE|[235]|Bytes:8
+14:46:03.0 (48598613)|HEAP_ALLOCATE|[235]|Bytes:12
+14:46:03.0 (48649802)|VARIABLE_ASSIGNMENT|[235]|accountProduct|{"Id":"a0790000002OGubAAG","Name":"Adwords Optimised Ma (8 more) ..."}|0x81afc93
+14:46:03.0 (48664164)|STATEMENT_EXECUTE|[237]
+14:46:03.0 (48690242)|HEAP_ALLOCATE|[237]|Bytes:22
+14:46:03.0 (48711235)|HEAP_ALLOCATE|[237]|Bytes:109
+14:46:03.0 (48743043)|VARIABLE_ASSIGNMENT|[237]|this.Log|"Current Invoice Numb (89 more) ..."|0x7d8e0a23
+14:46:03.0 (48754567)|STATEMENT_EXECUTE|[248]
+14:46:03.0 (48757509)|STATEMENT_EXECUTE|[248]
+14:46:03.0 (48759580)|STATEMENT_EXECUTE|[249]
+14:46:03.0 (48788795)|HEAP_ALLOCATE|[249]|Bytes:192
+14:46:03.0 (48812346)|HEAP_ALLOCATE|[249]|Bytes:4
+14:46:03.0 (52506849)|SOQL_EXECUTE_BEGIN|[249]|Aggregations:0|SELECT Id, Name, FirstName, LastName, Email, MailingStreet, MailingCity, MailingPostalCode, MailingState, MailingCountry FROM Contact WHERE (AccountId = :tmpVar1 AND Title = 'Billing') LIMIT 1
+14:46:03.0 (61296976)|SOQL_EXECUTE_END|[249]|Rows:1
+14:46:03.0 (61371070)|HEAP_ALLOCATE|[249]|Bytes:8
+14:46:03.0 (61401956)|HEAP_ALLOCATE|[249]|Bytes:214
+14:46:03.0 (61471879)|HEAP_ALLOCATE|[249]|Bytes:8
+14:46:03.0 (61496703)|HEAP_ALLOCATE|[249]|Bytes:33
+14:46:03.0 (61563523)|HEAP_ALLOCATE|[249]|Bytes:40
+14:46:03.0 (61615553)|VARIABLE_ASSIGNMENT|[249]|contact|{"Id":"00390000007gxGPAAY","Name":"TIANNA MAI","FirstName":"TIANNA","LastName":"MAI","Email":"tmai@jtlegalpractice (4 more) ...","MailingStreet":"15 Moore St","MailingCity":"LIVERPOOL","MailingPostalCode":"2170","MailingState":"NSW"}|0x291bb388
+14:46:03.0 (61629830)|STATEMENT_EXECUTE|[250]
+14:46:03.0 (61651322)|HEAP_ALLOCATE|[250]|Bytes:15
+14:46:03.0 (61665679)|HEAP_ALLOCATE|[250]|Bytes:124
+14:46:03.0 (61691991)|VARIABLE_ASSIGNMENT|[250]|this.Log|"Current Invoice Numb (104 more) ..."|0x7d8e0a23
+14:46:03.0 (61702602)|STATEMENT_EXECUTE|[261]
+14:46:03.0 (61731799)|VARIABLE_SCOPE_BEGIN|[261]|TimedOut|Boolean|false|false
+14:46:03.0 (61750102)|HEAP_ALLOCATE|[261]|Bytes:5
+14:46:03.0 (61760316)|VARIABLE_ASSIGNMENT|[261]|TimedOut|false
+14:46:03.0 (61767039)|STATEMENT_EXECUTE|[262]
+14:46:03.0 (61849012)|HEAP_ALLOCATE|[262]|Bytes:4
+14:46:03.0 (62016170)|VARIABLE_SCOPE_BEGIN|[262]|paymentAttempt|Payment_Attempt__c|true|false
+14:46:03.0 (62048199)|VARIABLE_ASSIGNMENT|[262]|paymentAttempt|{}|0x151d629
+14:46:03.0 (62064039)|STATEMENT_EXECUTE|[263]
+14:46:03.0 (62067162)|STATEMENT_EXECUTE|[264]
+14:46:03.0 (62069582)|STATEMENT_EXECUTE|[264]
+14:46:03.0 (62074756)|STATEMENT_EXECUTE|[265]
+14:46:03.0 (62088090)|HEAP_ALLOCATE|[265]|Bytes:18
+14:46:03.0 (62284100)|HEAP_ALLOCATE|[265]|Bytes:262
+14:46:03.0 (62316820)|HEAP_ALLOCATE|[265]|Bytes:280
+14:46:03.0 (62349253)|USER_DEBUG|[265]|DEBUG|Account Response: Account:{Id=00190000008J8wDAAS, Name=JT Legal Practice, Card_Token__c=969862261448, Name_On_Card__c=Joey Nguyen, Card_Number_Masked__c=XXXX-XXXX-XXXX-0077, Card_Month_Expiry__c=07, Unique_Id__c=138691, Card_Year_Expiry__c=2019, BJB_Company__c=a0C90000002PU4fEAG}
+14:46:03.0 (62367924)|STATEMENT_EXECUTE|[266]
+14:46:03.0 (62381341)|HEAP_ALLOCATE|[266]|Bytes:18
+14:46:03.0 (62482322)|HEAP_ALLOCATE|[266]|Bytes:204
+14:46:03.0 (62501679)|HEAP_ALLOCATE|[266]|Bytes:222
+14:46:03.0 (62512865)|USER_DEBUG|[266]|DEBUG|Contact Response: Contact:{Id=00390000007gxGPAAY, Name=TIANNA MAI, FirstName=TIANNA, LastName=MAI, Email=tmai@jtlegalpractice.com, MailingStreet=15 Moore St, MailingCity=LIVERPOOL, MailingPostalCode=2170, MailingState=NSW}
+14:46:03.0 (62522874)|STATEMENT_EXECUTE|[267]
+14:46:03.0 (62534553)|HEAP_ALLOCATE|[267]|Bytes:18
+14:46:03.0 (62541186)|HEAP_ALLOCATE|[267]|Bytes:142
+14:46:03.0 (62557616)|VARIABLE_ASSIGNMENT|[267]|this.Log|"Current Invoice Numb (122 more) ..."|0x7d8e0a23
+14:46:03.0 (62564318)|STATEMENT_EXECUTE|[270]
+14:46:03.0 (62572412)|VARIABLE_SCOPE_BEGIN|[270]|countrycode|String|false|false
+14:46:03.0 (62583185)|VARIABLE_ASSIGNMENT|[270]|countrycode|null
+14:46:03.0 (63485649)|HEAP_ALLOCATE|[271]|Bytes:3
+14:46:03.0 (63531454)|HEAP_ALLOCATE|[273]|Bytes:3
+14:46:03.0 (63548946)|STATEMENT_EXECUTE|[273]
+14:46:03.0 (63552509)|STATEMENT_EXECUTE|[274]
+14:46:03.0 (63568847)|HEAP_ALLOCATE|[274]|Bytes:2
+14:46:03.0 (63585809)|VARIABLE_ASSIGNMENT|[274]|countrycode|"AU"
+14:46:03.0 (63594224)|STATEMENT_EXECUTE|[278]
+14:46:03.0 (69778294)|VARIABLE_SCOPE_BEGIN|[12]|paymentGateway.GATEWAY_LOCAL|Integer|false|true
+14:46:03.0 (69809215)|VARIABLE_SCOPE_BEGIN|[11]|paymentGateway.GATEWAY_MOCK|Integer|false|true
+14:46:03.0 (69822181)|VARIABLE_SCOPE_BEGIN|[10]|paymentGateway.GATEWAY_REAL|Integer|false|true
+14:46:03.0 (69833959)|VARIABLE_SCOPE_BEGIN|[6]|paymentGateway.TEST_DECLINE|Integer|false|true
+14:46:03.0 (69846619)|VARIABLE_SCOPE_BEGIN|[7]|paymentGateway.TEST_EXPIRED|Integer|false|true
+14:46:03.0 (69859203)|VARIABLE_SCOPE_BEGIN|[5]|paymentGateway.TEST_FAILURE|Integer|false|true
+14:46:03.0 (69871367)|VARIABLE_SCOPE_BEGIN|[4]|paymentGateway.TEST_SUCCESS|Integer|false|true
+14:46:03.0 (69884181)|VARIABLE_SCOPE_BEGIN|[8]|paymentGateway.TEST_TIMEOUT|Integer|false|true
+14:46:03.0 (69906457)|HEAP_ALLOCATE|[278]|Bytes:15
+14:46:03.0 (69925288)|HEAP_ALLOCATE|[278]|Bytes:236
+14:46:03.0 (69934818)|HEAP_ALLOCATE|[278]|Bytes:77
+14:46:03.0 (69942606)|HEAP_ALLOCATE|[278]|Bytes:58
+14:46:03.0 (69977967)|METHOD_ENTRY|[1]|01p6F000006He6O|paymentGateway.paymentGateway()
+14:46:03.0 (69988696)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (69994986)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (70632255)|SYSTEM_MODE_ENTER|false
+14:46:03.0 (70654052)|HEAP_ALLOCATE|[4]|Bytes:5
+14:46:03.0 (70671223)|STATEMENT_EXECUTE|[4]
+14:46:03.0 (70694790)|HEAP_ALLOCATE|[4]|Bytes:4
+14:46:03.0 (70730684)|VARIABLE_ASSIGNMENT|[4]|paymentGateway.TEST_SUCCESS|3
+14:46:03.0 (70739582)|STATEMENT_EXECUTE|[5]
+14:46:03.0 (70750242)|HEAP_ALLOCATE|[5]|Bytes:4
+14:46:03.0 (70765807)|VARIABLE_ASSIGNMENT|[5]|paymentGateway.TEST_FAILURE|4
+14:46:03.0 (70773236)|STATEMENT_EXECUTE|[6]
+14:46:03.0 (70783369)|HEAP_ALLOCATE|[6]|Bytes:4
+14:46:03.0 (70795576)|VARIABLE_ASSIGNMENT|[6]|paymentGateway.TEST_DECLINE|5
+14:46:03.0 (70803346)|STATEMENT_EXECUTE|[7]
+14:46:03.0 (70813144)|HEAP_ALLOCATE|[7]|Bytes:4
+14:46:03.0 (70825109)|VARIABLE_ASSIGNMENT|[7]|paymentGateway.TEST_EXPIRED|6
+14:46:03.0 (70831375)|STATEMENT_EXECUTE|[8]
+14:46:03.0 (70839646)|HEAP_ALLOCATE|[8]|Bytes:4
+14:46:03.0 (70852690)|VARIABLE_ASSIGNMENT|[8]|paymentGateway.TEST_TIMEOUT|7
+14:46:03.0 (70859234)|STATEMENT_EXECUTE|[10]
+14:46:03.0 (70868136)|HEAP_ALLOCATE|[10]|Bytes:4
+14:46:03.0 (70878959)|VARIABLE_ASSIGNMENT|[10]|paymentGateway.GATEWAY_REAL|0
+14:46:03.0 (70885309)|STATEMENT_EXECUTE|[11]
+14:46:03.0 (70894533)|HEAP_ALLOCATE|[11]|Bytes:4
+14:46:03.0 (70907624)|VARIABLE_ASSIGNMENT|[11]|paymentGateway.GATEWAY_MOCK|1
+14:46:03.0 (70936119)|STATEMENT_EXECUTE|[12]
+14:46:03.0 (70948382)|HEAP_ALLOCATE|[12]|Bytes:4
+14:46:03.0 (70964159)|VARIABLE_ASSIGNMENT|[12]|paymentGateway.GATEWAY_LOCAL|2
+14:46:03.0 (70972308)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (70980075)|SYSTEM_MODE_EXIT|false
+14:46:03.0 (70996916)|METHOD_EXIT|[1]|paymentGateway
+14:46:03.0 (71026321)|HEAP_ALLOCATE|[278]|Bytes:116
+14:46:03.0 (71047757)|CONSTRUCTOR_ENTRY|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:46:03.0 (71084561)|VARIABLE_SCOPE_BEGIN|[55]|this|paymentGateway|true|false
+14:46:03.0 (71179911)|VARIABLE_ASSIGNMENT|[55]|this|{}|0x39db38a0
+14:46:03.0 (71199885)|SYSTEM_MODE_ENTER|false
+14:46:03.0 (71210071)|HEAP_ALLOCATE|[21]|Bytes:5
+14:46:03.0 (71217463)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (71222909)|HEAP_ALLOCATE|[21]|Bytes:5
+14:46:03.0 (71228054)|STATEMENT_EXECUTE|[15]
+14:46:03.0 (71237123)|STATEMENT_EXECUTE|[16]
+14:46:03.0 (71242476)|STATEMENT_EXECUTE|[17]
+14:46:03.0 (71247439)|STATEMENT_EXECUTE|[18]
+14:46:03.0 (71252243)|STATEMENT_EXECUTE|[19]
+14:46:03.0 (71257365)|STATEMENT_EXECUTE|[21]
+14:46:03.0 (71265368)|HEAP_ALLOCATE|[21]|Bytes:4
+14:46:03.0 (71291557)|HEAP_ALLOCATE|[21]|Bytes:28
+14:46:03.0 (71316982)|VARIABLE_ASSIGNMENT|[21]|this.amount|0.00|0x39db38a0
+14:46:03.0 (71333469)|STATEMENT_EXECUTE|[22]
+14:46:03.0 (71353045)|VARIABLE_ASSIGNMENT|[22]|this.currencyIsoCode|"AUD"|0x39db38a0
+14:46:03.0 (71362140)|STATEMENT_EXECUTE|[23]
+14:46:03.0 (71378293)|VARIABLE_ASSIGNMENT|[23]|this.customerCompanyName|""|0x39db38a0
+14:46:03.0 (71386881)|STATEMENT_EXECUTE|[24]
+14:46:03.0 (71402000)|VARIABLE_ASSIGNMENT|[24]|this.customerFirstName|""|0x39db38a0
+14:46:03.0 (71411247)|STATEMENT_EXECUTE|[25]
+14:46:03.0 (71424694)|VARIABLE_ASSIGNMENT|[25]|this.customerLastName|""|0x39db38a0
+14:46:03.0 (71433359)|STATEMENT_EXECUTE|[26]
+14:46:03.0 (71444636)|VARIABLE_ASSIGNMENT|[26]|this.customerEmail|""|0x39db38a0
+14:46:03.0 (71452352)|STATEMENT_EXECUTE|[27]
+14:46:03.0 (71457922)|STATEMENT_EXECUTE|[28]
+14:46:03.0 (71468756)|VARIABLE_ASSIGNMENT|[28]|this.customerStreet|""|0x39db38a0
+14:46:03.0 (71476626)|STATEMENT_EXECUTE|[29]
+14:46:03.0 (71486907)|VARIABLE_ASSIGNMENT|[29]|this.customerCity|""|0x39db38a0
+14:46:03.0 (71494456)|STATEMENT_EXECUTE|[30]
+14:46:03.0 (71508346)|VARIABLE_ASSIGNMENT|[30]|this.customerState|""|0x39db38a0
+14:46:03.0 (71517171)|STATEMENT_EXECUTE|[31]
+14:46:03.0 (71529115)|VARIABLE_ASSIGNMENT|[31]|this.customerPostcode|""|0x39db38a0
+14:46:03.0 (71537641)|STATEMENT_EXECUTE|[32]
+14:46:03.0 (71550497)|VARIABLE_ASSIGNMENT|[32]|this.customerCountrycode|""|0x39db38a0
+14:46:03.0 (71559381)|STATEMENT_EXECUTE|[33]
+14:46:03.0 (71570331)|VARIABLE_ASSIGNMENT|[33]|this.customerInvoiceDescription|""|0x39db38a0
+14:46:03.0 (71578568)|STATEMENT_EXECUTE|[34]
+14:46:03.0 (71613819)|VARIABLE_ASSIGNMENT|[34]|this.customerInvoiceRef|""|0x39db38a0
+14:46:03.0 (71625193)|STATEMENT_EXECUTE|[35]
+14:46:03.0 (71646382)|VARIABLE_ASSIGNMENT|[35]|this.uniqueAttemptId|""|0x39db38a0
+14:46:03.0 (71655657)|STATEMENT_EXECUTE|[36]
+14:46:03.0 (71671693)|VARIABLE_ASSIGNMENT|[36]|this.transactionNo|""|0x39db38a0
+14:46:03.0 (71680182)|STATEMENT_EXECUTE|[38]
+14:46:03.0 (71692169)|VARIABLE_ASSIGNMENT|[38]|this.customerToken|""|0x39db38a0
+14:46:03.0 (71700270)|STATEMENT_EXECUTE|[39]
+14:46:03.0 (71713334)|VARIABLE_ASSIGNMENT|[39]|this.cardHoldersName|""|0x39db38a0
+14:46:03.0 (71721959)|STATEMENT_EXECUTE|[40]
+14:46:03.0 (71727514)|STATEMENT_EXECUTE|[41]
+14:46:03.0 (71732639)|STATEMENT_EXECUTE|[42]
+14:46:03.0 (71743573)|VARIABLE_ASSIGNMENT|[42]|this.cardExpiryMonth|""|0x39db38a0
+14:46:03.0 (71751587)|STATEMENT_EXECUTE|[43]
+14:46:03.0 (71763504)|VARIABLE_ASSIGNMENT|[43]|this.cardExpiryYear|""|0x39db38a0
+14:46:03.0 (71771454)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (71808255)|STATEMENT_EXECUTE|[55]
+14:46:03.0 (71811956)|STATEMENT_EXECUTE|[56]
+14:46:03.0 (72097748)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (72130722)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|false
+14:46:03.0 (72143956)|HEAP_ALLOCATE|[17]|Bytes:5
+14:46:03.0 (72160984)|VARIABLE_ASSIGNMENT|[17]|this.isRefund|false|0x39db38a0
+14:46:03.0 (72183618)|STATEMENT_EXECUTE|[57]
+14:46:03.0 (72342667)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (72369128)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:46:03.0 (72388825)|VARIABLE_ASSIGNMENT|[18]|this.testType|null|0x39db38a0
+14:46:03.0 (72405223)|STATEMENT_EXECUTE|[58]
+14:46:03.0 (72545341)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (72577365)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|0
+14:46:03.0 (72598512)|VARIABLE_ASSIGNMENT|[19]|this.testGateway|0|0x39db38a0
+14:46:03.0 (72619092)|SYSTEM_MODE_EXIT|false
+14:46:03.0 (72634616)|CONSTRUCTOR_EXIT|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:46:03.0 (72649419)|VARIABLE_SCOPE_BEGIN|[278]|pay|paymentGateway|true|false
+14:46:03.0 (72754401)|VARIABLE_ASSIGNMENT|[278]|pay|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (72787259)|STATEMENT_EXECUTE|[281]
+14:46:03.0 (72828601)|STATEMENT_EXECUTE|[304]
+14:46:03.0 (72832623)|STATEMENT_EXECUTE|[305]
+14:46:03.0 (72889162)|METHOD_ENTRY|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:46:03.0 (72928637)|VARIABLE_SCOPE_BEGIN|[63]|this|paymentGateway|true|false
+14:46:03.0 (73056557)|VARIABLE_ASSIGNMENT|[63]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (73078298)|VARIABLE_SCOPE_BEGIN|[63]|company|Company__c|true|false
+14:46:03.0 (73117374)|VARIABLE_ASSIGNMENT|[63]|company|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x25d4d889
+14:46:03.0 (73140834)|SYSTEM_MODE_ENTER|false
+14:46:03.0 (73152784)|HEAP_ALLOCATE|[64]|Bytes:5
+14:46:03.0 (73160780)|STATEMENT_EXECUTE|[63]
+14:46:03.0 (73164269)|STATEMENT_EXECUTE|[64]
+14:46:03.0 (73309388)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (73359026)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x25d4d889
+14:46:03.0 (73394452)|VARIABLE_ASSIGNMENT|[15]|this.bjbCompany|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x39db38a0
+14:46:03.0 (73415492)|STATEMENT_EXECUTE|[66]
+14:46:03.0 (73479459)|VARIABLE_ASSIGNMENT|[66]|this.currencyIsoCode|"AUD"|0x39db38a0
+14:46:03.0 (73490653)|STATEMENT_EXECUTE|[69]
+14:46:03.0 (73625584)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x25d4d889","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (73790559)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x25d4d889","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (73845306)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Eway2"
+14:46:03.0 (73867503)|VARIABLE_ASSIGNMENT|[16]|this.gateway|"Eway2"|0x39db38a0
+14:46:03.0 (73883836)|STATEMENT_EXECUTE|[70]
+14:46:03.0 (73903822)|HEAP_ALLOCATE|[70]|Bytes:18
+14:46:03.0 (74063189)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x25d4d889","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (74106878)|HEAP_ALLOCATE|[70]|Bytes:23
+14:46:03.0 (74134163)|USER_DEBUG|[70]|DEBUG|Payment Gateway = Eway2
+14:46:03.0 (74150765)|SYSTEM_MODE_EXIT|false
+14:46:03.0 (74164994)|METHOD_EXIT|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:46:03.0 (74175858)|STATEMENT_EXECUTE|[306]
+14:46:03.0 (74219247)|HEAP_ALLOCATE|[306]|Bytes:28
+14:46:03.0 (74243825)|VARIABLE_ASSIGNMENT|[306]|this.amount|89.00|0x39db38a0
+14:46:03.0 (74252787)|STATEMENT_EXECUTE|[307]
+14:46:03.0 (74304339)|VARIABLE_ASSIGNMENT|[307]|this.currencyIsoCode|"AUD"|0x39db38a0
+14:46:03.0 (74315174)|STATEMENT_EXECUTE|[308]
+14:46:03.0 (74369875)|VARIABLE_ASSIGNMENT|[308]|this.customerCompanyName|"JT Legal Practice"|0x39db38a0
+14:46:03.0 (74381327)|STATEMENT_EXECUTE|[309]
+14:46:03.0 (74424119)|VARIABLE_ASSIGNMENT|[309]|this.customerFirstName|"TIANNA"|0x39db38a0
+14:46:03.0 (74434508)|STATEMENT_EXECUTE|[310]
+14:46:03.0 (74466882)|VARIABLE_ASSIGNMENT|[310]|this.customerLastName|"MAI"|0x39db38a0
+14:46:03.0 (74476682)|STATEMENT_EXECUTE|[311]
+14:46:03.0 (74563049)|HEAP_ALLOCATE|[311]|Bytes:24
+14:46:03.0 (74617462)|VARIABLE_ASSIGNMENT|[311]|this.customerEmail|"tmai@jtlegalpractice (4 more) ..."|0x39db38a0
+14:46:03.0 (74629619)|STATEMENT_EXECUTE|[312]
+14:46:03.0 (74676845)|VARIABLE_ASSIGNMENT|[312]|this.customerStreet|"15 Moore St"|0x39db38a0
+14:46:03.0 (74687730)|STATEMENT_EXECUTE|[313]
+14:46:03.0 (74721991)|VARIABLE_ASSIGNMENT|[313]|this.customerCity|"LIVERPOOL"|0x39db38a0
+14:46:03.0 (74732102)|STATEMENT_EXECUTE|[314]
+14:46:03.0 (74766022)|VARIABLE_ASSIGNMENT|[314]|this.customerState|"NSW"|0x39db38a0
+14:46:03.0 (74775613)|STATEMENT_EXECUTE|[315]
+14:46:03.0 (74808869)|VARIABLE_ASSIGNMENT|[315]|this.customerPostcode|"2170"|0x39db38a0
+14:46:03.0 (74819054)|STATEMENT_EXECUTE|[316]
+14:46:03.0 (74835732)|VARIABLE_ASSIGNMENT|[316]|this.customerCountrycode|"AU"|0x39db38a0
+14:46:03.0 (74844445)|STATEMENT_EXECUTE|[317]
+14:46:03.0 (74857856)|VARIABLE_ASSIGNMENT|[317]|this.customerIP|null|0x39db38a0
+14:46:03.0 (74866790)|STATEMENT_EXECUTE|[318]
+14:46:03.0 (74904232)|VARIABLE_ASSIGNMENT|[318]|this.cardHoldersName|"Joey Nguyen"|0x39db38a0
+14:46:03.0 (74915249)|STATEMENT_EXECUTE|[320]
+14:46:03.0 (74949595)|VARIABLE_ASSIGNMENT|[320]|this.cardExpiryMonth|"07"|0x39db38a0
+14:46:03.0 (74960038)|STATEMENT_EXECUTE|[321]
+14:46:03.0 (74994434)|VARIABLE_ASSIGNMENT|[321]|this.cardExpiryYear|"2019"|0x39db38a0
+14:46:03.0 (75004953)|STATEMENT_EXECUTE|[322]
+14:46:03.0 (75169551)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x39db38a0
+14:46:03.0 (75197357)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:46:03.0 (75213486)|SYSTEM_MODE_ENTER|false
+14:46:03.0 (75224685)|HEAP_ALLOCATE|[41]|Bytes:5
+14:46:03.0 (75232054)|STATEMENT_EXECUTE|[41]
+14:46:03.0 (75235127)|STATEMENT_EXECUTE|[41]
+14:46:03.0 (75306522)|VARIABLE_ASSIGNMENT|[41]|this.cardCVN|""|0x39db38a0
+14:46:03.0 (75320092)|SYSTEM_MODE_EXIT|false
+14:46:03.0 (75339293)|STATEMENT_EXECUTE|[323]
+14:46:03.0 (75384811)|VARIABLE_ASSIGNMENT|[323]|this.customerToken|"969862261448"|0x39db38a0
+14:46:03.0 (75395913)|STATEMENT_EXECUTE|[324]
+14:46:03.0 (75423165)|VARIABLE_ASSIGNMENT|[324]|this.customerInvoiceDescription|"000972103"|0x39db38a0
+14:46:03.0 (75432901)|STATEMENT_EXECUTE|[325]
+14:46:03.0 (75450684)|VARIABLE_ASSIGNMENT|[325]|this.customerInvoiceRef|"000972103"|0x39db38a0
+14:46:03.0 (75459755)|STATEMENT_EXECUTE|[326]
+14:46:03.0 (75481743)|VARIABLE_ASSIGNMENT|[326]|this.uniqueAttemptId|"a0F6F00000uikSuUAI"|0x39db38a0
+14:46:03.0 (75490593)|STATEMENT_EXECUTE|[328]
+14:46:03.0 (75493817)|STATEMENT_EXECUTE|[328]
+14:46:03.0 (75496624)|STATEMENT_EXECUTE|[329]
+14:46:03.0 (75518664)|METHOD_ENTRY|[329]|01p6F000006He6O|paymentGateway.pay()
+14:46:03.0 (75547826)|VARIABLE_SCOPE_BEGIN|[153]|this|paymentGateway|true|false
+14:46:03.0 (75668229)|VARIABLE_ASSIGNMENT|[153]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (75701688)|SYSTEM_MODE_ENTER|false
+14:46:03.0 (75712741)|HEAP_ALLOCATE|[155]|Bytes:5
+14:46:03.0 (75719988)|STATEMENT_EXECUTE|[153]
+14:46:03.0 (75723145)|STATEMENT_EXECUTE|[155]
+14:46:03.0 (75768438)|HEAP_ALLOCATE|[155]|Bytes:4
+14:46:03.0 (75826144)|VARIABLE_ASSIGNMENT|[155]|this.paymentAttempt|{}|0x39db38a0
+14:46:03.0 (75836883)|STATEMENT_EXECUTE|[157]
+14:46:03.0 (75839602)|STATEMENT_EXECUTE|[157]
+14:46:03.0 (75858521)|HEAP_ALLOCATE|[159]|Bytes:28
+14:46:03.0 (75928444)|STATEMENT_EXECUTE|[159]
+14:46:03.0 (75940391)|STATEMENT_EXECUTE|[166]
+14:46:03.0 (75948701)|HEAP_ALLOCATE|[166]|Bytes:11
+14:46:03.0 (76909362)|VARIABLE_ASSIGNMENT|[166]|this.Status__c|"IN PROGRESS"|0x7c70a3d8
+14:46:03.0 (76925597)|STATEMENT_EXECUTE|[167]
+14:46:03.0 (77015018)|VARIABLE_ASSIGNMENT|[167]|this.Payment_Amount__c|89.00|0x7c70a3d8
+14:46:03.0 (77027523)|STATEMENT_EXECUTE|[168]
+14:46:03.0 (77187332)|VARIABLE_ASSIGNMENT|[168]|this.CurrencyIsoCode|"AUD"|0x7c70a3d8
+14:46:03.0 (77200263)|STATEMENT_EXECUTE|[169]
+14:46:03.0 (77216280)|HEAP_ALLOCATE|[169]|Bytes:1
+14:46:03.0 (77240161)|HEAP_ALLOCATE|[169]|Bytes:10
+14:46:03.0 (77312686)|VARIABLE_ASSIGNMENT|[169]|this.Payment_Name__c|"TIANNA MAI"|0x7c70a3d8
+14:46:03.0 (77352346)|STATEMENT_EXECUTE|[170]
+14:46:03.0 (77436426)|VARIABLE_ASSIGNMENT|[170]|this.Payment_Email__c|"tmai@jtlegalpractice (4 more) ..."|0x7c70a3d8
+14:46:03.0 (77453921)|STATEMENT_EXECUTE|[171]
+14:46:03.0 (78302486)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (79371034)|VARIABLE_ASSIGNMENT|[171]|this.Payment_Option__c|"Eway2"|0x7c70a3d8
+14:46:03.0 (79390620)|STATEMENT_EXECUTE|[172]
+14:46:03.0 (79566971)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (79609898)|HEAP_ALLOCATE|[172]|Bytes:7
+14:46:03.0 (79707218)|VARIABLE_ASSIGNMENT|[172]|this.Payment_Type__c|"Payment"|0x7c70a3d8
+14:46:03.0 (79720459)|STATEMENT_EXECUTE|[173]
+14:46:03.0 (79922443)|HEAP_ALLOCATE|[173]|Bytes:56
+14:46:03.0 (80061783)|VARIABLE_ASSIGNMENT|[173]|this.Request_Time__c|"2019-01-09T04:46:03.227Z"|0x7c70a3d8
+14:46:03.0 (80076037)|STATEMENT_EXECUTE|[174]
+14:46:03.0 (80157199)|VARIABLE_ASSIGNMENT|[174]|this.Invoice_Number__c|"000972103"|0x7c70a3d8
+14:46:03.0 (80308414)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (80352674)|HEAP_ALLOCATE|[177]|Bytes:4
+14:46:03.0 (80467886)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (80488400)|HEAP_ALLOCATE|[179]|Bytes:5
+14:46:03.0 (80501296)|STATEMENT_EXECUTE|[179]
+14:46:03.0 (80503737)|STATEMENT_EXECUTE|[180]
+14:46:03.0 (80527164)|METHOD_ENTRY|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:46:03.0 (80557783)|VARIABLE_SCOPE_BEGIN|[376]|this|paymentGateway|true|false
+14:46:03.0 (80636318)|VARIABLE_ASSIGNMENT|[376]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (80662822)|HEAP_ALLOCATE|[378]|Bytes:5
+14:46:03.0 (80668152)|STATEMENT_EXECUTE|[376]
+14:46:03.0 (80670312)|STATEMENT_EXECUTE|[378]
+14:46:03.0 (86640382)|VARIABLE_SCOPE_BEGIN|[10]|Eway2Payment.API_VERSION|String|false|true
+14:46:03.0 (86690762)|HEAP_ALLOCATE|[378]|Bytes:117
+14:46:03.0 (86716900)|HEAP_ALLOCATE|[378]|Bytes:67
+14:46:03.0 (86762412)|METHOD_ENTRY|[6]|01p6F000009rYF7|Eway2Payment.Eway2Payment()
+14:46:03.0 (86776744)|STATEMENT_EXECUTE|[6]
+14:46:03.0 (86783450)|STATEMENT_EXECUTE|[6]
+14:46:03.0 (86798549)|HEAP_ALLOCATE|[10]|Bytes:5
+14:46:03.0 (86810529)|STATEMENT_EXECUTE|[10]
+14:46:03.0 (86832159)|HEAP_ALLOCATE|[10]|Bytes:2
+14:46:03.0 (86870718)|VARIABLE_ASSIGNMENT|[10]|Eway2Payment.API_VERSION|"31"
+14:46:03.0 (86894873)|METHOD_EXIT|[6]|Eway2Payment
+14:46:03.0 (86936132)|METHOD_ENTRY|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:46:03.0 (86988480)|VARIABLE_SCOPE_BEGIN|[59]|gateway|paymentGateway|true|false
+14:46:03.0 (87162896)|VARIABLE_ASSIGNMENT|[59]|gateway|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (87199884)|HEAP_ALLOCATE|[60]|Bytes:5
+14:46:03.0 (87209340)|STATEMENT_EXECUTE|[59]
+14:46:03.0 (87212290)|STATEMENT_EXECUTE|[60]
+14:46:03.0 (92356526)|HEAP_ALLOCATE|[60]|Bytes:132
+14:46:03.0 (92407515)|CONSTRUCTOR_ENTRY|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:46:03.0 (92581585)|VARIABLE_SCOPE_BEGIN|[53]|this|Eway2Payment|true|false
+14:46:03.0 (92701095)|VARIABLE_ASSIGNMENT|[53]|this|{}|0x444de2f5
+14:46:03.0 (92728511)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:03.0 (92738610)|STATEMENT_EXECUTE|[6]
+14:46:03.0 (92746101)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:03.0 (92752807)|STATEMENT_EXECUTE|[16]
+14:46:03.0 (92777207)|STATEMENT_EXECUTE|[17]
+14:46:03.0 (92783976)|STATEMENT_EXECUTE|[18]
+14:46:03.0 (92789321)|STATEMENT_EXECUTE|[19]
+14:46:03.0 (92794815)|STATEMENT_EXECUTE|[20]
+14:46:03.0 (92800272)|STATEMENT_EXECUTE|[21]
+14:46:03.0 (92805238)|STATEMENT_EXECUTE|[22]
+14:46:03.0 (92811464)|STATEMENT_EXECUTE|[23]
+14:46:03.0 (92816732)|STATEMENT_EXECUTE|[24]
+14:46:03.0 (92821878)|STATEMENT_EXECUTE|[25]
+14:46:03.0 (92826912)|STATEMENT_EXECUTE|[26]
+14:46:03.0 (92832462)|STATEMENT_EXECUTE|[27]
+14:46:03.0 (92837838)|STATEMENT_EXECUTE|[28]
+14:46:03.0 (92842894)|STATEMENT_EXECUTE|[29]
+14:46:03.0 (92848151)|STATEMENT_EXECUTE|[30]
+14:46:03.0 (92853445)|STATEMENT_EXECUTE|[31]
+14:46:03.0 (92858592)|STATEMENT_EXECUTE|[32]
+14:46:03.0 (92863904)|STATEMENT_EXECUTE|[33]
+14:46:03.0 (92869173)|STATEMENT_EXECUTE|[34]
+14:46:03.0 (92874745)|STATEMENT_EXECUTE|[35]
+14:46:03.0 (92880073)|STATEMENT_EXECUTE|[36]
+14:46:03.0 (92885242)|STATEMENT_EXECUTE|[37]
+14:46:03.0 (92890509)|STATEMENT_EXECUTE|[38]
+14:46:03.0 (92895774)|STATEMENT_EXECUTE|[39]
+14:46:03.0 (92900866)|STATEMENT_EXECUTE|[40]
+14:46:03.0 (92905795)|STATEMENT_EXECUTE|[41]
+14:46:03.0 (92911059)|STATEMENT_EXECUTE|[42]
+14:46:03.0 (92916346)|STATEMENT_EXECUTE|[43]
+14:46:03.0 (92921550)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (92926646)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (92932594)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (92938420)|STATEMENT_EXECUTE|[48]
+14:46:03.0 (92976446)|STATEMENT_EXECUTE|[53]
+14:46:03.0 (92980259)|STATEMENT_EXECUTE|[54]
+14:46:03.0 (93000351)|HEAP_ALLOCATE|[54]|Bytes:22
+14:46:03.0 (93016761)|HEAP_ALLOCATE|[54]|Bytes:2
+14:46:03.0 (93058748)|METHOD_ENTRY|[1]|01p6F000009rYF8|Eway2Response.Eway2Response()
+14:46:03.0 (93072070)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (93078427)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (93088975)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:03.0 (93106876)|METHOD_EXIT|[1]|Eway2Response
+14:46:03.0 (93131745)|HEAP_ALLOCATE|[54]|Bytes:16
+14:46:03.0 (93150776)|CONSTRUCTOR_ENTRY|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:46:03.0 (93185684)|VARIABLE_SCOPE_BEGIN|[7]|this|Eway2Response|true|false
+14:46:03.0 (93229957)|VARIABLE_ASSIGNMENT|[7]|this|{}|0x4b0c2a8d
+14:46:03.0 (93251993)|HEAP_ALLOCATE|[5]|Bytes:5
+14:46:03.0 (93259690)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (93265316)|HEAP_ALLOCATE|[5]|Bytes:5
+14:46:03.0 (93271286)|STATEMENT_EXECUTE|[3]
+14:46:03.0 (93281770)|STATEMENT_EXECUTE|[4]
+14:46:03.0 (93287267)|STATEMENT_EXECUTE|[5]
+14:46:03.0 (93313089)|HEAP_ALLOCATE|[5]|Bytes:4
+14:46:03.0 (93361991)|VARIABLE_ASSIGNMENT|[5]|this.params|{}|0x4b0c2a8d
+14:46:03.0 (93395423)|STATEMENT_EXECUTE|[7]
+14:46:03.0 (93417128)|CONSTRUCTOR_EXIT|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:46:03.0 (93444048)|VARIABLE_ASSIGNMENT|[54]|this.response|0x4b0c2a8d|0x444de2f5
+14:46:03.0 (93453842)|STATEMENT_EXECUTE|[56]
+14:46:03.0 (93480971)|VARIABLE_ASSIGNMENT|[56]|this.currencyCode|"AUD"|0x444de2f5
+14:46:03.0 (93499824)|CONSTRUCTOR_EXIT|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:46:03.0 (93514143)|VARIABLE_SCOPE_BEGIN|[60]|eway|Eway2Payment|true|false
+14:46:03.0 (93572291)|VARIABLE_ASSIGNMENT|[60]|eway|{"currencyCode":"AUD","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (93764527)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (93840228)|HEAP_ALLOCATE|[62]|Bytes:16
+14:46:03.0 (94023909)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (94067862)|HEAP_ALLOCATE|[64]|Bytes:13
+14:46:03.0 (94093556)|STATEMENT_EXECUTE|[64]
+14:46:03.0 (94097407)|STATEMENT_EXECUTE|[65]
+14:46:03.0 (94112758)|HEAP_ALLOCATE|[65]|Bytes:17
+14:46:03.0 (94168816)|METHOD_ENTRY|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:46:03.0 (94221898)|VARIABLE_SCOPE_BEGIN|[104]|this|Eway2Payment|true|false
+14:46:03.0 (94278592)|VARIABLE_ASSIGNMENT|[104]|this|{"currencyCode":"AUD","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (94293869)|VARIABLE_SCOPE_BEGIN|[104]|merchantName|String|false|false
+14:46:03.0 (94310908)|VARIABLE_ASSIGNMENT|[104]|merchantName|"Eway Rapid SLX AU"
+14:46:03.0 (94337008)|HEAP_ALLOCATE|[106]|Bytes:5
+14:46:03.0 (94347562)|STATEMENT_EXECUTE|[104]
+14:46:03.0 (94351036)|STATEMENT_EXECUTE|[106]
+14:46:03.0 (96294518)|HEAP_ALLOCATE|[106]|Bytes:56
+14:46:03.0 (96343556)|VARIABLE_SCOPE_BEGIN|[106]|merchantConfig|PaymentGateway__c|true|false
+14:46:03.0 (96454264)|VARIABLE_ASSIGNMENT|[106]|merchantConfig|{"LastModifiedDate":"2018-03-20T03:55:30.000Z","IsDeleted":false,"MerchantURL__c":"https://api.ewaypaym (20 more) ...","Access_Code__c":"F9802AULee2iddqRMaI7 (50 more) ...","CurrencyIsoCode":"AUD","SetupOwnerId":"00D90000000IJSaEAO","Name":"Eway Rapid SLX AU","SystemModstamp":"2018-05-24T08:56:42.000Z","CreatedById":"00590000000VmmqAAC","CreatedDate":"2018-03-20T03:55:30.000Z","Id":"a2c6F0000062AY3QAM","LastModifiedById":"00590000000VmmqAAC","Password__c":"KY0jzPzu"}|0x38117881
+14:46:03.0 (96480353)|STATEMENT_EXECUTE|[108]
+14:46:03.0 (96496240)|STATEMENT_EXECUTE|[112]
+14:46:03.0 (96533942)|VARIABLE_ASSIGNMENT|[112]|this.merchantName|"Eway Rapid SLX AU"|0x444de2f5
+14:46:03.0 (96546517)|STATEMENT_EXECUTE|[113]
+14:46:03.0 (96612702)|VARIABLE_ASSIGNMENT|[113]|this.gatewayUrl|"https://api.ewaypaym (20 more) ..."|0x444de2f5
+14:46:03.0 (96625739)|STATEMENT_EXECUTE|[114]
+14:46:03.0 (96675706)|VARIABLE_ASSIGNMENT|[114]|this.merchantId|"F9802AULee2iddqRMaI7 (50 more) ..."|0x444de2f5
+14:46:03.0 (96688826)|STATEMENT_EXECUTE|[115]
+14:46:03.0 (96736014)|VARIABLE_ASSIGNMENT|[115]|this.password|"KY0jzPzu"|0x444de2f5
+14:46:03.0 (96763187)|METHOD_EXIT|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:46:03.0 (96776501)|STATEMENT_EXECUTE|[70]
+14:46:03.0 (96898928)|HEAP_ALLOCATE|[70]|Bytes:28
+14:46:03.0 (96938571)|HEAP_ALLOCATE|[70]|Bytes:28
+14:46:03.0 (96987728)|HEAP_ALLOCATE|[70]|Bytes:28
+14:46:03.0 (97034775)|HEAP_ALLOCATE|[70]|Bytes:28
+14:46:03.0 (97103331)|VARIABLE_SCOPE_BEGIN|[70]|amountInCents|Integer|false|false
+14:46:03.0 (97124769)|HEAP_ALLOCATE|[70]|Bytes:4
+14:46:03.0 (97139517)|VARIABLE_ASSIGNMENT|[70]|amountInCents|8900
+14:46:03.0 (97147694)|STATEMENT_EXECUTE|[72]
+14:46:03.0 (97191138)|METHOD_ENTRY|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:46:03.0 (97236029)|VARIABLE_SCOPE_BEGIN|[331]|this|Eway2Payment|true|false
+14:46:03.0 (97319376)|VARIABLE_ASSIGNMENT|[331]|this|{"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (97345244)|VARIABLE_SCOPE_BEGIN|[331]|amount|Integer|false|false
+14:46:03.0 (97362767)|VARIABLE_ASSIGNMENT|[331]|amount|8900
+14:46:03.0 (97371922)|VARIABLE_SCOPE_BEGIN|[331]|currencyCode|String|false|false
+14:46:03.0 (97387325)|VARIABLE_ASSIGNMENT|[331]|currencyCode|"AUD"
+14:46:03.0 (97407314)|HEAP_ALLOCATE|[332]|Bytes:5
+14:46:03.0 (97416323)|STATEMENT_EXECUTE|[331]
+14:46:03.0 (97419285)|STATEMENT_EXECUTE|[332]
+14:46:03.0 (97432386)|HEAP_ALLOCATE|[332]|Bytes:4
+14:46:03.0 (97449486)|VARIABLE_ASSIGNMENT|[332]|this.amount|8900|0x444de2f5
+14:46:03.0 (97459859)|STATEMENT_EXECUTE|[333]
+14:46:03.0 (97482452)|VARIABLE_ASSIGNMENT|[333]|this.currencyCode|"AUD"|0x444de2f5
+14:46:03.0 (97503774)|METHOD_EXIT|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:46:03.0 (97514636)|STATEMENT_EXECUTE|[73]
+14:46:03.0 (97551670)|METHOD_ENTRY|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:46:03.0 (97588857)|VARIABLE_SCOPE_BEGIN|[322]|this|Eway2Payment|true|false
+14:46:03.0 (97658301)|VARIABLE_ASSIGNMENT|[322]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (97676007)|VARIABLE_SCOPE_BEGIN|[322]|merchTxnRef|String|false|false
+14:46:03.0 (97692914)|VARIABLE_ASSIGNMENT|[322]|merchTxnRef|"000972103"
+14:46:03.0 (97710083)|HEAP_ALLOCATE|[323]|Bytes:5
+14:46:03.0 (97718733)|STATEMENT_EXECUTE|[322]
+14:46:03.0 (97722221)|STATEMENT_EXECUTE|[323]
+14:46:03.0 (97749652)|VARIABLE_ASSIGNMENT|[323]|this.merchTxnRef|"000972103"|0x444de2f5
+14:46:03.0 (97771139)|METHOD_EXIT|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:46:03.0 (97781812)|STATEMENT_EXECUTE|[74]
+14:46:03.0 (97813678)|METHOD_ENTRY|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:46:03.0 (97849402)|VARIABLE_SCOPE_BEGIN|[326]|this|Eway2Payment|true|false
+14:46:03.0 (97918964)|VARIABLE_ASSIGNMENT|[326]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (97936177)|VARIABLE_SCOPE_BEGIN|[326]|OrderInfo|String|false|false
+14:46:03.0 (97953042)|VARIABLE_ASSIGNMENT|[326]|OrderInfo|"000972103"
+14:46:03.0 (97969847)|HEAP_ALLOCATE|[327]|Bytes:5
+14:46:03.0 (97978458)|STATEMENT_EXECUTE|[326]
+14:46:03.0 (97981367)|STATEMENT_EXECUTE|[327]
+14:46:03.0 (98008043)|VARIABLE_ASSIGNMENT|[327]|this.orderInfo|"000972103"|0x444de2f5
+14:46:03.0 (98029186)|METHOD_EXIT|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:46:03.0 (98039068)|STATEMENT_EXECUTE|[75]
+14:46:03.0 (98218832)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (98271673)|METHOD_ENTRY|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:46:03.0 (98286887)|VARIABLE_SCOPE_BEGIN|[344]|this|Eway2Payment|true|false
+14:46:03.0 (98361115)|VARIABLE_ASSIGNMENT|[344]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (98381135)|VARIABLE_SCOPE_BEGIN|[344]|CardNum|String|false|false
+14:46:03.0 (98395720)|VARIABLE_ASSIGNMENT|[344]|CardNum|null
+14:46:03.0 (98413098)|HEAP_ALLOCATE|[345]|Bytes:5
+14:46:03.0 (98421372)|STATEMENT_EXECUTE|[344]
+14:46:03.0 (98424245)|STATEMENT_EXECUTE|[345]
+14:46:03.0 (98446850)|VARIABLE_ASSIGNMENT|[345]|this.cardNum|null|0x444de2f5
+14:46:03.0 (98467141)|METHOD_EXIT|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:46:03.0 (98477296)|STATEMENT_EXECUTE|[76]
+14:46:03.0 (98507228)|METHOD_ENTRY|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:46:03.0 (98545173)|VARIABLE_SCOPE_BEGIN|[356]|this|Eway2Payment|true|false
+14:46:03.0 (98613232)|VARIABLE_ASSIGNMENT|[356]|this|{"amount":8900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (98632513)|VARIABLE_SCOPE_BEGIN|[356]|month|String|false|false
+14:46:03.0 (98649470)|VARIABLE_ASSIGNMENT|[356]|month|"07"
+14:46:03.0 (98657453)|VARIABLE_SCOPE_BEGIN|[356]|year|String|false|false
+14:46:03.0 (98671666)|VARIABLE_ASSIGNMENT|[356]|year|"2019"
+14:46:03.0 (98688208)|HEAP_ALLOCATE|[358]|Bytes:5
+14:46:03.0 (98696208)|STATEMENT_EXECUTE|[356]
+14:46:03.0 (98764743)|STATEMENT_EXECUTE|[358]
+14:46:03.0 (98821727)|STATEMENT_EXECUTE|[362]
+14:46:03.0 (98825685)|STATEMENT_EXECUTE|[363]
+14:46:03.0 (98870530)|HEAP_ALLOCATE|[363]|Bytes:4
+14:46:03.0 (98911270)|HEAP_ALLOCATE|[363]|Bytes:2
+14:46:03.0 (98937546)|VARIABLE_ASSIGNMENT|[363]|year|"19"
+14:46:03.0 (98947408)|STATEMENT_EXECUTE|[366]
+14:46:03.0 (98971758)|VARIABLE_ASSIGNMENT|[366]|this.cardExpiryMonth|"07"|0x444de2f5
+14:46:03.0 (98983379)|STATEMENT_EXECUTE|[367]
+14:46:03.0 (99002330)|VARIABLE_ASSIGNMENT|[367]|this.cardExpiryYear|"19"|0x444de2f5
+14:46:03.0 (99030977)|METHOD_EXIT|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:46:03.0 (99041598)|STATEMENT_EXECUTE|[77]
+14:46:03.0 (99069788)|METHOD_ENTRY|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:46:03.0 (99103891)|VARIABLE_SCOPE_BEGIN|[340]|this|Eway2Payment|true|false
+14:46:03.0 (99180911)|VARIABLE_ASSIGNMENT|[340]|this|{"amount":8900,"cardExpiryMonth":"07","cardExpiryYear":"19","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (99200800)|VARIABLE_SCOPE_BEGIN|[340]|cardName|String|false|false
+14:46:03.0 (99218312)|VARIABLE_ASSIGNMENT|[340]|cardName|"Joey Nguyen"
+14:46:03.0 (99236551)|HEAP_ALLOCATE|[341]|Bytes:5
+14:46:03.0 (99245370)|STATEMENT_EXECUTE|[340]
+14:46:03.0 (99248178)|STATEMENT_EXECUTE|[341]
+14:46:03.0 (99272734)|VARIABLE_ASSIGNMENT|[341]|this.cardName|"Joey Nguyen"|0x444de2f5
+14:46:03.0 (99293476)|METHOD_EXIT|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:46:03.0 (99304408)|STATEMENT_EXECUTE|[78]
+14:46:03.0 (99469985)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (99528006)|METHOD_ENTRY|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:46:03.0 (99544480)|VARIABLE_SCOPE_BEGIN|[348]|this|Eway2Payment|true|false
+14:46:03.0 (99618544)|VARIABLE_ASSIGNMENT|[348]|this|{"amount":8900,"cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (99638140)|VARIABLE_SCOPE_BEGIN|[348]|cardCvc|String|false|false
+14:46:03.0 (99654332)|VARIABLE_ASSIGNMENT|[348]|cardCvc|""
+14:46:03.0 (99671284)|HEAP_ALLOCATE|[349]|Bytes:5
+14:46:03.0 (99679703)|STATEMENT_EXECUTE|[348]
+14:46:03.0 (99682989)|STATEMENT_EXECUTE|[349]
+14:46:03.0 (99707488)|VARIABLE_ASSIGNMENT|[349]|this.cardCvc|""|0x444de2f5
+14:46:03.0 (99727521)|METHOD_EXIT|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:46:03.0 (99737196)|STATEMENT_EXECUTE|[79]
+14:46:03.0 (99766528)|METHOD_ENTRY|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:46:03.0 (99804068)|VARIABLE_SCOPE_BEGIN|[374]|this|Eway2Payment|true|false
+14:46:03.0 (99881452)|VARIABLE_ASSIGNMENT|[374]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (99901114)|VARIABLE_SCOPE_BEGIN|[374]|customerCompanyName|String|false|false
+14:46:03.0 (99919092)|VARIABLE_ASSIGNMENT|[374]|customerCompanyName|"JT Legal Practice"
+14:46:03.0 (99936017)|HEAP_ALLOCATE|[375]|Bytes:5
+14:46:03.0 (99944164)|STATEMENT_EXECUTE|[374]
+14:46:03.0 (99947079)|STATEMENT_EXECUTE|[375]
+14:46:03.0 (103067366)|HEAP_ALLOCATE|[375]|Bytes:43
+14:46:03.0 (103086586)|HEAP_ALLOCATE|[375]|Bytes:3
+14:46:03.0 (103114719)|METHOD_ENTRY|[1]|01p6F000006uYhT|Utility.Utility()
+14:46:03.0 (103121472)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (103126901)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (103136338)|HEAP_ALLOCATE|[375]|Bytes:5
+14:46:03.0 (103147916)|METHOD_EXIT|[1]|Utility
+14:46:03.0 (103184973)|METHOD_ENTRY|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (103227567)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (103256166)|VARIABLE_ASSIGNMENT|[44]|s1|"JT Legal Practice"
+14:46:03.0 (103266229)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (103281647)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (103304905)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (103314057)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (103317225)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (103339023)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (103358007)|VARIABLE_ASSIGNMENT|[45]|result|"JT Legal Practice"
+14:46:03.0 (103363347)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (103368290)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (103380810)|METHOD_EXIT|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (103420391)|HEAP_ALLOCATE|[375]|Bytes:17
+14:46:03.0 (103454419)|VARIABLE_ASSIGNMENT|[375]|this.customerCompanyName|"JT Legal Practice"|0x444de2f5
+14:46:03.0 (103472252)|METHOD_EXIT|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:46:03.0 (103481377)|STATEMENT_EXECUTE|[80]
+14:46:03.0 (103518971)|METHOD_ENTRY|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:46:03.0 (103560292)|VARIABLE_SCOPE_BEGIN|[378]|this|Eway2Payment|true|false
+14:46:03.0 (103637497)|VARIABLE_ASSIGNMENT|[378]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCompanyName":"JT Legal Practice","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (103649090)|VARIABLE_SCOPE_BEGIN|[378]|customerFirstName|String|false|false
+14:46:03.0 (103661756)|VARIABLE_ASSIGNMENT|[378]|customerFirstName|"TIANNA"
+14:46:03.0 (103679976)|HEAP_ALLOCATE|[379]|Bytes:5
+14:46:03.0 (103688606)|STATEMENT_EXECUTE|[378]
+14:46:03.0 (103691684)|STATEMENT_EXECUTE|[379]
+14:46:03.0 (103712789)|METHOD_ENTRY|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (103732987)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (103747946)|VARIABLE_ASSIGNMENT|[44]|s1|"TIANNA"
+14:46:03.0 (103754107)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (103764971)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (103777581)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (103784100)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (103786642)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (103797305)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (103811946)|VARIABLE_ASSIGNMENT|[45]|result|"TIANNA"
+14:46:03.0 (103818713)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (103824287)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (103837199)|METHOD_EXIT|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (103863394)|HEAP_ALLOCATE|[379]|Bytes:6
+14:46:03.0 (103889704)|VARIABLE_ASSIGNMENT|[379]|this.customerFirstName|"TIANNA"|0x444de2f5
+14:46:03.0 (103905602)|METHOD_EXIT|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:46:03.0 (103913979)|STATEMENT_EXECUTE|[81]
+14:46:03.0 (103940013)|METHOD_ENTRY|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:46:03.0 (103967987)|VARIABLE_SCOPE_BEGIN|[382]|this|Eway2Payment|true|false
+14:46:03.0 (104044382)|VARIABLE_ASSIGNMENT|[382]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCompanyName":"JT Legal Practice","customerFirstName":"TIANNA","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (104064541)|VARIABLE_SCOPE_BEGIN|[382]|customerLastName|String|false|false
+14:46:03.0 (104074637)|VARIABLE_ASSIGNMENT|[382]|customerLastName|"MAI"
+14:46:03.0 (104087257)|HEAP_ALLOCATE|[383]|Bytes:5
+14:46:03.0 (104092268)|STATEMENT_EXECUTE|[382]
+14:46:03.0 (104094470)|STATEMENT_EXECUTE|[383]
+14:46:03.0 (104108090)|METHOD_ENTRY|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104121568)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (104130568)|VARIABLE_ASSIGNMENT|[44]|s1|"MAI"
+14:46:03.0 (104134784)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (104142214)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (104149637)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (104154116)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (104155976)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (104162968)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (104174173)|VARIABLE_ASSIGNMENT|[45]|result|"MAI"
+14:46:03.0 (104181372)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (104187182)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (104199549)|METHOD_EXIT|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104227801)|HEAP_ALLOCATE|[383]|Bytes:3
+14:46:03.0 (104255717)|VARIABLE_ASSIGNMENT|[383]|this.customerLastName|"MAI"|0x444de2f5
+14:46:03.0 (104272825)|METHOD_EXIT|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:46:03.0 (104281081)|STATEMENT_EXECUTE|[82]
+14:46:03.0 (104307031)|METHOD_ENTRY|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:46:03.0 (104346303)|VARIABLE_SCOPE_BEGIN|[386]|this|Eway2Payment|true|false
+14:46:03.0 (104419847)|VARIABLE_ASSIGNMENT|[386]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCompanyName":"JT Legal Practice","customerFirstName":"TIANNA","customerLastName":"MAI","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (104432539)|VARIABLE_SCOPE_BEGIN|[386]|customerEmail|String|false|false
+14:46:03.0 (104444818)|VARIABLE_ASSIGNMENT|[386]|customerEmail|"tmai@jtlegalpractice (4 more) ..."
+14:46:03.0 (104461481)|HEAP_ALLOCATE|[387]|Bytes:5
+14:46:03.0 (104469134)|STATEMENT_EXECUTE|[386]
+14:46:03.0 (104472147)|STATEMENT_EXECUTE|[387]
+14:46:03.0 (104490716)|METHOD_ENTRY|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104511916)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (104529576)|VARIABLE_ASSIGNMENT|[44]|s1|"tmai@jtlegalpractice (4 more) ..."
+14:46:03.0 (104536349)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (104546877)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (104561290)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (104568650)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (104571374)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (104584013)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (104602524)|VARIABLE_ASSIGNMENT|[45]|result|"tmai@jtlegalpractice (4 more) ..."
+14:46:03.0 (104608134)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (104612872)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (104622839)|METHOD_EXIT|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104643354)|HEAP_ALLOCATE|[387]|Bytes:24
+14:46:03.0 (104663459)|VARIABLE_ASSIGNMENT|[387]|this.customerEmail|"tmai@jtlegalpractice (4 more) ..."|0x444de2f5
+14:46:03.0 (104674005)|METHOD_EXIT|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:46:03.0 (104679045)|STATEMENT_EXECUTE|[83]
+14:46:03.0 (104697350)|METHOD_ENTRY|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:46:03.0 (104716922)|VARIABLE_SCOPE_BEGIN|[390]|this|Eway2Payment|true|false
+14:46:03.0 (104789561)|VARIABLE_ASSIGNMENT|[390]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCompanyName":"JT Legal Practice","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (104815977)|VARIABLE_SCOPE_BEGIN|[390]|customerStreet|String|false|false
+14:46:03.0 (104831443)|VARIABLE_ASSIGNMENT|[390]|customerStreet|"15 Moore St"
+14:46:03.0 (104847884)|HEAP_ALLOCATE|[391]|Bytes:5
+14:46:03.0 (104855511)|STATEMENT_EXECUTE|[390]
+14:46:03.0 (104858614)|STATEMENT_EXECUTE|[391]
+14:46:03.0 (104875434)|METHOD_ENTRY|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104890447)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (104900571)|VARIABLE_ASSIGNMENT|[44]|s1|"15 Moore St"
+14:46:03.0 (104904536)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (104911833)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (104920163)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (104925921)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (104927853)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (104934766)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (104944220)|VARIABLE_ASSIGNMENT|[45]|result|"15 Moore St"
+14:46:03.0 (104948709)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (104952465)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (104961059)|METHOD_EXIT|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (104981177)|HEAP_ALLOCATE|[391]|Bytes:11
+14:46:03.0 (104999360)|VARIABLE_ASSIGNMENT|[391]|this.customerStreet|"15 Moore St"|0x444de2f5
+14:46:03.0 (105011499)|METHOD_EXIT|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:46:03.0 (105020168)|STATEMENT_EXECUTE|[84]
+14:46:03.0 (105037426)|METHOD_ENTRY|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:46:03.0 (105056800)|VARIABLE_SCOPE_BEGIN|[394]|this|Eway2Payment|true|false
+14:46:03.0 (105113071)|VARIABLE_ASSIGNMENT|[394]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCompanyName":"JT Legal Practice","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerStreet":"15 Moore St","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (105124827)|VARIABLE_SCOPE_BEGIN|[394]|customerCity|String|false|false
+14:46:03.0 (105133299)|VARIABLE_ASSIGNMENT|[394]|customerCity|"LIVERPOOL"
+14:46:03.0 (105144601)|HEAP_ALLOCATE|[395]|Bytes:5
+14:46:03.0 (105148979)|STATEMENT_EXECUTE|[394]
+14:46:03.0 (105150895)|STATEMENT_EXECUTE|[395]
+14:46:03.0 (105162474)|METHOD_ENTRY|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105174442)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (105183460)|VARIABLE_ASSIGNMENT|[44]|s1|"LIVERPOOL"
+14:46:03.0 (105187655)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (105194451)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (105201500)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (105205193)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (105207033)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (105213215)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (105222623)|VARIABLE_ASSIGNMENT|[45]|result|"LIVERPOOL"
+14:46:03.0 (105226859)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (105230527)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (105238691)|METHOD_EXIT|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105254676)|HEAP_ALLOCATE|[395]|Bytes:9
+14:46:03.0 (105270568)|VARIABLE_ASSIGNMENT|[395]|this.customerCity|"LIVERPOOL"|0x444de2f5
+14:46:03.0 (105280031)|METHOD_EXIT|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:46:03.0 (105284947)|STATEMENT_EXECUTE|[85]
+14:46:03.0 (105301965)|METHOD_ENTRY|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:46:03.0 (105327607)|VARIABLE_SCOPE_BEGIN|[398]|this|Eway2Payment|true|false
+14:46:03.0 (105398609)|VARIABLE_ASSIGNMENT|[398]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerStreet":"15 Moore St","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (105411687)|VARIABLE_SCOPE_BEGIN|[398]|customerState|String|false|false
+14:46:03.0 (105419731)|VARIABLE_ASSIGNMENT|[398]|customerState|"NSW"
+14:46:03.0 (105431009)|HEAP_ALLOCATE|[399]|Bytes:5
+14:46:03.0 (105436165)|STATEMENT_EXECUTE|[398]
+14:46:03.0 (105438574)|STATEMENT_EXECUTE|[399]
+14:46:03.0 (105456705)|METHOD_ENTRY|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105475730)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (105485746)|VARIABLE_ASSIGNMENT|[44]|s1|"NSW"
+14:46:03.0 (105490251)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (105497115)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (105505845)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (105510155)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (105512301)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (105519650)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (105528434)|VARIABLE_ASSIGNMENT|[45]|result|"NSW"
+14:46:03.0 (105532727)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (105536467)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (105544497)|METHOD_EXIT|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105564242)|HEAP_ALLOCATE|[399]|Bytes:3
+14:46:03.0 (105582310)|VARIABLE_ASSIGNMENT|[399]|this.customerState|"NSW"|0x444de2f5
+14:46:03.0 (105591431)|METHOD_EXIT|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:46:03.0 (105596525)|STATEMENT_EXECUTE|[86]
+14:46:03.0 (105612033)|METHOD_ENTRY|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:46:03.0 (105629388)|VARIABLE_SCOPE_BEGIN|[402]|this|Eway2Payment|true|false
+14:46:03.0 (105686184)|VARIABLE_ASSIGNMENT|[402]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerState":"NSW","customerStreet":"15 Moore St","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (105698298)|VARIABLE_SCOPE_BEGIN|[402]|customerPostcode|String|false|false
+14:46:03.0 (105705933)|VARIABLE_ASSIGNMENT|[402]|customerPostcode|"2170"
+14:46:03.0 (105718753)|HEAP_ALLOCATE|[403]|Bytes:5
+14:46:03.0 (105723013)|STATEMENT_EXECUTE|[402]
+14:46:03.0 (105724965)|STATEMENT_EXECUTE|[403]
+14:46:03.0 (105736102)|METHOD_ENTRY|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105747335)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:03.0 (105755980)|VARIABLE_ASSIGNMENT|[44]|s1|"2170"
+14:46:03.0 (105760110)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:03.0 (105767328)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:46:03.0 (105774298)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:03.0 (105778060)|STATEMENT_EXECUTE|[44]
+14:46:03.0 (105779850)|STATEMENT_EXECUTE|[45]
+14:46:03.0 (105785953)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:03.0 (105794499)|VARIABLE_ASSIGNMENT|[45]|result|"2170"
+14:46:03.0 (105798619)|STATEMENT_EXECUTE|[46]
+14:46:03.0 (105802808)|STATEMENT_EXECUTE|[47]
+14:46:03.0 (105810356)|METHOD_EXIT|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:03.0 (105826112)|HEAP_ALLOCATE|[403]|Bytes:4
+14:46:03.0 (105841895)|VARIABLE_ASSIGNMENT|[403]|this.customerPostcode|"2170"|0x444de2f5
+14:46:03.0 (105850711)|METHOD_EXIT|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:46:03.0 (105855615)|STATEMENT_EXECUTE|[87]
+14:46:03.0 (105870723)|METHOD_ENTRY|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:46:03.0 (105887168)|VARIABLE_SCOPE_BEGIN|[406]|this|Eway2Payment|true|false
+14:46:03.0 (105943781)|VARIABLE_ASSIGNMENT|[406]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (105955870)|VARIABLE_SCOPE_BEGIN|[406]|customerCountrycode|String|false|false
+14:46:03.0 (105964353)|VARIABLE_ASSIGNMENT|[406]|customerCountrycode|"AU"
+14:46:03.0 (105974326)|HEAP_ALLOCATE|[407]|Bytes:5
+14:46:03.0 (105978355)|STATEMENT_EXECUTE|[406]
+14:46:03.0 (105980536)|STATEMENT_EXECUTE|[407]
+14:46:03.0 (106016752)|HEAP_ALLOCATE|[407]|Bytes:2
+14:46:03.0 (106034775)|VARIABLE_ASSIGNMENT|[407]|this.customerCountrycode|"au"|0x444de2f5
+14:46:03.0 (106045191)|METHOD_EXIT|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:46:03.0 (106050457)|STATEMENT_EXECUTE|[88]
+14:46:03.0 (106068319)|METHOD_ENTRY|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:46:03.0 (106084661)|VARIABLE_SCOPE_BEGIN|[370]|this|Eway2Payment|true|false
+14:46:03.0 (106141742)|VARIABLE_ASSIGNMENT|[370]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d"}|0x444de2f5
+14:46:03.0 (106154440)|VARIABLE_SCOPE_BEGIN|[370]|transNo|String|false|false
+14:46:03.0 (106162663)|VARIABLE_ASSIGNMENT|[370]|transNo|""
+14:46:03.0 (106172551)|HEAP_ALLOCATE|[371]|Bytes:5
+14:46:03.0 (106176736)|STATEMENT_EXECUTE|[370]
+14:46:03.0 (106178702)|STATEMENT_EXECUTE|[371]
+14:46:03.0 (106192287)|VARIABLE_ASSIGNMENT|[371]|this.transactionNo|""|0x444de2f5
+14:46:03.0 (106202410)|METHOD_EXIT|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:46:03.0 (106207808)|STATEMENT_EXECUTE|[89]
+14:46:03.0 (106219611)|VARIABLE_ASSIGNMENT|[89]|this.customerToken|"969862261448"|0x444de2f5
+14:46:03.0 (106225427)|STATEMENT_EXECUTE|[93]
+14:46:03.0 (106239585)|METHOD_ENTRY|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:46:03.0 (106256673)|VARIABLE_SCOPE_BEGIN|[410]|this|Eway2Payment|true|false
+14:46:03.0 (106313746)|VARIABLE_ASSIGNMENT|[410]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (106327085)|VARIABLE_SCOPE_BEGIN|[410]|customerIP|String|false|false
+14:46:03.0 (106334867)|VARIABLE_ASSIGNMENT|[410]|customerIP|null
+14:46:03.0 (106344523)|HEAP_ALLOCATE|[411]|Bytes:5
+14:46:03.0 (106348465)|STATEMENT_EXECUTE|[410]
+14:46:03.0 (106355586)|STATEMENT_EXECUTE|[411]
+14:46:03.0 (106367839)|VARIABLE_ASSIGNMENT|[411]|this.customerIP|null|0x444de2f5
+14:46:03.0 (106377932)|METHOD_EXIT|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:46:03.0 (106488969)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (106512479)|STATEMENT_EXECUTE|[95]
+14:46:03.0 (106519140)|STATEMENT_EXECUTE|[99]
+14:46:03.0 (106528077)|METHOD_EXIT|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:46:03.0 (106535799)|VARIABLE_SCOPE_BEGIN|[378]|eway|Eway2Payment|true|false
+14:46:03.0 (106593534)|VARIABLE_ASSIGNMENT|[378]|eway|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (106606009)|STATEMENT_EXECUTE|[379]
+14:46:03.0 (106613735)|VARIABLE_SCOPE_BEGIN|[379]|ewayResp|Eway2Response|true|false
+14:46:03.0 (106623347)|VARIABLE_ASSIGNMENT|[379]|ewayResp|null|
+14:46:03.0 (106739550)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":89.00,"bjbCompany":"0x25d4d889","cardCVN":"","cardExpiryMonth":"07","cardExpiryYear":"2019","cardHoldersName":"Joey Nguyen","currencyIsoCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"AU","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerInvoiceDescription":"000972103","customerInvoiceRef":"000972103","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x7c70a3d8","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x39db38a0
+14:46:03.0 (106770048)|STATEMENT_EXECUTE|[383]
+14:46:03.0 (106772590)|STATEMENT_EXECUTE|[384]
+14:46:03.0 (106787037)|METHOD_ENTRY|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:46:03.0 (106803585)|VARIABLE_SCOPE_BEGIN|[204]|this|Eway2Payment|true|false
+14:46:03.0 (106864057)|VARIABLE_ASSIGNMENT|[204]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (106884568)|HEAP_ALLOCATE|[205]|Bytes:5
+14:46:03.0 (106889451)|STATEMENT_EXECUTE|[204]
+14:46:03.0 (106891351)|STATEMENT_EXECUTE|[205]
+14:46:03.0 (106899443)|HEAP_ALLOCATE|[205]|Bytes:14
+14:46:03.0 (106911908)|VARIABLE_ASSIGNMENT|[205]|this.command|"ProcessPayment"|0x444de2f5
+14:46:03.0 (106917398)|STATEMENT_EXECUTE|[208]
+14:46:03.0 (106929957)|METHOD_ENTRY|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:46:03.0 (106944731)|VARIABLE_SCOPE_BEGIN|[415]|this|Eway2Payment|true|false
+14:46:03.0 (107003147)|VARIABLE_ASSIGNMENT|[415]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","command":"ProcessPayment","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (107021720)|HEAP_ALLOCATE|[417]|Bytes:5
+14:46:03.0 (107026492)|STATEMENT_EXECUTE|[415]
+14:46:03.0 (107028493)|STATEMENT_EXECUTE|[417]
+14:46:03.0 (107035841)|HEAP_ALLOCATE|[417]|Bytes:11
+14:46:03.0 (107052798)|METHOD_ENTRY|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:46:03.0 (107067179)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:46:03.0 (107124749)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","command":"ProcessPayment","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (107138493)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:46:03.0 (107148060)|VARIABLE_ASSIGNMENT|[436]|field|"merchTxnRef"
+14:46:03.0 (107152713)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:46:03.0 (107160461)|VARIABLE_ASSIGNMENT|[436]|value|"000972103"
+14:46:03.0 (107165474)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:46:03.0 (107172904)|VARIABLE_ASSIGNMENT|[436]|length|40
+14:46:03.0 (107178990)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:46:03.0 (107187178)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:46:03.0 (107196047)|HEAP_ALLOCATE|[437]|Bytes:5
+14:46:03.0 (107200607)|STATEMENT_EXECUTE|[436]
+14:46:03.0 (107202656)|STATEMENT_EXECUTE|[437]
+14:46:03.0 (107210272)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:46:03.0 (107219577)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:46:03.0 (107224162)|STATEMENT_EXECUTE|[439]
+14:46:03.0 (107225826)|STATEMENT_EXECUTE|[439]
+14:46:03.0 (107227562)|STATEMENT_EXECUTE|[440]
+14:46:03.0 (107256535)|HEAP_ALLOCATE|[440]|Bytes:9
+14:46:03.0 (107275703)|VARIABLE_ASSIGNMENT|[440]|value|"000972103"
+14:46:03.0 (107282438)|STATEMENT_EXECUTE|[442]
+14:46:03.0 (107309106)|STATEMENT_EXECUTE|[448]
+14:46:03.0 (107314514)|STATEMENT_EXECUTE|[455]
+14:46:03.0 (107348206)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:46:03.0 (107372549)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:46:03.0 (107396937)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x7f9e73d2"}|0x4b0c2a8d
+14:46:03.0 (107404060)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:46:03.0 (107411534)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:46:03.0 (107421404)|HEAP_ALLOCATE|[23]|Bytes:5
+14:46:03.0 (107426131)|STATEMENT_EXECUTE|[22]
+14:46:03.0 (107429105)|STATEMENT_EXECUTE|[23]
+14:46:03.0 (107440187)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:46:03.0 (107445788)|STATEMENT_EXECUTE|[457]
+14:46:03.0 (107453780)|METHOD_EXIT|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:46:03.0 (107459540)|STATEMENT_EXECUTE|[418]
+14:46:03.0 (107465320)|HEAP_ALLOCATE|[418]|Bytes:9
+14:46:03.0 (107476855)|METHOD_ENTRY|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:46:03.0 (107488238)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:46:03.0 (107548774)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","command":"ProcessPayment","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (107561573)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:46:03.0 (107569961)|VARIABLE_ASSIGNMENT|[436]|field|"orderInfo"
+14:46:03.0 (107573948)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:46:03.0 (107581074)|VARIABLE_ASSIGNMENT|[436]|value|"000972103"
+14:46:03.0 (107584968)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:46:03.0 (107591965)|VARIABLE_ASSIGNMENT|[436]|length|64
+14:46:03.0 (107597512)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:46:03.0 (107604783)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:46:03.0 (107613360)|HEAP_ALLOCATE|[437]|Bytes:5
+14:46:03.0 (107617790)|STATEMENT_EXECUTE|[436]
+14:46:03.0 (107619711)|STATEMENT_EXECUTE|[437]
+14:46:03.0 (107627762)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:46:03.0 (107637329)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:46:03.0 (107642112)|STATEMENT_EXECUTE|[439]
+14:46:03.0 (107643999)|STATEMENT_EXECUTE|[439]
+14:46:03.0 (107645617)|STATEMENT_EXECUTE|[440]
+14:46:03.0 (107661597)|HEAP_ALLOCATE|[440]|Bytes:9
+14:46:03.0 (107674761)|VARIABLE_ASSIGNMENT|[440]|value|"000972103"
+14:46:03.0 (107681007)|STATEMENT_EXECUTE|[442]
+14:46:03.0 (107699167)|STATEMENT_EXECUTE|[448]
+14:46:03.0 (107704335)|STATEMENT_EXECUTE|[455]
+14:46:03.0 (107715671)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:46:03.0 (107725648)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:46:03.0 (107753551)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x7f9e73d2"}|0x4b0c2a8d
+14:46:03.0 (107762564)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:46:03.0 (107773729)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:46:03.0 (107787039)|HEAP_ALLOCATE|[23]|Bytes:5
+14:46:03.0 (107794442)|STATEMENT_EXECUTE|[22]
+14:46:03.0 (107797702)|STATEMENT_EXECUTE|[23]
+14:46:03.0 (107810837)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:46:03.0 (107817178)|STATEMENT_EXECUTE|[457]
+14:46:03.0 (107824846)|METHOD_EXIT|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:46:03.0 (107863879)|STATEMENT_EXECUTE|[420]
+14:46:03.0 (107873267)|HEAP_ALLOCATE|[428]|Bytes:6
+14:46:03.0 (107895701)|STATEMENT_EXECUTE|[428]
+14:46:03.0 (107900799)|STATEMENT_EXECUTE|[432]
+14:46:03.0 (107915774)|METHOD_ENTRY|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:03.0 (107930547)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:46:03.0 (107951441)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x7f9e73d2"}|0x4b0c2a8d
+14:46:03.0 (107963632)|HEAP_ALLOCATE|[60]|Bytes:5
+14:46:03.0 (107968332)|STATEMENT_EXECUTE|[59]
+14:46:03.0 (107970357)|STATEMENT_EXECUTE|[60]
+14:46:03.0 (107977865)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:46:03.0 (107986993)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:46:03.0 (108049184)|STATEMENT_EXECUTE|[62]
+14:46:03.0 (108053422)|STATEMENT_EXECUTE|[64]
+14:46:03.0 (108068145)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:46:03.0 (108077281)|STATEMENT_EXECUTE|[74]
+14:46:03.0 (108089862)|METHOD_EXIT|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:03.0 (108102153)|HEAP_ALLOCATE|[432]|Bytes:5
+14:46:03.0 (108112140)|METHOD_EXIT|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:46:03.0 (108129804)|METHOD_ENTRY|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:03.0 (108147408)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:46:03.0 (108176997)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x7f9e73d2"}|0x4b0c2a8d
+14:46:03.0 (108193921)|HEAP_ALLOCATE|[60]|Bytes:5
+14:46:03.0 (108199359)|STATEMENT_EXECUTE|[59]
+14:46:03.0 (108201508)|STATEMENT_EXECUTE|[60]
+14:46:03.0 (108209843)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:46:03.0 (108219287)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:46:03.0 (108234501)|STATEMENT_EXECUTE|[62]
+14:46:03.0 (108236540)|STATEMENT_EXECUTE|[64]
+14:46:03.0 (108243637)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:46:03.0 (108248117)|STATEMENT_EXECUTE|[74]
+14:46:03.0 (108255696)|METHOD_EXIT|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:03.0 (108261401)|STATEMENT_EXECUTE|[210]
+14:46:03.0 (108265302)|STATEMENT_EXECUTE|[216]
+14:46:03.0 (108283093)|HEAP_ALLOCATE|[216]|Bytes:4
+14:46:03.0 (108311722)|VARIABLE_ASSIGNMENT|[216]|this.requestParams|{}|0x444de2f5
+14:46:03.0 (108317796)|STATEMENT_EXECUTE|[217]
+14:46:03.0 (108326194)|HEAP_ALLOCATE|[217]|Bytes:6
+14:46:03.0 (108371926)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108384453)|STATEMENT_EXECUTE|[218]
+14:46:03.0 (108397091)|HEAP_ALLOCATE|[218]|Bytes:19
+14:46:03.0 (108446948)|HEAP_ALLOCATE|[218]|Bytes:4
+14:46:03.0 (108477069)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108487119)|STATEMENT_EXECUTE|[219]
+14:46:03.0 (108500455)|HEAP_ALLOCATE|[219]|Bytes:20
+14:46:03.0 (108536904)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108548992)|STATEMENT_EXECUTE|[220]
+14:46:03.0 (108560642)|HEAP_ALLOCATE|[220]|Bytes:21
+14:46:03.0 (108596032)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108608426)|STATEMENT_EXECUTE|[221]
+14:46:03.0 (108621510)|HEAP_ALLOCATE|[221]|Bytes:26
+14:46:03.0 (108656466)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108668703)|STATEMENT_EXECUTE|[222]
+14:46:03.0 (108679841)|HEAP_ALLOCATE|[222]|Bytes:24
+14:46:03.0 (108702400)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108723047)|STATEMENT_EXECUTE|[224]
+14:46:03.0 (108725293)|STATEMENT_EXECUTE|[226]
+14:46:03.0 (108733048)|HEAP_ALLOCATE|[226]|Bytes:15
+14:46:03.0 (108738756)|HEAP_ALLOCATE|[226]|Bytes:9
+14:46:03.0 (108757730)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108764958)|STATEMENT_EXECUTE|[227]
+14:46:03.0 (108771764)|HEAP_ALLOCATE|[227]|Bytes:24
+14:46:03.0 (108799784)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:46:03.0 (108816064)|STATEMENT_EXECUTE|[246]
+14:46:03.0 (108834848)|STATEMENT_EXECUTE|[265]
+14:46:03.0 (108837561)|STATEMENT_EXECUTE|[267]
+14:46:03.0 (108853507)|METHOD_ENTRY|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:46:03.0 (108876951)|VARIABLE_SCOPE_BEGIN|[461]|this|Eway2Payment|true|false
+14:46:03.0 (108977479)|VARIABLE_ASSIGNMENT|[461]|this|{"amount":8900,"cardCvc":"","cardExpiryMonth":"07","cardExpiryYear":"19","cardName":"Joey Nguyen","command":"ProcessPayment","currencyCode":"AUD","customerCity":"LIVERPOOL","customerCompanyName":"JT Legal Practice","customerCountrycode":"au","customerEmail":"tmai@jtlegalpractice (4 more) ...","customerFirstName":"TIANNA","customerLastName":"MAI","customerPostcode":"2170","customerState":"NSW","customerStreet":"15 Moore St","customerToken":"969862261448","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972103","orderInfo":"000972103","password":"KY0jzPzu","requestParams":"0x636c8d8a","response":"0x4b0c2a8d","transactionNo":""}|0x444de2f5
+14:46:03.0 (109012454)|HEAP_ALLOCATE|[463]|Bytes:5
+14:46:03.0 (109021331)|STATEMENT_EXECUTE|[461]
+14:46:03.0 (109024052)|STATEMENT_EXECUTE|[463]
+14:46:03.0 (109064849)|METHOD_ENTRY|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:46:03.0 (109091224)|VARIABLE_SCOPE_BEGIN|[118]|params|Map<String,String>|true|false
+14:46:03.0 (109113675)|VARIABLE_ASSIGNMENT|[118]|params|"Map of size 8 too large to display"|0x636c8d8a
+14:46:03.0 (109132197)|HEAP_ALLOCATE|[120]|Bytes:5
+14:46:03.0 (109139767)|STATEMENT_EXECUTE|[118]
+14:46:03.0 (109142681)|STATEMENT_EXECUTE|[120]
+14:46:03.0 (109155999)|VARIABLE_SCOPE_BEGIN|[120]|queryString|String|false|false
+14:46:03.0 (109168500)|VARIABLE_ASSIGNMENT|[120]|queryString|""
+14:46:03.0 (109187661)|HEAP_ALLOCATE|[121]|Bytes:4
+14:46:03.0 (109289651)|HEAP_ALLOCATE|[121]|Bytes:191
+14:46:03.0 (109310919)|HEAP_ALLOCATE|[121]|Bytes:32
+14:46:03.0 (109338558)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (109359063)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (109371041)|VARIABLE_ASSIGNMENT|[121]|key|"Method"
+14:46:03.0 (109376363)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (109409728)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (109417198)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (109443933)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (109455895)|VARIABLE_ASSIGNMENT|[126]|value|"ProcessPayment"
+14:46:03.0 (109461110)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (109466457)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (109471761)|HEAP_ALLOCATE|[132]|Bytes:1
+14:46:03.0 (109476922)|HEAP_ALLOCATE|[132]|Bytes:5
+14:46:03.0 (109553198)|HEAP_ALLOCATE|[132]|Bytes:15
+14:46:03.0 (109571613)|SYSTEM_METHOD_ENTRY|[1]|EncodingUtil.EncodingUtil()
+14:46:03.0 (109576512)|STATEMENT_EXECUTE|[1]
+14:46:03.0 (109584614)|SYSTEM_METHOD_EXIT|[1]|EncodingUtil
+14:46:03.0 (109596505)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (109660162)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (109671362)|HEAP_ALLOCATE|[132]|Bytes:21
+14:46:03.0 (109677398)|HEAP_ALLOCATE|[132]|Bytes:21
+14:46:03.0 (109688217)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (1 more) ..."
+14:46:03.0 (109702419)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (109714960)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (109728349)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.TotalAmount"
+14:46:03.0 (109733636)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (109751490)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (109753526)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (109762094)|HEAP_ALLOCATE|[123]|Bytes:1
+14:46:03.0 (109769243)|HEAP_ALLOCATE|[123]|Bytes:22
+14:46:03.0 (109778150)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (2 more) ..."
+14:46:03.0 (109782922)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (109796357)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (109805886)|VARIABLE_ASSIGNMENT|[126]|value|"8900"
+14:46:03.0 (109810315)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (109814661)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (109822625)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (109848401)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (109854523)|HEAP_ALLOCATE|[132]|Bytes:24
+14:46:03.0 (109859039)|HEAP_ALLOCATE|[132]|Bytes:46
+14:46:03.0 (109867430)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (26 more) ..."
+14:46:03.0 (109879328)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (109889756)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (109899515)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.CurrencyCode"
+14:46:03.0 (109904435)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (109919985)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (109921916)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (109930401)|HEAP_ALLOCATE|[123]|Bytes:47
+14:46:03.0 (109939648)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (27 more) ..."
+14:46:03.0 (109944005)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (109956357)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (109965746)|VARIABLE_ASSIGNMENT|[126]|value|"AUD"
+14:46:03.0 (109970043)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (109974141)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (109981414)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110005329)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110011490)|HEAP_ALLOCATE|[132]|Bytes:24
+14:46:03.0 (110016247)|HEAP_ALLOCATE|[132]|Bytes:71
+14:46:03.0 (110024337)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (51 more) ..."
+14:46:03.0 (110037286)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (110052015)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (110064049)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceNumbe (1 more) ..."
+14:46:03.0 (110069012)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (110084664)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (110086606)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (110095527)|HEAP_ALLOCATE|[123]|Bytes:72
+14:46:03.0 (110104436)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (52 more) ..."
+14:46:03.0 (110109017)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (110120663)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (110129560)|VARIABLE_ASSIGNMENT|[126]|value|"000972103"
+14:46:03.0 (110133922)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (110137948)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (110145450)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110174404)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110180604)|HEAP_ALLOCATE|[132]|Bytes:31
+14:46:03.0 (110185410)|HEAP_ALLOCATE|[132]|Bytes:103
+14:46:03.0 (110194476)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (83 more) ..."
+14:46:03.0 (110208156)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (110217624)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (110227766)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceDescr (6 more) ..."
+14:46:03.0 (110232155)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (110247310)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (110249190)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (110259071)|HEAP_ALLOCATE|[123]|Bytes:104
+14:46:03.0 (110268654)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (84 more) ..."
+14:46:03.0 (110273088)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (110286788)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (110309872)|VARIABLE_ASSIGNMENT|[126]|value|"000972103"
+14:46:03.0 (110318199)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (110325353)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (110337217)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110380055)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110390723)|HEAP_ALLOCATE|[132]|Bytes:36
+14:46:03.0 (110398636)|HEAP_ALLOCATE|[132]|Bytes:140
+14:46:03.0 (110414792)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (120 more) ..."
+14:46:03.0 (110435066)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (110452980)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (110472396)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceRefer (4 more) ..."
+14:46:03.0 (110480588)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (110500504)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (110502832)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (110513458)|HEAP_ALLOCATE|[123]|Bytes:141
+14:46:03.0 (110524100)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (121 more) ..."
+14:46:03.0 (110528875)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (110542140)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (110551595)|VARIABLE_ASSIGNMENT|[126]|value|"000972103"
+14:46:03.0 (110555892)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (110560082)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (110567690)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110592991)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110599691)|HEAP_ALLOCATE|[132]|Bytes:34
+14:46:03.0 (110604630)|HEAP_ALLOCATE|[132]|Bytes:175
+14:46:03.0 (110612825)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (155 more) ..."
+14:46:03.0 (110624090)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (110634004)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (110643623)|VARIABLE_ASSIGNMENT|[121]|key|"TransactionType"
+14:46:03.0 (110647896)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (110662421)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (110664319)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (110672725)|HEAP_ALLOCATE|[123]|Bytes:176
+14:46:03.0 (110681493)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (156 more) ..."
+14:46:03.0 (110685863)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (110697934)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (110706867)|VARIABLE_ASSIGNMENT|[126]|value|"Recurring"
+14:46:03.0 (110711279)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (110715314)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (110722059)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110753345)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110764983)|HEAP_ALLOCATE|[132]|Bytes:25
+14:46:03.0 (110773223)|HEAP_ALLOCATE|[132]|Bytes:201
+14:46:03.0 (110787814)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (181 more) ..."
+14:46:03.0 (110807953)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (110825526)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:46:03.0 (110844051)|VARIABLE_ASSIGNMENT|[121]|key|"Customer.TokenCustom (4 more) ..."
+14:46:03.0 (110851628)|STATEMENT_EXECUTE|[121]
+14:46:03.0 (110871324)|STATEMENT_EXECUTE|[122]
+14:46:03.0 (110873422)|STATEMENT_EXECUTE|[123]
+14:46:03.0 (110884061)|HEAP_ALLOCATE|[123]|Bytes:202
+14:46:03.0 (110894188)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (182 more) ..."
+14:46:03.0 (110898928)|STATEMENT_EXECUTE|[126]
+14:46:03.0 (110911459)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:46:03.0 (110921216)|VARIABLE_ASSIGNMENT|[126]|value|"969862261448"
+14:46:03.0 (110926145)|STATEMENT_EXECUTE|[127]
+14:46:03.0 (110930539)|STATEMENT_EXECUTE|[132]
+14:46:03.0 (110938190)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110963277)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:46:03.0 (110969527)|HEAP_ALLOCATE|[132]|Bytes:37
+14:46:03.0 (110974062)|HEAP_ALLOCATE|[132]|Bytes:239
+14:46:03.0 (110982155)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (219 more) ..."
+14:46:03.0 (110995430)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:03.0 (111011215)|VARIABLE_ASSIGNMENT|[121]|key|null
+14:46:03.0 (111020836)|STATEMENT_EXECUTE|[135]
+14:46:03.0 (111040540)|METHOD_EXIT|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:46:03.0 (111074571)|VARIABLE_ASSIGNMENT|[463]|this.requestBody|"Method=ProcessPaymen (219 more) ..."|0x444de2f5
+14:46:03.0 (111094110)|METHOD_ENTRY|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:46:03.0 (111130814)|HEAP_ALLOCATE|[61]|Bytes:5
+14:46:03.0 (111138392)|STATEMENT_EXECUTE|[60]
+14:46:03.0 (111140935)|STATEMENT_EXECUTE|[61]
+14:46:03.0 (111151949)|HEAP_ALLOCATE|[61]|Bytes:46
+14:46:03.0 (111174287)|HEAP_ALLOCATE|[61]|Bytes:4
+14:46:03.0 (116479106)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:46:03.0 (118594882)|SOQL_EXECUTE_END|[61]|Rows:1
+14:46:03.0 (118626603)|HEAP_ALLOCATE|[61]|Bytes:8
+14:46:03.0 (118644884)|HEAP_ALLOCATE|[61]|Bytes:50
+14:46:03.0 (118734031)|HEAP_ALLOCATE|[61]|Bytes:8
+14:46:03.0 (118755775)|HEAP_ALLOCATE|[61]|Bytes:38
+14:46:03.0 (118848122)|HEAP_ALLOCATE|[61]|Bytes:12
+14:46:03.0 (118930926)|METHOD_EXIT|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:46:03.0 (118949008)|STATEMENT_EXECUTE|[465]
+14:46:03.0 (118963903)|STATEMENT_EXECUTE|[470]
+14:46:03.0 (119002567)|VARIABLE_SCOPE_BEGIN|[470]|req|System.HttpRequest|true|false
+14:46:03.0 (119080051)|VARIABLE_ASSIGNMENT|[470]|req|"System.HttpRequest[Endpoint=null, Method=null]"|0x1ca46ba1
+14:46:03.0 (119088291)|STATEMENT_EXECUTE|[471]
+14:46:03.0 (119189573)|STATEMENT_EXECUTE|[472]
+14:46:03.0 (119204382)|HEAP_ALLOCATE|[472]|Bytes:4
+14:46:03.0 (119255102)|STATEMENT_EXECUTE|[473]
+14:46:03.0 (119267781)|HEAP_ALLOCATE|[473]|Bytes:13
+14:46:03.0 (119278026)|HEAP_ALLOCATE|[473]|Bytes:6
+14:46:03.0 (119289272)|HEAP_ALLOCATE|[473]|Bytes:1
+14:46:03.0 (119307731)|HEAP_ALLOCATE|[473]|Bytes:79
+14:46:03.0 (119440354)|HEAP_ALLOCATE|[473]|Bytes:4
+14:46:03.0 (119475173)|METHOD_ENTRY|[473]||System.EncodingUtil.base64Encode(Blob)
+14:46:03.0 (119541094)|METHOD_EXIT|[473]||System.EncodingUtil.base64Encode(Blob)
+14:46:03.0 (119555519)|HEAP_ALLOCATE|[473]|Bytes:114
+14:46:03.0 (119602465)|STATEMENT_EXECUTE|[474]
+14:46:03.0 (119613456)|HEAP_ALLOCATE|[474]|Bytes:17
+14:46:03.0 (119649197)|STATEMENT_EXECUTE|[475]
+14:46:03.0 (119675735)|STATEMENT_EXECUTE|[476]
+14:46:03.0 (119698846)|STATEMENT_EXECUTE|[479]
+14:46:03.0 (119719445)|VARIABLE_SCOPE_BEGIN|[479]|h|System.Http|true|false
+14:46:03.0 (119783739)|VARIABLE_ASSIGNMENT|[479]|h|"System.Http[]"|0x4f689fcb
+14:46:03.0 (119795719)|STATEMENT_EXECUTE|[480]
+14:46:03.0 (119861203)|CALLOUT_REQUEST|[480]|System.HttpRequest[Endpoint=https://api.ewaypayments.com/Transaction, Method=POST]
+14:46:05.610 (2610597671)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1376
+14:46:05.610 (2610737879)|CALLOUT_RESPONSE|[480]|System.HttpResponse[Status=OK, StatusCode=200]
+14:46:05.610 (2610761115)|HEAP_ALLOCATE|[480]|Bytes:913
+14:46:05.610 (2610800268)|VARIABLE_SCOPE_BEGIN|[480]|res|System.HttpResponse|true|false
+14:46:05.610 (2610911383)|VARIABLE_ASSIGNMENT|[480]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x2a392912
+14:46:05.610 (2610927041)|STATEMENT_EXECUTE|[482]
+14:46:05.610 (2610955960)|HEAP_ALLOCATE|[482]|Bytes:16
+14:46:05.610 (2611092634)|HEAP_ALLOCATE|[482]|Bytes:907
+14:46:05.610 (2611158674)|METHOD_ENTRY|[482]||System.EncodingUtil.urlDecode(String, String)
+14:46:05.610 (2611291025)|METHOD_EXIT|[482]||System.EncodingUtil.urlDecode(String, String)
+14:46:05.610 (2611307324)|HEAP_ALLOCATE|[482]|Bytes:923
+14:46:05.610 (2611334097)|USER_DEBUG|[482]|DEBUG|Eway2 Response: {"AuthorisationCode":"","ResponseCode":"51","ResponseMessage":"D4451","TransactionID":303146692,"TransactionStatus":false,"TransactionType":"Recurring","BeagleScore":0.10,"Verification":{"CVN":0,"Address":0,"Email":0,"Mobile":0,"Phone":0},"Customer":{"CardDetails":{"Number":"464579XXXXXX0077","Name":"Joey Nguyen","ExpiryMonth":"07","ExpiryYear":"19","StartMonth":"","StartYear":"","IssueNumber":""},"TokenCustomerID":969862261448,"Reference":"","Title":"Mr.","FirstName":"TIANNA","LastName":"MAI","CompanyName":"JT Legal Practice","JobDescription":"","Street1":"15 Moore St","Street2":"","City":"LIVERPOOL","State":"NSW","PostalCode":"2170","Country":"au","Email":"tmai@jtlegalpractice.com","Phone":"","Mobile":"","Comments":"","Fax":"","Url":""},"Payment":{"TotalAmount":8900,"InvoiceNumber":"000972103","InvoiceDescription":"000972103","InvoiceReference":"000972103","CurrencyCode":"AUD"},"Errors":null}
+14:46:05.610 (2611370134)|STATEMENT_EXECUTE|[484]
+14:46:05.610 (2611440510)|METHOD_ENTRY|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:46:05.610 (2611506111)|VARIABLE_SCOPE_BEGIN|[10]|this|Eway2Response|true|false
+14:46:05.610 (2611562494)|VARIABLE_ASSIGNMENT|[10]|this|{"params":"0x7f9e73d2"}|0x4b0c2a8d
+14:46:05.610 (2611574095)|VARIABLE_SCOPE_BEGIN|[10]|res|System.HttpResponse|true|false
+14:46:05.610 (2611643211)|VARIABLE_ASSIGNMENT|[10]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x2a392912
+14:46:05.610 (2611669258)|HEAP_ALLOCATE|[12]|Bytes:5
+14:46:05.610 (2611678090)|STATEMENT_EXECUTE|[10]
+14:46:05.610 (2611722975)|STATEMENT_EXECUTE|[12]
+14:46:05.610 (2611739724)|STATEMENT_EXECUTE|[16]
+14:46:05.610 (2611835550)|HEAP_ALLOCATE|[16]|Bytes:907
+14:46:05.610 (2611870455)|VARIABLE_ASSIGNMENT|[16]|this.responseBody|"{\"AuthorisationCode\" (887 more) ..."|0x4b0c2a8d
+14:46:05.610 (2611880662)|STATEMENT_EXECUTE|[17]
+14:46:05.610 (2611995001)|HEAP_ALLOCATE|[17]|Bytes:24
+14:46:05.610 (2612021015)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+14:46:05.610 (2612043973)|STATEMENT_EXECUTE|[1]
+14:46:05.610 (2612056572)|SYSTEM_METHOD_EXIT|[1]|JSON
+14:46:05.610 (2612075869)|METHOD_ENTRY|[17]||System.JSON.deserializeUntyped(String)
+14:46:05.610 (2614570681)|HEAP_ALLOCATE|[74]|Bytes:4
+14:46:05.610 (2614614345)|HEAP_ALLOCATE|[11]|Bytes:12
+14:46:05.610 (2618442981)|METHOD_EXIT|[17]||System.JSON.deserializeUntyped(String)
+14:46:05.610 (2618543839)|VARIABLE_ASSIGNMENT|[17]|this.params|"Map of size 11 too large to display"|0x4b0c2a8d
+14:46:05.610 (2618557571)|STATEMENT_EXECUTE|[19]
+14:46:05.610 (2618579289)|HEAP_ALLOCATE|[19]|Bytes:8
+14:46:05.610 (2618593375)|HEAP_ALLOCATE|[19]|Bytes:6
+14:46:05.610 (2618683916)|HEAP_ALLOCATE|[19]|Bytes:12
+14:46:05.610 (2618711326)|USER_DEBUG|[19]|DEBUG|Errors: null
+14:46:05.610 (2618738529)|METHOD_EXIT|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:46:05.610 (2618747699)|STATEMENT_EXECUTE|[486]
+14:46:05.610 (2618761298)|HEAP_ALLOCATE|[486]|Bytes:21
+14:46:05.610 (2618789096)|METHOD_ENTRY|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:05.610 (2618818841)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:46:05.610 (2618880910)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2618909996)|HEAP_ALLOCATE|[60]|Bytes:5
+14:46:05.610 (2618923692)|STATEMENT_EXECUTE|[59]
+14:46:05.610 (2618927328)|STATEMENT_EXECUTE|[60]
+14:46:05.610 (2618944287)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:46:05.610 (2618963309)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:46:05.610 (2618999774)|STATEMENT_EXECUTE|[65]
+14:46:05.610 (2619003150)|STATEMENT_EXECUTE|[67]
+14:46:05.610 (2619023781)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2619048525)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:46:05.610 (2619078325)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2619093439)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:05.610 (2619098298)|STATEMENT_EXECUTE|[43]
+14:46:05.610 (2619100519)|STATEMENT_EXECUTE|[45]
+14:46:05.610 (2619141793)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:46:05.610 (2619154160)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:46:05.610 (2619159770)|STATEMENT_EXECUTE|[48]
+14:46:05.610 (2619161975)|STATEMENT_EXECUTE|[49]
+14:46:05.610 (2619171605)|HEAP_ALLOCATE|[49]|Bytes:15
+14:46:05.610 (2619200187)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:46:05.610 (2619207175)|STATEMENT_EXECUTE|[52]
+14:46:05.610 (2619209176)|STATEMENT_EXECUTE|[54]
+14:46:05.610 (2619215535)|HEAP_ALLOCATE|[54]|Bytes:1
+14:46:05.610 (2619296256)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:05.610 (2619303644)|HEAP_ALLOCATE|[54]|Bytes:8
+14:46:05.610 (2619347615)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:46:05.610 (2619358497)|STATEMENT_EXECUTE|[56]
+14:46:05.610 (2619378749)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2619392487)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:46:05.610 (2619409943)|VARIABLE_ASSIGNMENT|[67]|errorCode|"D4451"
+14:46:05.610 (2619424135)|STATEMENT_EXECUTE|[69]
+14:46:05.610 (2619428497)|STATEMENT_EXECUTE|[70]
+14:46:05.610 (2619461805)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:46:05.610 (2619487573)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:46:05.610 (2619516666)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2619523519)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:46:05.610 (2619531340)|VARIABLE_ASSIGNMENT|[78]|errorCode|"D4451"
+14:46:05.610 (2619543841)|HEAP_ALLOCATE|[80]|Bytes:5
+14:46:05.610 (2619549243)|STATEMENT_EXECUTE|[78]
+14:46:05.610 (2619551324)|STATEMENT_EXECUTE|[80]
+14:46:05.610 (2619572235)|HEAP_ALLOCATE|[80]|Bytes:4
+14:46:05.610 (2619584764)|HEAP_ALLOCATE|[81]|Bytes:5
+14:46:05.610 (2619589614)|HEAP_ALLOCATE|[81]|Bytes:20
+14:46:05.610 (2619626558)|HEAP_ALLOCATE|[82]|Bytes:5
+14:46:05.610 (2619635998)|HEAP_ALLOCATE|[82]|Bytes:26
+14:46:05.610 (2619646378)|HEAP_ALLOCATE|[83]|Bytes:5
+14:46:05.610 (2619650817)|HEAP_ALLOCATE|[83]|Bytes:27
+14:46:05.610 (2619659672)|HEAP_ALLOCATE|[84]|Bytes:5
+14:46:05.610 (2619664414)|HEAP_ALLOCATE|[84]|Bytes:13
+14:46:05.610 (2619673187)|HEAP_ALLOCATE|[85]|Bytes:5
+14:46:05.610 (2619677514)|HEAP_ALLOCATE|[85]|Bytes:24
+14:46:05.610 (2619696259)|HEAP_ALLOCATE|[86]|Bytes:5
+14:46:05.610 (2619700881)|HEAP_ALLOCATE|[86]|Bytes:15
+14:46:05.610 (2619722731)|HEAP_ALLOCATE|[87]|Bytes:5
+14:46:05.610 (2619730761)|HEAP_ALLOCATE|[87]|Bytes:24
+14:46:05.610 (2619747626)|HEAP_ALLOCATE|[88]|Bytes:5
+14:46:05.610 (2619755766)|HEAP_ALLOCATE|[88]|Bytes:11
+14:46:05.610 (2619772017)|HEAP_ALLOCATE|[89]|Bytes:5
+14:46:05.610 (2619783557)|HEAP_ALLOCATE|[89]|Bytes:12
+14:46:05.610 (2619798139)|HEAP_ALLOCATE|[90]|Bytes:5
+14:46:05.610 (2619805500)|HEAP_ALLOCATE|[90]|Bytes:13
+14:46:05.610 (2619820805)|HEAP_ALLOCATE|[91]|Bytes:5
+14:46:05.610 (2619827426)|HEAP_ALLOCATE|[91]|Bytes:5
+14:46:05.610 (2619839821)|HEAP_ALLOCATE|[92]|Bytes:5
+14:46:05.610 (2619846007)|HEAP_ALLOCATE|[92]|Bytes:21
+14:46:05.610 (2619860507)|HEAP_ALLOCATE|[93]|Bytes:5
+14:46:05.610 (2619868414)|HEAP_ALLOCATE|[93]|Bytes:19
+14:46:05.610 (2619884550)|HEAP_ALLOCATE|[94]|Bytes:5
+14:46:05.610 (2619891917)|HEAP_ALLOCATE|[94]|Bytes:19
+14:46:05.610 (2619907144)|HEAP_ALLOCATE|[95]|Bytes:5
+14:46:05.610 (2619914889)|HEAP_ALLOCATE|[95]|Bytes:14
+14:46:05.610 (2619930363)|HEAP_ALLOCATE|[96]|Bytes:5
+14:46:05.610 (2619937730)|HEAP_ALLOCATE|[96]|Bytes:19
+14:46:05.610 (2619952589)|HEAP_ALLOCATE|[97]|Bytes:5
+14:46:05.610 (2619959590)|HEAP_ALLOCATE|[97]|Bytes:9
+14:46:05.610 (2619974407)|HEAP_ALLOCATE|[98]|Bytes:5
+14:46:05.610 (2619982007)|HEAP_ALLOCATE|[98]|Bytes:15
+14:46:05.610 (2619995605)|HEAP_ALLOCATE|[99]|Bytes:5
+14:46:05.610 (2620002440)|HEAP_ALLOCATE|[99]|Bytes:25
+14:46:05.610 (2620017566)|HEAP_ALLOCATE|[100]|Bytes:5
+14:46:05.610 (2620024318)|HEAP_ALLOCATE|[100]|Bytes:15
+14:46:05.610 (2620057387)|HEAP_ALLOCATE|[101]|Bytes:5
+14:46:05.610 (2620066175)|HEAP_ALLOCATE|[101]|Bytes:21
+14:46:05.610 (2620082527)|HEAP_ALLOCATE|[102]|Bytes:5
+14:46:05.610 (2620088645)|HEAP_ALLOCATE|[102]|Bytes:28
+14:46:05.610 (2620101723)|HEAP_ALLOCATE|[103]|Bytes:5
+14:46:05.610 (2620108517)|HEAP_ALLOCATE|[103]|Bytes:31
+14:46:05.610 (2620125577)|HEAP_ALLOCATE|[104]|Bytes:5
+14:46:05.610 (2620133032)|HEAP_ALLOCATE|[104]|Bytes:12
+14:46:05.610 (2620147614)|HEAP_ALLOCATE|[105]|Bytes:5
+14:46:05.610 (2620154228)|HEAP_ALLOCATE|[105]|Bytes:28
+14:46:05.610 (2620169217)|HEAP_ALLOCATE|[106]|Bytes:5
+14:46:05.610 (2620175293)|HEAP_ALLOCATE|[106]|Bytes:21
+14:46:05.610 (2620187383)|HEAP_ALLOCATE|[107]|Bytes:5
+14:46:05.610 (2620194056)|HEAP_ALLOCATE|[107]|Bytes:28
+14:46:05.610 (2620207659)|HEAP_ALLOCATE|[108]|Bytes:5
+14:46:05.610 (2620213979)|HEAP_ALLOCATE|[108]|Bytes:44
+14:46:05.610 (2620226535)|HEAP_ALLOCATE|[109]|Bytes:5
+14:46:05.610 (2620232607)|HEAP_ALLOCATE|[109]|Bytes:28
+14:46:05.610 (2620245477)|HEAP_ALLOCATE|[110]|Bytes:5
+14:46:05.610 (2620251398)|HEAP_ALLOCATE|[110]|Bytes:49
+14:46:05.610 (2620264424)|HEAP_ALLOCATE|[111]|Bytes:5
+14:46:05.610 (2620270843)|HEAP_ALLOCATE|[111]|Bytes:27
+14:46:05.610 (2620283219)|HEAP_ALLOCATE|[112]|Bytes:5
+14:46:05.610 (2620289099)|HEAP_ALLOCATE|[112]|Bytes:17
+14:46:05.610 (2620301898)|HEAP_ALLOCATE|[113]|Bytes:5
+14:46:05.610 (2620308677)|HEAP_ALLOCATE|[113]|Bytes:22
+14:46:05.610 (2620321462)|HEAP_ALLOCATE|[114]|Bytes:5
+14:46:05.610 (2620327461)|HEAP_ALLOCATE|[114]|Bytes:9
+14:46:05.610 (2620343480)|HEAP_ALLOCATE|[115]|Bytes:5
+14:46:05.610 (2620349595)|HEAP_ALLOCATE|[115]|Bytes:20
+14:46:05.610 (2620363791)|HEAP_ALLOCATE|[116]|Bytes:5
+14:46:05.610 (2620370448)|HEAP_ALLOCATE|[116]|Bytes:11
+14:46:05.610 (2620383463)|HEAP_ALLOCATE|[117]|Bytes:5
+14:46:05.610 (2620390032)|HEAP_ALLOCATE|[117]|Bytes:21
+14:46:05.610 (2620403598)|HEAP_ALLOCATE|[118]|Bytes:5
+14:46:05.610 (2620409823)|HEAP_ALLOCATE|[118]|Bytes:31
+14:46:05.610 (2620427518)|HEAP_ALLOCATE|[119]|Bytes:5
+14:46:05.610 (2620434610)|HEAP_ALLOCATE|[119]|Bytes:18
+14:46:05.610 (2620447501)|HEAP_ALLOCATE|[120]|Bytes:5
+14:46:05.610 (2620453895)|HEAP_ALLOCATE|[120]|Bytes:17
+14:46:05.610 (2620466339)|HEAP_ALLOCATE|[121]|Bytes:5
+14:46:05.610 (2620471847)|HEAP_ALLOCATE|[121]|Bytes:18
+14:46:05.610 (2620484945)|HEAP_ALLOCATE|[122]|Bytes:5
+14:46:05.610 (2620491376)|HEAP_ALLOCATE|[122]|Bytes:12
+14:46:05.610 (2620503873)|HEAP_ALLOCATE|[123]|Bytes:5
+14:46:05.610 (2620510314)|HEAP_ALLOCATE|[123]|Bytes:13
+14:46:05.610 (2620522845)|HEAP_ALLOCATE|[124]|Bytes:5
+14:46:05.610 (2620543296)|HEAP_ALLOCATE|[124]|Bytes:14
+14:46:05.610 (2620559034)|HEAP_ALLOCATE|[125]|Bytes:5
+14:46:05.610 (2620565215)|HEAP_ALLOCATE|[125]|Bytes:36
+14:46:05.610 (2620578678)|HEAP_ALLOCATE|[126]|Bytes:5
+14:46:05.610 (2620585147)|HEAP_ALLOCATE|[126]|Bytes:34
+14:46:05.610 (2620601819)|HEAP_ALLOCATE|[127]|Bytes:5
+14:46:05.610 (2620608616)|HEAP_ALLOCATE|[127]|Bytes:15
+14:46:05.610 (2620622062)|HEAP_ALLOCATE|[128]|Bytes:5
+14:46:05.610 (2620657008)|HEAP_ALLOCATE|[128]|Bytes:25
+14:46:05.610 (2620673090)|HEAP_ALLOCATE|[129]|Bytes:5
+14:46:05.610 (2620679452)|HEAP_ALLOCATE|[129]|Bytes:24
+14:46:05.610 (2620694293)|HEAP_ALLOCATE|[130]|Bytes:5
+14:46:05.610 (2620700877)|HEAP_ALLOCATE|[130]|Bytes:15
+14:46:05.610 (2620713707)|HEAP_ALLOCATE|[131]|Bytes:5
+14:46:05.610 (2620719763)|HEAP_ALLOCATE|[131]|Bytes:18
+14:46:05.610 (2620732506)|HEAP_ALLOCATE|[132]|Bytes:5
+14:46:05.610 (2620741788)|HEAP_ALLOCATE|[132]|Bytes:25
+14:46:05.610 (2620754598)|HEAP_ALLOCATE|[133]|Bytes:5
+14:46:05.610 (2620760880)|HEAP_ALLOCATE|[133]|Bytes:35
+14:46:05.610 (2620774241)|HEAP_ALLOCATE|[134]|Bytes:5
+14:46:05.610 (2620780791)|HEAP_ALLOCATE|[134]|Bytes:12
+14:46:05.610 (2620792864)|HEAP_ALLOCATE|[135]|Bytes:5
+14:46:05.610 (2620798574)|HEAP_ALLOCATE|[135]|Bytes:18
+14:46:05.610 (2620815207)|HEAP_ALLOCATE|[136]|Bytes:5
+14:46:05.610 (2620821754)|HEAP_ALLOCATE|[136]|Bytes:20
+14:46:05.610 (2620834525)|HEAP_ALLOCATE|[137]|Bytes:5
+14:46:05.610 (2620841683)|HEAP_ALLOCATE|[137]|Bytes:19
+14:46:05.610 (2620859224)|HEAP_ALLOCATE|[138]|Bytes:5
+14:46:05.610 (2620867086)|HEAP_ALLOCATE|[138]|Bytes:23
+14:46:05.610 (2620882345)|HEAP_ALLOCATE|[139]|Bytes:5
+14:46:05.610 (2620889670)|HEAP_ALLOCATE|[139]|Bytes:27
+14:46:05.610 (2620903302)|HEAP_ALLOCATE|[140]|Bytes:5
+14:46:05.610 (2620913975)|HEAP_ALLOCATE|[140]|Bytes:37
+14:46:05.610 (2620927433)|HEAP_ALLOCATE|[141]|Bytes:5
+14:46:05.610 (2620933652)|HEAP_ALLOCATE|[141]|Bytes:21
+14:46:05.610 (2620946364)|HEAP_ALLOCATE|[142]|Bytes:5
+14:46:05.610 (2620952543)|HEAP_ALLOCATE|[142]|Bytes:13
+14:46:05.610 (2620965218)|HEAP_ALLOCATE|[143]|Bytes:5
+14:46:05.610 (2620971703)|HEAP_ALLOCATE|[143]|Bytes:12
+14:46:05.610 (2620984689)|HEAP_ALLOCATE|[144]|Bytes:5
+14:46:05.610 (2620990847)|HEAP_ALLOCATE|[144]|Bytes:16
+14:46:05.610 (2621007572)|HEAP_ALLOCATE|[145]|Bytes:5
+14:46:05.610 (2621016254)|HEAP_ALLOCATE|[145]|Bytes:31
+14:46:05.610 (2621031451)|HEAP_ALLOCATE|[146]|Bytes:5
+14:46:05.610 (2621038554)|HEAP_ALLOCATE|[146]|Bytes:33
+14:46:05.610 (2621053680)|HEAP_ALLOCATE|[147]|Bytes:5
+14:46:05.610 (2621060170)|HEAP_ALLOCATE|[147]|Bytes:21
+14:46:05.610 (2621075790)|HEAP_ALLOCATE|[148]|Bytes:6
+14:46:05.610 (2621082934)|HEAP_ALLOCATE|[148]|Bytes:16
+14:46:05.610 (2621098331)|HEAP_ALLOCATE|[149]|Bytes:5
+14:46:05.610 (2621106217)|HEAP_ALLOCATE|[149]|Bytes:19
+14:46:05.610 (2621120942)|HEAP_ALLOCATE|[150]|Bytes:5
+14:46:05.610 (2621128393)|HEAP_ALLOCATE|[150]|Bytes:23
+14:46:05.610 (2621143064)|HEAP_ALLOCATE|[151]|Bytes:5
+14:46:05.610 (2621150881)|HEAP_ALLOCATE|[151]|Bytes:21
+14:46:05.610 (2621166759)|HEAP_ALLOCATE|[152]|Bytes:5
+14:46:05.610 (2621177876)|HEAP_ALLOCATE|[152]|Bytes:23
+14:46:05.610 (2621194366)|HEAP_ALLOCATE|[153]|Bytes:5
+14:46:05.610 (2621202100)|HEAP_ALLOCATE|[153]|Bytes:16
+14:46:05.610 (2621240635)|HEAP_ALLOCATE|[154]|Bytes:5
+14:46:05.610 (2621251201)|HEAP_ALLOCATE|[154]|Bytes:31
+14:46:05.610 (2621268778)|HEAP_ALLOCATE|[155]|Bytes:5
+14:46:05.610 (2621280428)|HEAP_ALLOCATE|[155]|Bytes:16
+14:46:05.610 (2621300005)|HEAP_ALLOCATE|[156]|Bytes:6
+14:46:05.610 (2621307502)|HEAP_ALLOCATE|[156]|Bytes:12
+14:46:05.610 (2621323312)|HEAP_ALLOCATE|[157]|Bytes:5
+14:46:05.610 (2621331412)|HEAP_ALLOCATE|[157]|Bytes:28
+14:46:05.610 (2621347361)|HEAP_ALLOCATE|[158]|Bytes:5
+14:46:05.610 (2621354941)|HEAP_ALLOCATE|[158]|Bytes:17
+14:46:05.610 (2621370917)|HEAP_ALLOCATE|[159]|Bytes:5
+14:46:05.610 (2621378829)|HEAP_ALLOCATE|[159]|Bytes:25
+14:46:05.610 (2621395776)|HEAP_ALLOCATE|[160]|Bytes:5
+14:46:05.610 (2621403061)|HEAP_ALLOCATE|[160]|Bytes:29
+14:46:05.610 (2621423808)|HEAP_ALLOCATE|[161]|Bytes:5
+14:46:05.610 (2621433185)|HEAP_ALLOCATE|[161]|Bytes:29
+14:46:05.610 (2621449615)|HEAP_ALLOCATE|[162]|Bytes:5
+14:46:05.610 (2621457730)|HEAP_ALLOCATE|[162]|Bytes:23
+14:46:05.610 (2621473887)|HEAP_ALLOCATE|[163]|Bytes:5
+14:46:05.610 (2621481353)|HEAP_ALLOCATE|[163]|Bytes:26
+14:46:05.610 (2621501276)|HEAP_ALLOCATE|[164]|Bytes:5
+14:46:05.610 (2621509259)|HEAP_ALLOCATE|[164]|Bytes:46
+14:46:05.610 (2621525484)|HEAP_ALLOCATE|[165]|Bytes:5
+14:46:05.610 (2621533020)|HEAP_ALLOCATE|[165]|Bytes:41
+14:46:05.610 (2621549423)|HEAP_ALLOCATE|[166]|Bytes:5
+14:46:05.610 (2621558709)|HEAP_ALLOCATE|[166]|Bytes:47
+14:46:05.610 (2621596840)|HEAP_ALLOCATE|[167]|Bytes:5
+14:46:05.610 (2621605760)|HEAP_ALLOCATE|[167]|Bytes:44
+14:46:05.610 (2621620865)|HEAP_ALLOCATE|[168]|Bytes:5
+14:46:05.610 (2621628067)|HEAP_ALLOCATE|[168]|Bytes:41
+14:46:05.610 (2621642922)|HEAP_ALLOCATE|[169]|Bytes:5
+14:46:05.610 (2621647592)|HEAP_ALLOCATE|[169]|Bytes:43
+14:46:05.610 (2621656444)|HEAP_ALLOCATE|[170]|Bytes:5
+14:46:05.610 (2621660621)|HEAP_ALLOCATE|[170]|Bytes:30
+14:46:05.610 (2621669049)|HEAP_ALLOCATE|[171]|Bytes:5
+14:46:05.610 (2621673018)|HEAP_ALLOCATE|[171]|Bytes:29
+14:46:05.610 (2621681454)|HEAP_ALLOCATE|[172]|Bytes:5
+14:46:05.610 (2621685739)|HEAP_ALLOCATE|[172]|Bytes:20
+14:46:05.610 (2621693763)|HEAP_ALLOCATE|[173]|Bytes:5
+14:46:05.610 (2621697956)|HEAP_ALLOCATE|[173]|Bytes:61
+14:46:05.610 (2621705926)|HEAP_ALLOCATE|[174]|Bytes:5
+14:46:05.610 (2621710387)|HEAP_ALLOCATE|[174]|Bytes:59
+14:46:05.610 (2621718960)|HEAP_ALLOCATE|[175]|Bytes:5
+14:46:05.610 (2621723154)|HEAP_ALLOCATE|[175]|Bytes:57
+14:46:05.610 (2621731423)|HEAP_ALLOCATE|[176]|Bytes:5
+14:46:05.610 (2621735435)|HEAP_ALLOCATE|[176]|Bytes:59
+14:46:05.610 (2621743804)|HEAP_ALLOCATE|[177]|Bytes:5
+14:46:05.610 (2621747769)|HEAP_ALLOCATE|[177]|Bytes:41
+14:46:05.610 (2621759801)|HEAP_ALLOCATE|[178]|Bytes:5
+14:46:05.610 (2621763862)|HEAP_ALLOCATE|[178]|Bytes:43
+14:46:05.610 (2621772537)|HEAP_ALLOCATE|[179]|Bytes:5
+14:46:05.610 (2621776519)|HEAP_ALLOCATE|[179]|Bytes:44
+14:46:05.610 (2621784910)|HEAP_ALLOCATE|[180]|Bytes:5
+14:46:05.610 (2621788952)|HEAP_ALLOCATE|[180]|Bytes:42
+14:46:05.610 (2621796886)|HEAP_ALLOCATE|[181]|Bytes:5
+14:46:05.610 (2621801185)|HEAP_ALLOCATE|[181]|Bytes:26
+14:46:05.610 (2621809498)|HEAP_ALLOCATE|[182]|Bytes:5
+14:46:05.610 (2621813529)|HEAP_ALLOCATE|[182]|Bytes:22
+14:46:05.610 (2621821893)|HEAP_ALLOCATE|[183]|Bytes:5
+14:46:05.610 (2621825821)|HEAP_ALLOCATE|[183]|Bytes:23
+14:46:05.610 (2621834710)|HEAP_ALLOCATE|[184]|Bytes:5
+14:46:05.610 (2621838666)|HEAP_ALLOCATE|[184]|Bytes:33
+14:46:05.610 (2621847137)|HEAP_ALLOCATE|[185]|Bytes:5
+14:46:05.610 (2621851143)|HEAP_ALLOCATE|[185]|Bytes:16
+14:46:05.610 (2621859339)|HEAP_ALLOCATE|[186]|Bytes:5
+14:46:05.610 (2621863458)|HEAP_ALLOCATE|[186]|Bytes:34
+14:46:05.610 (2621871816)|HEAP_ALLOCATE|[187]|Bytes:5
+14:46:05.610 (2621875623)|HEAP_ALLOCATE|[187]|Bytes:52
+14:46:05.610 (2621884580)|HEAP_ALLOCATE|[188]|Bytes:5
+14:46:05.610 (2621893462)|HEAP_ALLOCATE|[189]|Bytes:5
+14:46:05.610 (2621897200)|HEAP_ALLOCATE|[189]|Bytes:33
+14:46:05.610 (2621905396)|HEAP_ALLOCATE|[190]|Bytes:5
+14:46:05.610 (2621909194)|HEAP_ALLOCATE|[190]|Bytes:23
+14:46:05.610 (2621917446)|HEAP_ALLOCATE|[191]|Bytes:5
+14:46:05.610 (2621921588)|HEAP_ALLOCATE|[191]|Bytes:21
+14:46:05.610 (2621929832)|HEAP_ALLOCATE|[192]|Bytes:5
+14:46:05.610 (2621933783)|HEAP_ALLOCATE|[192]|Bytes:26
+14:46:05.610 (2621942248)|HEAP_ALLOCATE|[193]|Bytes:5
+14:46:05.610 (2621946196)|HEAP_ALLOCATE|[193]|Bytes:32
+14:46:05.610 (2621954645)|HEAP_ALLOCATE|[194]|Bytes:5
+14:46:05.610 (2621958896)|HEAP_ALLOCATE|[194]|Bytes:23
+14:46:05.610 (2621966966)|HEAP_ALLOCATE|[195]|Bytes:5
+14:46:05.610 (2621970922)|HEAP_ALLOCATE|[195]|Bytes:17
+14:46:05.610 (2621979091)|HEAP_ALLOCATE|[196]|Bytes:5
+14:46:05.610 (2621982868)|HEAP_ALLOCATE|[196]|Bytes:16
+14:46:05.610 (2621991226)|HEAP_ALLOCATE|[197]|Bytes:5
+14:46:05.610 (2621995087)|HEAP_ALLOCATE|[197]|Bytes:19
+14:46:05.610 (2622003361)|HEAP_ALLOCATE|[198]|Bytes:5
+14:46:05.610 (2622007897)|HEAP_ALLOCATE|[198]|Bytes:26
+14:46:05.610 (2622016159)|HEAP_ALLOCATE|[199]|Bytes:5
+14:46:05.610 (2622020106)|HEAP_ALLOCATE|[199]|Bytes:47
+14:46:05.610 (2622028669)|HEAP_ALLOCATE|[200]|Bytes:5
+14:46:05.610 (2622032514)|HEAP_ALLOCATE|[200]|Bytes:28
+14:46:05.610 (2622041304)|HEAP_ALLOCATE|[201]|Bytes:5
+14:46:05.610 (2622045060)|HEAP_ALLOCATE|[201]|Bytes:16
+14:46:05.610 (2622053629)|HEAP_ALLOCATE|[202]|Bytes:5
+14:46:05.610 (2622057842)|HEAP_ALLOCATE|[202]|Bytes:18
+14:46:05.610 (2622066179)|HEAP_ALLOCATE|[203]|Bytes:5
+14:46:05.610 (2622069826)|HEAP_ALLOCATE|[203]|Bytes:16
+14:46:05.610 (2622078151)|HEAP_ALLOCATE|[204]|Bytes:5
+14:46:05.610 (2622082032)|HEAP_ALLOCATE|[204]|Bytes:25
+14:46:05.610 (2622089832)|HEAP_ALLOCATE|[205]|Bytes:5
+14:46:05.610 (2622094465)|HEAP_ALLOCATE|[205]|Bytes:22
+14:46:05.610 (2622102886)|HEAP_ALLOCATE|[206]|Bytes:5
+14:46:05.610 (2622106778)|HEAP_ALLOCATE|[206]|Bytes:89
+14:46:05.610 (2622115095)|HEAP_ALLOCATE|[207]|Bytes:5
+14:46:05.610 (2622118839)|HEAP_ALLOCATE|[207]|Bytes:27
+14:46:05.610 (2622127075)|HEAP_ALLOCATE|[208]|Bytes:5
+14:46:05.610 (2622143760)|HEAP_ALLOCATE|[208]|Bytes:34
+14:46:05.610 (2622161568)|HEAP_ALLOCATE|[209]|Bytes:5
+14:46:05.610 (2622168769)|HEAP_ALLOCATE|[209]|Bytes:29
+14:46:05.610 (2622183168)|HEAP_ALLOCATE|[210]|Bytes:5
+14:46:05.610 (2622190205)|HEAP_ALLOCATE|[210]|Bytes:32
+14:46:05.610 (2622204895)|HEAP_ALLOCATE|[211]|Bytes:5
+14:46:05.610 (2622209190)|HEAP_ALLOCATE|[211]|Bytes:28
+14:46:05.610 (2622218309)|HEAP_ALLOCATE|[212]|Bytes:5
+14:46:05.610 (2622222065)|HEAP_ALLOCATE|[212]|Bytes:16
+14:46:05.610 (2622243326)|HEAP_ALLOCATE|[213]|Bytes:5
+14:46:05.610 (2622247512)|HEAP_ALLOCATE|[213]|Bytes:29
+14:46:05.610 (2622256498)|HEAP_ALLOCATE|[214]|Bytes:5
+14:46:05.610 (2622278470)|HEAP_ALLOCATE|[214]|Bytes:28
+14:46:05.610 (2622287360)|HEAP_ALLOCATE|[215]|Bytes:5
+14:46:05.610 (2622291342)|HEAP_ALLOCATE|[215]|Bytes:23
+14:46:05.610 (2622299807)|HEAP_ALLOCATE|[216]|Bytes:5
+14:46:05.610 (2622303624)|HEAP_ALLOCATE|[216]|Bytes:19
+14:46:05.610 (2622312044)|HEAP_ALLOCATE|[217]|Bytes:5
+14:46:05.610 (2622316003)|HEAP_ALLOCATE|[217]|Bytes:16
+14:46:05.610 (2622324643)|HEAP_ALLOCATE|[218]|Bytes:5
+14:46:05.610 (2622339751)|HEAP_ALLOCATE|[218]|Bytes:19
+14:46:05.610 (2622359538)|HEAP_ALLOCATE|[219]|Bytes:5
+14:46:05.610 (2622367288)|HEAP_ALLOCATE|[219]|Bytes:20
+14:46:05.610 (2622381817)|HEAP_ALLOCATE|[220]|Bytes:5
+14:46:05.610 (2622388142)|HEAP_ALLOCATE|[220]|Bytes:23
+14:46:05.610 (2622402403)|HEAP_ALLOCATE|[221]|Bytes:5
+14:46:05.610 (2622409392)|HEAP_ALLOCATE|[221]|Bytes:23
+14:46:05.610 (2622445654)|HEAP_ALLOCATE|[222]|Bytes:5
+14:46:05.610 (2622454552)|HEAP_ALLOCATE|[222]|Bytes:17
+14:46:05.610 (2622471523)|HEAP_ALLOCATE|[223]|Bytes:5
+14:46:05.610 (2622478142)|HEAP_ALLOCATE|[223]|Bytes:27
+14:46:05.610 (2622491774)|HEAP_ALLOCATE|[224]|Bytes:5
+14:46:05.610 (2622498098)|HEAP_ALLOCATE|[224]|Bytes:26
+14:46:05.610 (2622511092)|HEAP_ALLOCATE|[225]|Bytes:5
+14:46:05.610 (2622517222)|HEAP_ALLOCATE|[225]|Bytes:29
+14:46:05.610 (2622530460)|HEAP_ALLOCATE|[226]|Bytes:5
+14:46:05.610 (2622536483)|HEAP_ALLOCATE|[226]|Bytes:23
+14:46:05.610 (2622549643)|HEAP_ALLOCATE|[227]|Bytes:5
+14:46:05.610 (2622555502)|HEAP_ALLOCATE|[227]|Bytes:24
+14:46:05.610 (2622570078)|HEAP_ALLOCATE|[228]|Bytes:5
+14:46:05.610 (2622576706)|HEAP_ALLOCATE|[228]|Bytes:20
+14:46:05.610 (2622590337)|HEAP_ALLOCATE|[229]|Bytes:5
+14:46:05.610 (2622597407)|HEAP_ALLOCATE|[229]|Bytes:51
+14:46:05.610 (2622611786)|HEAP_ALLOCATE|[230]|Bytes:6
+14:46:05.610 (2622619049)|HEAP_ALLOCATE|[230]|Bytes:20
+14:46:05.610 (2622633490)|HEAP_ALLOCATE|[231]|Bytes:5
+14:46:05.610 (2622642807)|HEAP_ALLOCATE|[231]|Bytes:26
+14:46:05.610 (2622658795)|HEAP_ALLOCATE|[232]|Bytes:5
+14:46:05.610 (2622664542)|HEAP_ALLOCATE|[232]|Bytes:25
+14:46:05.610 (2622676187)|HEAP_ALLOCATE|[233]|Bytes:5
+14:46:05.610 (2622682075)|HEAP_ALLOCATE|[233]|Bytes:28
+14:46:05.610 (2622695532)|HEAP_ALLOCATE|[234]|Bytes:5
+14:46:05.610 (2622702000)|HEAP_ALLOCATE|[234]|Bytes:22
+14:46:05.610 (2622715551)|HEAP_ALLOCATE|[235]|Bytes:5
+14:46:05.610 (2622723497)|HEAP_ALLOCATE|[235]|Bytes:19
+14:46:05.610 (2622743608)|HEAP_ALLOCATE|[236]|Bytes:5
+14:46:05.610 (2622764771)|HEAP_ALLOCATE|[237]|Bytes:5
+14:46:05.610 (2622772092)|HEAP_ALLOCATE|[237]|Bytes:26
+14:46:05.610 (2622785112)|HEAP_ALLOCATE|[238]|Bytes:5
+14:46:05.610 (2622790577)|HEAP_ALLOCATE|[238]|Bytes:28
+14:46:05.610 (2622802778)|HEAP_ALLOCATE|[239]|Bytes:5
+14:46:05.610 (2622809595)|HEAP_ALLOCATE|[239]|Bytes:31
+14:46:05.610 (2622827892)|HEAP_ALLOCATE|[240]|Bytes:5
+14:46:05.610 (2622834474)|HEAP_ALLOCATE|[240]|Bytes:24
+14:46:05.610 (2622848519)|HEAP_ALLOCATE|[241]|Bytes:5
+14:46:05.610 (2622854986)|HEAP_ALLOCATE|[241]|Bytes:24
+14:46:05.610 (2622872596)|HEAP_ALLOCATE|[242]|Bytes:5
+14:46:05.610 (2622880392)|HEAP_ALLOCATE|[242]|Bytes:21
+14:46:05.610 (2622896457)|HEAP_ALLOCATE|[243]|Bytes:5
+14:46:05.610 (2622903326)|HEAP_ALLOCATE|[243]|Bytes:22
+14:46:05.610 (2622919429)|HEAP_ALLOCATE|[244]|Bytes:5
+14:46:05.610 (2622925947)|HEAP_ALLOCATE|[244]|Bytes:27
+14:46:05.610 (2622939102)|HEAP_ALLOCATE|[245]|Bytes:5
+14:46:05.610 (2622945177)|HEAP_ALLOCATE|[245]|Bytes:22
+14:46:05.610 (2622959192)|HEAP_ALLOCATE|[246]|Bytes:5
+14:46:05.610 (2622966185)|HEAP_ALLOCATE|[246]|Bytes:22
+14:46:05.610 (2622979974)|HEAP_ALLOCATE|[247]|Bytes:5
+14:46:05.610 (2622985621)|HEAP_ALLOCATE|[247]|Bytes:23
+14:46:05.610 (2623000699)|HEAP_ALLOCATE|[248]|Bytes:5
+14:46:05.610 (2623008106)|HEAP_ALLOCATE|[248]|Bytes:25
+14:46:05.610 (2623044971)|HEAP_ALLOCATE|[249]|Bytes:5
+14:46:05.610 (2623053683)|HEAP_ALLOCATE|[249]|Bytes:20
+14:46:05.610 (2623070084)|HEAP_ALLOCATE|[250]|Bytes:5
+14:46:05.610 (2623076401)|HEAP_ALLOCATE|[250]|Bytes:20
+14:46:05.610 (2623090544)|HEAP_ALLOCATE|[251]|Bytes:5
+14:46:05.610 (2623096986)|HEAP_ALLOCATE|[251]|Bytes:33
+14:46:05.610 (2623111713)|HEAP_ALLOCATE|[252]|Bytes:5
+14:46:05.610 (2623119029)|HEAP_ALLOCATE|[252]|Bytes:32
+14:46:05.610 (2623133157)|HEAP_ALLOCATE|[253]|Bytes:5
+14:46:05.610 (2623139608)|HEAP_ALLOCATE|[253]|Bytes:31
+14:46:05.610 (2623154545)|HEAP_ALLOCATE|[254]|Bytes:5
+14:46:05.610 (2623161377)|HEAP_ALLOCATE|[254]|Bytes:31
+14:46:05.610 (2623175493)|HEAP_ALLOCATE|[255]|Bytes:5
+14:46:05.610 (2623182434)|HEAP_ALLOCATE|[255]|Bytes:28
+14:46:05.610 (2623196378)|HEAP_ALLOCATE|[256]|Bytes:5
+14:46:05.610 (2623203300)|HEAP_ALLOCATE|[256]|Bytes:29
+14:46:05.610 (2623219731)|HEAP_ALLOCATE|[257]|Bytes:5
+14:46:05.610 (2623227158)|HEAP_ALLOCATE|[257]|Bytes:34
+14:46:05.610 (2623246295)|HEAP_ALLOCATE|[258]|Bytes:5
+14:46:05.610 (2623253085)|HEAP_ALLOCATE|[258]|Bytes:29
+14:46:05.610 (2623266484)|HEAP_ALLOCATE|[259]|Bytes:5
+14:46:05.610 (2623272878)|HEAP_ALLOCATE|[259]|Bytes:29
+14:46:05.610 (2623289841)|HEAP_ALLOCATE|[260]|Bytes:5
+14:46:05.610 (2623297017)|HEAP_ALLOCATE|[260]|Bytes:31
+14:46:05.610 (2623311723)|HEAP_ALLOCATE|[261]|Bytes:5
+14:46:05.610 (2623318408)|HEAP_ALLOCATE|[261]|Bytes:38
+14:46:05.610 (2623332761)|HEAP_ALLOCATE|[262]|Bytes:5
+14:46:05.610 (2623339728)|HEAP_ALLOCATE|[262]|Bytes:27
+14:46:05.610 (2623353086)|HEAP_ALLOCATE|[263]|Bytes:5
+14:46:05.610 (2623357364)|HEAP_ALLOCATE|[263]|Bytes:28
+14:46:05.610 (2623366021)|HEAP_ALLOCATE|[264]|Bytes:5
+14:46:05.610 (2623369703)|HEAP_ALLOCATE|[264]|Bytes:35
+14:46:05.610 (2623377935)|HEAP_ALLOCATE|[265]|Bytes:5
+14:46:05.610 (2623381938)|HEAP_ALLOCATE|[265]|Bytes:17
+14:46:05.610 (2623390162)|HEAP_ALLOCATE|[266]|Bytes:5
+14:46:05.610 (2623394520)|HEAP_ALLOCATE|[266]|Bytes:25
+14:46:05.610 (2623402603)|HEAP_ALLOCATE|[267]|Bytes:5
+14:46:05.610 (2623406628)|HEAP_ALLOCATE|[267]|Bytes:24
+14:46:05.610 (2623415018)|HEAP_ALLOCATE|[268]|Bytes:5
+14:46:05.610 (2623424398)|HEAP_ALLOCATE|[268]|Bytes:24
+14:46:05.610 (2623452956)|HEAP_ALLOCATE|[269]|Bytes:5
+14:46:05.610 (2623458242)|HEAP_ALLOCATE|[269]|Bytes:23
+14:46:05.610 (2623467480)|HEAP_ALLOCATE|[270]|Bytes:5
+14:46:05.610 (2623471358)|HEAP_ALLOCATE|[270]|Bytes:25
+14:46:05.610 (2623479810)|HEAP_ALLOCATE|[271]|Bytes:5
+14:46:05.610 (2623483865)|HEAP_ALLOCATE|[271]|Bytes:16
+14:46:05.610 (2623492292)|HEAP_ALLOCATE|[272]|Bytes:5
+14:46:05.610 (2623496541)|HEAP_ALLOCATE|[272]|Bytes:18
+14:46:05.610 (2623504882)|HEAP_ALLOCATE|[273]|Bytes:5
+14:46:05.610 (2623508462)|HEAP_ALLOCATE|[273]|Bytes:27
+14:46:05.610 (2623527902)|HEAP_ALLOCATE|[274]|Bytes:5
+14:46:05.610 (2623531881)|HEAP_ALLOCATE|[274]|Bytes:17
+14:46:05.610 (2623540419)|HEAP_ALLOCATE|[275]|Bytes:5
+14:46:05.610 (2623544597)|HEAP_ALLOCATE|[275]|Bytes:18
+14:46:05.610 (2623553205)|HEAP_ALLOCATE|[276]|Bytes:5
+14:46:05.610 (2623557563)|HEAP_ALLOCATE|[276]|Bytes:50
+14:46:05.610 (2623565820)|HEAP_ALLOCATE|[277]|Bytes:5
+14:46:05.610 (2623570112)|HEAP_ALLOCATE|[277]|Bytes:55
+14:46:05.610 (2623578662)|HEAP_ALLOCATE|[278]|Bytes:5
+14:46:05.610 (2623583366)|HEAP_ALLOCATE|[278]|Bytes:30
+14:46:05.610 (2623591842)|HEAP_ALLOCATE|[279]|Bytes:5
+14:46:05.610 (2623595867)|HEAP_ALLOCATE|[279]|Bytes:24
+14:46:05.610 (2623604199)|HEAP_ALLOCATE|[280]|Bytes:5
+14:46:05.610 (2623608175)|HEAP_ALLOCATE|[280]|Bytes:43
+14:46:05.610 (2623625667)|HEAP_ALLOCATE|[281]|Bytes:5
+14:46:05.610 (2623631482)|HEAP_ALLOCATE|[281]|Bytes:43
+14:46:05.610 (2623640867)|HEAP_ALLOCATE|[282]|Bytes:5
+14:46:05.610 (2623645285)|HEAP_ALLOCATE|[282]|Bytes:49
+14:46:05.610 (2623653583)|HEAP_ALLOCATE|[283]|Bytes:5
+14:46:05.610 (2623657832)|HEAP_ALLOCATE|[283]|Bytes:49
+14:46:05.610 (2623666531)|HEAP_ALLOCATE|[284]|Bytes:5
+14:46:05.610 (2623671151)|HEAP_ALLOCATE|[284]|Bytes:47
+14:46:05.610 (2623679369)|HEAP_ALLOCATE|[285]|Bytes:5
+14:46:05.610 (2623683313)|HEAP_ALLOCATE|[285]|Bytes:46
+14:46:05.610 (2623691815)|HEAP_ALLOCATE|[286]|Bytes:5
+14:46:05.610 (2623696345)|HEAP_ALLOCATE|[286]|Bytes:44
+14:46:05.610 (2623704458)|HEAP_ALLOCATE|[287]|Bytes:5
+14:46:05.610 (2623708756)|HEAP_ALLOCATE|[287]|Bytes:53
+14:46:05.610 (2623717334)|HEAP_ALLOCATE|[288]|Bytes:5
+14:46:05.610 (2623721330)|HEAP_ALLOCATE|[288]|Bytes:66
+14:46:05.610 (2623729491)|HEAP_ALLOCATE|[289]|Bytes:5
+14:46:05.610 (2623736111)|HEAP_ALLOCATE|[289]|Bytes:107
+14:46:05.610 (2623745388)|HEAP_ALLOCATE|[290]|Bytes:5
+14:46:05.610 (2623749523)|HEAP_ALLOCATE|[290]|Bytes:33
+14:46:05.610 (2623757570)|HEAP_ALLOCATE|[291]|Bytes:5
+14:46:05.610 (2623761818)|HEAP_ALLOCATE|[291]|Bytes:48
+14:46:05.610 (2623770408)|HEAP_ALLOCATE|[292]|Bytes:5
+14:46:05.610 (2623774988)|HEAP_ALLOCATE|[292]|Bytes:40
+14:46:05.610 (2623783560)|HEAP_ALLOCATE|[293]|Bytes:5
+14:46:05.610 (2623787803)|HEAP_ALLOCATE|[293]|Bytes:31
+14:46:05.610 (2623795915)|HEAP_ALLOCATE|[294]|Bytes:5
+14:46:05.610 (2623800179)|HEAP_ALLOCATE|[294]|Bytes:60
+14:46:05.610 (2623808693)|HEAP_ALLOCATE|[295]|Bytes:5
+14:46:05.610 (2623812938)|HEAP_ALLOCATE|[295]|Bytes:34
+14:46:05.610 (2623821137)|HEAP_ALLOCATE|[296]|Bytes:5
+14:46:05.610 (2623825481)|HEAP_ALLOCATE|[296]|Bytes:34
+14:46:05.610 (2623834328)|HEAP_ALLOCATE|[297]|Bytes:5
+14:46:05.610 (2623838632)|HEAP_ALLOCATE|[297]|Bytes:73
+14:46:05.610 (2623847454)|HEAP_ALLOCATE|[298]|Bytes:5
+14:46:05.610 (2623851959)|HEAP_ALLOCATE|[298]|Bytes:39
+14:46:05.610 (2623860129)|HEAP_ALLOCATE|[299]|Bytes:5
+14:46:05.610 (2623864416)|HEAP_ALLOCATE|[299]|Bytes:44
+14:46:05.610 (2623872609)|HEAP_ALLOCATE|[300]|Bytes:5
+14:46:05.610 (2623876950)|HEAP_ALLOCATE|[300]|Bytes:30
+14:46:05.610 (2623885325)|HEAP_ALLOCATE|[301]|Bytes:5
+14:46:05.610 (2623890137)|HEAP_ALLOCATE|[301]|Bytes:29
+14:46:05.610 (2623898585)|HEAP_ALLOCATE|[302]|Bytes:5
+14:46:05.610 (2623902731)|HEAP_ALLOCATE|[302]|Bytes:47
+14:46:05.610 (2623911216)|HEAP_ALLOCATE|[303]|Bytes:5
+14:46:05.610 (2623917513)|HEAP_ALLOCATE|[303]|Bytes:39
+14:46:05.610 (2623926448)|HEAP_ALLOCATE|[304]|Bytes:5
+14:46:05.610 (2623930498)|HEAP_ALLOCATE|[304]|Bytes:18
+14:46:05.610 (2623938693)|HEAP_ALLOCATE|[305]|Bytes:5
+14:46:05.610 (2623942435)|HEAP_ALLOCATE|[305]|Bytes:45
+14:46:05.610 (2623951281)|HEAP_ALLOCATE|[306]|Bytes:5
+14:46:05.610 (2623955439)|HEAP_ALLOCATE|[306]|Bytes:47
+14:46:05.610 (2623964151)|HEAP_ALLOCATE|[307]|Bytes:5
+14:46:05.610 (2623968563)|HEAP_ALLOCATE|[307]|Bytes:24
+14:46:05.610 (2623976590)|HEAP_ALLOCATE|[308]|Bytes:5
+14:46:05.610 (2623980692)|HEAP_ALLOCATE|[308]|Bytes:34
+14:46:05.610 (2623989019)|HEAP_ALLOCATE|[309]|Bytes:5
+14:46:05.610 (2623993056)|HEAP_ALLOCATE|[309]|Bytes:21
+14:46:05.610 (2624001510)|HEAP_ALLOCATE|[310]|Bytes:5
+14:46:05.610 (2624006228)|HEAP_ALLOCATE|[310]|Bytes:47
+14:46:05.610 (2624014634)|HEAP_ALLOCATE|[311]|Bytes:5
+14:46:05.610 (2624018652)|HEAP_ALLOCATE|[311]|Bytes:54
+14:46:05.610 (2624027081)|HEAP_ALLOCATE|[312]|Bytes:5
+14:46:05.610 (2624031416)|HEAP_ALLOCATE|[312]|Bytes:33
+14:46:05.610 (2624039925)|HEAP_ALLOCATE|[313]|Bytes:5
+14:46:05.610 (2624043820)|HEAP_ALLOCATE|[313]|Bytes:38
+14:46:05.610 (2624052541)|HEAP_ALLOCATE|[314]|Bytes:5
+14:46:05.610 (2624056678)|HEAP_ALLOCATE|[314]|Bytes:31
+14:46:05.610 (2624065066)|HEAP_ALLOCATE|[315]|Bytes:5
+14:46:05.610 (2624069358)|HEAP_ALLOCATE|[315]|Bytes:41
+14:46:05.610 (2624077986)|HEAP_ALLOCATE|[316]|Bytes:5
+14:46:05.610 (2624081868)|HEAP_ALLOCATE|[316]|Bytes:47
+14:46:05.610 (2624090501)|HEAP_ALLOCATE|[317]|Bytes:5
+14:46:05.610 (2624097152)|HEAP_ALLOCATE|[317]|Bytes:55
+14:46:05.610 (2624105738)|HEAP_ALLOCATE|[318]|Bytes:5
+14:46:05.610 (2624109868)|HEAP_ALLOCATE|[318]|Bytes:51
+14:46:05.610 (2624118151)|HEAP_ALLOCATE|[319]|Bytes:5
+14:46:05.610 (2624122197)|HEAP_ALLOCATE|[319]|Bytes:29
+14:46:05.610 (2624130307)|HEAP_ALLOCATE|[320]|Bytes:5
+14:46:05.610 (2624134227)|HEAP_ALLOCATE|[320]|Bytes:81
+14:46:05.610 (2624145129)|HEAP_ALLOCATE|[321]|Bytes:5
+14:46:05.610 (2624149374)|HEAP_ALLOCATE|[321]|Bytes:25
+14:46:05.610 (2624157845)|HEAP_ALLOCATE|[322]|Bytes:5
+14:46:05.610 (2624162045)|HEAP_ALLOCATE|[322]|Bytes:24
+14:46:05.610 (2624170137)|HEAP_ALLOCATE|[323]|Bytes:5
+14:46:05.610 (2624174040)|HEAP_ALLOCATE|[323]|Bytes:29
+14:46:05.610 (2624182579)|HEAP_ALLOCATE|[324]|Bytes:5
+14:46:05.610 (2624186366)|HEAP_ALLOCATE|[324]|Bytes:31
+14:46:05.610 (2624194923)|HEAP_ALLOCATE|[325]|Bytes:5
+14:46:05.610 (2624198699)|HEAP_ALLOCATE|[325]|Bytes:30
+14:46:05.610 (2624206973)|HEAP_ALLOCATE|[326]|Bytes:5
+14:46:05.610 (2624210860)|HEAP_ALLOCATE|[326]|Bytes:20
+14:46:05.610 (2624218889)|HEAP_ALLOCATE|[327]|Bytes:5
+14:46:05.610 (2624223132)|HEAP_ALLOCATE|[327]|Bytes:19
+14:46:05.610 (2624231564)|HEAP_ALLOCATE|[328]|Bytes:5
+14:46:05.610 (2624235293)|HEAP_ALLOCATE|[328]|Bytes:34
+14:46:05.610 (2624243332)|HEAP_ALLOCATE|[329]|Bytes:5
+14:46:05.610 (2624247310)|HEAP_ALLOCATE|[329]|Bytes:30
+14:46:05.610 (2624255888)|HEAP_ALLOCATE|[330]|Bytes:5
+14:46:05.610 (2624259684)|HEAP_ALLOCATE|[330]|Bytes:31
+14:46:05.610 (2624268018)|HEAP_ALLOCATE|[331]|Bytes:5
+14:46:05.610 (2624271797)|HEAP_ALLOCATE|[331]|Bytes:21
+14:46:05.610 (2624280373)|HEAP_ALLOCATE|[332]|Bytes:5
+14:46:05.610 (2624284368)|HEAP_ALLOCATE|[332]|Bytes:24
+14:46:05.610 (2624292368)|HEAP_ALLOCATE|[333]|Bytes:5
+14:46:05.610 (2624296123)|HEAP_ALLOCATE|[333]|Bytes:22
+14:46:05.610 (2624304424)|HEAP_ALLOCATE|[334]|Bytes:5
+14:46:05.610 (2624308627)|HEAP_ALLOCATE|[334]|Bytes:25
+14:46:05.610 (2624319447)|HEAP_ALLOCATE|[335]|Bytes:5
+14:46:05.610 (2624323514)|HEAP_ALLOCATE|[335]|Bytes:21
+14:46:05.610 (2624332468)|HEAP_ALLOCATE|[336]|Bytes:5
+14:46:05.610 (2624347921)|HEAP_ALLOCATE|[336]|Bytes:46
+14:46:05.610 (2624358515)|HEAP_ALLOCATE|[337]|Bytes:5
+14:46:05.610 (2624362539)|HEAP_ALLOCATE|[337]|Bytes:48
+14:46:05.610 (2624379836)|HEAP_ALLOCATE|[338]|Bytes:5
+14:46:05.610 (2624384655)|HEAP_ALLOCATE|[338]|Bytes:42
+14:46:05.610 (2624393818)|HEAP_ALLOCATE|[339]|Bytes:5
+14:46:05.610 (2624397481)|HEAP_ALLOCATE|[339]|Bytes:45
+14:46:05.610 (2624405645)|HEAP_ALLOCATE|[340]|Bytes:5
+14:46:05.610 (2624409505)|HEAP_ALLOCATE|[340]|Bytes:54
+14:46:05.610 (2624418047)|HEAP_ALLOCATE|[341]|Bytes:5
+14:46:05.610 (2624426422)|HEAP_ALLOCATE|[341]|Bytes:43
+14:46:05.610 (2624435375)|HEAP_ALLOCATE|[342]|Bytes:5
+14:46:05.610 (2624439364)|HEAP_ALLOCATE|[342]|Bytes:33
+14:46:05.610 (2624447837)|HEAP_ALLOCATE|[343]|Bytes:5
+14:46:05.610 (2624451697)|HEAP_ALLOCATE|[343]|Bytes:20
+14:46:05.610 (2624460490)|HEAP_ALLOCATE|[344]|Bytes:5
+14:46:05.610 (2624464893)|HEAP_ALLOCATE|[344]|Bytes:14
+14:46:05.610 (2624473318)|HEAP_ALLOCATE|[345]|Bytes:5
+14:46:05.610 (2624477226)|HEAP_ALLOCATE|[345]|Bytes:33
+14:46:05.610 (2624485444)|HEAP_ALLOCATE|[346]|Bytes:5
+14:46:05.610 (2624489462)|HEAP_ALLOCATE|[346]|Bytes:33
+14:46:05.610 (2624497831)|HEAP_ALLOCATE|[347]|Bytes:5
+14:46:05.610 (2624501813)|HEAP_ALLOCATE|[347]|Bytes:20
+14:46:05.610 (2624510292)|HEAP_ALLOCATE|[348]|Bytes:5
+14:46:05.610 (2624514184)|HEAP_ALLOCATE|[348]|Bytes:51
+14:46:05.610 (2624522376)|HEAP_ALLOCATE|[349]|Bytes:5
+14:46:05.610 (2624526162)|HEAP_ALLOCATE|[349]|Bytes:26
+14:46:05.610 (2624535490)|HEAP_ALLOCATE|[350]|Bytes:2
+14:46:05.610 (2624539317)|HEAP_ALLOCATE|[350]|Bytes:16
+14:46:05.610 (2624547745)|HEAP_ALLOCATE|[351]|Bytes:2
+14:46:05.610 (2624559050)|HEAP_ALLOCATE|[352]|Bytes:2
+14:46:05.610 (2624563127)|HEAP_ALLOCATE|[352]|Bytes:19
+14:46:05.610 (2624571693)|HEAP_ALLOCATE|[353]|Bytes:2
+14:46:05.610 (2624584935)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:46:05.610 (2624684146)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0x3f856397
+14:46:05.610 (2624692758)|STATEMENT_EXECUTE|[356]
+14:46:05.610 (2624771416)|HEAP_ALLOCATE|[356]|Bytes:14
+14:46:05.610 (2624784578)|HEAP_ALLOCATE|[356]|Bytes:19
+14:46:05.610 (2624797422)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:05.610 (2624806967)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:05.610 (2624821789)|VARIABLE_ASSIGNMENT|[44]|s1|"Insufficient Funds"
+14:46:05.610 (2624826910)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:05.610 (2624838387)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error D4451"
+14:46:05.610 (2624854841)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:05.610 (2624862229)|STATEMENT_EXECUTE|[44]
+14:46:05.610 (2624865476)|STATEMENT_EXECUTE|[45]
+14:46:05.610 (2624879318)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:05.610 (2624902482)|VARIABLE_ASSIGNMENT|[45]|result|"Insufficient Funds"
+14:46:05.610 (2624910796)|STATEMENT_EXECUTE|[46]
+14:46:05.610 (2624919988)|STATEMENT_EXECUTE|[47]
+14:46:05.610 (2624955166)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:05.610 (2624968924)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:46:05.610 (2624989376)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Insufficient Funds"
+14:46:05.610 (2624997395)|STATEMENT_EXECUTE|[358]
+14:46:05.610 (2625021419)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:46:05.610 (2625042251)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Insufficient Funds"
+14:46:05.610 (2625049858)|STATEMENT_EXECUTE|[74]
+14:46:05.610 (2625072898)|METHOD_EXIT|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:05.610 (2625091593)|HEAP_ALLOCATE|[486]|Bytes:39
+14:46:05.610 (2625120447)|USER_DEBUG|[486]|DEBUG|Eway2 error message: Insufficient Funds
+14:46:05.610 (2625135934)|STATEMENT_EXECUTE|[488]
+14:46:05.610 (2625165919)|METHOD_EXIT|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:46:05.610 (2625178075)|STATEMENT_EXECUTE|[270]
+14:46:05.610 (2625200158)|METHOD_EXIT|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:46:05.610 (2625284577)|VARIABLE_ASSIGNMENT|[384]|ewayResp|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2625309165)|METHOD_ENTRY|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:46:05.610 (2625355106)|HEAP_ALLOCATE|[61]|Bytes:5
+14:46:05.610 (2625364950)|STATEMENT_EXECUTE|[60]
+14:46:05.610 (2625367859)|STATEMENT_EXECUTE|[61]
+14:46:05.610 (2625400979)|HEAP_ALLOCATE|[61]|Bytes:4
+14:46:05.610 (2625625302)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:46:05.610 (2627948105)|SOQL_EXECUTE_END|[61]|Rows:1
+14:46:05.610 (2627998084)|HEAP_ALLOCATE|[61]|Bytes:8
+14:46:05.610 (2628027074)|HEAP_ALLOCATE|[61]|Bytes:50
+14:46:05.610 (2628112144)|HEAP_ALLOCATE|[61]|Bytes:8
+14:46:05.610 (2628158735)|HEAP_ALLOCATE|[61]|Bytes:12
+14:46:05.610 (2628212211)|METHOD_EXIT|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:46:05.610 (2628231080)|STATEMENT_EXECUTE|[388]
+14:46:05.610 (2628263387)|STATEMENT_EXECUTE|[393]
+14:46:05.610 (2628483884)|VARIABLE_ASSIGNMENT|[393]|this.Response__c|"{\"AuthorisationCode\" (887 more) ..."|0x7c70a3d8
+14:46:05.610 (2628500192)|STATEMENT_EXECUTE|[394]
+14:46:05.610 (2628535894)|METHOD_ENTRY|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2628578420)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:46:05.610 (2628662400)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2628689209)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:05.610 (2628697278)|STATEMENT_EXECUTE|[43]
+14:46:05.610 (2628700274)|STATEMENT_EXECUTE|[45]
+14:46:05.610 (2628742415)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:46:05.610 (2628760364)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:46:05.610 (2628769293)|STATEMENT_EXECUTE|[48]
+14:46:05.610 (2628772715)|STATEMENT_EXECUTE|[49]
+14:46:05.610 (2628820336)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:46:05.610 (2628830706)|STATEMENT_EXECUTE|[52]
+14:46:05.610 (2628833581)|STATEMENT_EXECUTE|[54]
+14:46:05.610 (2628896834)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:05.610 (2628907476)|HEAP_ALLOCATE|[54]|Bytes:8
+14:46:05.610 (2628959795)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:46:05.610 (2628969904)|STATEMENT_EXECUTE|[56]
+14:46:05.610 (2628988386)|METHOD_EXIT|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2629101708)|VARIABLE_ASSIGNMENT|[394]|this.Response_Code__c|"D4451"|0x7c70a3d8
+14:46:05.610 (2629133372)|STATEMENT_EXECUTE|[395]
+14:46:05.610 (2629159054)|METHOD_ENTRY|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:05.610 (2629187669)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:46:05.610 (2629233613)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2629256829)|HEAP_ALLOCATE|[60]|Bytes:5
+14:46:05.610 (2629265657)|STATEMENT_EXECUTE|[59]
+14:46:05.610 (2629268898)|STATEMENT_EXECUTE|[60]
+14:46:05.610 (2629282231)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:46:05.610 (2629300720)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:46:05.610 (2629327666)|STATEMENT_EXECUTE|[65]
+14:46:05.610 (2629331271)|STATEMENT_EXECUTE|[67]
+14:46:05.610 (2629347302)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2629358780)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:46:05.610 (2629396289)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2629415974)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:05.610 (2629430332)|STATEMENT_EXECUTE|[43]
+14:46:05.610 (2629433254)|STATEMENT_EXECUTE|[45]
+14:46:05.610 (2629462149)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:46:05.610 (2629480644)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:46:05.610 (2629489245)|STATEMENT_EXECUTE|[48]
+14:46:05.610 (2629491833)|STATEMENT_EXECUTE|[49]
+14:46:05.610 (2629523686)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:46:05.610 (2629533384)|STATEMENT_EXECUTE|[52]
+14:46:05.610 (2629535806)|STATEMENT_EXECUTE|[54]
+14:46:05.610 (2629576408)|HEAP_ALLOCATE|[54]|Bytes:5
+14:46:05.610 (2629586803)|HEAP_ALLOCATE|[54]|Bytes:8
+14:46:05.610 (2629618230)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:46:05.610 (2629627506)|STATEMENT_EXECUTE|[56]
+14:46:05.610 (2629646421)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:46:05.610 (2629658913)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:46:05.610 (2629694613)|VARIABLE_ASSIGNMENT|[67]|errorCode|"D4451"
+14:46:05.610 (2629703400)|STATEMENT_EXECUTE|[69]
+14:46:05.610 (2629706396)|STATEMENT_EXECUTE|[70]
+14:46:05.610 (2629724398)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:46:05.610 (2629735514)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:46:05.610 (2629773475)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2629784927)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:46:05.610 (2629797672)|VARIABLE_ASSIGNMENT|[78]|errorCode|"D4451"
+14:46:05.610 (2629814271)|HEAP_ALLOCATE|[80]|Bytes:5
+14:46:05.610 (2629821771)|STATEMENT_EXECUTE|[78]
+14:46:05.610 (2629845257)|STATEMENT_EXECUTE|[80]
+14:46:05.610 (2629877169)|HEAP_ALLOCATE|[80]|Bytes:4
+14:46:05.610 (2631729070)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:46:05.610 (2631824264)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0xa0b1f4e
+14:46:05.610 (2631834191)|STATEMENT_EXECUTE|[356]
+14:46:05.610 (2631881917)|HEAP_ALLOCATE|[356]|Bytes:19
+14:46:05.610 (2631895755)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:05.610 (2631903502)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:46:05.610 (2631915514)|VARIABLE_ASSIGNMENT|[44]|s1|"Insufficient Funds"
+14:46:05.610 (2631920343)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:46:05.610 (2631929183)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error D4451"
+14:46:05.610 (2631944649)|HEAP_ALLOCATE|[45]|Bytes:5
+14:46:05.610 (2631950099)|STATEMENT_EXECUTE|[44]
+14:46:05.610 (2631952369)|STATEMENT_EXECUTE|[45]
+14:46:05.610 (2631961289)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:46:05.610 (2631971905)|VARIABLE_ASSIGNMENT|[45]|result|"Insufficient Funds"
+14:46:05.610 (2631976759)|STATEMENT_EXECUTE|[46]
+14:46:05.610 (2631980835)|STATEMENT_EXECUTE|[47]
+14:46:05.610 (2631991926)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:46:05.610 (2631998485)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:46:05.610 (2632008125)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Insufficient Funds"
+14:46:05.610 (2632013007)|STATEMENT_EXECUTE|[358]
+14:46:05.610 (2632021867)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:46:05.610 (2632030347)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Insufficient Funds"
+14:46:05.610 (2632035323)|STATEMENT_EXECUTE|[74]
+14:46:05.610 (2632042614)|METHOD_EXIT|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:46:05.610 (2632146744)|VARIABLE_ASSIGNMENT|[395]|this.Response_Message__c|"Insufficient Funds"|0x7c70a3d8
+14:46:05.610 (2632155047)|STATEMENT_EXECUTE|[396]
+14:46:05.610 (2632176943)|METHOD_ENTRY|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:46:05.610 (2632203535)|VARIABLE_SCOPE_BEGIN|[38]|this|Eway2Response|true|false
+14:46:05.610 (2632249284)|VARIABLE_ASSIGNMENT|[38]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2632264609)|HEAP_ALLOCATE|[39]|Bytes:5
+14:46:05.610 (2632269492)|STATEMENT_EXECUTE|[38]
+14:46:05.610 (2632271573)|STATEMENT_EXECUTE|[39]
+14:46:05.610 (2632281707)|HEAP_ALLOCATE|[39]|Bytes:13
+14:46:05.610 (2632352960)|HEAP_ALLOCATE|[39]|Bytes:9
+14:46:05.610 (2632368598)|METHOD_EXIT|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:46:05.610 (2632458592)|VARIABLE_ASSIGNMENT|[396]|this.Gateway_Transaction_Id__c|"303146692"|0x7c70a3d8
+14:46:05.610 (2632467397)|STATEMENT_EXECUTE|[397]
+14:46:05.610 (2632485465)|METHOD_ENTRY|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:46:05.610 (2632503481)|VARIABLE_SCOPE_BEGIN|[28]|this|Eway2Response|true|false
+14:46:05.610 (2632530396)|VARIABLE_ASSIGNMENT|[28]|this|{"params":"0x28d088e2","responseBody":"{\"AuthorisationCode\" (887 more) ..."}|0x4b0c2a8d
+14:46:05.610 (2632556745)|HEAP_ALLOCATE|[31]|Bytes:5
+14:46:05.610 (2632562655)|STATEMENT_EXECUTE|[28]
+14:46:05.610 (2632569090)|HEAP_ALLOCATE|[31]|Bytes:12
+14:46:05.610 (2632617009)|HEAP_ALLOCATE|[31]|Bytes:2
+14:46:05.610 (2632680467)|STATEMENT_EXECUTE|[33]
+14:46:05.610 (2632683117)|STATEMENT_EXECUTE|[34]
+14:46:05.610 (2632693901)|HEAP_ALLOCATE|[34]|Bytes:5
+14:46:05.610 (2632704551)|METHOD_EXIT|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:46:05.610 (2632711924)|HEAP_ALLOCATE|[397]|Bytes:7
+14:46:05.610 (2632769874)|VARIABLE_ASSIGNMENT|[397]|this.Status__c|"FAILURE"|0x7c70a3d8
+14:46:05.610 (2632784108)|METHOD_EXIT|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:46:05.610 (2632790214)|STATEMENT_EXECUTE|[196]
+14:46:05.610 (2632813887)|SYSTEM_MODE_EXIT|false
+14:46:05.610 (2632823889)|METHOD_EXIT|[329]|01p6F000006He6O|paymentGateway.pay()
+14:46:05.610 (2632891987)|VARIABLE_ASSIGNMENT|[329]|paymentAttempt|{"Status__c":"FAILURE","Payment_Amount__c":89.00,"CurrencyIsoCode":"AUD","Payment_Name__c":"TIANNA MAI","Payment_Email__c":"tmai@jtlegalpractice (4 more) ...","Payment_Option__c":"Eway2","Payment_Type__c":"Payment","Request_Time__c":"2019-01-09T04:46:03.227Z","Invoice_Number__c":"000972103","Response__c":"{\"AuthorisationCode\" (887 more) ...","Response_Code__c":"D4451","Response_Message__c":"Insufficient Funds","Gateway_Transaction_Id__c":"303146692"}|0x7c70a3d8
+14:46:05.610 (2632931597)|HEAP_ALLOCATE|[338]|Bytes:7
+14:46:05.610 (2632951457)|STATEMENT_EXECUTE|[338]
+14:46:05.610 (2632958682)|STATEMENT_EXECUTE|[342]
+14:46:05.610 (2632963701)|HEAP_ALLOCATE|[342]|Bytes:18
+14:46:05.610 (2632984701)|HEAP_ALLOCATE|[342]|Bytes:925
+14:46:05.610 (2633015209)|USER_DEBUG|[342]|DEBUG|Gateway Response: {"AuthorisationCode":"","ResponseCode":"51","ResponseMessage":"D4451","TransactionID":303146692,"TransactionStatus":false,"TransactionType":"Recurring","BeagleScore":0.10,"Verification":{"CVN":0,"Address":0,"Email":0,"Mobile":0,"Phone":0},"Customer":{"CardDetails":{"Number":"464579XXXXXX0077","Name":"Joey Nguyen","ExpiryMonth":"07","ExpiryYear":"19","StartMonth":"","StartYear":"","IssueNumber":""},"TokenCustomerID":969862261448,"Reference":"","Title":"Mr.","FirstName":"TIANNA","LastName":"MAI","CompanyName":"JT Legal Practice","JobDescription":"","Street1":"15 Moore St","Street2":"","City":"LIVERPOOL","State":"NSW","PostalCode":"2170","Country":"au","Email":"tmai@jtlegalpractice.com","Phone":"","Mobile":"","Comments":"","Fax":"","Url":""},"Payment":{"TotalAmount":8900,"InvoiceNumber":"000972103","InvoiceDescription":"000972103","InvoiceReference":"000972103","CurrencyCode":"AUD"},"Errors":null}
+14:46:05.610 (2633047412)|STATEMENT_EXECUTE|[343]
+14:46:05.610 (2633060228)|HEAP_ALLOCATE|[343]|Bytes:29
+14:46:05.610 (2633073213)|HEAP_ALLOCATE|[343]|Bytes:936
+14:46:05.610 (2633079264)|HEAP_ALLOCATE|[343]|Bytes:1078
+14:46:05.610 (2633099752)|VARIABLE_ASSIGNMENT|[343]|this.Log|"Current Invoice Numb (1058 more) ..."|0x7d8e0a23
+14:46:05.610 (2633112669)|STATEMENT_EXECUTE|[357]
+14:46:05.610 (2633114993)|STATEMENT_EXECUTE|[358]
+14:46:05.610 (2633116813)|STATEMENT_EXECUTE|[358]
+14:46:05.610 (2633118835)|STATEMENT_EXECUTE|[359]
+14:46:05.610 (2633126684)|HEAP_ALLOCATE|[359]|Bytes:32
+14:46:05.610 (2633132742)|HEAP_ALLOCATE|[359]|Bytes:1110
+14:46:05.610 (2633143376)|VARIABLE_ASSIGNMENT|[359]|this.Log|"Current Invoice Numb (1090 more) ..."|0x7d8e0a23
+14:46:05.610 (2633172361)|STATEMENT_EXECUTE|[390]
+14:46:05.610 (2633174793)|STATEMENT_EXECUTE|[391]
+14:46:05.610 (2633181528)|HEAP_ALLOCATE|[391]|Bytes:9
+14:46:05.610 (2633203287)|HEAP_ALLOCATE|[391]|Bytes:27
+14:46:05.610 (2633251394)|HEAP_ALLOCATE|[391]|Bytes:-4
+14:46:05.610 (2633276399)|VARIABLE_ASSIGNMENT|[391]|this.Payment_Message__c|"FAILURE: Insufficien (7 more) ..."|0x226af2cf
+14:46:05.610 (2633282956)|STATEMENT_EXECUTE|[392]
+14:46:05.610 (2633337985)|HEAP_ALLOCATE|[392]|Bytes:-4
+14:46:05.610 (2633352069)|VARIABLE_ASSIGNMENT|[392]|this.Payment_Response__c|"303146692"|0x226af2cf
+14:46:05.610 (2633358605)|STATEMENT_EXECUTE|[393]
+14:46:05.610 (2633370203)|HEAP_ALLOCATE|[393]|Bytes:10
+14:46:05.610 (2633378353)|HEAP_ALLOCATE|[393]|Bytes:1120
+14:46:05.610 (2633391926)|VARIABLE_ASSIGNMENT|[393]|this.Log|"Current Invoice Numb (1100 more) ..."|0x7d8e0a23
+14:46:05.610 (2633397520)|STATEMENT_EXECUTE|[394]
+14:46:05.610 (2633403499)|HEAP_ALLOCATE|[394]|Bytes:6
+14:46:05.610 (2633455517)|VARIABLE_ASSIGNMENT|[394]|this.Process_Message__c|"UnPaid"|0x226af2cf
+14:46:05.610 (2633465175)|STATEMENT_EXECUTE|[416]
+14:46:05.610 (2633495344)|VARIABLE_ASSIGNMENT|[416]|this.Processed__c|true|0x226af2cf
+14:46:05.610 (2633505298)|STATEMENT_EXECUTE|[418]
+14:46:05.610 (2633550152)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2633574077)|STATEMENT_EXECUTE|[419]
+14:46:05.610 (2633583973)|HEAP_ALLOCATE|[419]|Bytes:14
+14:46:05.610 (2633592802)|HEAP_ALLOCATE|[419]|Bytes:1134
+14:46:05.610 (2633607373)|VARIABLE_ASSIGNMENT|[419]|this.Log|"Current Invoice Numb (1114 more) ..."|0x7d8e0a23
+14:46:05.610 (2633631025)|HEAP_ALLOCATE|[136]|Bytes:5
+14:46:05.610 (2633648786)|VARIABLE_ASSIGNMENT|[136]|current_invoice|null|
+14:46:05.610 (2633655667)|STATEMENT_EXECUTE|[422]
+14:46:05.610 (2633798124)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2633811160)|STATEMENT_EXECUTE|[423]
+14:46:05.610 (2633866217)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2633876492)|STATEMENT_EXECUTE|[424]
+14:46:05.610 (2633929807)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2633939522)|STATEMENT_EXECUTE|[426]
+14:46:05.610 (2633949838)|HEAP_ALLOCATE|[426]|Bytes:14
+14:46:05.610 (2634193983)|HEAP_ALLOCATE|[426]|Bytes:583
+14:46:05.610 (2634227517)|HEAP_ALLOCATE|[426]|Bytes:597
+14:46:05.610 (2634246435)|USER_DEBUG|[426]|DEBUG|All Invoices: (Invoice__c:{Id=a0E6F00002QwH5tUAF, Name=JT Legal Practice, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=00190000008J8wDAAS, Account_Product__c=a0790000002OGubAAG, Amount_Credited__c=0.00, Amount_Due__c=89.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972103, Invoice_Total__c=89.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=true, Process_Message__c=UnPaid, Reference__c=138691, CurrencyIsoCode=AUD, Payment_Message__c=FAILURE: Insufficient Funds, Payment_Response__c=303146692})
+14:46:05.610 (2634265629)|STATEMENT_EXECUTE|[427]
+14:46:05.610 (2634311876)|DML_BEGIN|[427]|Op:Update|Type:Invoice__c|Rows:1
+14:46:05.610 (2634355268)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:46:05.610 (2663419139)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VDtL
+14:46:05.610 (2682213043)|WF_RULE_EVAL_BEGIN|Workflow
+14:46:05.610 (2682312654)|WF_CRITERIA_BEGIN|[Invoice: JT Legal Practice a0E6F00002QwH5t]|Automatic Tasks for Outstanding Invoices|01Q6F0000019daX|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2688339509)|WF_RULE_NOT_EVALUATED
+14:46:05.610 (2688396549)|WF_CRITERIA_BEGIN|[Invoice: JT Legal Practice a0E6F00002QwH5t]|Sign_Up_Invoice3016F000000hF9P|01Q6F0000013738|ON_ALL_CHANGES|0
+14:46:05.610 (2688542557)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:46:05.610 (2688553002)|WF_CRITERIA_END|true
+14:46:05.610 (2689208997)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:46:05.610 (2689250807)|WF_ACTION| Flow Trigger: 1;
+14:46:05.610 (2689258086)|WF_RULE_EVAL_END
+14:46:05.610 (2690903258)|WF_FLOW_ACTION_BEGIN|09L6F000000gHqq
+14:46:05.692 (2692747989)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000Pjga|3016F000000hF9P
+14:46:05.692 (2693566855)|FLOW_CREATE_INTERVIEW_END|3445e4d0bbd938078de8502f0e6b16830e88e8-021d|Sign Up Invoice
+14:46:05.694 (2694096175)|FLOW_START_INTERVIEWS_BEGIN|1
+14:46:05.694 (2694120858)|FLOW_START_INTERVIEW_BEGIN|3445e4d0bbd938078de8502f0e6b16830e88e8-021d|Sign Up Invoice
+14:46:05.694 (2749412673)|FLOW_START_INTERVIEW_END|3445e4d0bbd938078de8502f0e6b16830e88e8-021d|Sign Up Invoice
+14:46:05.694 (2749442014)|FLOW_START_INTERVIEWS_END|1
+14:46:05.610 (2751261965)|WF_FLOW_ACTION_END|09L6F000000gHqq
+14:46:05.610 (2751320583)|WF_TIME_TRIGGERS_BEGIN
+14:46:05.610 (2755671033)|WF_ACTIONS_END| Flow Trigger: 1;
+14:46:05.610 (2755692467)|CODE_UNIT_FINISHED|Workflow:01I90000000VDtL
+14:46:05.610 (2768911712)|DML_END|[427]
+14:46:05.610 (2769007352)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:46:05.610 (2769045777)|STATEMENT_EXECUTE|[429]
+14:46:05.610 (2769090268)|HEAP_ALLOCATE|[429]|Bytes:14
+14:46:05.610 (2769214038)|HEAP_ALLOCATE|[429]|Bytes:2
+14:46:05.610 (2769247177)|HEAP_ALLOCATE|[429]|Bytes:16
+14:46:05.610 (2769279101)|USER_DEBUG|[429]|DEBUG|All Payments: ()
+14:46:05.610 (2769292908)|STATEMENT_EXECUTE|[430]
+14:46:05.610 (2769387232)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2769402309)|STATEMENT_EXECUTE|[431]
+14:46:05.610 (2769469846)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:46:05.610 (2769480826)|STATEMENT_EXECUTE|[433]
+14:46:05.610 (2769492069)|HEAP_ALLOCATE|[433]|Bytes:88
+14:46:05.610 (2769532457)|HEAP_ALLOCATE|[433]|Bytes:4
+14:46:05.610 (2770863009)|SOQL_EXECUTE_BEGIN|[433]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:46:05.610 (2778358832)|SOQL_EXECUTE_END|[433]|Rows:1
+14:46:05.610 (2778411514)|HEAP_ALLOCATE|[433]|Bytes:8
+14:46:05.610 (2778439141)|HEAP_ALLOCATE|[433]|Bytes:140
+14:46:05.610 (2778526252)|HEAP_ALLOCATE|[433]|Bytes:8
+14:46:05.610 (2778557075)|HEAP_ALLOCATE|[433]|Bytes:42
+14:46:05.610 (2778607100)|HEAP_ALLOCATE|[433]|Bytes:20
+14:46:05.610 (2778625021)|VARIABLE_SCOPE_BEGIN|[433]|updateNewPayBatch|Invoice_Batch__c|true|false
+14:46:05.610 (2778682592)|VARIABLE_ASSIGNMENT|[433]|updateNewPayBatch|{"Id":"a0F6F00000uikSuUAI","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Payments Complete"}|0x52d0fae0
+14:46:05.610 (2778698259)|STATEMENT_EXECUTE|[434]
+14:46:05.610 (2778715825)|HEAP_ALLOCATE|[434]|Bytes:3
+14:46:05.610 (2778798015)|VARIABLE_ASSIGNMENT|[434]|this.Batch_Processed__c|"Yes"|0x52d0fae0
+14:46:05.610 (2778812150)|STATEMENT_EXECUTE|[435]
+14:46:05.610 (2778826354)|HEAP_ALLOCATE|[435]|Bytes:17
+14:46:05.610 (2778884200)|VARIABLE_ASSIGNMENT|[435]|this.status__c|"Payments Complete"|0x52d0fae0
+14:46:05.610 (2778897770)|STATEMENT_EXECUTE|[436]
+14:46:05.610 (2778972167)|HEAP_ALLOCATE|[436]|Bytes:8
+14:46:05.610 (2778990224)|DML_BEGIN|[436]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:46:05.610 (2779043470)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:46:05.610 (2794024147)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:46:05.610 (2800100336)|WF_RULE_EVAL_BEGIN|Workflow
+14:46:05.610 (2800136110)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2801913152)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:46:05.610 (2801953106)|WF_RULE_EVAL_VALUE|2
+14:46:05.610 (2801966261)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:46:05.610 (2801975140)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:46:05.610 (2801983176)|WF_CRITERIA_END|false
+14:46:05.610 (2802005179)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2802111747)|WF_RULE_NOT_EVALUATED
+14:46:05.610 (2802126606)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2802260383)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:46:05.610 (2802284201)|WF_RULE_EVAL_VALUE|2
+14:46:05.610 (2802295952)|WF_RULE_EVAL_VALUE|1
+14:46:05.610 (2802305729)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:46:05.610 (2802312668)|WF_CRITERIA_END|false
+14:46:05.610 (2802342051)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:46:05.610 (2802359236)|WF_ACTION| None
+14:46:05.610 (2802367296)|WF_RULE_EVAL_END
+14:46:05.610 (2802461657)|WF_ACTIONS_END| None
+14:46:05.610 (2802478336)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:46:05.610 (2803855428)|DML_END|[436]
+14:46:05.610 (2803884760)|STATEMENT_EXECUTE|[438]
+14:46:05.610 (2803943189)|HEAP_ALLOCATE|[438]|Bytes:4
+14:46:05.610 (2804419120)|SOQL_EXECUTE_BEGIN|[438]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:46:05.610 (2807092434)|SOQL_EXECUTE_END|[438]|Rows:1
+14:46:05.610 (2807139039)|HEAP_ALLOCATE|[438]|Bytes:8
+14:46:05.610 (2807162820)|HEAP_ALLOCATE|[438]|Bytes:137
+14:46:05.610 (2807206931)|HEAP_ALLOCATE|[438]|Bytes:8
+14:46:05.610 (2807251353)|HEAP_ALLOCATE|[438]|Bytes:20
+14:46:05.610 (2807268329)|VARIABLE_SCOPE_BEGIN|[438]|updateInvoiceBatch|Invoice_Batch__c|true|false
+14:46:05.610 (2807325173)|VARIABLE_ASSIGNMENT|[438]|updateInvoiceBatch|{"Id":"a0F6F00000uikQFUAY","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Batch Approved"}|0x149865ce
+14:46:05.610 (2807340285)|STATEMENT_EXECUTE|[439]
+14:46:05.610 (2807424734)|VARIABLE_ASSIGNMENT|[439]|this.Batch_Processed__c|"Yes"|0x149865ce
+14:46:05.610 (2807437247)|STATEMENT_EXECUTE|[440]
+14:46:05.610 (2807482359)|HEAP_ALLOCATE|[440]|Bytes:8
+14:46:05.610 (2807491619)|DML_BEGIN|[440]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:46:05.610 (2807521723)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:46:05.610 (2821225180)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:46:05.610 (2826454210)|WF_RULE_EVAL_BEGIN|Workflow
+14:46:05.610 (2826491428)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2826601859)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:46:05.610 (2826622788)|WF_RULE_EVAL_VALUE|1
+14:46:05.610 (2826628096)|WF_CRITERIA_END|false
+14:46:05.610 (2826637875)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2826711987)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains SLX] 
+AND [Invoice Batch : Batch Status equals Payments Complete] 
+AND [Invoice Batch : Invoice Batch Name does not contain NZ]
+14:46:05.610 (2826736527)|WF_RULE_EVAL_VALUE|1
+14:46:05.610 (2826742755)|WF_CRITERIA_END|false
+14:46:05.610 (2826752879)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:46:05.610 (2826806181)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:46:05.610 (2826817289)|WF_RULE_EVAL_VALUE|1
+14:46:05.610 (2826821197)|WF_CRITERIA_END|false
+14:46:05.610 (2826831001)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:46:05.610 (2826842068)|WF_ACTION| None
+14:46:05.610 (2826848223)|WF_RULE_EVAL_END
+14:46:05.610 (2826940635)|WF_ACTIONS_END| None
+14:46:05.610 (2826953338)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:46:05.610 (2827570175)|DML_END|[440]
+14:46:05.842 (2842505089)|CUMULATIVE_LIMIT_USAGE
+14:46:05.842 (2842505089)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:46:05.842 (2842505089)|CUMULATIVE_LIMIT_USAGE_END
+
+14:46:05.610 (2842563277)|CODE_UNIT_FINISHED|batchPaymentsProcess
+14:46:05.610 (2843526636)|EXECUTION_FINISHED

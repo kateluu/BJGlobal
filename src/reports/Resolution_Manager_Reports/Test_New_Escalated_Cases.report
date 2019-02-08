@@ -32,13 +32,18 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>Alexandra Brown,Conor McCown-Butt</value>
+            <value>Alexandra Brown,kylie Vaughn,David Powell,Nurmala Moyden</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>Cases__c.Resolution_Manager__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Cases__c.escalated_date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Escalated Cases</name>
@@ -53,6 +58,6 @@
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Cases__c.escalated_date__c</dateColumn>
-        <interval>INTERVAL_THISWEEK</interval>
+        <interval>INTERVAL_CURY</interval>
     </timeFrameFilter>
 </Report>

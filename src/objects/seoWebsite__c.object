@@ -70,6 +70,54 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Ahrefs_Backlinks__c</fullName>
+        <externalId>false</externalId>
+        <label>Backlinks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ahrefs_Domain_Rank__c</fullName>
+        <externalId>false</externalId>
+        <label>Domain Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ahrefs_Homepage_Backlinks__c</fullName>
+        <externalId>false</externalId>
+        <label>Homepage Backlinks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ahrefs_Homepage_Url_Rank__c</fullName>
+        <externalId>false</externalId>
+        <label>Homepage Url Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Bing_Top_10__c</fullName>
         <externalId>false</externalId>
         <label>Bing Top 10</label>
@@ -195,19 +243,6 @@
         <type>Summary</type>
     </fields>
     <fields>
-        <fullName>Google_Places_Top_10_Percent__c</fullName>
-        <externalId>false</externalId>
-        <formula>IF(Keyword_Count__c &gt; 0, Google_Places_Top_10_Count__c /  Keyword_Count__c, null)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Percentage in Google Places Top 10</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Percent</type>
-    </fields>
-    <fields>
         <fullName>Google_Sum__c</fullName>
         <externalId>false</externalId>
         <label>Google Sum</label>
@@ -263,13 +298,77 @@
         <type>Percent</type>
     </fields>
     <fields>
-        <fullName>Initial_Crawl__c</fullName>
-        <defaultValue>false</defaultValue>
+        <fullName>Google_Unranked_2_days__c</fullName>
         <externalId>false</externalId>
-        <label>Initial Crawl</label>
+        <label>Google Unranked Count DaysAgo2</label>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_DaysAgo2__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Unranked_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Google Unranked Count</label>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_Current__c</field>
+            <operation>equals</operation>
+            <value>100</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_DaysAgo2__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Google_Unranked_Lift_2_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Keyword_Count_DaysAgo2__c &gt; 0 &amp;&amp; Keyword_Count__c &gt; 0, (Google_Unranked_Count__c / Keyword_Count_DaysAgo2__c) - (Google_Unranked_2_days__c / Keyword_Count_DaysAgo2__c), null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Google Unranked Increase 2 days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Industry__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Industry</globalPicklist>
+        <label>Industry</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Keyword_Count_DaysAgo2__c</fullName>
+        <externalId>false</externalId>
+        <label>Keyword Count DaysAgo2</label>
+        <summaryFilterItems>
+            <field>seoThemeKeywords__c.Google_DaysAgo2__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>seoThemeKeywords__c.seoWebsites__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>Keyword_Count__c</fullName>
@@ -314,6 +413,18 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OwnerRole__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OwnerRole</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Project__c</fullName>
@@ -395,6 +506,63 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Quote_Generated__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>SEO_Packages</globalPicklist>
+        <label>System Quote</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quote__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>SEO_Packages</globalPicklist>
+        <label>Quote</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reach__c</fullName>
+        <externalId>false</externalId>
+        <label>Reach</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>National</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Referring_Domains__c</fullName>
+        <externalId>false</externalId>
+        <label>Referring Domains</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Searching_From__c</fullName>
         <externalId>false</externalId>
         <label>Search filter</label>
@@ -433,29 +601,6 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Update_Progress__c</fullName>
-        <defaultValue>0</defaultValue>
-        <externalId>false</externalId>
-        <label>Update Progress</label>
-        <precision>5</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Percent</type>
-    </fields>
-    <fields>
-        <fullName>Yahoo_Top_10__c</fullName>
-        <externalId>false</externalId>
-        <label>Yahoo Top 10</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Percent</type>
     </fields>
     <fields>
         <fullName>website_url__c</fullName>
@@ -511,6 +656,29 @@
         <label>All</label>
     </listViews>
     <listViews>
+        <fullName>Digital_Strategy</fullName>
+        <columns>NAME</columns>
+        <columns>website_url__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Google_Top_10_Percent__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Last_Crawl_Completed_Date__c</columns>
+        <columns>Reach__c</columns>
+        <columns>Quote__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OwnerRole__c</field>
+            <operation>contains</operation>
+            <value>Digital Strategy</value>
+        </filters>
+        <label>Digital Strategy</label>
+        <sharedTo>
+            <group>Digital_Group</group>
+            <group>System_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>GMT</fullName>
         <columns>Send_SEO_Report__c</columns>
         <columns>NAME</columns>
@@ -536,10 +704,8 @@
     </listViews>
     <listViews>
         <fullName>Internal_seo_sites</fullName>
-        <columns>Send_SEO_Report__c</columns>
         <columns>NAME</columns>
         <columns>website_url__c</columns>
-        <columns>Account__c</columns>
         <columns>Keyword_Count__c</columns>
         <columns>Google_Top_10_Percent__c</columns>
         <columns>Last_Crawl_Completed_Date__c</columns>
@@ -578,6 +744,223 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Accommodation %26 Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration %26 Office Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adult Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertising%2C Arts %26 Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appliances %26 Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking%2C Finance %26 Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education %26 Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events%2C Parties %26 Weddings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Drink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hair %26 Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Garden</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality %26 Tourism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources %26 Recruitment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information %26 Communication Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing %26 Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %26 Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical%2C Health %26 Wellbeing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining%2C Resources %26 Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pets %26 Animal Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property %26 Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate %26 Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail %26 Consumer Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety %26 Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science and Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sport%2C Leisure %26 Hobbies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability %26 Environment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trades %26 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reach__c</picklist>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEO_Packages</picklist>
+            <values>
+                <fullName>%241099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Searching_From__c</picklist>
             <values>
                 <fullName>Pages from Australia</fullName>
@@ -591,11 +974,11 @@
         <picklistValues>
             <picklist>geolocations</picklist>
             <values>
-                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <fullName>Albury%2CNew South Wales%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -615,7 +998,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Bendigo%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broome%2CWestern Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -655,7 +1046,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Coffs Harbour%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Devonport%2CTasmania%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -680,6 +1079,10 @@
             </values>
             <values>
                 <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hamilton%2CWaikato%2CNew Zealand</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -715,6 +1118,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Manly%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -731,6 +1138,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Nelson%2CNelson%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>New York%2CNew York%2CUnited States</fullName>
                 <default>false</default>
             </values>
@@ -740,6 +1151,10 @@
             </values>
             <values>
                 <fullName>Perth%2CWestern Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Port Douglas%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -767,6 +1182,14 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Taree%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taylors Lakes%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -783,6 +1206,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Wangaratta%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Wellington%2CWellington%2CNew Zealand</fullName>
                 <default>false</default>
             </values>
@@ -794,7 +1221,7 @@
     </recordTypes>
     <recordTypes>
         <fullName>SEO_Prospect</fullName>
-        <active>true</active>
+        <active>false</active>
         <description>SEO Prospects</description>
         <label>SEO Prospect</label>
         <picklistValues>
@@ -805,6 +1232,149 @@
             </values>
             <values>
                 <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Accommodation %26 Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration %26 Office Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adult Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertising%2C Arts %26 Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appliances %26 Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking%2C Finance %26 Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education %26 Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events%2C Parties %26 Weddings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Drink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hair %26 Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Garden</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality %26 Tourism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources %26 Recruitment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information %26 Communication Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing %26 Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %26 Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical%2C Health %26 Wellbeing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining%2C Resources %26 Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pets %26 Animal Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property %26 Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate %26 Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail %26 Consumer Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety %26 Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science and Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sport%2C Leisure %26 Hobbies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability %26 Environment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trades %26 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -836,6 +1406,80 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Reach__c</picklist>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEO_Packages</picklist>
+            <values>
+                <fullName>%241099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Searching_From__c</picklist>
             <values>
                 <fullName>Pages from Australia</fullName>
@@ -849,11 +1493,11 @@
         <picklistValues>
             <picklist>geolocations</picklist>
             <values>
-                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <fullName>Albury%2CNew South Wales%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -873,7 +1517,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Bendigo%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broome%2CWestern Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -913,7 +1565,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Coffs Harbour%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Devonport%2CTasmania%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -938,6 +1598,10 @@
             </values>
             <values>
                 <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hamilton%2CWaikato%2CNew Zealand</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -973,6 +1637,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Manly%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -1001,6 +1669,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Port Douglas%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Queenstown%2COtago%2CNew Zealand</fullName>
                 <default>false</default>
             </values>
@@ -1025,6 +1697,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Taylors Lakes%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -1038,6 +1714,10 @@
             </values>
             <values>
                 <fullName>Wagga Wagga%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wangaratta%2CVictoria%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1053,6 +1733,7 @@
     <recordTypes>
         <fullName>SEO_Websites</fullName>
         <active>true</active>
+        <description>For SEO clients</description>
         <label>SEO Websites</label>
         <picklistValues>
             <picklist>Device__c</picklist>
@@ -1062,6 +1743,223 @@
             </values>
             <values>
                 <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Accommodation %26 Travel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Administration %26 Office Support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adult Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Advertising%2C Arts %26 Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Appliances %26 Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking%2C Finance %26 Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education %26 Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events%2C Parties %26 Weddings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Drink</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hair %26 Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Garden</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality %26 Tourism</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Human Resources %26 Recruitment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information %26 Communication Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing %26 Industrial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing %26 Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medical%2C Health %26 Wellbeing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mining%2C Resources %26 Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pets %26 Animal Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Property %26 Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Real Estate %26 Property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail %26 Consumer Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Safety %26 Security</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science and Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sport%2C Leisure %26 Hobbies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sustainability %26 Environment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trades %26 Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transport</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reach__c</picklist>
+            <values>
+                <fullName>International</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>National</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SEO_Packages</picklist>
+            <values>
+                <fullName>%241099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%241599 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%242099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%243099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%245099 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24699 %2B Content Pack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%24899 %2B Content Pack</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1079,11 +1977,11 @@
         <picklistValues>
             <picklist>geolocations</picklist>
             <values>
-                <fullName>4877%2CQueensland%2CAustralia</fullName>
+                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adelaide%2CSouth Australia%2CAustralia</fullName>
+                <fullName>Albury%2CNew South Wales%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1103,7 +2001,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Bendigo%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Brisbane%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Broome%2CWestern Australia%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1143,7 +2049,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Coffs Harbour%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Darwin%2CNorthern Territory%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Devonport%2CTasmania%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1168,6 +2082,10 @@
             </values>
             <values>
                 <fullName>Gympie%2CQueensland%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hamilton%2CWaikato%2CNew Zealand</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1203,6 +2121,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Manly%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Maroochydore%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -1219,6 +2141,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Nelson%2CNelson%2CNew Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>New York%2CNew York%2CUnited States</fullName>
                 <default>false</default>
             </values>
@@ -1228,6 +2154,10 @@
             </values>
             <values>
                 <fullName>Perth%2CWestern Australia%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Port Douglas%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1255,6 +2185,14 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Taree%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taylors Lakes%2CVictoria%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Toowoomba%2CQueensland%2CAustralia</fullName>
                 <default>false</default>
             </values>
@@ -1268,6 +2206,10 @@
             </values>
             <values>
                 <fullName>Wagga Wagga%2CNew South Wales%2CAustralia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wangaratta%2CVictoria%2CAustralia</fullName>
                 <default>false</default>
             </values>
             <values>

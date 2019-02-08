@@ -9,15 +9,24 @@ private class AccountProductHelperTest {
                 itemAcc = new Account(Name ='TestAccount2', username__c='TestAccount2', password__c='TestAccount2', CurrencyIsoCode ='AUD', Phone='78456213', Active__c= true);
                 testAccts.add(itemAcc);
                 insert testAccts; 
+
+                String userID = ''+ UserInfo.getUserId();
                 
                 // create account products
                 List<Account_Product__c> testProducts = new List<Account_Product__c>();
                 for(Integer i=0;i<2;i++) {            
-                    Account_Product__c item = new Account_Product__c(Name ='Adword'+1, Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c =testAccts.get(0).id, Product_Status__c ='Active' );
+                    Account_Product__c item = new Account_Product__c(Name ='Adword'+1, Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c =testAccts.get(0).id, Product_Status__c ='Active' , OwnerID =userID );
+                    testProducts.add(item);
+                }
+                for(Integer i=0;i<2;i++) {            
+                    Account_Product__c item = new Account_Product__c(Name ='Facebook'+1, Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c =testAccts.get(1).id, Product_Status__c ='Active' , OwnerID =userID );
                     testProducts.add(item);
                 }
                 insert testProducts; 
                 
+
+
+
                 List<Contact> contacts= new List<Contact>();
                 for(Integer i =0; i< testAccts.size(); i++){
                     Account item = testAccts.get(i);
@@ -26,15 +35,26 @@ private class AccountProductHelperTest {
                 }
                 insert contacts;
 
-                String userID = ''+ UserInfo.getUserId() ;
+                
                 List<Task> tasks = new List<Task>();
-				Task tsk1 = new Task(WhatId = testAccts[0].Id, Subject = '→ Email: apex test', ActivityDate = date.today(), Status = 'Completed' , OwnerID = userID );
+				Task tsk1 = new Task(WhatId = testAccts[0].Id, Subject = '→ Email: apex test', ActivityDate = date.today(), Status = 'Completed' , OwnerID = userID , TaskSubType='Email');
 				tasks.add(tsk1);
-				Task tsk2 = new Task(WhatId = testAccts[0].Id, Subject = 'Outbound call: apex test', ActivityDate = date.today(), Status = 'Completed', OwnerID = userID );
+				Task tsk2 = new Task(WhatId = testAccts[0].Id, Subject = 'Outbound call: apex test', ActivityDate = date.today(), Status = 'Completed', OwnerID = userID , TaskSubType='Call');
 				tasks.add(tsk2);				
-				Task tsk3 = new Task(WhatId = testAccts[0].Id, Subject = '→ Email: apex test', ActivityDate = date.today().addYears(-2), Status = 'Completed', OwnerID = userID );
+				Task tsk3 = new Task(WhatId = testAccts[0].Id, Subject = '→ Email: apex test', ActivityDate = date.today().addYears(-2), Status = 'Completed', OwnerID = userID ,TaskSubType='Email' );
 				tasks.add(tsk3);
+
+
+                tsk1 = new Task(WhatId = testAccts[1].Id, Subject = '→ Email: apex test', ActivityDate = date.today(), Status = 'Completed' , OwnerID = userID , TaskSubType='Email');
+                tasks.add(tsk1);
+                tsk2 = new Task(WhatId = testAccts[1].Id, Subject = 'Outbound call: apex test', ActivityDate = date.today(), Status = 'Completed', OwnerID = userID , TaskSubType='Call');
+                tasks.add(tsk2);                
+                tsk3 = new Task(WhatId = testAccts[1].Id, Subject = '→ Email: apex test', ActivityDate = date.today().addYears(-2), Status = 'Completed', OwnerID = userID ,TaskSubType='Email' );
+                tasks.add(tsk3);
+
 				insert tasks;				
+
+
                 
         }catch(DMLException e){
             system.debug('retry' + e.getMessage());

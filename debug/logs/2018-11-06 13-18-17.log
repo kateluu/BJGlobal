@@ -1,0 +1,687 @@
+25.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+13:18:16.0 (104379)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+13:18:16.0 (154262)|EXECUTION_STARTED
+13:18:16.0 (162190)|CODE_UNIT_STARTED|[EXTERNAL]|06690000002H8AP|VF: /apex/InvoiceListForCase
+13:18:16.0 (11406797)|SYSTEM_MODE_ENTER|true
+13:18:16.0 (11930186)|HEAP_ALLOCATE|[72]|Bytes:3
+13:18:16.0 (11980563)|HEAP_ALLOCATE|[77]|Bytes:152
+13:18:16.0 (12002738)|HEAP_ALLOCATE|[342]|Bytes:408
+13:18:16.0 (12027519)|HEAP_ALLOCATE|[355]|Bytes:408
+13:18:16.0 (12048139)|HEAP_ALLOCATE|[467]|Bytes:48
+13:18:16.0 (12104189)|HEAP_ALLOCATE|[139]|Bytes:6
+13:18:16.0 (12139771)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+13:18:16.0 (12171273)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+13:18:16.0 (12177902)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (12184491)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:564
+13:18:16.0 (12224357)|METHOD_ENTRY|[1]|01p90000002RRLj|InvoiceListForCase.InvoiceListForCase()
+13:18:16.0 (12235728)|STATEMENT_EXECUTE|[1]
+13:18:16.0 (12242146)|STATEMENT_EXECUTE|[1]
+13:18:16.0 (12291397)|HEAP_ALLOCATE|[50]|Bytes:5
+13:18:16.0 (12331060)|HEAP_ALLOCATE|[56]|Bytes:5
+13:18:16.0 (12347259)|HEAP_ALLOCATE|[64]|Bytes:7
+13:18:16.0 (12386395)|SYSTEM_MODE_ENTER|false
+13:18:16.0 (12403557)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+13:18:16.0 (12411750)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (12418463)|SYSTEM_MODE_EXIT|false
+13:18:16.0 (12450035)|METHOD_EXIT|[1]|InvoiceListForCase
+13:18:16.0 (12474502)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+13:18:16.0 (12498420)|VARIABLE_SCOPE_BEGIN|[16]|this|InvoiceListForCase|true|false
+13:18:16.0 (12551816)|VARIABLE_ASSIGNMENT|[16]|this|{}|0x6d5a1c20
+13:18:16.0 (12565895)|VARIABLE_SCOPE_BEGIN|[16]|controller|ApexPages.StandardController|true|false
+13:18:16.0 (12885057)|VARIABLE_ASSIGNMENT|[16]|controller|"StandardController [null]"|0x596d194a
+13:18:16.0 (12911776)|SYSTEM_MODE_ENTER|false
+13:18:16.0 (12922808)|HEAP_ALLOCATE|[17]|Bytes:5
+13:18:16.0 (12930354)|STATEMENT_EXECUTE|[1]
+13:18:16.0 (12936056)|HEAP_ALLOCATE|[17]|Bytes:5
+13:18:16.0 (12941491)|STATEMENT_EXECUTE|[2]
+13:18:16.0 (12972890)|HEAP_ALLOCATE|[17]|Bytes:6
+13:18:16.0 (13027340)|STATEMENT_EXECUTE|[16]
+13:18:16.0 (13032088)|STATEMENT_EXECUTE|[17]
+13:18:16.0 (24709970)|HEAP_ALLOCATE|[17]|Bytes:12
+13:18:16.0 (24758778)|VARIABLE_SCOPE_BEGIN|[17]|ca|Cases__c|true|false
+13:18:16.0 (24804156)|VARIABLE_ASSIGNMENT|[17]|ca|{"CurrencyIsoCode":"NZD","Id":"a0K6F00000io8MfUAI"}|0x5b591d7e
+13:18:16.0 (24815621)|STATEMENT_EXECUTE|[18]
+13:18:16.0 (24836201)|HEAP_ALLOCATE|[18]|Bytes:55
+13:18:16.0 (24865552)|HEAP_ALLOCATE|[18]|Bytes:4
+13:18:16.0 (24887324)|HEAP_ALLOCATE|[18]|Bytes:7
+13:18:16.0 (25292026)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT id, Account__c FROM Cases__c WHERE id = :tmpVar1
+13:18:16.0 (28648268)|SOQL_EXECUTE_END|[18]|Rows:1
+13:18:16.0 (28679790)|HEAP_ALLOCATE|[18]|Bytes:8
+13:18:16.0 (28699580)|HEAP_ALLOCATE|[18]|Bytes:87
+13:18:16.0 (28769223)|HEAP_ALLOCATE|[18]|Bytes:8
+13:18:16.0 (28786218)|HEAP_ALLOCATE|[18]|Bytes:34
+13:18:16.0 (28838469)|HEAP_ALLOCATE|[18]|Bytes:16
+13:18:16.0 (28873411)|VARIABLE_ASSIGNMENT|[18]|ca|{"Id":"a0K6F00000io8MfUAI","Account__c":"0016F00002LqOijQAF","CurrencyIsoCode":"NZD"}|0x3ece09b6
+13:18:16.0 (28885204)|STATEMENT_EXECUTE|[20]
+13:18:16.0 (28896984)|HEAP_ALLOCATE|[20]|Bytes:394
+13:18:16.0 (28915472)|HEAP_ALLOCATE|[20]|Bytes:4
+13:18:16.0 (30553612)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+13:18:16.0 (57917298)|SOQL_EXECUTE_END|[20]|Rows:17
+13:18:16.0 (57976533)|HEAP_ALLOCATE|[20]|Bytes:72
+13:18:16.0 (58189404)|HEAP_ALLOCATE|[20]|Bytes:9753
+13:18:16.0 (58342875)|HEAP_ALLOCATE|[20]|Bytes:72
+13:18:16.0 (58377156)|VARIABLE_SCOPE_BEGIN|[20]|invoices|List<Invoice__c>|true|false
+13:18:16.0 (58689385)|VARIABLE_ASSIGNMENT|[20]|invoices|"List of size 17 too large to display"|0x496565a9
+13:18:16.0 (58708294)|STATEMENT_EXECUTE|[41]
+13:18:16.0 (58753659)|HEAP_ALLOCATE|[41]|Bytes:4
+13:18:16.0 (58979599)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6d5a1c20
+13:18:16.0 (59028148)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (59048334)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x44cf09e8
+13:18:16.0 (59078470)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x6d5a1c20
+13:18:16.0 (59100745)|STATEMENT_EXECUTE|[43]
+13:18:16.0 (59123301)|VARIABLE_SCOPE_BEGIN|[43]|i|Integer|false|false
+13:18:16.0 (59140942)|HEAP_ALLOCATE|[43]|Bytes:4
+13:18:16.0 (59157962)|VARIABLE_ASSIGNMENT|[43]|i|0
+13:18:16.0 (59524776)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (59570621)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (59592332)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (59715637)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002GbfVlUAJ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000939023","Amount_Credited__c":89.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"CREDITED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x4ab6e919
+13:18:16.0 (59743269)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (59746632)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (59764700)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (59780692)|VARIABLE_ASSIGNMENT|[45]|i|1
+13:18:16.0 (59788575)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (59860698)|USER_DEBUG|[46]|DEBUG|1
+13:18:16.0 (59880916)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (60028039)|HEAP_ALLOCATE|[47]|Bytes:112
+13:18:16.0 (60045702)|HEAP_ALLOCATE|[47]|Bytes:5
+13:18:16.0 (60073531)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (60105050)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (60156645)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (60217477)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x35c7193a
+13:18:16.0 (60267195)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (60271520)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (60283561)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (60295530)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (60309783)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (60338303)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x35c7193a
+13:18:16.0 (60349157)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (60446475)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x35c7193a
+13:18:16.0 (60536337)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002GbfVlUAJ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000939023","Amount_Credited__c":89.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"CREDITED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x4ab6e919
+13:18:16.0 (60627551)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002GbfVlUAJ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000939023","Amount_Credited__c":89.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"CREDITED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x35c7193a
+13:18:16.0 (60810467)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (60827973)|HEAP_ALLOCATE|[52]|Bytes:4
+13:18:16.0 (60943131)|HEAP_ALLOCATE|[54]|Bytes:6
+13:18:16.0 (61013407)|HEAP_ALLOCATE|[56]|Bytes:3
+13:18:16.0 (61073657)|HEAP_ALLOCATE|[58]|Bytes:7
+13:18:16.0 (61119533)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (61123892)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (61138437)|HEAP_ALLOCATE|[59]|Bytes:7
+13:18:16.0 (61215924)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4ab6e919"}|0x35c7193a
+13:18:16.0 (61244942)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (61263551)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x35c7193a
+13:18:16.0 (61283303)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (61346562)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (61394658)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (61431151)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (61458592)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (61476454)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (61562795)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002FTuiIUAT","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000935266","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x6ba94062
+13:18:16.0 (61587074)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (61590295)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (61603397)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (61618832)|VARIABLE_ASSIGNMENT|[45]|i|2
+13:18:16.0 (61625513)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (61654691)|USER_DEBUG|[46]|DEBUG|2
+13:18:16.0 (61669846)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (61682248)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (61693594)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (61705180)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (61740949)|VARIABLE_ASSIGNMENT|[79]|this|{}|0xa1a944d
+13:18:16.0 (61771125)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (61774527)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (61784377)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (61794498)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (61808205)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (61835165)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0xa1a944d
+13:18:16.0 (61845020)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (61877529)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xa1a944d
+13:18:16.0 (61955623)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002FTuiIUAT","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000935266","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x6ba94062
+13:18:16.0 (62032698)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002FTuiIUAT","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000935266","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0xa1a944d
+13:18:16.0 (62079925)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (62181301)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (62185259)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (62232894)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x6ba94062"}|0xa1a944d
+13:18:16.0 (62247169)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (62257673)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0xa1a944d
+13:18:16.0 (62267547)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (62290370)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (62310457)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (62329426)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (62344275)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (62353713)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (62406938)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002EHes2UAD","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000930465","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x44903ceb
+13:18:16.0 (62419542)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (62421404)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (62429118)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (62436967)|VARIABLE_ASSIGNMENT|[45]|i|3
+13:18:16.0 (62441362)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (62455660)|USER_DEBUG|[46]|DEBUG|3
+13:18:16.0 (62463842)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (62471080)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (62477684)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (62484667)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (62500441)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x66eac0c1
+13:18:16.0 (62516101)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (62517980)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (62523106)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (62528605)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (62535431)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (62548775)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x66eac0c1
+13:18:16.0 (62554734)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (62569285)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x66eac0c1
+13:18:16.0 (62614004)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002EHes2UAD","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000930465","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x44903ceb
+13:18:16.0 (62661123)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002EHes2UAD","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000930465","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x66eac0c1
+13:18:16.0 (62689282)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (62747724)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (62749862)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (62772630)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x44903ceb"}|0x66eac0c1
+13:18:16.0 (62783021)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (62791112)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x66eac0c1
+13:18:16.0 (62799401)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (62815380)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (62830148)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (62845108)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (62857529)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (62865350)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (62914459)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002DM3LcUAL","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000927240","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x5b5653d8
+13:18:16.0 (62926840)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (62928672)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (62935347)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (62943160)|VARIABLE_ASSIGNMENT|[45]|i|4
+13:18:16.0 (62947251)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (62958520)|USER_DEBUG|[46]|DEBUG|4
+13:18:16.0 (62966373)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (62973104)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (62978650)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (62987460)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (63010451)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x3dd2086b
+13:18:16.0 (63034619)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (63037572)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (63045840)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (63051898)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (63060067)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (63076053)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x3dd2086b
+13:18:16.0 (63081536)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (63097380)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3dd2086b
+13:18:16.0 (63143024)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002DM3LcUAL","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000927240","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x5b5653d8
+13:18:16.0 (63188881)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002DM3LcUAL","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000927240","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x3dd2086b
+13:18:16.0 (63217492)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (63318127)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (63321763)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (63358938)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x5b5653d8"}|0x3dd2086b
+13:18:16.0 (63377320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (63391464)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x3dd2086b
+13:18:16.0 (63405171)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (63440272)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (63466543)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (63489656)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (63507973)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (63519952)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (63596352)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002CFjEVUA1","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000923131","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x2655978a
+13:18:16.0 (63618617)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (63621559)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (63633263)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (63648583)|VARIABLE_ASSIGNMENT|[45]|i|5
+13:18:16.0 (63655606)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (63674123)|USER_DEBUG|[46]|DEBUG|5
+13:18:16.0 (63686074)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (63696139)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (63706244)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (63717588)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (63744174)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x1f7a3c19
+13:18:16.0 (63766905)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (63769911)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (63777839)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (63785970)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (63797867)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (63820213)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x1f7a3c19
+13:18:16.0 (63830589)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (63860437)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1f7a3c19
+13:18:16.0 (63931478)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002CFjEVUA1","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000923131","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x2655978a
+13:18:16.0 (64008899)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002CFjEVUA1","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000923131","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x1f7a3c19
+13:18:16.0 (64059248)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (64171559)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (64175525)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (64215931)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2655978a"}|0x1f7a3c19
+13:18:16.0 (64240264)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (64255705)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x1f7a3c19
+13:18:16.0 (64271188)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (64302758)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (64329626)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (64355314)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (64377737)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (64391146)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (64467241)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002B0GK4UAN","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000919823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x75e6972
+13:18:16.0 (64488899)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (64491971)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (64502807)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (64515905)|VARIABLE_ASSIGNMENT|[45]|i|6
+13:18:16.0 (64523200)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (64542997)|USER_DEBUG|[46]|DEBUG|6
+13:18:16.0 (64556270)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (64567041)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (64577093)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (64587901)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (64613759)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x419c6b47
+13:18:16.0 (64638591)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (64641674)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (64650866)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (64660321)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (64672295)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (64696103)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x419c6b47
+13:18:16.0 (64706020)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (64734561)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x419c6b47
+13:18:16.0 (64803767)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002B0GK4UAN","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000919823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x75e6972
+13:18:16.0 (64880646)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002B0GK4UAN","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000919823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x419c6b47
+13:18:16.0 (64925406)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (65031941)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (65036319)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (65074322)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x75e6972"}|0x419c6b47
+13:18:16.0 (65091471)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (65106411)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x419c6b47
+13:18:16.0 (65121493)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (65151519)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (65175896)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (65200128)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (65222149)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (65243536)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (65320935)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000029p2oYUAQ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000916676","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x426c6a16
+13:18:16.0 (65342765)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (65345227)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (65356700)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (65370778)|VARIABLE_ASSIGNMENT|[45]|i|7
+13:18:16.0 (65376782)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (65396115)|USER_DEBUG|[46]|DEBUG|7
+13:18:16.0 (65410714)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (65422135)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (65432768)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (65443669)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (65471701)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x71c0577d
+13:18:16.0 (65495706)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (65498532)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (65507628)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (65517277)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (65530882)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (65556314)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x71c0577d
+13:18:16.0 (65565756)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (65598411)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x71c0577d
+13:18:16.0 (65671328)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000029p2oYUAQ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000916676","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x426c6a16
+13:18:16.0 (65751742)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000029p2oYUAQ","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000916676","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x71c0577d
+13:18:16.0 (65801582)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (65912744)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (65916588)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (65956285)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x426c6a16"}|0x71c0577d
+13:18:16.0 (65972161)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (65985052)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x71c0577d
+13:18:16.0 (65998779)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (66027160)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (66054473)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (66080563)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (66104175)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (66117713)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (66195306)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000028lCwzUAE","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000913159","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x2bcd2910
+13:18:16.0 (66218848)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (66221507)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (66238668)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (66252715)|VARIABLE_ASSIGNMENT|[45]|i|8
+13:18:16.0 (66259745)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (66278823)|USER_DEBUG|[46]|DEBUG|8
+13:18:16.0 (66292161)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (66303512)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (66314537)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (66325736)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (66356313)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x5cfc987e
+13:18:16.0 (66380742)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (66383655)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (66393031)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (66401737)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (66413730)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (66438862)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x5cfc987e
+13:18:16.0 (66448212)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (66475006)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5cfc987e
+13:18:16.0 (66550390)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000028lCwzUAE","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000913159","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x2bcd2910
+13:18:16.0 (66626906)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000028lCwzUAE","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000913159","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x5cfc987e
+13:18:16.0 (66675763)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (66759445)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (66762218)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (66792826)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2bcd2910"}|0x5cfc987e
+13:18:16.0 (66804590)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (66813769)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x5cfc987e
+13:18:16.0 (66823316)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (66841155)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (66857065)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (66874216)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (66887827)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (66896438)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (66948460)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000027ceCdUAI","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000909943","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x21ae1224
+13:18:16.0 (66961136)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (66962959)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (66969776)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (66977586)|VARIABLE_ASSIGNMENT|[45]|i|9
+13:18:16.0 (66981926)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (66993840)|USER_DEBUG|[46]|DEBUG|9
+13:18:16.0 (67001857)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (67009386)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (67015497)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (67022350)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (67038966)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x1228ed0c
+13:18:16.0 (67053618)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (67055562)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (67060355)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (67065734)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (67073059)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (67085997)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x1228ed0c
+13:18:16.0 (67091482)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (67107200)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1228ed0c
+13:18:16.0 (67150832)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000027ceCdUAI","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000909943","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x21ae1224
+13:18:16.0 (67197110)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000027ceCdUAI","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000909943","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x1228ed0c
+13:18:16.0 (67230703)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (67288310)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (67291121)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (67317033)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x21ae1224"}|0x1228ed0c
+13:18:16.0 (67327701)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (67336426)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x1228ed0c
+13:18:16.0 (67344698)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (67360976)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (67375605)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (67390895)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (67404089)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (67412155)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (67460468)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000026TFbCUAW","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000906399","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x55cffa9a
+13:18:16.0 (67472630)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (67474352)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (67480934)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (67488423)|VARIABLE_ASSIGNMENT|[45]|i|10
+13:18:16.0 (67492374)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (67503169)|USER_DEBUG|[46]|DEBUG|10
+13:18:16.0 (67511020)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (67517476)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (67523061)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (67529704)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (67544894)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x30cc6a5d
+13:18:16.0 (67558994)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (67560850)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (67565656)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (67570980)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (67578026)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (67591392)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x30cc6a5d
+13:18:16.0 (67596696)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (67611345)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x30cc6a5d
+13:18:16.0 (67654489)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000026TFbCUAW","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000906399","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x55cffa9a
+13:18:16.0 (67700392)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000026TFbCUAW","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000906399","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x30cc6a5d
+13:18:16.0 (67726309)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (67781735)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (67784075)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (67805692)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x55cffa9a"}|0x30cc6a5d
+13:18:16.0 (67815777)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (67824303)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x30cc6a5d
+13:18:16.0 (67832349)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (67847721)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (67861901)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (67876481)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (67888538)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (67896002)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (67943314)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000025FhQhUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000902823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x745216ef
+13:18:16.0 (67955377)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (67957412)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (67963774)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (67971165)|VARIABLE_ASSIGNMENT|[45]|i|11
+13:18:16.0 (67975290)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (67986627)|USER_DEBUG|[46]|DEBUG|11
+13:18:16.0 (67993943)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (68000292)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (68006486)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (68013481)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (68027904)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x43c4b886
+13:18:16.0 (68041506)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (68043334)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (68048117)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (68053238)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (68059587)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (68072716)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x43c4b886
+13:18:16.0 (68078276)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (68092795)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x43c4b886
+13:18:16.0 (68135443)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000025FhQhUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000902823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x745216ef
+13:18:16.0 (68180426)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000025FhQhUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000902823","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x43c4b886
+13:18:16.0 (68206329)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (68270876)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (68273101)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (68297992)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x745216ef"}|0x43c4b886
+13:18:16.0 (68308191)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (68316335)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x43c4b886
+13:18:16.0 (68324555)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (68340349)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (68354931)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (68369196)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (68381395)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (68388561)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (68436176)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000024CgF4UAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000899779","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-21T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-21T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x361524dc
+13:18:16.0 (68448487)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (68450227)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (68456853)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (68464245)|VARIABLE_ASSIGNMENT|[45]|i|12
+13:18:16.0 (68468393)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (68478964)|USER_DEBUG|[46]|DEBUG|12
+13:18:16.0 (68486459)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (68492917)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (68498249)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (68504649)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (68519955)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7bc3f7e8
+13:18:16.0 (68533466)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (68535293)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (68540211)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (68545279)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (68552127)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (68565429)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7bc3f7e8
+13:18:16.0 (68570672)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (68593668)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7bc3f7e8
+13:18:16.0 (68639249)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000024CgF4UAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000899779","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-21T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-21T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x361524dc
+13:18:16.0 (68684698)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000024CgF4UAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000899779","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-21T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-21T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x7bc3f7e8
+13:18:16.0 (68712797)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (68767433)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (68769420)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (68791262)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x361524dc"}|0x7bc3f7e8
+13:18:16.0 (68801049)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (68808960)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7bc3f7e8
+13:18:16.0 (68816610)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (68831949)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (68845887)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (68859998)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (68872264)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (68879356)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (68926746)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000023FrZbUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000896669","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-14T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-14T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x677b2f08
+13:18:16.0 (68939326)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (68941307)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (68947883)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (68955272)|VARIABLE_ASSIGNMENT|[45]|i|13
+13:18:16.0 (68959544)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (68970520)|USER_DEBUG|[46]|DEBUG|13
+13:18:16.0 (68977705)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (68983870)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (68989096)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (68995321)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (69010444)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x2e562511
+13:18:16.0 (69024477)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (69026314)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (69031468)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (69036526)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (69043054)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (69055630)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x2e562511
+13:18:16.0 (69061223)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (69075722)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2e562511
+13:18:16.0 (69118532)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000023FrZbUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000896669","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-14T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-14T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x677b2f08
+13:18:16.0 (69162833)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000023FrZbUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000896669","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-14T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-14T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x2e562511
+13:18:16.0 (69188962)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (69247797)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (69250022)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (69271948)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x677b2f08"}|0x2e562511
+13:18:16.0 (69281979)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (69291186)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x2e562511
+13:18:16.0 (69301028)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (69317643)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (69331840)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (69346026)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (69357543)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (69365027)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (69413023)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000022d6boUAA","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000893146","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-07T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-07T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x4d4a1257
+13:18:16.0 (69425025)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (69427068)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (69433436)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (69440523)|VARIABLE_ASSIGNMENT|[45]|i|14
+13:18:16.0 (69444465)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (69455348)|USER_DEBUG|[46]|DEBUG|14
+13:18:16.0 (69462662)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (69469033)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (69474465)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (69480463)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (69495414)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7d1b3c04
+13:18:16.0 (69508340)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (69510180)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (69514801)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (69519547)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (69526496)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (69538840)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7d1b3c04
+13:18:16.0 (69544525)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (69558237)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7d1b3c04
+13:18:16.0 (69601111)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000022d6boUAA","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000893146","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-07T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-07T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x4d4a1257
+13:18:16.0 (69645883)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000022d6boUAA","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000893146","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-07T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-08-07T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x7d1b3c04
+13:18:16.0 (69672211)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (69725500)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (69727503)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (69748549)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4d4a1257"}|0x7d1b3c04
+13:18:16.0 (69758470)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (69766855)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7d1b3c04
+13:18:16.0 (69774766)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (69789972)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (69803765)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (69818061)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (69829247)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (69836167)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (69883110)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F0000226P2KUAU","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000889047","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-31T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-07-31T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x29cb907f
+13:18:16.0 (69896078)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (69897963)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (69904383)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (69911576)|VARIABLE_ASSIGNMENT|[45]|i|15
+13:18:16.0 (69915528)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (69926163)|USER_DEBUG|[46]|DEBUG|15
+13:18:16.0 (69933088)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (69939325)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (69944556)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (69950723)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (69965199)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x1bfdaba9
+13:18:16.0 (69978391)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (69980190)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (69984962)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (69989861)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (69996910)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (70010091)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x1bfdaba9
+13:18:16.0 (70016018)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (70030435)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1bfdaba9
+13:18:16.0 (70073476)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F0000226P2KUAU","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000889047","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-31T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-07-31T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x29cb907f
+13:18:16.0 (70118234)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F0000226P2KUAU","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000889047","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-31T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-07-31T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x1bfdaba9
+13:18:16.0 (70144122)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (70197448)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (70199554)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (70220457)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x29cb907f"}|0x1bfdaba9
+13:18:16.0 (70234871)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (70243481)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x1bfdaba9
+13:18:16.0 (70251334)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (70267468)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (70281387)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (70297267)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (70309239)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (70316597)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (70363294)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00001zOnQwUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000870196","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-22T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-06-22T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x3667625e
+13:18:16.0 (70375204)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (70377121)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (70383593)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (70390366)|VARIABLE_ASSIGNMENT|[45]|i|16
+13:18:16.0 (70394790)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (70405359)|USER_DEBUG|[46]|DEBUG|16
+13:18:16.0 (70412380)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (70419014)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (70424403)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (70430755)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (70445808)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7f656389
+13:18:16.0 (70459206)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (70460978)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (70465860)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (70471005)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (70477615)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (70490810)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7f656389
+13:18:16.0 (70496210)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (70510345)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7f656389
+13:18:16.0 (70553080)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001zOnQwUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000870196","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-22T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-06-22T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x3667625e
+13:18:16.0 (70597472)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00001zOnQwUAK","Name":"GetMoreTraffic - Mah (13 more) ...","Invoice_Number__c":"000870196","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":89.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-22T00:00:00.000Z","Invoice_Total__c":89.00,"Issue_Date__c":"2018-06-22T00:00:00.000Z","Account_Product__c":"a076F00000nMHuMQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (18 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuMQAW","CurrencyIsoCode":"NZD"}}|0x7f656389
+13:18:16.0 (70622537)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (70676837)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (70678907)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (70700516)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x3667625e"}|0x7f656389
+13:18:16.0 (70710187)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (70717877)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7f656389
+13:18:16.0 (70725960)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (70741413)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (70754971)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (70769824)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (70781077)|HEAP_ALLOCATE|[44]|Bytes:64
+13:18:16.0 (70788306)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+13:18:16.0 (70836022)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00001ydWMzUAM","Name":"Mahana Lodge LTD","Invoice_Number__c":"INV120618008059-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":350.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-12T00:00:00.000Z","Invoice_Total__c":350.00,"Issue_Date__c":"2018-06-12T00:00:00.000Z","Account_Product__c":"a076F00000nMHuLQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (6 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuLQAW","CurrencyIsoCode":"NZD"}}|0x8da18f5
+13:18:16.0 (70847779)|STATEMENT_EXECUTE|[44]
+13:18:16.0 (70849620)|STATEMENT_EXECUTE|[45]
+13:18:16.0 (70855956)|HEAP_ALLOCATE|[45]|Bytes:4
+13:18:16.0 (70862894)|VARIABLE_ASSIGNMENT|[45]|i|17
+13:18:16.0 (70866644)|STATEMENT_EXECUTE|[46]
+13:18:16.0 (70876967)|USER_DEBUG|[46]|DEBUG|17
+13:18:16.0 (70884268)|STATEMENT_EXECUTE|[47]
+13:18:16.0 (70890194)|HEAP_ALLOCATE|[47]|Bytes:12
+13:18:16.0 (70895636)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (70901781)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (70916627)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x6084afd9
+13:18:16.0 (70929973)|STATEMENT_EXECUTE|[79]
+13:18:16.0 (70931821)|STATEMENT_EXECUTE|[80]
+13:18:16.0 (70936571)|STATEMENT_EXECUTE|[81]
+13:18:16.0 (70941436)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+13:18:16.0 (70948220)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+13:18:16.0 (70961099)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x6084afd9
+13:18:16.0 (70966280)|STATEMENT_EXECUTE|[48]
+13:18:16.0 (70980061)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6084afd9
+13:18:16.0 (71022961)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001ydWMzUAM","Name":"Mahana Lodge LTD","Invoice_Number__c":"INV120618008059-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":350.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-12T00:00:00.000Z","Invoice_Total__c":350.00,"Issue_Date__c":"2018-06-12T00:00:00.000Z","Account_Product__c":"a076F00000nMHuLQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (6 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuLQAW","CurrencyIsoCode":"NZD"}}|0x8da18f5
+13:18:16.0 (71067785)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00001ydWMzUAM","Name":"Mahana Lodge LTD","Invoice_Number__c":"INV120618008059-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":350.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-12T00:00:00.000Z","Invoice_Total__c":350.00,"Issue_Date__c":"2018-06-12T00:00:00.000Z","Account_Product__c":"a076F00000nMHuLQAW","Reference__c":"462568","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Advanced SME (6 more) ...","Description__c":"getmoretraffic.co.nz (8 more) ...","Id":"a076F00000nMHuLQAW","CurrencyIsoCode":"NZD"}}|0x6084afd9
+13:18:16.0 (71112210)|STATEMENT_EXECUTE|[51]
+13:18:16.0 (71167939)|STATEMENT_EXECUTE|[58]
+13:18:16.0 (71170028)|STATEMENT_EXECUTE|[59]
+13:18:16.0 (71193183)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x8da18f5"}|0x6084afd9
+13:18:16.0 (71203808)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+13:18:16.0 (71212005)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x6084afd9
+13:18:16.0 (71219742)|STATEMENT_EXECUTE|[72]
+13:18:16.0 (71241573)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (71256501)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:18:16.0 (71270720)|HEAP_ALLOCATE|[44]|Bytes:5
+13:18:16.0 (71284935)|VARIABLE_ASSIGNMENT|[44]|inv|null|
+13:18:16.0 (71293093)|STATEMENT_EXECUTE|[75]
+13:18:16.0 (71338540)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x44cf09e8"}|0x6d5a1c20
+13:18:16.0 (71912980)|USER_DEBUG|[75]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002GbfVlUAJ, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000939023, Amount_Credited__c=89.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-11-06 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-11-06 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=CREDITED, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002FTuiIUAT, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000935266, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-30 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-10-30 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002EHes2UAD, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000930465, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-23 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-10-23 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002DM3LcUAL, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000927240, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-16 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-10-16 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002CFjEVUA1, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000923131, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-09 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-10-09 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002B0GK4UAN, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000919823, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-02 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-10-02 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000029p2oYUAQ, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000916676, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-25 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-09-25 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000028lCwzUAE, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000913159, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-18 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-09-18 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000027ceCdUAI, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000909943, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-11 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-09-11 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000026TFbCUAW, Name=GetMoreTraffic - Mahana Lodge LTD, Invoice_Number__c=000906399, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=89.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-04 00:00:00, Invoice_Total__c=89.00, Issue_Date__c=2018-09-04 00:00:00, Account_Product__c=a076F00000nMHuMQAW, Reference__c=462568, Status__c=PAID, CurrencyIsoCode=NZD}], ...)
+13:18:16.0 (71975920)|SYSTEM_MODE_EXIT|false
+13:18:16.0 (72131435)|SYSTEM_MODE_ENTER|true
+13:18:16.0 (106829089)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000002H8AP
+13:18:16.0 (110142920)|VF_SERIALIZE_VIEWSTATE_END
+13:18:16.113 (113789784)|CUMULATIVE_LIMIT_USAGE
+13:18:16.113 (113789784)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 18 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:18:16.113 (113789784)|CUMULATIVE_LIMIT_USAGE_END
+
+13:18:16.0 (113844755)|CODE_UNIT_FINISHED|VF: /apex/InvoiceListForCase
+13:18:16.0 (115107496)|EXECUTION_FINISHED

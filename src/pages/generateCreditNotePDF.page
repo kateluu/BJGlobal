@@ -24,7 +24,7 @@
                             <td style="padding-top: 5px; padding-right: 20px; width: 260px; text-align: left;" id="logo" valign="top"><a href="https://clientpanel.sponsoredlinx.com.au/"><img src="{!$Resource.splxlogo}" style="border: none; margin-left: -2px;" /></a></td>
                             <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px; text-align: left; width: 170px" valign="top">
                                 <b>SponsoredLinX</b><br />
-                                50 Shottery Street, Yeronga, QLD, 4104<br />
+                                Level 2, 639 Wickham Street, Fortitude Valley. 4006 <br />
                                 ABN: 81 124 272 359<br />
                             </td>
                             <td style="font-family: helvetica, arial, tahoma, verdana, serif; font-size: 8px; text-align: right;" valign="top">Bill Enquiries<br />1300 859 600</td>
@@ -72,7 +72,7 @@
                                             <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;">{!credit.Account__r.Unique_Id__c}</td>
                                         </tr>
                                         <tr>
-                                        	<td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Credit Number</b>:</td>
+                                            <td style="padding: 2px 5px 2px 2px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: right;"><b>Credit Number</b>:</td>
                                             <td style="padding: 2px auto 2px 2px; white-space: nowrap; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px; text-align: left;">{!credit.name}</td>
                                         </tr>
                                         <tr>
@@ -110,7 +110,7 @@
                                         </tr>
                                         
                                         <tr>
-											<td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">{!credit.Account_Product_Number__c} - {!credit.Account_Product__r.Name}<br/>
+                                            <td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">{!credit.Account_Product_Number__c} - {!credit.Account_Product__r.Name}<br/>
                                             {!IF(credit.Account_Product__r.Description__c != null,' - '+credit.Account_Product__r.Description__c, "")}</td>
                                             <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;"><apex:outputText value="{0,number,$#,###.00}"><apex:param value="{!credit.Amount__c}" /></apex:outputText></td>
                                         </tr>
@@ -124,14 +124,14 @@
                                             <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 10px;">Amount</td>
                                         </tr>
                                         <apex:repeat value="{!ps}" var="payment"> 
-	                                        <tr style="display:{!IF(ps.size == 0, 'None', '')}">
-                                        		<td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
-									       			<apex:outputText value="{!payment.Invoice__r.Invoice_Number__c}"/>
-                                        		</td>
-	                                            <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
-										       		<apex:outputText value="{0,number,-$##,##0.00}"><apex:param value="{!payment.Payment_Amount__c}" /></apex:outputText>
-	                                            </td>
-	                                        </tr>
+                                            <tr style="display:{!IF(ps.size == 0, 'None', '')}">
+                                                <td style="padding-left: 20px; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
+                                                    <apex:outputText value="{!payment.Invoice__r.Invoice_Number__c}"/>
+                                                </td>
+                                                <td style="padding-bottom: 1px; text-align: right; font-family: helvetica, arial, tahoma, verdana, serif; font-size: 9px;">
+                                                    <apex:outputText value="{0,number,-$##,##0.00}"><apex:param value="{!payment.Payment_Amount__c}" /></apex:outputText>
+                                                </td>
+                                            </tr>
                                         </apex:repeat>
                                         <tr style="display:{!IF(ps.size == 0, 'None', '')}">
                                             <td colspan="2" style="padding: 2px 5px 2px 5px;"><br /></td>

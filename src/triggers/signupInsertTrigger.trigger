@@ -3,13 +3,13 @@
  */
 
 trigger SignupInsertTrigger on Sign_Up__c (after insert) {
-    List<Task> calltasks = new List<Task>();
+    List<Task> calltasks = new List<Task>();    
     for (Sign_Up__c signup : System.trigger.new){
 
         if (signup.Cart_SF__c != null){
             Cart mycart          = (Cart) JSON.deserialize(signup.Cart_SF__c, Cart.class);
 
-            Account acc = [SELECT Id, Name, Company__c, Payment_Option__c, Unique_Id__c, CurrencyIsoCode FROM Account WHERE id = :signup.Account__c LIMIT 1];
+            Account acc = [SELECT Id, Name, Company__c, Payment_Option__c, Unique_Id__c, CurrencyIsoCode, Industry FROM Account WHERE id = :signup.Account__c LIMIT 1];
 
             Payment_Attempt__c paymentAttempt;
             if ( signup.Payment_Attempt__c != null ) {
@@ -18,6 +18,7 @@ trigger SignupInsertTrigger on Sign_Up__c (after insert) {
 
             // Loop through the products
             List<CartItem> myPackage = mycart.getPackageFromPackageData(mycart.myPackageData);
+            String invoiceNumber = signup.Invoiceno__c;
 
             for (CartItem myCartItem : myPackage) {
 
@@ -26,8 +27,18 @@ trigger SignupInsertTrigger on Sign_Up__c (after insert) {
                     continue;
                 }
 
+
                 // Create account_products
                 Account_Product__c accountProduct = new Account_Product__c();
+                system.debug('Product Name = ' + myCartItem.product.Name);
+
+                // if the product is Social Engage - Tiger Pistol
+                if (myCartItem.product.Name.containsIgnoreCase('Social Engage')){
+                    accountProduct.recordTypeId =  Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Tiger Pistol Product').getRecordTypeId();                    
+                    system.debug('Product Record type had been setup');
+                
+                }
+
                 accountProduct.Name                     = myCartItem.product.Name;
                 accountProduct.Description__c           = signup.FromSource__c + ' Invoice';
                 accountProduct.Account__c               = signup.Account__c;
@@ -42,12 +53,57 @@ trigger SignupInsertTrigger on Sign_Up__c (after insert) {
                 insert accountProduct;
 
                 // Create an invoice for setup products, or the SEO management product
-                if ( myCartItem.isChargeableAtOrder() ){
+
+                Integer pendingTime = myCartItem.isPendingBillCircle();
+                if (pendingTime>0){
+                    Invoice__c invoice = new Invoice__c();
+                    invoice.Name                  = acc.Company__c;
+                    invoice.Account__c            = signup.Account__c;
+                    //invoice.Last_Email_Sent__c    = accountProduct.Last_Invoice_Date__c;
+                    invoice.Issue_Date__c         = Date.today().addDays(pendingTime*7);
+                    invoice.Due_Date__c           = Date.today().addDays(pendingTime*7);
+                    invoice.Account_Product__c    = accountProduct.id;
+                    invoice.Reference__c          = acc.Unique_Id__c;
+                    invoice.Amount_Credited__c    = 0;
+                    invoice.Invoice_Total__c      = accountProduct.Product_Price__c;
+                    invoice.CurrencyIsoCode       = acc.CurrencyIsoCode;
+
+                    if (invoice.Invoice_Total__c == 0) {
+                        // No charge (completed covered by promo)
+                        invoice.Status__c             = 'NO CHARGE';
+                        invoice.Amount_Paid__c        = 0;
+                    }
+                    else if ( acc.Payment_Option__c == 'Other' || acc.Payment_Option__c == 'Direct Debit') {
+                        // Direct debit
+                        invoice.Status__c             = 'AUTHORISED';
+                        invoice.Amount_Paid__c        = 0;
+                        invoice.Payment_Option__c     = 'Other';
+                    } else {
+                        invoice.Status__c             = 'AUTHORISED';
+                        invoice.Amount_Paid__c        = 0;
+                        if (paymentAttempt.Payment_Option__c == 'Commweb2'){
+                            invoice.Payment_Option__c     = 'Commweb';
+                        } else {
+                            invoice.Payment_Option__c     = paymentAttempt.Payment_Option__c;
+                        }
+                    }
+
+                    invoice.Amount_Due__c         = invoice.Invoice_Total__c - invoice.Amount_Paid__c;
+
+                    // We want the invoice number from the signup, not the payment attempt because it includes the '-1' suffix.
+                    // remove the INV for any invoice not a setup product, - request from Account Team on 09/10/2018
+                    // last character in invoice number will be increase for next invoice
+                    Integer index = Integer.valueOf(invoiceNumber.right(1));
+                    invoiceNumber = invoiceNumber.subString(0,invoiceNumber.length()-1) + ++index ;
+                    invoice.Invoice_Number__c     = invoiceNumber.replaceAll('INV', '');                  
+                    insert invoice;
+
+                }else if ( myCartItem.isChargeableAtOrder() ){
 
                     Invoice__c invoice = new Invoice__c();
                     invoice.Name                  = acc.Company__c;
                     invoice.Account__c            = signup.Account__c;
-//                  invoice.Last_Email_Sent__c    = accountProduct.Last_Invoice_Date__c;
+                    //invoice.Last_Email_Sent__c    = accountProduct.Last_Invoice_Date__c;
                     invoice.Issue_Date__c         = accountProduct.Last_Invoice_Date__c;
                     invoice.Due_Date__c           = accountProduct.Last_Invoice_Date__c;
                     invoice.Account_Product__c    = accountProduct.id;
@@ -127,7 +183,6 @@ trigger SignupInsertTrigger on Sign_Up__c (after insert) {
                         insert payment;
                     }
                 }
-
                 // create a project if product is SEO
                 if (signup.Product_Type__c == 'SEO'){
                     SFDC_Projects__c newProject = new SFDC_Projects__c();

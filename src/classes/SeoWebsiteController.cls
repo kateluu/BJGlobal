@@ -25,15 +25,15 @@ public with sharing class SeoWebsiteController {
         String consolePath;
 
         if (seoWebsite.Prospect_Keywords__c != null){
-            consolePath = '/?c=seo&action=prospectKeywordRankHistoryChart' 
-            + '&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8') 
+            consolePath = '/seo/prospectKeywordRankHistoryChart' 
+            + '?websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8') 
             + '&domain=' + EncodingUtil.urlEncode(seoWebsite.website_url__c, 'UTF-8');
         } else {
             String keywordQueryString = getKeywordIdQueryString();
 
             if (keywordQueryString != '') {
-                consolePath = '/?c=seo&action=keywordRankHistoryChart' 
-                + '&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8') 
+                consolePath = '/seo/keywordRankHistoryChart' 
+                + '?websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8') 
                 + keywordQueryString;
             }
         }
@@ -58,8 +58,7 @@ public with sharing class SeoWebsiteController {
     }
 
     public String getRankHistoryURL() {
-        String consolePath = '/?c=seo&action=websiteRankHistoryChart' 
-        + '&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
+        String consolePath = '/seo/websiteRankHistoryChart?websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
 
         String keywordQueryString = getKeywordIdQueryString();
         
@@ -77,8 +76,8 @@ public with sharing class SeoWebsiteController {
         Map<String, String> mySparklines = new Map<String, String>();
         
         // Build the URL for the console
-        String consolePath = '/?c=seo&action=keywordSparklineChart' 
-        + '&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
+        String consolePath = '/seo/keywordSparklineChart' 
+        + '?websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8');
         
         String keywordQueryString = getKeywordIdQueryString();
         

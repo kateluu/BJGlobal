@@ -59,6 +59,26 @@
         <relationshipLabel><!-- Cases --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Advanced Client Cancel Reasons --></help>
+        <label><!-- Advanced Client Cancel Reasons --></label>
+        <name>Advanced_Client_Cancel_Reasons__c</name>
+    </fields>
+    <fields>
+        <help><!-- Advanced Extra CM Notes --></help>
+        <label><!-- Advanced Extra CM Notes --></label>
+        <name>Advanced_Extra_CM_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Advanced Resolution Manager Notes --></help>
+        <label><!-- Advanced Resolution Manager Notes --></label>
+        <name>Advanced_Resolution_Manager_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Advanced Account Info/Concerns with formatted text --></help>
+        <label><!-- Advanced Account Info/Concerns --></label>
+        <name>Advcanced_CM_Concerns__c</name>
+    </fields>
+    <fields>
         <label><!-- Adwords ID --></label>
         <name>Adwords_ID__c</name>
     </fields>
@@ -69,6 +89,10 @@
     <fields>
         <label><!-- BJB Company --></label>
         <name>BJB_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- BTS --></label>
+        <name>BTS__c</name>
     </fields>
     <fields>
         <label><!-- Billing Resolution --></label>
@@ -211,6 +235,10 @@
         <name>Case_Closed_Date__c</name>
     </fields>
     <fields>
+        <label><!-- Case Contact History --></label>
+        <name>Case_Contact_History__c</name>
+    </fields>
+    <fields>
         <label><!-- Case Open Time --></label>
         <name>Case_Open_Time__c</name>
     </fields>
@@ -306,12 +334,40 @@
             <translation><!-- CM Error - Save Strat Not Completed --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CM: Acc Run Time Insufficent</masterLabel>
+            <translation><!-- CM: Acc Run Time Insufficent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: AdWords Acc Not Performing</masterLabel>
+            <translation><!-- CM: AdWords Acc Not Performing --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>CM: Bad reassign from last CM</masterLabel>
             <translation><!-- CM: Bad reassign from last CM --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CM: Billing Error</masterLabel>
+            <translation><!-- CM: Billing Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Budget Error</masterLabel>
+            <translation><!-- CM: Budget Error --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>CM: CM error</masterLabel>
             <translation><!-- CM: CM error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Client Not Answering Phone</masterLabel>
+            <translation><!-- CM: Client Not Answering Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Client Not Cooperating</masterLabel>
+            <translation><!-- CM: Client Not Cooperating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Cm Didn&apos;t See Account Down</masterLabel>
+            <translation><!-- CM: Cm Didn&apos;t See Account Down --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CM: Didn&apos;t see account was down</masterLabel>
@@ -322,20 +378,76 @@
             <translation><!-- CM: Forced Pause --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CM: Impossible To Educate</masterLabel>
+            <translation><!-- CM: Impossible To Educate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Insufficent Budget</masterLabel>
+            <translation><!-- CM: Insufficent Budget --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>CM: Insufficient contact with client</masterLabel>
             <translation><!-- CM: Insufficient contact with client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Lack Of Account Work</masterLabel>
+            <translation><!-- CM: Lack Of Account Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Lack Of Contact</masterLabel>
+            <translation><!-- CM: Lack Of Contact --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>CM: Lack of ROI</masterLabel>
             <translation><!-- CM: Lack of ROI --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CM: Mistakes In Account</masterLabel>
+            <translation><!-- CM: Mistakes In Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Niche Industry Lack Of Searches</masterLabel>
+            <translation><!-- CM: Niche Industry Lack Of Searches --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>CM: Pause Extension</masterLabel>
             <translation><!-- CM: Pause Extension --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>CM: Poor Website</masterLabel>
+            <translation><!-- CM: Poor Website --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>CM: Resume off pause - now cancelling</masterLabel>
             <translation><!-- CM: Resume off pause - now cancelling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: Targeting Error</masterLabel>
+            <translation><!-- CM: Targeting Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM: To Many Reassigns</masterLabel>
+            <translation><!-- CM: To Many Reassigns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM:Previous CM Account Mistakes</masterLabel>
+            <translation><!-- CM:Previous CM Account Mistakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM:Previous CM Insuffient Contact</masterLabel>
+            <translation><!-- CM:Previous CM Insuffient Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM:Previous CM Lack Of ROI</masterLabel>
+            <translation><!-- CM:Previous CM Lack Of ROI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM:Previous CM Not Completed Work</masterLabel>
+            <translation><!-- CM:Previous CM Not Completed Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM:Previous CM To Many Reassigns</masterLabel>
+            <translation><!-- CM:Previous CM To Many Reassigns --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Client       - Delays to Project (Waiting for client)</masterLabel>
@@ -352,6 +464,14 @@
         <picklistValues>
             <masterLabel>Client:Business failed</masterLabel>
             <translation><!-- Client:Business failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client:Can Not Afford Google Spend</masterLabel>
+            <translation><!-- Client:Can Not Afford Google Spend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client:Can Not Afford Management</masterLabel>
+            <translation><!-- Client:Can Not Afford Management --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Client:Cannot get in contact with client</masterLabel>
@@ -382,6 +502,14 @@
             <translation><!-- Client:Going on holiday --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Client:Gone To Competitor Cheaper Package</masterLabel>
+            <translation><!-- Client:Gone To Competitor Cheaper Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client:Gone To Competitor For Holistic Package</masterLabel>
+            <translation><!-- Client:Gone To Competitor For Holistic Package --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Client:Not funding Google Ac</masterLabel>
             <translation><!-- Client:Not funding Google Ac --></translation>
         </picklistValues>
@@ -396,6 +524,10 @@
         <picklistValues>
             <masterLabel>Client:Selling business</masterLabel>
             <translation><!-- Client:Selling business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client:Shutting Down Business</masterLabel>
+            <translation><!-- Client:Shutting Down Business --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Client:Trademark/Compliance issues</masterLabel>
@@ -621,6 +753,11 @@
         <name>First_Success_Call__c</name>
     </fields>
     <fields>
+        <help><!-- Has the save strategy been implemented --></help>
+        <label><!-- save strategy implemented? --></label>
+        <name>Has_the_save_strategy_been_implemented__c</name>
+    </fields>
+    <fields>
         <help><!-- If client would like Adwords account turned off --></help>
         <label><!-- Have Confirmed to Turn Off AdWords Acct --></label>
         <name>Have_Confirmed_to_Turn_Off_AdWords_Acct__c</name>
@@ -676,6 +813,11 @@
     <fields>
         <label><!-- Offered Senior Client Manager --></label>
         <name>Offered_Senior_Client_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner Manager --></label>
+        <name>Owner_Manager__c</name>
+        <relationshipLabel><!-- Cases (Owner Manager) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Owner Role --></label>
@@ -939,6 +1081,10 @@
             <section>Additional</section>
         </sections>
         <sections>
+            <label><!-- Advanced Notes --></label>
+            <section>Advanced Notes</section>
+        </sections>
+        <sections>
             <label><!-- Cancellation Waiver --></label>
             <section>Cancellation Waiver</section>
         </sections>
@@ -984,6 +1130,10 @@
         <sections>
             <label><!-- Additional --></label>
             <section>Additional</section>
+        </sections>
+        <sections>
+            <label><!-- Advanced Notes --></label>
+            <section>Advanced Notes</section>
         </sections>
         <sections>
             <label><!-- Cancellation Waiver --></label>
@@ -1035,6 +1185,10 @@
         <sections>
             <label><!-- Account Products List --></label>
             <section>Account Products List</section>
+        </sections>
+        <sections>
+            <label><!-- Advanced Notes --></label>
+            <section>Advanced Notes</section>
         </sections>
         <sections>
             <label><!-- Adwords Account Metrics --></label>
@@ -1114,6 +1268,10 @@
         <errorMessage><!-- Sorry. It is an escalated case , please contact the Resolution Manager to request any update. Thanks --></errorMessage>
         <name>Prevent_Client_Manager_to_edit_record</name>
     </validationRules>
+    <webLinks>
+        <label><!-- New_Cases --></label>
+        <name>New_Cases</name>
+    </webLinks>
     <workflowTasks>
         <name>Please_edit</name>
         <subject><!-- Please change the subject --></subject>

@@ -55,8 +55,8 @@
         </criteriaItems>
         <criteriaItems>
             <column>STATUS</column>
-            <operator>equals</operator>
-            <value>New,Unqualified,Not Interested,Follow Up,Sale,Contacted,Qualified,Uncontactable</value>
+            <operator>notEqual</operator>
+            <value>Spam</value>
         </criteriaItems>
         <criteriaItems>
             <column>Lead.From_Form__c</column>

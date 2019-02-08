@@ -6,6 +6,7 @@
     <columns>
         <field>FK_NAME</field>
     </columns>
+    <currency>AUD</currency>
     <filter>
         <criteriaItems>
             <column>Account_Product__c.Product_Status__c</column>
@@ -15,7 +16,7 @@
         <criteriaItems>
             <column>CUST_NAME</column>
             <operator>contains</operator>
-            <value>Adwords,Facebook,Admob,Yahoo,google+</value>
+            <value>Adwords,Facebook,social</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account_Product__c.Recurring_Period__c</column>

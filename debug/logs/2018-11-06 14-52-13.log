@@ -1,0 +1,914 @@
+24.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:52:12.0 (77939)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+14:52:12.0 (112540)|EXECUTION_STARTED
+14:52:12.0 (116737)|CODE_UNIT_STARTED|[EXTERNAL]|06690000001JylY|VF: /apex/sfInvoiceList
+14:52:12.0 (9907188)|SYSTEM_MODE_ENTER|true
+14:52:12.0 (10267187)|HEAP_ALLOCATE|[72]|Bytes:3
+14:52:12.0 (10301594)|HEAP_ALLOCATE|[77]|Bytes:152
+14:52:12.0 (10317028)|HEAP_ALLOCATE|[342]|Bytes:408
+14:52:12.0 (10331400)|HEAP_ALLOCATE|[355]|Bytes:408
+14:52:12.0 (10343783)|HEAP_ALLOCATE|[467]|Bytes:48
+14:52:12.0 (10368622)|HEAP_ALLOCATE|[139]|Bytes:6
+14:52:12.0 (10383240)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+14:52:12.0 (10389389)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+14:52:12.0 (10393933)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (10398316)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:538
+14:52:12.0 (10407446)|METHOD_ENTRY|[1]|01p90000001RtUP|sfInvoiceList.sfInvoiceList()
+14:52:12.0 (10415103)|STATEMENT_EXECUTE|[1]
+14:52:12.0 (10421294)|STATEMENT_EXECUTE|[1]
+14:52:12.0 (10448889)|HEAP_ALLOCATE|[50]|Bytes:5
+14:52:12.0 (10467143)|HEAP_ALLOCATE|[56]|Bytes:5
+14:52:12.0 (10475082)|HEAP_ALLOCATE|[64]|Bytes:7
+14:52:12.0 (10489943)|SYSTEM_MODE_ENTER|false
+14:52:12.0 (10501330)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:52:12.0 (10505829)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (10511232)|SYSTEM_MODE_EXIT|false
+14:52:12.0 (10518452)|METHOD_EXIT|[1]|sfInvoiceList
+14:52:12.0 (10532070)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:52:12.0 (10545571)|VARIABLE_SCOPE_BEGIN|[17]|this|sfInvoiceList|true|false
+14:52:12.0 (10588234)|VARIABLE_ASSIGNMENT|[17]|this|{}|0x69e0c427
+14:52:12.0 (10596681)|VARIABLE_SCOPE_BEGIN|[17]|controller|ApexPages.StandardController|true|false
+14:52:12.0 (10853399)|VARIABLE_ASSIGNMENT|[17]|controller|"StandardController [null]"|0x21ef44e8
+14:52:12.0 (10869207)|SYSTEM_MODE_ENTER|false
+14:52:12.0 (10876448)|HEAP_ALLOCATE|[18]|Bytes:5
+14:52:12.0 (10882072)|STATEMENT_EXECUTE|[1]
+14:52:12.0 (10885155)|HEAP_ALLOCATE|[18]|Bytes:5
+14:52:12.0 (10888745)|STATEMENT_EXECUTE|[2]
+14:52:12.0 (10909315)|HEAP_ALLOCATE|[18]|Bytes:6
+14:52:12.0 (10962944)|STATEMENT_EXECUTE|[17]
+14:52:12.0 (10965277)|STATEMENT_EXECUTE|[18]
+14:52:12.0 (17225874)|HEAP_ALLOCATE|[18]|Bytes:12
+14:52:12.0 (17260205)|VARIABLE_SCOPE_BEGIN|[18]|acc|Account|true|false
+14:52:12.0 (17299435)|VARIABLE_ASSIGNMENT|[18]|acc|{"CurrencyIsoCode":"NZD","Id":"0016F00002J6xKgQAJ"}|0x71afefc0
+14:52:12.0 (17308902)|STATEMENT_EXECUTE|[19]
+14:52:12.0 (17328981)|HEAP_ALLOCATE|[19]|Bytes:394
+14:52:12.0 (17352340)|HEAP_ALLOCATE|[19]|Bytes:4
+14:52:12.0 (17367148)|HEAP_ALLOCATE|[19]|Bytes:7
+14:52:12.0 (21844541)|SOQL_EXECUTE_BEGIN|[19]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+14:52:12.0 (37879354)|SOQL_EXECUTE_END|[19]|Rows:24
+14:52:12.0 (37922592)|HEAP_ALLOCATE|[19]|Bytes:100
+14:52:12.0 (38206026)|HEAP_ALLOCATE|[19]|Bytes:13604
+14:52:12.0 (38282665)|HEAP_ALLOCATE|[19]|Bytes:100
+14:52:12.0 (38300395)|VARIABLE_SCOPE_BEGIN|[19]|invoices|List<Invoice__c>|true|false
+14:52:12.0 (38331223)|VARIABLE_ASSIGNMENT|[19]|invoices|"List of size 24 too large to display"|0x4c17409c
+14:52:12.0 (38340515)|STATEMENT_EXECUTE|[40]
+14:52:12.0 (38360682)|HEAP_ALLOCATE|[40]|Bytes:4
+14:52:12.0 (38475192)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69e0c427
+14:52:12.0 (38497449)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (38507501)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x7788102
+14:52:12.0 (38523050)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x69e0c427
+14:52:12.0 (38535657)|STATEMENT_EXECUTE|[42]
+14:52:12.0 (38545284)|VARIABLE_SCOPE_BEGIN|[42]|i|Integer|false|false
+14:52:12.0 (38554311)|HEAP_ALLOCATE|[42]|Bytes:4
+14:52:12.0 (38563225)|VARIABLE_ASSIGNMENT|[42]|i|0
+14:52:12.0 (38735005)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (38760619)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (38770444)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (38843628)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002GbfTgUAJ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000938934","Amount_Credited__c":0.00,"Amount_Due__c":33.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"AUTHORISED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x13007199
+14:52:12.0 (38858076)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (38859911)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (38868234)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (38876670)|VARIABLE_ASSIGNMENT|[44]|i|1
+14:52:12.0 (38881106)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (38921707)|USER_DEBUG|[45]|DEBUG|1
+14:52:12.0 (38931547)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (39002715)|HEAP_ALLOCATE|[46]|Bytes:112
+14:52:12.0 (39011562)|HEAP_ALLOCATE|[46]|Bytes:5
+14:52:12.0 (39030189)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (39050456)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (39075627)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (39110367)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x785c2d24
+14:52:12.0 (39133101)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (39136327)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (39142368)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (39150751)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (39159798)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (39177606)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x785c2d24
+14:52:12.0 (39184305)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (39230616)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x785c2d24
+14:52:12.0 (39281749)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002GbfTgUAJ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000938934","Amount_Credited__c":0.00,"Amount_Due__c":33.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"AUTHORISED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x13007199
+14:52:12.0 (39334171)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002GbfTgUAJ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000938934","Amount_Credited__c":0.00,"Amount_Due__c":33.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-06T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-11-06T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"AUTHORISED","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x785c2d24
+14:52:12.0 (39448592)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (39458224)|HEAP_ALLOCATE|[51]|Bytes:4
+14:52:12.0 (39522902)|HEAP_ALLOCATE|[53]|Bytes:6
+14:52:12.0 (39552224)|HEAP_ALLOCATE|[55]|Bytes:3
+14:52:12.0 (39577199)|HEAP_ALLOCATE|[57]|Bytes:7
+14:52:12.0 (39596033)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (39598452)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (39605881)|HEAP_ALLOCATE|[58]|Bytes:7
+14:52:12.0 (39648659)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x13007199"}|0x785c2d24
+14:52:12.0 (39660536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (39672458)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x785c2d24
+14:52:12.0 (39682336)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (39711332)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (39733660)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (39750476)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (39762413)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (39770558)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (39822775)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002FTugOUAT","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000935183","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x7552aa15
+14:52:12.0 (39837597)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (39839315)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (39845918)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (39854542)|VARIABLE_ASSIGNMENT|[44]|i|2
+14:52:12.0 (39859500)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (39870235)|USER_DEBUG|[45]|DEBUG|2
+14:52:12.0 (39878969)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (39885491)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (39892951)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (39900488)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (39919993)|VARIABLE_ASSIGNMENT|[77]|this|{}|0xdf08dc2
+14:52:12.0 (39935132)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (39937028)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (39941362)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (39948257)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (39955705)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (39970179)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0xdf08dc2
+14:52:12.0 (39995622)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (40013445)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xdf08dc2
+14:52:12.0 (40061388)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002FTugOUAT","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000935183","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x7552aa15
+14:52:12.0 (40115796)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002FTugOUAT","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000935183","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-30T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-30T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0xdf08dc2
+14:52:12.0 (40144111)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (40208212)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (40210413)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (40232301)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x7552aa15"}|0xdf08dc2
+14:52:12.0 (40242608)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (40250777)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0xdf08dc2
+14:52:12.0 (40259888)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (40274632)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (40289213)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (40303331)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (40314631)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (40322395)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (40371843)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002EHeq6UAD","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000930375","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x30ae105d
+14:52:12.0 (40385677)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (40387340)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (40393031)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (40400566)|VARIABLE_ASSIGNMENT|[44]|i|3
+14:52:12.0 (40405458)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (40414992)|USER_DEBUG|[45]|DEBUG|3
+14:52:12.0 (40422782)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (40428666)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (40434668)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (40441560)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (40456082)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x33ae31bc
+14:52:12.0 (40470794)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (40472552)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (40476809)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (40483073)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (40489822)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (40504087)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x33ae31bc
+14:52:12.0 (40509899)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (40523935)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x33ae31bc
+14:52:12.0 (40565781)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002EHeq6UAD","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000930375","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x30ae105d
+14:52:12.0 (40612283)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002EHeq6UAD","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000930375","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-23T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-23T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x33ae31bc
+14:52:12.0 (40639655)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (40690030)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (40691858)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (40710892)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x30ae105d"}|0x33ae31bc
+14:52:12.0 (40721144)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (40729629)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x33ae31bc
+14:52:12.0 (40738702)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (40752733)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (40766969)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (40780251)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (40791670)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (40799068)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (40847805)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002DM3JeUAL","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000927153","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x73270240
+14:52:12.0 (40860642)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (40862228)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (40867388)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (40874067)|VARIABLE_ASSIGNMENT|[44]|i|4
+14:52:12.0 (40878612)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (40887931)|USER_DEBUG|[45]|DEBUG|4
+14:52:12.0 (40895698)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (40901319)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (40907001)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (40914308)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (40929477)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x572b1889
+14:52:12.0 (40945071)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (40946977)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (40951436)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (40957860)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (40964699)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (40978686)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x572b1889
+14:52:12.0 (40986328)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (41017612)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x572b1889
+14:52:12.0 (41062053)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002DM3JeUAL","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000927153","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x73270240
+14:52:12.0 (41112715)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002DM3JeUAL","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000927153","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-16T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-16T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x572b1889
+14:52:12.0 (41139784)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (41207302)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (41209179)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (41231243)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x73270240"}|0x572b1889
+14:52:12.0 (41241859)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (41249994)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x572b1889
+14:52:12.0 (41258592)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (41273515)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (41288797)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (41302651)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (41313384)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (41320660)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (41369429)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002CFjCPUA1","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000923036","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x63bb2904
+14:52:12.0 (41383824)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (41385655)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (41391378)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (41398549)|VARIABLE_ASSIGNMENT|[44]|i|5
+14:52:12.0 (41402443)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (41411961)|USER_DEBUG|[45]|DEBUG|5
+14:52:12.0 (41418776)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (41424620)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (41431045)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (41438733)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (41453653)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x75a40142
+14:52:12.0 (41467467)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (41469415)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (41473601)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (41480228)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (41488838)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (41503287)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x75a40142
+14:52:12.0 (41509602)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (41522956)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75a40142
+14:52:12.0 (41566897)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002CFjCPUA1","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000923036","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x63bb2904
+14:52:12.0 (41612351)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002CFjCPUA1","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000923036","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-09T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-09T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x75a40142
+14:52:12.0 (41638661)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (41690106)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (41692097)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (41711862)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x63bb2904"}|0x75a40142
+14:52:12.0 (41722696)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (41731455)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x75a40142
+14:52:12.0 (41740743)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (41755131)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (41769462)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (41782668)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (41793828)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (41800584)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (41849133)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002B0GI6UAN","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000919731","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x3593564
+14:52:12.0 (41861798)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (41863720)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (41869184)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (41876189)|VARIABLE_ASSIGNMENT|[44]|i|6
+14:52:12.0 (41880760)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (41889755)|USER_DEBUG|[45]|DEBUG|6
+14:52:12.0 (41897068)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (41902423)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (41908036)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (41915100)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (41929273)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x7cb30ca9
+14:52:12.0 (41942412)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (41944213)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (41948384)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (41954587)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (41961731)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (41975582)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x7cb30ca9
+14:52:12.0 (41981432)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (41994781)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7cb30ca9
+14:52:12.0 (42037597)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002B0GI6UAN","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000919731","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x3593564
+14:52:12.0 (42083378)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002B0GI6UAN","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000919731","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-02T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-10-02T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x7cb30ca9
+14:52:12.0 (42111709)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (42161580)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (42163322)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (42185491)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x3593564"}|0x7cb30ca9
+14:52:12.0 (42196423)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (42206464)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x7cb30ca9
+14:52:12.0 (42215554)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (42230911)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (42244391)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (42257033)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (42267558)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (42274137)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (42324129)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000029p2mXUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000916583","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x4335e1aa
+14:52:12.0 (42337277)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (42338918)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (42344133)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (42350544)|VARIABLE_ASSIGNMENT|[44]|i|7
+14:52:12.0 (42354431)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (42363474)|USER_DEBUG|[45]|DEBUG|7
+14:52:12.0 (42371050)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (42376962)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (42383358)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (42390704)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (42406016)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x3ed2e152
+14:52:12.0 (42419706)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (42421884)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (42426047)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (42431833)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (42444113)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (42457207)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x3ed2e152
+14:52:12.0 (42462561)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (42476434)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3ed2e152
+14:52:12.0 (42518022)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000029p2mXUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000916583","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x4335e1aa
+14:52:12.0 (42563726)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000029p2mXUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000916583","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-25T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-25T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x3ed2e152
+14:52:12.0 (42589477)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (42639899)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (42641631)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (42661673)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4335e1aa"}|0x3ed2e152
+14:52:12.0 (42671852)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (42680965)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x3ed2e152
+14:52:12.0 (42692904)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (42708338)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (42722254)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (42734220)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (42744502)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (42751323)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (42800890)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000028lCuyUAE","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000913070","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x8cbde8e
+14:52:12.0 (42814422)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (42816458)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (42821726)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (42829106)|VARIABLE_ASSIGNMENT|[44]|i|8
+14:52:12.0 (42833366)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (42842089)|USER_DEBUG|[45]|DEBUG|8
+14:52:12.0 (42851344)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (42856789)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (42862189)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (42868949)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (42884365)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x31b24951
+14:52:12.0 (42897832)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (42899585)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (42903828)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (42909798)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (42917855)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (42931288)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x31b24951
+14:52:12.0 (42937603)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (42951412)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x31b24951
+14:52:12.0 (42992974)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000028lCuyUAE","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000913070","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x8cbde8e
+14:52:12.0 (43039011)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000028lCuyUAE","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000913070","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-18T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-18T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x31b24951
+14:52:12.0 (43066437)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (43122077)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (43123823)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (43143415)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x8cbde8e"}|0x31b24951
+14:52:12.0 (43153497)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (43161925)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x31b24951
+14:52:12.0 (43170914)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (43186775)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (43201119)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (43213536)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (43224317)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (43230510)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (43279300)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000027ceAZUAY","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000909846","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x3202359a
+14:52:12.0 (43291512)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (43293439)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (43298525)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (43304910)|VARIABLE_ASSIGNMENT|[44]|i|9
+14:52:12.0 (43309270)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (43318124)|USER_DEBUG|[45]|DEBUG|9
+14:52:12.0 (43325579)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (43330755)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (43336197)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (43342369)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (43357335)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x6449f034
+14:52:12.0 (43370383)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (43372134)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (43376297)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (43382252)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (43389451)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (43402101)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x6449f034
+14:52:12.0 (43408050)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (43421419)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6449f034
+14:52:12.0 (43462805)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000027ceAZUAY","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000909846","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x3202359a
+14:52:12.0 (43508183)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000027ceAZUAY","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000909846","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-11T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-11T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x6449f034
+14:52:12.0 (43532933)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (43583105)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (43584802)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (43603817)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x3202359a"}|0x6449f034
+14:52:12.0 (43613675)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (43621968)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x6449f034
+14:52:12.0 (43630637)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (43644618)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (43657748)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (43670678)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (43681264)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (43687691)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (43735110)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000026TFZ7UAO","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000906301","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x783ac4ab
+14:52:12.0 (43749666)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (43751201)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (43756311)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (43762529)|VARIABLE_ASSIGNMENT|[44]|i|10
+14:52:12.0 (43767324)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (43775666)|USER_DEBUG|[45]|DEBUG|10
+14:52:12.0 (43783317)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (43788573)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (43794386)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (43800209)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (43814255)|VARIABLE_ASSIGNMENT|[77]|this|{}|0xfb6e50
+14:52:12.0 (43828034)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (43829821)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (43834553)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (43840824)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (43847430)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (43860172)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0xfb6e50
+14:52:12.0 (43866518)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (43880377)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xfb6e50
+14:52:12.0 (43921026)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000026TFZ7UAO","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000906301","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x783ac4ab
+14:52:12.0 (43964095)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000026TFZ7UAO","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000906301","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-04T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-09-04T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0xfb6e50
+14:52:12.0 (43989598)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (44039054)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (44041200)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (44059574)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x783ac4ab"}|0xfb6e50
+14:52:12.0 (44069047)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (44076906)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0xfb6e50
+14:52:12.0 (44084826)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (44103333)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (44118482)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (44131128)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (44141278)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (44148109)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (44202151)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F0000251LNPUA2","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000902573","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x14ee42b7
+14:52:12.0 (44215858)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (44217525)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (44222906)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (44230120)|VARIABLE_ASSIGNMENT|[44]|i|11
+14:52:12.0 (44234450)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (44243371)|USER_DEBUG|[45]|DEBUG|11
+14:52:12.0 (44251621)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (44257135)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (44262853)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (44269807)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (44284176)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x290ac76c
+14:52:12.0 (44297558)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (44299316)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (44303636)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (44309856)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (44317199)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (44330568)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x290ac76c
+14:52:12.0 (44336819)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (44350282)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x290ac76c
+14:52:12.0 (44393112)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F0000251LNPUA2","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000902573","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x14ee42b7
+14:52:12.0 (44439624)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F0000251LNPUA2","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000902573","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":33.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":33.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJx5EQAS","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Maintenance  (17 more) ...","Description__c":"Adwords Maintenance  (17 more) ...","Id":"a076F00000qJx5EQAS","CurrencyIsoCode":"NZD"}}|0x290ac76c
+14:52:12.0 (44464907)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (44516564)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (44518230)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (44536947)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x14ee42b7"}|0x290ac76c
+14:52:12.0 (44547315)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (44555797)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x290ac76c
+14:52:12.0 (44565097)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (44579466)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (44593408)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (44606078)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (44615917)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (44622271)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (44672225)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000021KtH5UAK","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000883631","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-19T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x4207c10a
+14:52:12.0 (44686171)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (44687704)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (44692848)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (44698992)|VARIABLE_ASSIGNMENT|[44]|i|12
+14:52:12.0 (44703383)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (44711991)|USER_DEBUG|[45]|DEBUG|12
+14:52:12.0 (44720465)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (44726472)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (44732372)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (44739106)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (44753793)|VARIABLE_ASSIGNMENT|[77]|this|{}|0xa51fbdd
+14:52:12.0 (44767057)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (44768886)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (44773017)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (44778746)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (44786387)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (44799517)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0xa51fbdd
+14:52:12.0 (44805260)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (44819624)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xa51fbdd
+14:52:12.0 (44863233)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000021KtH5UAK","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000883631","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-19T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x4207c10a
+14:52:12.0 (44907347)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000021KtH5UAK","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000883631","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-19T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-19T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0xa51fbdd
+14:52:12.0 (44954501)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (45007379)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (45009496)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (45029639)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4207c10a"}|0xa51fbdd
+14:52:12.0 (45039618)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (45048181)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0xa51fbdd
+14:52:12.0 (45056799)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (45071849)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (45086171)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (45102528)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (45117888)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (45128534)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (45190606)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000020tjwnUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000879917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-12T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x610a8235
+14:52:12.0 (45203901)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (45205713)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (45211697)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (45221470)|VARIABLE_ASSIGNMENT|[44]|i|13
+14:52:12.0 (45228303)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (45242530)|USER_DEBUG|[45]|DEBUG|13
+14:52:12.0 (45256065)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (45265387)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (45275392)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (45282952)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (45301516)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x21b272f3
+14:52:12.0 (45316351)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (45318081)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (45322474)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (45328895)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (45336071)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (45350175)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x21b272f3
+14:52:12.0 (45356219)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (45369920)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x21b272f3
+14:52:12.0 (45417948)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000020tjwnUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000879917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-12T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x610a8235
+14:52:12.0 (45465025)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000020tjwnUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000879917","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-12T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-12T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x21b272f3
+14:52:12.0 (45491861)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (45546131)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (45548151)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (45567879)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x610a8235"}|0x21b272f3
+14:52:12.0 (45581961)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (45596021)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x21b272f3
+14:52:12.0 (45608949)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (45627670)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (45642992)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (45657058)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (45668607)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (45676071)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (45726354)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000020PenIUAS","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000876115","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-05T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x4fbb1d23
+14:52:12.0 (45739987)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (45741661)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (45747023)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (45757625)|VARIABLE_ASSIGNMENT|[44]|i|14
+14:52:12.0 (45762044)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (45771484)|USER_DEBUG|[45]|DEBUG|14
+14:52:12.0 (45779149)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (45785052)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (45793353)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (45800312)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (45814283)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x7ae0017b
+14:52:12.0 (45827528)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (45829384)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (45833454)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (45839654)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (45846092)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (45862593)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x7ae0017b
+14:52:12.0 (45868396)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (45884523)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7ae0017b
+14:52:12.0 (45929536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000020PenIUAS","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000876115","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-05T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x4fbb1d23
+14:52:12.0 (45974817)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000020PenIUAS","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000876115","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-07-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-07-05T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x7ae0017b
+14:52:12.0 (46001250)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (46053746)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (46055500)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (46075232)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4fbb1d23"}|0x7ae0017b
+14:52:12.0 (46088959)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (46113122)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x7ae0017b
+14:52:12.0 (46128244)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (46150354)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (46166617)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (46183550)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (46196208)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (46203830)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (46255730)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001zn05OUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000872777","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-28T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-28T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x29a61599
+14:52:12.0 (46268309)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (46269937)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (46275439)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (46282261)|VARIABLE_ASSIGNMENT|[44]|i|15
+14:52:12.0 (46286672)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (46296539)|USER_DEBUG|[45]|DEBUG|15
+14:52:12.0 (46305409)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (46311345)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (46317833)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (46325156)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (46341071)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x5ae98ec
+14:52:12.0 (46356060)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (46357935)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (46362239)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (46368680)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (46375422)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (46389205)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x5ae98ec
+14:52:12.0 (46394704)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (46408128)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5ae98ec
+14:52:12.0 (46448973)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001zn05OUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000872777","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-28T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-28T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x29a61599
+14:52:12.0 (46495021)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001zn05OUAQ","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000872777","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-28T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-28T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x5ae98ec
+14:52:12.0 (46522147)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (46576472)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (46578221)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (46598089)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x29a61599"}|0x5ae98ec
+14:52:12.0 (46608320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (46616577)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x5ae98ec
+14:52:12.0 (46624807)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (46639378)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (46653709)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (46666372)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (46677518)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (46684212)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (46733749)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001zIlsaUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000869433","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-21T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-21T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x55d59e36
+14:52:12.0 (46747212)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (46749080)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (46754168)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (46761380)|VARIABLE_ASSIGNMENT|[44]|i|16
+14:52:12.0 (46765471)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (46774803)|USER_DEBUG|[45]|DEBUG|16
+14:52:12.0 (46782971)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (46788503)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (46794226)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (46802674)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (46818501)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x240497
+14:52:12.0 (46832536)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (46834369)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (46838817)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (46845613)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (46852296)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (46866382)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x240497
+14:52:12.0 (46872722)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (46886866)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x240497
+14:52:12.0 (46934259)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001zIlsaUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000869433","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-21T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-21T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x55d59e36
+14:52:12.0 (46980286)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001zIlsaUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000869433","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-21T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-21T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x240497
+14:52:12.0 (47006717)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (47057321)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (47059101)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (47078490)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x55d59e36"}|0x240497
+14:52:12.0 (47088242)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (47100890)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x240497
+14:52:12.0 (47109632)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (47124574)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (47139324)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (47151895)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (47162427)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (47169384)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (47218807)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001ypXGyUAM","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000866152","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-14T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-14T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x607bb593
+14:52:12.0 (47232211)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (47233793)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (47238825)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (47246041)|VARIABLE_ASSIGNMENT|[44]|i|17
+14:52:12.0 (47250221)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (47259329)|USER_DEBUG|[45]|DEBUG|17
+14:52:12.0 (47266471)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (47271868)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (47278353)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (47284848)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (47299247)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x3233cb8a
+14:52:12.0 (47312894)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (47314634)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (47318752)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (47324572)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (47331692)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (47344546)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x3233cb8a
+14:52:12.0 (47350713)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (47364645)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3233cb8a
+14:52:12.0 (47405082)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001ypXGyUAM","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000866152","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-14T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-14T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x607bb593
+14:52:12.0 (47451034)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001ypXGyUAM","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000866152","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-14T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-14T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x3233cb8a
+14:52:12.0 (47477220)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (47527934)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (47529667)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (47548981)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x607bb593"}|0x3233cb8a
+14:52:12.0 (47558165)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (47566594)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x3233cb8a
+14:52:12.0 (47574827)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (47590396)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (47604404)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (47616663)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (47628166)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (47634912)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (47682766)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001yHCgyUAG","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000862999","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-07T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-07T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x77beeeba
+14:52:12.0 (47695694)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (47697820)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (47702861)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (47709436)|VARIABLE_ASSIGNMENT|[44]|i|18
+14:52:12.0 (47713387)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (47721853)|USER_DEBUG|[45]|DEBUG|18
+14:52:12.0 (47729340)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (47734765)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (47740437)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (47747118)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (47761471)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x48a2ff6e
+14:52:12.0 (47775317)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (47777431)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (47781841)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (47788159)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (47794955)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (47808055)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x48a2ff6e
+14:52:12.0 (47813703)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (47826864)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48a2ff6e
+14:52:12.0 (47868341)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001yHCgyUAG","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000862999","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-07T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-07T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x77beeeba
+14:52:12.0 (47912865)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001yHCgyUAG","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000862999","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-06-07T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-06-07T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x48a2ff6e
+14:52:12.0 (47937855)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (47987288)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (47989040)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (48007714)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x77beeeba"}|0x48a2ff6e
+14:52:12.0 (48017868)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (48025932)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x48a2ff6e
+14:52:12.0 (48034827)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (48048974)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (48062827)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (48074719)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (48084876)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (48091446)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (48145082)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001xhsRzUAI","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000858895","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-31T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x6e2d2709
+14:52:12.0 (48158203)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (48160059)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (48165656)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (48173698)|VARIABLE_ASSIGNMENT|[44]|i|19
+14:52:12.0 (48179766)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (48192434)|USER_DEBUG|[45]|DEBUG|19
+14:52:12.0 (48200851)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (48206430)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (48211666)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (48218126)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (48233467)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x39ba676e
+14:52:12.0 (48246453)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (48248354)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (48252362)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (48258110)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (48265285)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (48277935)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x39ba676e
+14:52:12.0 (48283220)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (48296467)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x39ba676e
+14:52:12.0 (48337019)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001xhsRzUAI","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000858895","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-31T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x6e2d2709
+14:52:12.0 (48381928)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001xhsRzUAI","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000858895","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-31T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-31T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x39ba676e
+14:52:12.0 (48408027)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (48459102)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (48460805)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (48479350)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x6e2d2709"}|0x39ba676e
+14:52:12.0 (48488570)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (48496478)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x39ba676e
+14:52:12.0 (48504444)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (48518606)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (48531905)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (48544568)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (48556252)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (48562590)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (48607900)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001xDmhbUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000855245","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-24T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x177020d4
+14:52:12.0 (48621029)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (48622716)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (48627789)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (48633843)|VARIABLE_ASSIGNMENT|[44]|i|20
+14:52:12.0 (48637909)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (48646843)|USER_DEBUG|[45]|DEBUG|20
+14:52:12.0 (48654684)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (48660420)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (48665540)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (48671407)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (48685237)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x199adc72
+14:52:12.0 (48698516)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (48700293)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (48704367)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (48710205)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (48716986)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (48730090)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x199adc72
+14:52:12.0 (48735616)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (48748690)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x199adc72
+14:52:12.0 (48790841)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001xDmhbUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000855245","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-24T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x177020d4
+14:52:12.0 (48834692)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001xDmhbUAC","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000855245","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-24T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x199adc72
+14:52:12.0 (48859536)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (48908814)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (48910570)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (48931551)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x177020d4"}|0x199adc72
+14:52:12.0 (48941296)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (48949388)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x199adc72
+14:52:12.0 (48958471)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (48973202)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (48986750)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (49020841)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (49033230)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (49040209)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (49088812)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001wpt3nUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000850429","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-17T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2a1ad884
+14:52:12.0 (49106686)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (49108308)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (49113657)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (49121187)|VARIABLE_ASSIGNMENT|[44]|i|21
+14:52:12.0 (49125716)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (49134925)|USER_DEBUG|[45]|DEBUG|21
+14:52:12.0 (49142607)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (49148072)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (49153218)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (49159739)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (49176849)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x35592b50
+14:52:12.0 (49190103)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (49191932)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (49196201)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (49202100)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (49209703)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (49223166)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x35592b50
+14:52:12.0 (49228641)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (49242308)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x35592b50
+14:52:12.0 (49281471)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001wpt3nUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000850429","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-17T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2a1ad884
+14:52:12.0 (49327961)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001wpt3nUAA","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000850429","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-17T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x35592b50
+14:52:12.0 (49352647)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (49403608)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (49405333)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (49424058)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2a1ad884"}|0x35592b50
+14:52:12.0 (49433390)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (49441317)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x35592b50
+14:52:12.0 (49449046)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (49463789)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (49476834)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (49489208)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (49499837)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (49506350)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (49554507)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001wHUmVUAW","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000845708","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-10T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2ad13843
+14:52:12.0 (49567725)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (49569466)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (49574617)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (49580858)|VARIABLE_ASSIGNMENT|[44]|i|22
+14:52:12.0 (49584535)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (49593193)|USER_DEBUG|[45]|DEBUG|22
+14:52:12.0 (49600243)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (49606099)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (49612159)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (49618798)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (49632502)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x6a5feb1a
+14:52:12.0 (49645054)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (49646835)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (49650876)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (49656685)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (49663085)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (49676427)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x6a5feb1a
+14:52:12.0 (49682361)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (49695309)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6a5feb1a
+14:52:12.0 (49737340)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001wHUmVUAW","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000845708","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-10T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2ad13843
+14:52:12.0 (49783740)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001wHUmVUAW","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000845708","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-10T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x6a5feb1a
+14:52:12.0 (49808095)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (49857518)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (49859214)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (49877728)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2ad13843"}|0x6a5feb1a
+14:52:12.0 (49888193)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (49896582)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x6a5feb1a
+14:52:12.0 (49905345)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (49919425)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (49933421)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (49945818)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (49956202)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (49962281)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (50009070)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001vmWrUUAU","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000840170","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-03T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2dc3577f
+14:52:12.0 (50021759)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (50023309)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (50028622)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (50035436)|VARIABLE_ASSIGNMENT|[44]|i|23
+14:52:12.0 (50039821)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (50048294)|USER_DEBUG|[45]|DEBUG|23
+14:52:12.0 (50056073)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (50061186)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (50066490)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (50073194)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (50088572)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x346028
+14:52:12.0 (50105142)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (50106927)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (50111153)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (50117152)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (50124402)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (50136878)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x346028
+14:52:12.0 (50142422)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (50155866)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x346028
+14:52:12.0 (50199809)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001vmWrUUAU","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000840170","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-03T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x2dc3577f
+14:52:12.0 (50243661)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001vmWrUUAU","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"000840170","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-05-03T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-05-03T00:00:00.000Z","Account_Product__c":"a076F00000nLOi4QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised We (15 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi4QAG","CurrencyIsoCode":"NZD"}}|0x346028
+14:52:12.0 (50268403)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (50319018)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (50320823)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (50339831)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2dc3577f"}|0x346028
+14:52:12.0 (50349728)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (50357833)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x346028
+14:52:12.0 (50367867)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (50382964)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (50396799)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (50409056)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (50419468)|HEAP_ALLOCATE|[43]|Bytes:64
+14:52:12.0 (50441539)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:52:12.0 (50492389)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00001vBLUFUA4","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"INV260418004830-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-04-26T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-04-26T00:00:00.000Z","Account_Product__c":"a076F00000nLOi5QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi5QAG","CurrencyIsoCode":"NZD"}}|0x3b23b493
+14:52:12.0 (50505293)|STATEMENT_EXECUTE|[43]
+14:52:12.0 (50507035)|STATEMENT_EXECUTE|[44]
+14:52:12.0 (50512923)|HEAP_ALLOCATE|[44]|Bytes:4
+14:52:12.0 (50520285)|VARIABLE_ASSIGNMENT|[44]|i|24
+14:52:12.0 (50524916)|STATEMENT_EXECUTE|[45]
+14:52:12.0 (50538668)|USER_DEBUG|[45]|DEBUG|24
+14:52:12.0 (50552065)|STATEMENT_EXECUTE|[46]
+14:52:12.0 (50562437)|HEAP_ALLOCATE|[46]|Bytes:12
+14:52:12.0 (50571595)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (50582516)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:52:12.0 (50603107)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x4f825510
+14:52:12.0 (50618170)|STATEMENT_EXECUTE|[77]
+14:52:12.0 (50620136)|STATEMENT_EXECUTE|[78]
+14:52:12.0 (50624706)|STATEMENT_EXECUTE|[79]
+14:52:12.0 (50631697)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:52:12.0 (50641070)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:52:12.0 (50662921)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x4f825510
+14:52:12.0 (50672384)|STATEMENT_EXECUTE|[47]
+14:52:12.0 (50696712)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x4f825510
+14:52:12.0 (50743588)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00001vBLUFUA4","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"INV260418004830-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-04-26T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-04-26T00:00:00.000Z","Account_Product__c":"a076F00000nLOi5QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi5QAG","CurrencyIsoCode":"NZD"}}|0x3b23b493
+14:52:12.0 (50789061)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00001vBLUFUA4","Name":"Total Pro Landscapes (4 more) ...","Invoice_Number__c":"INV260418004830-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-04-26T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-04-26T00:00:00.000Z","Account_Product__c":"a076F00000nLOi5QAG","Reference__c":"440357","Status__c":"PAID","CurrencyIsoCode":"NZD","Account_Product__r":{"Name":"Adwords Optimised Se (3 more) ...","Description__c":"sponsoredlinx.co.nz  (7 more) ...","Id":"a076F00000nLOi5QAG","CurrencyIsoCode":"NZD"}}|0x4f825510
+14:52:12.0 (50832924)|STATEMENT_EXECUTE|[50]
+14:52:12.0 (50889763)|STATEMENT_EXECUTE|[57]
+14:52:12.0 (50891988)|STATEMENT_EXECUTE|[58]
+14:52:12.0 (50913601)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x3b23b493"}|0x4f825510
+14:52:12.0 (50924435)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:52:12.0 (50933063)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x4f825510
+14:52:12.0 (50941017)|STATEMENT_EXECUTE|[71]
+14:52:12.0 (50956349)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (50971614)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:52:12.0 (50986105)|HEAP_ALLOCATE|[43]|Bytes:5
+14:52:12.0 (50998535)|VARIABLE_ASSIGNMENT|[43]|inv|null|
+14:52:12.0 (51004797)|STATEMENT_EXECUTE|[74]
+14:52:12.0 (51040570)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x7788102"}|0x69e0c427
+14:52:12.0 (51706213)|USER_DEBUG|[74]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002GbfTgUAJ, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000938934, Amount_Credited__c=0.00, Amount_Due__c=33.00, Amount_Paid__c=0.00, Amount_Refunded__c=0.00, Due_Date__c=2018-11-06 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-11-06 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=AUTHORISED, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002FTugOUAT, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000935183, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-30 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-10-30 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002EHeq6UAD, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000930375, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-23 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-10-23 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002DM3JeUAL, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000927153, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-16 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-10-16 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002CFjCPUA1, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000923036, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-09 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-10-09 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002B0GI6UAN, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000919731, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-02 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-10-02 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000029p2mXUAQ, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000916583, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-25 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-09-25 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000028lCuyUAE, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000913070, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-18 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-09-18 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000027ceAZUAY, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000909846, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-11 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-09-11 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000026TFZ7UAO, Name=Total Pro Landscapes Ltd, Invoice_Number__c=000906301, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=33.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-04 00:00:00, Invoice_Total__c=33.00, Issue_Date__c=2018-09-04 00:00:00, Account_Product__c=a076F00000qJx5EQAS, Reference__c=440357, Status__c=PAID, CurrencyIsoCode=NZD}], ...)
+14:52:12.0 (51768438)|SYSTEM_MODE_EXIT|false
+14:52:12.0 (51894735)|SYSTEM_MODE_ENTER|true
+14:52:12.0 (93460324)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000001JylY
+14:52:12.0 (96768928)|VF_SERIALIZE_VIEWSTATE_END
+14:52:12.99 (99742796)|CUMULATIVE_LIMIT_USAGE
+14:52:12.99 (99742796)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 24 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:52:12.99 (99742796)|CUMULATIVE_LIMIT_USAGE_END
+
+14:52:12.0 (99778832)|CODE_UNIT_FINISHED|VF: /apex/sfInvoiceList
+14:52:12.0 (100625848)|EXECUTION_FINISHED

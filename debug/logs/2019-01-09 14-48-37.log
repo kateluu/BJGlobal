@@ -1,0 +1,2316 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:48:32.0 (164321)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+14:48:32.0 (219270)|EXECUTION_STARTED
+14:48:32.0 (226989)|CODE_UNIT_STARTED|[EXTERNAL]|01p6F000009vCEd|batchPaymentsProcess
+14:48:32.0 (2361678)|HEAP_ALLOCATE|[72]|Bytes:3
+14:48:32.0 (2439115)|HEAP_ALLOCATE|[77]|Bytes:152
+14:48:32.0 (2461540)|HEAP_ALLOCATE|[342]|Bytes:408
+14:48:32.0 (2482882)|HEAP_ALLOCATE|[355]|Bytes:408
+14:48:32.0 (2501321)|HEAP_ALLOCATE|[467]|Bytes:48
+14:48:32.0 (2534141)|HEAP_ALLOCATE|[139]|Bytes:6
+14:48:32.0 (2697859)|HEAP_ALLOCATE|[50]|Bytes:5
+14:48:32.0 (2730878)|HEAP_ALLOCATE|[56]|Bytes:5
+14:48:32.0 (2744508)|HEAP_ALLOCATE|[64]|Bytes:7
+14:48:32.0 (4067366)|VARIABLE_SCOPE_BEGIN|[3]|batchPaymentsProcess.isTest|Boolean|false|true
+14:48:32.0 (5198935)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:455
+14:48:32.0 (7992755)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+14:48:32.0 (8018507)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+14:48:32.0 (8024252)|STATEMENT_EXECUTE|[15]
+14:48:32.0 (8038384)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+14:48:32.0 (8048675)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:48:32.0 (8054164)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (8059711)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+14:48:32.0 (8104493)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x153c9e32
+14:48:32.0 (8111630)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+14:48:32.0 (8228290)|VARIABLE_ASSIGNMENT|[31]|jobId|"7076F0000B0PqjTQQS"
+14:48:32.0 (8235047)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+14:48:32.0 (8243359)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+14:48:32.0 (9144749)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:84
+14:48:32.0 (9164915)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+14:48:32.0 (9171623)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:73
+14:48:32.0 (9186643)|METHOD_ENTRY|[1]|01p6F000009vCEd|batchPaymentsProcess.batchPaymentsProcess()
+14:48:32.0 (9194356)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (9198798)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (9200979)|STATEMENT_EXECUTE|[3]
+14:48:32.0 (9229853)|HEAP_ALLOCATE|[3]|Bytes:5
+14:48:32.0 (9269713)|VARIABLE_ASSIGNMENT|[3]|batchPaymentsProcess.isTest|false
+14:48:32.0 (9283127)|METHOD_EXIT|[1]|batchPaymentsProcess
+14:48:32.0 (9292087)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:52
+14:48:32.0 (9297037)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+14:48:32.0 (9328428)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:32.0 (9341988)|VARIABLE_SCOPE_BEGIN|[124]|this|batchPaymentsProcess|true|false
+14:48:32.0 (9457990)|VARIABLE_ASSIGNMENT|[124]|this|{"batch_date":"2019-01-09T00:00:00.000Z","bjbCompany":"0x365b4ecc","companyName":"SponsoredLinX","invoice_batch_exist":false,"invoice_batch_name":"SLX Wednesday 2019-0 (24 more) ...","InvoiceBatchId":"a0F6F00000uikQFUAY","Log":"","payment_batch_exist":false,"payment_batch_name":"SLX Wednesday 2019-0 (24 more) ...","PaymentBatchId":"a0F6F00000uikSuUAI","paymentMethod":"Eway","period":"Today"}|0x3e7dfe36
+14:48:32.0 (9478187)|VARIABLE_SCOPE_BEGIN|[124]|info|Database.BatchableContext|true|false
+14:48:32.0 (9556969)|VARIABLE_ASSIGNMENT|[124]|info|{"jobId":"7076F0000B0PqjTQQS"}|0x153c9e32
+14:48:32.0 (9569452)|VARIABLE_SCOPE_BEGIN|[124]|scope|List<Invoice__c>|true|false
+14:48:32.0 (9646927)|VARIABLE_ASSIGNMENT|[124]|scope|[{"Id":"a0E6F00002QwH6IUAV","Name":"Western Services Mel (6 more) ...","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"0016F000031T6JjQAK","Account_Product__c":"a076F00000pUT7VQAW","Amount_Credited__c":0.00,"Amount_Due__c":99.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972127","Invoice_Total__c":99.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"503035","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a076F00000pUT7VQAW","OwnerId":"0056F00000A9HoPQAV"}}]|0x4fc13ac5
+14:48:32.0 (9673859)|STATEMENT_EXECUTE|[124]
+14:48:32.0 (9676790)|STATEMENT_EXECUTE|[125]
+14:48:32.0 (9688661)|HEAP_ALLOCATE|[125]|Bytes:7
+14:48:32.0 (12218017)|HEAP_ALLOCATE|[125]|Bytes:525
+14:48:32.0 (12272067)|HEAP_ALLOCATE|[125]|Bytes:532
+14:48:32.0 (12306427)|USER_DEBUG|[125]|DEBUG|Scope: (Invoice__c:{Id=a0E6F00002QwH6IUAV, Name=Western Services Melbourne, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0016F000031T6JjQAK, Account_Product__c=a076F00000pUT7VQAW, Amount_Credited__c=0.00, Amount_Due__c=99.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972127, Invoice_Total__c=99.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=503035, CurrencyIsoCode=AUD})
+14:48:32.0 (12329651)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (12349398)|VARIABLE_SCOPE_BEGIN|[126]|paymentHalted|Boolean|false|false
+14:48:32.0 (12364677)|HEAP_ALLOCATE|[126]|Bytes:5
+14:48:32.0 (12380683)|VARIABLE_ASSIGNMENT|[126]|paymentHalted|false
+14:48:32.0 (12387890)|STATEMENT_EXECUTE|[128]
+14:48:32.0 (12415403)|HEAP_ALLOCATE|[128]|Bytes:4
+14:48:32.0 (12500571)|VARIABLE_SCOPE_BEGIN|[128]|allInvoices|List<Invoice__c>|true|false
+14:48:32.0 (12517564)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (12533256)|VARIABLE_ASSIGNMENT|[128]|allInvoices|[]|0x6bc66c7a
+14:48:32.0 (12541797)|STATEMENT_EXECUTE|[129]
+14:48:32.0 (12626224)|HEAP_ALLOCATE|[129]|Bytes:4
+14:48:32.0 (12678641)|VARIABLE_SCOPE_BEGIN|[129]|batchPayments|List<Invoice_Payments__c>|true|false
+14:48:32.0 (12691983)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (12702193)|VARIABLE_ASSIGNMENT|[129]|batchPayments|[]|0x316e6236
+14:48:32.0 (12710330)|STATEMENT_EXECUTE|[130]
+14:48:32.0 (12787947)|HEAP_ALLOCATE|[130]|Bytes:4
+14:48:32.0 (12839456)|VARIABLE_SCOPE_BEGIN|[130]|listPayments|List<Payment__c>|true|false
+14:48:32.0 (12852889)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (12863070)|VARIABLE_ASSIGNMENT|[130]|listPayments|[]|0x5e8b3821
+14:48:32.0 (12871810)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (12931024)|HEAP_ALLOCATE|[132]|Bytes:4
+14:48:32.0 (12975116)|VARIABLE_SCOPE_BEGIN|[132]|listUpdateCredit|List<Credit__c>|true|false
+14:48:32.0 (12988160)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (12997764)|VARIABLE_ASSIGNMENT|[132]|listUpdateCredit|[]|0x7a282dd4
+14:48:32.0 (13005971)|STATEMENT_EXECUTE|[133]
+14:48:32.0 (13021987)|HEAP_ALLOCATE|[133]|Bytes:4
+14:48:32.0 (13042591)|VARIABLE_SCOPE_BEGIN|[133]|listCreditPayment|List<Payment__c>|true|false
+14:48:32.0 (13056588)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (13064937)|VARIABLE_ASSIGNMENT|[133]|listCreditPayment|[]|0x22d53b57
+14:48:32.0 (13074594)|STATEMENT_EXECUTE|[134]
+14:48:32.0 (13121454)|HEAP_ALLOCATE|[134]|Bytes:4
+14:48:32.0 (13167961)|VARIABLE_SCOPE_BEGIN|[134]|listUpdateAccount|List<Account>|true|false
+14:48:32.0 (13180851)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (13189965)|VARIABLE_ASSIGNMENT|[134]|listUpdateAccount|[]|0x606892e9
+14:48:32.0 (13393518)|HEAP_ALLOCATE|[136]|Bytes:5
+14:48:32.0 (13428006)|HEAP_ALLOCATE|[136]|Bytes:80
+14:48:32.0 (13442800)|VARIABLE_SCOPE_BEGIN|[136]|current_invoice|Invoice__c|true|false
+14:48:32.0 (13530272)|VARIABLE_ASSIGNMENT|[136]|current_invoice|{"Id":"a0E6F00002QwH6IUAV","Name":"Western Services Mel (6 more) ...","Payment_Batch__c":"a0F6F00000uikSuUAI","Account__c":"0016F000031T6JjQAK","Account_Product__c":"a076F00000pUT7VQAW","Amount_Credited__c":0.00,"Amount_Due__c":99.00,"Amount_Paid__c":0.00,"Due_Date__c":"2019-01-09T00:00:00.000Z","Invoice_Batch__c":"a0F6F00000uikQFUAY","Invoice_Number__c":"000972127","Invoice_Total__c":99.00,"Issue_Date__c":"2019-01-09T00:00:00.000Z","Payment_Option__c":"Eway","Processed__c":false,"Process_Message__c":"Ready For Payment","Reference__c":"503035","CurrencyIsoCode":"AUD","Account_Product__r":{"Id":"a076F00000pUT7VQAW","OwnerId":"0056F00000A9HoPQAV"}}|0x57dcb417
+14:48:32.0 (13552449)|STATEMENT_EXECUTE|[136]
+14:48:32.0 (13555462)|STATEMENT_EXECUTE|[137]
+14:48:32.0 (13566989)|HEAP_ALLOCATE|[137]|Bytes:17
+14:48:32.0 (13734570)|HEAP_ALLOCATE|[137]|Bytes:523
+14:48:32.0 (13759799)|HEAP_ALLOCATE|[137]|Bytes:540
+14:48:32.0 (13776732)|USER_DEBUG|[137]|DEBUG|Current Invoice: Invoice__c:{Id=a0E6F00002QwH6IUAV, Name=Western Services Melbourne, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0016F000031T6JjQAK, Account_Product__c=a076F00000pUT7VQAW, Amount_Credited__c=0.00, Amount_Due__c=99.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972127, Invoice_Total__c=99.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=false, Process_Message__c=Ready For Payment, Reference__c=503035, CurrencyIsoCode=AUD}
+14:48:32.0 (13798887)|STATEMENT_EXECUTE|[138]
+14:48:32.0 (13816569)|HEAP_ALLOCATE|[138]|Bytes:24
+14:48:32.0 (13851614)|HEAP_ALLOCATE|[138]|Bytes:3
+14:48:32.0 (13905877)|HEAP_ALLOCATE|[138]|Bytes:18
+14:48:32.0 (13933979)|HEAP_ALLOCATE|[138]|Bytes:54
+14:48:32.0 (13943105)|HEAP_ALLOCATE|[138]|Bytes:54
+14:48:32.0 (13971717)|VARIABLE_ASSIGNMENT|[138]|this.Log|"Current Invoice Numb (34 more) ..."|0x3e7dfe36
+14:48:32.0 (13982342)|STATEMENT_EXECUTE|[139]
+14:48:32.0 (13995769)|HEAP_ALLOCATE|[139]|Bytes:5
+14:48:32.0 (14006742)|VARIABLE_ASSIGNMENT|[139]|paymentHalted|false
+14:48:32.0 (14013908)|STATEMENT_EXECUTE|[142]
+14:48:32.0 (14031569)|HEAP_ALLOCATE|[142]|Bytes:4
+14:48:32.0 (14060089)|VARIABLE_SCOPE_BEGIN|[142]|AvailableCredits|List<Credit__c>|true|false
+14:48:32.0 (14075258)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:32.0 (14085685)|VARIABLE_ASSIGNMENT|[142]|AvailableCredits|[]|0x26927d54
+14:48:32.0 (14093191)|STATEMENT_EXECUTE|[143]
+14:48:32.0 (14101768)|HEAP_ALLOCATE|[143]|Bytes:218
+14:48:32.0 (14131368)|HEAP_ALLOCATE|[143]|Bytes:4
+14:48:32.0 (14148541)|HEAP_ALLOCATE|[143]|Bytes:7
+14:48:32.0 (14195771)|HEAP_ALLOCATE|[143]|Bytes:7
+14:48:32.0 (14237695)|HEAP_ALLOCATE|[143]|Bytes:7
+14:48:32.0 (14249480)|HEAP_ALLOCATE|[143]|Bytes:4
+14:48:32.0 (15001087)|SOQL_EXECUTE_BEGIN|[143]|Aggregations:0|SELECT Id, Name, Account__c, Account_Product__c, Amount__c, Valid_From__c, Credit_Used__c, Credit_Left__c FROM Credit__c WHERE (Account_Product__c = :tmpVar1 AND Valid_From__c <= :tmpVar2 AND Credit_Left__c > :tmpVar3)
+14:48:32.0 (20281590)|SOQL_EXECUTE_END|[143]|Rows:0
+14:48:32.0 (20331241)|HEAP_ALLOCATE|[143]|Bytes:4
+14:48:32.0 (20351032)|HEAP_ALLOCATE|[143]|Bytes:0
+14:48:32.0 (20419536)|HEAP_ALLOCATE|[143]|Bytes:4
+14:48:32.0 (20457719)|VARIABLE_ASSIGNMENT|[143]|AvailableCredits|[]|0xab7fb56
+14:48:32.0 (20672838)|HEAP_ALLOCATE|[145]|Bytes:5
+14:48:32.0 (20699876)|VARIABLE_ASSIGNMENT|[145]|thisAvailableCredits|null|
+14:48:32.0 (20709629)|STATEMENT_EXECUTE|[145]
+14:48:32.0 (20719756)|STATEMENT_EXECUTE|[203]
+14:48:32.0 (20732534)|HEAP_ALLOCATE|[203]|Bytes:18
+14:48:32.0 (20744924)|HEAP_ALLOCATE|[203]|Bytes:72
+14:48:32.0 (20773237)|VARIABLE_ASSIGNMENT|[203]|this.Log|"Current Invoice Numb (52 more) ..."|0x3e7dfe36
+14:48:32.0 (20784008)|STATEMENT_EXECUTE|[205]
+14:48:32.0 (20792668)|HEAP_ALLOCATE|[205]|Bytes:24
+14:48:32.0 (20840459)|HEAP_ALLOCATE|[205]|Bytes:28
+14:48:32.0 (20877352)|USER_DEBUG|[205]|DEBUG|Invoice Payment Option: Eway
+14:48:32.0 (20961114)|HEAP_ALLOCATE|[207]|Bytes:28
+14:48:32.0 (20984075)|HEAP_ALLOCATE|[207]|Bytes:28
+14:48:32.0 (20989189)|HEAP_ALLOCATE|[207]|Bytes:28
+14:48:32.0 (21069025)|STATEMENT_EXECUTE|[207]
+14:48:32.0 (21073226)|STATEMENT_EXECUTE|[208]
+14:48:32.0 (21084077)|HEAP_ALLOCATE|[208]|Bytes:16
+14:48:32.0 (21097627)|HEAP_ALLOCATE|[208]|Bytes:20
+14:48:32.0 (21120828)|USER_DEBUG|[208]|DEBUG|This invoice is Eway
+14:48:32.0 (21134171)|STATEMENT_EXECUTE|[210]
+14:48:32.0 (21172883)|HEAP_ALLOCATE|[210]|Bytes:4
+14:48:32.0 (21295680)|VARIABLE_SCOPE_BEGIN|[210]|account|Account|true|false
+14:48:32.0 (21318335)|VARIABLE_ASSIGNMENT|[210]|account|{}|0x94facdf
+14:48:32.0 (21327732)|STATEMENT_EXECUTE|[211]
+14:48:32.0 (21368617)|HEAP_ALLOCATE|[211]|Bytes:4
+14:48:32.0 (21421238)|VARIABLE_SCOPE_BEGIN|[211]|contact|Contact|true|false
+14:48:32.0 (21433235)|VARIABLE_ASSIGNMENT|[211]|contact|{}|0x3549f47a
+14:48:32.0 (21438541)|STATEMENT_EXECUTE|[212]
+14:48:32.0 (21467541)|HEAP_ALLOCATE|[212]|Bytes:4
+14:48:32.0 (21509932)|VARIABLE_SCOPE_BEGIN|[212]|accountProduct|Account_Product__c|true|false
+14:48:32.0 (21521566)|VARIABLE_ASSIGNMENT|[212]|accountProduct|{}|0x18d086b
+14:48:32.0 (21527157)|STATEMENT_EXECUTE|[213]
+14:48:32.0 (21528704)|STATEMENT_EXECUTE|[213]
+14:48:32.0 (21530133)|STATEMENT_EXECUTE|[215]
+14:48:32.0 (21536877)|HEAP_ALLOCATE|[215]|Bytes:205
+14:48:32.0 (21555857)|HEAP_ALLOCATE|[215]|Bytes:4
+14:48:32.0 (22271127)|SOQL_EXECUTE_BEGIN|[215]|Aggregations:0|SELECT Id, Name, Card_Token__c, Name_On_Card__c, Card_Number__c, Card_Number_Masked__c, Card_Month_Expiry__c, Unique_Id__c, Card_Year_Expiry__c, BJB_Company__c, Card_CVN__c FROM Account WHERE Id = :tmpVar1
+14:48:32.0 (27931707)|SOQL_EXECUTE_END|[215]|Rows:1
+14:48:32.0 (27963306)|HEAP_ALLOCATE|[215]|Bytes:8
+14:48:32.0 (27986453)|HEAP_ALLOCATE|[215]|Bytes:284
+14:48:32.0 (28039276)|HEAP_ALLOCATE|[215]|Bytes:8
+14:48:32.0 (28077472)|HEAP_ALLOCATE|[232]|Bytes:40
+14:48:32.0 (28123094)|VARIABLE_ASSIGNMENT|[215]|account|{"Id":"0016F000031T6JjQAK","Name":"Western Services Mel (6 more) ...","Card_Token__c":"962672971866","Name_On_Card__c":"Mahima a Miazi","Card_Number_Masked__c":"46XX-XXXX-XXXX-3059","Card_Month_Expiry__c":"09","Unique_Id__c":"503035","Card_Year_Expiry__c":"2022","BJB_Company__c":"a0C90000002PU4fEAG"}|0xdb1ddaa
+14:48:32.0 (28134386)|STATEMENT_EXECUTE|[233]
+14:48:32.0 (28151836)|HEAP_ALLOCATE|[233]|Bytes:15
+14:48:32.0 (28169911)|HEAP_ALLOCATE|[233]|Bytes:87
+14:48:32.0 (28191691)|VARIABLE_ASSIGNMENT|[233]|this.Log|"Current Invoice Numb (67 more) ..."|0x3e7dfe36
+14:48:32.0 (28196989)|STATEMENT_EXECUTE|[235]
+14:48:32.0 (28202137)|HEAP_ALLOCATE|[235]|Bytes:59
+14:48:32.0 (28223641)|HEAP_ALLOCATE|[235]|Bytes:4
+14:48:32.0 (28845670)|SOQL_EXECUTE_BEGIN|[235]|Aggregations:0|SELECT Id, Name FROM Account_Product__c WHERE Id = :tmpVar1
+14:48:32.0 (31288253)|SOQL_EXECUTE_END|[235]|Rows:1
+14:48:32.0 (31313699)|HEAP_ALLOCATE|[235]|Bytes:8
+14:48:32.0 (31332578)|HEAP_ALLOCATE|[235]|Bytes:76
+14:48:32.0 (31416157)|HEAP_ALLOCATE|[235]|Bytes:8
+14:48:32.0 (31479749)|HEAP_ALLOCATE|[235]|Bytes:12
+14:48:32.0 (31527188)|VARIABLE_ASSIGNMENT|[235]|accountProduct|{"Id":"a076F00000pUT7VQAW","Name":"Adwords Optimised We (15 more) ..."}|0x6ae8eaf6
+14:48:32.0 (31540798)|STATEMENT_EXECUTE|[237]
+14:48:32.0 (31563865)|HEAP_ALLOCATE|[237]|Bytes:22
+14:48:32.0 (31583705)|HEAP_ALLOCATE|[237]|Bytes:109
+14:48:32.0 (31613445)|VARIABLE_ASSIGNMENT|[237]|this.Log|"Current Invoice Numb (89 more) ..."|0x3e7dfe36
+14:48:32.0 (31624350)|STATEMENT_EXECUTE|[248]
+14:48:32.0 (31626823)|STATEMENT_EXECUTE|[248]
+14:48:32.0 (31629084)|STATEMENT_EXECUTE|[249]
+14:48:32.0 (31637765)|HEAP_ALLOCATE|[249]|Bytes:192
+14:48:32.0 (31657889)|HEAP_ALLOCATE|[249]|Bytes:4
+14:48:32.0 (34228867)|SOQL_EXECUTE_BEGIN|[249]|Aggregations:0|SELECT Id, Name, FirstName, LastName, Email, MailingStreet, MailingCity, MailingPostalCode, MailingState, MailingCountry FROM Contact WHERE (AccountId = :tmpVar1 AND Title = 'Billing') LIMIT 1
+14:48:32.0 (38876486)|SOQL_EXECUTE_END|[249]|Rows:1
+14:48:32.0 (38907875)|HEAP_ALLOCATE|[249]|Bytes:8
+14:48:32.0 (38931338)|HEAP_ALLOCATE|[249]|Bytes:224
+14:48:32.0 (39014723)|HEAP_ALLOCATE|[249]|Bytes:8
+14:48:32.0 (39036328)|HEAP_ALLOCATE|[249]|Bytes:33
+14:48:32.0 (39095032)|HEAP_ALLOCATE|[249]|Bytes:40
+14:48:32.0 (39144247)|VARIABLE_ASSIGNMENT|[249]|contact|{"Id":"0036F00002rL07XQAS","Name":"Joyanta Malo","FirstName":"Joyanta","LastName":"Malo","Email":"info@westernservices (7 more) ...","MailingStreet":"2 Pioneer Court","MailingCity":"Werribee","MailingPostalCode":"3030","MailingState":"VIC"}|0x33e0e889
+14:48:32.0 (39155491)|STATEMENT_EXECUTE|[250]
+14:48:32.0 (39171016)|HEAP_ALLOCATE|[250]|Bytes:15
+14:48:32.0 (39185228)|HEAP_ALLOCATE|[250]|Bytes:124
+14:48:32.0 (39208275)|VARIABLE_ASSIGNMENT|[250]|this.Log|"Current Invoice Numb (104 more) ..."|0x3e7dfe36
+14:48:32.0 (39216804)|STATEMENT_EXECUTE|[261]
+14:48:32.0 (39228836)|VARIABLE_SCOPE_BEGIN|[261]|TimedOut|Boolean|false|false
+14:48:32.0 (39244324)|HEAP_ALLOCATE|[261]|Bytes:5
+14:48:32.0 (39252138)|VARIABLE_ASSIGNMENT|[261]|TimedOut|false
+14:48:32.0 (39256828)|STATEMENT_EXECUTE|[262]
+14:48:32.0 (39359339)|HEAP_ALLOCATE|[262]|Bytes:4
+14:48:32.0 (39481458)|VARIABLE_SCOPE_BEGIN|[262]|paymentAttempt|Payment_Attempt__c|true|false
+14:48:32.0 (39500559)|VARIABLE_ASSIGNMENT|[262]|paymentAttempt|{}|0x4fb9cc9e
+14:48:32.0 (39513054)|STATEMENT_EXECUTE|[263]
+14:48:32.0 (39515137)|STATEMENT_EXECUTE|[264]
+14:48:32.0 (39516628)|STATEMENT_EXECUTE|[264]
+14:48:32.0 (39518249)|STATEMENT_EXECUTE|[265]
+14:48:32.0 (39529738)|HEAP_ALLOCATE|[265]|Bytes:18
+14:48:32.0 (39653684)|HEAP_ALLOCATE|[265]|Bytes:274
+14:48:32.0 (39671669)|HEAP_ALLOCATE|[265]|Bytes:292
+14:48:32.0 (39688268)|USER_DEBUG|[265]|DEBUG|Account Response: Account:{Id=0016F000031T6JjQAK, Name=Western Services Melbourne, Card_Token__c=962672971866, Name_On_Card__c=Mahima a Miazi, Card_Number_Masked__c=46XX-XXXX-XXXX-3059, Card_Month_Expiry__c=09, Unique_Id__c=503035, Card_Year_Expiry__c=2022, BJB_Company__c=a0C90000002PU4fEAG}
+14:48:32.0 (39699580)|STATEMENT_EXECUTE|[266]
+14:48:32.0 (39707362)|HEAP_ALLOCATE|[266]|Bytes:18
+14:48:32.0 (39761899)|HEAP_ALLOCATE|[266]|Bytes:214
+14:48:32.0 (39773782)|HEAP_ALLOCATE|[266]|Bytes:232
+14:48:32.0 (39781889)|USER_DEBUG|[266]|DEBUG|Contact Response: Contact:{Id=0036F00002rL07XQAS, Name=Joyanta Malo, FirstName=Joyanta, LastName=Malo, Email=info@westernservices.com.au, MailingStreet=2 Pioneer Court, MailingCity=Werribee, MailingPostalCode=3030, MailingState=VIC}
+14:48:32.0 (39790623)|STATEMENT_EXECUTE|[267]
+14:48:32.0 (39798944)|HEAP_ALLOCATE|[267]|Bytes:18
+14:48:32.0 (39804586)|HEAP_ALLOCATE|[267]|Bytes:142
+14:48:32.0 (39821025)|VARIABLE_ASSIGNMENT|[267]|this.Log|"Current Invoice Numb (122 more) ..."|0x3e7dfe36
+14:48:32.0 (39827114)|STATEMENT_EXECUTE|[270]
+14:48:32.0 (39833499)|VARIABLE_SCOPE_BEGIN|[270]|countrycode|String|false|false
+14:48:32.0 (39843013)|VARIABLE_ASSIGNMENT|[270]|countrycode|null
+14:48:32.0 (40619126)|HEAP_ALLOCATE|[271]|Bytes:3
+14:48:32.0 (40649492)|HEAP_ALLOCATE|[273]|Bytes:3
+14:48:32.0 (40658745)|STATEMENT_EXECUTE|[273]
+14:48:32.0 (40660793)|STATEMENT_EXECUTE|[274]
+14:48:32.0 (40668390)|HEAP_ALLOCATE|[274]|Bytes:2
+14:48:32.0 (40678117)|VARIABLE_ASSIGNMENT|[274]|countrycode|"AU"
+14:48:32.0 (40682597)|STATEMENT_EXECUTE|[278]
+14:48:32.0 (45143012)|VARIABLE_SCOPE_BEGIN|[12]|paymentGateway.GATEWAY_LOCAL|Integer|false|true
+14:48:32.0 (45160126)|VARIABLE_SCOPE_BEGIN|[11]|paymentGateway.GATEWAY_MOCK|Integer|false|true
+14:48:32.0 (45167520)|VARIABLE_SCOPE_BEGIN|[10]|paymentGateway.GATEWAY_REAL|Integer|false|true
+14:48:32.0 (45174011)|VARIABLE_SCOPE_BEGIN|[6]|paymentGateway.TEST_DECLINE|Integer|false|true
+14:48:32.0 (45180622)|VARIABLE_SCOPE_BEGIN|[7]|paymentGateway.TEST_EXPIRED|Integer|false|true
+14:48:32.0 (45186799)|VARIABLE_SCOPE_BEGIN|[5]|paymentGateway.TEST_FAILURE|Integer|false|true
+14:48:32.0 (45194635)|VARIABLE_SCOPE_BEGIN|[4]|paymentGateway.TEST_SUCCESS|Integer|false|true
+14:48:32.0 (45200921)|VARIABLE_SCOPE_BEGIN|[8]|paymentGateway.TEST_TIMEOUT|Integer|false|true
+14:48:32.0 (45217899)|HEAP_ALLOCATE|[278]|Bytes:15
+14:48:32.0 (45231013)|HEAP_ALLOCATE|[278]|Bytes:236
+14:48:32.0 (45236236)|HEAP_ALLOCATE|[278]|Bytes:77
+14:48:32.0 (45240612)|HEAP_ALLOCATE|[278]|Bytes:58
+14:48:32.0 (45264914)|METHOD_ENTRY|[1]|01p6F000006He6O|paymentGateway.paymentGateway()
+14:48:32.0 (45271765)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (45275949)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (45980804)|SYSTEM_MODE_ENTER|false
+14:48:32.0 (46005059)|HEAP_ALLOCATE|[4]|Bytes:5
+14:48:32.0 (46016190)|STATEMENT_EXECUTE|[4]
+14:48:32.0 (46038869)|HEAP_ALLOCATE|[4]|Bytes:4
+14:48:32.0 (46068954)|VARIABLE_ASSIGNMENT|[4]|paymentGateway.TEST_SUCCESS|3
+14:48:32.0 (46076859)|STATEMENT_EXECUTE|[5]
+14:48:32.0 (46085715)|HEAP_ALLOCATE|[5]|Bytes:4
+14:48:32.0 (46097690)|VARIABLE_ASSIGNMENT|[5]|paymentGateway.TEST_FAILURE|4
+14:48:32.0 (46103729)|STATEMENT_EXECUTE|[6]
+14:48:32.0 (46111433)|HEAP_ALLOCATE|[6]|Bytes:4
+14:48:32.0 (46121774)|VARIABLE_ASSIGNMENT|[6]|paymentGateway.TEST_DECLINE|5
+14:48:32.0 (46129302)|STATEMENT_EXECUTE|[7]
+14:48:32.0 (46137495)|HEAP_ALLOCATE|[7]|Bytes:4
+14:48:32.0 (46150124)|VARIABLE_ASSIGNMENT|[7]|paymentGateway.TEST_EXPIRED|6
+14:48:32.0 (46156944)|STATEMENT_EXECUTE|[8]
+14:48:32.0 (46164296)|HEAP_ALLOCATE|[8]|Bytes:4
+14:48:32.0 (46177161)|VARIABLE_ASSIGNMENT|[8]|paymentGateway.TEST_TIMEOUT|7
+14:48:32.0 (46183562)|STATEMENT_EXECUTE|[10]
+14:48:32.0 (46191711)|HEAP_ALLOCATE|[10]|Bytes:4
+14:48:32.0 (46203992)|VARIABLE_ASSIGNMENT|[10]|paymentGateway.GATEWAY_REAL|0
+14:48:32.0 (46210943)|STATEMENT_EXECUTE|[11]
+14:48:32.0 (46219952)|HEAP_ALLOCATE|[11]|Bytes:4
+14:48:32.0 (46232528)|VARIABLE_ASSIGNMENT|[11]|paymentGateway.GATEWAY_MOCK|1
+14:48:32.0 (46239242)|STATEMENT_EXECUTE|[12]
+14:48:32.0 (46247466)|HEAP_ALLOCATE|[12]|Bytes:4
+14:48:32.0 (46260080)|VARIABLE_ASSIGNMENT|[12]|paymentGateway.GATEWAY_LOCAL|2
+14:48:32.0 (46267054)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (46275745)|SYSTEM_MODE_EXIT|false
+14:48:32.0 (46292734)|METHOD_EXIT|[1]|paymentGateway
+14:48:32.0 (46327263)|HEAP_ALLOCATE|[278]|Bytes:116
+14:48:32.0 (46353063)|CONSTRUCTOR_ENTRY|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:48:32.0 (46390980)|VARIABLE_SCOPE_BEGIN|[55]|this|paymentGateway|true|false
+14:48:32.0 (46519033)|VARIABLE_ASSIGNMENT|[55]|this|{}|0x1c5a14ef
+14:48:32.0 (46539620)|SYSTEM_MODE_ENTER|false
+14:48:32.0 (46549589)|HEAP_ALLOCATE|[21]|Bytes:5
+14:48:32.0 (46556789)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (46561657)|HEAP_ALLOCATE|[21]|Bytes:5
+14:48:32.0 (46567026)|STATEMENT_EXECUTE|[15]
+14:48:32.0 (46575647)|STATEMENT_EXECUTE|[16]
+14:48:32.0 (46580509)|STATEMENT_EXECUTE|[17]
+14:48:32.0 (46584840)|STATEMENT_EXECUTE|[18]
+14:48:32.0 (46589428)|STATEMENT_EXECUTE|[19]
+14:48:32.0 (46593876)|STATEMENT_EXECUTE|[21]
+14:48:32.0 (46602399)|HEAP_ALLOCATE|[21]|Bytes:4
+14:48:32.0 (46631085)|HEAP_ALLOCATE|[21]|Bytes:28
+14:48:32.0 (46656250)|VARIABLE_ASSIGNMENT|[21]|this.amount|0.00|0x1c5a14ef
+14:48:32.0 (46665704)|STATEMENT_EXECUTE|[22]
+14:48:32.0 (46685987)|VARIABLE_ASSIGNMENT|[22]|this.currencyIsoCode|"AUD"|0x1c5a14ef
+14:48:32.0 (46694397)|STATEMENT_EXECUTE|[23]
+14:48:32.0 (46707352)|VARIABLE_ASSIGNMENT|[23]|this.customerCompanyName|""|0x1c5a14ef
+14:48:32.0 (46715946)|STATEMENT_EXECUTE|[24]
+14:48:32.0 (46726145)|VARIABLE_ASSIGNMENT|[24]|this.customerFirstName|""|0x1c5a14ef
+14:48:32.0 (46735242)|STATEMENT_EXECUTE|[25]
+14:48:32.0 (46746167)|VARIABLE_ASSIGNMENT|[25]|this.customerLastName|""|0x1c5a14ef
+14:48:32.0 (46754001)|STATEMENT_EXECUTE|[26]
+14:48:32.0 (46764954)|VARIABLE_ASSIGNMENT|[26]|this.customerEmail|""|0x1c5a14ef
+14:48:32.0 (46772806)|STATEMENT_EXECUTE|[27]
+14:48:32.0 (46778045)|STATEMENT_EXECUTE|[28]
+14:48:32.0 (46788156)|VARIABLE_ASSIGNMENT|[28]|this.customerStreet|""|0x1c5a14ef
+14:48:32.0 (46795323)|STATEMENT_EXECUTE|[29]
+14:48:32.0 (46804745)|VARIABLE_ASSIGNMENT|[29]|this.customerCity|""|0x1c5a14ef
+14:48:32.0 (46812738)|STATEMENT_EXECUTE|[30]
+14:48:32.0 (46823509)|VARIABLE_ASSIGNMENT|[30]|this.customerState|""|0x1c5a14ef
+14:48:32.0 (46831708)|STATEMENT_EXECUTE|[31]
+14:48:32.0 (46842062)|VARIABLE_ASSIGNMENT|[31]|this.customerPostcode|""|0x1c5a14ef
+14:48:32.0 (46850439)|STATEMENT_EXECUTE|[32]
+14:48:32.0 (46861995)|VARIABLE_ASSIGNMENT|[32]|this.customerCountrycode|""|0x1c5a14ef
+14:48:32.0 (46870644)|STATEMENT_EXECUTE|[33]
+14:48:32.0 (46881770)|VARIABLE_ASSIGNMENT|[33]|this.customerInvoiceDescription|""|0x1c5a14ef
+14:48:32.0 (46890456)|STATEMENT_EXECUTE|[34]
+14:48:32.0 (46902935)|VARIABLE_ASSIGNMENT|[34]|this.customerInvoiceRef|""|0x1c5a14ef
+14:48:32.0 (46911363)|STATEMENT_EXECUTE|[35]
+14:48:32.0 (46927136)|VARIABLE_ASSIGNMENT|[35]|this.uniqueAttemptId|""|0x1c5a14ef
+14:48:32.0 (46935956)|STATEMENT_EXECUTE|[36]
+14:48:32.0 (46951591)|VARIABLE_ASSIGNMENT|[36]|this.transactionNo|""|0x1c5a14ef
+14:48:32.0 (46961332)|STATEMENT_EXECUTE|[38]
+14:48:32.0 (46974652)|VARIABLE_ASSIGNMENT|[38]|this.customerToken|""|0x1c5a14ef
+14:48:32.0 (46983508)|STATEMENT_EXECUTE|[39]
+14:48:32.0 (46995603)|VARIABLE_ASSIGNMENT|[39]|this.cardHoldersName|""|0x1c5a14ef
+14:48:32.0 (47004021)|STATEMENT_EXECUTE|[40]
+14:48:32.0 (47010314)|STATEMENT_EXECUTE|[41]
+14:48:32.0 (47014789)|STATEMENT_EXECUTE|[42]
+14:48:32.0 (47025434)|VARIABLE_ASSIGNMENT|[42]|this.cardExpiryMonth|""|0x1c5a14ef
+14:48:32.0 (47033896)|STATEMENT_EXECUTE|[43]
+14:48:32.0 (47042997)|VARIABLE_ASSIGNMENT|[43]|this.cardExpiryYear|""|0x1c5a14ef
+14:48:32.0 (47050185)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (47086915)|STATEMENT_EXECUTE|[55]
+14:48:32.0 (47089592)|STATEMENT_EXECUTE|[56]
+14:48:32.0 (47310383)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (47339690)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|false
+14:48:32.0 (47352852)|HEAP_ALLOCATE|[17]|Bytes:5
+14:48:32.0 (47369519)|VARIABLE_ASSIGNMENT|[17]|this.isRefund|false|0x1c5a14ef
+14:48:32.0 (47388778)|STATEMENT_EXECUTE|[57]
+14:48:32.0 (47520511)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (47543241)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:48:32.0 (47564418)|VARIABLE_ASSIGNMENT|[18]|this.testType|null|0x1c5a14ef
+14:48:32.0 (47581027)|STATEMENT_EXECUTE|[58]
+14:48:32.0 (47705541)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (47728548)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|0
+14:48:32.0 (47745716)|VARIABLE_ASSIGNMENT|[19]|this.testGateway|0|0x1c5a14ef
+14:48:32.0 (47762809)|SYSTEM_MODE_EXIT|false
+14:48:32.0 (47776683)|CONSTRUCTOR_EXIT|[278]|01p6F000006He6O|<init>()|paymentGateway
+14:48:32.0 (47787294)|VARIABLE_SCOPE_BEGIN|[278]|pay|paymentGateway|true|false
+14:48:32.0 (47870973)|VARIABLE_ASSIGNMENT|[278]|pay|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (47895408)|STATEMENT_EXECUTE|[281]
+14:48:32.0 (47912662)|STATEMENT_EXECUTE|[304]
+14:48:32.0 (47915203)|STATEMENT_EXECUTE|[305]
+14:48:32.0 (47962421)|METHOD_ENTRY|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:48:32.0 (47994275)|VARIABLE_SCOPE_BEGIN|[63]|this|paymentGateway|true|false
+14:48:32.0 (48091733)|VARIABLE_ASSIGNMENT|[63]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (48113772)|VARIABLE_SCOPE_BEGIN|[63]|company|Company__c|true|false
+14:48:32.0 (48147704)|VARIABLE_ASSIGNMENT|[63]|company|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x365b4ecc
+14:48:32.0 (48166580)|SYSTEM_MODE_ENTER|false
+14:48:32.0 (48176719)|HEAP_ALLOCATE|[64]|Bytes:5
+14:48:32.0 (48184956)|STATEMENT_EXECUTE|[63]
+14:48:32.0 (48187405)|STATEMENT_EXECUTE|[64]
+14:48:32.0 (48313462)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (48354436)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x365b4ecc
+14:48:32.0 (48392730)|VARIABLE_ASSIGNMENT|[15]|this.bjbCompany|{"Id":"a0C90000002PU4fEAG","Name":"SponsoredLinX","Business_Name__c":"SponsoredLinX","Checkout_Site__c":"checkout_SLX","Checkout_Direct_Debit__c":false,"CurrencyIsoCode":"AUD","Payment_Gateway__c":"Eway2"}|0x1c5a14ef
+14:48:32.0 (48418780)|STATEMENT_EXECUTE|[66]
+14:48:32.0 (48482580)|VARIABLE_ASSIGNMENT|[66]|this.currencyIsoCode|"AUD"|0x1c5a14ef
+14:48:32.0 (48493039)|STATEMENT_EXECUTE|[69]
+14:48:32.0 (48610421)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x365b4ecc","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (48759086)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x365b4ecc","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (48784294)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"Eway2"
+14:48:32.0 (48804191)|VARIABLE_ASSIGNMENT|[16]|this.gateway|"Eway2"|0x1c5a14ef
+14:48:32.0 (48820158)|STATEMENT_EXECUTE|[70]
+14:48:32.0 (48832777)|HEAP_ALLOCATE|[70]|Bytes:18
+14:48:32.0 (48970266)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":0.00,"bjbCompany":"0x365b4ecc","cardExpiryMonth":"","cardExpiryYear":"","cardHoldersName":"","currencyIsoCode":"AUD","customerCity":"","customerCompanyName":"","customerCountrycode":"","customerEmail":"","customerFirstName":"","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"","customerPostcode":"","customerState":"","customerStreet":"","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (49008577)|HEAP_ALLOCATE|[70]|Bytes:23
+14:48:32.0 (49034869)|USER_DEBUG|[70]|DEBUG|Payment Gateway = Eway2
+14:48:32.0 (49052216)|SYSTEM_MODE_EXIT|false
+14:48:32.0 (49064942)|METHOD_EXIT|[305]|01p6F000006He6O|paymentGateway.setBjbCompany(Company__c)
+14:48:32.0 (49075138)|STATEMENT_EXECUTE|[306]
+14:48:32.0 (49111131)|HEAP_ALLOCATE|[306]|Bytes:28
+14:48:32.0 (49132295)|VARIABLE_ASSIGNMENT|[306]|this.amount|99.00|0x1c5a14ef
+14:48:32.0 (49141437)|STATEMENT_EXECUTE|[307]
+14:48:32.0 (49188198)|VARIABLE_ASSIGNMENT|[307]|this.currencyIsoCode|"AUD"|0x1c5a14ef
+14:48:32.0 (49197815)|STATEMENT_EXECUTE|[308]
+14:48:32.0 (49237430)|VARIABLE_ASSIGNMENT|[308]|this.customerCompanyName|"Western Services Mel (6 more) ..."|0x1c5a14ef
+14:48:32.0 (49247857)|STATEMENT_EXECUTE|[309]
+14:48:32.0 (49285858)|VARIABLE_ASSIGNMENT|[309]|this.customerFirstName|"Joyanta"|0x1c5a14ef
+14:48:32.0 (49295530)|STATEMENT_EXECUTE|[310]
+14:48:32.0 (49338251)|VARIABLE_ASSIGNMENT|[310]|this.customerLastName|"Malo"|0x1c5a14ef
+14:48:32.0 (49348566)|STATEMENT_EXECUTE|[311]
+14:48:32.0 (49427861)|HEAP_ALLOCATE|[311]|Bytes:27
+14:48:32.0 (49461526)|VARIABLE_ASSIGNMENT|[311]|this.customerEmail|"info@westernservices (7 more) ..."|0x1c5a14ef
+14:48:32.0 (49471675)|STATEMENT_EXECUTE|[312]
+14:48:32.0 (49509104)|VARIABLE_ASSIGNMENT|[312]|this.customerStreet|"2 Pioneer Court"|0x1c5a14ef
+14:48:32.0 (49519020)|STATEMENT_EXECUTE|[313]
+14:48:32.0 (49554172)|VARIABLE_ASSIGNMENT|[313]|this.customerCity|"Werribee"|0x1c5a14ef
+14:48:32.0 (49568534)|STATEMENT_EXECUTE|[314]
+14:48:32.0 (49599616)|VARIABLE_ASSIGNMENT|[314]|this.customerState|"VIC"|0x1c5a14ef
+14:48:32.0 (49609723)|STATEMENT_EXECUTE|[315]
+14:48:32.0 (49638549)|VARIABLE_ASSIGNMENT|[315]|this.customerPostcode|"3030"|0x1c5a14ef
+14:48:32.0 (49647634)|STATEMENT_EXECUTE|[316]
+14:48:32.0 (49660131)|VARIABLE_ASSIGNMENT|[316]|this.customerCountrycode|"AU"|0x1c5a14ef
+14:48:32.0 (49667728)|STATEMENT_EXECUTE|[317]
+14:48:32.0 (49679968)|VARIABLE_ASSIGNMENT|[317]|this.customerIP|null|0x1c5a14ef
+14:48:32.0 (49688675)|STATEMENT_EXECUTE|[318]
+14:48:32.0 (49716223)|VARIABLE_ASSIGNMENT|[318]|this.cardHoldersName|"Mahima a Miazi"|0x1c5a14ef
+14:48:32.0 (49725372)|STATEMENT_EXECUTE|[320]
+14:48:32.0 (49751581)|VARIABLE_ASSIGNMENT|[320]|this.cardExpiryMonth|"09"|0x1c5a14ef
+14:48:32.0 (49760837)|STATEMENT_EXECUTE|[321]
+14:48:32.0 (49782980)|VARIABLE_ASSIGNMENT|[321]|this.cardExpiryYear|"2022"|0x1c5a14ef
+14:48:32.0 (49791254)|STATEMENT_EXECUTE|[322]
+14:48:32.0 (49937590)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"","customerInvoiceRef":"","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":""}|0x1c5a14ef
+14:48:32.0 (49963581)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|null
+14:48:32.0 (49979471)|SYSTEM_MODE_ENTER|false
+14:48:32.0 (49989879)|HEAP_ALLOCATE|[41]|Bytes:5
+14:48:32.0 (49997650)|STATEMENT_EXECUTE|[41]
+14:48:32.0 (50000275)|STATEMENT_EXECUTE|[41]
+14:48:32.0 (50071198)|VARIABLE_ASSIGNMENT|[41]|this.cardCVN|""|0x1c5a14ef
+14:48:32.0 (50085731)|SYSTEM_MODE_EXIT|false
+14:48:32.0 (50099551)|STATEMENT_EXECUTE|[323]
+14:48:32.0 (50140267)|VARIABLE_ASSIGNMENT|[323]|this.customerToken|"962672971866"|0x1c5a14ef
+14:48:32.0 (50150031)|STATEMENT_EXECUTE|[324]
+14:48:32.0 (50171575)|VARIABLE_ASSIGNMENT|[324]|this.customerInvoiceDescription|"000972127"|0x1c5a14ef
+14:48:32.0 (50179896)|STATEMENT_EXECUTE|[325]
+14:48:32.0 (50195283)|VARIABLE_ASSIGNMENT|[325]|this.customerInvoiceRef|"000972127"|0x1c5a14ef
+14:48:32.0 (50203691)|STATEMENT_EXECUTE|[326]
+14:48:32.0 (50223044)|VARIABLE_ASSIGNMENT|[326]|this.uniqueAttemptId|"a0F6F00000uikSuUAI"|0x1c5a14ef
+14:48:32.0 (50232806)|STATEMENT_EXECUTE|[328]
+14:48:32.0 (50235344)|STATEMENT_EXECUTE|[328]
+14:48:32.0 (50237618)|STATEMENT_EXECUTE|[329]
+14:48:32.0 (50258039)|METHOD_ENTRY|[329]|01p6F000006He6O|paymentGateway.pay()
+14:48:32.0 (50285494)|VARIABLE_SCOPE_BEGIN|[153]|this|paymentGateway|true|false
+14:48:32.0 (50407437)|VARIABLE_ASSIGNMENT|[153]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (50437573)|SYSTEM_MODE_ENTER|false
+14:48:32.0 (50448253)|HEAP_ALLOCATE|[155]|Bytes:5
+14:48:32.0 (50455965)|STATEMENT_EXECUTE|[153]
+14:48:32.0 (50458479)|STATEMENT_EXECUTE|[155]
+14:48:32.0 (50502291)|HEAP_ALLOCATE|[155]|Bytes:4
+14:48:32.0 (50559610)|VARIABLE_ASSIGNMENT|[155]|this.paymentAttempt|{}|0x1c5a14ef
+14:48:32.0 (50570066)|STATEMENT_EXECUTE|[157]
+14:48:32.0 (50572367)|STATEMENT_EXECUTE|[157]
+14:48:32.0 (50589149)|HEAP_ALLOCATE|[159]|Bytes:28
+14:48:32.0 (50655414)|STATEMENT_EXECUTE|[159]
+14:48:32.0 (50664399)|STATEMENT_EXECUTE|[166]
+14:48:32.0 (50672002)|HEAP_ALLOCATE|[166]|Bytes:11
+14:48:32.0 (51506910)|VARIABLE_ASSIGNMENT|[166]|this.Status__c|"IN PROGRESS"|0x11ae2512
+14:48:32.0 (51521240)|STATEMENT_EXECUTE|[167]
+14:48:32.0 (51595462)|VARIABLE_ASSIGNMENT|[167]|this.Payment_Amount__c|99.00|0x11ae2512
+14:48:32.0 (51606199)|STATEMENT_EXECUTE|[168]
+14:48:32.0 (51741015)|VARIABLE_ASSIGNMENT|[168]|this.CurrencyIsoCode|"AUD"|0x11ae2512
+14:48:32.0 (51752166)|STATEMENT_EXECUTE|[169]
+14:48:32.0 (51766221)|HEAP_ALLOCATE|[169]|Bytes:1
+14:48:32.0 (51789428)|HEAP_ALLOCATE|[169]|Bytes:12
+14:48:32.0 (51860418)|VARIABLE_ASSIGNMENT|[169]|this.Payment_Name__c|"Joyanta Malo"|0x11ae2512
+14:48:32.0 (51870760)|STATEMENT_EXECUTE|[170]
+14:48:32.0 (51936535)|VARIABLE_ASSIGNMENT|[170]|this.Payment_Email__c|"info@westernservices (7 more) ..."|0x11ae2512
+14:48:32.0 (51947511)|STATEMENT_EXECUTE|[171]
+14:48:32.0 (52086317)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (52190312)|VARIABLE_ASSIGNMENT|[171]|this.Payment_Option__c|"Eway2"|0x11ae2512
+14:48:32.0 (52202384)|STATEMENT_EXECUTE|[172]
+14:48:32.0 (52341890)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (52379141)|HEAP_ALLOCATE|[172]|Bytes:7
+14:48:32.0 (52461680)|VARIABLE_ASSIGNMENT|[172]|this.Payment_Type__c|"Payment"|0x11ae2512
+14:48:32.0 (52473296)|STATEMENT_EXECUTE|[173]
+14:48:32.0 (52548019)|HEAP_ALLOCATE|[173]|Bytes:56
+14:48:32.0 (52661800)|VARIABLE_ASSIGNMENT|[173]|this.Request_Time__c|"2019-01-09T04:48:32.651Z"|0x11ae2512
+14:48:32.0 (52674765)|STATEMENT_EXECUTE|[174]
+14:48:32.0 (52783718)|VARIABLE_ASSIGNMENT|[174]|this.Invoice_Number__c|"000972127"|0x11ae2512
+14:48:32.0 (52921297)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (52955553)|HEAP_ALLOCATE|[177]|Bytes:4
+14:48:32.0 (53110593)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (53146302)|HEAP_ALLOCATE|[179]|Bytes:5
+14:48:32.0 (53165099)|STATEMENT_EXECUTE|[179]
+14:48:32.0 (53167882)|STATEMENT_EXECUTE|[180]
+14:48:32.0 (53194680)|METHOD_ENTRY|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:48:32.0 (53227282)|VARIABLE_SCOPE_BEGIN|[376]|this|paymentGateway|true|false
+14:48:32.0 (53343016)|VARIABLE_ASSIGNMENT|[376]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (53377708)|HEAP_ALLOCATE|[378]|Bytes:5
+14:48:32.0 (53385857)|STATEMENT_EXECUTE|[376]
+14:48:32.0 (53388311)|STATEMENT_EXECUTE|[378]
+14:48:32.0 (58628184)|VARIABLE_SCOPE_BEGIN|[10]|Eway2Payment.API_VERSION|String|false|true
+14:48:32.0 (58666232)|HEAP_ALLOCATE|[378]|Bytes:117
+14:48:32.0 (58681677)|HEAP_ALLOCATE|[378]|Bytes:67
+14:48:32.0 (58716352)|METHOD_ENTRY|[6]|01p6F000009rYF7|Eway2Payment.Eway2Payment()
+14:48:32.0 (58725997)|STATEMENT_EXECUTE|[6]
+14:48:32.0 (58731774)|STATEMENT_EXECUTE|[6]
+14:48:32.0 (58742449)|HEAP_ALLOCATE|[10]|Bytes:5
+14:48:32.0 (58751009)|STATEMENT_EXECUTE|[10]
+14:48:32.0 (58767606)|HEAP_ALLOCATE|[10]|Bytes:2
+14:48:32.0 (58799913)|VARIABLE_ASSIGNMENT|[10]|Eway2Payment.API_VERSION|"31"
+14:48:32.0 (58820807)|METHOD_EXIT|[6]|Eway2Payment
+14:48:32.0 (58857636)|METHOD_ENTRY|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:48:32.0 (58896289)|VARIABLE_SCOPE_BEGIN|[59]|gateway|paymentGateway|true|false
+14:48:32.0 (59057805)|VARIABLE_ASSIGNMENT|[59]|gateway|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (59090765)|HEAP_ALLOCATE|[60]|Bytes:5
+14:48:32.0 (59098184)|STATEMENT_EXECUTE|[59]
+14:48:32.0 (59100701)|STATEMENT_EXECUTE|[60]
+14:48:32.0 (63230057)|HEAP_ALLOCATE|[60]|Bytes:132
+14:48:32.0 (63271777)|CONSTRUCTOR_ENTRY|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:48:32.0 (63419835)|VARIABLE_SCOPE_BEGIN|[53]|this|Eway2Payment|true|false
+14:48:32.0 (63530138)|VARIABLE_ASSIGNMENT|[53]|this|{}|0x1ca1fe43
+14:48:32.0 (63559272)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:32.0 (63568928)|STATEMENT_EXECUTE|[6]
+14:48:32.0 (63574683)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:32.0 (63579996)|STATEMENT_EXECUTE|[16]
+14:48:32.0 (63598995)|STATEMENT_EXECUTE|[17]
+14:48:32.0 (63603994)|STATEMENT_EXECUTE|[18]
+14:48:32.0 (63608260)|STATEMENT_EXECUTE|[19]
+14:48:32.0 (63612612)|STATEMENT_EXECUTE|[20]
+14:48:32.0 (63616975)|STATEMENT_EXECUTE|[21]
+14:48:32.0 (63621325)|STATEMENT_EXECUTE|[22]
+14:48:32.0 (63625690)|STATEMENT_EXECUTE|[23]
+14:48:32.0 (63629864)|STATEMENT_EXECUTE|[24]
+14:48:32.0 (63634265)|STATEMENT_EXECUTE|[25]
+14:48:32.0 (63638594)|STATEMENT_EXECUTE|[26]
+14:48:32.0 (63643177)|STATEMENT_EXECUTE|[27]
+14:48:32.0 (63647674)|STATEMENT_EXECUTE|[28]
+14:48:32.0 (63651979)|STATEMENT_EXECUTE|[29]
+14:48:32.0 (63656352)|STATEMENT_EXECUTE|[30]
+14:48:32.0 (63660498)|STATEMENT_EXECUTE|[31]
+14:48:32.0 (63664778)|STATEMENT_EXECUTE|[32]
+14:48:32.0 (63668955)|STATEMENT_EXECUTE|[33]
+14:48:32.0 (63673318)|STATEMENT_EXECUTE|[34]
+14:48:32.0 (63677700)|STATEMENT_EXECUTE|[35]
+14:48:32.0 (63682162)|STATEMENT_EXECUTE|[36]
+14:48:32.0 (63686653)|STATEMENT_EXECUTE|[37]
+14:48:32.0 (63691159)|STATEMENT_EXECUTE|[38]
+14:48:32.0 (63695947)|STATEMENT_EXECUTE|[39]
+14:48:32.0 (63700549)|STATEMENT_EXECUTE|[40]
+14:48:32.0 (63704920)|STATEMENT_EXECUTE|[41]
+14:48:32.0 (63709348)|STATEMENT_EXECUTE|[42]
+14:48:32.0 (63713633)|STATEMENT_EXECUTE|[43]
+14:48:32.0 (63718066)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (63722301)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (63726969)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (63731235)|STATEMENT_EXECUTE|[48]
+14:48:32.0 (63773534)|STATEMENT_EXECUTE|[53]
+14:48:32.0 (63776275)|STATEMENT_EXECUTE|[54]
+14:48:32.0 (63792910)|HEAP_ALLOCATE|[54]|Bytes:22
+14:48:32.0 (63805844)|HEAP_ALLOCATE|[54]|Bytes:2
+14:48:32.0 (63844068)|METHOD_ENTRY|[1]|01p6F000009rYF8|Eway2Response.Eway2Response()
+14:48:32.0 (63854658)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (63860743)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (63869641)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:32.0 (63885398)|METHOD_EXIT|[1]|Eway2Response
+14:48:32.0 (63905562)|HEAP_ALLOCATE|[54]|Bytes:16
+14:48:32.0 (63920737)|CONSTRUCTOR_ENTRY|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:48:32.0 (63948790)|VARIABLE_SCOPE_BEGIN|[7]|this|Eway2Response|true|false
+14:48:32.0 (63985187)|VARIABLE_ASSIGNMENT|[7]|this|{}|0x285c5bbc
+14:48:32.0 (64001111)|HEAP_ALLOCATE|[5]|Bytes:5
+14:48:32.0 (64008246)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (64012163)|HEAP_ALLOCATE|[5]|Bytes:5
+14:48:32.0 (64017565)|STATEMENT_EXECUTE|[3]
+14:48:32.0 (64025461)|STATEMENT_EXECUTE|[4]
+14:48:32.0 (64029811)|STATEMENT_EXECUTE|[5]
+14:48:32.0 (64056089)|HEAP_ALLOCATE|[5]|Bytes:4
+14:48:32.0 (64091970)|VARIABLE_ASSIGNMENT|[5]|this.params|{}|0x285c5bbc
+14:48:32.0 (64118422)|STATEMENT_EXECUTE|[7]
+14:48:32.0 (64133509)|CONSTRUCTOR_EXIT|[54]|01p6F000009rYF8|<init>()|Eway2Response
+14:48:32.0 (64155976)|VARIABLE_ASSIGNMENT|[54]|this.response|0x285c5bbc|0x1ca1fe43
+14:48:32.0 (64164568)|STATEMENT_EXECUTE|[56]
+14:48:32.0 (64187554)|VARIABLE_ASSIGNMENT|[56]|this.currencyCode|"AUD"|0x1ca1fe43
+14:48:32.0 (64202614)|CONSTRUCTOR_EXIT|[60]|01p6F000009rYF7|<init>()|Eway2Payment
+14:48:32.0 (64214352)|VARIABLE_SCOPE_BEGIN|[60]|eway|Eway2Payment|true|false
+14:48:32.0 (64265470)|VARIABLE_ASSIGNMENT|[60]|eway|{"currencyCode":"AUD","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (64443122)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (64522858)|HEAP_ALLOCATE|[62]|Bytes:16
+14:48:32.0 (64686693)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (64726685)|HEAP_ALLOCATE|[64]|Bytes:13
+14:48:32.0 (64750566)|STATEMENT_EXECUTE|[64]
+14:48:32.0 (64753853)|STATEMENT_EXECUTE|[65]
+14:48:32.0 (64765698)|HEAP_ALLOCATE|[65]|Bytes:17
+14:48:32.0 (64808602)|METHOD_ENTRY|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:48:32.0 (64845799)|VARIABLE_SCOPE_BEGIN|[104]|this|Eway2Payment|true|false
+14:48:32.0 (64892894)|VARIABLE_ASSIGNMENT|[104]|this|{"currencyCode":"AUD","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (64905383)|VARIABLE_SCOPE_BEGIN|[104]|merchantName|String|false|false
+14:48:32.0 (64920476)|VARIABLE_ASSIGNMENT|[104]|merchantName|"Eway Rapid SLX AU"
+14:48:32.0 (64937897)|HEAP_ALLOCATE|[106]|Bytes:5
+14:48:32.0 (64945426)|STATEMENT_EXECUTE|[104]
+14:48:32.0 (64947801)|STATEMENT_EXECUTE|[106]
+14:48:32.0 (66507248)|HEAP_ALLOCATE|[106]|Bytes:56
+14:48:32.0 (66534470)|VARIABLE_SCOPE_BEGIN|[106]|merchantConfig|PaymentGateway__c|true|false
+14:48:32.0 (66620613)|VARIABLE_ASSIGNMENT|[106]|merchantConfig|{"LastModifiedDate":"2018-03-20T03:55:30.000Z","IsDeleted":false,"MerchantURL__c":"https://api.ewaypaym (20 more) ...","Access_Code__c":"F9802AULee2iddqRMaI7 (50 more) ...","CurrencyIsoCode":"AUD","SetupOwnerId":"00D90000000IJSaEAO","Name":"Eway Rapid SLX AU","SystemModstamp":"2018-05-24T08:56:42.000Z","CreatedById":"00590000000VmmqAAC","CreatedDate":"2018-03-20T03:55:30.000Z","Id":"a2c6F0000062AY3QAM","LastModifiedById":"00590000000VmmqAAC","Password__c":"KY0jzPzu"}|0x72fe25e9
+14:48:32.0 (66647295)|STATEMENT_EXECUTE|[108]
+14:48:32.0 (66658647)|STATEMENT_EXECUTE|[112]
+14:48:32.0 (66683694)|VARIABLE_ASSIGNMENT|[112]|this.merchantName|"Eway Rapid SLX AU"|0x1ca1fe43
+14:48:32.0 (66693589)|STATEMENT_EXECUTE|[113]
+14:48:32.0 (66745619)|VARIABLE_ASSIGNMENT|[113]|this.gatewayUrl|"https://api.ewaypaym (20 more) ..."|0x1ca1fe43
+14:48:32.0 (66755898)|STATEMENT_EXECUTE|[114]
+14:48:32.0 (66790696)|VARIABLE_ASSIGNMENT|[114]|this.merchantId|"F9802AULee2iddqRMaI7 (50 more) ..."|0x1ca1fe43
+14:48:32.0 (66801098)|STATEMENT_EXECUTE|[115]
+14:48:32.0 (66831479)|VARIABLE_ASSIGNMENT|[115]|this.password|"KY0jzPzu"|0x1ca1fe43
+14:48:32.0 (66852685)|METHOD_EXIT|[65]|01p6F000009rYF7|Eway2Payment.setMerchant(String)
+14:48:32.0 (66863474)|STATEMENT_EXECUTE|[70]
+14:48:32.0 (66948903)|HEAP_ALLOCATE|[70]|Bytes:28
+14:48:32.0 (66978007)|HEAP_ALLOCATE|[70]|Bytes:28
+14:48:32.0 (67012747)|HEAP_ALLOCATE|[70]|Bytes:28
+14:48:32.0 (67044467)|HEAP_ALLOCATE|[70]|Bytes:28
+14:48:32.0 (67088656)|VARIABLE_SCOPE_BEGIN|[70]|amountInCents|Integer|false|false
+14:48:32.0 (67100953)|HEAP_ALLOCATE|[70]|Bytes:4
+14:48:32.0 (67112121)|VARIABLE_ASSIGNMENT|[70]|amountInCents|9900
+14:48:32.0 (67119154)|STATEMENT_EXECUTE|[72]
+14:48:32.0 (67149986)|METHOD_ENTRY|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:48:32.0 (67179739)|VARIABLE_SCOPE_BEGIN|[331]|this|Eway2Payment|true|false
+14:48:32.0 (67247002)|VARIABLE_ASSIGNMENT|[331]|this|{"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (67263021)|VARIABLE_SCOPE_BEGIN|[331]|amount|Integer|false|false
+14:48:32.0 (67277618)|VARIABLE_ASSIGNMENT|[331]|amount|9900
+14:48:32.0 (67286134)|VARIABLE_SCOPE_BEGIN|[331]|currencyCode|String|false|false
+14:48:32.0 (67298337)|VARIABLE_ASSIGNMENT|[331]|currencyCode|"AUD"
+14:48:32.0 (67314379)|HEAP_ALLOCATE|[332]|Bytes:5
+14:48:32.0 (67321724)|STATEMENT_EXECUTE|[331]
+14:48:32.0 (67324052)|STATEMENT_EXECUTE|[332]
+14:48:32.0 (67335185)|HEAP_ALLOCATE|[332]|Bytes:4
+14:48:32.0 (67348887)|VARIABLE_ASSIGNMENT|[332]|this.amount|9900|0x1ca1fe43
+14:48:32.0 (67356865)|STATEMENT_EXECUTE|[333]
+14:48:32.0 (67371508)|VARIABLE_ASSIGNMENT|[333]|this.currencyCode|"AUD"|0x1ca1fe43
+14:48:32.0 (67389114)|METHOD_EXIT|[72]|01p6F000009rYF7|Eway2Payment.setAmount(Integer, String)
+14:48:32.0 (67404844)|STATEMENT_EXECUTE|[73]
+14:48:32.0 (67431583)|METHOD_ENTRY|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:48:32.0 (67459385)|VARIABLE_SCOPE_BEGIN|[322]|this|Eway2Payment|true|false
+14:48:32.0 (67516892)|VARIABLE_ASSIGNMENT|[322]|this|{"amount":9900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (67531506)|VARIABLE_SCOPE_BEGIN|[322]|merchTxnRef|String|false|false
+14:48:32.0 (67545444)|VARIABLE_ASSIGNMENT|[322]|merchTxnRef|"000972127"
+14:48:32.0 (67560042)|HEAP_ALLOCATE|[323]|Bytes:5
+14:48:32.0 (67567011)|STATEMENT_EXECUTE|[322]
+14:48:32.0 (67569326)|STATEMENT_EXECUTE|[323]
+14:48:32.0 (67589974)|VARIABLE_ASSIGNMENT|[323]|this.merchTxnRef|"000972127"|0x1ca1fe43
+14:48:32.0 (67607816)|METHOD_EXIT|[73]|01p6F000009rYF7|Eway2Payment.setMerchTxnRef(String)
+14:48:32.0 (67616494)|STATEMENT_EXECUTE|[74]
+14:48:32.0 (67641195)|METHOD_ENTRY|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:48:32.0 (67669560)|VARIABLE_SCOPE_BEGIN|[326]|this|Eway2Payment|true|false
+14:48:32.0 (67731005)|VARIABLE_ASSIGNMENT|[326]|this|{"amount":9900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (67745708)|VARIABLE_SCOPE_BEGIN|[326]|OrderInfo|String|false|false
+14:48:32.0 (67758489)|VARIABLE_ASSIGNMENT|[326]|OrderInfo|"000972127"
+14:48:32.0 (67772267)|HEAP_ALLOCATE|[327]|Bytes:5
+14:48:32.0 (67778843)|STATEMENT_EXECUTE|[326]
+14:48:32.0 (67781098)|STATEMENT_EXECUTE|[327]
+14:48:32.0 (67800015)|VARIABLE_ASSIGNMENT|[327]|this.orderInfo|"000972127"|0x1ca1fe43
+14:48:32.0 (67816382)|METHOD_EXIT|[74]|01p6F000009rYF7|Eway2Payment.setOrderInfo(String)
+14:48:32.0 (67824143)|STATEMENT_EXECUTE|[75]
+14:48:32.0 (67975014)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (68021602)|METHOD_ENTRY|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:48:32.0 (68034780)|VARIABLE_SCOPE_BEGIN|[344]|this|Eway2Payment|true|false
+14:48:32.0 (68095274)|VARIABLE_ASSIGNMENT|[344]|this|{"amount":9900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (68111468)|VARIABLE_SCOPE_BEGIN|[344]|CardNum|String|false|false
+14:48:32.0 (68124202)|VARIABLE_ASSIGNMENT|[344]|CardNum|null
+14:48:32.0 (68138831)|HEAP_ALLOCATE|[345]|Bytes:5
+14:48:32.0 (68145757)|STATEMENT_EXECUTE|[344]
+14:48:32.0 (68148408)|STATEMENT_EXECUTE|[345]
+14:48:32.0 (68165402)|VARIABLE_ASSIGNMENT|[345]|this.cardNum|null|0x1ca1fe43
+14:48:32.0 (68182111)|METHOD_EXIT|[75]|01p6F000009rYF7|Eway2Payment.setCardNum(String)
+14:48:32.0 (68190854)|STATEMENT_EXECUTE|[76]
+14:48:32.0 (68213945)|METHOD_ENTRY|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:48:32.0 (68243940)|VARIABLE_SCOPE_BEGIN|[356]|this|Eway2Payment|true|false
+14:48:32.0 (68306013)|VARIABLE_ASSIGNMENT|[356]|this|{"amount":9900,"currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (68320874)|VARIABLE_SCOPE_BEGIN|[356]|month|String|false|false
+14:48:32.0 (68334662)|VARIABLE_ASSIGNMENT|[356]|month|"09"
+14:48:32.0 (68342009)|VARIABLE_SCOPE_BEGIN|[356]|year|String|false|false
+14:48:32.0 (68352942)|VARIABLE_ASSIGNMENT|[356]|year|"2022"
+14:48:32.0 (68367955)|HEAP_ALLOCATE|[358]|Bytes:5
+14:48:32.0 (68374346)|STATEMENT_EXECUTE|[356]
+14:48:32.0 (68433478)|STATEMENT_EXECUTE|[358]
+14:48:32.0 (68470414)|STATEMENT_EXECUTE|[362]
+14:48:32.0 (68473305)|STATEMENT_EXECUTE|[363]
+14:48:32.0 (68503773)|HEAP_ALLOCATE|[363]|Bytes:4
+14:48:32.0 (68536641)|HEAP_ALLOCATE|[363]|Bytes:2
+14:48:32.0 (68558002)|VARIABLE_ASSIGNMENT|[363]|year|"22"
+14:48:32.0 (68566448)|STATEMENT_EXECUTE|[366]
+14:48:32.0 (68584977)|VARIABLE_ASSIGNMENT|[366]|this.cardExpiryMonth|"09"|0x1ca1fe43
+14:48:32.0 (68594845)|STATEMENT_EXECUTE|[367]
+14:48:32.0 (68608964)|VARIABLE_ASSIGNMENT|[367]|this.cardExpiryYear|"22"|0x1ca1fe43
+14:48:32.0 (68627234)|METHOD_EXIT|[76]|01p6F000009rYF7|Eway2Payment.setCardExpiry(String, String)
+14:48:32.0 (68636877)|STATEMENT_EXECUTE|[77]
+14:48:32.0 (68658454)|METHOD_ENTRY|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:48:32.0 (68684984)|VARIABLE_SCOPE_BEGIN|[340]|this|Eway2Payment|true|false
+14:48:32.0 (68749802)|VARIABLE_ASSIGNMENT|[340]|this|{"amount":9900,"cardExpiryMonth":"09","cardExpiryYear":"22","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (68765081)|VARIABLE_SCOPE_BEGIN|[340]|cardName|String|false|false
+14:48:32.0 (68778404)|VARIABLE_ASSIGNMENT|[340]|cardName|"Mahima a Miazi"
+14:48:32.0 (68793523)|HEAP_ALLOCATE|[341]|Bytes:5
+14:48:32.0 (68800383)|STATEMENT_EXECUTE|[340]
+14:48:32.0 (68802834)|STATEMENT_EXECUTE|[341]
+14:48:32.0 (68820459)|VARIABLE_ASSIGNMENT|[341]|this.cardName|"Mahima a Miazi"|0x1ca1fe43
+14:48:32.0 (68837068)|METHOD_EXIT|[77]|01p6F000009rYF7|Eway2Payment.setCardName(String)
+14:48:32.0 (68845845)|STATEMENT_EXECUTE|[78]
+14:48:32.0 (68987280)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (69032656)|METHOD_ENTRY|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:48:32.0 (69045048)|VARIABLE_SCOPE_BEGIN|[348]|this|Eway2Payment|true|false
+14:48:32.0 (69110861)|VARIABLE_ASSIGNMENT|[348]|this|{"amount":9900,"cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (69127092)|VARIABLE_SCOPE_BEGIN|[348]|cardCvc|String|false|false
+14:48:32.0 (69138684)|VARIABLE_ASSIGNMENT|[348]|cardCvc|""
+14:48:32.0 (69153711)|HEAP_ALLOCATE|[349]|Bytes:5
+14:48:32.0 (69160174)|STATEMENT_EXECUTE|[348]
+14:48:32.0 (69162965)|STATEMENT_EXECUTE|[349]
+14:48:32.0 (69180552)|VARIABLE_ASSIGNMENT|[349]|this.cardCvc|""|0x1ca1fe43
+14:48:32.0 (69196020)|METHOD_EXIT|[78]|01p6F000009rYF7|Eway2Payment.setCardCvc(String)
+14:48:32.0 (69203814)|STATEMENT_EXECUTE|[79]
+14:48:32.0 (69224224)|METHOD_ENTRY|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:48:32.0 (69253364)|VARIABLE_SCOPE_BEGIN|[374]|this|Eway2Payment|true|false
+14:48:32.0 (69321154)|VARIABLE_ASSIGNMENT|[374]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (69339992)|VARIABLE_SCOPE_BEGIN|[374]|customerCompanyName|String|false|false
+14:48:32.0 (69356581)|VARIABLE_ASSIGNMENT|[374]|customerCompanyName|"Western Services Mel (6 more) ..."
+14:48:32.0 (69372916)|HEAP_ALLOCATE|[375]|Bytes:5
+14:48:32.0 (69379926)|STATEMENT_EXECUTE|[374]
+14:48:32.0 (69382433)|STATEMENT_EXECUTE|[375]
+14:48:32.0 (72719362)|HEAP_ALLOCATE|[375]|Bytes:43
+14:48:32.0 (72738245)|HEAP_ALLOCATE|[375]|Bytes:3
+14:48:32.0 (72767747)|METHOD_ENTRY|[1]|01p6F000006uYhT|Utility.Utility()
+14:48:32.0 (72777464)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (72783782)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (72793628)|HEAP_ALLOCATE|[375]|Bytes:5
+14:48:32.0 (72805980)|METHOD_EXIT|[1]|Utility
+14:48:32.0 (72844428)|METHOD_ENTRY|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (72879320)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (72907261)|VARIABLE_ASSIGNMENT|[44]|s1|"Western Services Mel (6 more) ..."
+14:48:32.0 (72916811)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (72930257)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (72945293)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (72954007)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (72956443)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (72977336)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (72997930)|VARIABLE_ASSIGNMENT|[45]|result|"Western Services Mel (6 more) ..."
+14:48:32.0 (73005693)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (73013482)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (73029095)|METHOD_EXIT|[375]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (73075668)|HEAP_ALLOCATE|[375]|Bytes:26
+14:48:32.0 (73117400)|VARIABLE_ASSIGNMENT|[375]|this.customerCompanyName|"Western Services Mel (6 more) ..."|0x1ca1fe43
+14:48:32.0 (73135901)|METHOD_EXIT|[79]|01p6F000009rYF7|Eway2Payment.setCustomerCompanyName(String)
+14:48:32.0 (73144623)|STATEMENT_EXECUTE|[80]
+14:48:32.0 (73176303)|METHOD_ENTRY|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:48:32.0 (73209865)|VARIABLE_SCOPE_BEGIN|[378]|this|Eway2Payment|true|false
+14:48:32.0 (73309697)|VARIABLE_ASSIGNMENT|[378]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCompanyName":"Western Services Mel (6 more) ...","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (73327369)|VARIABLE_SCOPE_BEGIN|[378]|customerFirstName|String|false|false
+14:48:32.0 (73342708)|VARIABLE_ASSIGNMENT|[378]|customerFirstName|"Joyanta"
+14:48:32.0 (73358987)|HEAP_ALLOCATE|[379]|Bytes:5
+14:48:32.0 (73366289)|STATEMENT_EXECUTE|[378]
+14:48:32.0 (73368888)|STATEMENT_EXECUTE|[379]
+14:48:32.0 (73386478)|METHOD_ENTRY|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (73410872)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (73425520)|VARIABLE_ASSIGNMENT|[44]|s1|"Joyanta"
+14:48:32.0 (73431468)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (73440745)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (73452638)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (73458797)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (73461208)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (73470711)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (73484176)|VARIABLE_ASSIGNMENT|[45]|result|"Joyanta"
+14:48:32.0 (73491368)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (73497146)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (73509858)|METHOD_EXIT|[379]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (73537163)|HEAP_ALLOCATE|[379]|Bytes:7
+14:48:32.0 (73562250)|VARIABLE_ASSIGNMENT|[379]|this.customerFirstName|"Joyanta"|0x1ca1fe43
+14:48:32.0 (73578187)|METHOD_EXIT|[80]|01p6F000009rYF7|Eway2Payment.setCustomerFirstName(String)
+14:48:32.0 (73586933)|STATEMENT_EXECUTE|[81]
+14:48:32.0 (73609636)|METHOD_ENTRY|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:48:32.0 (73637342)|VARIABLE_SCOPE_BEGIN|[382]|this|Eway2Payment|true|false
+14:48:32.0 (73714577)|VARIABLE_ASSIGNMENT|[382]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCompanyName":"Western Services Mel (6 more) ...","customerFirstName":"Joyanta","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (73732846)|VARIABLE_SCOPE_BEGIN|[382]|customerLastName|String|false|false
+14:48:32.0 (73747570)|VARIABLE_ASSIGNMENT|[382]|customerLastName|"Malo"
+14:48:32.0 (73763677)|HEAP_ALLOCATE|[383]|Bytes:5
+14:48:32.0 (73771187)|STATEMENT_EXECUTE|[382]
+14:48:32.0 (73773661)|STATEMENT_EXECUTE|[383]
+14:48:32.0 (73789805)|METHOD_ENTRY|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (73808583)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (73822818)|VARIABLE_ASSIGNMENT|[44]|s1|"Malo"
+14:48:32.0 (73829330)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (73839157)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (73850398)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (73856180)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (73858383)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (73867715)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (73881834)|VARIABLE_ASSIGNMENT|[45]|result|"Malo"
+14:48:32.0 (73888575)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (73893927)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (73905399)|METHOD_EXIT|[383]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (73932089)|HEAP_ALLOCATE|[383]|Bytes:4
+14:48:32.0 (73958122)|VARIABLE_ASSIGNMENT|[383]|this.customerLastName|"Malo"|0x1ca1fe43
+14:48:32.0 (73973924)|METHOD_EXIT|[81]|01p6F000009rYF7|Eway2Payment.setCustomerLastName(String)
+14:48:32.0 (73981454)|STATEMENT_EXECUTE|[82]
+14:48:32.0 (74003233)|METHOD_ENTRY|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:48:32.0 (74028884)|VARIABLE_SCOPE_BEGIN|[386]|this|Eway2Payment|true|false
+14:48:32.0 (74106589)|VARIABLE_ASSIGNMENT|[386]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCompanyName":"Western Services Mel (6 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (74125085)|VARIABLE_SCOPE_BEGIN|[386]|customerEmail|String|false|false
+14:48:32.0 (74140454)|VARIABLE_ASSIGNMENT|[386]|customerEmail|"info@westernservices (7 more) ..."
+14:48:32.0 (74156897)|HEAP_ALLOCATE|[387]|Bytes:5
+14:48:32.0 (74163442)|STATEMENT_EXECUTE|[386]
+14:48:32.0 (74165891)|STATEMENT_EXECUTE|[387]
+14:48:32.0 (74181854)|METHOD_ENTRY|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (74203834)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (74220988)|VARIABLE_ASSIGNMENT|[44]|s1|"info@westernservices (7 more) ..."
+14:48:32.0 (74227216)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (74237214)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (74249054)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (74254793)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (74257092)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (74266043)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (74281530)|VARIABLE_ASSIGNMENT|[45]|result|"info@westernservices (7 more) ..."
+14:48:32.0 (74289152)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (74294853)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (74306518)|METHOD_EXIT|[387]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (74332994)|HEAP_ALLOCATE|[387]|Bytes:27
+14:48:32.0 (74361078)|VARIABLE_ASSIGNMENT|[387]|this.customerEmail|"info@westernservices (7 more) ..."|0x1ca1fe43
+14:48:32.0 (74375711)|METHOD_EXIT|[82]|01p6F000009rYF7|Eway2Payment.setCustomerEmail(String)
+14:48:32.0 (74383962)|STATEMENT_EXECUTE|[83]
+14:48:32.0 (74412248)|METHOD_ENTRY|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:48:32.0 (74439357)|VARIABLE_SCOPE_BEGIN|[390]|this|Eway2Payment|true|false
+14:48:32.0 (74521640)|VARIABLE_ASSIGNMENT|[390]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCompanyName":"Western Services Mel (6 more) ...","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (74542636)|VARIABLE_SCOPE_BEGIN|[390]|customerStreet|String|false|false
+14:48:32.0 (74556673)|VARIABLE_ASSIGNMENT|[390]|customerStreet|"2 Pioneer Court"
+14:48:32.0 (74572957)|HEAP_ALLOCATE|[391]|Bytes:5
+14:48:32.0 (74580238)|STATEMENT_EXECUTE|[390]
+14:48:32.0 (74582586)|STATEMENT_EXECUTE|[391]
+14:48:32.0 (74598239)|METHOD_ENTRY|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (74614959)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (74628707)|VARIABLE_ASSIGNMENT|[44]|s1|"2 Pioneer Court"
+14:48:32.0 (74634706)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (74645763)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (74657372)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (74663759)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (74666229)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (74675513)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (74690043)|VARIABLE_ASSIGNMENT|[45]|result|"2 Pioneer Court"
+14:48:32.0 (74696383)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (74702027)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (74714558)|METHOD_EXIT|[391]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (74742200)|HEAP_ALLOCATE|[391]|Bytes:15
+14:48:32.0 (74771978)|VARIABLE_ASSIGNMENT|[391]|this.customerStreet|"2 Pioneer Court"|0x1ca1fe43
+14:48:32.0 (74790706)|METHOD_EXIT|[83]|01p6F000009rYF7|Eway2Payment.setCustomerStreet(String)
+14:48:32.0 (74798878)|STATEMENT_EXECUTE|[84]
+14:48:32.0 (74822508)|METHOD_ENTRY|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:48:32.0 (74849268)|VARIABLE_SCOPE_BEGIN|[394]|this|Eway2Payment|true|false
+14:48:32.0 (74930735)|VARIABLE_ASSIGNMENT|[394]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCompanyName":"Western Services Mel (6 more) ...","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerStreet":"2 Pioneer Court","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (74950177)|VARIABLE_SCOPE_BEGIN|[394]|customerCity|String|false|false
+14:48:32.0 (74962337)|VARIABLE_ASSIGNMENT|[394]|customerCity|"Werribee"
+14:48:32.0 (74977565)|HEAP_ALLOCATE|[395]|Bytes:5
+14:48:32.0 (74984656)|STATEMENT_EXECUTE|[394]
+14:48:32.0 (74987036)|STATEMENT_EXECUTE|[395]
+14:48:32.0 (75002798)|METHOD_ENTRY|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75020931)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (75035192)|VARIABLE_ASSIGNMENT|[44]|s1|"Werribee"
+14:48:32.0 (75041995)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (75052227)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (75064707)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (75071536)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (75073795)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (75083841)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (75099362)|VARIABLE_ASSIGNMENT|[45]|result|"Werribee"
+14:48:32.0 (75106270)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (75111975)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (75124813)|METHOD_EXIT|[395]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75152709)|HEAP_ALLOCATE|[395]|Bytes:8
+14:48:32.0 (75179646)|VARIABLE_ASSIGNMENT|[395]|this.customerCity|"Werribee"|0x1ca1fe43
+14:48:32.0 (75193631)|METHOD_EXIT|[84]|01p6F000009rYF7|Eway2Payment.setCustomerCity(String)
+14:48:32.0 (75201104)|STATEMENT_EXECUTE|[85]
+14:48:32.0 (75223277)|METHOD_ENTRY|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:48:32.0 (75247596)|VARIABLE_SCOPE_BEGIN|[398]|this|Eway2Payment|true|false
+14:48:32.0 (75328639)|VARIABLE_ASSIGNMENT|[398]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerStreet":"2 Pioneer Court","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (75348190)|VARIABLE_SCOPE_BEGIN|[398]|customerState|String|false|false
+14:48:32.0 (75360237)|VARIABLE_ASSIGNMENT|[398]|customerState|"VIC"
+14:48:32.0 (75375150)|HEAP_ALLOCATE|[399]|Bytes:5
+14:48:32.0 (75380689)|STATEMENT_EXECUTE|[398]
+14:48:32.0 (75382451)|STATEMENT_EXECUTE|[399]
+14:48:32.0 (75398335)|METHOD_ENTRY|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75410552)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (75418988)|VARIABLE_ASSIGNMENT|[44]|s1|"VIC"
+14:48:32.0 (75422863)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (75429884)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (75437207)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (75440972)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (75442612)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (75448634)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (75456927)|VARIABLE_ASSIGNMENT|[45]|result|"VIC"
+14:48:32.0 (75460988)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (75464142)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (75471923)|METHOD_EXIT|[399]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75489387)|HEAP_ALLOCATE|[399]|Bytes:3
+14:48:32.0 (75505945)|VARIABLE_ASSIGNMENT|[399]|this.customerState|"VIC"|0x1ca1fe43
+14:48:32.0 (75515102)|METHOD_EXIT|[85]|01p6F000009rYF7|Eway2Payment.setCustomerState(String)
+14:48:32.0 (75519918)|STATEMENT_EXECUTE|[86]
+14:48:32.0 (75534054)|METHOD_ENTRY|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:48:32.0 (75549053)|VARIABLE_SCOPE_BEGIN|[402]|this|Eway2Payment|true|false
+14:48:32.0 (75604594)|VARIABLE_ASSIGNMENT|[402]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerState":"VIC","customerStreet":"2 Pioneer Court","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (75616450)|VARIABLE_SCOPE_BEGIN|[402]|customerPostcode|String|false|false
+14:48:32.0 (75624386)|VARIABLE_ASSIGNMENT|[402]|customerPostcode|"3030"
+14:48:32.0 (75632957)|HEAP_ALLOCATE|[403]|Bytes:5
+14:48:32.0 (75636894)|STATEMENT_EXECUTE|[402]
+14:48:32.0 (75638527)|STATEMENT_EXECUTE|[403]
+14:48:32.0 (75647057)|METHOD_ENTRY|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75656018)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:32.0 (75664604)|VARIABLE_ASSIGNMENT|[44]|s1|"3030"
+14:48:32.0 (75669613)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:32.0 (75675684)|VARIABLE_ASSIGNMENT|[44]|s2|""
+14:48:32.0 (75681625)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:32.0 (75685295)|STATEMENT_EXECUTE|[44]
+14:48:32.0 (75686773)|STATEMENT_EXECUTE|[45]
+14:48:32.0 (75691805)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:32.0 (75699707)|VARIABLE_ASSIGNMENT|[45]|result|"3030"
+14:48:32.0 (75703454)|STATEMENT_EXECUTE|[46]
+14:48:32.0 (75706591)|STATEMENT_EXECUTE|[47]
+14:48:32.0 (75713154)|METHOD_EXIT|[403]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:32.0 (75727828)|HEAP_ALLOCATE|[403]|Bytes:4
+14:48:32.0 (75743002)|VARIABLE_ASSIGNMENT|[403]|this.customerPostcode|"3030"|0x1ca1fe43
+14:48:32.0 (75752177)|METHOD_EXIT|[86]|01p6F000009rYF7|Eway2Payment.setCustomerPostcode(String)
+14:48:32.0 (75756911)|STATEMENT_EXECUTE|[87]
+14:48:32.0 (75769681)|METHOD_ENTRY|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:48:32.0 (75783156)|VARIABLE_SCOPE_BEGIN|[406]|this|Eway2Payment|true|false
+14:48:32.0 (75836310)|VARIABLE_ASSIGNMENT|[406]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (75848409)|VARIABLE_SCOPE_BEGIN|[406]|customerCountrycode|String|false|false
+14:48:32.0 (75856239)|VARIABLE_ASSIGNMENT|[406]|customerCountrycode|"AU"
+14:48:32.0 (75863631)|HEAP_ALLOCATE|[407]|Bytes:5
+14:48:32.0 (75867420)|STATEMENT_EXECUTE|[406]
+14:48:32.0 (75868991)|STATEMENT_EXECUTE|[407]
+14:48:32.0 (75900281)|HEAP_ALLOCATE|[407]|Bytes:2
+14:48:32.0 (75917629)|VARIABLE_ASSIGNMENT|[407]|this.customerCountrycode|"au"|0x1ca1fe43
+14:48:32.0 (75932112)|METHOD_EXIT|[87]|01p6F000009rYF7|Eway2Payment.setCustomerCountrycode(String)
+14:48:32.0 (75939831)|STATEMENT_EXECUTE|[88]
+14:48:32.0 (75962969)|METHOD_ENTRY|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:48:32.0 (75979061)|VARIABLE_SCOPE_BEGIN|[370]|this|Eway2Payment|true|false
+14:48:32.0 (76037266)|VARIABLE_ASSIGNMENT|[370]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc"}|0x1ca1fe43
+14:48:32.0 (76057498)|VARIABLE_SCOPE_BEGIN|[370]|transNo|String|false|false
+14:48:32.0 (76068012)|VARIABLE_ASSIGNMENT|[370]|transNo|""
+14:48:32.0 (76077294)|HEAP_ALLOCATE|[371]|Bytes:5
+14:48:32.0 (76081542)|STATEMENT_EXECUTE|[370]
+14:48:32.0 (76083206)|STATEMENT_EXECUTE|[371]
+14:48:32.0 (76095565)|VARIABLE_ASSIGNMENT|[371]|this.transactionNo|""|0x1ca1fe43
+14:48:32.0 (76105622)|METHOD_EXIT|[88]|01p6F000009rYF7|Eway2Payment.setTransactionNo(String)
+14:48:32.0 (76110301)|STATEMENT_EXECUTE|[89]
+14:48:32.0 (76121412)|VARIABLE_ASSIGNMENT|[89]|this.customerToken|"962672971866"|0x1ca1fe43
+14:48:32.0 (76126785)|STATEMENT_EXECUTE|[93]
+14:48:32.0 (76138665)|METHOD_ENTRY|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:48:32.0 (76153666)|VARIABLE_SCOPE_BEGIN|[410]|this|Eway2Payment|true|false
+14:48:32.0 (76230813)|VARIABLE_ASSIGNMENT|[410]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (76244559)|VARIABLE_SCOPE_BEGIN|[410]|customerIP|String|false|false
+14:48:32.0 (76252274)|VARIABLE_ASSIGNMENT|[410]|customerIP|null
+14:48:32.0 (76264631)|HEAP_ALLOCATE|[411]|Bytes:5
+14:48:32.0 (76268875)|STATEMENT_EXECUTE|[410]
+14:48:32.0 (76270381)|STATEMENT_EXECUTE|[411]
+14:48:32.0 (76280713)|VARIABLE_ASSIGNMENT|[411]|this.customerIP|null|0x1ca1fe43
+14:48:32.0 (76290171)|METHOD_EXIT|[93]|01p6F000009rYF7|Eway2Payment.setCustomerIP(String)
+14:48:32.0 (76434299)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (76466091)|STATEMENT_EXECUTE|[95]
+14:48:32.0 (76473971)|STATEMENT_EXECUTE|[99]
+14:48:32.0 (76486020)|METHOD_EXIT|[378]|01p6F000009rYF7|Eway2Payment.loadFromGateway(paymentGateway)
+14:48:32.0 (76496309)|VARIABLE_SCOPE_BEGIN|[378]|eway|Eway2Payment|true|false
+14:48:32.0 (76580281)|VARIABLE_ASSIGNMENT|[378]|eway|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (76600123)|STATEMENT_EXECUTE|[379]
+14:48:32.0 (76610975)|VARIABLE_SCOPE_BEGIN|[379]|ewayResp|Eway2Response|true|false
+14:48:32.0 (76620718)|VARIABLE_ASSIGNMENT|[379]|ewayResp|null|
+14:48:32.0 (76743177)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"amount":99.00,"bjbCompany":"0x365b4ecc","cardCVN":"","cardExpiryMonth":"09","cardExpiryYear":"2022","cardHoldersName":"Mahima a Miazi","currencyIsoCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"AU","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerInvoiceDescription":"000972127","customerInvoiceRef":"000972127","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gateway":"Eway2","isRefund":false,"paymentAttempt":"0x11ae2512","testGateway":0,"transactionNo":"","uniqueAttemptId":"a0F6F00000uikSuUAI"}|0x1c5a14ef
+14:48:32.0 (76764930)|STATEMENT_EXECUTE|[383]
+14:48:32.0 (76766750)|STATEMENT_EXECUTE|[384]
+14:48:32.0 (76778911)|METHOD_ENTRY|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:48:32.0 (76793940)|VARIABLE_SCOPE_BEGIN|[204]|this|Eway2Payment|true|false
+14:48:32.0 (76869001)|VARIABLE_ASSIGNMENT|[204]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (76888744)|HEAP_ALLOCATE|[205]|Bytes:5
+14:48:32.0 (76893951)|STATEMENT_EXECUTE|[204]
+14:48:32.0 (76895586)|STATEMENT_EXECUTE|[205]
+14:48:32.0 (76902874)|HEAP_ALLOCATE|[205]|Bytes:14
+14:48:32.0 (76914638)|VARIABLE_ASSIGNMENT|[205]|this.command|"ProcessPayment"|0x1ca1fe43
+14:48:32.0 (76919976)|STATEMENT_EXECUTE|[208]
+14:48:32.0 (76931385)|METHOD_ENTRY|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:48:32.0 (76944758)|VARIABLE_SCOPE_BEGIN|[415]|this|Eway2Payment|true|false
+14:48:32.0 (77022117)|VARIABLE_ASSIGNMENT|[415]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","command":"ProcessPayment","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (77042785)|HEAP_ALLOCATE|[417]|Bytes:5
+14:48:32.0 (77047449)|STATEMENT_EXECUTE|[415]
+14:48:32.0 (77049007)|STATEMENT_EXECUTE|[417]
+14:48:32.0 (77055652)|HEAP_ALLOCATE|[417]|Bytes:11
+14:48:32.0 (77073179)|METHOD_ENTRY|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:48:32.0 (77087319)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:48:32.0 (77143603)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","command":"ProcessPayment","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (77156585)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:48:32.0 (77164629)|VARIABLE_ASSIGNMENT|[436]|field|"merchTxnRef"
+14:48:32.0 (77168608)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:48:32.0 (77175973)|VARIABLE_ASSIGNMENT|[436]|value|"000972127"
+14:48:32.0 (77180440)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:48:32.0 (77186970)|VARIABLE_ASSIGNMENT|[436]|length|40
+14:48:32.0 (77192711)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:48:32.0 (77199862)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:48:32.0 (77207270)|HEAP_ALLOCATE|[437]|Bytes:5
+14:48:32.0 (77211503)|STATEMENT_EXECUTE|[436]
+14:48:32.0 (77213020)|STATEMENT_EXECUTE|[437]
+14:48:32.0 (77219500)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:48:32.0 (77228169)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:48:32.0 (77232466)|STATEMENT_EXECUTE|[439]
+14:48:32.0 (77233958)|STATEMENT_EXECUTE|[439]
+14:48:32.0 (77235373)|STATEMENT_EXECUTE|[440]
+14:48:32.0 (77264940)|HEAP_ALLOCATE|[440]|Bytes:9
+14:48:32.0 (77286637)|VARIABLE_ASSIGNMENT|[440]|value|"000972127"
+14:48:32.0 (77295746)|STATEMENT_EXECUTE|[442]
+14:48:32.0 (77322538)|STATEMENT_EXECUTE|[448]
+14:48:32.0 (77327547)|STATEMENT_EXECUTE|[455]
+14:48:32.0 (77356577)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:48:32.0 (77371441)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:48:32.0 (77399003)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x7bda03cd"}|0x285c5bbc
+14:48:32.0 (77409890)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:48:32.0 (77420404)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:48:32.0 (77430479)|HEAP_ALLOCATE|[23]|Bytes:5
+14:48:32.0 (77435040)|STATEMENT_EXECUTE|[22]
+14:48:32.0 (77437271)|STATEMENT_EXECUTE|[23]
+14:48:32.0 (77447854)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:48:32.0 (77452672)|STATEMENT_EXECUTE|[457]
+14:48:32.0 (77459906)|METHOD_EXIT|[417]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:48:32.0 (77464965)|STATEMENT_EXECUTE|[418]
+14:48:32.0 (77469912)|HEAP_ALLOCATE|[418]|Bytes:9
+14:48:32.0 (77480012)|METHOD_ENTRY|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:48:32.0 (77490272)|VARIABLE_SCOPE_BEGIN|[436]|this|Eway2Payment|true|false
+14:48:32.0 (77551246)|VARIABLE_ASSIGNMENT|[436]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","command":"ProcessPayment","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (77563359)|VARIABLE_SCOPE_BEGIN|[436]|field|String|false|false
+14:48:32.0 (77571241)|VARIABLE_ASSIGNMENT|[436]|field|"orderInfo"
+14:48:32.0 (77574797)|VARIABLE_SCOPE_BEGIN|[436]|value|String|false|false
+14:48:32.0 (77581727)|VARIABLE_ASSIGNMENT|[436]|value|"000972127"
+14:48:32.0 (77585670)|VARIABLE_SCOPE_BEGIN|[436]|length|Integer|false|false
+14:48:32.0 (77593001)|VARIABLE_ASSIGNMENT|[436]|length|64
+14:48:32.0 (77597940)|VARIABLE_SCOPE_BEGIN|[436]|required|Boolean|false|false
+14:48:32.0 (77605878)|VARIABLE_ASSIGNMENT|[436]|required|false
+14:48:32.0 (77619911)|HEAP_ALLOCATE|[437]|Bytes:5
+14:48:32.0 (77627356)|STATEMENT_EXECUTE|[436]
+14:48:32.0 (77629232)|STATEMENT_EXECUTE|[437]
+14:48:32.0 (77638245)|VARIABLE_SCOPE_BEGIN|[437]|error|String|false|false
+14:48:32.0 (77649607)|VARIABLE_ASSIGNMENT|[437]|error|null
+14:48:32.0 (77655575)|STATEMENT_EXECUTE|[439]
+14:48:32.0 (77657606)|STATEMENT_EXECUTE|[439]
+14:48:32.0 (77659483)|STATEMENT_EXECUTE|[440]
+14:48:32.0 (77679111)|HEAP_ALLOCATE|[440]|Bytes:9
+14:48:32.0 (77696820)|VARIABLE_ASSIGNMENT|[440]|value|"000972127"
+14:48:32.0 (77704305)|STATEMENT_EXECUTE|[442]
+14:48:32.0 (77725650)|STATEMENT_EXECUTE|[448]
+14:48:32.0 (77731669)|STATEMENT_EXECUTE|[455]
+14:48:32.0 (77743248)|METHOD_ENTRY|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:48:32.0 (77751978)|VARIABLE_SCOPE_BEGIN|[22]|this|Eway2Response|true|false
+14:48:32.0 (77776758)|VARIABLE_ASSIGNMENT|[22]|this|{"params":"0x7bda03cd"}|0x285c5bbc
+14:48:32.0 (77785218)|VARIABLE_SCOPE_BEGIN|[22]|error|String|false|false
+14:48:32.0 (77796621)|VARIABLE_ASSIGNMENT|[22]|error|null
+14:48:32.0 (77807931)|HEAP_ALLOCATE|[23]|Bytes:5
+14:48:32.0 (77813607)|STATEMENT_EXECUTE|[22]
+14:48:32.0 (77816491)|STATEMENT_EXECUTE|[23]
+14:48:32.0 (77828031)|METHOD_EXIT|[455]|01p6F000009rYF8|Eway2Response.setErrors(String)
+14:48:32.0 (77835557)|STATEMENT_EXECUTE|[457]
+14:48:32.0 (77845097)|METHOD_EXIT|[418]|01p6F000009rYF7|Eway2Payment.checkValue(String, String, Integer, Boolean)
+14:48:32.0 (77891700)|STATEMENT_EXECUTE|[420]
+14:48:32.0 (77903193)|HEAP_ALLOCATE|[428]|Bytes:6
+14:48:32.0 (77921985)|STATEMENT_EXECUTE|[428]
+14:48:32.0 (77927645)|STATEMENT_EXECUTE|[432]
+14:48:32.0 (77945432)|METHOD_ENTRY|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:32.0 (77963616)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:48:32.0 (77988874)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x7bda03cd"}|0x285c5bbc
+14:48:32.0 (78003515)|HEAP_ALLOCATE|[60]|Bytes:5
+14:48:32.0 (78010020)|STATEMENT_EXECUTE|[59]
+14:48:32.0 (78012298)|STATEMENT_EXECUTE|[60]
+14:48:32.0 (78022635)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:48:32.0 (78036784)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:48:32.0 (78101916)|STATEMENT_EXECUTE|[62]
+14:48:32.0 (78104996)|STATEMENT_EXECUTE|[64]
+14:48:32.0 (78117506)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:48:32.0 (78125358)|STATEMENT_EXECUTE|[74]
+14:48:32.0 (78136554)|METHOD_EXIT|[432]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:32.0 (78148319)|HEAP_ALLOCATE|[432]|Bytes:5
+14:48:32.0 (78157708)|METHOD_EXIT|[208]|01p6F000009rYF7|Eway2Payment.validate()
+14:48:32.0 (78172002)|METHOD_ENTRY|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:32.0 (78186629)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:48:32.0 (78213922)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x7bda03cd"}|0x285c5bbc
+14:48:32.0 (78228526)|HEAP_ALLOCATE|[60]|Bytes:5
+14:48:32.0 (78233917)|STATEMENT_EXECUTE|[59]
+14:48:32.0 (78235884)|STATEMENT_EXECUTE|[60]
+14:48:32.0 (78244505)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:48:32.0 (78256662)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:48:32.0 (78273788)|STATEMENT_EXECUTE|[62]
+14:48:32.0 (78275923)|STATEMENT_EXECUTE|[64]
+14:48:32.0 (78284375)|VARIABLE_ASSIGNMENT|[64]|errorMessage|null
+14:48:32.0 (78290600)|STATEMENT_EXECUTE|[74]
+14:48:32.0 (78300003)|METHOD_EXIT|[210]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:32.0 (78307671)|STATEMENT_EXECUTE|[210]
+14:48:32.0 (78313340)|STATEMENT_EXECUTE|[216]
+14:48:32.0 (78331031)|HEAP_ALLOCATE|[216]|Bytes:4
+14:48:32.0 (78364018)|VARIABLE_ASSIGNMENT|[216]|this.requestParams|{}|0x1ca1fe43
+14:48:32.0 (78372536)|STATEMENT_EXECUTE|[217]
+14:48:32.0 (78383174)|HEAP_ALLOCATE|[217]|Bytes:6
+14:48:32.0 (78436372)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78449055)|STATEMENT_EXECUTE|[218]
+14:48:32.0 (78459028)|HEAP_ALLOCATE|[218]|Bytes:19
+14:48:32.0 (78497292)|HEAP_ALLOCATE|[218]|Bytes:4
+14:48:32.0 (78515835)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78523175)|STATEMENT_EXECUTE|[219]
+14:48:32.0 (78531615)|HEAP_ALLOCATE|[219]|Bytes:20
+14:48:32.0 (78558537)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78568439)|STATEMENT_EXECUTE|[220]
+14:48:32.0 (78577960)|HEAP_ALLOCATE|[220]|Bytes:21
+14:48:32.0 (78605035)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78614283)|STATEMENT_EXECUTE|[221]
+14:48:32.0 (78622593)|HEAP_ALLOCATE|[221]|Bytes:26
+14:48:32.0 (78646584)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78655157)|STATEMENT_EXECUTE|[222]
+14:48:32.0 (78664246)|HEAP_ALLOCATE|[222]|Bytes:24
+14:48:32.0 (78689036)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78710992)|STATEMENT_EXECUTE|[224]
+14:48:32.0 (78713653)|STATEMENT_EXECUTE|[226]
+14:48:32.0 (78722138)|HEAP_ALLOCATE|[226]|Bytes:15
+14:48:32.0 (78728872)|HEAP_ALLOCATE|[226]|Bytes:9
+14:48:32.0 (78752649)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78761637)|STATEMENT_EXECUTE|[227]
+14:48:32.0 (78770079)|HEAP_ALLOCATE|[227]|Bytes:24
+14:48:32.0 (78794331)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+14:48:32.0 (78806047)|STATEMENT_EXECUTE|[246]
+14:48:32.0 (78818067)|STATEMENT_EXECUTE|[265]
+14:48:32.0 (78820382)|STATEMENT_EXECUTE|[267]
+14:48:32.0 (78835234)|METHOD_ENTRY|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:48:32.0 (78853946)|VARIABLE_SCOPE_BEGIN|[461]|this|Eway2Payment|true|false
+14:48:32.0 (78947609)|VARIABLE_ASSIGNMENT|[461]|this|{"amount":9900,"cardCvc":"","cardExpiryMonth":"09","cardExpiryYear":"22","cardName":"Mahima a Miazi","command":"ProcessPayment","currencyCode":"AUD","customerCity":"Werribee","customerCompanyName":"Western Services Mel (6 more) ...","customerCountrycode":"au","customerEmail":"info@westernservices (7 more) ...","customerFirstName":"Joyanta","customerLastName":"Malo","customerPostcode":"3030","customerState":"VIC","customerStreet":"2 Pioneer Court","customerToken":"962672971866","gatewayUrl":"https://api.ewaypaym (20 more) ...","merchantId":"F9802AULee2iddqRMaI7 (50 more) ...","merchantName":"Eway Rapid SLX AU","merchTxnRef":"000972127","orderInfo":"000972127","password":"KY0jzPzu","requestParams":"0x42980c60","response":"0x285c5bbc","transactionNo":""}|0x1ca1fe43
+14:48:32.0 (78976219)|HEAP_ALLOCATE|[463]|Bytes:5
+14:48:32.0 (78982559)|STATEMENT_EXECUTE|[461]
+14:48:32.0 (78984969)|STATEMENT_EXECUTE|[463]
+14:48:32.0 (79012195)|METHOD_ENTRY|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:48:32.0 (79030804)|VARIABLE_SCOPE_BEGIN|[118]|params|Map<String,String>|true|false
+14:48:32.0 (79050114)|VARIABLE_ASSIGNMENT|[118]|params|"Map of size 8 too large to display"|0x42980c60
+14:48:32.0 (79062726)|HEAP_ALLOCATE|[120]|Bytes:5
+14:48:32.0 (79068608)|STATEMENT_EXECUTE|[118]
+14:48:32.0 (79070776)|STATEMENT_EXECUTE|[120]
+14:48:32.0 (79079931)|VARIABLE_SCOPE_BEGIN|[120]|queryString|String|false|false
+14:48:32.0 (79093016)|VARIABLE_ASSIGNMENT|[120]|queryString|""
+14:48:32.0 (79115354)|HEAP_ALLOCATE|[121]|Bytes:4
+14:48:32.0 (79237353)|HEAP_ALLOCATE|[121]|Bytes:191
+14:48:32.0 (79263514)|HEAP_ALLOCATE|[121]|Bytes:32
+14:48:32.0 (79296409)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (79315409)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (79330620)|VARIABLE_ASSIGNMENT|[121]|key|"Method"
+14:48:32.0 (79337935)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (79375726)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (79384532)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (79422617)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (79438054)|VARIABLE_ASSIGNMENT|[126]|value|"ProcessPayment"
+14:48:32.0 (79444730)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (79450954)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (79457620)|HEAP_ALLOCATE|[132]|Bytes:1
+14:48:32.0 (79464576)|HEAP_ALLOCATE|[132]|Bytes:5
+14:48:32.0 (79511742)|HEAP_ALLOCATE|[132]|Bytes:15
+14:48:32.0 (79526963)|SYSTEM_METHOD_ENTRY|[1]|EncodingUtil.EncodingUtil()
+14:48:32.0 (79533056)|STATEMENT_EXECUTE|[1]
+14:48:32.0 (79543136)|SYSTEM_METHOD_EXIT|[1]|EncodingUtil
+14:48:32.0 (79557038)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (79625462)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (79638689)|HEAP_ALLOCATE|[132]|Bytes:21
+14:48:32.0 (79646945)|HEAP_ALLOCATE|[132]|Bytes:21
+14:48:32.0 (79660442)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (1 more) ..."
+14:48:32.0 (79676692)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (79691560)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (79705782)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.TotalAmount"
+14:48:32.0 (79711982)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (79733916)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (79736471)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (79746022)|HEAP_ALLOCATE|[123]|Bytes:1
+14:48:32.0 (79754457)|HEAP_ALLOCATE|[123]|Bytes:22
+14:48:32.0 (79765639)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (2 more) ..."
+14:48:32.0 (79772812)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (79792340)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (79805991)|VARIABLE_ASSIGNMENT|[126]|value|"9900"
+14:48:32.0 (79812080)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (79818127)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (79829497)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (79864075)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (79875022)|HEAP_ALLOCATE|[132]|Bytes:24
+14:48:32.0 (79882851)|HEAP_ALLOCATE|[132]|Bytes:46
+14:48:32.0 (79896070)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (26 more) ..."
+14:48:32.0 (79916056)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (79932875)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (79948158)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.CurrencyCode"
+14:48:32.0 (79955050)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (79979607)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (79982230)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (79994280)|HEAP_ALLOCATE|[123]|Bytes:47
+14:48:32.0 (80007967)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (27 more) ..."
+14:48:32.0 (80014839)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (80033429)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (80045889)|VARIABLE_ASSIGNMENT|[126]|value|"AUD"
+14:48:32.0 (80052120)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (80058776)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (80068911)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80101098)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80109083)|HEAP_ALLOCATE|[132]|Bytes:24
+14:48:32.0 (80115571)|HEAP_ALLOCATE|[132]|Bytes:71
+14:48:32.0 (80126328)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (51 more) ..."
+14:48:32.0 (80141158)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (80154129)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (80168455)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceNumbe (1 more) ..."
+14:48:32.0 (80173665)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (80193854)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (80196225)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (80206500)|HEAP_ALLOCATE|[123]|Bytes:72
+14:48:32.0 (80219568)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (52 more) ..."
+14:48:32.0 (80226148)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (80243748)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (80258395)|VARIABLE_ASSIGNMENT|[126]|value|"000972127"
+14:48:32.0 (80265711)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (80272140)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (80283417)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80344443)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80353876)|HEAP_ALLOCATE|[132]|Bytes:31
+14:48:32.0 (80360451)|HEAP_ALLOCATE|[132]|Bytes:103
+14:48:32.0 (80372041)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (83 more) ..."
+14:48:32.0 (80388345)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (80409054)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (80426413)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceDescr (6 more) ..."
+14:48:32.0 (80433516)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (80457071)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (80459843)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (80472118)|HEAP_ALLOCATE|[123]|Bytes:104
+14:48:32.0 (80486665)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (84 more) ..."
+14:48:32.0 (80493526)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (80512583)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (80526849)|VARIABLE_ASSIGNMENT|[126]|value|"000972127"
+14:48:32.0 (80533318)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (80539371)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (80550624)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80586730)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80596078)|HEAP_ALLOCATE|[132]|Bytes:36
+14:48:32.0 (80602824)|HEAP_ALLOCATE|[132]|Bytes:140
+14:48:32.0 (80615171)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (120 more) ..."
+14:48:32.0 (80632350)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (80647939)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (80664241)|VARIABLE_ASSIGNMENT|[121]|key|"Payment.InvoiceRefer (4 more) ..."
+14:48:32.0 (80670881)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (80693953)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (80696451)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (80708053)|HEAP_ALLOCATE|[123]|Bytes:141
+14:48:32.0 (80721764)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (121 more) ..."
+14:48:32.0 (80728185)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (80746717)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (80756285)|VARIABLE_ASSIGNMENT|[126]|value|"000972127"
+14:48:32.0 (80760569)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (80764500)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (80772086)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80795746)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80801643)|HEAP_ALLOCATE|[132]|Bytes:34
+14:48:32.0 (80806126)|HEAP_ALLOCATE|[132]|Bytes:175
+14:48:32.0 (80814582)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (155 more) ..."
+14:48:32.0 (80825414)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (80835074)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (80844288)|VARIABLE_ASSIGNMENT|[121]|key|"TransactionType"
+14:48:32.0 (80848322)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (80862212)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (80863917)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (80870868)|HEAP_ALLOCATE|[123]|Bytes:176
+14:48:32.0 (80878965)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (156 more) ..."
+14:48:32.0 (80883028)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (80892785)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (80901032)|VARIABLE_ASSIGNMENT|[126]|value|"Recurring"
+14:48:32.0 (80904837)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (80908129)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (80914085)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80933859)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (80938806)|HEAP_ALLOCATE|[132]|Bytes:25
+14:48:32.0 (80942594)|HEAP_ALLOCATE|[132]|Bytes:201
+14:48:32.0 (80949785)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (181 more) ..."
+14:48:32.0 (80958817)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (80967205)|VARIABLE_SCOPE_BEGIN|[121]|key|String|false|false
+14:48:32.0 (80977473)|VARIABLE_ASSIGNMENT|[121]|key|"Customer.TokenCustom (4 more) ..."
+14:48:32.0 (80981125)|STATEMENT_EXECUTE|[121]
+14:48:32.0 (80993135)|STATEMENT_EXECUTE|[122]
+14:48:32.0 (80994745)|STATEMENT_EXECUTE|[123]
+14:48:32.0 (81001032)|HEAP_ALLOCATE|[123]|Bytes:202
+14:48:32.0 (81010368)|VARIABLE_ASSIGNMENT|[123]|queryString|"Method=ProcessPaymen (182 more) ..."
+14:48:32.0 (81014274)|STATEMENT_EXECUTE|[126]
+14:48:32.0 (81023808)|VARIABLE_SCOPE_BEGIN|[126]|value|String|false|false
+14:48:32.0 (81032329)|VARIABLE_ASSIGNMENT|[126]|value|"962672971866"
+14:48:32.0 (81036223)|STATEMENT_EXECUTE|[127]
+14:48:32.0 (81039512)|STATEMENT_EXECUTE|[132]
+14:48:32.0 (81045298)|METHOD_ENTRY|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (81064506)|METHOD_EXIT|[132]||System.EncodingUtil.urlEncode(String, String)
+14:48:32.0 (81069226)|HEAP_ALLOCATE|[132]|Bytes:37
+14:48:32.0 (81073795)|HEAP_ALLOCATE|[132]|Bytes:239
+14:48:32.0 (81080525)|VARIABLE_ASSIGNMENT|[132]|queryString|"Method=ProcessPaymen (219 more) ..."
+14:48:32.0 (81089766)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:32.0 (81098183)|VARIABLE_ASSIGNMENT|[121]|key|null
+14:48:32.0 (81102610)|STATEMENT_EXECUTE|[135]
+14:48:32.0 (81114146)|METHOD_EXIT|[463]|01p6F000006uYhT|Utility.createQueryStringFromMap(Map<String,String>)
+14:48:32.0 (81134387)|VARIABLE_ASSIGNMENT|[463]|this.requestBody|"Method=ProcessPaymen (219 more) ..."|0x1ca1fe43
+14:48:32.0 (81147617)|METHOD_ENTRY|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:48:32.0 (81171087)|HEAP_ALLOCATE|[61]|Bytes:5
+14:48:32.0 (81176143)|STATEMENT_EXECUTE|[60]
+14:48:32.0 (81177905)|STATEMENT_EXECUTE|[61]
+14:48:32.0 (81184132)|HEAP_ALLOCATE|[61]|Bytes:46
+14:48:32.0 (81200326)|HEAP_ALLOCATE|[61]|Bytes:4
+14:48:32.0 (85321681)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:48:32.0 (87392719)|SOQL_EXECUTE_END|[61]|Rows:1
+14:48:32.0 (87437113)|HEAP_ALLOCATE|[61]|Bytes:8
+14:48:32.0 (87462504)|HEAP_ALLOCATE|[61]|Bytes:50
+14:48:32.0 (87581829)|HEAP_ALLOCATE|[61]|Bytes:8
+14:48:32.0 (87604809)|HEAP_ALLOCATE|[61]|Bytes:38
+14:48:32.0 (87674873)|HEAP_ALLOCATE|[61]|Bytes:12
+14:48:32.0 (87744754)|METHOD_EXIT|[465]|01p6F000006uYhT|Utility.runningInASandbox()
+14:48:32.0 (87761785)|STATEMENT_EXECUTE|[465]
+14:48:32.0 (87772878)|STATEMENT_EXECUTE|[470]
+14:48:32.0 (87805899)|VARIABLE_SCOPE_BEGIN|[470]|req|System.HttpRequest|true|false
+14:48:32.0 (87891126)|VARIABLE_ASSIGNMENT|[470]|req|"System.HttpRequest[Endpoint=null, Method=null]"|0x3d393d90
+14:48:32.0 (87902393)|STATEMENT_EXECUTE|[471]
+14:48:32.0 (87995803)|STATEMENT_EXECUTE|[472]
+14:48:32.0 (88006075)|HEAP_ALLOCATE|[472]|Bytes:4
+14:48:32.0 (88038870)|STATEMENT_EXECUTE|[473]
+14:48:32.0 (88046943)|HEAP_ALLOCATE|[473]|Bytes:13
+14:48:32.0 (88054245)|HEAP_ALLOCATE|[473]|Bytes:6
+14:48:32.0 (88062498)|HEAP_ALLOCATE|[473]|Bytes:1
+14:48:32.0 (88080513)|HEAP_ALLOCATE|[473]|Bytes:79
+14:48:32.0 (88171155)|HEAP_ALLOCATE|[473]|Bytes:4
+14:48:32.0 (88202948)|METHOD_ENTRY|[473]||System.EncodingUtil.base64Encode(Blob)
+14:48:32.0 (88276439)|METHOD_EXIT|[473]||System.EncodingUtil.base64Encode(Blob)
+14:48:32.0 (88288610)|HEAP_ALLOCATE|[473]|Bytes:114
+14:48:32.0 (88327495)|STATEMENT_EXECUTE|[474]
+14:48:32.0 (88340763)|HEAP_ALLOCATE|[474]|Bytes:17
+14:48:32.0 (88384801)|STATEMENT_EXECUTE|[475]
+14:48:32.0 (88428587)|STATEMENT_EXECUTE|[476]
+14:48:32.0 (88484687)|STATEMENT_EXECUTE|[479]
+14:48:32.0 (88504768)|VARIABLE_SCOPE_BEGIN|[479]|h|System.Http|true|false
+14:48:32.0 (88556146)|VARIABLE_ASSIGNMENT|[479]|h|"System.Http[]"|0x378249
+14:48:32.0 (88566510)|STATEMENT_EXECUTE|[480]
+14:48:32.0 (88637277)|CALLOUT_REQUEST|[480]|System.HttpRequest[Endpoint=https://api.ewaypayments.com/Transaction, Method=POST]
+14:48:34.785 (2785099531)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1356
+14:48:34.785 (2785243550)|CALLOUT_RESPONSE|[480]|System.HttpResponse[Status=OK, StatusCode=200]
+14:48:34.785 (2785275283)|HEAP_ALLOCATE|[480]|Bytes:893
+14:48:34.785 (2785318148)|VARIABLE_SCOPE_BEGIN|[480]|res|System.HttpResponse|true|false
+14:48:34.785 (2785430432)|VARIABLE_ASSIGNMENT|[480]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x7b806087
+14:48:34.785 (2785451630)|STATEMENT_EXECUTE|[482]
+14:48:34.785 (2785477036)|HEAP_ALLOCATE|[482]|Bytes:16
+14:48:34.785 (2785605515)|HEAP_ALLOCATE|[482]|Bytes:887
+14:48:34.785 (2785659071)|METHOD_ENTRY|[482]||System.EncodingUtil.urlDecode(String, String)
+14:48:34.785 (2785815029)|METHOD_EXIT|[482]||System.EncodingUtil.urlDecode(String, String)
+14:48:34.785 (2785834563)|HEAP_ALLOCATE|[482]|Bytes:903
+14:48:34.785 (2785860523)|USER_DEBUG|[482]|DEBUG|Eway2 Response: {"AuthorisationCode":"","ResponseCode":"51","ResponseMessage":"D4451","TransactionID":303147094,"TransactionStatus":false,"TransactionType":"Recurring","BeagleScore":0.10,"Verification":{"CVN":0,"Address":0,"Email":0,"Mobile":0,"Phone":0},"Customer":{"CardDetails":{"Number":"462239XXXXXX3059","Name":"Mahima a Miazi","ExpiryMonth":"09","ExpiryYear":"22","StartMonth":"","StartYear":"","IssueNumber":""},"TokenCustomerID":962672971866,"Reference":"","Title":"Mr.","FirstName":"Mahima a Miazi","LastName":"Mahima a Miazi","CompanyName":"Western Services Melbourne","JobDescription":"","Street1":"","Street2":"","City":"","State":"","PostalCode":"","Country":"au","Email":"","Phone":"","Mobile":"","Comments":"","Fax":"","Url":""},"Payment":{"TotalAmount":9900,"InvoiceNumber":"000972127","InvoiceDescription":"000972127","InvoiceReference":"000972127","CurrencyCode":"AUD"},"Errors":null}
+14:48:34.785 (2785893673)|STATEMENT_EXECUTE|[484]
+14:48:34.785 (2785937262)|METHOD_ENTRY|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:48:34.785 (2785985303)|VARIABLE_SCOPE_BEGIN|[10]|this|Eway2Response|true|false
+14:48:34.785 (2786050686)|VARIABLE_ASSIGNMENT|[10]|this|{"params":"0x7bda03cd"}|0x285c5bbc
+14:48:34.785 (2786063649)|VARIABLE_SCOPE_BEGIN|[10]|res|System.HttpResponse|true|false
+14:48:34.785 (2786132157)|VARIABLE_ASSIGNMENT|[10]|res|"System.HttpResponse[Status=OK, StatusCode=200]"|0x7b806087
+14:48:34.785 (2786157333)|HEAP_ALLOCATE|[12]|Bytes:5
+14:48:34.785 (2786165868)|STATEMENT_EXECUTE|[10]
+14:48:34.785 (2786235850)|STATEMENT_EXECUTE|[12]
+14:48:34.785 (2786248422)|STATEMENT_EXECUTE|[16]
+14:48:34.785 (2786350544)|HEAP_ALLOCATE|[16]|Bytes:887
+14:48:34.785 (2786385909)|VARIABLE_ASSIGNMENT|[16]|this.responseBody|"{\"AuthorisationCode\" (867 more) ..."|0x285c5bbc
+14:48:34.785 (2786396202)|STATEMENT_EXECUTE|[17]
+14:48:34.785 (2786523944)|HEAP_ALLOCATE|[17]|Bytes:24
+14:48:34.785 (2786546936)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+14:48:34.785 (2786553178)|STATEMENT_EXECUTE|[1]
+14:48:34.785 (2786566147)|SYSTEM_METHOD_EXIT|[1]|JSON
+14:48:34.785 (2786588453)|METHOD_ENTRY|[17]||System.JSON.deserializeUntyped(String)
+14:48:34.785 (2788709826)|HEAP_ALLOCATE|[74]|Bytes:4
+14:48:34.785 (2788757159)|HEAP_ALLOCATE|[11]|Bytes:12
+14:48:34.785 (2792281406)|METHOD_EXIT|[17]||System.JSON.deserializeUntyped(String)
+14:48:34.785 (2792421125)|VARIABLE_ASSIGNMENT|[17]|this.params|"Map of size 11 too large to display"|0x285c5bbc
+14:48:34.785 (2792441925)|STATEMENT_EXECUTE|[19]
+14:48:34.785 (2792468203)|HEAP_ALLOCATE|[19]|Bytes:8
+14:48:34.785 (2792484862)|HEAP_ALLOCATE|[19]|Bytes:6
+14:48:34.785 (2792616093)|HEAP_ALLOCATE|[19]|Bytes:12
+14:48:34.785 (2792646350)|USER_DEBUG|[19]|DEBUG|Errors: null
+14:48:34.785 (2792677395)|METHOD_EXIT|[484]|01p6F000009rYF8|Eway2Response.loadResponse(System.HttpResponse)
+14:48:34.785 (2792686090)|STATEMENT_EXECUTE|[486]
+14:48:34.785 (2792698529)|HEAP_ALLOCATE|[486]|Bytes:21
+14:48:34.785 (2792726014)|METHOD_ENTRY|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:34.785 (2792749760)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:48:34.785 (2792805530)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2792830090)|HEAP_ALLOCATE|[60]|Bytes:5
+14:48:34.785 (2792840772)|STATEMENT_EXECUTE|[59]
+14:48:34.785 (2792843385)|STATEMENT_EXECUTE|[60]
+14:48:34.785 (2792858019)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:48:34.785 (2792878380)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:48:34.785 (2792901727)|STATEMENT_EXECUTE|[65]
+14:48:34.785 (2792904168)|STATEMENT_EXECUTE|[67]
+14:48:34.785 (2792920452)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2792941768)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:48:34.785 (2792973165)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2792990477)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:34.785 (2792997204)|STATEMENT_EXECUTE|[43]
+14:48:34.785 (2792999443)|STATEMENT_EXECUTE|[45]
+14:48:34.785 (2793044177)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:48:34.785 (2793060928)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:48:34.785 (2793068927)|STATEMENT_EXECUTE|[48]
+14:48:34.785 (2793071007)|STATEMENT_EXECUTE|[49]
+14:48:34.785 (2793081530)|HEAP_ALLOCATE|[49]|Bytes:15
+14:48:34.785 (2793120140)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:48:34.785 (2793129301)|STATEMENT_EXECUTE|[52]
+14:48:34.785 (2793131518)|STATEMENT_EXECUTE|[54]
+14:48:34.785 (2793140783)|HEAP_ALLOCATE|[54]|Bytes:1
+14:48:34.785 (2793211499)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:34.785 (2793221944)|HEAP_ALLOCATE|[54]|Bytes:8
+14:48:34.785 (2793255739)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:48:34.785 (2793264131)|STATEMENT_EXECUTE|[56]
+14:48:34.785 (2793279988)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2793289932)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:48:34.785 (2793302950)|VARIABLE_ASSIGNMENT|[67]|errorCode|"D4451"
+14:48:34.785 (2793309779)|STATEMENT_EXECUTE|[69]
+14:48:34.785 (2793311861)|STATEMENT_EXECUTE|[70]
+14:48:34.785 (2793331035)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:48:34.785 (2793356517)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:48:34.785 (2793402227)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2793414822)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:48:34.785 (2793427113)|VARIABLE_ASSIGNMENT|[78]|errorCode|"D4451"
+14:48:34.785 (2793442529)|HEAP_ALLOCATE|[80]|Bytes:5
+14:48:34.785 (2793451148)|STATEMENT_EXECUTE|[78]
+14:48:34.785 (2793453449)|STATEMENT_EXECUTE|[80]
+14:48:34.785 (2793484912)|HEAP_ALLOCATE|[80]|Bytes:4
+14:48:34.785 (2793502123)|HEAP_ALLOCATE|[81]|Bytes:5
+14:48:34.785 (2793508300)|HEAP_ALLOCATE|[81]|Bytes:20
+14:48:34.785 (2793551390)|HEAP_ALLOCATE|[82]|Bytes:5
+14:48:34.785 (2793558141)|HEAP_ALLOCATE|[82]|Bytes:26
+14:48:34.785 (2793569995)|HEAP_ALLOCATE|[83]|Bytes:5
+14:48:34.785 (2793575298)|HEAP_ALLOCATE|[83]|Bytes:27
+14:48:34.785 (2793586340)|HEAP_ALLOCATE|[84]|Bytes:5
+14:48:34.785 (2793591872)|HEAP_ALLOCATE|[84]|Bytes:13
+14:48:34.785 (2793603080)|HEAP_ALLOCATE|[85]|Bytes:5
+14:48:34.785 (2793609235)|HEAP_ALLOCATE|[85]|Bytes:24
+14:48:34.785 (2793631973)|HEAP_ALLOCATE|[86]|Bytes:5
+14:48:34.785 (2793637482)|HEAP_ALLOCATE|[86]|Bytes:15
+14:48:34.785 (2793648518)|HEAP_ALLOCATE|[87]|Bytes:5
+14:48:34.785 (2793654295)|HEAP_ALLOCATE|[87]|Bytes:24
+14:48:34.785 (2793666508)|HEAP_ALLOCATE|[88]|Bytes:5
+14:48:34.785 (2793671656)|HEAP_ALLOCATE|[88]|Bytes:11
+14:48:34.785 (2793683122)|HEAP_ALLOCATE|[89]|Bytes:5
+14:48:34.785 (2793688015)|HEAP_ALLOCATE|[89]|Bytes:12
+14:48:34.785 (2793698967)|HEAP_ALLOCATE|[90]|Bytes:5
+14:48:34.785 (2793704277)|HEAP_ALLOCATE|[90]|Bytes:13
+14:48:34.785 (2793714996)|HEAP_ALLOCATE|[91]|Bytes:5
+14:48:34.785 (2793720567)|HEAP_ALLOCATE|[91]|Bytes:5
+14:48:34.785 (2793731567)|HEAP_ALLOCATE|[92]|Bytes:5
+14:48:34.785 (2793737138)|HEAP_ALLOCATE|[92]|Bytes:21
+14:48:34.785 (2793747983)|HEAP_ALLOCATE|[93]|Bytes:5
+14:48:34.785 (2793753574)|HEAP_ALLOCATE|[93]|Bytes:19
+14:48:34.785 (2793765799)|HEAP_ALLOCATE|[94]|Bytes:5
+14:48:34.785 (2793771255)|HEAP_ALLOCATE|[94]|Bytes:19
+14:48:34.785 (2793786075)|HEAP_ALLOCATE|[95]|Bytes:5
+14:48:34.785 (2793793120)|HEAP_ALLOCATE|[95]|Bytes:14
+14:48:34.785 (2793803797)|HEAP_ALLOCATE|[96]|Bytes:5
+14:48:34.785 (2793808414)|HEAP_ALLOCATE|[96]|Bytes:19
+14:48:34.785 (2793815677)|HEAP_ALLOCATE|[97]|Bytes:5
+14:48:34.785 (2793819125)|HEAP_ALLOCATE|[97]|Bytes:9
+14:48:34.785 (2793826442)|HEAP_ALLOCATE|[98]|Bytes:5
+14:48:34.785 (2793830482)|HEAP_ALLOCATE|[98]|Bytes:15
+14:48:34.785 (2793837602)|HEAP_ALLOCATE|[99]|Bytes:5
+14:48:34.785 (2793842174)|HEAP_ALLOCATE|[99]|Bytes:25
+14:48:34.785 (2793854389)|HEAP_ALLOCATE|[100]|Bytes:5
+14:48:34.785 (2793860369)|HEAP_ALLOCATE|[100]|Bytes:15
+14:48:34.785 (2793873452)|HEAP_ALLOCATE|[101]|Bytes:5
+14:48:34.785 (2793883956)|HEAP_ALLOCATE|[101]|Bytes:21
+14:48:34.785 (2793895446)|HEAP_ALLOCATE|[102]|Bytes:5
+14:48:34.785 (2793899628)|HEAP_ALLOCATE|[102]|Bytes:28
+14:48:34.785 (2793906803)|HEAP_ALLOCATE|[103]|Bytes:5
+14:48:34.785 (2793911174)|HEAP_ALLOCATE|[103]|Bytes:31
+14:48:34.785 (2793920250)|HEAP_ALLOCATE|[104]|Bytes:5
+14:48:34.785 (2793924696)|HEAP_ALLOCATE|[104]|Bytes:12
+14:48:34.785 (2793932041)|HEAP_ALLOCATE|[105]|Bytes:5
+14:48:34.785 (2793935341)|HEAP_ALLOCATE|[105]|Bytes:28
+14:48:34.785 (2793943285)|HEAP_ALLOCATE|[106]|Bytes:5
+14:48:34.785 (2793946625)|HEAP_ALLOCATE|[106]|Bytes:21
+14:48:34.785 (2793953887)|HEAP_ALLOCATE|[107]|Bytes:5
+14:48:34.785 (2793957568)|HEAP_ALLOCATE|[107]|Bytes:28
+14:48:34.785 (2793964582)|HEAP_ALLOCATE|[108]|Bytes:5
+14:48:34.785 (2793968090)|HEAP_ALLOCATE|[108]|Bytes:44
+14:48:34.785 (2793979193)|HEAP_ALLOCATE|[109]|Bytes:5
+14:48:34.785 (2793984742)|HEAP_ALLOCATE|[109]|Bytes:28
+14:48:34.785 (2793996903)|HEAP_ALLOCATE|[110]|Bytes:5
+14:48:34.785 (2794003059)|HEAP_ALLOCATE|[110]|Bytes:49
+14:48:34.785 (2794015615)|HEAP_ALLOCATE|[111]|Bytes:5
+14:48:34.785 (2794020048)|HEAP_ALLOCATE|[111]|Bytes:27
+14:48:34.785 (2794031731)|HEAP_ALLOCATE|[112]|Bytes:5
+14:48:34.785 (2794037507)|HEAP_ALLOCATE|[112]|Bytes:17
+14:48:34.785 (2794050194)|HEAP_ALLOCATE|[113]|Bytes:5
+14:48:34.785 (2794056325)|HEAP_ALLOCATE|[113]|Bytes:22
+14:48:34.785 (2794068766)|HEAP_ALLOCATE|[114]|Bytes:5
+14:48:34.785 (2794074064)|HEAP_ALLOCATE|[114]|Bytes:9
+14:48:34.785 (2794085361)|HEAP_ALLOCATE|[115]|Bytes:5
+14:48:34.785 (2794089572)|HEAP_ALLOCATE|[115]|Bytes:20
+14:48:34.785 (2794097359)|HEAP_ALLOCATE|[116]|Bytes:5
+14:48:34.785 (2794101122)|HEAP_ALLOCATE|[116]|Bytes:11
+14:48:34.785 (2794108674)|HEAP_ALLOCATE|[117]|Bytes:5
+14:48:34.785 (2794115438)|HEAP_ALLOCATE|[117]|Bytes:21
+14:48:34.785 (2794123756)|HEAP_ALLOCATE|[118]|Bytes:5
+14:48:34.785 (2794128684)|HEAP_ALLOCATE|[118]|Bytes:31
+14:48:34.785 (2794136850)|HEAP_ALLOCATE|[119]|Bytes:5
+14:48:34.785 (2794142540)|HEAP_ALLOCATE|[119]|Bytes:18
+14:48:34.785 (2794154337)|HEAP_ALLOCATE|[120]|Bytes:5
+14:48:34.785 (2794159627)|HEAP_ALLOCATE|[120]|Bytes:17
+14:48:34.785 (2794190194)|HEAP_ALLOCATE|[121]|Bytes:5
+14:48:34.785 (2794198052)|HEAP_ALLOCATE|[121]|Bytes:18
+14:48:34.785 (2794211779)|HEAP_ALLOCATE|[122]|Bytes:5
+14:48:34.785 (2794216856)|HEAP_ALLOCATE|[122]|Bytes:12
+14:48:34.785 (2794228256)|HEAP_ALLOCATE|[123]|Bytes:5
+14:48:34.785 (2794234015)|HEAP_ALLOCATE|[123]|Bytes:13
+14:48:34.785 (2794244625)|HEAP_ALLOCATE|[124]|Bytes:5
+14:48:34.785 (2794249470)|HEAP_ALLOCATE|[124]|Bytes:14
+14:48:34.785 (2794260488)|HEAP_ALLOCATE|[125]|Bytes:5
+14:48:34.785 (2794266215)|HEAP_ALLOCATE|[125]|Bytes:36
+14:48:34.785 (2794278777)|HEAP_ALLOCATE|[126]|Bytes:5
+14:48:34.785 (2794284253)|HEAP_ALLOCATE|[126]|Bytes:34
+14:48:34.785 (2794296117)|HEAP_ALLOCATE|[127]|Bytes:5
+14:48:34.785 (2794302154)|HEAP_ALLOCATE|[127]|Bytes:15
+14:48:34.785 (2794314003)|HEAP_ALLOCATE|[128]|Bytes:5
+14:48:34.785 (2794329372)|HEAP_ALLOCATE|[128]|Bytes:25
+14:48:34.785 (2794343095)|HEAP_ALLOCATE|[129]|Bytes:5
+14:48:34.785 (2794349250)|HEAP_ALLOCATE|[129]|Bytes:24
+14:48:34.785 (2794364506)|HEAP_ALLOCATE|[130]|Bytes:5
+14:48:34.785 (2794376207)|HEAP_ALLOCATE|[130]|Bytes:15
+14:48:34.785 (2794389857)|HEAP_ALLOCATE|[131]|Bytes:5
+14:48:34.785 (2794395615)|HEAP_ALLOCATE|[131]|Bytes:18
+14:48:34.785 (2794427706)|HEAP_ALLOCATE|[132]|Bytes:5
+14:48:34.785 (2794435026)|HEAP_ALLOCATE|[132]|Bytes:25
+14:48:34.785 (2794449147)|HEAP_ALLOCATE|[133]|Bytes:5
+14:48:34.785 (2794455095)|HEAP_ALLOCATE|[133]|Bytes:35
+14:48:34.785 (2794467429)|HEAP_ALLOCATE|[134]|Bytes:5
+14:48:34.785 (2794473720)|HEAP_ALLOCATE|[134]|Bytes:12
+14:48:34.785 (2794487346)|HEAP_ALLOCATE|[135]|Bytes:5
+14:48:34.785 (2794493501)|HEAP_ALLOCATE|[135]|Bytes:18
+14:48:34.785 (2794505438)|HEAP_ALLOCATE|[136]|Bytes:5
+14:48:34.785 (2794511020)|HEAP_ALLOCATE|[136]|Bytes:20
+14:48:34.785 (2794523295)|HEAP_ALLOCATE|[137]|Bytes:5
+14:48:34.785 (2794529504)|HEAP_ALLOCATE|[137]|Bytes:19
+14:48:34.785 (2794543550)|HEAP_ALLOCATE|[138]|Bytes:5
+14:48:34.785 (2794548936)|HEAP_ALLOCATE|[138]|Bytes:23
+14:48:34.785 (2794561695)|HEAP_ALLOCATE|[139]|Bytes:5
+14:48:34.785 (2794567801)|HEAP_ALLOCATE|[139]|Bytes:27
+14:48:34.785 (2794583567)|HEAP_ALLOCATE|[140]|Bytes:5
+14:48:34.785 (2794589833)|HEAP_ALLOCATE|[140]|Bytes:37
+14:48:34.785 (2794606924)|HEAP_ALLOCATE|[141]|Bytes:5
+14:48:34.785 (2794613382)|HEAP_ALLOCATE|[141]|Bytes:21
+14:48:34.785 (2794626153)|HEAP_ALLOCATE|[142]|Bytes:5
+14:48:34.785 (2794632583)|HEAP_ALLOCATE|[142]|Bytes:13
+14:48:34.785 (2794645736)|HEAP_ALLOCATE|[143]|Bytes:5
+14:48:34.785 (2794671965)|HEAP_ALLOCATE|[143]|Bytes:12
+14:48:34.785 (2794690742)|HEAP_ALLOCATE|[144]|Bytes:5
+14:48:34.785 (2794697143)|HEAP_ALLOCATE|[144]|Bytes:16
+14:48:34.785 (2794709748)|HEAP_ALLOCATE|[145]|Bytes:5
+14:48:34.785 (2794715518)|HEAP_ALLOCATE|[145]|Bytes:31
+14:48:34.785 (2794727664)|HEAP_ALLOCATE|[146]|Bytes:5
+14:48:34.785 (2794733818)|HEAP_ALLOCATE|[146]|Bytes:33
+14:48:34.785 (2794747199)|HEAP_ALLOCATE|[147]|Bytes:5
+14:48:34.785 (2794753356)|HEAP_ALLOCATE|[147]|Bytes:21
+14:48:34.785 (2794765473)|HEAP_ALLOCATE|[148]|Bytes:6
+14:48:34.785 (2794771005)|HEAP_ALLOCATE|[148]|Bytes:16
+14:48:34.785 (2794783161)|HEAP_ALLOCATE|[149]|Bytes:5
+14:48:34.785 (2794788484)|HEAP_ALLOCATE|[149]|Bytes:19
+14:48:34.785 (2794800607)|HEAP_ALLOCATE|[150]|Bytes:5
+14:48:34.785 (2794804371)|HEAP_ALLOCATE|[150]|Bytes:23
+14:48:34.785 (2794812028)|HEAP_ALLOCATE|[151]|Bytes:5
+14:48:34.785 (2794815894)|HEAP_ALLOCATE|[151]|Bytes:21
+14:48:34.785 (2794823620)|HEAP_ALLOCATE|[152]|Bytes:5
+14:48:34.785 (2794826826)|HEAP_ALLOCATE|[152]|Bytes:23
+14:48:34.785 (2794834546)|HEAP_ALLOCATE|[153]|Bytes:5
+14:48:34.785 (2794837651)|HEAP_ALLOCATE|[153]|Bytes:16
+14:48:34.785 (2794845219)|HEAP_ALLOCATE|[154]|Bytes:5
+14:48:34.785 (2794848488)|HEAP_ALLOCATE|[154]|Bytes:31
+14:48:34.785 (2794855289)|HEAP_ALLOCATE|[155]|Bytes:5
+14:48:34.785 (2794858786)|HEAP_ALLOCATE|[155]|Bytes:16
+14:48:34.785 (2794865955)|HEAP_ALLOCATE|[156]|Bytes:6
+14:48:34.785 (2794869364)|HEAP_ALLOCATE|[156]|Bytes:12
+14:48:34.785 (2794876680)|HEAP_ALLOCATE|[157]|Bytes:5
+14:48:34.785 (2794879938)|HEAP_ALLOCATE|[157]|Bytes:28
+14:48:34.785 (2794886951)|HEAP_ALLOCATE|[158]|Bytes:5
+14:48:34.785 (2794890080)|HEAP_ALLOCATE|[158]|Bytes:17
+14:48:34.785 (2794897030)|HEAP_ALLOCATE|[159]|Bytes:5
+14:48:34.785 (2794900546)|HEAP_ALLOCATE|[159]|Bytes:25
+14:48:34.785 (2794907592)|HEAP_ALLOCATE|[160]|Bytes:5
+14:48:34.785 (2794910979)|HEAP_ALLOCATE|[160]|Bytes:29
+14:48:34.785 (2794918429)|HEAP_ALLOCATE|[161]|Bytes:5
+14:48:34.785 (2794921705)|HEAP_ALLOCATE|[161]|Bytes:29
+14:48:34.785 (2794928731)|HEAP_ALLOCATE|[162]|Bytes:5
+14:48:34.785 (2794932132)|HEAP_ALLOCATE|[162]|Bytes:23
+14:48:34.785 (2794941792)|HEAP_ALLOCATE|[163]|Bytes:5
+14:48:34.785 (2794947339)|HEAP_ALLOCATE|[163]|Bytes:26
+14:48:34.785 (2794959613)|HEAP_ALLOCATE|[164]|Bytes:5
+14:48:34.785 (2794965177)|HEAP_ALLOCATE|[164]|Bytes:46
+14:48:34.785 (2794977265)|HEAP_ALLOCATE|[165]|Bytes:5
+14:48:34.785 (2794982723)|HEAP_ALLOCATE|[165]|Bytes:41
+14:48:34.785 (2794994422)|HEAP_ALLOCATE|[166]|Bytes:5
+14:48:34.785 (2794998540)|HEAP_ALLOCATE|[166]|Bytes:47
+14:48:34.785 (2795006415)|HEAP_ALLOCATE|[167]|Bytes:5
+14:48:34.785 (2795011382)|HEAP_ALLOCATE|[167]|Bytes:44
+14:48:34.785 (2795018867)|HEAP_ALLOCATE|[168]|Bytes:5
+14:48:34.785 (2795022423)|HEAP_ALLOCATE|[168]|Bytes:41
+14:48:34.785 (2795030250)|HEAP_ALLOCATE|[169]|Bytes:5
+14:48:34.785 (2795034838)|HEAP_ALLOCATE|[169]|Bytes:43
+14:48:34.785 (2795046586)|HEAP_ALLOCATE|[170]|Bytes:5
+14:48:34.785 (2795056229)|HEAP_ALLOCATE|[170]|Bytes:30
+14:48:34.785 (2795085830)|HEAP_ALLOCATE|[171]|Bytes:5
+14:48:34.785 (2795093337)|HEAP_ALLOCATE|[171]|Bytes:29
+14:48:34.785 (2795106663)|HEAP_ALLOCATE|[172]|Bytes:5
+14:48:34.785 (2795112498)|HEAP_ALLOCATE|[172]|Bytes:20
+14:48:34.785 (2795128441)|HEAP_ALLOCATE|[173]|Bytes:5
+14:48:34.785 (2795134498)|HEAP_ALLOCATE|[173]|Bytes:61
+14:48:34.785 (2795147102)|HEAP_ALLOCATE|[174]|Bytes:5
+14:48:34.785 (2795153418)|HEAP_ALLOCATE|[174]|Bytes:59
+14:48:34.785 (2795166639)|HEAP_ALLOCATE|[175]|Bytes:5
+14:48:34.785 (2795172239)|HEAP_ALLOCATE|[175]|Bytes:57
+14:48:34.785 (2795183330)|HEAP_ALLOCATE|[176]|Bytes:5
+14:48:34.785 (2795189104)|HEAP_ALLOCATE|[176]|Bytes:59
+14:48:34.785 (2795203245)|HEAP_ALLOCATE|[177]|Bytes:5
+14:48:34.785 (2795208826)|HEAP_ALLOCATE|[177]|Bytes:41
+14:48:34.785 (2795225555)|HEAP_ALLOCATE|[178]|Bytes:5
+14:48:34.785 (2795231626)|HEAP_ALLOCATE|[178]|Bytes:43
+14:48:34.785 (2795244127)|HEAP_ALLOCATE|[179]|Bytes:5
+14:48:34.785 (2795249869)|HEAP_ALLOCATE|[179]|Bytes:44
+14:48:34.785 (2795263042)|HEAP_ALLOCATE|[180]|Bytes:5
+14:48:34.785 (2795269121)|HEAP_ALLOCATE|[180]|Bytes:42
+14:48:34.785 (2795282550)|HEAP_ALLOCATE|[181]|Bytes:5
+14:48:34.785 (2795288805)|HEAP_ALLOCATE|[181]|Bytes:26
+14:48:34.785 (2795302076)|HEAP_ALLOCATE|[182]|Bytes:5
+14:48:34.785 (2795307762)|HEAP_ALLOCATE|[182]|Bytes:22
+14:48:34.785 (2795321249)|HEAP_ALLOCATE|[183]|Bytes:5
+14:48:34.785 (2795327472)|HEAP_ALLOCATE|[183]|Bytes:23
+14:48:34.785 (2795351565)|HEAP_ALLOCATE|[184]|Bytes:5
+14:48:34.785 (2795359465)|HEAP_ALLOCATE|[184]|Bytes:33
+14:48:34.785 (2795379190)|HEAP_ALLOCATE|[185]|Bytes:5
+14:48:34.785 (2795386151)|HEAP_ALLOCATE|[185]|Bytes:16
+14:48:34.785 (2795398779)|HEAP_ALLOCATE|[186]|Bytes:5
+14:48:34.785 (2795403926)|HEAP_ALLOCATE|[186]|Bytes:34
+14:48:34.785 (2795417151)|HEAP_ALLOCATE|[187]|Bytes:5
+14:48:34.785 (2795422750)|HEAP_ALLOCATE|[187]|Bytes:52
+14:48:34.785 (2795434828)|HEAP_ALLOCATE|[188]|Bytes:5
+14:48:34.785 (2795447769)|HEAP_ALLOCATE|[189]|Bytes:5
+14:48:34.785 (2795453020)|HEAP_ALLOCATE|[189]|Bytes:33
+14:48:34.785 (2795464760)|HEAP_ALLOCATE|[190]|Bytes:5
+14:48:34.785 (2795470045)|HEAP_ALLOCATE|[190]|Bytes:23
+14:48:34.785 (2795481721)|HEAP_ALLOCATE|[191]|Bytes:5
+14:48:34.785 (2795493717)|HEAP_ALLOCATE|[191]|Bytes:21
+14:48:34.785 (2795508053)|HEAP_ALLOCATE|[192]|Bytes:5
+14:48:34.785 (2795517541)|HEAP_ALLOCATE|[192]|Bytes:26
+14:48:34.785 (2795533187)|HEAP_ALLOCATE|[193]|Bytes:5
+14:48:34.785 (2795538721)|HEAP_ALLOCATE|[193]|Bytes:32
+14:48:34.785 (2795553951)|HEAP_ALLOCATE|[194]|Bytes:5
+14:48:34.785 (2795972565)|HEAP_ALLOCATE|[194]|Bytes:23
+14:48:34.785 (2795995058)|HEAP_ALLOCATE|[195]|Bytes:5
+14:48:34.785 (2796001151)|HEAP_ALLOCATE|[195]|Bytes:17
+14:48:34.785 (2796013801)|HEAP_ALLOCATE|[196]|Bytes:5
+14:48:34.785 (2796019972)|HEAP_ALLOCATE|[196]|Bytes:16
+14:48:34.785 (2796035981)|HEAP_ALLOCATE|[197]|Bytes:5
+14:48:34.785 (2796042495)|HEAP_ALLOCATE|[197]|Bytes:19
+14:48:34.785 (2796053706)|HEAP_ALLOCATE|[198]|Bytes:5
+14:48:34.785 (2796059440)|HEAP_ALLOCATE|[198]|Bytes:26
+14:48:34.785 (2796071097)|HEAP_ALLOCATE|[199]|Bytes:5
+14:48:34.785 (2796077545)|HEAP_ALLOCATE|[199]|Bytes:47
+14:48:34.785 (2796106407)|HEAP_ALLOCATE|[200]|Bytes:5
+14:48:34.785 (2796113419)|HEAP_ALLOCATE|[200]|Bytes:28
+14:48:34.785 (2796126481)|HEAP_ALLOCATE|[201]|Bytes:5
+14:48:34.785 (2796131622)|HEAP_ALLOCATE|[201]|Bytes:16
+14:48:34.785 (2796142830)|HEAP_ALLOCATE|[202]|Bytes:5
+14:48:34.785 (2796148517)|HEAP_ALLOCATE|[202]|Bytes:18
+14:48:34.785 (2796159355)|HEAP_ALLOCATE|[203]|Bytes:5
+14:48:34.785 (2796164803)|HEAP_ALLOCATE|[203]|Bytes:16
+14:48:34.785 (2796176672)|HEAP_ALLOCATE|[204]|Bytes:5
+14:48:34.785 (2796184907)|HEAP_ALLOCATE|[204]|Bytes:25
+14:48:34.785 (2796198076)|HEAP_ALLOCATE|[205]|Bytes:5
+14:48:34.785 (2796204398)|HEAP_ALLOCATE|[205]|Bytes:22
+14:48:34.785 (2796215875)|HEAP_ALLOCATE|[206]|Bytes:5
+14:48:34.785 (2796221305)|HEAP_ALLOCATE|[206]|Bytes:89
+14:48:34.785 (2796233476)|HEAP_ALLOCATE|[207]|Bytes:5
+14:48:34.785 (2796238868)|HEAP_ALLOCATE|[207]|Bytes:27
+14:48:34.785 (2796250809)|HEAP_ALLOCATE|[208]|Bytes:5
+14:48:34.785 (2796256565)|HEAP_ALLOCATE|[208]|Bytes:34
+14:48:34.785 (2796269046)|HEAP_ALLOCATE|[209]|Bytes:5
+14:48:34.785 (2796274758)|HEAP_ALLOCATE|[209]|Bytes:29
+14:48:34.785 (2796286356)|HEAP_ALLOCATE|[210]|Bytes:5
+14:48:34.785 (2796291799)|HEAP_ALLOCATE|[210]|Bytes:32
+14:48:34.785 (2796303965)|HEAP_ALLOCATE|[211]|Bytes:5
+14:48:34.785 (2796309648)|HEAP_ALLOCATE|[211]|Bytes:28
+14:48:34.785 (2796321301)|HEAP_ALLOCATE|[212]|Bytes:5
+14:48:34.785 (2796326664)|HEAP_ALLOCATE|[212]|Bytes:16
+14:48:34.785 (2796338293)|HEAP_ALLOCATE|[213]|Bytes:5
+14:48:34.785 (2796343703)|HEAP_ALLOCATE|[213]|Bytes:29
+14:48:34.785 (2796355162)|HEAP_ALLOCATE|[214]|Bytes:5
+14:48:34.785 (2796398860)|HEAP_ALLOCATE|[214]|Bytes:28
+14:48:34.785 (2796419448)|HEAP_ALLOCATE|[215]|Bytes:5
+14:48:34.785 (2796425153)|HEAP_ALLOCATE|[215]|Bytes:23
+14:48:34.785 (2796437586)|HEAP_ALLOCATE|[216]|Bytes:5
+14:48:34.785 (2796443203)|HEAP_ALLOCATE|[216]|Bytes:19
+14:48:34.785 (2796456228)|HEAP_ALLOCATE|[217]|Bytes:5
+14:48:34.785 (2796461653)|HEAP_ALLOCATE|[217]|Bytes:16
+14:48:34.785 (2796473283)|HEAP_ALLOCATE|[218]|Bytes:5
+14:48:34.785 (2796478191)|HEAP_ALLOCATE|[218]|Bytes:19
+14:48:34.785 (2796489085)|HEAP_ALLOCATE|[219]|Bytes:5
+14:48:34.785 (2796494940)|HEAP_ALLOCATE|[219]|Bytes:20
+14:48:34.785 (2796507913)|HEAP_ALLOCATE|[220]|Bytes:5
+14:48:34.785 (2796513986)|HEAP_ALLOCATE|[220]|Bytes:23
+14:48:34.785 (2796525551)|HEAP_ALLOCATE|[221]|Bytes:5
+14:48:34.785 (2796531113)|HEAP_ALLOCATE|[221]|Bytes:23
+14:48:34.785 (2796542279)|HEAP_ALLOCATE|[222]|Bytes:5
+14:48:34.785 (2796547763)|HEAP_ALLOCATE|[222]|Bytes:17
+14:48:34.785 (2796559673)|HEAP_ALLOCATE|[223]|Bytes:5
+14:48:34.785 (2796566466)|HEAP_ALLOCATE|[223]|Bytes:27
+14:48:34.785 (2796579543)|HEAP_ALLOCATE|[224]|Bytes:5
+14:48:34.785 (2796585527)|HEAP_ALLOCATE|[224]|Bytes:26
+14:48:34.785 (2796597654)|HEAP_ALLOCATE|[225]|Bytes:5
+14:48:34.785 (2796603688)|HEAP_ALLOCATE|[225]|Bytes:29
+14:48:34.785 (2796615409)|HEAP_ALLOCATE|[226]|Bytes:5
+14:48:34.785 (2796621721)|HEAP_ALLOCATE|[226]|Bytes:23
+14:48:34.785 (2796635585)|HEAP_ALLOCATE|[227]|Bytes:5
+14:48:34.785 (2796641345)|HEAP_ALLOCATE|[227]|Bytes:24
+14:48:34.785 (2796654179)|HEAP_ALLOCATE|[228]|Bytes:5
+14:48:34.785 (2796660127)|HEAP_ALLOCATE|[228]|Bytes:20
+14:48:34.785 (2796672346)|HEAP_ALLOCATE|[229]|Bytes:5
+14:48:34.785 (2796677845)|HEAP_ALLOCATE|[229]|Bytes:51
+14:48:34.785 (2796690055)|HEAP_ALLOCATE|[230]|Bytes:6
+14:48:34.785 (2796695748)|HEAP_ALLOCATE|[230]|Bytes:20
+14:48:34.785 (2796708203)|HEAP_ALLOCATE|[231]|Bytes:5
+14:48:34.785 (2796715009)|HEAP_ALLOCATE|[231]|Bytes:26
+14:48:34.785 (2796726722)|HEAP_ALLOCATE|[232]|Bytes:5
+14:48:34.785 (2796731680)|HEAP_ALLOCATE|[232]|Bytes:25
+14:48:34.785 (2796743640)|HEAP_ALLOCATE|[233]|Bytes:5
+14:48:34.785 (2796753036)|HEAP_ALLOCATE|[233]|Bytes:28
+14:48:34.785 (2796766125)|HEAP_ALLOCATE|[234]|Bytes:5
+14:48:34.785 (2796771685)|HEAP_ALLOCATE|[234]|Bytes:22
+14:48:34.785 (2796784497)|HEAP_ALLOCATE|[235]|Bytes:5
+14:48:34.785 (2796789937)|HEAP_ALLOCATE|[235]|Bytes:19
+14:48:34.785 (2796802302)|HEAP_ALLOCATE|[236]|Bytes:5
+14:48:34.785 (2796821539)|HEAP_ALLOCATE|[237]|Bytes:5
+14:48:34.785 (2796828202)|HEAP_ALLOCATE|[237]|Bytes:26
+14:48:34.785 (2796844061)|HEAP_ALLOCATE|[238]|Bytes:5
+14:48:34.785 (2796850605)|HEAP_ALLOCATE|[238]|Bytes:28
+14:48:34.785 (2796862966)|HEAP_ALLOCATE|[239]|Bytes:5
+14:48:34.785 (2796870263)|HEAP_ALLOCATE|[239]|Bytes:31
+14:48:34.785 (2796882580)|HEAP_ALLOCATE|[240]|Bytes:5
+14:48:34.785 (2796888453)|HEAP_ALLOCATE|[240]|Bytes:24
+14:48:34.785 (2796902946)|HEAP_ALLOCATE|[241]|Bytes:5
+14:48:34.785 (2796908380)|HEAP_ALLOCATE|[241]|Bytes:24
+14:48:34.785 (2796920674)|HEAP_ALLOCATE|[242]|Bytes:5
+14:48:34.785 (2796926765)|HEAP_ALLOCATE|[242]|Bytes:21
+14:48:34.785 (2796938274)|HEAP_ALLOCATE|[243]|Bytes:5
+14:48:34.785 (2796944106)|HEAP_ALLOCATE|[243]|Bytes:22
+14:48:34.785 (2796955792)|HEAP_ALLOCATE|[244]|Bytes:5
+14:48:34.785 (2796961493)|HEAP_ALLOCATE|[244]|Bytes:27
+14:48:34.785 (2796973751)|HEAP_ALLOCATE|[245]|Bytes:5
+14:48:34.785 (2796979436)|HEAP_ALLOCATE|[245]|Bytes:22
+14:48:34.785 (2796992323)|HEAP_ALLOCATE|[246]|Bytes:5
+14:48:34.785 (2796998820)|HEAP_ALLOCATE|[246]|Bytes:22
+14:48:34.785 (2797010092)|HEAP_ALLOCATE|[247]|Bytes:5
+14:48:34.785 (2797016617)|HEAP_ALLOCATE|[247]|Bytes:23
+14:48:34.785 (2797032047)|HEAP_ALLOCATE|[248]|Bytes:5
+14:48:34.785 (2797037989)|HEAP_ALLOCATE|[248]|Bytes:25
+14:48:34.785 (2797052448)|HEAP_ALLOCATE|[249]|Bytes:5
+14:48:34.785 (2797058774)|HEAP_ALLOCATE|[249]|Bytes:20
+14:48:34.785 (2797071368)|HEAP_ALLOCATE|[250]|Bytes:5
+14:48:34.785 (2797077555)|HEAP_ALLOCATE|[250]|Bytes:20
+14:48:34.785 (2797090930)|HEAP_ALLOCATE|[251]|Bytes:5
+14:48:34.785 (2797096521)|HEAP_ALLOCATE|[251]|Bytes:33
+14:48:34.785 (2797129121)|HEAP_ALLOCATE|[252]|Bytes:5
+14:48:34.785 (2797136542)|HEAP_ALLOCATE|[252]|Bytes:32
+14:48:34.785 (2797148759)|HEAP_ALLOCATE|[253]|Bytes:5
+14:48:34.785 (2797153788)|HEAP_ALLOCATE|[253]|Bytes:31
+14:48:34.785 (2797167490)|HEAP_ALLOCATE|[254]|Bytes:5
+14:48:34.785 (2797173268)|HEAP_ALLOCATE|[254]|Bytes:31
+14:48:34.785 (2797185126)|HEAP_ALLOCATE|[255]|Bytes:5
+14:48:34.785 (2797191203)|HEAP_ALLOCATE|[255]|Bytes:28
+14:48:34.785 (2797203153)|HEAP_ALLOCATE|[256]|Bytes:5
+14:48:34.785 (2797208482)|HEAP_ALLOCATE|[256]|Bytes:29
+14:48:34.785 (2797220203)|HEAP_ALLOCATE|[257]|Bytes:5
+14:48:34.785 (2797226033)|HEAP_ALLOCATE|[257]|Bytes:34
+14:48:34.785 (2797239282)|HEAP_ALLOCATE|[258]|Bytes:5
+14:48:34.785 (2797245294)|HEAP_ALLOCATE|[258]|Bytes:29
+14:48:34.785 (2797258391)|HEAP_ALLOCATE|[259]|Bytes:5
+14:48:34.785 (2797264079)|HEAP_ALLOCATE|[259]|Bytes:29
+14:48:34.785 (2797276373)|HEAP_ALLOCATE|[260]|Bytes:5
+14:48:34.785 (2797281794)|HEAP_ALLOCATE|[260]|Bytes:31
+14:48:34.785 (2797293907)|HEAP_ALLOCATE|[261]|Bytes:5
+14:48:34.785 (2797299810)|HEAP_ALLOCATE|[261]|Bytes:38
+14:48:34.785 (2797315858)|HEAP_ALLOCATE|[262]|Bytes:5
+14:48:34.785 (2797322197)|HEAP_ALLOCATE|[262]|Bytes:27
+14:48:34.785 (2797334370)|HEAP_ALLOCATE|[263]|Bytes:5
+14:48:34.785 (2797340700)|HEAP_ALLOCATE|[263]|Bytes:28
+14:48:34.785 (2797353407)|HEAP_ALLOCATE|[264]|Bytes:5
+14:48:34.785 (2797359463)|HEAP_ALLOCATE|[264]|Bytes:35
+14:48:34.785 (2797392556)|HEAP_ALLOCATE|[265]|Bytes:5
+14:48:34.785 (2797400591)|HEAP_ALLOCATE|[265]|Bytes:17
+14:48:34.785 (2797415134)|HEAP_ALLOCATE|[266]|Bytes:5
+14:48:34.785 (2797421141)|HEAP_ALLOCATE|[266]|Bytes:25
+14:48:34.785 (2797433339)|HEAP_ALLOCATE|[267]|Bytes:5
+14:48:34.785 (2797439199)|HEAP_ALLOCATE|[267]|Bytes:24
+14:48:34.785 (2797451168)|HEAP_ALLOCATE|[268]|Bytes:5
+14:48:34.785 (2797456705)|HEAP_ALLOCATE|[268]|Bytes:24
+14:48:34.785 (2797481864)|HEAP_ALLOCATE|[269]|Bytes:5
+14:48:34.785 (2797488893)|HEAP_ALLOCATE|[269]|Bytes:23
+14:48:34.785 (2797501681)|HEAP_ALLOCATE|[270]|Bytes:5
+14:48:34.785 (2797507215)|HEAP_ALLOCATE|[270]|Bytes:25
+14:48:34.785 (2797519689)|HEAP_ALLOCATE|[271]|Bytes:5
+14:48:34.785 (2797525836)|HEAP_ALLOCATE|[271]|Bytes:16
+14:48:34.785 (2797537715)|HEAP_ALLOCATE|[272]|Bytes:5
+14:48:34.785 (2797547022)|HEAP_ALLOCATE|[272]|Bytes:18
+14:48:34.785 (2797558500)|HEAP_ALLOCATE|[273]|Bytes:5
+14:48:34.785 (2797563749)|HEAP_ALLOCATE|[273]|Bytes:27
+14:48:34.785 (2797595950)|HEAP_ALLOCATE|[274]|Bytes:5
+14:48:34.785 (2797602914)|HEAP_ALLOCATE|[274]|Bytes:17
+14:48:34.785 (2797615977)|HEAP_ALLOCATE|[275]|Bytes:5
+14:48:34.785 (2797621792)|HEAP_ALLOCATE|[275]|Bytes:18
+14:48:34.785 (2797633947)|HEAP_ALLOCATE|[276]|Bytes:5
+14:48:34.785 (2797652713)|HEAP_ALLOCATE|[276]|Bytes:50
+14:48:34.785 (2797668194)|HEAP_ALLOCATE|[277]|Bytes:5
+14:48:34.785 (2797673953)|HEAP_ALLOCATE|[277]|Bytes:55
+14:48:34.785 (2797685684)|HEAP_ALLOCATE|[278]|Bytes:5
+14:48:34.785 (2797691112)|HEAP_ALLOCATE|[278]|Bytes:30
+14:48:34.785 (2797703536)|HEAP_ALLOCATE|[279]|Bytes:5
+14:48:34.785 (2797709152)|HEAP_ALLOCATE|[279]|Bytes:24
+14:48:34.785 (2797721093)|HEAP_ALLOCATE|[280]|Bytes:5
+14:48:34.785 (2797726211)|HEAP_ALLOCATE|[280]|Bytes:43
+14:48:34.785 (2797734094)|HEAP_ALLOCATE|[281]|Bytes:5
+14:48:34.785 (2797737433)|HEAP_ALLOCATE|[281]|Bytes:43
+14:48:34.785 (2797744450)|HEAP_ALLOCATE|[282]|Bytes:5
+14:48:34.785 (2797747999)|HEAP_ALLOCATE|[282]|Bytes:49
+14:48:34.785 (2797768468)|HEAP_ALLOCATE|[283]|Bytes:5
+14:48:34.785 (2797776267)|HEAP_ALLOCATE|[283]|Bytes:49
+14:48:34.785 (2797795042)|HEAP_ALLOCATE|[284]|Bytes:5
+14:48:34.785 (2797803504)|HEAP_ALLOCATE|[284]|Bytes:47
+14:48:34.785 (2797817854)|HEAP_ALLOCATE|[285]|Bytes:5
+14:48:34.785 (2797822172)|HEAP_ALLOCATE|[285]|Bytes:46
+14:48:34.785 (2797830178)|HEAP_ALLOCATE|[286]|Bytes:5
+14:48:34.785 (2797833883)|HEAP_ALLOCATE|[286]|Bytes:44
+14:48:34.785 (2797841463)|HEAP_ALLOCATE|[287]|Bytes:5
+14:48:34.785 (2797845339)|HEAP_ALLOCATE|[287]|Bytes:53
+14:48:34.785 (2797856396)|HEAP_ALLOCATE|[288]|Bytes:5
+14:48:34.785 (2797860762)|HEAP_ALLOCATE|[288]|Bytes:66
+14:48:34.785 (2797868671)|HEAP_ALLOCATE|[289]|Bytes:5
+14:48:34.785 (2797873034)|HEAP_ALLOCATE|[289]|Bytes:107
+14:48:34.785 (2797880586)|HEAP_ALLOCATE|[290]|Bytes:5
+14:48:34.785 (2797884027)|HEAP_ALLOCATE|[290]|Bytes:33
+14:48:34.785 (2797891445)|HEAP_ALLOCATE|[291]|Bytes:5
+14:48:34.785 (2797895093)|HEAP_ALLOCATE|[291]|Bytes:48
+14:48:34.785 (2797902751)|HEAP_ALLOCATE|[292]|Bytes:5
+14:48:34.785 (2797906598)|HEAP_ALLOCATE|[292]|Bytes:40
+14:48:34.785 (2797913677)|HEAP_ALLOCATE|[293]|Bytes:5
+14:48:34.785 (2797917374)|HEAP_ALLOCATE|[293]|Bytes:31
+14:48:34.785 (2797924496)|HEAP_ALLOCATE|[294]|Bytes:5
+14:48:34.785 (2797927807)|HEAP_ALLOCATE|[294]|Bytes:60
+14:48:34.785 (2797935312)|HEAP_ALLOCATE|[295]|Bytes:5
+14:48:34.785 (2797938649)|HEAP_ALLOCATE|[295]|Bytes:34
+14:48:34.785 (2797945806)|HEAP_ALLOCATE|[296]|Bytes:5
+14:48:34.785 (2797949292)|HEAP_ALLOCATE|[296]|Bytes:34
+14:48:34.785 (2797956523)|HEAP_ALLOCATE|[297]|Bytes:5
+14:48:34.785 (2797959870)|HEAP_ALLOCATE|[297]|Bytes:73
+14:48:34.785 (2797967085)|HEAP_ALLOCATE|[298]|Bytes:5
+14:48:34.785 (2797970342)|HEAP_ALLOCATE|[298]|Bytes:39
+14:48:34.785 (2797977475)|HEAP_ALLOCATE|[299]|Bytes:5
+14:48:34.785 (2797980785)|HEAP_ALLOCATE|[299]|Bytes:44
+14:48:34.785 (2797988955)|HEAP_ALLOCATE|[300]|Bytes:5
+14:48:34.785 (2797994456)|HEAP_ALLOCATE|[300]|Bytes:30
+14:48:34.785 (2798006638)|HEAP_ALLOCATE|[301]|Bytes:5
+14:48:34.785 (2798013583)|HEAP_ALLOCATE|[301]|Bytes:29
+14:48:34.785 (2798025532)|HEAP_ALLOCATE|[302]|Bytes:5
+14:48:34.785 (2798031003)|HEAP_ALLOCATE|[302]|Bytes:47
+14:48:34.785 (2798044375)|HEAP_ALLOCATE|[303]|Bytes:5
+14:48:34.785 (2798050664)|HEAP_ALLOCATE|[303]|Bytes:39
+14:48:34.785 (2798063745)|HEAP_ALLOCATE|[304]|Bytes:5
+14:48:34.785 (2798069563)|HEAP_ALLOCATE|[304]|Bytes:18
+14:48:34.785 (2798081921)|HEAP_ALLOCATE|[305]|Bytes:5
+14:48:34.785 (2798087230)|HEAP_ALLOCATE|[305]|Bytes:45
+14:48:34.785 (2798096662)|HEAP_ALLOCATE|[306]|Bytes:5
+14:48:34.785 (2798102275)|HEAP_ALLOCATE|[306]|Bytes:47
+14:48:34.785 (2798132377)|HEAP_ALLOCATE|[307]|Bytes:5
+14:48:34.785 (2798139264)|HEAP_ALLOCATE|[307]|Bytes:24
+14:48:34.785 (2798153138)|HEAP_ALLOCATE|[308]|Bytes:5
+14:48:34.785 (2798159168)|HEAP_ALLOCATE|[308]|Bytes:34
+14:48:34.785 (2798177130)|HEAP_ALLOCATE|[309]|Bytes:5
+14:48:34.785 (2798183305)|HEAP_ALLOCATE|[309]|Bytes:21
+14:48:34.785 (2798196120)|HEAP_ALLOCATE|[310]|Bytes:5
+14:48:34.785 (2798205761)|HEAP_ALLOCATE|[310]|Bytes:47
+14:48:34.785 (2798220036)|HEAP_ALLOCATE|[311]|Bytes:5
+14:48:34.785 (2798226107)|HEAP_ALLOCATE|[311]|Bytes:54
+14:48:34.785 (2798244273)|HEAP_ALLOCATE|[312]|Bytes:5
+14:48:34.785 (2798288165)|HEAP_ALLOCATE|[312]|Bytes:33
+14:48:34.785 (2798302043)|HEAP_ALLOCATE|[313]|Bytes:5
+14:48:34.785 (2798308475)|HEAP_ALLOCATE|[313]|Bytes:38
+14:48:34.785 (2798320707)|HEAP_ALLOCATE|[314]|Bytes:5
+14:48:34.785 (2798326261)|HEAP_ALLOCATE|[314]|Bytes:31
+14:48:34.785 (2798338286)|HEAP_ALLOCATE|[315]|Bytes:5
+14:48:34.785 (2798344374)|HEAP_ALLOCATE|[315]|Bytes:41
+14:48:34.785 (2798356814)|HEAP_ALLOCATE|[316]|Bytes:5
+14:48:34.785 (2798362350)|HEAP_ALLOCATE|[316]|Bytes:47
+14:48:34.785 (2798378518)|HEAP_ALLOCATE|[317]|Bytes:5
+14:48:34.785 (2798384052)|HEAP_ALLOCATE|[317]|Bytes:55
+14:48:34.785 (2798395161)|HEAP_ALLOCATE|[318]|Bytes:5
+14:48:34.785 (2798400566)|HEAP_ALLOCATE|[318]|Bytes:51
+14:48:34.785 (2798411113)|HEAP_ALLOCATE|[319]|Bytes:5
+14:48:34.785 (2798415792)|HEAP_ALLOCATE|[319]|Bytes:29
+14:48:34.785 (2798427664)|HEAP_ALLOCATE|[320]|Bytes:5
+14:48:34.785 (2798433261)|HEAP_ALLOCATE|[320]|Bytes:81
+14:48:34.785 (2798445497)|HEAP_ALLOCATE|[321]|Bytes:5
+14:48:34.785 (2798451573)|HEAP_ALLOCATE|[321]|Bytes:25
+14:48:34.785 (2798471611)|HEAP_ALLOCATE|[322]|Bytes:5
+14:48:34.785 (2798479312)|HEAP_ALLOCATE|[322]|Bytes:24
+14:48:34.785 (2798492897)|HEAP_ALLOCATE|[323]|Bytes:5
+14:48:34.785 (2798498920)|HEAP_ALLOCATE|[323]|Bytes:29
+14:48:34.785 (2798511304)|HEAP_ALLOCATE|[324]|Bytes:5
+14:48:34.785 (2798517980)|HEAP_ALLOCATE|[324]|Bytes:31
+14:48:34.785 (2798531022)|HEAP_ALLOCATE|[325]|Bytes:5
+14:48:34.785 (2798536881)|HEAP_ALLOCATE|[325]|Bytes:30
+14:48:34.785 (2798553085)|HEAP_ALLOCATE|[326]|Bytes:5
+14:48:34.785 (2798559348)|HEAP_ALLOCATE|[326]|Bytes:20
+14:48:34.785 (2798572787)|HEAP_ALLOCATE|[327]|Bytes:5
+14:48:34.785 (2798578365)|HEAP_ALLOCATE|[327]|Bytes:19
+14:48:34.785 (2798591402)|HEAP_ALLOCATE|[328]|Bytes:5
+14:48:34.785 (2798597234)|HEAP_ALLOCATE|[328]|Bytes:34
+14:48:34.785 (2798605740)|HEAP_ALLOCATE|[329]|Bytes:5
+14:48:34.785 (2798610172)|HEAP_ALLOCATE|[329]|Bytes:30
+14:48:34.785 (2798617369)|HEAP_ALLOCATE|[330]|Bytes:5
+14:48:34.785 (2798620655)|HEAP_ALLOCATE|[330]|Bytes:31
+14:48:34.785 (2798628227)|HEAP_ALLOCATE|[331]|Bytes:5
+14:48:34.785 (2798632311)|HEAP_ALLOCATE|[331]|Bytes:21
+14:48:34.785 (2798654256)|HEAP_ALLOCATE|[332]|Bytes:5
+14:48:34.785 (2798661300)|HEAP_ALLOCATE|[332]|Bytes:24
+14:48:34.785 (2798675636)|HEAP_ALLOCATE|[333]|Bytes:5
+14:48:34.785 (2798681484)|HEAP_ALLOCATE|[333]|Bytes:22
+14:48:34.785 (2798692867)|HEAP_ALLOCATE|[334]|Bytes:5
+14:48:34.785 (2798698175)|HEAP_ALLOCATE|[334]|Bytes:25
+14:48:34.785 (2798710195)|HEAP_ALLOCATE|[335]|Bytes:5
+14:48:34.785 (2798716246)|HEAP_ALLOCATE|[335]|Bytes:21
+14:48:34.785 (2798729768)|HEAP_ALLOCATE|[336]|Bytes:5
+14:48:34.785 (2798735917)|HEAP_ALLOCATE|[336]|Bytes:46
+14:48:34.785 (2798752104)|HEAP_ALLOCATE|[337]|Bytes:5
+14:48:34.785 (2798757858)|HEAP_ALLOCATE|[337]|Bytes:48
+14:48:34.785 (2798772203)|HEAP_ALLOCATE|[338]|Bytes:5
+14:48:34.785 (2798778432)|HEAP_ALLOCATE|[338]|Bytes:42
+14:48:34.785 (2798792037)|HEAP_ALLOCATE|[339]|Bytes:5
+14:48:34.785 (2798797932)|HEAP_ALLOCATE|[339]|Bytes:45
+14:48:34.785 (2798809794)|HEAP_ALLOCATE|[340]|Bytes:5
+14:48:34.785 (2798816472)|HEAP_ALLOCATE|[340]|Bytes:54
+14:48:34.785 (2798828546)|HEAP_ALLOCATE|[341]|Bytes:5
+14:48:34.785 (2798834423)|HEAP_ALLOCATE|[341]|Bytes:43
+14:48:34.785 (2798850121)|HEAP_ALLOCATE|[342]|Bytes:5
+14:48:34.785 (2798855043)|HEAP_ALLOCATE|[342]|Bytes:33
+14:48:34.785 (2798886198)|HEAP_ALLOCATE|[343]|Bytes:5
+14:48:34.785 (2798890722)|HEAP_ALLOCATE|[343]|Bytes:20
+14:48:34.785 (2798898425)|HEAP_ALLOCATE|[344]|Bytes:5
+14:48:34.785 (2798902174)|HEAP_ALLOCATE|[344]|Bytes:14
+14:48:34.785 (2798909432)|HEAP_ALLOCATE|[345]|Bytes:5
+14:48:34.785 (2798912818)|HEAP_ALLOCATE|[345]|Bytes:33
+14:48:34.785 (2798920080)|HEAP_ALLOCATE|[346]|Bytes:5
+14:48:34.785 (2798923680)|HEAP_ALLOCATE|[346]|Bytes:33
+14:48:34.785 (2798931292)|HEAP_ALLOCATE|[347]|Bytes:5
+14:48:34.785 (2798934657)|HEAP_ALLOCATE|[347]|Bytes:20
+14:48:34.785 (2798945116)|HEAP_ALLOCATE|[348]|Bytes:5
+14:48:34.785 (2798950863)|HEAP_ALLOCATE|[348]|Bytes:51
+14:48:34.785 (2798964105)|HEAP_ALLOCATE|[349]|Bytes:5
+14:48:34.785 (2798970217)|HEAP_ALLOCATE|[349]|Bytes:26
+14:48:34.785 (2798980963)|HEAP_ALLOCATE|[350]|Bytes:2
+14:48:34.785 (2798985141)|HEAP_ALLOCATE|[350]|Bytes:16
+14:48:34.785 (2798992681)|HEAP_ALLOCATE|[351]|Bytes:2
+14:48:34.785 (2799000415)|HEAP_ALLOCATE|[352]|Bytes:2
+14:48:34.785 (2799004698)|HEAP_ALLOCATE|[352]|Bytes:19
+14:48:34.785 (2799012946)|HEAP_ALLOCATE|[353]|Bytes:2
+14:48:34.785 (2799027876)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:48:34.785 (2799172416)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0x60567bb7
+14:48:34.785 (2799182095)|STATEMENT_EXECUTE|[356]
+14:48:34.785 (2799279503)|HEAP_ALLOCATE|[356]|Bytes:14
+14:48:34.785 (2799301044)|HEAP_ALLOCATE|[356]|Bytes:19
+14:48:34.785 (2799324365)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:34.785 (2799336971)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:34.785 (2799356321)|VARIABLE_ASSIGNMENT|[44]|s1|"Insufficient Funds"
+14:48:34.785 (2799362578)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:34.785 (2799379283)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error D4451"
+14:48:34.785 (2799395245)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:34.785 (2799402248)|STATEMENT_EXECUTE|[44]
+14:48:34.785 (2799404634)|STATEMENT_EXECUTE|[45]
+14:48:34.785 (2799420114)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:34.785 (2799435907)|VARIABLE_ASSIGNMENT|[45]|result|"Insufficient Funds"
+14:48:34.785 (2799442694)|STATEMENT_EXECUTE|[46]
+14:48:34.785 (2799448206)|STATEMENT_EXECUTE|[47]
+14:48:34.785 (2799469856)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:34.785 (2799497425)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:48:34.785 (2799513245)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Insufficient Funds"
+14:48:34.785 (2799520267)|STATEMENT_EXECUTE|[358]
+14:48:34.785 (2799535007)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:48:34.785 (2799548603)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Insufficient Funds"
+14:48:34.785 (2799555509)|STATEMENT_EXECUTE|[74]
+14:48:34.785 (2799568352)|METHOD_EXIT|[486]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:34.785 (2799583333)|HEAP_ALLOCATE|[486]|Bytes:39
+14:48:34.785 (2799604431)|USER_DEBUG|[486]|DEBUG|Eway2 error message: Insufficient Funds
+14:48:34.785 (2799615152)|STATEMENT_EXECUTE|[488]
+14:48:34.785 (2799635267)|METHOD_EXIT|[267]|01p6F000009rYF7|Eway2Payment.sendRequest()
+14:48:34.785 (2799643688)|STATEMENT_EXECUTE|[270]
+14:48:34.785 (2799655679)|METHOD_EXIT|[384]|01p6F000009rYF7|Eway2Payment.makePayment()
+14:48:34.785 (2799706202)|VARIABLE_ASSIGNMENT|[384]|ewayResp|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2799722601)|METHOD_ENTRY|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:48:34.785 (2799753728)|HEAP_ALLOCATE|[61]|Bytes:5
+14:48:34.785 (2799761680)|STATEMENT_EXECUTE|[60]
+14:48:34.785 (2799764094)|STATEMENT_EXECUTE|[61]
+14:48:34.785 (2799790281)|HEAP_ALLOCATE|[61]|Bytes:4
+14:48:34.785 (2799988950)|SOQL_EXECUTE_BEGIN|[61]|Aggregations:0|SELECT Id, IsSandbox FROM Organization LIMIT 1
+14:48:34.785 (2802144464)|SOQL_EXECUTE_END|[61]|Rows:1
+14:48:34.785 (2802175760)|HEAP_ALLOCATE|[61]|Bytes:8
+14:48:34.785 (2802198891)|HEAP_ALLOCATE|[61]|Bytes:50
+14:48:34.785 (2802241649)|HEAP_ALLOCATE|[61]|Bytes:8
+14:48:34.785 (2802282377)|HEAP_ALLOCATE|[61]|Bytes:12
+14:48:34.785 (2802323979)|METHOD_EXIT|[388]|01p6F000006uYhT|Utility.runningInASandbox()
+14:48:34.785 (2802339772)|STATEMENT_EXECUTE|[388]
+14:48:34.785 (2802350967)|STATEMENT_EXECUTE|[393]
+14:48:34.785 (2802517737)|VARIABLE_ASSIGNMENT|[393]|this.Response__c|"{\"AuthorisationCode\" (867 more) ..."|0x11ae2512
+14:48:34.785 (2802530237)|STATEMENT_EXECUTE|[394]
+14:48:34.785 (2802557153)|METHOD_ENTRY|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2802591423)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:48:34.785 (2802642469)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2802659245)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:34.785 (2802666115)|STATEMENT_EXECUTE|[43]
+14:48:34.785 (2802668358)|STATEMENT_EXECUTE|[45]
+14:48:34.785 (2802704299)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:48:34.785 (2802723756)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:48:34.785 (2802731748)|STATEMENT_EXECUTE|[48]
+14:48:34.785 (2802733815)|STATEMENT_EXECUTE|[49]
+14:48:34.785 (2802760611)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:48:34.785 (2802770066)|STATEMENT_EXECUTE|[52]
+14:48:34.785 (2802772403)|STATEMENT_EXECUTE|[54]
+14:48:34.785 (2802829286)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:34.785 (2802838654)|HEAP_ALLOCATE|[54]|Bytes:8
+14:48:34.785 (2802869058)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:48:34.785 (2802877508)|STATEMENT_EXECUTE|[56]
+14:48:34.785 (2802892045)|METHOD_EXIT|[394]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2802984452)|VARIABLE_ASSIGNMENT|[394]|this.Response_Code__c|"D4451"|0x11ae2512
+14:48:34.785 (2802994762)|STATEMENT_EXECUTE|[395]
+14:48:34.785 (2803013798)|METHOD_ENTRY|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:34.785 (2803034809)|VARIABLE_SCOPE_BEGIN|[59]|this|Eway2Response|true|false
+14:48:34.785 (2803063579)|VARIABLE_ASSIGNMENT|[59]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2803077533)|HEAP_ALLOCATE|[60]|Bytes:5
+14:48:34.785 (2803082692)|STATEMENT_EXECUTE|[59]
+14:48:34.785 (2803084323)|STATEMENT_EXECUTE|[60]
+14:48:34.785 (2803091523)|VARIABLE_SCOPE_BEGIN|[60]|errorMessage|String|false|false
+14:48:34.785 (2803100204)|VARIABLE_ASSIGNMENT|[60]|errorMessage|null
+14:48:34.785 (2803114961)|STATEMENT_EXECUTE|[65]
+14:48:34.785 (2803116637)|STATEMENT_EXECUTE|[67]
+14:48:34.785 (2803124875)|METHOD_ENTRY|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2803135167)|VARIABLE_SCOPE_BEGIN|[43]|this|Eway2Response|true|false
+14:48:34.785 (2803165010)|VARIABLE_ASSIGNMENT|[43]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2803180772)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:34.785 (2803186832)|STATEMENT_EXECUTE|[43]
+14:48:34.785 (2803188907)|STATEMENT_EXECUTE|[45]
+14:48:34.785 (2803209857)|VARIABLE_SCOPE_BEGIN|[45]|errorCode|String|false|false
+14:48:34.785 (2803223881)|VARIABLE_ASSIGNMENT|[45]|errorCode|null
+14:48:34.785 (2803230643)|STATEMENT_EXECUTE|[48]
+14:48:34.785 (2803232636)|STATEMENT_EXECUTE|[49]
+14:48:34.785 (2803253106)|VARIABLE_ASSIGNMENT|[49]|errorCode|"D4451"
+14:48:34.785 (2803261638)|STATEMENT_EXECUTE|[52]
+14:48:34.785 (2803263865)|STATEMENT_EXECUTE|[54]
+14:48:34.785 (2803297415)|HEAP_ALLOCATE|[54]|Bytes:5
+14:48:34.785 (2803305386)|HEAP_ALLOCATE|[54]|Bytes:8
+14:48:34.785 (2803328838)|VARIABLE_ASSIGNMENT|[54]|errorCode|"D4451"
+14:48:34.785 (2803336701)|STATEMENT_EXECUTE|[56]
+14:48:34.785 (2803350288)|METHOD_EXIT|[67]|01p6F000009rYF8|Eway2Response.getErrorCode()
+14:48:34.785 (2803360198)|VARIABLE_SCOPE_BEGIN|[67]|errorCode|String|false|false
+14:48:34.785 (2803373101)|VARIABLE_ASSIGNMENT|[67]|errorCode|"D4451"
+14:48:34.785 (2803379089)|STATEMENT_EXECUTE|[69]
+14:48:34.785 (2803381087)|STATEMENT_EXECUTE|[70]
+14:48:34.785 (2803396762)|METHOD_ENTRY|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:48:34.785 (2803408304)|VARIABLE_SCOPE_BEGIN|[78]|this|Eway2Response|true|false
+14:48:34.785 (2803448439)|VARIABLE_ASSIGNMENT|[78]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2803459264)|VARIABLE_SCOPE_BEGIN|[78]|errorCode|String|false|false
+14:48:34.785 (2803472207)|VARIABLE_ASSIGNMENT|[78]|errorCode|"D4451"
+14:48:34.785 (2803486741)|HEAP_ALLOCATE|[80]|Bytes:5
+14:48:34.785 (2803493818)|STATEMENT_EXECUTE|[78]
+14:48:34.785 (2803496071)|STATEMENT_EXECUTE|[80]
+14:48:34.785 (2803519648)|HEAP_ALLOCATE|[80]|Bytes:4
+14:48:34.785 (2804866941)|VARIABLE_SCOPE_BEGIN|[80]|errorMessageMap|Map<String,String>|true|false
+14:48:34.785 (2804949703)|VARIABLE_ASSIGNMENT|[80]|errorMessageMap|"Map of size 273 too large to display"|0x6e2a0d81
+14:48:34.785 (2804957237)|STATEMENT_EXECUTE|[356]
+14:48:34.785 (2804983645)|HEAP_ALLOCATE|[356]|Bytes:19
+14:48:34.785 (2804997719)|METHOD_ENTRY|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:34.785 (2805007417)|VARIABLE_SCOPE_BEGIN|[44]|s1|String|false|false
+14:48:34.785 (2805024968)|VARIABLE_ASSIGNMENT|[44]|s1|"Insufficient Funds"
+14:48:34.785 (2805031705)|VARIABLE_SCOPE_BEGIN|[44]|s2|String|false|false
+14:48:34.785 (2805044392)|VARIABLE_ASSIGNMENT|[44]|s2|"Unknown error D4451"
+14:48:34.785 (2805057968)|HEAP_ALLOCATE|[45]|Bytes:5
+14:48:34.785 (2805065321)|STATEMENT_EXECUTE|[44]
+14:48:34.785 (2805067385)|STATEMENT_EXECUTE|[45]
+14:48:34.785 (2805076349)|VARIABLE_SCOPE_BEGIN|[45]|result|String|false|false
+14:48:34.785 (2805091809)|VARIABLE_ASSIGNMENT|[45]|result|"Insufficient Funds"
+14:48:34.785 (2805098848)|STATEMENT_EXECUTE|[46]
+14:48:34.785 (2805104783)|STATEMENT_EXECUTE|[47]
+14:48:34.785 (2805118399)|METHOD_EXIT|[356]|01p6F000006uYhT|Utility.ifnull(String, String)
+14:48:34.785 (2805129366)|VARIABLE_SCOPE_BEGIN|[356]|errorMessage|String|false|false
+14:48:34.785 (2805143098)|VARIABLE_ASSIGNMENT|[356]|errorMessage|"Insufficient Funds"
+14:48:34.785 (2805147401)|STATEMENT_EXECUTE|[358]
+14:48:34.785 (2805157080)|METHOD_EXIT|[70]|01p6F000009rYF8|Eway2Response.getErrorMessageForCode(String)
+14:48:34.785 (2805165462)|VARIABLE_ASSIGNMENT|[70]|errorMessage|"Insufficient Funds"
+14:48:34.785 (2805170641)|STATEMENT_EXECUTE|[74]
+14:48:34.785 (2805177854)|METHOD_EXIT|[395]|01p6F000009rYF8|Eway2Response.getErrorMessage()
+14:48:34.785 (2805282075)|VARIABLE_ASSIGNMENT|[395]|this.Response_Message__c|"Insufficient Funds"|0x11ae2512
+14:48:34.785 (2805289486)|STATEMENT_EXECUTE|[396]
+14:48:34.785 (2805310205)|METHOD_ENTRY|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:48:34.785 (2805342284)|VARIABLE_SCOPE_BEGIN|[38]|this|Eway2Response|true|false
+14:48:34.785 (2805385411)|VARIABLE_ASSIGNMENT|[38]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2805399924)|HEAP_ALLOCATE|[39]|Bytes:5
+14:48:34.785 (2805405401)|STATEMENT_EXECUTE|[38]
+14:48:34.785 (2805406981)|STATEMENT_EXECUTE|[39]
+14:48:34.785 (2805415946)|HEAP_ALLOCATE|[39]|Bytes:13
+14:48:34.785 (2805485385)|HEAP_ALLOCATE|[39]|Bytes:9
+14:48:34.785 (2805501413)|METHOD_EXIT|[396]|01p6F000009rYF8|Eway2Response.getTrxnNumber()
+14:48:34.785 (2805578821)|VARIABLE_ASSIGNMENT|[396]|this.Gateway_Transaction_Id__c|"303147094"|0x11ae2512
+14:48:34.785 (2805586961)|STATEMENT_EXECUTE|[397]
+14:48:34.785 (2805605731)|METHOD_ENTRY|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:48:34.785 (2805624326)|VARIABLE_SCOPE_BEGIN|[28]|this|Eway2Response|true|false
+14:48:34.785 (2805650541)|VARIABLE_ASSIGNMENT|[28]|this|{"params":"0x42b871be","responseBody":"{\"AuthorisationCode\" (867 more) ..."}|0x285c5bbc
+14:48:34.785 (2805667189)|HEAP_ALLOCATE|[31]|Bytes:5
+14:48:34.785 (2805673664)|STATEMENT_EXECUTE|[28]
+14:48:34.785 (2805679558)|HEAP_ALLOCATE|[31]|Bytes:12
+14:48:34.785 (2805720406)|HEAP_ALLOCATE|[31]|Bytes:2
+14:48:34.785 (2805772026)|STATEMENT_EXECUTE|[33]
+14:48:34.785 (2805774035)|STATEMENT_EXECUTE|[34]
+14:48:34.785 (2805783701)|HEAP_ALLOCATE|[34]|Bytes:5
+14:48:34.785 (2805793413)|METHOD_EXIT|[397]|01p6F000009rYF8|Eway2Response.isSuccessful()
+14:48:34.785 (2805802302)|HEAP_ALLOCATE|[397]|Bytes:7
+14:48:34.785 (2805862719)|VARIABLE_ASSIGNMENT|[397]|this.Status__c|"FAILURE"|0x11ae2512
+14:48:34.785 (2805875028)|METHOD_EXIT|[180]|01p6F000006He6O|paymentGateway.payEway2()
+14:48:34.785 (2805881038)|STATEMENT_EXECUTE|[196]
+14:48:34.785 (2805890823)|SYSTEM_MODE_EXIT|false
+14:48:34.785 (2805900128)|METHOD_EXIT|[329]|01p6F000006He6O|paymentGateway.pay()
+14:48:34.785 (2805970623)|VARIABLE_ASSIGNMENT|[329]|paymentAttempt|{"Status__c":"FAILURE","Payment_Amount__c":99.00,"CurrencyIsoCode":"AUD","Payment_Name__c":"Joyanta Malo","Payment_Email__c":"info@westernservices (7 more) ...","Payment_Option__c":"Eway2","Payment_Type__c":"Payment","Request_Time__c":"2019-01-09T04:48:32.651Z","Invoice_Number__c":"000972127","Response__c":"{\"AuthorisationCode\" (867 more) ...","Response_Code__c":"D4451","Response_Message__c":"Insufficient Funds","Gateway_Transaction_Id__c":"303147094"}|0x11ae2512
+14:48:34.785 (2806016108)|HEAP_ALLOCATE|[338]|Bytes:7
+14:48:34.785 (2806036326)|STATEMENT_EXECUTE|[338]
+14:48:34.785 (2806042560)|STATEMENT_EXECUTE|[342]
+14:48:34.785 (2806047589)|HEAP_ALLOCATE|[342]|Bytes:18
+14:48:34.785 (2806068167)|HEAP_ALLOCATE|[342]|Bytes:905
+14:48:34.785 (2806105448)|USER_DEBUG|[342]|DEBUG|Gateway Response: {"AuthorisationCode":"","ResponseCode":"51","ResponseMessage":"D4451","TransactionID":303147094,"TransactionStatus":false,"TransactionType":"Recurring","BeagleScore":0.10,"Verification":{"CVN":0,"Address":0,"Email":0,"Mobile":0,"Phone":0},"Customer":{"CardDetails":{"Number":"462239XXXXXX3059","Name":"Mahima a Miazi","ExpiryMonth":"09","ExpiryYear":"22","StartMonth":"","StartYear":"","IssueNumber":""},"TokenCustomerID":962672971866,"Reference":"","Title":"Mr.","FirstName":"Mahima a Miazi","LastName":"Mahima a Miazi","CompanyName":"Western Services Melbourne","JobDescription":"","Street1":"","Street2":"","City":"","State":"","PostalCode":"","Country":"au","Email":"","Phone":"","Mobile":"","Comments":"","Fax":"","Url":""},"Payment":{"TotalAmount":9900,"InvoiceNumber":"000972127","InvoiceDescription":"000972127","InvoiceReference":"000972127","CurrencyCode":"AUD"},"Errors":null}
+14:48:34.785 (2806131030)|STATEMENT_EXECUTE|[343]
+14:48:34.785 (2806143974)|HEAP_ALLOCATE|[343]|Bytes:29
+14:48:34.785 (2806157200)|HEAP_ALLOCATE|[343]|Bytes:916
+14:48:34.785 (2806162794)|HEAP_ALLOCATE|[343]|Bytes:1058
+14:48:34.785 (2806181975)|VARIABLE_ASSIGNMENT|[343]|this.Log|"Current Invoice Numb (1038 more) ..."|0x3e7dfe36
+14:48:34.785 (2806193347)|STATEMENT_EXECUTE|[357]
+14:48:34.785 (2806194994)|STATEMENT_EXECUTE|[358]
+14:48:34.785 (2806196531)|STATEMENT_EXECUTE|[358]
+14:48:34.785 (2806198015)|STATEMENT_EXECUTE|[359]
+14:48:34.785 (2806203972)|HEAP_ALLOCATE|[359]|Bytes:32
+14:48:34.785 (2806209883)|HEAP_ALLOCATE|[359]|Bytes:1090
+14:48:34.785 (2806219364)|VARIABLE_ASSIGNMENT|[359]|this.Log|"Current Invoice Numb (1070 more) ..."|0x3e7dfe36
+14:48:34.785 (2806240326)|STATEMENT_EXECUTE|[390]
+14:48:34.785 (2806242106)|STATEMENT_EXECUTE|[391]
+14:48:34.785 (2806247471)|HEAP_ALLOCATE|[391]|Bytes:9
+14:48:34.785 (2806264914)|HEAP_ALLOCATE|[391]|Bytes:27
+14:48:34.785 (2806310348)|HEAP_ALLOCATE|[391]|Bytes:-4
+14:48:34.785 (2806332698)|VARIABLE_ASSIGNMENT|[391]|this.Payment_Message__c|"FAILURE: Insufficien (7 more) ..."|0x57dcb417
+14:48:34.785 (2806339567)|STATEMENT_EXECUTE|[392]
+14:48:34.785 (2806373852)|HEAP_ALLOCATE|[392]|Bytes:-4
+14:48:34.785 (2806385164)|VARIABLE_ASSIGNMENT|[392]|this.Payment_Response__c|"303147094"|0x57dcb417
+14:48:34.785 (2806390668)|STATEMENT_EXECUTE|[393]
+14:48:34.785 (2806398791)|HEAP_ALLOCATE|[393]|Bytes:10
+14:48:34.785 (2806407083)|HEAP_ALLOCATE|[393]|Bytes:1100
+14:48:34.785 (2806419273)|VARIABLE_ASSIGNMENT|[393]|this.Log|"Current Invoice Numb (1080 more) ..."|0x3e7dfe36
+14:48:34.785 (2806424825)|STATEMENT_EXECUTE|[394]
+14:48:34.785 (2806434437)|HEAP_ALLOCATE|[394]|Bytes:6
+14:48:34.785 (2806468398)|VARIABLE_ASSIGNMENT|[394]|this.Process_Message__c|"UnPaid"|0x57dcb417
+14:48:34.785 (2806481181)|STATEMENT_EXECUTE|[416]
+14:48:34.785 (2806519413)|VARIABLE_ASSIGNMENT|[416]|this.Processed__c|true|0x57dcb417
+14:48:34.785 (2806529526)|STATEMENT_EXECUTE|[418]
+14:48:34.785 (2806571723)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2806583091)|STATEMENT_EXECUTE|[419]
+14:48:34.785 (2806590897)|HEAP_ALLOCATE|[419]|Bytes:14
+14:48:34.785 (2806598292)|HEAP_ALLOCATE|[419]|Bytes:1114
+14:48:34.785 (2806610879)|VARIABLE_ASSIGNMENT|[419]|this.Log|"Current Invoice Numb (1094 more) ..."|0x3e7dfe36
+14:48:34.785 (2806638083)|HEAP_ALLOCATE|[136]|Bytes:5
+14:48:34.785 (2806660543)|VARIABLE_ASSIGNMENT|[136]|current_invoice|null|
+14:48:34.785 (2806670471)|STATEMENT_EXECUTE|[422]
+14:48:34.785 (2806820372)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2806829973)|STATEMENT_EXECUTE|[423]
+14:48:34.785 (2806872063)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2806877647)|STATEMENT_EXECUTE|[424]
+14:48:34.785 (2806913953)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2806919793)|STATEMENT_EXECUTE|[426]
+14:48:34.785 (2806926104)|HEAP_ALLOCATE|[426]|Bytes:14
+14:48:34.785 (2807059986)|HEAP_ALLOCATE|[426]|Bytes:592
+14:48:34.785 (2807078134)|HEAP_ALLOCATE|[426]|Bytes:606
+14:48:34.785 (2807088633)|USER_DEBUG|[426]|DEBUG|All Invoices: (Invoice__c:{Id=a0E6F00002QwH6IUAV, Name=Western Services Melbourne, Payment_Batch__c=a0F6F00000uikSuUAI, Account__c=0016F000031T6JjQAK, Account_Product__c=a076F00000pUT7VQAW, Amount_Credited__c=0.00, Amount_Due__c=99.00, Amount_Paid__c=0.00, Due_Date__c=2019-01-09 00:00:00, Invoice_Batch__c=a0F6F00000uikQFUAY, Invoice_Number__c=000972127, Invoice_Total__c=99.00, Issue_Date__c=2019-01-09 00:00:00, Payment_Option__c=Eway, Processed__c=true, Process_Message__c=UnPaid, Reference__c=503035, CurrencyIsoCode=AUD, Payment_Message__c=FAILURE: Insufficient Funds, Payment_Response__c=303147094})
+14:48:34.785 (2807104523)|STATEMENT_EXECUTE|[427]
+14:48:34.785 (2807147109)|DML_BEGIN|[427]|Op:Update|Type:Invoice__c|Rows:1
+14:48:34.785 (2807193491)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:34.785 (2838868128)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VDtL
+14:48:34.785 (2859999060)|WF_RULE_EVAL_BEGIN|Workflow
+14:48:34.785 (2860037018)|WF_CRITERIA_BEGIN|[Invoice: Western Services Melbourne a0E6F00002QwH6I]|Automatic Tasks for Outstanding Invoices|01Q6F0000019daX|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2865369343)|WF_RULE_NOT_EVALUATED
+14:48:34.785 (2865400219)|WF_CRITERIA_BEGIN|[Invoice: Western Services Melbourne a0E6F00002QwH6I]|Sign_Up_Invoice3016F000000hF9P|01Q6F0000013738|ON_ALL_CHANGES|0
+14:48:34.785 (2865520249)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:48:34.785 (2865533192)|WF_CRITERIA_END|true
+14:48:34.785 (2866243375)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:48:34.785 (2866281673)|WF_ACTION| Flow Trigger: 1;
+14:48:34.785 (2866290674)|WF_RULE_EVAL_END
+14:48:34.785 (2867253132)|WF_FLOW_ACTION_BEGIN|09L6F000000gHqq
+14:48:34.868 (2868762906)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000Pjga|3016F000000hF9P
+14:48:34.868 (2869580006)|FLOW_CREATE_INTERVIEW_END|5289287badcea470de4beed9ec416830e3408b-64fe|Sign Up Invoice
+14:48:34.870 (2870054861)|FLOW_START_INTERVIEWS_BEGIN|1
+14:48:34.870 (2870081882)|FLOW_START_INTERVIEW_BEGIN|5289287badcea470de4beed9ec416830e3408b-64fe|Sign Up Invoice
+14:48:34.870 (2926369030)|FLOW_START_INTERVIEW_END|5289287badcea470de4beed9ec416830e3408b-64fe|Sign Up Invoice
+14:48:34.870 (2926406239)|FLOW_START_INTERVIEWS_END|1
+14:48:34.785 (2927677945)|WF_FLOW_ACTION_END|09L6F000000gHqq
+14:48:34.785 (2927718728)|WF_TIME_TRIGGERS_BEGIN
+14:48:34.785 (2933045296)|WF_ACTIONS_END| Flow Trigger: 1;
+14:48:34.785 (2933068017)|CODE_UNIT_FINISHED|Workflow:01I90000000VDtL
+14:48:34.785 (2940175346)|DML_END|[427]
+14:48:34.785 (2940232121)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:34.785 (2940257220)|STATEMENT_EXECUTE|[429]
+14:48:34.785 (2940282185)|HEAP_ALLOCATE|[429]|Bytes:14
+14:48:34.785 (2940367061)|HEAP_ALLOCATE|[429]|Bytes:2
+14:48:34.785 (2940386388)|HEAP_ALLOCATE|[429]|Bytes:16
+14:48:34.785 (2940405522)|USER_DEBUG|[429]|DEBUG|All Payments: ()
+14:48:34.785 (2940413254)|STATEMENT_EXECUTE|[430]
+14:48:34.785 (2940521526)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2940533084)|STATEMENT_EXECUTE|[431]
+14:48:34.785 (2940580597)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:34.785 (2940590608)|STATEMENT_EXECUTE|[433]
+14:48:34.785 (2940599806)|HEAP_ALLOCATE|[433]|Bytes:88
+14:48:34.785 (2940632378)|HEAP_ALLOCATE|[433]|Bytes:4
+14:48:34.785 (2941633427)|SOQL_EXECUTE_BEGIN|[433]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:48:34.785 (2947865738)|SOQL_EXECUTE_END|[433]|Rows:1
+14:48:34.785 (2947899763)|HEAP_ALLOCATE|[433]|Bytes:8
+14:48:34.785 (2947921554)|HEAP_ALLOCATE|[433]|Bytes:140
+14:48:34.785 (2947975481)|HEAP_ALLOCATE|[433]|Bytes:8
+14:48:34.785 (2947993884)|HEAP_ALLOCATE|[433]|Bytes:42
+14:48:34.785 (2948028988)|HEAP_ALLOCATE|[433]|Bytes:20
+14:48:34.785 (2948040920)|VARIABLE_SCOPE_BEGIN|[433]|updateNewPayBatch|Invoice_Batch__c|true|false
+14:48:34.785 (2948079384)|VARIABLE_ASSIGNMENT|[433]|updateNewPayBatch|{"Id":"a0F6F00000uikSuUAI","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Payments Complete"}|0x6add87dd
+14:48:34.785 (2948088954)|STATEMENT_EXECUTE|[434]
+14:48:34.785 (2948100250)|HEAP_ALLOCATE|[434]|Bytes:3
+14:48:34.785 (2948164930)|VARIABLE_ASSIGNMENT|[434]|this.Batch_Processed__c|"Yes"|0x6add87dd
+14:48:34.785 (2948171502)|STATEMENT_EXECUTE|[435]
+14:48:34.785 (2948179358)|HEAP_ALLOCATE|[435]|Bytes:17
+14:48:34.785 (2948207572)|VARIABLE_ASSIGNMENT|[435]|this.status__c|"Payments Complete"|0x6add87dd
+14:48:34.785 (2948213814)|STATEMENT_EXECUTE|[436]
+14:48:34.785 (2948250374)|HEAP_ALLOCATE|[436]|Bytes:8
+14:48:34.785 (2948263708)|DML_BEGIN|[436]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:48:34.785 (2948291302)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:34.785 (2962530088)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:48:34.785 (2968110556)|WF_RULE_EVAL_BEGIN|Workflow
+14:48:34.785 (2968137419)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2969748771)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:48:34.785 (2969773589)|WF_RULE_EVAL_VALUE|2
+14:48:34.785 (2969785729)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:48:34.785 (2969792846)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:48:34.785 (2969800598)|WF_CRITERIA_END|false
+14:48:34.785 (2969814366)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2969873719)|WF_RULE_NOT_EVALUATED
+14:48:34.785 (2969882378)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Payment Batch a0F6F00000uikSu]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2969986017)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:48:34.785 (2969998868)|WF_RULE_EVAL_VALUE|2
+14:48:34.785 (2970005835)|WF_RULE_EVAL_VALUE|1
+14:48:34.785 (2970013518)|WF_RULE_EVAL_VALUE|SLX Wednesday 2019-01-09 Today Payment Batch
+14:48:34.785 (2970017716)|WF_CRITERIA_END|false
+14:48:34.785 (2970028506)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:48:34.785 (2970039229)|WF_ACTION| None
+14:48:34.785 (2970043854)|WF_RULE_EVAL_END
+14:48:34.785 (2970116923)|WF_ACTIONS_END| None
+14:48:34.785 (2970128793)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:48:34.785 (2971362293)|DML_END|[436]
+14:48:34.785 (2971387439)|STATEMENT_EXECUTE|[438]
+14:48:34.785 (2971450590)|HEAP_ALLOCATE|[438]|Bytes:4
+14:48:34.785 (2971776321)|SOQL_EXECUTE_BEGIN|[438]|Aggregations:0|SELECT Id, Name, Batch_Processed__c, status__c FROM Invoice_Batch__c WHERE Id = :tmpVar1
+14:48:34.785 (2974306831)|SOQL_EXECUTE_END|[438]|Rows:1
+14:48:34.785 (2974350759)|HEAP_ALLOCATE|[438]|Bytes:8
+14:48:34.785 (2974378160)|HEAP_ALLOCATE|[438]|Bytes:137
+14:48:34.785 (2974426314)|HEAP_ALLOCATE|[438]|Bytes:8
+14:48:34.785 (2974470324)|HEAP_ALLOCATE|[438]|Bytes:20
+14:48:34.785 (2974484569)|VARIABLE_SCOPE_BEGIN|[438]|updateInvoiceBatch|Invoice_Batch__c|true|false
+14:48:34.785 (2974535880)|VARIABLE_ASSIGNMENT|[438]|updateInvoiceBatch|{"Id":"a0F6F00000uikQFUAY","Name":"SLX Wednesday 2019-0 (24 more) ...","Batch_Processed__c":"Yes","status__c":"Batch Approved"}|0x79f770ee
+14:48:34.785 (2974549884)|STATEMENT_EXECUTE|[439]
+14:48:34.785 (2974621873)|VARIABLE_ASSIGNMENT|[439]|this.Batch_Processed__c|"Yes"|0x79f770ee
+14:48:34.785 (2974631988)|STATEMENT_EXECUTE|[440]
+14:48:34.785 (2974674182)|HEAP_ALLOCATE|[440]|Bytes:8
+14:48:34.785 (2974688907)|DML_BEGIN|[440]|Op:Update|Type:Invoice_Batch__c|Rows:1
+14:48:34.785 (2974724024)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:34.785 (2984785439)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+14:48:34.785 (2989246106)|WF_RULE_EVAL_BEGIN|Workflow
+14:48:34.785 (2989283303)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2989404957)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:48:34.785 (2989428603)|WF_RULE_EVAL_VALUE|1
+14:48:34.785 (2989436943)|WF_CRITERIA_END|false
+14:48:34.785 (2989449763)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2989521681)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains SLX] 
+AND [Invoice Batch : Batch Status equals Payments Complete] 
+AND [Invoice Batch : Invoice Batch Name does not contain NZ]
+14:48:34.785 (2989538024)|WF_RULE_EVAL_VALUE|1
+14:48:34.785 (2989543327)|WF_CRITERIA_END|false
+14:48:34.785 (2989556548)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Wednesday 2019-01-09 Today Invoice Batch a0F6F00000uikQF]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:48:34.785 (2989623948)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+14:48:34.785 (2989637051)|WF_RULE_EVAL_VALUE|1
+14:48:34.785 (2989641710)|WF_CRITERIA_END|false
+14:48:34.785 (2989655785)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:48:34.785 (2989669361)|WF_ACTION| None
+14:48:34.785 (2989674757)|WF_RULE_EVAL_END
+14:48:34.785 (2989754201)|WF_ACTIONS_END| None
+14:48:34.785 (2989767766)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+14:48:34.785 (2990483981)|DML_END|[440]
+14:48:35.6 (3006177150)|CUMULATIVE_LIMIT_USAGE
+14:48:35.6 (3006177150)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:48:35.6 (3006177150)|CUMULATIVE_LIMIT_USAGE_END
+
+14:48:34.785 (3006224562)|CODE_UNIT_FINISHED|batchPaymentsProcess
+14:48:34.785 (3007229831)|EXECUTION_FINISHED

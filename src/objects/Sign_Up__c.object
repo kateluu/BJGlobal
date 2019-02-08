@@ -624,7 +624,7 @@ ID format: xxx-xxx-xxxx</description>
     <fields>
         <fullName>FromSource__c</fullName>
         <externalId>false</externalId>
-        <label>From Source</label>
+        <label>FromSource</label>
         <length>100</length>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
@@ -632,6 +632,66 @@ ID format: xxx-xxx-xxxx</description>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>From_Channel__c</fullName>
+        <description>To capture the original channel where the signup come from</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To capture the original channel where the signup come from</inlineHelpText>
+        <label>From Channel</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Google Adwords</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facebook Lead Ads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online Chat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Organic - Google</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Console Prospect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>From_Source__c</fullName>
@@ -943,6 +1003,7 @@ ID format: xxx-xxx-xxxx</description>
     </fields>
     <fields>
         <fullName>Management_Price__c</fullName>
+        <defaultValue>0</defaultValue>
         <description>Management product price from sign up</description>
         <externalId>false</externalId>
         <label>Management Price</label>
@@ -1128,6 +1189,14 @@ ID format: xxx-xxx-xxxx</description>
                 <fullName>ConvertoPages</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>DIFM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Engage</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <required>false</required>
@@ -1227,6 +1296,19 @@ ID format: xxx-xxx-xxxx</description>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Spinify_SalesUser__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Spinify Sales User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Sign_Ups4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Spotcheck_Completed_By__c</fullName>
@@ -1408,6 +1490,36 @@ ID format: xxx-xxx-xxxx</description>
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Web_Questionnaire__c</fullName>
+        <externalId>false</externalId>
+        <label>Web Questionnaire</label>
+        <picklist>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reminded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>Website__c</fullName>
         <externalId>false</externalId>
         <label>Website</label>
@@ -1452,6 +1564,600 @@ ID format: xxx-xxx-xxxx</description>
     </fields>
     <label>Sign Up</label>
     <listViews>
+        <fullName>APAC_LMonth_Signup_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Month Signups GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_LMonth_Signup_SEO</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Month Signups SEO</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_LMonth_Signup_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Month Signups SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_LWeek_Signup_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Week Signups GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_LWeek_Signup_SEO</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Week Signups SEO</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_LWeek_Signup_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Last Week Signups SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Month_Signup_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Month Signups GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Month_Signup_SEO</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Month Signups SEO</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Month_Signup_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Month Signups SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_New_Sales_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <label>New Sales GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_New_Sales_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <label>New Sales SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Today_Signup_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Today Signups GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Today_Signup_SEO</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Today Signups SEO</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Today_Signup_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>Today Signups SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Week_Signup_GMT</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>contains</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Week Signups GMT</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Week_Signup_SEO</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Week Signups SEO</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>APAC_Week_Signup_SLX</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>GetMoreTraffic</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>notContain</operation>
+            <value>SEO</value>
+        </filters>
+        <label>This Week Signups SLX</label>
+        <sharedTo>
+            <group>Apac_Managers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>All</fullName>
         <columns>Account__c</columns>
         <columns>Signup_Date__c</columns>
@@ -1495,6 +2201,7 @@ ID format: xxx-xxx-xxxx</description>
         <columns>Completed_Date__c</columns>
         <columns>LAST_UPDATE</columns>
         <columns>Form_Name__c</columns>
+        <columns>Product_Type__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Status__c</field>
@@ -1502,6 +2209,31 @@ ID format: xxx-xxx-xxxx</description>
             <value>Completed</value>
         </filters>
         <label>Completed</label>
+        <sharedTo>
+            <role>BJBGlobalAccountsAdmin</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Convert_Page</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Web_Questionnaire__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>contains</operation>
+            <value>converto</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_YEAR</value>
+        </filters>
+        <label>Convert Page</label>
         <sharedTo>
             <role>BJBGlobalAccountsAdmin</role>
         </sharedTo>
@@ -1579,7 +2311,6 @@ ID format: xxx-xxx-xxxx</description>
         <columns>Promocode__c</columns>
         <columns>Status__c</columns>
         <columns>IPAddress__c</columns>
-        <columns>Assign_to_Team__c</columns>
         <columns>Assign_To_User__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
@@ -1590,7 +2321,7 @@ ID format: xxx-xxx-xxxx</description>
         <filters>
             <field>CREATED_DATE</field>
             <operation>equals</operation>
-            <value>LAST_WEEK</value>
+            <value>THIS_WEEK</value>
         </filters>
         <label>GetMoreTraffic this week</label>
         <sharedTo>
@@ -1600,9 +2331,34 @@ ID format: xxx-xxx-xxxx</description>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Last_Week_Signup_From_Checkout</fullName>
-        <columns>Product_Type__c</columns>
+        <fullName>Last_Month_s_sign_ups</fullName>
         <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <label>Last Month Sign Ups</label>
+    </listViews>
+    <listViews>
+        <fullName>Last_Week_Signup_From_Checkout</fullName>
+        <columns>NAME</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Is_Addon__c</columns>
         <columns>Management_Price__c</columns>
         <columns>Account__c</columns>
         <columns>Promocode__c</columns>
@@ -1620,7 +2376,57 @@ ID format: xxx-xxx-xxxx</description>
             <operation>equals</operation>
             <value>LAST_WEEK</value>
         </filters>
-        <label>Last Week Signup</label>
+        <label>Last Week Signups</label>
+    </listViews>
+    <listViews>
+        <fullName>Last_Week_Signups</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Completed_Date__c</columns>
+        <columns>IPAddress__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <label>Last Weeks Signups</label>
+        <sharedTo>
+            <group>SLX_Administrators</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Month_s_sign_ups</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>This Month Sign Ups</label>
     </listViews>
     <listViews>
         <fullName>NEWOWNER_Sign_Ups</fullName>
@@ -1706,6 +2512,92 @@ ID format: xxx-xxx-xxxx</description>
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>SEO_Content_Pack_Completed</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Assign_to_Team__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Invoice_Paid__c</columns>
+        <columns>Product_Package__c</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Addon__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>ConvertoPages</value>
+        </filters>
+        <filters>
+            <field>BJB_Company__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Web_Questionnaire__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <label>SEO Content Pack Completed</label>
+        <sharedTo>
+            <role>SLX_Aus_SEO_Team_A_Manager</role>
+            <role>SLX_Aus_SEO_Team_B_Account_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SEO_Content_Pack_Reminded</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Assign_to_Team__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Invoice_Paid__c</columns>
+        <columns>Product_Package__c</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Is_Addon__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>ConvertoPages</value>
+        </filters>
+        <filters>
+            <field>BJB_Company__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Web_Questionnaire__c</field>
+            <operation>equals</operation>
+            <value>Reminded</value>
+        </filters>
+        <label>SEO Content Pack Reminded</label>
+        <sharedTo>
+            <role>SLX_Aus_SEO_Team_A_Manager</role>
+            <role>SLX_Aus_SEO_Team_B_Account_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>SPonsoredLinx_NZ</fullName>
         <columns>CREATED_DATE</columns>
         <columns>NAME</columns>
@@ -1767,9 +2659,9 @@ ID format: xxx-xxx-xxxx</description>
         <columns>Status__c</columns>
         <columns>Assign_to_Team__c</columns>
         <columns>Product_Type__c</columns>
+        <columns>Is_Addon__c</columns>
         <columns>IPAddress__c</columns>
         <columns>Assign_To_User__c</columns>
-        <columns>Is_Addon__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>
@@ -1777,6 +2669,45 @@ ID format: xxx-xxx-xxxx</description>
             <value>LAST_N_DAYS:30</value>
         </filters>
         <label>Signups Last 30 Days</label>
+        <sharedTo>
+            <group>Monica_Halim</group>
+            <group>SLX_Administrators</group>
+            <group>System_Admin</group>
+            <role>Client_Manager_Team_A_Leader</role>
+            <role>Digital_Strategy_Sales</role>
+            <role>SLXAusClientOperationsManager</role>
+            <role>SLXAusHumanResourcesManager</role>
+            <role>SLXAusWebProjectManager</role>
+            <role>SLXSales</role>
+            <role>SLXSalesManager</role>
+            <role>SLX_Aus_Receptionist</role>
+            <role>SLX_Aus_SEO_Team_A_Account_Manager</role>
+            <role>SLX_Aus_SEO_Team_A_Manager</role>
+            <role>SponsoredLinXAustralia</role>
+            <role>SponsoredLinXSystemsDevelopment</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signups_Last_60_Days</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Promocode__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Assign_to_Team__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>IPAddress__c</columns>
+        <columns>Assign_To_User__c</columns>
+        <columns>Is_Addon__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:60</value>
+        </filters>
+        <label>Signups Last 60 Days</label>
         <sharedTo>
             <group>Monica_Halim</group>
             <group>SLX_Administrators</group>
@@ -1842,6 +2773,8 @@ ID format: xxx-xxx-xxxx</description>
     <listViews>
         <fullName>This_Week_Signups</fullName>
         <columns>NAME</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Is_Addon__c</columns>
         <columns>Account__c</columns>
         <columns>BJB_Company__c</columns>
         <columns>Promocode__c</columns>
@@ -1850,9 +2783,7 @@ ID format: xxx-xxx-xxxx</description>
         <columns>CREATED_DATE</columns>
         <columns>Management_Price__c</columns>
         <columns>Set_Up_Price__c</columns>
-        <columns>Product_Type__c</columns>
         <columns>Completed_Date__c</columns>
-        <columns>IPAddress__c</columns>
         <columns>Daily_Budget__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
@@ -1866,9 +2797,10 @@ ID format: xxx-xxx-xxxx</description>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>Today_s_sign_ups</fullName>
+        <fullName>Today_DIFM</fullName>
         <columns>NAME</columns>
         <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
         <columns>Status__c</columns>
         <columns>LAST_UPDATE</columns>
         <columns>Promocode__c</columns>
@@ -1880,8 +2812,37 @@ ID format: xxx-xxx-xxxx</description>
         <columns>Product_Type__c</columns>
         <columns>BJB_Company__c</columns>
         <columns>OWNER.FIRST_NAME</columns>
-        <columns>Invoice_Paid__c</columns>
         <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>7/3/2018 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Product_Type__c</field>
+            <operation>equals</operation>
+            <value>DIFM</value>
+        </filters>
+        <label>Today DIFM</label>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_sign_ups</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <columns>Assign_To_User__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>CREATED_DATE</field>
@@ -1891,9 +2852,34 @@ ID format: xxx-xxx-xxxx</description>
         <label>Today Sign Ups</label>
     </listViews>
     <listViews>
-        <fullName>Yesterdays_Signups</fullName>
-        <columns>Product_Type__c</columns>
+        <fullName>Week_s_sign_ups</fullName>
         <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Is_Addon__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Promocode__c</columns>
+        <columns>Salesperson__c</columns>
+        <columns>Daily_Budget__c</columns>
+        <columns>Management_Price__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>BJB_Company__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Set_Up_Price__c</columns>
+        <columns>Product_Package__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>This Week Sign Ups</label>
+    </listViews>
+    <listViews>
+        <fullName>Yesterdays_Signups</fullName>
+        <columns>NAME</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Is_Addon__c</columns>
         <columns>Account__c</columns>
         <columns>BJB_Company__c</columns>
         <columns>Status__c</columns>
@@ -1904,7 +2890,6 @@ ID format: xxx-xxx-xxxx</description>
         <columns>Assign_to_Team__c</columns>
         <columns>Set_Up_Price__c</columns>
         <columns>Management_Price__c</columns>
-        <columns>CREATED_DATE</columns>
         <columns>Invoice_Paid__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
@@ -1913,21 +2898,6 @@ ID format: xxx-xxx-xxxx</description>
             <value>YESTERDAY</value>
         </filters>
         <label>Yesterdays Sign Ups</label>
-    </listViews>
-    <listViews>
-        <fullName>converto</fullName>
-        <columns>CREATED_DATE</columns>
-        <columns>NAME</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Product_Type__c</field>
-            <operation>contains</operation>
-            <value>converto</value>
-        </filters>
-        <label>converto</label>
-        <sharedTo>
-            <role>BJBGlobalAccountsAdmin</role>
-        </sharedTo>
     </listViews>
     <nameField>
         <label>Sign Up Name</label>
@@ -1942,6 +2912,8 @@ ID format: xxx-xxx-xxxx</description>
         <customTabListAdditionalFields>Product_Type__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
         <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Email__c</lookupDialogsAdditionalFields>
         <searchResultsAdditionalFields>IPAddress__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>

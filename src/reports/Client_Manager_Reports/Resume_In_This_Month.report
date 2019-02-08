@@ -9,12 +9,13 @@
     <columns>
         <field>Account_Product__c.Product_Price__c</field>
     </columns>
+    <currency>AUD</currency>
     <description>Account Products which resume in this month</description>
     <filter>
         <criteriaItems>
             <column>CUST_NAME</column>
             <operator>contains</operator>
-            <value>adwords,facebook,yahoo</value>
+            <value>seo</value>
         </criteriaItems>
         <criteriaItems>
             <column>Account_Product__c.Recurring_Period__c</column>
@@ -39,7 +40,7 @@
         <value>1</value>
     </params>
     <reportType>CustomEntity$Account_Product__c@Account_Product__c.Account__c</reportType>
-    <scope>team</scope>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>Account_Product__c.activeat__c</dateColumn>

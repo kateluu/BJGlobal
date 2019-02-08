@@ -136,8 +136,8 @@ public with sharing class ClientPanelAccountBilling {
             string submitError = 'Error: ' + e.getMessage() + '. On ' + e.getStackTraceString();
             system.debug(submitError);
             Utility.notifySysadmin('Error in submitUpdateBilling', submitError);
-
-            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, 'Sorry, an error occurred while updating your payment details. Please contact us.'));
+            
+            ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, 'Sorry, an error occurred while updating your payment details. ' + e.getMessage() ));
         }
 
         return null;

@@ -179,7 +179,7 @@
         <name>Ensured_client_has_downloaded_LINX_app__c</name>
     </fields>
     <fields>
-        <help><!-- Expectations of me --></help>
+        <help><!-- What are your Expectation of me, as your Account Manager? --></help>
         <label><!-- Expectations of me --></label>
         <name>Expectations_of_me__c</name>
     </fields>
@@ -252,13 +252,31 @@
         <name>How_long_has_your_business_been_running__c</name>
     </fields>
     <fields>
-        <help><!-- How many do you currently receive per week? --></help>
+        <help><!-- How many leads/sales do you currently receive per week? How much is each lead worth on average? --></help>
         <label><!-- How many do you receive per week? --></label>
         <name>How_many_leads_sales_per_week_do_you_cur__c</name>
     </fields>
     <fields>
         <label><!-- Hows yr adwords account working for you? --></label>
         <name>Hows_yr_adwords_account_working_for_you__c</name>
+    </fields>
+    <fields>
+        <help><!-- Intro Text --></help>
+        <label><!-- Intro Text --></label>
+        <name>Intro_Text__c</name>
+    </fields>
+    <fields>
+        <help><!-- Intro --></help>
+        <label><!-- Intro --></label>
+        <name>Intro__c</name>
+        <picklistValues>
+            <masterLabel>Do you have come time to talk about your account setup</masterLabel>
+            <translation><!-- Do you have come time to talk about your account setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hi (customer name) this is Greg From GMT/SLX. How are you doing? I&apos;m following up on the initial conversation you had with our Onboarding team and wanted to introduce myself as your new Adwords Account Manager.</masterLabel>
+            <translation><!-- Hi (customer name) this is Greg From GMT/SLX. How are you doing? I&apos;m following up on the initial conversation you had with our Onboarding team and wanted to introduce myself as your new Adwords Account Manager. --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- What are the names of the additional landing pages and what should be included in those? (max 4 more) --></help>
@@ -373,7 +391,7 @@
         <name>What_are_your_expectations_of_me__c</name>
     </fields>
     <fields>
-        <help><!-- Why should I buy your product/hire your service over one of your competitors? Any current Promotions? --></help>
+        <help><!-- What sets you apart from your competition? What are you key selling points? --></help>
         <label><!-- What are your selling points --></label>
         <name>What_are_your_selling_points__c</name>
     </fields>
@@ -404,6 +422,7 @@
         <name>What_is_your_main_competitor__c</name>
     </fields>
     <fields>
+        <help><!-- Why did you decide to sign up for Management with GMT/SLX? What specifically are you looking for us to achieve for you? --></help>
         <label><!-- What is your reason using SLX/ GMT --></label>
         <name>What_is_your_reason_using_SLX_GMT__c</name>
     </fields>
@@ -412,8 +431,8 @@
         <name>What_is_your_target_location__c</name>
     </fields>
     <fields>
-        <help><!-- Men, women, young families etc --></help>
-        <label><!-- Tell me about your target market? --></label>
+        <help><!-- Can you tell me about your business? --></help>
+        <label><!-- Can you tell me about your business? --></label>
         <name>What_is_your_target_market_Men_women__c</name>
     </fields>
     <fields>
@@ -421,7 +440,7 @@
         <name>What_kind_of_creative_do_you_love_to_see__c</name>
     </fields>
     <fields>
-        <help><!-- you can immediately tell if they have advertising gaps --></help>
+        <help><!-- What forms of marketing/advertising have you used up until now? How have they worked for you? --></help>
         <label><!-- What other advertisings have you done? --></label>
         <name>What_other_advertising_on_offline_do__c</name>
     </fields>
@@ -435,7 +454,7 @@
         <name>What_products_do_you_want_to_sell_more__c</name>
     </fields>
     <fields>
-        <help><!-- This will help you understand the clients expectations of what they need but more so want they want. Gives you a goal to work towards --></help>
+        <help><!-- How many additional leads are you looking to get from your AdWords Account? --></help>
         <label><!-- What is additional your weekly goal? --></label>
         <name>What_the_min_No_lead_sale_you_need_pwk__c</name>
     </fields>
@@ -483,6 +502,37 @@
         <sections>
             <label><!-- Review &amp; Confirm --></label>
             <section>Review &amp; Confirm</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Questionnaire Layout</layout>
+        <sections>
+            <label><!-- Adwords Questions --></label>
+            <section>Adwords Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Converto Questions --></label>
+            <section>Converto Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Housekeeping --></label>
+            <section>Housekeeping</section>
+        </sections>
+        <sections>
+            <label><!-- Introduction --></label>
+            <section>Introduction</section>
+        </sections>
+        <sections>
+            <label><!-- Optional Landing Pages --></label>
+            <section>Optional Landing Pages</section>
+        </sections>
+        <sections>
+            <label><!-- Primary Landing Page --></label>
+            <section>Primary Landing Page</section>
         </sections>
     </layouts>
     <layouts>
@@ -550,6 +600,10 @@
     <recordTypes>
         <label><!-- Social Reassign Questionnaire --></label>
         <name>Social_Reassignment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Training Questionnaire --></label>
+        <name>Training_Questionnaire</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>

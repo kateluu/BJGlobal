@@ -172,8 +172,24 @@
         <columns>Management_Discount__c</columns>
         <columns>Setup_Discount_Type__c</columns>
         <columns>Setup_Discount__c</columns>
+        <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>SetUp_Discount</fullName>
+        <columns>NAME</columns>
+        <columns>IsActive__c</columns>
+        <columns>Management_Discount_Type__c</columns>
+        <columns>Management_Discount__c</columns>
+        <columns>Setup_Discount_Type__c</columns>
+        <columns>Setup_Discount__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Setup_Discount__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>SetUp Discount</label>
     </listViews>
     <listViews>
         <fullName>Support_View</fullName>

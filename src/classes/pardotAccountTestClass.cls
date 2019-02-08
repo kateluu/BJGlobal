@@ -92,8 +92,8 @@ private class pardotAccountTestClass {
         fbap.Payment_Option__c = 'Eway';
         fbap.Product_Status__c = 'Active';
         fbap.Account__c = account.Id;
+        fbap.OwnerId = UserInfo.getUserId();
         insert fbap;
-        
         
         
         Account_Product__c ap1 = new Account_Product__c();
@@ -105,7 +105,10 @@ private class pardotAccountTestClass {
         ap1.Recurring_Period__c ='Weekly';
         ap1.Payment_Option__c = 'Eway';
         ap1.Account__c = account.Id;
+        ap1.OwnerId = UserInfo.getUserId();
         insert ap1;
+
+
         
         Account_Product__c ap0 = new Account_Product__c();
         ap0.Last_Invoice_Date__c = Date.today().addDays(-7);
@@ -117,6 +120,9 @@ private class pardotAccountTestClass {
         ap0.Payment_Option__c = 'Eway';
         ap0.Account__c = account.Id;
         insert ap0;
+
+   
+
         
         Account_Product__c ap10 = new Account_Product__c();
         ap10.Last_Invoice_Date__c = Date.today().addDays(-7);
@@ -150,6 +156,42 @@ private class pardotAccountTestClass {
         ap2.Payment_Option__c = 'Eway';
         ap2.Account__c = account.Id;
         insert ap2;
+
+
+        Account_Product__c ap21 = new Account_Product__c();
+        ap2.Last_Invoice_Date__c = Date.today().addDays(-7);
+        ap2.Recurring_Frequency__c = 1;
+        ap2.Name = 'Adwords';
+        ap2.Product_Status__c = 'Active';
+        ap2.Product_Price__c = 19.99;
+        ap2.Recurring_Period__c ='Weekly';
+        ap2.Payment_Option__c = 'Eway';
+        ap2.Account__c = account.Id;
+        insert ap21;
+
+        //test data for calActivityAndStatusForProduct() method
+        SFDC_Projects__c project = new SFDC_Projects__c();
+        project.Account_Product__c = ap1.id;
+        project.Email__c ='test@gmail.com';
+        project.Sold_by__c =  account.Id;
+        project.Account__c = account.Id;
+        insert project;
+
+        
+        Task taskCreate = new Task(Ownerid=UserInfo.getUserId(),Status = 'Completed', whatid = project.id, Subject='Test task');
+        insert taskCreate;
+
+        taskCreate = new Task(Ownerid=UserInfo.getUserId(),Status = 'Not Started', whatid = project.id , Subject='Test task');
+        insert taskCreate;
+
+
+
+        Task taskCreate2 = new Task(Ownerid=UserInfo.getUserId(), Status = 'Completed', whatid =  account.Id, Subject='Test task');
+        insert taskCreate2;
+
+        taskCreate2 = new Task(Ownerid=UserInfo.getUserId(), Status = 'Not Started', whatid =  account.Id , Subject='Test task');
+        insert taskCreate2;
+
        
         Database.batchableContext info;
         scriptBatch.start(info);

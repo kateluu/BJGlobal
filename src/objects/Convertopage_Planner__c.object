@@ -409,11 +409,15 @@ Please check the ABN validates here: http://abr.business.gov.au/</inlineHelpText
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
-        <columns>Account__c</columns>
         <columns>CREATEDBY_USER</columns>
         <columns>CREATED_DATE</columns>
         <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_90_DAYS</value>
+        </filters>
         <label>All</label>
     </listViews>
     <nameField>

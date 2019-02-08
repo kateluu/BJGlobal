@@ -4,7 +4,7 @@ global class pauseProductStatusIterable implements Iterator<Account_Product__c> 
 	Integer i {get;set;}
 	
 	public pauseProductStatusIterable() {
-		this.pausedProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c FROM Account_Product__c WHERE pauseat__c=today and Product_Status__c = 'Active'];
+		this.pausedProducts = [SELECT Id,Name,Account__c,Product_Number__c,Product_Status__c, Last_Paid_Date__c , From_Last_Paid_Date__c, pauseat__c , TP_Record_Id__c FROM Account_Product__c WHERE pauseat__c=today and Product_Status__c = 'Active'];
 		this.i = 0;		
 	}
 	

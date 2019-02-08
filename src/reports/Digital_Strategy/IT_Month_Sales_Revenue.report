@@ -18,11 +18,13 @@
             <axisBinding>y</axisBinding>
             <column>Sign_Up__c$Management_Price__c</column>
         </chartSummaries>
-        <chartType>VerticalColumn</chartType>
+        <chartType>VerticalColumnGrouped</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Sign_Up__c$Salesperson__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Sign_Up__c.Account_Products__r.Invoices__r$Status__c</secondaryGroupingColumn>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
         <showTotal>false</showTotal>
@@ -36,6 +38,9 @@
     </chart>
     <columns>
         <field>Sign_Up__c$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r$CreatedDate</field>
     </columns>
     <columns>
         <field>Sign_Up__c$Account__c</field>
@@ -68,7 +73,7 @@
         <criteriaItems>
             <column>Sign_Up__c$Salesperson__c</column>
             <operator>contains</operator>
-            <value>Joshua Beatty,Daniel Andreotti,Akhia Karaitiana,Scott Dare,Graham Watts,Akin</value>
+            <value>Joshua Beatty,Daniel Andreotti,Akhia Karaitiana,Scott Dare,Graham Watts,Akin,Aleksandar</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -90,10 +95,10 @@
     <reportType>Signup_Invocies__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
-    <sortColumn>Sign_Up__c$Management_Price__c</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <sortColumn>Sign_Up__c.Account_Products__r.Invoices__r$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
-        <dateColumn>Sign_Up__c.Account_Products__r.Invoices__r$CreatedDate</dateColumn>
+        <dateColumn>Sign_Up__c$CreatedDate</dateColumn>
         <interval>INTERVAL_THISMONTH</interval>
     </timeFrameFilter>
 </Report>

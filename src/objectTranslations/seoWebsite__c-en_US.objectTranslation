@@ -14,6 +14,22 @@
         <relationshipLabel><!-- SEO Websites --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Backlinks --></label>
+        <name>Ahrefs_Backlinks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Domain Rank --></label>
+        <name>Ahrefs_Domain_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Homepage Backlinks --></label>
+        <name>Ahrefs_Homepage_Backlinks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Homepage Url Rank --></label>
+        <name>Ahrefs_Homepage_Url_Rank__c</name>
+    </fields>
+    <fields>
         <label><!-- Bing Top 10 --></label>
         <name>Bing_Top_10__c</name>
     </fields>
@@ -59,10 +75,6 @@
         <name>Google_Places_Top_10_Count__c</name>
     </fields>
     <fields>
-        <label><!-- Percentage in Google Places Top 10 --></label>
-        <name>Google_Places_Top_10_Percent__c</name>
-    </fields>
-    <fields>
         <label><!-- Google Sum --></label>
         <name>Google_Sum__c</name>
     </fields>
@@ -79,8 +91,24 @@
         <name>Google_Top_10__c</name>
     </fields>
     <fields>
-        <label><!-- Initial Crawl --></label>
-        <name>Initial_Crawl__c</name>
+        <label><!-- Google Unranked Count DaysAgo2 --></label>
+        <name>Google_Unranked_2_days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Unranked Count --></label>
+        <name>Google_Unranked_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Unranked Increase 2 days --></label>
+        <name>Google_Unranked_Lift_2_days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Keyword Count DaysAgo2 --></label>
+        <name>Keyword_Count_DaysAgo2__c</name>
     </fields>
     <fields>
         <label><!-- Keywords --></label>
@@ -97,6 +125,10 @@
     <fields>
         <label><!-- Last Report Date --></label>
         <name>Last_Report_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- OwnerRole --></label>
+        <name>OwnerRole__c</name>
     </fields>
     <fields>
         <label><!-- Project --></label>
@@ -140,6 +172,34 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- System Quote --></label>
+        <name>Quote_Generated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reach --></label>
+        <name>Reach__c</name>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local</masterLabel>
+            <translation><!-- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referring Domains --></label>
+        <name>Referring_Domains__c</name>
+    </fields>
+    <fields>
         <label><!-- Search filter --></label>
         <name>Searching_From__c</name>
         <picklistValues>
@@ -160,14 +220,6 @@
         <name>Status__c</name>
     </fields>
     <fields>
-        <label><!-- Update Progress --></label>
-        <name>Update_Progress__c</name>
-    </fields>
-    <fields>
-        <label><!-- Yahoo Top 10 --></label>
-        <name>Yahoo_Top_10__c</name>
-    </fields>
-    <fields>
         <label><!-- URL --></label>
         <name>website_url__c</name>
     </fields>
@@ -179,25 +231,14 @@
         </sections>
     </layouts>
     <layouts>
-        <layout>Prospect SEO Website Layout</layout>
-        <sections>
-            <label><!-- Custom Links --></label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label><!-- Prospect Keywords --></label>
-            <section>Prospect Keywords</section>
-        </sections>
-    </layouts>
-    <layouts>
         <layout>seoWebsite Layout</layout>
         <sections>
             <label><!-- Custom Links --></label>
             <section>Custom Links</section>
         </sections>
         <sections>
-            <label><!-- Rank History --></label>
-            <section>Rank History</section>
+            <label><!-- Rank History (drag to zoom) --></label>
+            <section>Rank History (drag to zoom)</section>
         </sections>
     </layouts>
     <recordTypes>

@@ -996,66 +996,64 @@
         <unique>false</unique>
     </fields>
     <listViews>
-        <fullName>GMT</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>Sales_Notes__c</columns>
+        <fullName>Converted_Leads</fullName>
         <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Mitchell Cochrane</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Mitchell</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Alec</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>From_Form__c</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
+        <columns>Sales_Notes__c</columns>
         <columns>LEAD.PHONE</columns>
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>From_Source__c</columns>
         <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
+        <columns>BJB_Company__c</columns>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>contains</operation>
-            <value>archer</value>
-        </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Sale</value>
         </filters>
-        <label>GMT - Maddie</label>
+        <label>Converted Leads</label>
         <sharedTo>
-            <role>GMTSales</role>
+            <role>Digital_Strategy_Manager</role>
+            <role>Sales_Manager_Assistant_GMT</role>
+            <role>Sales_Manager_Assistant_SLX</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Alexandria</fullName>
+        <fullName>Facebook_Lead_Ads</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>From_Form__c</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>From_Source__c</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>BJB_Company__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.LEAD_SOURCE</field>
+            <operation>equals</operation>
+            <value>Facebook Lead Ads</value>
+        </filters>
+        <label>Facebook Lead Ads</label>
+        <sharedTo>
+            <role>Digital_Strategy_Manager</role>
+            <role>Sales_Manager_Assistant_GMT</role>
+            <role>Sales_Manager_Assistant_SLX</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_AlexandriaLaffan</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1079,23 +1077,82 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Alexandria</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Ben</fullName>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATE</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>LEAD.STATUS</columns>
+        <fullName>GMT_BelindaAngelovska</fullName>
         <columns>LEAD.CREATED_DATE</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>LEAD.UNREAD</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
         <columns>LEAD.PHONE</columns>
         <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Belinda Angeloska</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Follow Up,New,Contacted,Qualified</value>
+        </filters>
+        <label>GMT - Belinda Angeloska</label>
+        <sharedTo>
+            <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_BenHoughton</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Ben Houghton</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Follow Up,New,Contacted,Qualified</value>
+        </filters>
+        <label>GMT - Ben Houghton</label>
+        <sharedTo>
+            <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>GMT_BenWhite</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
         <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
@@ -1110,45 +1167,16 @@
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Ben</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Christie</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_TRANSFER</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Christie Barber</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Christie</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Coel</fullName>
+        <fullName>GMT_Cody_Pechey</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1160,24 +1188,25 @@
         <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Coel Carmody</value>
+            <operation>contains</operation>
+            <value>Cody Pechey</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - zzz</label>
+        <label>GMT - Cody Pechey</label>
         <sharedTo>
-            <role>GMTSales</role>
+            <roleAndSubordinatesInternal>GMTSales</roleAndSubordinatesInternal>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Connor</fullName>
+        <fullName>GMT_ConnorBroadfoot</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1201,13 +1230,13 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Connor</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Ella</fullName>
+        <fullName>GMT_EllaHumbry</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1231,13 +1260,13 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Ella</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Emma</fullName>
+        <fullName>GMT_ErvinSumarwata</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1254,21 +1283,23 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Emma Felton</value>
+            <value>Ervin Sumarwata</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Emma</label>
+        <label>GMT - Ervin Sumarwata</label>
         <sharedTo>
             <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Garry</fullName>
+        <fullName>GMT_GretelPhillips</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
@@ -1276,65 +1307,6 @@
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Garry Jamieson</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - zzzz</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Gemma</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>contains</operation>
-            <value>gemma</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - zzzzz</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Gordie</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -1342,106 +1314,17 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Gordie Lynton</value>
+            <value>Gretel Phillips</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Gordie</label>
+        <label>GMT - Gretel Phillips</label>
         <sharedTo>
             <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_James</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>James Chapman</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - James</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Jamie</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Jamie Walls-Boller</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Jamie</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Julianne</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Julianne Adams</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Julianne</label>
-        <sharedTo>
-            <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
@@ -1474,7 +1357,7 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Lawrence</fullName>
+        <fullName>GMT_LeviGray</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1491,21 +1374,22 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Lawrence Lugtu</value>
+            <value>Shannon Wells</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - ZZZZZZZZ</label>
+        <label>GMT - Shannon Wells</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Levi</fullName>
+        <fullName>GMT_MaddisonArcher</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
@@ -1513,7 +1397,6 @@
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -1521,46 +1404,17 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Levi Gray</value>
+            <value>Maddison Archer</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Levi</label>
+        <label>GMT - Maddison Archer</label>
         <sharedTo>
             <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Luke</fullName>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>pi__score__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>Assigned_To__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Luke Diamond</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Luke</label>
-        <sharedTo>
-            <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
@@ -1588,13 +1442,13 @@
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Matt</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Milos</fullName>
+        <fullName>GMT_SashaShirono</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1611,20 +1465,21 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Milos Nedeljkov</value>
+            <value>Sasha Shirono</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Milos</label>
+        <label>GMT - zz</label>
         <sharedTo>
             <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_Shaye</fullName>
+        <fullName>GMT_SeanWhitley</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -1641,76 +1496,17 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Shaye Ladbrook</value>
+            <value>Sean Whitley</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Shaye</label>
+        <label>GMT - Sean Whitley</label>
         <sharedTo>
             <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Tristan</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>equals</operation>
-            <value>Tristan Pearce</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Tristan Pearce</label>
-        <sharedTo>
-            <role>GMTSales</role>
-        </sharedTo>
-    </listViews>
-    <listViews>
-        <fullName>GMT_Tyler_Shar</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>contains</operation>
-            <value>marshall</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - Matilda</label>
-        <sharedTo>
-            <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
@@ -1743,8 +1539,9 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>GMT_callum</fullName>
+        <fullName>GMT_ZacCostley</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
@@ -1752,7 +1549,6 @@
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -1760,16 +1556,17 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Callum Teague</value>
+            <value>Zachary Costley</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
+            <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
-        <label>GMT - Callum</label>
+        <label>GMT - Zac Costley</label>
         <sharedTo>
             <role>GMTSales</role>
+            <role>GMT_Sales_Manager</role>
         </sharedTo>
     </listViews>
     <listViews>
@@ -1884,6 +1681,7 @@
     <listViews>
         <fullName>SLX_Alex</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
@@ -1891,7 +1689,6 @@
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -1956,16 +1753,41 @@
         <columns>SFGA__Web_Source__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Sale</value>
+        </filters>
+        <label>SLX - Sold leads</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_Bridget</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Francis Hardy</value>
+            <value>Bridget Beckley-Gray</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Z</label>
+        <label>SLX - Bridget</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -1988,14 +1810,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>contains</operation>
-            <value>Jarrad Upton</value>
+            <value>Gretel Phillips</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Z</label>
+        <label>SLX - Gretel</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2034,6 +1856,7 @@
     <listViews>
         <fullName>SLX_Dan_Manning</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
@@ -2041,7 +1864,6 @@
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -2062,7 +1884,7 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>SLX_Jack</fullName>
+        <fullName>SLX_GregGiles</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -2072,6 +1894,66 @@
         <columns>LEAD.EMAIL</columns>
         <columns>Sales_Notes__c</columns>
         <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Greg Giles</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Follow Up,Contacted,Qualified</value>
+        </filters>
+        <label>SLX - Greg Giles</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_Gretel_Phillips</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Gretel Phillips</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Follow Up,Contacted,Qualified</value>
+        </filters>
+        <label>SLX - Gretel Phillips</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_Jack</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
         <columns>LEAD.LEAD_SOURCE</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>pi__score__c</columns>
@@ -2109,14 +1991,14 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Joshua Hart</value>
+            <value>Petra Boydell</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Yoshi</label>
+        <label>SLX - Petra</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2241,36 +2123,6 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>SLX_Renae</fullName>
-        <columns>LEAD.CREATED_DATE</columns>
-        <columns>FULL_NAME</columns>
-        <columns>LEAD.STATUS</columns>
-        <columns>Assigned_To__c</columns>
-        <columns>LEAD.PHONE</columns>
-        <columns>LEAD.URL</columns>
-        <columns>LEAD.EMAIL</columns>
-        <columns>Sales_Notes__c</columns>
-        <columns>LEAD.LAST_UPDATE</columns>
-        <columns>LEAD.LEAD_SOURCE</columns>
-        <columns>SFGA__Web_Source__c</columns>
-        <columns>pi__score__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>Assigned_To__c</field>
-            <operation>contains</operation>
-            <value>staunton</value>
-        </filters>
-        <filters>
-            <field>LEAD.STATUS</field>
-            <operation>equals</operation>
-            <value>New,Follow Up,Contacted,Qualified</value>
-        </filters>
-        <label>GMT - James Staunton</label>
-        <sharedTo>
-            <roleAndSubordinatesInternal>GMTSales</roleAndSubordinatesInternal>
-        </sharedTo>
-    </listViews>
-    <listViews>
         <fullName>SLX_Ryan</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
@@ -2288,20 +2140,20 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>contains</operation>
-            <value>tadic</value>
+            <value>akin,gretel,andreotti,dare,beaty,akhia</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
             <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Z</label>
+        <label>SLX - Dig Strat</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>SLX_Sebastian</fullName>
+        <fullName>SLX_Ryan_DanielAndreotti</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -2318,14 +2170,74 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>contains</operation>
-            <value>Rishaad Mohammed</value>
+            <value>Daniel Andreotti</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>Follow Up,New,Contacted,Qualified</value>
+            <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>SLX - Rishaad</label>
+        <label>SLX - Dig Strat -Daniel Andreotti</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_ShaneDeLautour</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Shane De Lautour</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Follow Up,Contacted,Qualified</value>
+        </filters>
+        <label>SLX - Shane De Lautour</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_Slade_Bell</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Slade Bell</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Follow Up,Contacted,Qualified</value>
+        </filters>
+        <label>SLX - Slade Bell</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2355,6 +2267,36 @@
             <value>Follow Up,New,Contacted,Qualified</value>
         </filters>
         <label>SLX - Sophora Cliff</label>
+        <sharedTo>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SLX_StephenPlimmer</fullName>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.URL</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>LEAD.LAST_UPDATE</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <columns>SFGA__Web_Source__c</columns>
+        <columns>pi__score__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Stephen Plimmer</value>
+        </filters>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Follow Up,Contacted,Qualified</value>
+        </filters>
+        <label>SLX - Stephen Plimmer</label>
         <sharedTo>
             <role>SLXSales</role>
         </sharedTo>
@@ -2390,7 +2332,7 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>SLX_Tod</fullName>
+        <fullName>SLX_Tyler_Rodwell</fullName>
         <columns>LEAD.CREATED_DATE</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
@@ -2407,24 +2349,50 @@
         <filters>
             <field>Assigned_To__c</field>
             <operation>equals</operation>
-            <value>Tod Ellul</value>
+            <value>Tyler Rodwell</value>
         </filters>
         <filters>
             <field>LEAD.STATUS</field>
             <operation>equals</operation>
-            <value>Follow Up,New,Contacted,Qualified</value>
+            <value>New,Follow Up,Contacted,Qualified</value>
         </filters>
-        <label>GMT - zzzzzz</label>
+        <label>SLX - Tyler Rodwell</label>
         <sharedTo>
-            <role>GMTSales</role>
+            <role>SLXSales</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>This_Month_Leads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>LEAD.UNREAD</columns>
+        <columns>From_Source__c</columns>
+        <columns>Sales_Notes__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LEAD.LEAD_SOURCE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>This Month Leads</label>
+        <sharedTo>
+            <group>Marketing_Department</group>
         </sharedTo>
     </listViews>
     <listViews>
         <fullName>TodaysLeads</fullName>
         <columns>LEAD.CREATED_DATE</columns>
+        <columns>From_Form__c</columns>
         <columns>FULL_NAME</columns>
         <columns>LEAD.STATUS</columns>
         <columns>Assigned_To__c</columns>
+        <columns>Sales_Notes__c</columns>
         <columns>LEAD.PHONE</columns>
         <columns>LEAD.URL</columns>
         <columns>LEAD.EMAIL</columns>
@@ -2432,13 +2400,10 @@
         <columns>From_Source__c</columns>
         <columns>SFGA__Web_Source__c</columns>
         <columns>BJB_Company__c</columns>
-        <columns>Sales_Notes__c</columns>
         <filterScope>Everything</filterScope>
         <label>All Leads</label>
         <sharedTo>
             <role>Digital_Strategy_Manager</role>
-            <role>GMTAustralia</role>
-            <role>SLXSalesManager</role>
             <role>Sales_Manager_Assistant_GMT</role>
             <role>Sales_Manager_Assistant_SLX</role>
         </sharedTo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Marketing Work Request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SponsoredLinX</letterhead>
+    <name>New Marketing Work Request</name>
+    <style>freeForm</style>
+    <subject>Marketing Request: {!Work_Request__c.Subject__c}</subject>
+    <textOnly>Hi team,
+
+There is a new work request had been raised from Salesforce and here is the details
+
+Project Name : {!Work_Request__c.Subject__c}
+
+Department: {!Work_Request__c.Department_Outlet__c}
+
+Description: {!Work_Request__c.Description__c}
+
+Preferred Due Date: {!Work_Request__c.Due_Date__c}
+
+Urgency: {!Work_Request__c.Priority__c}
+
+Comments: {!Work_Request__c.Further_Instructions__c}
+
+Created By: {!Work_Request__c.CreatedBy}
+
+
+Cheers,
+KateLuu - IT Salesforce Administrator</textOnly>
+    <type>html</type>
+</EmailTemplate>

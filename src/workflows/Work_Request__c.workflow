@@ -12,6 +12,17 @@
         <template>Work_Request/New_Work_Request</template>
     </alerts>
     <alerts>
+        <fullName>Closed_Work_Request</fullName>
+        <ccEmails>william.zhang@sponsoredlinx.com</ccEmails>
+        <description>Closed Work Request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Work_Request/IT_Work_Request_completed</template>
+    </alerts>
+    <alerts>
         <fullName>IT_Work_Request</fullName>
         <ccEmails>william.zhang@sponsoredlinx.com</ccEmails>
         <description>IT Work Request</description>
@@ -21,6 +32,19 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Work_Request/IT_Work_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_to_Marketing_for_new_work_request</fullName>
+        <ccEmails>slxmarketing@sponsoredlinx.com</ccEmails>
+        <description>Send notification to Marketing for new work request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>support@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>AssignedNotification/New_Marketing_Work_Request</template>
     </alerts>
     <alerts>
         <fullName>Web_Feed_Install_Work_Request</fullName>
@@ -58,7 +82,7 @@
     <rules>
         <fullName>Closed Work Request</fullName>
         <actions>
-            <name>Work_Request_Closed</name>
+            <name>Closed_Work_Request</name>
             <type>Alert</type>
         </actions>
         <active>true</active>

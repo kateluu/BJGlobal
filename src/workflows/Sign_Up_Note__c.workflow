@@ -57,6 +57,18 @@
         <template>Sign_Up/Campaign_Start_Date_Not_ASAP</template>
     </alerts>
     <alerts>
+        <fullName>New_Sign_Up_Notes</fullName>
+        <description>New Sign Up Notes</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cody.pechey@getmoretraffic.com.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up_Notes/Signup_Notes_Details</template>
+    </alerts>
+    <alerts>
         <fullName>Send_New_GMT_Sign_Up_Note_to_Sales_Manager</fullName>
         <description>Send New GMT Sign Up Note to Sales Manager</description>
         <protected>false</protected>
@@ -72,20 +84,21 @@
         <description>Sign Up Note</description>
         <protected>false</protected>
         <recipients>
-            <recipient>gretel.phillips@sponsoredlinx.com</recipient>
+            <recipient>jacob.bamford@sponsoredlinx.com</recipient>
             <type>user</type>
         </recipients>
         <recipients>
-            <recipient>outbound.teamleader@sponsoredlinx.com</recipient>
+            <recipient>toby.wilson@sponsoredlinx.com</recipient>
             <type>user</type>
         </recipients>
-        <senderType>CurrentUser</senderType>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
         <template>Sign_Up_Notes/Signup_Notes_Details</template>
     </alerts>
     <outboundMessages>
         <fullName>Adwords_Acc_Transfer</fullName>
         <apiVersion>42.0</apiVersion>
-        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
+        <endpointUrl>http://staging.clientpanel.sponsoredlinx.com.au/api/adwordsapi/transfer</endpointUrl>
         <fields>Adwords_ID__c</fields>
         <fields>BJB_Company__c</fields>
         <fields>Id</fields>
@@ -104,7 +117,7 @@
         </actions>
         <active>true</active>
         <description>Transfer clients account from HC mcc to CM&apos;s MCC when assigned</description>
-        <formula>AND(ischanged(OwnerID1__c), Sign_up__r.Owner:User.LastName != &apos;Site Guest User&apos;, Processed__c = false,  RecordType.Name = &apos;Adwords Signup Notes&apos;)</formula>
+        <formula>AND(ischanged(OwnerID1__c), Sign_up__r.Owner:User.LastName != &apos;Site Guest User&apos;, Processed__c = false,  RecordType.Name = &apos;Adwords Signup Notes&apos;,Adwords_ID__c!= &apos;000-000-0000&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -180,7 +193,27 @@
         <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
-        <fullName>Send Signup Notes to Amber</fullName>
+        <fullName>Send Signup Notes Alert to Sales Manager - GMT</fullName>
+        <actions>
+            <name>New_Sign_Up_Notes</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Sign_Up_Note__c.CreatedDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sign_Up__c.FromSource__c</field>
+            <operation>contains</operation>
+            <value>Get</value>
+        </criteriaItems>
+        <description>For GMT</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Signup Notes Alert to Sales Manager - SLX</fullName>
         <actions>
             <name>Sign_Up_Note</name>
             <type>Alert</type>
@@ -196,6 +229,7 @@
             <operation>contains</operation>
             <value>sponsoredlinx</value>
         </criteriaItems>
+        <description>For SLX</description>
         <triggerType>onCreateOnly</triggerType>
     </rules>
 </Workflow>

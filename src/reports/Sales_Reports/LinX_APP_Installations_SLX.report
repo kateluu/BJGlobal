@@ -28,6 +28,11 @@
             <operator>notContain</operator>
             <value>getmoretraffic</value>
         </criteriaItems>
+        <criteriaItems>
+            <column>Account.Adwords_Active_Days__c</column>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
     </filter>
     <format>Summary</format>
     <groupingsDown>
@@ -41,7 +46,7 @@
         <value>1</value>
     </params>
     <reportType>AccountList</reportType>
-    <scope>organization</scope>
+    <scope>team</scope>
     <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>CREATED_DATE</dateColumn>

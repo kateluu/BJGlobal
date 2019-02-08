@@ -1,0 +1,324 @@
+43.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+18:31:09.0 (68979)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+18:31:09.0 (103540)|EXECUTION_STARTED
+18:31:09.0 (106039)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VDtL
+18:31:09.0 (14106602)|WF_RULE_EVAL_BEGIN|Workflow
+18:31:09.0 (14149734)|WF_CRITERIA_BEGIN|[Invoice: quick-seal silicone & caulking a0E6F00002ASmA3]|Automatic Tasks for Outstanding Invoices|01Q6F0000019daX|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.0 (17770247)|WF_RULE_FILTER|[Invoice : Status equals AUTHORISED, PARTIALLY PAID] 
+AND [Invoice : Reminder Task Created equals false]
+18:31:09.0 (17794210)|WF_RULE_EVAL_VALUE|2
+18:31:09.0 (17798829)|WF_CRITERIA_END|false
+18:31:09.0 (17807578)|WF_CRITERIA_BEGIN|[Invoice: quick-seal silicone & caulking a0E6F00002ASmA3]|Sign_Up_Invoice3016F0000009b9U|01Q6F0000002qx7|ON_ALL_CHANGES|0
+18:31:09.0 (17874723)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.0 (17882463)|WF_CRITERIA_END|true
+18:31:09.0 (18516643)|WF_SPOOL_ACTION_BEGIN|Workflow
+18:31:09.0 (18543092)|WF_ACTION| Flow Trigger: 1;
+18:31:09.0 (18547561)|WF_RULE_EVAL_END
+18:31:09.0 (19443065)|WF_FLOW_ACTION_BEGIN|09L6F0000000MEf
+18:31:09.22 (22099991)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000Pjga|3016F0000009b9U
+18:31:09.22 (22758276)|FLOW_CREATE_INTERVIEW_END|277587ee18514c63f00376ecc3ec1661f44be7-285b|Sign Up Invoice
+18:31:09.23 (23132848)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.23 (23153180)|FLOW_START_INTERVIEW_BEGIN|277587ee18514c63f00376ecc3ec1661f44be7-285b|Sign Up Invoice
+18:31:09.23 (26852333)|FLOW_START_INTERVIEW_END|277587ee18514c63f00376ecc3ec1661f44be7-285b|Sign Up Invoice
+18:31:09.127 (127041771)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000DZX0|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:31:09.127 (127116465)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.127 (127157352)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.127 (127568880)|HEAP_ALLOCATE|[72]|Bytes:3
+18:31:09.127 (127611543)|HEAP_ALLOCATE|[77]|Bytes:152
+18:31:09.127 (127626498)|HEAP_ALLOCATE|[342]|Bytes:408
+18:31:09.127 (127638372)|HEAP_ALLOCATE|[355]|Bytes:408
+18:31:09.127 (127650073)|HEAP_ALLOCATE|[467]|Bytes:48
+18:31:09.127 (127677754)|HEAP_ALLOCATE|[139]|Bytes:6
+18:31:09.127 (127703301)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.127 (127711412)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:31:09.127 (127818421)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x639a0a39
+18:31:09.127 (127880341)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.127 (127888993)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:31:09.127 (127902766)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x639a0a39
+18:31:09.127 (127911260)|STATEMENT_EXECUTE|[1]
+18:31:09.127 (127957675)|HEAP_ALLOCATE|[50]|Bytes:5
+18:31:09.127 (127984694)|HEAP_ALLOCATE|[56]|Bytes:5
+18:31:09.127 (127993080)|HEAP_ALLOCATE|[64]|Bytes:7
+18:31:09.127 (128324274)|HEAP_ALLOCATE|[2]|Bytes:5
+18:31:09.127 (128353301)|HEAP_ALLOCATE|[2]|Bytes:4
+18:31:09.127 (128365049)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:31:09.127 (129449867)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Sheppard","LastModifiedDate":"2018-09-28T08:31:01.000Z","Management_Price__c":99.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Trades & Services","Name":"Rory Sheppard","City__c":"Robina","Is_Addon__c":false,"CreatedById":"0056F000006HQMbQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"quicksealcaulking@ou (9 more) ...","MailingPostalCode__c":"4230","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":true,"No_Adwords_Change__c":1,"Product_Type__c":"ConvertoPages","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (179 more) ...","Cart_Signature__c":"df4e178060a7f69e28dc (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"Mobile__c":"0424477881","CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":422,"Salesperson__c":"0019000000yVXWoAAO","Is_Test__c":false,"CreatedDate":"2018-09-27T23:50:12.000Z","Account__c":"0016F0000257dcDQAQ","Id":"a066F00001GiUfXQAV","Promocode__c":"a0B6F000019mAqhUAE","Status__c":"New","Email__c":"quicksealcaulking@ou (9 more) ...","Note_Created__c":false,"Invoiceno__c":"INV280918002949-1","FromSource__c":"getmoretraffic.com.a (1 more) ...","Company__c":"quick-seal silicone  (10 more) ...","PostalCode__c":"4230","MailingCity__c":"Robina","OwnerId":"0056F000006HQMbQAO","Set_Up_Price__c":499.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"129 Thorngate Drive","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:31:01.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Rory","Phone__c":"0424477881","MailingStreet__c":"129 Thorngate Drive","GST__c":false,"Day_of_the_Week__c":"Error","Website__c":"http://www.quick-sea (8 more) ...","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0xefe159
+18:31:09.127 (129490898)|STATEMENT_EXECUTE|[2]
+18:31:09.127 (129493383)|STATEMENT_EXECUTE|[3]
+18:31:09.127 (129627652)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:31:09.127 (130333656)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Sheppard","LastModifiedDate":"2018-09-28T08:31:01.000Z","Management_Price__c":99.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Trades & Services","Name":"Rory Sheppard","City__c":"Robina","Is_Addon__c":false,"CreatedById":"0056F000006HQMbQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"quicksealcaulking@ou (9 more) ...","MailingPostalCode__c":"4230","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":true,"No_Adwords_Change__c":1,"Product_Type__c":"ConvertoPages","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (179 more) ...","Cart_Signature__c":"df4e178060a7f69e28dc (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"Mobile__c":"0424477881","CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":422,"Salesperson__c":"0019000000yVXWoAAO","Is_Test__c":false,"CreatedDate":"2018-09-27T23:50:12.000Z","Account__c":"0016F0000257dcDQAQ","Id":"a066F00001GiUfXQAV","Promocode__c":"a0B6F000019mAqhUAE","Status__c":"New","Email__c":"quicksealcaulking@ou (9 more) ...","Note_Created__c":false,"Invoiceno__c":"INV280918002949-1","FromSource__c":"getmoretraffic.com.a (1 more) ...","Company__c":"quick-seal silicone  (10 more) ...","PostalCode__c":"4230","MailingCity__c":"Robina","OwnerId":"0056F000006HQMbQAO","Set_Up_Price__c":499.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"129 Thorngate Drive","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:31:01.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Rory","Phone__c":"0424477881","MailingStreet__c":"129 Thorngate Drive","GST__c":false,"Day_of_the_Week__c":"Error","Website__c":"http://www.quick-sea (8 more) ...","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x44a98cc4
+18:31:09.127 (130388084)|HEAP_ALLOCATE|[4]|Bytes:7
+18:31:09.127 (130455564)|HEAP_ALLOCATE|[82]|Bytes:16
+18:31:09.127 (130485008)|STATEMENT_EXECUTE|[4]
+18:31:09.127 (130506592)|HEAP_ALLOCATE|[2]|Bytes:5
+18:31:09.127 (130522622)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:31:09.130 (130534825)|CUMULATIVE_LIMIT_USAGE
+18:31:09.130 (130534825)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:31:09.130 (130534825)|CUMULATIVE_LIMIT_USAGE_END
+
+18:31:09.127 (131499182)|CODE_UNIT_FINISHED|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:31:09.144 (144332037)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000IdrN|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:31:09.144 (144392700)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.144 (144428805)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.144 (144534878)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.144 (144547671)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:31:09.144 (144589288)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4457c059
+18:31:09.144 (144646716)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.144 (144655319)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:31:09.144 (144668745)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4457c059
+18:31:09.144 (144677061)|STATEMENT_EXECUTE|[1]
+18:31:09.144 (144754620)|STATEMENT_EXECUTE|[3]
+18:31:09.144 (144756727)|STATEMENT_EXECUTE|[5]
+18:31:09.144 (144843827)|HEAP_ALLOCATE|[5]|Bytes:18
+18:31:09.144 (144853993)|VARIABLE_SCOPE_BEGIN|[5]|signup_id|String|false|false
+18:31:09.144 (144872888)|VARIABLE_ASSIGNMENT|[5]|signup_id|"a066F00001GiUfXQAV"
+18:31:09.144 (144913969)|STATEMENT_EXECUTE|[6]
+18:31:09.144 (144926117)|CUMULATIVE_LIMIT_USAGE
+18:31:09.144 (144926117)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:31:09.144 (144926117)|CUMULATIVE_LIMIT_USAGE_END
+
+18:31:09.144 (145766522)|CODE_UNIT_FINISHED|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:31:09.147 (147847309)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000DhMP|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:31:09.147 (147887347)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.147 (147894582)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:31:09.147 (147948076)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.147 (147956480)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:31:09.147 (147984831)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x684f3799
+18:31:09.147 (148031000)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:31:09.147 (148039307)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:31:09.147 (148052508)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x684f3799
+18:31:09.147 (148060131)|STATEMENT_EXECUTE|[1]
+18:31:09.147 (148125233)|HEAP_ALLOCATE|[2]|Bytes:5
+18:31:09.147 (148147695)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:31:09.147 (149156209)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Sheppard","LastModifiedDate":"2018-09-28T08:31:09.000Z","Management_Price__c":99.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Trades & Services","Name":"Rory Sheppard","City__c":"Robina","Is_Addon__c":false,"CreatedById":"0056F000006HQMbQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"quicksealcaulking@ou (9 more) ...","MailingPostalCode__c":"4230","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":true,"No_Adwords_Change__c":1,"Product_Type__c":"ConvertoPages","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (179 more) ...","Cart_Signature__c":"df4e178060a7f69e28dc (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"Mobile__c":"0424477881","CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":422,"Salesperson__c":"0019000000yVXWoAAO","Is_Test__c":false,"CreatedDate":"2018-09-27T23:50:12.000Z","Account__c":"0016F0000257dcDQAQ","Id":"a066F00001GiUfXQAV","Promocode__c":"a0B6F000019mAqhUAE","Status__c":"New","Email__c":"quicksealcaulking@ou (9 more) ...","Note_Created__c":false,"Invoiceno__c":"INV280918002949-1","FromSource__c":"getmoretraffic.com.a (1 more) ...","Company__c":"quick-seal silicone  (10 more) ...","PostalCode__c":"4230","MailingCity__c":"Robina","OwnerId":"0056F000006HQMbQAO","Set_Up_Price__c":499.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"129 Thorngate Drive","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:31:09.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Rory","Phone__c":"0424477881","MailingStreet__c":"129 Thorngate Drive","GST__c":false,"Day_of_the_Week__c":"Error","Website__c":"http://www.quick-sea (8 more) ...","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x7ff5ec91
+18:31:09.147 (149194654)|STATEMENT_EXECUTE|[2]
+18:31:09.147 (149197221)|STATEMENT_EXECUTE|[3]
+18:31:09.147 (149284333)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:31:09.147 (149919917)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Sheppard","LastModifiedDate":"2018-09-28T08:31:01.000Z","Management_Price__c":99.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Trades & Services","Name":"Rory Sheppard","City__c":"Robina","Is_Addon__c":false,"CreatedById":"0056F000006HQMbQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"quicksealcaulking@ou (9 more) ...","MailingPostalCode__c":"4230","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":true,"No_Adwords_Change__c":1,"Product_Type__c":"ConvertoPages","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (179 more) ...","Cart_Signature__c":"df4e178060a7f69e28dc (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"Mobile__c":"0424477881","CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":422,"Salesperson__c":"0019000000yVXWoAAO","Is_Test__c":false,"CreatedDate":"2018-09-27T23:50:12.000Z","Account__c":"0016F0000257dcDQAQ","Id":"a066F00001GiUfXQAV","Promocode__c":"a0B6F000019mAqhUAE","Status__c":"New","Email__c":"quicksealcaulking@ou (9 more) ...","Note_Created__c":false,"Invoiceno__c":"INV280918002949-1","FromSource__c":"getmoretraffic.com.a (1 more) ...","Company__c":"quick-seal silicone  (10 more) ...","PostalCode__c":"4230","MailingCity__c":"Robina","OwnerId":"0056F000006HQMbQAO","Set_Up_Price__c":499.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"129 Thorngate Drive","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:31:01.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Rory","Phone__c":"0424477881","MailingStreet__c":"129 Thorngate Drive","GST__c":false,"Day_of_the_Week__c":"Error","Website__c":"http://www.quick-sea (8 more) ...","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x6ec08fa3
+18:31:09.147 (149969256)|STATEMENT_EXECUTE|[4]
+18:31:09.147 (149992654)|HEAP_ALLOCATE|[2]|Bytes:5
+18:31:09.147 (150010223)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:31:09.150 (150020214)|CUMULATIVE_LIMIT_USAGE
+18:31:09.150 (150020214)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:31:09.150 (150020214)|CUMULATIVE_LIMIT_USAGE_END
+
+18:31:09.147 (151445604)|CODE_UNIT_FINISHED|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:31:09.151 (151518241)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000UJA1
+18:31:09.151 (157392084)|WF_RULE_EVAL_BEGIN|Workflow
+18:31:09.151 (157420477)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|New Signup Alert to SEO Manager|01Q6F000000DkrE|ON_CREATE_ONLY|0
+18:31:09.151 (157432513)|WF_RULE_NOT_EVALUATED
+18:31:09.151 (157437987)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|New Signup Alert to SEO Manager - GMT|01Q6F000000DkrJ|ON_CREATE_ONLY|0
+18:31:09.151 (157446999)|WF_RULE_NOT_EVALUATED
+18:31:09.151 (157450319)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 1: Send Complete SignUp To COM|01Q90000000mpb6|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (159696789)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing, Admob Management] 
+AND [Sign Up : Status equals New] 
+AND [Sign Up : Invoice Paid equals true]
+18:31:09.151 (159712646)|WF_RULE_EVAL_VALUE|false
+18:31:09.151 (159719405)|WF_CRITERIA_END|false
+18:31:09.151 (159731692)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 3: SLX - Assign New Sign Up to CM|01Q6F000000DkC1|ON_ALL_CHANGES|0
+18:31:09.151 (160091190)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}),  OR(CONTAINS( {!ID:00N90000003wjk4} , 'SponsoredLinX'),CONTAINS({!ID:00N90000003wjk4} , 'sponsoredlinx')) )|Values:FromSource__c=getmoretraffic.com.au, Assign_To_User__c=null
+18:31:09.151 (160103085)|WF_CRITERIA_END|false
+18:31:09.151 (160113650)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 2: Send Complete SignUp To Team C|01Q90000000DWbs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (160156127)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team C]
+18:31:09.151 (160162454)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (160164929)|WF_CRITERIA_END|false
+18:31:09.151 (160172657)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Update Spotcheck completed date|01Q90000000DV5d|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (160194037)|WF_RULE_FILTER|[Sign Up : Spotcheck Completed By not equal to ]
+18:31:09.151 (160198647)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (160200557)|WF_CRITERIA_END|false
+18:31:09.151 (160206381)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Sign Up Completed Date|01Q6F0000002oDg|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (160255125)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Product Type equals AdWords Management, SEO, Social Marketing] 
+AND [Sign Up : Completed Date equals ]
+18:31:09.151 (160264651)|WF_RULE_EVAL_VALUE|10
+18:31:09.151 (160268522)|WF_CRITERIA_END|false
+18:31:09.151 (160274149)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 2: Send Complete SignUp To GMT Team B|01Q6F0000002jYd|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (160297415)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team B]
+18:31:09.151 (160303150)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (160305165)|WF_CRITERIA_END|false
+18:31:09.151 (160310254)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Spot_Check_Auto_Creation3016F000000UuBc|01Q6F000001EXII|ON_ALL_CHANGES|0
+18:31:09.151 (160366057)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (160372608)|WF_CRITERIA_END|true
+18:31:09.151 (161312293)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Populate_Sign_Up_Note_OwnerID3016F0000005q4o|01Q6F0000019kOr|ON_ALL_CHANGES|0
+18:31:09.151 (161360912)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (161367780)|WF_CRITERIA_END|true
+18:31:09.151 (161379701)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|SEO_ContentPack_Questionnaire3016F0000002gCi|01Q6F000000qybT|ON_CREATE_ONLY|0
+18:31:09.151 (161389749)|WF_RULE_NOT_EVALUATED
+18:31:09.151 (161393632)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|48 Hrs Account Built Alert to TL (Mon - Wed)|01Q6F0000019ddq|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (161483400)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Monday, Tuesday, Wednesday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:31:09.151 (161497051)|WF_RULE_EVAL_VALUE|10
+18:31:09.151 (161501475)|WF_CRITERIA_END|false
+18:31:09.151 (161508080)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Create_Survey_Trigger_from_Sign_Up3016F0000003VBk|01Q6F000001RaCB|ON_ALL_CHANGES|0
+18:31:09.151 (161541670)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (161547515)|WF_CRITERIA_END|true
+18:31:09.151 (161557578)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Sign Up Sold to Pause Date|01Q900000002JYW|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (161589063)|WF_RULE_FILTER|[Sign Up : Status equals Sold to Pause]
+18:31:09.151 (161597078)|WF_RULE_EVAL_VALUE|10
+18:31:09.151 (161601125)|WF_CRITERIA_END|false
+18:31:09.151 (161606246)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Build_Check_Auto_Creation3016F0000005Zhv|01Q6F0000019cqj|ON_ALL_CHANGES|0
+18:31:09.151 (161634998)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (161640270)|WF_CRITERIA_END|true
+18:31:09.151 (161649484)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|New Sign Up Alert to Sales Managers - GMT|01Q6F000001RfFU|ON_CREATE_ONLY|0
+18:31:09.151 (161659029)|WF_RULE_NOT_EVALUATED
+18:31:09.151 (161662488)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|New Sign Up Alert to Sales Managers - SLX|01Q6F000001ReHX|ON_CREATE_ONLY|0
+18:31:09.151 (161672526)|WF_RULE_NOT_EVALUATED
+18:31:09.151 (161675625)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 3: GMT - Assign New Sign Up to CM|01Q6F000000DkCL|ON_ALL_CHANGES|0
+18:31:09.151 (161838610)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}), CONTAINS( {!ID:00N90000003wjk4} , 'getmoretraffic'))|Values:FromSource__c=getmoretraffic.com.au, Assign_To_User__c=null
+18:31:09.151 (161847827)|WF_CRITERIA_END|false
+18:31:09.151 (161855838)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Change Status to Pending CM Call|01Q6F0000002pFI|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (161910678)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:31:09.151 (161918291)|WF_RULE_EVAL_VALUE|false
+18:31:09.151 (161923071)|WF_CRITERIA_END|false
+18:31:09.151 (161929314)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 2: Send Complete SignUp To Team A|01Q90000000mrRn|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (161952157)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team A]
+18:31:09.151 (161956943)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (161959064)|WF_CRITERIA_END|false
+18:31:09.151 (161964897)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Populate_Team_Leader_Field_in_Sign_Up3016F0000005ZYj|01Q6F0000019jQP|ON_ALL_CHANGES|0
+18:31:09.151 (161998282)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (162004863)|WF_CRITERIA_END|true
+18:31:09.151 (162015136)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 2: Send Complete SignUp To Team B|01Q90000000mrRs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (162042813)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team B]
+18:31:09.151 (162047882)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (162050490)|WF_CRITERIA_END|false
+18:31:09.151 (162055963)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|48 Hrs Account Built Alert to TL (Thu-Fri)|01Q6F0000019ddR|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (162117031)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Thursday, Friday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:31:09.151 (162130894)|WF_RULE_EVAL_VALUE|10
+18:31:09.151 (162137023)|WF_CRITERIA_END|false
+18:31:09.151 (162145850)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Send Complete SEO SignUp To SEO Manager|01Q90000000muYJ|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (162193156)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals SEO]
+18:31:09.151 (162198960)|WF_RULE_EVAL_VALUE|false
+18:31:09.151 (162203007)|WF_CRITERIA_END|false
+18:31:09.151 (162208535)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Update_Adwords_ID_in_Account_Product3016F0000002Uly|01Q6F000000qDbf|ON_ALL_CHANGES|0
+18:31:09.151 (162265860)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (162272753)|WF_CRITERIA_END|true
+18:31:09.151 (162283687)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Facebook_Product_Billing3016F0000005dyq|01Q6F0000019fAR|ON_ALL_CHANGES|0
+18:31:09.151 (162310330)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:31:09.151 (162316177)|WF_CRITERIA_END|true
+18:31:09.151 (162323933)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Send Setup Suvery|01Q6F000000Dk6S|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (162379097)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Is Test equals true] 
+AND [Sign Up : Company equals bjb global]
+18:31:09.151 (162387458)|WF_RULE_EVAL_VALUE|10
+18:31:09.151 (162391326)|WF_CRITERIA_END|false
+18:31:09.151 (162396820)|WF_CRITERIA_BEGIN|[Sign Up: Rory Sheppard a066F00001GiUfX]|Step 2: Send Complete SignUp To GMT Team A|01Q90000000nO1p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:31:09.151 (162419581)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team A]
+18:31:09.151 (162424453)|WF_RULE_EVAL_VALUE|
+18:31:09.151 (162426353)|WF_CRITERIA_END|false
+18:31:09.151 (162447552)|WF_SPOOL_ACTION_BEGIN|Workflow
+18:31:09.151 (162479972)|WF_ACTION| Flow Trigger: 7;
+18:31:09.151 (162486037)|WF_RULE_EVAL_END
+18:31:09.151 (162523188)|WF_FLOW_ACTION_BEGIN|09L6F000000PUWz
+18:31:09.164 (164048040)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000HGwO|3016F0000005Zhv
+18:31:09.164 (164782941)|FLOW_CREATE_INTERVIEW_END|277687ee18514c63f00376ecc3ec1661f44be7-285c|Build Check Auto Creation
+18:31:09.165 (165143180)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.165 (165165704)|FLOW_START_INTERVIEW_BEGIN|277687ee18514c63f00376ecc3ec1661f44be7-285c|Build Check Auto Creation
+18:31:09.165 (167044209)|FLOW_START_INTERVIEW_END|277687ee18514c63f00376ecc3ec1661f44be7-285c|Build Check Auto Creation
+18:31:09.165 (167068832)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (168419191)|WF_FLOW_ACTION_END|09L6F000000PUWz
+18:31:09.151 (168443921)|WF_FLOW_ACTION_BEGIN|09L6F000000PYPN
+18:31:09.169 (169695930)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090J2|3016F0000005ZYj
+18:31:09.169 (170263109)|FLOW_CREATE_INTERVIEW_END|277787ee18514c63f00376ecc3ec1661f44be7-285d|Populate Team Leader Field in Sign Up
+18:31:09.170 (170521477)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.170 (170543655)|FLOW_START_INTERVIEW_BEGIN|277787ee18514c63f00376ecc3ec1661f44be7-285d|Populate Team Leader Field in Sign Up
+18:31:09.170 (172516078)|FLOW_START_INTERVIEW_END|277787ee18514c63f00376ecc3ec1661f44be7-285d|Populate Team Leader Field in Sign Up
+18:31:09.170 (172541109)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (173059561)|WF_FLOW_ACTION_END|09L6F000000PYPN
+18:31:09.151 (173082825)|WF_FLOW_ACTION_BEGIN|09L6F000000UJRN
+18:31:09.174 (174284055)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWUZ|3016F0000002Uly
+18:31:09.174 (174839720)|FLOW_CREATE_INTERVIEW_END|277887ee18514c63f00376ecc3ec1661f44be7-285e|Update Adwords ID in Account Product
+18:31:09.175 (175109531)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.175 (175130673)|FLOW_START_INTERVIEW_BEGIN|277887ee18514c63f00376ecc3ec1661f44be7-285e|Update Adwords ID in Account Product
+18:31:09.175 (176700983)|FLOW_START_INTERVIEW_END|277887ee18514c63f00376ecc3ec1661f44be7-285e|Update Adwords ID in Account Product
+18:31:09.175 (176722109)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (177244484)|WF_FLOW_ACTION_END|09L6F000000UJRN
+18:31:09.151 (177268288)|WF_FLOW_ACTION_BEGIN|09L6F000000PZ9R
+18:31:09.178 (178510967)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000092sF|3016F0000005q4o
+18:31:09.178 (179019241)|FLOW_CREATE_INTERVIEW_END|277987ee18514c63f00376ecc3ec1661f44be7-285f|Populate Sign Up Note OwnerID
+18:31:09.179 (179261773)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.179 (179282786)|FLOW_START_INTERVIEW_BEGIN|277987ee18514c63f00376ecc3ec1661f44be7-285f|Populate Sign Up Note OwnerID
+18:31:09.179 (181214288)|FLOW_START_INTERVIEW_END|277987ee18514c63f00376ecc3ec1661f44be7-285f|Populate Sign Up Note OwnerID
+18:31:09.179 (181243736)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (181852673)|WF_FLOW_ACTION_END|09L6F000000PZ9R
+18:31:09.151 (181885725)|WF_FLOW_ACTION_BEGIN|09L6F000000Udyy
+18:31:09.183 (183456322)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWRf|3016F0000003VBk
+18:31:09.183 (184141552)|FLOW_CREATE_INTERVIEW_END|278087ee18514c63f00376ecc3ec1661f44be7-2860|Create Survey Trigger from Sign Up
+18:31:09.184 (184580413)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.184 (184611310)|FLOW_START_INTERVIEW_BEGIN|278087ee18514c63f00376ecc3ec1661f44be7-2860|Create Survey Trigger from Sign Up
+18:31:09.184 (186780709)|FLOW_START_INTERVIEW_END|278087ee18514c63f00376ecc3ec1661f44be7-2860|Create Survey Trigger from Sign Up
+18:31:09.184 (186811969)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (187358975)|WF_FLOW_ACTION_END|09L6F000000Udyy
+18:31:09.151 (187382670)|WF_FLOW_ACTION_BEGIN|09L6F000000LW80
+18:31:09.188 (188779205)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F0000008ux0|3016F000000UuBc
+18:31:09.188 (189525661)|FLOW_CREATE_INTERVIEW_END|278187ee18514c63f00376ecc3ec1661f44be7-2861|Spot Check Auto Creation
+18:31:09.189 (189823231)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.189 (189845834)|FLOW_START_INTERVIEW_BEGIN|278187ee18514c63f00376ecc3ec1661f44be7-2861|Spot Check Auto Creation
+18:31:09.189 (191794397)|FLOW_START_INTERVIEW_END|278187ee18514c63f00376ecc3ec1661f44be7-2861|Spot Check Auto Creation
+18:31:09.189 (191824222)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (192359226)|WF_FLOW_ACTION_END|09L6F000000LW80
+18:31:09.151 (192387382)|WF_FLOW_ACTION_BEGIN|09L6F000000PVmN
+18:31:09.193 (193780493)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090wE|3016F0000005dyq
+18:31:09.193 (194450694)|FLOW_CREATE_INTERVIEW_END|278287ee18514c63f00376ecc3ec1661f44be7-2862|Facebook Product Billing
+18:31:09.194 (194773305)|FLOW_START_INTERVIEWS_BEGIN|1
+18:31:09.194 (194800287)|FLOW_START_INTERVIEW_BEGIN|278287ee18514c63f00376ecc3ec1661f44be7-2862|Facebook Product Billing
+18:31:09.194 (196530913)|FLOW_START_INTERVIEW_END|278287ee18514c63f00376ecc3ec1661f44be7-2862|Facebook Product Billing
+18:31:09.194 (196554580)|FLOW_START_INTERVIEWS_END|1
+18:31:09.151 (197061663)|WF_FLOW_ACTION_END|09L6F000000PVmN
+18:31:09.151 (197090893)|WF_TIME_TRIGGERS_BEGIN
+18:31:09.151 (215191268)|WF_ACTIONS_END| Flow Trigger: 7;
+18:31:09.151 (215209903)|CODE_UNIT_FINISHED|Workflow:01I90000000UJA1
+18:31:09.23 (217126175)|FLOW_START_INTERVIEWS_END|1
+18:31:09.0 (217670428)|WF_FLOW_ACTION_END|09L6F0000000MEf
+18:31:09.0 (217702364)|WF_TIME_TRIGGERS_BEGIN
+18:31:09.0 (218640378)|WF_ACTIONS_END| Flow Trigger: 1;
+18:31:09.0 (218651645)|CODE_UNIT_FINISHED|Workflow:01I90000000VDtL
+18:31:09.0 (219491283)|EXECUTION_FINISHED

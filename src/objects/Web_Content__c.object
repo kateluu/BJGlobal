@@ -56,6 +56,18 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
+        <fullName>Account_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Product</label>
+        <referenceTo>Account_Product__c</referenceTo>
+        <relationshipLabel>Web Contents</relationshipLabel>
+        <relationshipName>Web_Contents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Account__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -154,6 +166,20 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>Sign_Up__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Sign Up</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sign Up</inlineHelpText>
+        <label>Sign Up</label>
+        <referenceTo>Sign_Up__c</referenceTo>
+        <relationshipLabel>Web Contents</relationshipLabel>
+        <relationshipName>Web_Contents</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Slogan__c</fullName>
         <description>Key message</description>
         <externalId>false</externalId>
@@ -193,6 +219,11 @@
         <columns>OWNER.FIRST_NAME</columns>
         <columns>OWNER.LAST_NAME</columns>
         <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

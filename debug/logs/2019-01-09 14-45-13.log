@@ -1,0 +1,3025 @@
+43.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:45:09.0 (83626)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+14:45:09.0 (114881)|EXECUTION_STARTED
+14:45:09.0 (118008)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VDtL
+14:45:09.0 (17567363)|WF_RULE_EVAL_BEGIN|Workflow
+14:45:09.0 (17621759)|WF_CRITERIA_BEGIN|[Invoice: GetMoreTraffic - Topwater Plumbing & Gas a0E6F00002QwH4l]|Automatic Tasks for Outstanding Invoices|01Q6F0000019daX|ON_CREATE_OR_TRIGGERING_UPDATE|0
+14:45:09.0 (21364832)|WF_RULE_NOT_EVALUATED
+14:45:09.0 (21382330)|WF_CRITERIA_BEGIN|[Invoice: GetMoreTraffic - Topwater Plumbing & Gas a0E6F00002QwH4l]|Sign_Up_Invoice3016F000000hF9P|01Q6F0000013738|ON_ALL_CHANGES|0
+14:45:09.0 (21453416)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:45:09.0 (21458914)|WF_CRITERIA_END|true
+14:45:09.0 (22027333)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:45:09.0 (22050904)|WF_ACTION| Flow Trigger: 1;
+14:45:09.0 (22054766)|WF_RULE_EVAL_END
+14:45:09.0 (22930648)|WF_FLOW_ACTION_BEGIN|09L6F000000gHqq
+14:45:09.25 (25423710)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000Pjga|3016F000000hF9P
+14:45:09.25 (26199616)|FLOW_CREATE_INTERVIEW_END|40289e0575ec5c5162a496538f716830e09e97-3437|Sign Up Invoice
+14:45:09.26 (26648016)|FLOW_START_INTERVIEWS_BEGIN|1
+14:45:09.26 (26673002)|FLOW_START_INTERVIEW_BEGIN|40289e0575ec5c5162a496538f716830e09e97-3437|Sign Up Invoice
+14:45:09.26 (70027749)|FLOW_START_INTERVIEW_END|40289e0575ec5c5162a496538f716830e09e97-3437|Sign Up Invoice
+14:45:09.26 (70054880)|FLOW_START_INTERVIEWS_END|1
+14:45:09.0 (71287892)|WF_FLOW_ACTION_END|09L6F000000gHqq
+14:45:09.0 (71324246)|WF_TIME_TRIGGERS_BEGIN
+14:45:09.0 (80206018)|WF_ACTIONS_END| Flow Trigger: 1;
+14:45:09.0 (80221537)|CODE_UNIT_FINISHED|Workflow:01I90000000VDtL
+14:45:09.0 (81225694)|EXECUTION_FINISHED
+14:45:09.95 (95858355)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+14:45:09.95 (96583804)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (97905478)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (99180337)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (99665178)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (99873068)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (101250338)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (101372258)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (101448223)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (101539860)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (101679726)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (102106565)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (105082922)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (106032552)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (106068746)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (108632808)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (111016729)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (111812638)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130416720)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130469504)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130529644)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130850946)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130897372)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (130925132)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (131057155)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (131420707)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (133888863)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (134010206)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (134188367)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (134282408)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (134318552)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (134430383)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (134494548)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (136965533)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (137019372)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (137051562)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (137176356)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (137520002)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (141062106)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (141204154)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (141366374)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (141471086)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (141504166)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (141616842)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (141700374)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (144783646)|SOQL_EXECUTE_BEGIN|[159]|Aggregations:0|SELECT Id, Name, Match_On_Insert_Action__c, Match_On_Update_Action__c, Create_Tasks_for_Warnings__c, Blocked_Duplicates__c, Merged_Duplicates__C, Converted_Duplicates__c, Error_Message__c, Scenario_Type__c, Deployed__c, Bypass_Security__c, Person_Account_Filter__c, OwnerID, CreatedById FROM Scenario__c WHERE (Deployed__c = TRUE AND Match_On_Update_Action__c != 'Report Duplicate') LIMIT 100
+14:45:09.95 (152802587)|SOQL_EXECUTE_END|[159]|Rows:2
+14:45:09.95 (153182946)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (153225996)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (153315401)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (153375296)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (154819647)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (156573843)|SOQL_EXECUTE_BEGIN|[34]|Aggregations:0|SELECT Name, Id, Mapping_Approach__c, Match_Field__c, Target_Match_Field__c, First_N_Letters__c, Match_Blanks__c, Scenario__c FROM Scenario_Rule__c LIMIT :tmpVar1
+14:45:09.95 (163814548)|SOQL_EXECUTE_END|[34]|Rows:5
+14:45:09.95 (165647713)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (166532859)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (166701916)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (166760855)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (166798816)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (166956870)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (167468127)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (170324409)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (170460212)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.170 (170951130)|CUMULATIVE_LIMIT_USAGE
+14:45:09.170 (170951130)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 31 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.170 (170951130)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.170 (170951130)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.176 (176978779)|CUMULATIVE_LIMIT_USAGE
+14:45:09.176 (176978779)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 31 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.176 (176978779)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.176 (176978779)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.180 (180319155)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000Ysqk|AmexCheck on Account trigger event BeforeUpdate|__sfdc_trigger/AmexCheck
+14:45:09.180 (180383763)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.180 (180398756)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.180 (180472491)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:45:09.180 (180487500)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.180 (180494621)|VARIABLE_SCOPE_BEGIN|[1]|this|AmexCheck|true|false
+14:45:09.180 (180533774)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40766b1
+14:45:09.180 (180589087)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.180 (180596998)|VARIABLE_SCOPE_BEGIN|[1]|this|AmexCheck|true|false
+14:45:09.180 (180610728)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40766b1
+14:45:09.180 (180625777)|STATEMENT_EXECUTE|[1]
+14:45:09.180 (180679859)|STATEMENT_EXECUTE|[13]
+14:45:09.180 (180773470)|HEAP_ALLOCATE|[14]|Bytes:5
+14:45:09.180 (180793955)|HEAP_ALLOCATE|[14]|Bytes:4
+14:45:09.180 (180803259)|VARIABLE_SCOPE_BEGIN|[14]|newAcc|Account|true|false
+14:45:09.180 (185192796)|VARIABLE_ASSIGNMENT|[14]|newAcc|{"LastModifiedDate":"2019-01-08T19:48:46.000Z","username__c":"tim@topwater.com","Recurring_Tasks__c":"None","Number_of_Employees__c":"0 - 10","BSB__c":"034-292","HasGooglePlusProject__c":false,"BillingCity":"Biggera Waters","Survey_Score__c":0.00,"Refund__c":0.00,"AF__c":false,"Facebook_Active_Days__c":0,"HasSEOProject__c":false,"Name":"GetMoreTraffic - Top (20 more) ...","Industry":"Trades & Services","IsExcludedFromRealign":false,"Infusionsoft_id__c":"114150","CreatedById":"00590000000VmmqAAC","SEO_Active_Days__c":0,"Amex__c":false,"Any_Cancellation_Case__c":false,"Welcome_pack_sent__c":false,"BillingPostalCode":"4216","IsDeleted":false,"password__c":"2kt63v8sh","Xero_Sync__c":false,"Accounts__c":1,"CurrencyIsoCode":"AUD","Converto_Active_Days__c":0,"Active_Days__c":1178,"Total_Active_Products__c":1,"Cancelled_Adwords_Products__c":0,"Adwords_Product__c":"Active","Last_Opportunity__c":"a196F00000CM3knQAD","Active_Facebook_Products__c":0,"Send_Invoice__c":false,"CreatedDate":"2015-10-01T06:36:05.000Z","Unique_Id__c":"283697","email__c":"tim@topwater.com.au","Active_Converto_Products__c":0,"Cancelled_SEO__c":0,"Id":"0019000001Xi3lvAAB","BillingState":"QLD","ROI__c":"Average","IsPartner":false,"Active__c":true,"SFSSDupeCatcher__Override_DupeCatcher__c":false,"Relationship__c":"Average","Website":"www.topwater.com.au","Monthly_Revenue__c":342.33000000,"Company__c":"Topwater Plumbing &  (3 more) ...","OwnerId":"00590000004qLCnAAM","Outstanding_Amount__c":0.00,"Account_No__c":"449613","Credit__c":80.00,"Payment_Option__c":"Other","SystemModstamp":"2019-01-08T19:48:46.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Cancelled_Facebook_Products__c":0,"Active_SEO_Products__c":0,"Send_Invoice_Reminder__c":true,"BillingStreet":"40 Vaggelas Crescent","Disable_Survey__c":false,"Psycho__c":false,"Cancelled_Converto_Products__c":0,"LastActivityDate":"2019-01-08T00:00:00.000Z","GST__c":false,"Active_Adwords_Products__c":1,"Package_Name__c":"Standard","Revenue__c":13238.00,"LastModifiedById":"00590000000VmmqAAC","App_Installed__c":false,"Adwords_Active_Days__c":1178}|0x56593769
+14:45:09.180 (185233886)|STATEMENT_EXECUTE|[14]
+14:45:09.180 (185236529)|STATEMENT_EXECUTE|[15]
+14:45:09.180 (185357310)|VARIABLE_SCOPE_BEGIN|[15]|oldAcc|Account|true|false
+14:45:09.180 (186409502)|VARIABLE_ASSIGNMENT|[15]|oldAcc|{"LastModifiedDate":"2019-01-08T19:48:46.000Z","username__c":"tim@topwater.com","Recurring_Tasks__c":"None","Number_of_Employees__c":"0 - 10","BSB__c":"034-292","HasGooglePlusProject__c":false,"BillingCity":"Biggera Waters","Survey_Score__c":0.00,"Refund__c":0.00,"AF__c":false,"Facebook_Active_Days__c":0,"HasSEOProject__c":false,"Name":"GetMoreTraffic - Top (20 more) ...","Industry":"Trades & Services","IsExcludedFromRealign":false,"Infusionsoft_id__c":"114150","CreatedById":"00590000000VmmqAAC","SEO_Active_Days__c":0,"Amex__c":false,"Any_Cancellation_Case__c":false,"Welcome_pack_sent__c":false,"BillingPostalCode":"4216","IsDeleted":false,"password__c":"2kt63v8sh","Xero_Sync__c":false,"Accounts__c":1,"CurrencyIsoCode":"AUD","Converto_Active_Days__c":0,"Active_Days__c":1178,"Total_Active_Products__c":1,"Cancelled_Adwords_Products__c":0,"Adwords_Product__c":"Active","Last_Opportunity__c":"a196F00000CM3knQAD","Active_Facebook_Products__c":0,"Send_Invoice__c":false,"CreatedDate":"2015-10-01T06:36:05.000Z","Unique_Id__c":"283697","email__c":"tim@topwater.com.au","Active_Converto_Products__c":0,"Cancelled_SEO__c":0,"Id":"0019000001Xi3lvAAB","BillingState":"QLD","ROI__c":"Average","IsPartner":false,"Active__c":true,"SFSSDupeCatcher__Override_DupeCatcher__c":false,"Relationship__c":"Average","Website":"www.topwater.com.au","Monthly_Revenue__c":342.33000000,"Company__c":"Topwater Plumbing &  (3 more) ...","OwnerId":"00590000004qLCnAAM","Outstanding_Amount__c":79.00,"Account_No__c":"449613","Credit__c":80.00,"Payment_Option__c":"Other","SystemModstamp":"2019-01-08T19:48:46.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Cancelled_Facebook_Products__c":0,"Active_SEO_Products__c":0,"Send_Invoice_Reminder__c":true,"BillingStreet":"40 Vaggelas Crescent","Disable_Survey__c":false,"Psycho__c":false,"Cancelled_Converto_Products__c":0,"LastActivityDate":"2019-01-08T00:00:00.000Z","GST__c":false,"Active_Adwords_Products__c":1,"Package_Name__c":"Standard","Revenue__c":13238.00,"LastModifiedById":"00590000000VmmqAAC","App_Installed__c":false,"Adwords_Active_Days__c":1178}|0x25fd9f7c
+14:45:09.180 (186454104)|STATEMENT_EXECUTE|[16]
+14:45:09.180 (186480838)|HEAP_ALLOCATE|[14]|Bytes:5
+14:45:09.180 (186499091)|VARIABLE_ASSIGNMENT|[14]|newAcc|null|
+14:45:09.186 (186510458)|CUMULATIVE_LIMIT_USAGE
+14:45:09.186 (186510458)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 31 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.186 (186510458)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.186 (186510458)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.189 (189647955)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000E0PX|dlrs_AccountTrigger on Account trigger event BeforeUpdate|__sfdc_trigger/dlrs_AccountTrigger
+14:45:09.189 (189686505)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.189 (189696182)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.189 (189761757)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.189 (189771842)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+14:45:09.189 (189808831)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6613e991
+14:45:09.189 (189860981)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.189 (189868244)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+14:45:09.189 (189881572)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6613e991
+14:45:09.189 (189889467)|STATEMENT_EXECUTE|[4]
+14:45:09.189 (189891470)|STATEMENT_EXECUTE|[7]
+14:45:09.189 (196748862)|VARIABLE_SCOPE_BEGIN|[36]|dlrs.RollupService.LastMetadataAPIConnectionException|Exception|true|true
+14:45:09.189 (196773891)|VARIABLE_SCOPE_BEGIN|[285]|dlrs.RollupService.triggerHandleInvoked|Boolean|false|true
+14:45:09.189 (196795805)|HEAP_ALLOCATE|[7]|Bytes:145
+14:45:09.189 (196805087)|HEAP_ALLOCATE|[7]|Bytes:120
+14:45:09.189 (196809557)|HEAP_ALLOCATE|[7]|Bytes:128
+14:45:09.189 (196829145)|METHOD_ENTRY|[34]|01p6F000007Lebh|dlrs.RollupService.RollupService()
+14:45:09.189 (196836915)|STATEMENT_EXECUTE|[34]
+14:45:09.189 (196842274)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.189 (197439463)|METHOD_EXIT|[34]|dlrs.RollupService
+14:45:09.189 (197465005)|METHOD_ENTRY|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+14:45:09.189 (197471750)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.189 (197551972)|METHOD_EXIT|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+14:45:09.197 (197564410)|CUMULATIVE_LIMIT_USAGE
+14:45:09.197 (197564410)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 31 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.197 (197564410)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.197 (197564410)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 6 out of 100
+  Number of query rows: 7 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.197 (197564410)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.204 (204355724)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Account:0019000001Xi3lv
+14:45:09.204 (204379618)|VALIDATION_RULE|03d900000009F0b|bsb_rule
+14:45:09.204 (204496179)|VALIDATION_FORMULA|AND(NOT(ISBLANK(BSB__c)), NOT(REGEX(BSB__c,"[0-9]{3}-[0-9]{3}")))|BSB__c=034-292
+14:45:09.204 (204504037)|VALIDATION_PASS
+14:45:09.204 (204506569)|VALIDATION_RULE|03d6F000000ge1d|CM_are_not_allowed_to_alter_account_name
+14:45:09.204 (209039835)|VALIDATION_FORMULA|AND (ISCHANGED (Name ), $Profile.Id='00e90000000bbgX')|$Profile.Id=00e90000000afNz , Name=GetMoreTraffic - Topwater Plumbing & Gas
+14:45:09.204 (209053738)|VALIDATION_PASS
+14:45:09.204 (209056147)|VALIDATION_RULE|03d90000000QieI|CCDetailsNonEmpty
+14:45:09.204 (209346128)|VALIDATION_FORMULA|IF(((ISPICKVAL(Payment_Option__c, 'Eway') &#124;&#124; ISPICKVAL(Payment_Option__c, 'Commweb')) &&(ISCHANGED(Card_Token__c)))
+&& (
+	 ISBLANK(Card_Token__c) &#124;&#124;
+	ISBLANK(TEXT(Card_Month_Expiry__c)) &#124;&#124;
+	ISBLANK(TEXT(Card_Year_Expiry__c)) &#124;&#124;
+	ISBLANK(Name_On_Card__c)
+)
+, true, false)|Card_Token__c=null , Name_On_Card__c=null , Card_Month_Expiry__c=null , Payment_Option__c=Other , Card_Year_Expiry__c=null
+14:45:09.204 (209361619)|VALIDATION_PASS
+14:45:09.95 (235538609)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (235672424)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236012313)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236136703)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236273616)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236320447)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236344168)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236431276)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (236792604)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (239260024)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (239394355)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (239866221)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (239913545)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240093208)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240571187)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240647402)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240682156)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240854246)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240893193)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (240917089)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (241024867)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (241360019)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (243644890)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (243763706)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (243905571)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (243957890)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (243990046)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244089787)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244119329)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244303599)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244340744)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244362089)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244466265)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (244752776)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (246784944)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (246896301)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (247016106)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (247083194)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (247125267)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (247203352)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (247255193)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (248132824)|SOQL_EXECUTE_BEGIN|[214]|Aggregations:0|SELECT Id, Name, Match_On_Insert_Action__c, Match_On_Update_Action__c, Create_Tasks_for_Warnings__c, Blocked_Duplicates__c, Merged_Duplicates__C, Converted_Duplicates__c, Error_Message__c, Scenario_Type__c, Deployed__c, Bypass_Security__c, Person_Account_Filter__c, OwnerID, CreatedById FROM Scenario__c WHERE Deployed__c = TRUE LIMIT 100
+14:45:09.95 (250977868)|SOQL_EXECUTE_END|[214]|Rows:2
+14:45:09.95 (251281755)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (251307623)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (251397630)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (251450561)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (252198188)|SOQL_EXECUTE_BEGIN|[34]|Aggregations:0|SELECT Name, Id, Mapping_Approach__c, Match_Field__c, Target_Match_Field__c, First_N_Letters__c, Match_Blanks__c, Scenario__c FROM Scenario_Rule__c LIMIT :tmpVar1
+14:45:09.95 (254490576)|SOQL_EXECUTE_END|[34]|Rows:5
+14:45:09.95 (255397858)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (255891032)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (255975212)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (256014593)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (256040335)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (256151571)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.95 (256541793)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+14:45:09.95 (259644166)|SOQL_EXECUTE_END|[3114]|Rows:0
+14:45:09.95 (259838094)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+14:45:09.260 (260366702)|CUMULATIVE_LIMIT_USAGE
+14:45:09.260 (260366702)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 73 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.260 (260366702)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.260 (260366702)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.260 (260366702)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.263 (263262523)|CUMULATIVE_LIMIT_USAGE
+14:45:09.263 (263262523)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 73 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.263 (263262523)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.263 (263262523)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.263 (263262523)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.267 (267280143)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000a489|changeAccountOwner on Account trigger event AfterUpdate|__sfdc_trigger/changeAccountOwner
+14:45:09.267 (267331111)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.267 (267343512)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.267 (267440883)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:2
+14:45:09.267 (267550041)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.267 (267560837)|VARIABLE_SCOPE_BEGIN|[1]|this|changeAccountOwner|true|false
+14:45:09.267 (267654125)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2f28f758
+14:45:09.267 (267716820)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.267 (267725040)|VARIABLE_SCOPE_BEGIN|[1]|this|changeAccountOwner|true|false
+14:45:09.267 (267739946)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2f28f758
+14:45:09.267 (267749022)|STATEMENT_EXECUTE|[1]
+14:45:09.267 (267751206)|STATEMENT_EXECUTE|[2]
+14:45:09.267 (267775519)|HEAP_ALLOCATE|[2]|Bytes:4
+14:45:09.267 (267856274)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.267 (267870577)|VARIABLE_ASSIGNMENT|[2]|this.shares|[]|0x2f28f758
+14:45:09.267 (267933830)|HEAP_ALLOCATE|[4]|Bytes:5
+14:45:09.267 (267955761)|VARIABLE_SCOPE_BEGIN|[4]|newAcc|Account|true|false
+14:45:09.267 (269585008)|VARIABLE_ASSIGNMENT|[4]|newAcc|{"LastModifiedDate":"2019-01-09T04:45:10.000Z","username__c":"tim@topwater.com","Recurring_Tasks__c":"None","Number_of_Employees__c":"0 - 10","BSB__c":"034-292","HasGooglePlusProject__c":false,"BillingCity":"Biggera Waters","Survey_Score__c":0.00,"Refund__c":0.00,"AF__c":false,"Facebook_Active_Days__c":0,"HasSEOProject__c":false,"Name":"GetMoreTraffic - Top (20 more) ...","Industry":"Trades & Services","IsExcludedFromRealign":false,"Infusionsoft_id__c":"114150","CreatedById":"00590000000VmmqAAC","SEO_Active_Days__c":0,"Amex__c":false,"Any_Cancellation_Case__c":false,"Welcome_pack_sent__c":false,"BillingPostalCode":"4216","IsDeleted":false,"password__c":"2kt63v8sh","Xero_Sync__c":false,"Accounts__c":1,"CurrencyIsoCode":"AUD","Converto_Active_Days__c":0,"Active_Days__c":1178,"Total_Active_Products__c":1,"Cancelled_Adwords_Products__c":0,"Adwords_Product__c":"Active","Last_Opportunity__c":"a196F00000CM3knQAD","Active_Facebook_Products__c":0,"Send_Invoice__c":false,"CreatedDate":"2015-10-01T06:36:05.000Z","Unique_Id__c":"283697","email__c":"tim@topwater.com.au","Active_Converto_Products__c":0,"Cancelled_SEO__c":0,"Id":"0019000001Xi3lvAAB","BillingState":"QLD","ROI__c":"Average","IsPartner":false,"Active__c":true,"SFSSDupeCatcher__Override_DupeCatcher__c":false,"Relationship__c":"Average","Website":"www.topwater.com.au","Monthly_Revenue__c":342.33000000,"Company__c":"Topwater Plumbing &  (3 more) ...","OwnerId":"00590000004qLCnAAM","Outstanding_Amount__c":0.00,"Account_No__c":"449613","Credit__c":80.00,"Payment_Option__c":"Other","SystemModstamp":"2019-01-09T04:45:10.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Cancelled_Facebook_Products__c":0,"Active_SEO_Products__c":0,"Send_Invoice_Reminder__c":true,"BillingStreet":"40 Vaggelas Crescent","Disable_Survey__c":false,"Psycho__c":false,"Cancelled_Converto_Products__c":0,"LastActivityDate":"2019-01-08T00:00:00.000Z","GST__c":false,"Active_Adwords_Products__c":1,"Package_Name__c":"Standard","Revenue__c":13238.00,"LastModifiedById":"00590000000VmmqAAC","App_Installed__c":false,"Adwords_Active_Days__c":1178}|0x4db3063e
+14:45:09.267 (269640596)|STATEMENT_EXECUTE|[4]
+14:45:09.267 (269643985)|STATEMENT_EXECUTE|[5]
+14:45:09.267 (269763942)|VARIABLE_SCOPE_BEGIN|[5]|oldAcc|Account|true|false
+14:45:09.267 (270906752)|VARIABLE_ASSIGNMENT|[5]|oldAcc|{"LastModifiedDate":"2019-01-08T19:48:46.000Z","username__c":"tim@topwater.com","Recurring_Tasks__c":"None","Number_of_Employees__c":"0 - 10","BSB__c":"034-292","HasGooglePlusProject__c":false,"BillingCity":"Biggera Waters","Survey_Score__c":0.00,"Refund__c":0.00,"AF__c":false,"Facebook_Active_Days__c":0,"HasSEOProject__c":false,"Name":"GetMoreTraffic - Top (20 more) ...","Industry":"Trades & Services","IsExcludedFromRealign":false,"Infusionsoft_id__c":"114150","CreatedById":"00590000000VmmqAAC","SEO_Active_Days__c":0,"Amex__c":false,"Any_Cancellation_Case__c":false,"Welcome_pack_sent__c":false,"BillingPostalCode":"4216","IsDeleted":false,"password__c":"2kt63v8sh","Xero_Sync__c":false,"Accounts__c":1,"CurrencyIsoCode":"AUD","Converto_Active_Days__c":0,"Active_Days__c":1178,"Total_Active_Products__c":1,"Cancelled_Adwords_Products__c":0,"Adwords_Product__c":"Active","Last_Opportunity__c":"a196F00000CM3knQAD","Active_Facebook_Products__c":0,"Send_Invoice__c":false,"CreatedDate":"2015-10-01T06:36:05.000Z","Unique_Id__c":"283697","email__c":"tim@topwater.com.au","Active_Converto_Products__c":0,"Cancelled_SEO__c":0,"Id":"0019000001Xi3lvAAB","BillingState":"QLD","ROI__c":"Average","IsPartner":false,"Active__c":true,"SFSSDupeCatcher__Override_DupeCatcher__c":false,"Relationship__c":"Average","Website":"www.topwater.com.au","Monthly_Revenue__c":342.33000000,"Company__c":"Topwater Plumbing &  (3 more) ...","OwnerId":"00590000004qLCnAAM","Outstanding_Amount__c":79.00,"Account_No__c":"449613","Credit__c":80.00,"Payment_Option__c":"Other","SystemModstamp":"2019-01-08T19:48:46.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Cancelled_Facebook_Products__c":0,"Active_SEO_Products__c":0,"Send_Invoice_Reminder__c":true,"BillingStreet":"40 Vaggelas Crescent","Disable_Survey__c":false,"Psycho__c":false,"Cancelled_Converto_Products__c":0,"LastActivityDate":"2019-01-08T00:00:00.000Z","GST__c":false,"Active_Adwords_Products__c":1,"Package_Name__c":"Standard","Revenue__c":13238.00,"LastModifiedById":"00590000000VmmqAAC","App_Installed__c":false,"Adwords_Active_Days__c":1178}|0x26ed3e89
+14:45:09.267 (271031218)|STATEMENT_EXECUTE|[6]
+14:45:09.267 (271052875)|HEAP_ALLOCATE|[4]|Bytes:5
+14:45:09.267 (271070606)|VARIABLE_ASSIGNMENT|[4]|newAcc|null|
+14:45:09.271 (271081279)|CUMULATIVE_LIMIT_USAGE
+14:45:09.271 (271081279)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 73 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.271 (271081279)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.271 (271081279)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.271 (271081279)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.279 (279868928)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000001Hk3Y|AccountEmployee on Account trigger event AfterUpdate|__sfdc_trigger/AccountEmployee
+14:45:09.279 (279934375)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.279 (279949092)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.279 (280102045)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:14
+14:45:09.279 (280131425)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.279 (280146668)|VARIABLE_SCOPE_BEGIN|[1]|this|AccountEmployee|true|false
+14:45:09.279 (280212290)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5df7f9e7
+14:45:09.279 (280348700)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.279 (280364511)|VARIABLE_SCOPE_BEGIN|[1]|this|AccountEmployee|true|false
+14:45:09.279 (280388266)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5df7f9e7
+14:45:09.279 (280401306)|STATEMENT_EXECUTE|[1]
+14:45:09.279 (280535342)|HEAP_ALLOCATE|[2]|Bytes:5
+14:45:09.279 (280572516)|VARIABLE_SCOPE_BEGIN|[2]|account|Account|true|false
+14:45:09.279 (281621802)|VARIABLE_ASSIGNMENT|[2]|account|{"LastModifiedDate":"2019-01-09T04:45:10.000Z","username__c":"tim@topwater.com","Recurring_Tasks__c":"None","Number_of_Employees__c":"0 - 10","BSB__c":"034-292","HasGooglePlusProject__c":false,"BillingCity":"Biggera Waters","Survey_Score__c":0.00,"Refund__c":0.00,"AF__c":false,"Facebook_Active_Days__c":0,"HasSEOProject__c":false,"Name":"GetMoreTraffic - Top (20 more) ...","Industry":"Trades & Services","IsExcludedFromRealign":false,"Infusionsoft_id__c":"114150","CreatedById":"00590000000VmmqAAC","SEO_Active_Days__c":0,"Amex__c":false,"Any_Cancellation_Case__c":false,"Welcome_pack_sent__c":false,"BillingPostalCode":"4216","IsDeleted":false,"password__c":"2kt63v8sh","Xero_Sync__c":false,"Accounts__c":1,"CurrencyIsoCode":"AUD","Converto_Active_Days__c":0,"Active_Days__c":1178,"Total_Active_Products__c":1,"Cancelled_Adwords_Products__c":0,"Adwords_Product__c":"Active","Last_Opportunity__c":"a196F00000CM3knQAD","Active_Facebook_Products__c":0,"Send_Invoice__c":false,"CreatedDate":"2015-10-01T06:36:05.000Z","Unique_Id__c":"283697","email__c":"tim@topwater.com.au","Active_Converto_Products__c":0,"Cancelled_SEO__c":0,"Id":"0019000001Xi3lvAAB","BillingState":"QLD","ROI__c":"Average","IsPartner":false,"Active__c":true,"SFSSDupeCatcher__Override_DupeCatcher__c":false,"Relationship__c":"Average","Website":"www.topwater.com.au","Monthly_Revenue__c":342.33000000,"Company__c":"Topwater Plumbing &  (3 more) ...","OwnerId":"00590000004qLCnAAM","Outstanding_Amount__c":0.00,"Account_No__c":"449613","Credit__c":80.00,"Payment_Option__c":"Other","SystemModstamp":"2019-01-09T04:45:10.000Z","BJB_Company__c":"a0C90000002PU4VEAW","Cancelled_Facebook_Products__c":0,"Active_SEO_Products__c":0,"Send_Invoice_Reminder__c":true,"BillingStreet":"40 Vaggelas Crescent","Disable_Survey__c":false,"Psycho__c":false,"Cancelled_Converto_Products__c":0,"LastActivityDate":"2019-01-08T00:00:00.000Z","GST__c":false,"Active_Adwords_Products__c":1,"Package_Name__c":"Standard","Revenue__c":13238.00,"LastModifiedById":"00590000000VmmqAAC","App_Installed__c":false,"Adwords_Active_Days__c":1178}|0x4db3063e
+14:45:09.279 (281675385)|STATEMENT_EXECUTE|[2]
+14:45:09.279 (281678314)|STATEMENT_EXECUTE|[3]
+14:45:09.279 (281697231)|HEAP_ALLOCATE|[3]|Bytes:23
+14:45:09.279 (281728518)|HEAP_ALLOCATE|[3]|Bytes:27
+14:45:09.279 (281783959)|USER_DEBUG|[3]|DEBUG|Account trigger. type: null
+14:45:09.279 (281818668)|STATEMENT_EXECUTE|[5]
+14:45:09.279 (281837283)|HEAP_ALLOCATE|[2]|Bytes:5
+14:45:09.279 (281853865)|VARIABLE_ASSIGNMENT|[2]|account|null|
+14:45:09.281 (281863857)|CUMULATIVE_LIMIT_USAGE
+14:45:09.281 (281863857)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 73 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.281 (281863857)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.281 (281863857)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.281 (281863857)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.284 (284020126)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000E0PX|dlrs_AccountTrigger on Account trigger event AfterUpdate|__sfdc_trigger/dlrs_AccountTrigger
+14:45:09.284 (284075499)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.284 (284089030)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:45:09.284 (284143645)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (284234148)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+14:45:09.284 (284272755)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6c702fe6
+14:45:09.284 (284317927)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (284325883)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+14:45:09.284 (284340326)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6c702fe6
+14:45:09.284 (284348916)|STATEMENT_EXECUTE|[4]
+14:45:09.284 (284351139)|STATEMENT_EXECUTE|[7]
+14:45:09.284 (284379126)|METHOD_ENTRY|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+14:45:09.284 (284388728)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (287565391)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (288462800)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (295617033)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (300332244)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304114782)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304243495)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304278326)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304352905)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304621340)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304714588)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (304771980)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (305015543)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (305218672)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (305671576)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (316339666)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (316469287)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (318611469)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (318707839)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (319044469)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (319785383)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (320137183)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (320286410)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (320361753)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (324862325)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (325239226)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (325509870)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (325808570)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (326121735)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (326277928)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (326434847)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (326622458)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (326682016)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (326707283)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (326725087)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (326857061)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (326935906)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (327056188)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (327229131)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (327255502)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (327369923)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (327394239)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (327566381)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (327585702)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (327597144)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (327610121)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (327782127)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (327882956)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328022418)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328176891)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (328197460)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (328208790)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (328220882)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328317951)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (328331718)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (328341822)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (328351152)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328487422)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (328504136)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (328514750)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (328524570)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328621385)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (328675670)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328766574)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (328863670)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (328878499)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (328888941)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (328898998)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329021392)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (329053337)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (329070752)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (329086107)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329285642)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (329308130)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (329331029)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (329348335)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329533189)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (329562427)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (329580171)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (329598100)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329729555)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (329786157)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329879449)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (329979156)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (329995011)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (330006157)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (330016704)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (330128632)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (330155527)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (330173405)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (330189074)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (330287214)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (330300622)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (330314144)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (330328501)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (330529376)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (330552186)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (330570935)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (330589472)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (330748959)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (330766059)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (330776154)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (330787165)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (330881863)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (330936490)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331030495)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331130701)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331161752)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (331173347)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331185716)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331292821)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331311741)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (331323175)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331342863)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331441451)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331454376)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (331463882)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331472460)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331562231)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331574343)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (331583884)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331592429)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331681372)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331693146)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (331703293)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331711567)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331799271)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (331811155)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (331821585)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (331830120)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (331918388)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (331970796)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332057535)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332160488)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332175080)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (332185535)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332194657)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332287986)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332301037)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (332311505)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332320145)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332431789)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332445261)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (332455231)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332464024)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332555125)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332567246)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (332577551)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332587747)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332700635)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332715684)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (332726032)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332735862)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (332885873)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (332908379)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (332926447)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (332944331)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333103815)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (333125994)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (333138166)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (333153760)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333252641)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (333307761)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333399198)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333511293)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (333530498)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (333540709)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (333550443)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333656669)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (333676558)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (333692867)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (333708638)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (333874985)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (333896731)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (333915074)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (333933369)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334078220)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (334101126)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (334118510)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (334134175)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334256921)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (334271553)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (334282528)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (334291414)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334386929)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (334399484)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (334409796)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (334419602)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334555726)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (334570786)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (334580642)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (334589784)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334684125)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (334697167)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (334706566)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (334714893)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334804040)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (334858170)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (334950382)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335057522)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335074062)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (335086199)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335095218)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335194779)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335207373)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (335216984)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335225422)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335330498)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335343733)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (335353428)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335361882)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335452941)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335465060)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (335475143)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335483408)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335572907)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335585741)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (335595908)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335604579)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335692196)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335704318)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (335714792)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335723646)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335812429)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335824518)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (335834672)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335843084)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (335930663)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (335942726)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (335952518)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (335961125)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336048787)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336061694)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (336073437)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336083380)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336176539)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (336229266)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336315150)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336444454)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336461014)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (336472092)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336482330)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336574716)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336587576)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (336597477)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336606711)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336696497)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336708187)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (336718471)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336727403)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336816791)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336828902)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (336839011)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336848249)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (336935848)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (336947673)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (336957601)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (336966705)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337054865)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (337067598)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (337079244)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (337088758)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337209646)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (337223820)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (337233609)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (337241940)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337337199)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (337349740)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (337359530)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (337367783)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337455966)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (337468423)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (337477871)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (337485780)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337600654)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (337614972)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (337624449)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (337633055)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337769374)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (337853065)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (337998121)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (338120181)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (338153680)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (338172201)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (338202283)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (338326977)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (338342552)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (338352344)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (338361610)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (338455802)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (338469520)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (338480229)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (338489149)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (338591434)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (338611193)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (338645785)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (338662461)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (338809613)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (338830733)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (338841685)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (338852558)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339015350)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339045193)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (339056416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339066811)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339198871)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339214298)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (339224771)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339234089)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339358122)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339378269)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (339395434)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339414523)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339515334)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339528727)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (339538204)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339547047)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339688531)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339713470)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (339730994)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339742536)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339841308)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (339854199)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (339864989)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (339873411)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (339993076)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (340085748)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340210714)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340318305)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340334453)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (340346336)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340356470)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340450248)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340463215)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (340473724)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340482151)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340573384)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340585800)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (340595528)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340604142)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340711458)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340724270)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (340734024)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340742620)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340832926)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340845012)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (340855889)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340864295)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (340959983)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (340975382)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (340986093)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (340996341)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341098263)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341131476)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (341154873)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341170468)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341288154)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341301574)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (341311951)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341321580)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341463055)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341483442)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (341502059)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341518348)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341624694)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341638124)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (341647680)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341656397)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341747902)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341760450)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (341771031)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341779386)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (341869612)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (341882035)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (341892160)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (341905760)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342020867)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (342079820)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342180402)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342308595)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342324770)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (342335229)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342344304)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342437426)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342450672)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (342460736)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342469141)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342559606)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342572216)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (342581892)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342590114)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342679714)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342692276)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (342701947)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342710008)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342800078)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342812454)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (342822109)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342830660)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (342935276)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (342948913)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (342959341)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (342967398)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343057161)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343069796)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (343081268)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343089666)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343187801)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343201095)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (343210681)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343219141)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343308352)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343320412)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (343330256)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343338836)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343434665)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343447364)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (343460878)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343470677)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343560933)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343573115)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (343582507)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343590721)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343699752)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343712112)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (343721352)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343729492)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (343818034)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (343830038)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (343840729)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (343854324)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344012443)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (344101500)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344206333)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344305335)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344321723)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (344332517)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344341764)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344436460)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344449666)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (344459495)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344467735)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344556325)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344568565)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (344578582)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344586986)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344674844)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344686684)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (344696652)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344704971)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344792182)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344804409)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (344815266)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344823689)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (344911584)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (344923476)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (344933327)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (344941458)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345077289)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345098483)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (345116904)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345146700)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345251895)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345265187)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (345275606)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345284751)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345375592)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345397351)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (345417188)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345435245)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345562160)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345577087)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (345586640)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345596332)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345690613)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345702833)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (345713149)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345721927)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345815389)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345827422)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (345837096)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345846364)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (345949441)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (345962767)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (345973167)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (345982381)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346075922)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (346092087)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x487ec038
+14:45:09.284 (346106333)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (346120407)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346238157)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (346296012)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346390565)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346526196)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (346548765)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (346559896)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (346571600)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346749103)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (346769542)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (346785952)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (346800132)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (346936930)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (346956076)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (346971890)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (346986016)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (347122547)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (347147893)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (347165012)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (347179799)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (347343955)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (347363883)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (347381451)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (347397726)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (347554917)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (347576138)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (347592104)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (347609095)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (347766204)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (347786784)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (347805093)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (347820720)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (347979345)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (348001046)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (348018703)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (348036365)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (348201542)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (348222253)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (348236913)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (348251378)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (348404790)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (348425933)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (348441009)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (348455837)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (348607109)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (348627994)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (348645256)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (348661254)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (348814947)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (348835338)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (348850259)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (348865727)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (349015165)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (349036323)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (349052800)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (349067164)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (349225229)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (349246320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x487ec038
+14:45:09.284 (349261490)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (349278248)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (349429836)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (349450927)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x247dbfab
+14:45:09.284 (349468103)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (349483244)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (349660286)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (349756517)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (349914394)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (350096218)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (350122655)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (350140113)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (350162396)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (350324163)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (350346009)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (350364332)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (350379968)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (350537126)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (350558174)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (350575370)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (350591037)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (350738965)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (350760153)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (350777662)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (350793114)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (350944645)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (350964562)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (350981163)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (350996761)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (351153296)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (351174680)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (351191736)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (351206565)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (351389481)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (351412751)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (351427411)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (351443341)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (351599672)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (351620157)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (351637902)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (351654360)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (351824797)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (351845597)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (351863365)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (351879190)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (352032712)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (352053223)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (352069124)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (352084011)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (352241947)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (352262647)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (352279190)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (352296019)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (352451466)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (352470936)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (352488969)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (352504766)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (352658692)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (352678263)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (352696749)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (352712695)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (352857642)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (352877682)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x487ec038
+14:45:09.284 (352892753)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (352908633)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (353059328)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (353081491)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x247dbfab
+14:45:09.284 (353100249)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (353116408)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (353278243)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (353299609)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3049557c
+14:45:09.284 (353322702)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (353340655)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (353516936)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (353616507)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (353773362)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (353937063)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (353961928)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (353980275)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (353997767)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (354165126)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (354188799)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (354206048)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (354228252)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (354449818)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (354472739)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (354490766)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (354507240)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (354669713)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (354689979)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (354706406)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (354722258)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (354878082)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (354899227)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (354916502)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (354932603)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (355109750)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (355133133)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (355160547)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (355178496)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (355391813)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (355415026)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (355432433)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (355449801)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (355602352)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (355624696)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (355642577)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (355659018)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (355811818)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (355832658)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (355849893)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (355865792)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (356021573)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (356043286)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (356059340)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (356075907)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (356250960)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (356272781)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (356288483)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (356302618)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (356443401)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (356461809)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (356477094)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (356496260)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (356656970)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (356676484)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (356692268)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (356708033)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (356846737)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (356866052)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x487ec038
+14:45:09.284 (356880794)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (356894554)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357031528)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (357051151)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x247dbfab
+14:45:09.284 (357064808)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (357078359)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357215605)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (357233820)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3049557c
+14:45:09.284 (357250552)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (357265215)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357399655)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (357418120)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x12ce8f8c
+14:45:09.284 (357433602)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (357447384)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357584261)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (357690298)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357887624)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (357933990)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358008375)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358150969)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358193050)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358231432)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358810665)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (358927694)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (359035910)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (359225423)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (359268621)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (359331475)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361396284)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361490751)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361625839)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361674131)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361705473)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361827392)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361854693)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361904542)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (361980463)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (362021636)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (362089010)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (362366950)|SYSTEM_METHOD_ENTRY|[1]|Type.Type()
+14:45:09.284 (362377675)|STATEMENT_EXECUTE|[1]
+14:45:09.284 (362388490)|SYSTEM_METHOD_EXIT|[1]|Type
+14:45:09.284 (362400335)|HEAP_ALLOCATE|[249]|Bytes:8
+14:45:09.284 (362422868)|HEAP_ALLOCATE|[249]|Bytes:8
+14:45:09.284 (362431850)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+14:45:09.284 (362482717)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x61a8cdd
+14:45:09.284 (362498823)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+14:45:09.284 (362798478)|VARIABLE_ASSIGNMENT|[4]|apextype|"dlrs.fflib_SObjectDescribe"|0x460edbee
+14:45:09.284 (363106899)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (363186749)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (363629418)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (363868894)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (364104893)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (364135816)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x19bdcd68
+14:45:09.284 (364149257)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (364162479)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (364299427)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (364321080)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x29d92359
+14:45:09.284 (364338672)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (364356521)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (364526098)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (364550432)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1c81f448
+14:45:09.284 (364567354)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (364582392)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (364737186)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (364758725)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1b5daa33
+14:45:09.284 (364776628)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (364793484)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (364950215)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (364971871)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cfce2bd
+14:45:09.284 (364988243)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365003402)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365140547)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365156638)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0xc5fd790
+14:45:09.284 (365167645)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365178426)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365275135)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365287870)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1fef51e7
+14:45:09.284 (365298340)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365308144)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365401429)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365414536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69956c1b
+14:45:09.284 (365424584)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365433842)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365527076)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365539781)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6277829e
+14:45:09.284 (365549683)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365558690)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365650604)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365662963)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x10e63a17
+14:45:09.284 (365674047)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365683607)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365775477)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365788070)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x75e33185
+14:45:09.284 (365798649)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365807362)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (365898959)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (365911596)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x37d47e96
+14:45:09.284 (365922647)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (365932387)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366021504)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366035263)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x69697980
+14:45:09.284 (366066038)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366075608)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366169513)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366182310)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x487ec038
+14:45:09.284 (366191806)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366200249)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366292277)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366305240)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x247dbfab
+14:45:09.284 (366315211)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366323466)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366442579)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366456172)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3049557c
+14:45:09.284 (366466454)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366476449)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366569199)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366581958)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x12ce8f8c
+14:45:09.284 (366592222)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366600592)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366691328)|HEAP_ALLOCATE|[195]|Bytes:8
+14:45:09.284 (366703800)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2c0ff2ed
+14:45:09.284 (366713151)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (366726413)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366818186)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (366870835)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366937638)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (366987175)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (367011189)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (367056462)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (368574808)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (368658167)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (369518821)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (369674570)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (369773337)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (369853711)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (369889629)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370055484)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370092147)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370138937)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370223689)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370272114)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370474646)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370637779)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370688272)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (370964591)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371093501)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371238917)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371324031)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371462378)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371495545)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371718081)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371779054)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371893439)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (371927408)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (372069387)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (372572822)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (372893868)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (375905511)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (375952110)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x19bdcd68
+14:45:09.284 (375961623)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (375973412)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (376106066)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (376243782)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (376582676)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (376609225)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x29d92359
+14:45:09.284 (376616586)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (376627079)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (376720728)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (376830548)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (377117182)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (377151812)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1c81f448
+14:45:09.284 (377163757)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (377182700)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (377282255)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (377436462)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (377757378)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (377778589)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x6cfce2bd
+14:45:09.284 (377784589)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (377795023)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (377882367)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (378122411)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (378365323)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (378386592)|VARIABLE_ASSIGNMENT|[747]|this|{}|0xc5fd790
+14:45:09.284 (378392991)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (378403847)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (378487799)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (378594680)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (378845437)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (378879340)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1fef51e7
+14:45:09.284 (378886625)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (378898267)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (378982428)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (379093439)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (379364161)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (379383660)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69956c1b
+14:45:09.284 (379390599)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (379400493)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (379486085)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (379590365)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (379818662)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (379837442)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1b5daa33
+14:45:09.284 (379844316)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (379855142)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (379952889)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (380061320)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (380188358)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (380205878)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x10e63a17
+14:45:09.284 (380212240)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (380223404)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (380304468)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (380566144)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (380812070)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (380841247)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x10e63a17
+14:45:09.284 (380850561)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (380867648)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (380997173)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (381142954)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (381444554)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (381465276)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x37d47e96
+14:45:09.284 (381471532)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (381481412)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (381565714)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (381682339)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (381973004)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (381994973)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69697980
+14:45:09.284 (382001359)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (382011706)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (382116407)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (382275680)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (382531543)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (382551733)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x37d47e96
+14:45:09.284 (382558654)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (382569328)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (382673716)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (382812542)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (382967067)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (382986503)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x10e63a17
+14:45:09.284 (382992712)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (383002120)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (383086362)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (383191640)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (383300309)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (383316484)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x75e33185
+14:45:09.284 (383323211)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (383333323)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (383409845)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (383546969)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (383674376)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (383694179)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x247dbfab
+14:45:09.284 (383700682)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (383710585)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (383792703)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (384042505)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (384284285)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (384304310)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x247dbfab
+14:45:09.284 (384310785)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (384321120)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (384404059)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (384509121)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (384738072)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (384757816)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3049557c
+14:45:09.284 (384764607)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (384774335)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (384855388)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (384960694)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (385076057)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (385094159)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x247dbfab
+14:45:09.284 (385099970)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (385109586)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (385186438)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (385285739)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (385556975)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (385577133)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3049557c
+14:45:09.284 (385583741)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (385593781)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (385675983)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (385778973)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (385887464)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (385903074)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x12ce8f8c
+14:45:09.284 (385909401)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (385919194)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (385993760)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (386122648)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (386264872)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (386284000)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x247dbfab
+14:45:09.284 (386290689)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (386300561)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (386395845)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (386512769)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (386839241)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (386860666)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3049557c
+14:45:09.284 (386867275)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (386878356)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (386963471)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387070069)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387191067)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (387207257)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x2c0ff2ed
+14:45:09.284 (387213645)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (387223143)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (387297978)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387396760)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387504041)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (387519594)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x12ce8f8c
+14:45:09.284 (387526228)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (387536346)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (387609630)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387705889)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (387821198)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (387844068)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69697980
+14:45:09.284 (387852333)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (387862104)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (387948554)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388062405)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388180580)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (388197507)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x487ec038
+14:45:09.284 (388203216)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (388212622)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (388287163)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388385063)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388492894)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (388508639)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x487ec038
+14:45:09.284 (388515900)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (388525592)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (388598996)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388694874)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (388806127)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (388821398)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x487ec038
+14:45:09.284 (388827767)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (388836846)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (388908861)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389004591)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389115481)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (389131976)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x75e33185
+14:45:09.284 (389138132)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (389149415)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (389222910)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389323309)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389430550)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (389462448)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x10e63a17
+14:45:09.284 (389469968)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (389479932)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (389564586)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389682450)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (389821127)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (389840570)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x37d47e96
+14:45:09.284 (389847545)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (389857266)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (389934631)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390035573)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390155755)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (390172393)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69697980
+14:45:09.284 (390178532)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (390204934)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (390283214)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390430308)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390550071)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (390567441)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69697980
+14:45:09.284 (390573955)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (390583183)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (390664442)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390779722)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (390923422)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (390943300)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69697980
+14:45:09.284 (390949685)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (390959695)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (391077958)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (391322232)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (391444590)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (391476095)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x6277829e
+14:45:09.284 (391489181)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (391505546)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (391598584)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (391706243)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (391821811)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (391839501)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x4213eb63
+14:45:09.284 (391846090)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (391856078)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (391930664)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392038753)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392156795)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (392173703)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x4213eb63
+14:45:09.284 (392180357)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (392190161)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (392267170)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392373627)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392482164)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (392497642)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x19bdcd68
+14:45:09.284 (392503775)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (392513404)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (392596904)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392723707)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (392898521)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (392925968)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x29d92359
+14:45:09.284 (392937168)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (392955777)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (393061918)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (393191093)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (393342699)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (393367147)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x29d92359
+14:45:09.284 (393376803)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (393392980)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (393495880)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (393599676)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (393707840)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (393724550)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1c81f448
+14:45:09.284 (393730266)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (393739481)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (393814247)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (393912804)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394017426)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (394032974)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1b5daa33
+14:45:09.284 (394039411)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (394049081)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (394127599)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394234121)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394358184)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (394374110)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x6cfce2bd
+14:45:09.284 (394379964)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (394388837)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (394463315)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394560856)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394665091)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (394680517)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x6cfce2bd
+14:45:09.284 (394686939)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (394696972)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (394769978)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394866218)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (394974500)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (394990401)|VARIABLE_ASSIGNMENT|[747]|this|{}|0xc5fd790
+14:45:09.284 (394996096)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (395005332)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (395082508)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395182720)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395288604)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (395304170)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1fef51e7
+14:45:09.284 (395310644)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (395320406)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (395393475)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395489330)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395594684)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (395610762)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x69956c1b
+14:45:09.284 (395617611)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (395627972)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (395702802)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395801384)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (395911462)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (395927574)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x6277829e
+14:45:09.284 (395934504)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (395944009)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (396018161)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (396119564)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (396281968)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396289119)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396292591)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396295695)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396299070)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396302351)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396304949)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396308312)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396311782)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396314712)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396317512)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396320132)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396323672)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396326787)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396329435)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396333045)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396335838)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396338427)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396341255)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (396343796)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (400760772)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (401195780)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (401630806)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (401943026)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (403622252)|SOQL_EXECUTE_BEGIN|[160]|Aggregations:0|SELECT CurrencyIsoCode, Name, dlrs__Active__c, dlrs__AggregateAllRows__c, dlrs__AggregateOperation__c, dlrs__AggregateResultField__c, dlrs__CalculationMode__c, dlrs__CalculationSharingMode__c, dlrs__ChildObject__c, dlrs__ConcatenateDelimiter__c, dlrs__FieldToAggregate__c, dlrs__FieldToOrderBy__c, dlrs__ParentObject__c, dlrs__RelationshipCriteriaFields__c, dlrs__RelationshipCriteria__c, dlrs__RelationshipField__c, dlrs__RowLimit__c, dlrs__TestCodeSeeAllData__c, dlrs__TestCode__c, dlrs__UniqueName__c FROM dlrs__LookupRollupSummary__c WHERE CalculationMode__c in :calculationModeNames and ChildObject__c in :childObjectNames and Active__c = true ORDER BY Name ASC NULLS FIRST , dlrs__ParentObject__c ASC NULLS FIRST , dlrs__RelationshipField__c ASC NULLS FIRST 
+14:45:09.284 (411427861)|SOQL_EXECUTE_END|[160]|Rows:0
+14:45:09.284 (411821303)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (411861390)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412303930)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412643953)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412687671)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412728711)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412770298)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412889255)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (412988992)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (413098226)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (413141749)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (413186365)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (414632491)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (414748304)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (414887412)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (414979515)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415119983)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (415178383)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415262339)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415363693)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (415396034)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (415408953)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (415419579)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415513077)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (415562087)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415645744)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415744328)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (415760591)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (415771434)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (415781539)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (415875807)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (415890002)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (415900319)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (415909571)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416000936)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (416049240)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416131140)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416231748)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (416247403)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (416257731)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (416267376)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416357973)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (416371066)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (416380676)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (416389284)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416478451)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (416490364)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (416500416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (416509278)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416597090)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (416647700)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416728161)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416823611)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (416837592)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (416847571)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (416856418)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (416948058)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (416960811)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (416970783)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (416980365)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417069648)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417083497)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (417093762)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417103894)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417198503)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417210914)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (417221243)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417229328)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417318901)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (417366450)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417446557)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417540297)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417554759)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (417564784)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417573602)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417663625)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417676402)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (417686021)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417694497)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417784317)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417796321)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (417806492)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417814764)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (417903843)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (417916637)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (417926663)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (417940177)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418053494)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418068159)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (418079142)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418087817)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418183196)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (418232421)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418316225)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418410786)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418424939)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (418435121)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418444404)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418535217)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418547809)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (418557826)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418566430)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418655949)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418668186)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (418677912)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418686886)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418776368)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418789018)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (418798892)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418807227)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (418895185)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (418907416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (418917379)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (418925806)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419014349)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419026726)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (419036377)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419045395)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419133286)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (419184820)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419265439)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419358236)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419372293)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (419383461)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419392271)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419482114)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419494767)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (419504073)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419512448)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419601884)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419613958)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (419624595)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419633812)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419722781)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419735236)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (419745463)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419754330)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419844884)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419856952)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (419866831)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419875543)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (419964375)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (419976839)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (419986652)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (419995097)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420083342)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420096558)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (420106612)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420116537)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420209418)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (420257039)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420337284)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420429363)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420443346)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (420453162)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420461766)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420552049)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420564730)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (420574557)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420586311)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420676030)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420687935)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (420697520)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420705691)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420793971)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420806130)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (420815477)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420823710)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (420911485)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (420923287)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (420932590)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (420940554)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421027328)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421060128)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (421071437)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421080792)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421194361)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421207952)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (421216936)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421225238)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421314610)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421326640)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (421336200)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421344445)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421432356)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (421480214)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421561741)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421654769)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421668477)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (421678035)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421686662)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421775971)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421788438)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (421798180)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421806375)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (421894963)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (421906708)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (421916156)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (421924594)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422011779)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422024198)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (422033898)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422041753)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422128253)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422140290)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (422149455)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422157198)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422251342)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422264195)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (422273592)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422281777)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422370494)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422382472)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (422392165)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422399817)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422488265)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422500356)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (422509863)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422517923)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422606975)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422619049)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (422628102)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422635994)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422722990)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (422770420)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422849996)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (422941870)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (422954938)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (422963980)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (422972087)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423061362)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423074152)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (423083594)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423091413)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423183953)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423196455)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (423205844)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423214053)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423302616)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423315096)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (423324606)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423333162)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423420886)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423433095)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (423442284)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423450131)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423538489)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423550498)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (423559816)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423567794)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423655422)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423667947)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (423677315)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423685423)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423807952)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423824019)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (423833696)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423842906)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (423935845)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (423949153)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (423958804)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (423967391)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424056228)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424068769)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (424078369)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424087005)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424179547)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (424231844)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424318101)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424411522)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424425641)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (424435233)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424443859)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424533432)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424545432)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (424555376)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424563646)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424651681)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424663646)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (424672986)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424681319)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424769958)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424782016)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (424791307)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424799306)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (424887109)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (424898914)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (424908497)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (424916743)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425004071)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425016545)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (425025810)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425034528)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425122003)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425133817)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (425143508)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425151734)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425253731)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425272514)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (425287912)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425308105)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425409382)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425428429)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (425461936)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425483750)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425606612)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425620921)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (425630154)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425640240)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425730993)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (425743398)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (425752613)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (425761327)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425849064)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (425904731)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (425995408)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426090163)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426105027)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (426114146)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426122870)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426218352)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426231121)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (426240481)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426248658)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426338041)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426350139)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (426375803)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426385387)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426530708)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426547249)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (426556618)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426565908)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426659784)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426672086)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (426680792)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426688740)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426777588)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426789659)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (426798675)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426806719)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (426895314)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (426907567)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (426916943)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (426924763)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427012280)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427025117)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (427034286)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427042422)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427130027)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427142849)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (427151743)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427160227)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427253465)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427266250)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (427275503)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427283593)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427372208)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427385010)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (427393913)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427402464)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427490786)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427502640)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (427512045)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427519955)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427608090)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (427661681)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427753700)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427849383)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427863285)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (427872695)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (427881775)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (427971444)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (427983580)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (427992858)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428000977)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428090871)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428103505)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (428112426)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428120398)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428216551)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428229307)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (428238350)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428246724)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428335219)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428347167)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (428356654)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428365104)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428453788)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428466002)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (428475647)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428483713)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428572407)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428584767)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (428594605)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428602700)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428691353)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428704132)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (428713246)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428721259)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428810383)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428822853)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (428832356)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428840490)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (428930638)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (428942894)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (428952399)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (428960535)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429049936)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429062850)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (429072000)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429080270)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429173196)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429185860)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (429195196)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429203635)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429293885)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429306015)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (429315424)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429323527)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429411138)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (429460778)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429545194)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429640694)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429654652)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (429664484)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429673341)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429762637)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429774906)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (429784465)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429792918)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (429882553)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (429894638)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (429904200)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (429912346)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430001810)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430014629)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (430024117)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430032575)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430121154)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430133874)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (430143209)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430151777)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430244899)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430257449)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (430267186)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430275668)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430364894)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430376975)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (430386898)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430395876)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430483769)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430495862)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (430505657)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430514127)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430617091)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430634775)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (430644819)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430653727)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430767165)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430781070)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (430790620)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430799216)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (430889235)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (430901298)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (430910869)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (430919687)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431008752)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431021403)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (431030442)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431038881)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431132413)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431144969)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (431154837)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431162924)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431257746)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431270034)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (431279755)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431288101)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431377653)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (431429784)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431518079)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431611860)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431625615)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (431634664)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431643384)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431742619)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431755774)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (431765000)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431773524)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431863039)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431875264)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (431884675)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (431893007)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (431980970)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (431993834)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (432003443)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432012446)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432103130)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432115453)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (432124618)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432132665)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432226210)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432238668)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (432248407)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432256472)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432344610)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432356939)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (432366307)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432374359)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432461874)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432473988)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (432483518)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432492097)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432580987)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432593495)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (432602973)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432611103)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432699974)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432711852)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (432721509)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432730452)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432818358)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432830046)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (432839527)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432848274)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (432937518)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (432949260)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (432959125)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (432967484)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433055804)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433068401)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (433078090)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433086108)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433181759)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433194580)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (433203824)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433212213)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433300631)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433312443)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cfbc8c5
+14:45:09.284 (433322330)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433330549)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433418448)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (433469672)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433553835)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433647701)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433661529)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (433670815)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433679325)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433769329)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433781353)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (433791333)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433800454)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (433888835)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (433900887)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (433911102)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (433919318)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434007017)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434019538)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (434029223)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434037358)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434128885)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434141660)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (434151508)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434160090)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434255822)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434268267)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (434277995)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434286664)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434374579)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434386696)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (434396227)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434404658)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434492861)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434504554)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (434513922)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434521804)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434610244)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434622019)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (434635202)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434643708)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434769254)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434790293)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (434806384)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434821715)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (434931746)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (434945685)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (434955405)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (434964616)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435054897)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (435067841)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (435077199)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (435085219)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435182315)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (435194862)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (435204360)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (435212790)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435302514)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (435314475)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (435323873)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (435332307)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435469110)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (435488952)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cfbc8c5
+14:45:09.284 (435503454)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (435516723)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435653359)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (435671429)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7cfe7ca1
+14:45:09.284 (435687117)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (435700451)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (435842632)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (435931824)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436079446)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436238871)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (436262635)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (436278359)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (436292601)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436432954)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (436452167)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (436467486)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (436481517)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436615135)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (436633015)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (436648046)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (436661461)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436800002)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (436817737)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (436833398)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (436846270)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (436979700)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (436997074)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (437011840)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437025383)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437158465)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437180329)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (437195179)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437208667)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437340793)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437357943)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (437371863)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437384429)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437527980)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437548043)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (437563988)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437579226)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437699359)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437713466)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (437723405)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437732471)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437829726)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437844544)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (437854641)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437863228)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (437957354)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (437969414)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (437979218)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (437987932)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438080336)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438096641)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (438107474)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438116523)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438213713)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438226348)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (438236696)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438248099)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438341268)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438353310)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (438362857)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438370859)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438465346)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438477785)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cfbc8c5
+14:45:09.284 (438487536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438495766)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438587104)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438599307)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7cfe7ca1
+14:45:09.284 (438609466)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438620403)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438712439)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (438724603)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5a871b68
+14:45:09.284 (438733922)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (438741984)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (438834552)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (438894424)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439010623)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439144009)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439160237)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (439186803)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (439197698)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439291697)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439304312)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (439313971)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (439322154)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439410296)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439422421)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (439431947)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (439440536)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439527676)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439569858)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (439593312)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (439613078)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439772256)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439793955)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (439809185)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (439824685)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (439976254)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (439998953)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (440016007)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440033953)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440200157)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440222827)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (440239394)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440255576)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440367498)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440381545)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (440391536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440401082)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440491753)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440504075)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (440514288)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440523252)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440612380)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440624294)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (440634298)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440642465)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440730767)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440742583)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (440751788)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440760117)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440849028)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440860834)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (440870444)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440878581)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (440966189)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (440978198)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (440987712)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (440995844)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441083500)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (441098652)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (441108840)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (441118028)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441212736)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (441225143)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cfbc8c5
+14:45:09.284 (441234522)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (441242714)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441331384)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (441343489)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7cfe7ca1
+14:45:09.284 (441352592)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (441360660)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441449409)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (441461258)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5a871b68
+14:45:09.284 (441470957)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (441479567)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441568428)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (441580343)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x38c924b1
+14:45:09.284 (441589311)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (441597095)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441684867)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (441747472)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441851536)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (441999141)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (442021025)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1e364290
+14:45:09.284 (442037470)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (442050415)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (442208090)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (442229784)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x421b5057
+14:45:09.284 (442246108)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (442259963)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (442409770)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (442429774)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5173f4aa
+14:45:09.284 (442445581)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (442460222)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (442609382)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (442629263)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1ab43708
+14:45:09.284 (442644354)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (442658439)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (442814799)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (442854391)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x363ac40c
+14:45:09.284 (442873817)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (442889782)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443041194)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443062114)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2ebbb374
+14:45:09.284 (443078413)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443093493)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443250747)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443270757)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x60a3c4ad
+14:45:09.284 (443287868)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443302911)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443450270)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443470669)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5b94a3c6
+14:45:09.284 (443486068)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443500381)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443646301)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443662719)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3b6e061c
+14:45:09.284 (443672417)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443681624)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443776900)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443790067)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48bd3216
+14:45:09.284 (443799760)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443808757)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (443947218)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (443966946)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x36c50100
+14:45:09.284 (443982738)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (443996336)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (444135256)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (444169632)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x48311e8d
+14:45:09.284 (444186667)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (444201341)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (444339819)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (444358269)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x324af71
+14:45:09.284 (444373197)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (444386571)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (444553266)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (444574720)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x22280081
+14:45:09.284 (444591568)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (444608097)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (444761412)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (444783002)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3cfbc8c5
+14:45:09.284 (444800624)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (444816600)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (444972262)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (444992175)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7cfe7ca1
+14:45:09.284 (445008796)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (445024382)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445182188)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (445204006)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5a871b68
+14:45:09.284 (445220690)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (445236312)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445387034)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (445407284)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x38c924b1
+14:45:09.284 (445422530)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (445437097)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445576913)|HEAP_ALLOCATE|[262]|Bytes:8
+14:45:09.284 (445595541)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5a966e8d
+14:45:09.284 (445610342)|VARIABLE_ASSIGNMENT|[EXTERNAL]|object|{}
+14:45:09.284 (445622951)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445754410)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (445840483)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445926271)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445962306)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (445995990)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446083776)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446119901)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446256508)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446332000)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446417301)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446541482)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446567867)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (446591827)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447713651)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447768117)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447811281)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447835951)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447867195)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447899257)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (447931943)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (448275029)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449230047)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449284600)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449713100)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449762030)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449828356)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449850765)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (449876583)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450005306)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450038052)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450076198)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450133906)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450180066)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450385320)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450534906)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450572110)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450730830)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450830159)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (450973935)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451038037)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451155968)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451208589)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451396994)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451456298)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451565308)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451597136)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (451737260)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (452083461)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (452329931)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (452642073)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (452689828)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1e364290
+14:45:09.284 (452702056)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (452718415)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (452807233)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (452920640)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (453042923)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (453060890)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7f668d49
+14:45:09.284 (453066408)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (453075927)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (453155761)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (453266920)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (453378109)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (453394235)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1e364290
+14:45:09.284 (453399644)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (453408655)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (453483815)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (453580418)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (453806375)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (453824562)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5173f4aa
+14:45:09.284 (453830445)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (453840467)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (453919935)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (454020893)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (454224144)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (454241922)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x363ac40c
+14:45:09.284 (454247515)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (454257185)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (454337215)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (454515488)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (454698467)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (454716164)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x2ebbb374
+14:45:09.284 (454721998)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (454731272)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (454810779)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (454912842)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (455098416)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (455117626)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x60a3c4ad
+14:45:09.284 (455123602)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (455133478)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (455240760)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (455347814)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (455535722)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (455553674)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5b94a3c6
+14:45:09.284 (455559637)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (455568968)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (455648199)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (455748314)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (455934818)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (455952922)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1ab43708
+14:45:09.284 (455958934)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (455969614)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (456049082)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (456153248)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (456320095)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (456338152)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48bd3216
+14:45:09.284 (456343722)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (456353986)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (456458067)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (456649639)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (456832727)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (456852436)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x36c50100
+14:45:09.284 (456857980)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (456867459)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (456948580)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (457064924)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (457294881)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (457314289)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48311e8d
+14:45:09.284 (457320314)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (457330088)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (457410127)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (457532513)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (457779100)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (457799295)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x36c50100
+14:45:09.284 (457804978)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (457814973)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (457908742)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (458015224)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (458129665)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (458146643)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48311e8d
+14:45:09.284 (458152444)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (458161989)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (458262063)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (458387512)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (458594990)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (458613778)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3cfbc8c5
+14:45:09.284 (458619450)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (458628906)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (458709695)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (458887724)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (459074479)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (459094029)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7cfe7ca1
+14:45:09.284 (459101537)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (459111401)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (459196541)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (459297407)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (459484966)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (459503952)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3cfbc8c5
+14:45:09.284 (459509952)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (459520502)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (459621415)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (459750311)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (459883235)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (459912619)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7cfe7ca1
+14:45:09.284 (459918699)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (459927909)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (460011421)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460116281)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460327713)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (460347969)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5a871b68
+14:45:09.284 (460353617)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (460362715)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (460444346)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460563332)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460672491)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (460689152)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3cfbc8c5
+14:45:09.284 (460694719)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (460704597)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (460779764)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460876331)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (460988135)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (461010147)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7cfe7ca1
+14:45:09.284 (461016772)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (461026022)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (461121716)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (461229049)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (461456749)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (461476357)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5a871b68
+14:45:09.284 (461482484)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (461492970)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (461572199)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (461673454)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (461780709)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (461796252)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x38c924b1
+14:45:09.284 (461801994)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (461811237)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (461884024)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (461994806)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (462106968)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (462124146)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3cfbc8c5
+14:45:09.284 (462130086)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (462138716)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (462218254)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (462314795)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (462419022)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (462747441)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7cfe7ca1
+14:45:09.284 (462753639)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (462763222)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (462842792)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (462942633)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (463195367)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (463214722)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5a871b68
+14:45:09.284 (463220492)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (463230660)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (463384395)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (463545636)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (463694763)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (463713975)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x38c924b1
+14:45:09.284 (463720003)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (463729567)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (463808683)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (463923496)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464049937)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (464066729)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x22280081
+14:45:09.284 (464072697)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (464082353)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (464160957)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464270303)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464377275)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (464392930)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48bd3216
+14:45:09.284 (464398407)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (464407263)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (464481507)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464578977)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464683847)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (464698682)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48bd3216
+14:45:09.284 (464704178)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (464713070)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (464798247)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (464897153)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465015586)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (465038195)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48bd3216
+14:45:09.284 (465046713)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (465061354)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (465180919)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465327461)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465440479)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (465457444)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48bd3216
+14:45:09.284 (465463870)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (465473042)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (465550856)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465661579)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465769907)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (465785608)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x36c50100
+14:45:09.284 (465791546)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (465800364)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (465873615)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (465991110)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466100393)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (466117502)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x324af71
+14:45:09.284 (466122942)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (466131960)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (466210278)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466311391)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466414866)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (466430148)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x48311e8d
+14:45:09.284 (466435431)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (466443969)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (466515781)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466611958)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466716879)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (466731623)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x22280081
+14:45:09.284 (466737138)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (466745582)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (466817120)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (466912561)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467016951)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (467031915)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3b6e061c
+14:45:09.284 (467037920)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (467046371)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (467120630)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467220743)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467325681)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (467340591)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x421b5057
+14:45:09.284 (467346193)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (467354995)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (467441205)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467548277)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467653624)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (467668671)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x7f668d49
+14:45:09.284 (467673874)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (467682824)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (467756585)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467862121)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (467986749)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (468002187)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1e364290
+14:45:09.284 (468007881)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (468016664)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (468091148)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468197678)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468303004)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (468317513)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5173f4aa
+14:45:09.284 (468322853)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (468332096)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (468404079)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468500532)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468604005)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (468618727)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1ab43708
+14:45:09.284 (468624764)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (468633719)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (468705671)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468801581)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (468905643)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (468920541)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x1ab43708
+14:45:09.284 (468925558)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (468934888)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (469006768)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469107290)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469220204)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (469235276)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x363ac40c
+14:45:09.284 (469240883)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (469249711)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (469322473)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469419787)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469523444)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (469538133)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x2ebbb374
+14:45:09.284 (469543461)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (469552310)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (469624630)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469720819)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (469825250)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (469840033)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x60a3c4ad
+14:45:09.284 (469845685)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (469854329)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (469926174)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470021864)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470145580)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (470172143)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x60a3c4ad
+14:45:09.284 (470180084)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (470193494)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (470305585)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470457203)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470589469)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (470606467)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x5b94a3c6
+14:45:09.284 (470612139)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (470621636)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (470698194)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470796455)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (470900510)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (470915896)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3b6e061c
+14:45:09.284 (470921739)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (470930441)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (471002980)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (471101859)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (471212104)|VARIABLE_SCOPE_BEGIN|[747]|this|dlrs.fflib_QueryFactory.QueryField|true|false
+14:45:09.284 (471227474)|VARIABLE_ASSIGNMENT|[747]|this|{}|0x3b6e061c
+14:45:09.284 (471233053)|VARIABLE_SCOPE_BEGIN|[747]|o|Object|false|false
+14:45:09.284 (471242381)|VARIABLE_ASSIGNMENT|[747]|o|{}
+14:45:09.284 (471315016)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (471409396)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (471530757)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471539504)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471544291)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471548592)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471552240)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471554871)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471557242)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471560404)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471563115)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471565632)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471568370)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471571384)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471574392)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471577124)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471579641)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471582185)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471585241)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471587758)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471590294)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471592772)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (471595275)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:45:09.284 (476622323)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (476841137)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (477233783)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (477579243)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (479343446)|SOQL_EXECUTE_BEGIN|[274]|Aggregations:0|SELECT DeveloperName, Id, Label, dlrs__Active__c, dlrs__AggregateAllRows__c, dlrs__AggregateOperation__c, dlrs__AggregateResultField__c, dlrs__CalculationMode__c, dlrs__CalculationSharingMode__c, dlrs__ChildObject__c, dlrs__ConcatenateDelimiter__c, dlrs__Description__c, dlrs__FieldToAggregate__c, dlrs__FieldToOrderBy__c, dlrs__ParentObject__c, dlrs__RelationshipCriteriaFields__c, dlrs__RelationshipCriteria__c, dlrs__RelationshipField__c, dlrs__RowLimit__c, dlrs__TestCodeSeeAllData__c, dlrs__TestCode__c FROM dlrs__LookupRollupSummary2__mdt WHERE CalculationMode__c in :calculationModeNames and ChildObject__c in :childObjectNames and Active__c = true ORDER BY DeveloperName ASC NULLS FIRST , dlrs__ParentObject__c ASC NULLS FIRST , dlrs__RelationshipField__c ASC NULLS FIRST 
+14:45:09.284 (483672342)|SOQL_EXECUTE_END|[274]|Rows:0
+14:45:09.284 (483813935)|ENTERING_MANAGED_PKG|dlrs
+14:45:09.284 (484231329)|METHOD_EXIT|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+14:45:09.484 (484246117)|CUMULATIVE_LIMIT_USAGE
+14:45:09.484 (484246117)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 73 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.484 (484246117)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.484 (484246117)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 12 out of 100
+  Number of query rows: 14 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:45:09.484 (484246117)|CUMULATIVE_LIMIT_USAGE_END
+
+14:45:09.485 (485856150)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Account
+14:45:09.485 (491430297)|WF_RULE_EVAL_BEGIN|Workflow
+14:45:09.485 (491469195)|WF_CRITERIA_BEGIN|[Account: GetMoreTraffic - Topwater Plumbing & Gas 0019000001Xi3lv]|Account_Card_Mask3016F000000EF3j|01Q6F000000S1nx|ON_ALL_CHANGES|0
+14:45:09.485 (491541068)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:45:09.485 (491548080)|WF_CRITERIA_END|true
+14:45:09.485 (492072440)|WF_CRITERIA_BEGIN|[Account: GetMoreTraffic - Topwater Plumbing & Gas 0019000001Xi3lv]|Do_Not_Email3016F0000005fKK|01Q6F0000019fhU|ON_ALL_CHANGES|0
+14:45:09.485 (492145070)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+14:45:09.485 (492155604)|WF_CRITERIA_END|true
+14:45:09.485 (492175489)|WF_SPOOL_ACTION_BEGIN|Workflow
+14:45:09.485 (492206807)|WF_ACTION| Flow Trigger: 2;
+14:45:09.485 (492214339)|WF_RULE_EVAL_END
+14:45:09.485 (492255628)|WF_FLOW_ACTION_BEGIN|09L6F000000D936
+14:45:09.494 (494119390)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000093P3|3016F000000EF3j
+14:45:09.494 (495328695)|FLOW_CREATE_INTERVIEW_END|40489e0575ec5c5162a496538f716830e09e97-3439|Account Card Mask
+14:45:09.495 (495745201)|FLOW_START_INTERVIEWS_BEGIN|1
+14:45:09.495 (495778939)|FLOW_START_INTERVIEW_BEGIN|40489e0575ec5c5162a496538f716830e09e97-3439|Account Card Mask
+14:45:09.495 (499883839)|FLOW_START_INTERVIEW_END|40489e0575ec5c5162a496538f716830e09e97-3439|Account Card Mask
+14:45:09.495 (499916660)|FLOW_START_INTERVIEWS_END|1
+14:45:09.485 (500581859)|WF_FLOW_ACTION_END|09L6F000000D936
+14:45:09.485 (500610549)|WF_FLOW_ACTION_BEGIN|09L6F000000PW6m
+14:45:09.502 (502136826)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000091Cq|3016F0000005fKK
+14:45:09.502 (502786355)|FLOW_CREATE_INTERVIEW_END|40589e0575ec5c5162a496538f716830e09e97-343a|Do Not Email
+14:45:09.503 (503102729)|FLOW_START_INTERVIEWS_BEGIN|1
+14:45:09.503 (503128833)|FLOW_START_INTERVIEW_BEGIN|40589e0575ec5c5162a496538f716830e09e97-343a|Do Not Email
+14:45:09.503 (505576832)|FLOW_START_INTERVIEW_END|40589e0575ec5c5162a496538f716830e09e97-343a|Do Not Email
+14:45:09.503 (505596609)|FLOW_START_INTERVIEWS_END|1
+14:45:09.485 (506161634)|WF_FLOW_ACTION_END|09L6F000000PW6m
+14:45:09.485 (506260361)|WF_ACTIONS_END| Flow Trigger: 2;

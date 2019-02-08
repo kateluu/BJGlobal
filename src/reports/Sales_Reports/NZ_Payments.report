@@ -49,9 +49,6 @@
         <field>FK_$Invoice__c.Status__c</field>
     </columns>
     <columns>
-        <field>Account.GST__c</field>
-    </columns>
-    <columns>
         <field>FK_$Invoice__c.Invoice_Total__c</field>
     </columns>
     <columns>
@@ -79,6 +76,11 @@
         <field>Payment__c.Payment_Date__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.GST__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
     <name>NZ Payments</name>
     <params>
         <name>co</name>
@@ -91,6 +93,8 @@
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Payment__c.Payment_Date__c</dateColumn>
-        <interval>INTERVAL_LASTWEEK</interval>
+        <endDate>2018-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-10-01</startDate>
     </timeFrameFilter>
 </Report>

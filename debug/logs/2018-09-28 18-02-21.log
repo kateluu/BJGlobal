@@ -1,0 +1,98 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+18:02:19.12 (12334052)|ENTERING_MANAGED_PKG|Centify
+18:02:19.12 (19476963)|ENTERING_MANAGED_PKG|Centify
+18:02:19.12 (19560214)|ENTERING_MANAGED_PKG|Centify
+18:02:19.12 (20913560)|ENTERING_MANAGED_PKG|Centify
+18:02:19.12 (21681530)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT Id, Name, Data__c, Number_Of_Attempts__c, Type__c FROM Notification__c 
+18:02:19.12 (33560761)|SOQL_EXECUTE_END|[24]|Rows:0
+18:02:19.41 (41886867)|CUMULATIVE_LIMIT_USAGE
+18:02:19.41 (41886867)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:02:19.41 (41886867)|LIMIT_USAGE_FOR_NS|Centify|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:02:19.41 (41886867)|CUMULATIVE_LIMIT_USAGE_END
+
+CUTE_BEGIN|[84]|Aggregations:0|SELECT COUNT() FROM Notification__c WHERE ((Number_Of_Attempts__c = NULL OR Number_Of_Attempts__c < :tmpVar1) AND (CreatedDate = TODAY OR LastModifiedDate = TODAY)) LIMIT 25000
+18:02:19.42 (111332812)|SOQL_EXECUTE_END|[84]|Rows:0
+18:02:19.42 (111434016)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (111494275)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (111559161)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (111603509)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (111665170)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (115027912)|SOQL_EXECUTE_BEGIN|[363]|Aggregations:0|SELECT Id, Label, MasterLabel, DeveloperName, Endpoint__c, TimeOut__c FROM Endpoint_Setting__mdt LIMIT 50
+18:02:19.42 (120421105)|SOQL_EXECUTE_END|[363]|Rows:23
+18:02:19.42 (121649402)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (121707578)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (123258537)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (123294235)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (126482160)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (129169861)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (129231948)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (129276059)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (130057922)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (130130403)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (130181411)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (134009238)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (134078096)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (134139618)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (134190272)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (134267163)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (136619921)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (136721380)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (137368458)|ENTERING_MANAGED_PKG|Centify
+18:02:19.42 (319732127)|ENTERING_MANAGED_PKG|Centify
+18:02:19.372 (372924549)|CUMULATIVE_LIMIT_USAGE
+18:02:19.372 (372924549)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:02:19.372 (372924549)|LIMIT_USAGE_FOR_NS|Centify|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:02:19.372 (372924549)|CUMULATIVE_LIMIT_USAGE_END
+

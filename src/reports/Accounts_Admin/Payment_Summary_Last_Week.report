@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
-    <buckets>
-        <bucketType>picklist</bucketType>
-        <developerName>BucketField_66733737</developerName>
-        <masterLabel>Payment Type</masterLabel>
-        <nullTreatment>n</nullTreatment>
-        <sourceColumnName>Payment__c.Payment_Type__c</sourceColumnName>
-        <useOther>false</useOther>
-    </buckets>
     <columns>
-        <field>ACCOUNT.NAME</field>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Account__c</field>
     </columns>
     <columns>
-        <field>CUST_NAME</field>
+        <field>Sign_Up__c$Name</field>
     </columns>
     <columns>
-        <field>Payment__c.Invoice_Number__c</field>
+        <field>Sign_Up__c.Account_Products__r$Name</field>
     </columns>
     <columns>
-        <field>Payment__c.Payment_Type__c</field>
+        <field>Sign_Up__c$Salesperson__c</field>
     </columns>
     <columns>
-        <field>Payment__c.Payment_Date__c</field>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r$Invoice_Number__c</field>
     </columns>
     <columns>
-        <field>Payment__c.Payment_Reference__c</field>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Name</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Type__c</field>
+    </columns>
+    <columns>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Date__c</field>
     </columns>
     <columns>
         <aggregateTypes>Sum</aggregateTypes>
-        <field>Payment__c.Payment_Amount__c</field>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Amount__c</field>
     </columns>
     <currency>AUD</currency>
-    <description>Inv set up invoices</description>
     <filter>
         <criteriaItems>
-            <column>Payment__c.Payment_Type__c</column>
+            <column>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Type__c</column>
             <operator>notEqual</operator>
             <value>Credit</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Payment__c.Invoice_Number__c</column>
+            <column>Sign_Up__c.Account_Products__r.Invoices__r$Invoice_Number__c</column>
             <operator>contains</operator>
             <value>INV</value>
         </criteriaItems>
@@ -47,12 +44,12 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Payment__c.Payment_Option__c</field>
+        <field>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Option__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Account.BJB_Company__c</field>
+        <field>Sign_Up__c$BJB_Company__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>Payment Summary - Last Week</name>
@@ -60,11 +57,11 @@
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>AccountCustomEntity$Payment__c</reportType>
+    <reportType>Signup_with_Account_Product_with_Invoice_with_PYMT__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
     <timeFrameFilter>
-        <dateColumn>Payment__c.Payment_Date__c</dateColumn>
+        <dateColumn>Sign_Up__c.Account_Products__r.Invoices__r.Payments__r$Payment_Date__c</dateColumn>
         <interval>INTERVAL_LASTWEEK</interval>
     </timeFrameFilter>
 </Report>

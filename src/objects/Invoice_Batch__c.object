@@ -200,8 +200,8 @@
         <fullName>All</fullName>
         <columns>Batch_Type__c</columns>
         <columns>NAME</columns>
-        <columns>CREATED_DATE</columns>
         <columns>Batch_Date__c</columns>
+        <columns>CREATED_DATE</columns>
         <columns>Batch_Records__c</columns>
         <columns>status__c</columns>
         <filterScope>Everything</filterScope>
@@ -223,6 +223,88 @@
         <sharedTo>
             <role>BJBGlobalAccountsAdmin</role>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Payment_Batch</fullName>
+        <columns>NAME</columns>
+        <columns>Batch_Date__c</columns>
+        <columns>Batch_Records__c</columns>
+        <columns>status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Batch_Type__c</field>
+            <operation>equals</operation>
+            <value>Payments</value>
+        </filters>
+        <label>Payment Batch</label>
+        <sharedTo>
+            <role>SLX_Aus_Receptionist</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_Batch</fullName>
+        <columns>Batch_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Batch_Date__c</columns>
+        <columns>Batch_Records__c</columns>
+        <columns>status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Batch_Type__c</field>
+            <operation>equals</operation>
+            <value>Invoices</value>
+        </filters>
+        <filters>
+            <field>Batch_Date__c</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Batch</label>
+    </listViews>
+    <listViews>
+        <fullName>Today_s_Payment_Batch</fullName>
+        <columns>Batch_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Batch_Date__c</columns>
+        <columns>Batch_Records__c</columns>
+        <columns>status__c</columns>
+        <columns>Batch_Processed__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <filters>
+            <field>Batch_Type__c</field>
+            <operation>equals</operation>
+            <value>Payments</value>
+        </filters>
+        <label>Today&apos;s Payment Batch</label>
+    </listViews>
+    <listViews>
+        <fullName>Yesterday_Payment_Batch</fullName>
+        <columns>Batch_Type__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Batch_Date__c</columns>
+        <columns>Batch_Records__c</columns>
+        <columns>status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <filters>
+            <field>Batch_Type__c</field>
+            <operation>equals</operation>
+            <value>Payments</value>
+        </filters>
+        <label>Yesterday&apos;s Payment Batch</label>
     </listViews>
     <listViews>
         <fullName>Yesterday_s_Batch</fullName>

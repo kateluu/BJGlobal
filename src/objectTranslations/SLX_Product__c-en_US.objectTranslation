@@ -13,6 +13,27 @@
         <name>Base_Commission__c</name>
     </fields>
     <fields>
+        <help><!-- If the billing circle does not start straight away after product created, here is the time to calculate invoice due date --></help>
+        <label><!-- Bill Pending Time --></label>
+        <name>Bill_Pending_Time__c</name>
+        <picklistValues>
+            <masterLabel>1 Week</masterLabel>
+            <translation><!-- 1 Week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Weeks</masterLabel>
+            <translation><!-- 2 Weeks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 Weeks</masterLabel>
+            <translation><!-- 3 Weeks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 Weeks</masterLabel>
+            <translation><!-- 4 Weeks --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Billed In Advance --></label>
         <name>Billed_In_Advance__c</name>
     </fields>
@@ -48,6 +69,10 @@
             <translation><!-- Bing --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>DIFM</masterLabel>
+            <translation><!-- DIFM --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Domains</masterLabel>
             <translation><!-- Domains --></translation>
         </picklistValues>
@@ -78,6 +103,10 @@
         <picklistValues>
             <masterLabel>SEO</masterLabel>
             <translation><!-- SEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Engage</masterLabel>
+            <translation><!-- Social Engage --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Training</masterLabel>

@@ -23,15 +23,20 @@
 private class TestChargebacks {
 
     static testMethod void myUnitTest() {
-        Account testAc = new Account();
-      	testAc.Name = 'testacc';
-      	insert testAc;
-    	Test.startTest();
+      Account testAc = new Account();
+      testAc.Name = 'testacc';
+      insert testAc;
+    	
+      Account_Product__c testPro = new Account_Product__c(Name ='Social'+1, Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = testAc.id );
+      insert testPro;     
+                
+
+      Test.startTest();
     	ApexPages.standardController controller = new ApexPages.standardController(testAc);
-      	Chargebacks testClass = new Chargebacks(controller);
-      	testClass.invoiceNumber = '1';
+      Chargebacks testClass = new Chargebacks(controller);
+      testClass.invoiceNumber = '1';
       	
-      	Invoice__c testInv = new Invoice__c();
+      Invoice__c testInv = new Invoice__c();
     	testInv.Invoice_Number__c = '1';
     	testInv.Amount_Due__c = 0;
     	testInv.Amount_Paid__c = 50;
@@ -39,6 +44,7 @@ private class TestChargebacks {
     	testInv.Invoice_Total__c = 50;
     	testInv.Status__c = 'PAID';
     	testInv.Account__c=testAc.Id;
+      testInv.Account_Product__c = testPro.Id;
     	testInv.Checked__c = true;
     	insert testInv;
     	

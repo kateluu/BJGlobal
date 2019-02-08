@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification for any internal SEO website has a new quote</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SponsoredLinX</letterhead>
+    <name>SEO Website New Quote</name>
+    <style>formalLetter</style>
+    <subject>SEO Internal Website Quote - {!seoWebsite__c.Name}</subject>
+    <textOnly>SEO Website Quote
+Hi {!seoWebsite__c.CreatedBy},
+
+Your SEO Website quote has been completed for {!seoWebsite__c.website_url__c}
+
+
+Reach: {!seoWebsite__c.Reach__c}
+
+Quote: {!seoWebsite__c.Quote__c}
+
+
+Click here to view: {!seoWebsite__c.Link}</textOnly>
+    <type>html</type>
+</EmailTemplate>

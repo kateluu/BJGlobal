@@ -160,8 +160,17 @@ public with sharing class SendStatement {
 	
 	public static testMethod void testSendStatment(){
 		Test.startTest();
-		Account acc = new Account(name='test',company__c='test',username__c='test',password__c='test');
-		insert acc;
+	    Account acc = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
+	    insert acc;
+
+	    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+	    for(Integer i=0;i<1;i++) {                              
+	        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = acc.id , 
+	                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Traditional Products').getRecordTypeId());
+	        testProducts.add(item);
+	    }
+	    insert testProducts; 
+
 		Contact con = new Contact(FirstName='test',LastName='test',Title='Billing',AccountId=acc.id, Email='test@gmail.com');
 		con.MailingStreet='sdfsadfsa\r\ndfsafa\r\nsfsdfsdfs\r\ndfsdfs\r\ndfsdf';
 		con.MailingCity='Brisbane';
@@ -174,13 +183,13 @@ public with sharing class SendStatement {
 		com.name = 'SponsoredLinx';
 		insert com;
 		
-		Invoice__c invoice1 = new Invoice__c( Account__c = acc.Id, Issue_Date__c = Date.today(), Invoice_Total__c = 10);
+		Invoice__c invoice1 = new Invoice__c( Account__c = acc.Id, Account_Product__c = testProducts.get(0).Id, Issue_Date__c = Date.today(), Invoice_Total__c = 10);
 		insert invoice1;
 		
-		Invoice__c invoice2 = new Invoice__c( Account__c = acc.Id, Issue_Date__c = Date.today(),Invoice_Total__c = 10);
+		Invoice__c invoice2 = new Invoice__c( Account__c = acc.Id,  Account_Product__c = testProducts.get(0).Id, Issue_Date__c = Date.today(),Invoice_Total__c = 10);
 		insert invoice2;
 		
-		Invoice__c invoice3 = new Invoice__c( Account__c = acc.Id, Issue_Date__c = Date.today().addDays(-2),Invoice_Total__c = 10, Status__c = 'AUTHORISED');
+		Invoice__c invoice3 = new Invoice__c( Account__c = acc.Id,  Account_Product__c = testProducts.get(0).Id, Issue_Date__c = Date.today().addDays(-2),Invoice_Total__c = 10, Status__c = 'AUTHORISED');
 		insert invoice3;
 		
 		

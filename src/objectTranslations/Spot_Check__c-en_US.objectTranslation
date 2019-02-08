@@ -17,7 +17,12 @@
         <name>Active_Days__c</name>
     </fields>
     <fields>
-        <label><!-- Ads have what they do,selling point,CTA* --></label>
+        <help><!-- Ad Schedule Added ( Correct Days ) --></help>
+        <label><!-- Ad Schedule Added ( Correct Days ) --></label>
+        <name>Ad_Schedule_Added_Correct_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ads have what they do selling point CTA --></label>
         <name>Ads_have_what_they_do_selling_point_CTA__c</name>
     </fields>
     <fields>
@@ -47,8 +52,48 @@
         <relationshipLabel><!-- Spot/Build Checks --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Check SQR* --></label>
+        <help><!-- Call Extention&apos;s Added --></help>
+        <label><!-- Call Extention&apos;s Added --></label>
+        <name>Call_Extention_s_Added__c</name>
+    </fields>
+    <fields>
+        <help><!-- Call Forwarding Turned On --></help>
+        <label><!-- Call Forwarding Turned On --></label>
+        <name>Call_Forwarding_Turned_On__c</name>
+    </fields>
+    <fields>
+        <help><!-- Callout&apos;s Added x 4 --></help>
+        <label><!-- Callout&apos;s Added x 4 --></label>
+        <name>Callout_s_Added_x_4__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check Correct Time Zone Of Account --></help>
+        <label><!-- Check Correct Time Zone Of Account --></label>
+        <name>Check_Correct_Time_Zone_Of_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Check SQR --></label>
         <name>Check_SQR__c</name>
+    </fields>
+    <fields>
+        <help><!-- Conversion Tracking Code Sent To Client --></help>
+        <label><!-- Conversion Tracking Code Sent To Client --></label>
+        <name>Conversion_Tracking_Code_Sent_To_Client__c</name>
+    </fields>
+    <fields>
+        <help><!-- Correct Budget Applied --></help>
+        <label><!-- Correct Budget Applied --></label>
+        <name>Correct_Budget_Applied__c</name>
+    </fields>
+    <fields>
+        <help><!-- Correct Campaign&apos;s Created --></help>
+        <label><!-- Correct Campaign&apos;s Created --></label>
+        <name>Correct_Campaign_s_Created__c</name>
+    </fields>
+    <fields>
+        <help><!-- Correct Location Targeting --></help>
+        <label><!-- Correct Location Targeting --></label>
+        <name>Correct_Location_Targeting__c</name>
     </fields>
     <fields>
         <label><!-- End of Month --></label>
@@ -56,7 +101,12 @@
         <relationshipLabel><!-- Spot/Build Checks --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Has GTM code been sent to client* --></label>
+        <help><!-- Generic Negative Keywords Added --></help>
+        <label><!-- Generic Negative Keywords Added --></label>
+        <name>Generic_Negative_Keywords_Added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has GTM code been sent to client --></label>
         <name>Has_GTM_code_been_sent_to_client__c</name>
     </fields>
     <fields>
@@ -64,29 +114,51 @@
         <name>Have_negative_keywords_been_added__c</name>
     </fields>
     <fields>
-        <label><!-- Conv tracking setup(Attribution Model) --></label>
+        <label><!-- Is conversion tracking setup --></label>
         <name>Is_conversion_tracking_setup__c</name>
     </fields>
     <fields>
-        <label><!-- Is location targeting correct* --></label>
+        <label><!-- Is location targeting correct --></label>
         <name>Is_location_targeting_correct__c</name>
     </fields>
     <fields>
-        <label><!-- Is targeting correct* --></label>
+        <label><!-- Is targeting correct --></label>
         <name>Is_targeting_correct__c</name>
     </fields>
     <fields>
         <help><!-- Display / Search --></help>
-        <label><!-- Is the correct type of campaign set up* --></label>
+        <label><!-- Is the correct type of campaign set up --></label>
         <name>Is_the_correct_type_of_campaign_set_up__c</name>
     </fields>
     <fields>
-        <label><!-- Is there 2 ads/adgroup for split testing --></label>
+        <label><!-- Is there 2 ads adgroup for split testing --></label>
         <name>Is_there_2_ads_adgroup_for_split_testing__c</name>
     </fields>
     <fields>
-        <label><!-- Keywords separated into correct adgroup* --></label>
+        <label><!-- Keywords separated into correct adgroup --></label>
         <name>Keywords_separated_into_correct_adgroup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Linked To Optmyzr --></label>
+        <name>Linked_To_Optmyzr__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Locations Extensions Added --></help>
+        <label><!-- Locations Extensions Added --></label>
+        <name>Locations_Extensions_Added__c</name>
+    </fields>
+    <fields>
+        <help><!-- Negative Locations Added --></help>
+        <label><!-- Negative Locations Added --></label>
+        <name>Negative_Locations_Added__c</name>
     </fields>
     <fields>
         <label><!-- No of AdGroups --></label>
@@ -157,9 +229,19 @@
         <name>Note_9__c</name>
     </fields>
     <fields>
+        <help><!-- On Going Task&apos;s Setup --></help>
+        <label><!-- On Going Task&apos;s Setup --></label>
+        <name>On_Going_Task_s_Setup__c</name>
+    </fields>
+    <fields>
         <label><!-- Sign Up --></label>
         <name>Sign_Up__c</name>
         <relationshipLabel><!-- Spot/Build Checks --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Sitelink&apos;s Added x 4 --></help>
+        <label><!-- Sitelink&apos;s Added x 4 --></label>
+        <name>Sitelink_s_Added_x_4__c</name>
     </fields>
     <fields>
         <label><!-- Spot Check Completed By --></label>
@@ -215,7 +297,11 @@
         </picklistValues>
     </fields>
     <fields>
-        <label><!-- TL Notes --></label>
+        <label><!-- Structured Snippets x 5 Added --></label>
+        <name>Structured_Snippets_x_5_Added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Build Check Notes --></label>
         <name>TL_Notes__c</name>
     </fields>
     <fields>
@@ -224,13 +310,68 @@
         <relationshipLabel><!-- Spot/Build Checks (Team Leader) --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Will keywords bring in right traffic* --></label>
+        <label><!-- Will keywords bring in the right traffic --></label>
         <name>Will_keywords_bring_in_the_right_traffic__c</name>
+    </fields>
+    <fields>
+        <help><!-- 1 Keyword x 3 Variants Per Ad Group --></help>
+        <label><!-- 1 Keyword x 3 Variants Per Ad Group --></label>
+        <name>X1_Keyword_x_3_Variants_Per_Ad_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- 3 Expanded Text Ads Per Ad Group ( Maximise Character Limit ) --></help>
+        <label><!-- 3 Expanded Text Ads Per Ad Group ( Maxim --></label>
+        <name>X3_Expanded_Text_Ads_Per_Ad_Group_Maxim__c</name>
     </fields>
     <fields>
         <label><!-- Note --></label>
         <name>note_11__c</name>
     </fields>
+    <layouts>
+        <layout>Auto Build Check CM Layout</layout>
+        <sections>
+            <label><!-- Build Notes --></label>
+            <section>Build Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Buildcheck --></label>
+            <section>Buildcheck</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Auto Build Check Layout</layout>
+        <sections>
+            <label><!-- Build Notes --></label>
+            <section>Build Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Buildcheck --></label>
+            <section>Buildcheck</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Auto Build Check TL Layout</layout>
+        <sections>
+            <label><!-- Build Notes --></label>
+            <section>Build Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Buildcheck --></label>
+            <section>Buildcheck</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <layouts>
         <layout>Build Check Layout</layout>
         <sections>
@@ -270,6 +411,14 @@
         </sections>
     </layouts>
     <recordTypes>
+        <label><!-- Auto Build Check --></label>
+        <name>Auto_Build_Check</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Auto Build Check Edit --></label>
+        <name>Auto_Build_Check_Edit</name>
+    </recordTypes>
+    <recordTypes>
         <label><!-- Build Check --></label>
         <name>Build_Check</name>
     </recordTypes>
@@ -278,4 +427,21 @@
         <name>Spot_Check</name>
     </recordTypes>
     <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Back_To_CM --></label>
+        <name>Back_To_CM</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Complete --></label>
+        <name>Complete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_TL --></label>
+        <name>Send_To_TL</name>
+    </webLinks>
+    <workflowTasks>
+        <description><!-- This is the activity history for sending email TL --></description>
+        <name>Send_Email_To_TL</name>
+        <subject><!-- Send Email To TL --></subject>
+    </workflowTasks>
 </CustomObjectTranslation>

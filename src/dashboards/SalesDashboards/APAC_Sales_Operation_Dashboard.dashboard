@@ -16,6 +16,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <footer>*This month</footer>
             <legendPosition>Bottom</legendPosition>
             <report>Sales_Reports/GMT_AV_AW_FB_Package</report>
             <showPercentage>false</showPercentage>
@@ -33,29 +34,13 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <footer>*This month</footer>
             <legendPosition>Bottom</legendPosition>
             <report>Sales_Reports/GMT_Av_Setup_Monthly</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
             <title>GMT Average Setup</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <componentType>Pie</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>true</enableHover>
-            <expandOthers>false</expandOthers>
-            <legendPosition>Bottom</legendPosition>
-            <report>Sales_Reports/Workable_leads_last_month</report>
-            <showPercentage>true</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>Workable Leads this Month</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -68,11 +53,29 @@
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
             <legendPosition>Bottom</legendPosition>
-            <report>Sales_Reports/GMT_Monthly_BTS_cases</report>
+            <report>Sales_Reports/GMT_Leads_monthly</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>GMT BTS Cases</title>
+            <title>Workable Leads this Month - GMT</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>**needs to be broken down by BJB Company***</footer>
+            <legendPosition>Bottom</legendPosition>
+            <report>Sales_Reports/SLX_Adwords_Facebook_BTS_This_Month</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>SLX BTS - This Month</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -87,6 +90,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <footer>*This month</footer>
             <legendPosition>Bottom</legendPosition>
             <report>Sales_Reports/SLX_Av_AW_FB_Package</report>
             <showPercentage>false</showPercentage>
@@ -104,6 +108,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <footer>*This month</footer>
             <legendPosition>Bottom</legendPosition>
             <report>Sales_Reports/SLX_Av_setup_Monthly</report>
             <showPercentage>false</showPercentage>
@@ -122,7 +127,7 @@
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
             <legendPosition>Bottom</legendPosition>
-            <report>Sales_Reports/Workable_leads_this_Month</report>
+            <report>Sales_Reports/Workable_leads_Last_Month1</report>
             <showPercentage>true</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -139,11 +144,11 @@
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
             <legendPosition>Bottom</legendPosition>
-            <report>Sales_Reports/SLX_Monthly_BTS_cases</report>
+            <report>Sales_Reports/GMT_Adwords_Facebook_BTS_This_Month</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>SLX BTS Cases</title>
+            <title>GMT BTS - This Month</title>
             <useReportChart>false</useReportChart>
         </components>
     </middleSection>
@@ -158,6 +163,7 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <footer>*This month</footer>
             <legendPosition>Bottom</legendPosition>
             <report>Sales_Reports/Av_SEO_Package_Month</report>
             <showPercentage>false</showPercentage>
@@ -165,24 +171,6 @@
             <sortBy>RowLabelAscending</sortBy>
             <title>Average SEO Package</title>
             <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
-            <componentType>Gauge</componentType>
-            <displayUnits>Integer</displayUnits>
-            <footer>**Not 100% accurate - will be replaced***</footer>
-            <gaugeMax>3.0</gaugeMax>
-            <gaugeMin>0.0</gaugeMin>
-            <indicatorBreakpoint1>1.0</indicatorBreakpoint1>
-            <indicatorBreakpoint2>2.0</indicatorBreakpoint2>
-            <indicatorHighColor>#54C254</indicatorHighColor>
-            <indicatorLowColor>#C25454</indicatorLowColor>
-            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
-            <report>Sales_Reports/This_Months_Group_Recurring_revenue</report>
-            <showPercentage>false</showPercentage>
-            <showTotal>true</showTotal>
-            <showValues>false</showValues>
-            <title>This Months Recurring Revenue</title>
         </components>
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
@@ -211,17 +199,16 @@
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
-            <footer>**needs to be broken down by BJB Company***</footer>
             <legendPosition>Bottom</legendPosition>
-            <report>Sales_Reports/LAst_Months_Group_BTS_cases</report>
+            <report>Sales_Reports/SEO_BTS_This_Month</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Last Months BTS</title>
+            <title>SEO BTS - This Month</title>
             <useReportChart>false</useReportChart>
         </components>
     </rightSection>
-    <runningUser>kerry.anderson@getmoretraffic.com.au</runningUser>
+    <runningUser>nicholas.lunn@sponsoredlinx.com</runningUser>
     <textColor>#000099</textColor>
     <title>APAC Sales Operation Dashboard</title>
     <titleColor>#000099</titleColor>

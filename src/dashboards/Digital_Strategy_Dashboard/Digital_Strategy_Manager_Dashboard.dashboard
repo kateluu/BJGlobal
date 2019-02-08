@@ -15,7 +15,7 @@
                 <column>RowCount</column>
             </chartSummary>
             <componentType>Column</componentType>
-            <displayUnits>Auto</displayUnits>
+            <displayUnits>Integer</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
@@ -23,29 +23,34 @@
             <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made - Number Of Calls</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Daily_Calls_Made</report>
+            <report>Digital_Strategy/Daily_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Yesterday</title>
+            <title>Today</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
             <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>FORMULA1</column>
+            </chartSummary>
             <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made - Duration in minutes</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Daily_Calls_Made</report>
+            <report>Digital_Strategy/Daily_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Yesterday</title>
+            <title>Today</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -63,7 +68,7 @@
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Yesterday</title>
+            <title>Today</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -86,7 +91,7 @@
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Yesterday</title>
+            <title>Today</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -109,7 +114,7 @@
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
-            <title>Yesterday</title>
+            <title>Today</title>
             <useReportChart>false</useReportChart>
         </components>
     </leftSection>
@@ -123,7 +128,7 @@
                 <column>RowCount</column>
             </chartSummary>
             <componentType>Column</componentType>
-            <displayUnits>Auto</displayUnits>
+            <displayUnits>Integer</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
@@ -131,7 +136,7 @@
             <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made - Number Of Calls</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Weekly_Call_Made</report>
+            <report>Digital_Strategy/Weekly_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -154,7 +159,7 @@
             <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made  - Duration in minutes</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Weekly_Call_Made</report>
+            <report>Digital_Strategy/Weekly_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -175,7 +180,7 @@
             <report>Digital_Strategy/IT_Weekly_Sales_Revenue</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
-            <sortBy>RowValueDescending</sortBy>
+            <sortBy>RowLabelAscending</sortBy>
             <title>This Week</title>
             <useReportChart>false</useReportChart>
         </components>
@@ -239,7 +244,7 @@
             <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made - Number Of Calls</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Monthly_Call_Made</report>
+            <report>Digital_Strategy/Monthly_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -247,17 +252,22 @@
             <useReportChart>false</useReportChart>
         </components>
         <components>
-            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
             <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>FORMULA1</column>
+            </chartSummary>
             <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>true</enableHover>
             <expandOthers>false</expandOthers>
+            <groupingColumn>ASSIGNED</groupingColumn>
             <header>NVM Calls Made  - Duration in minutes</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Digital_Strategy/IT_Monthly_Call_Made</report>
+            <report>Digital_Strategy/Monthly_Call_Made_By_Opp</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -278,7 +288,7 @@
             <report>Digital_Strategy/IT_Month_Sales_Revenue</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
-            <sortBy>RowValueDescending</sortBy>
+            <sortBy>RowLabelAscending</sortBy>
             <title>This Month</title>
             <useReportChart>false</useReportChart>
         </components>

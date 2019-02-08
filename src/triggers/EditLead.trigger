@@ -2,6 +2,19 @@
     Send an email to the salesperson when the lead is assigned to him/her
 */
 trigger EditLead on Lead__c (after update) {
+
+    //synch back to standard object    
+
+    for (Lead__c newLead : Trigger.new) {
+        for (Lead__c oldLead : Trigger.old) {
+            if( oldLead.Lead_Status__c != newLead.Lead_Status__c ){
+                CustomLeadSynchToStdLead synchProcessor = new  CustomLeadSynchToStdLead(Trigger.newMap);
+                synchProcessor.synchToStdLeads();
+                break;
+            }
+        }
+    }
+
 	for (Lead__c newLead : Trigger.new) {
         Lead__c oldLead = Trigger.oldMap.get(newLead.Id);
         if (oldLead.Assigned_To_Id__c != newLead.Assigned_To_Id__c && newLead.Assigned_To_Id__c != null) {

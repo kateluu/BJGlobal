@@ -83,7 +83,7 @@
             <name>Opp_Update</name>
             <type>OutboundMessage</type>
         </actions>
-        <active>true</active>
+        <active>false</active>
         <criteriaItems>
             <field>SLXOpportunity__c.Adwords_ID__c</field>
             <operation>notEqual</operation>

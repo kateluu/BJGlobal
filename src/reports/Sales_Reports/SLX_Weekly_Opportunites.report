@@ -11,7 +11,7 @@
         <chartType>Pie</chartType>
         <enableHoverLabels>true</enableHoverLabels>
         <expandOthers>false</expandOthers>
-        <groupingColumn>SLXOpportunity__c$Send_to_Salesperson__c</groupingColumn>
+        <groupingColumn>SLXOpportunity__c$Account__c</groupingColumn>
         <legendPosition>Right</legendPosition>
         <location>CHART_TOP</location>
         <showAxisLabels>true</showAxisLabels>
@@ -25,9 +25,6 @@
         <titleColor>#000000</titleColor>
         <titleSize>18</titleSize>
     </chart>
-    <columns>
-        <field>SLXOpportunity__c$Account__c</field>
-    </columns>
     <columns>
         <field>SLXOpportunity__c$Contact_Name__c</field>
     </columns>
@@ -46,7 +43,7 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>SLXOpportunity__c$Send_to_Salesperson__c</field>
+        <field>SLXOpportunity__c$Account__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>SLX Weekly Opportunites Raised</name>

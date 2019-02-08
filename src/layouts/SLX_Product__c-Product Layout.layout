@@ -79,6 +79,10 @@
                 <behavior>Edit</behavior>
                 <field>Is_Ghost__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Bill_Pending_Time__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -121,6 +125,7 @@
         <fields>NAME</fields>
         <fields>Account__c</fields>
         <fields>CREATED_DATE</fields>
+        <fields>BJB_Company__c</fields>
         <relatedList>Account_Product__c.SLX_Product__c</relatedList>
         <sortField>CREATED_DATE</sortField>
         <sortOrder>Desc</sortOrder>

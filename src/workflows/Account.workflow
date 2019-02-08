@@ -5,10 +5,6 @@
         <description>Account Card Number Change</description>
         <protected>false</protected>
         <recipients>
-            <recipient>BJBGlobalAccountsAdmin</recipient>
-            <type>role</type>
-        </recipients>
-        <recipients>
             <recipient>ben@bjbglobal.com.au</recipient>
             <type>user</type>
         </recipients>

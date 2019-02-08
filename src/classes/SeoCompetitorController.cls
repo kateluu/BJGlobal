@@ -90,8 +90,8 @@ public with sharing class SeoCompetitorController {
             geolocation = seoWebsite.geolocation__c;
         }
 
-        String consolePath = '/?c=seo&action=keywordCompetitors' 
-        + '&searchFilter='+EncodingUtil.urlEncode(seoWebsite.Searching_From__c, 'UTF-8')
+        String consolePath = '/seo/keywordCompetitors' 
+        + '?searchFilter='+EncodingUtil.urlEncode(seoWebsite.Searching_From__c, 'UTF-8')
         + '&geolocation='+EncodingUtil.urlEncode(geolocation, 'UTF-8')
         + '&websiteid=' + EncodingUtil.urlEncode(seoWebsite.Id, 'UTF-8')
         + '&domain=' + EncodingUtil.urlEncode(seoWebsite.website_url__c, 'UTF-8');

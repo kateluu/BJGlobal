@@ -27,13 +27,6 @@ private class TestSeoWebsite_URL {
         website.website_url__c     = 'test.com.au';
         website.Name               = 'test';
         website.Send_SEO_Report__c = true;
-        website.Initial_Crawl__c   = true;
         insert website;
-        
-        
-        
-        
-        
-        
     }
 }

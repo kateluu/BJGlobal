@@ -30,7 +30,7 @@
     <emailTemplate>Cases/Unresolve_Case_Request</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
     <entryCriteria>
-        <booleanFilter>1 OR 2</booleanFilter>
+        <booleanFilter>(1 OR 2) and 3 and 4</booleanFilter>
         <criteriaItems>
             <field>Cases__c.Downgrade_Difference__c</field>
             <operation>greaterOrEqual</operation>
@@ -40,6 +40,16 @@
             <field>Cases__c.Refund_Amount__c</field>
             <operation>greaterThan</operation>
             <value>NZD 250</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Owner_Role__c</field>
+            <operation>notContain</operation>
+            <value>Digital</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Owner_Role__c</field>
+            <operation>notContain</operation>
+            <value>Sales</value>
         </criteriaItems>
     </entryCriteria>
     <finalApprovalRecordLock>false</finalApprovalRecordLock>

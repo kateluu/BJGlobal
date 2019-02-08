@@ -16,4 +16,5 @@
     <tab>End_of_Month__c</tab>
     <tab>CM_Daily_Stats__c</tab>
     <tab>Voicemail__c</tab>
+    <tab>NVM_Information</tab>
 </CustomApplication>

@@ -96,7 +96,7 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>Alexandra Brown,Conor McCown-Butt,Cameron Asher,Carly Snyman</value>
+            <value>Alexandra Brown,Conor McCown-Butt,Cameron Asher,Darcia Bennet-Durham,David Powell,Gretel Phillips,Kylie Vaughan</value>
         </criteriaItems>
     </filter>
     <format>Summary</format>
@@ -115,6 +115,8 @@
     <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.unresolved_date__c</dateColumn>
-        <interval>INTERVAL_THISMONTH</interval>
+        <endDate>2018-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-11-01</startDate>
     </timeFrameFilter>
 </Report>

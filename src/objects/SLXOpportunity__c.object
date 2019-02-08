@@ -443,6 +443,30 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Spinify_Is_AuditedThisMonth__c</fullName>
+        <description>If the audit had been done on this month</description>
+        <externalId>false</externalId>
+        <formula>If(MONTH( Audit_Completed_Date__c) = MONTH(TODAY()), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If the audit had been done on this month</inlineHelpText>
+        <label>Spinify Is AuditedThisMonth</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spinify_Is_Target__c</fullName>
+        <description>If the audit booked date in this month</description>
+        <externalId>false</externalId>
+        <formula>IF(  MONTH(Audit_Booked_Date__c) = MONTH(Today()) , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>If the audit booked date in this month</inlineHelpText>
+        <label>Spinify Is Target</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
@@ -519,22 +543,6 @@
     </fields>
     <label>BJB Opportunity</label>
     <listViews>
-        <fullName>All</fullName>
-        <columns>CREATED_DATE</columns>
-        <columns>Send_to_Salesperson__c</columns>
-        <columns>NAME</columns>
-        <columns>Contact_Name__c</columns>
-        <columns>Contact_Phone_Number__c</columns>
-        <columns>Account__c</columns>
-        <columns>OWNER.FIRST_NAME</columns>
-        <columns>Status__c</columns>
-        <columns>Product_Type__c</columns>
-        <columns>Reason_For_Opportunity__c</columns>
-        <columns>LAST_UPDATE</columns>
-        <filterScope>Everything</filterScope>
-        <label>All</label>
-    </listViews>
-    <listViews>
         <fullName>Digital</fullName>
         <columns>NAME</columns>
         <columns>Status__c</columns>
@@ -597,6 +605,29 @@
             <value>Audit Booked</value>
         </filters>
         <label>My Audit Booked</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Digital_Strategy_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MY_Audit_Ran</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>NAME</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Contact_Phone_Number__c</columns>
+        <columns>Account__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Reason_For_Opportunity__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Audit Ran</value>
+        </filters>
+        <label>My Audit Ran</label>
         <sharedTo>
             <roleAndSubordinatesInternal>Digital_Strategy_Manager</roleAndSubordinatesInternal>
         </sharedTo>
@@ -715,6 +746,27 @@
             <roleAndSubordinatesInternal>Digital_Strategy_Manager</roleAndSubordinatesInternal>
             <roleAndSubordinatesInternal>Digital_Strategy_Sales</roleAndSubordinatesInternal>
         </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Today</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>Send_to_Salesperson__c</columns>
+        <columns>NAME</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Contact_Phone_Number__c</columns>
+        <columns>Account__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>Reason_For_Opportunity__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today</label>
     </listViews>
     <nameField>
         <label>Opportunity Name</label>

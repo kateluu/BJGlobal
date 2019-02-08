@@ -233,8 +233,57 @@
         <name>Form_Name__c</name>
     </fields>
     <fields>
-        <label><!-- From Source --></label>
+        <label><!-- FromSource --></label>
         <name>FromSource__c</name>
+    </fields>
+    <fields>
+        <help><!-- To capture the original channel where the signup come from --></help>
+        <label><!-- From Channel --></label>
+        <name>From_Channel__c</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Console Prospect</masterLabel>
+            <translation><!-- Console Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation><!-- Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook Lead Ads</masterLabel>
+            <translation><!-- Facebook Lead Ads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Adwords</masterLabel>
+            <translation><!-- Google Adwords --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbound Call</masterLabel>
+            <translation><!-- Inbound Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Chat</masterLabel>
+            <translation><!-- Online Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Organic - Google</masterLabel>
+            <translation><!-- Organic - Google --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webinar</masterLabel>
+            <translation><!-- Webinar --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- From Source --></label>
@@ -439,6 +488,10 @@
             <translation><!-- ConvertoPages --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>DIFM</masterLabel>
+            <translation><!-- DIFM --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Email Marketing</masterLabel>
             <translation><!-- Email Marketing --></translation>
         </picklistValues>
@@ -457,6 +510,10 @@
         <picklistValues>
             <masterLabel>SEO</masterLabel>
             <translation><!-- SEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Engage</masterLabel>
+            <translation><!-- Social Engage --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Social Marketing</masterLabel>
@@ -496,6 +553,11 @@
     <fields>
         <label><!-- Sold to Pause Date --></label>
         <name>Sold_to_Pause_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spinify Sales User --></label>
+        <name>Spinify_SalesUser__c</name>
+        <relationshipLabel><!-- Sign Ups (Spinify Sales User) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Spotcheck Completed By --></label>
@@ -595,6 +657,26 @@
     <fields>
         <label><!-- Username --></label>
         <name>Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Web Questionnaire --></label>
+        <name>Web_Questionnaire__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reminded</masterLabel>
+            <translation><!-- Reminded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Website --></label>

@@ -81,7 +81,7 @@ global class MonthlyKPI {
         groupedResults = [SELECT Owner.Name, count(Id)
                                             FROM Account_Product__c
                                             Where Product_Status__c = 'Active'
-                                            and (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like '%Social Media%')
+                                            and (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like '%Social%')
                                             and Recurring_period__c != '' and Recurring_Period__c != 'N/A'
 //                                            and Owner.IsActive = true
                                             GROUP BY Owner.Name];
@@ -135,7 +135,7 @@ global class MonthlyKPI {
         // Current Paused Clients per CM, exclude STP
         groupedResults = [SELECT Owner.Name, count(Id)
                           FROM Account_Product__c
-                          Where Product_Status__c = 'Paused' and (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like '%Social Media%')
+                          Where Product_Status__c = 'Paused' and (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like '%Social%')
                           and Recurring_period__c != '' and Recurring_Period__c != 'N/A'
   //                        and Owner.IsActive = true
                           and Sold_to_Pause__c = false
@@ -151,7 +151,7 @@ global class MonthlyKPI {
         
         // Cancellations per CM
         groupedResults = [SELECT Owner.Name, count(Id),
-        						SUM(Cancelled_Revenue__c)
+                                SUM(Cancelled_Revenue__c)
                           FROM Cases__c
                           Where Cancellation_Date__c = THIS_MONTH
      //                     and Owner.IsActive = true
@@ -181,7 +181,7 @@ global class MonthlyKPI {
       //Revenue Per CM
       groupedResults = [SELECT Payment_owner__r.Name, sum(Payment_Amount__c)
                 FROM Payment__c
-                Where (Invoice__r.Account_Product__r.Name like '%Adwords%' or Invoice__r.Account_Product__r.Name like '%Facebook%' or Invoice__r.Account_Product__r.Name like '%Admob%' or Invoice__r.Account_Product__r.Name like '%Yahoo%' or Invoice__r.Account_Product__r.Name like '%google+%' or Invoice__r.Account_Product__r.Name like '%SEO%' or Invoice__r.Account_Product__r.Name like '%Social Media%')
+                Where (Invoice__r.Account_Product__r.Name like '%Adwords%' or Invoice__r.Account_Product__r.Name like '%Facebook%' or Invoice__r.Account_Product__r.Name like '%Admob%' or Invoice__r.Account_Product__r.Name like '%Yahoo%' or Invoice__r.Account_Product__r.Name like '%google+%' or Invoice__r.Account_Product__r.Name like '%SEO%' or Invoice__r.Account_Product__r.Name like '%Social%')
                 AND Payment_Date__c = THIS_MONTH
                 AND Payment_Type__c != 'Credit'
     //            AND Invoice__r.Account_Product__r.Owner.IsActive = true
@@ -267,7 +267,7 @@ global class MonthlyKPI {
      // Unpaid Revenue Per CM
       groupedResults = [SELECT Account_Product__r.Owner.Name, sum(Amount_Due__c)
                 FROM Invoice__c
-                Where (Account_Product__r.name like '%Adwords%' or Account_Product__r.Name like '%Facebook%' or Account_Product__r.Name like '%Admob%' or Account_Product__r.Name like '%Yahoo%' or Account_Product__r.Name like '%google+%' or Account_Product__r.Name like '%SEO%' or Account_Product__r.Name like '%Social Media%')
+                Where (Account_Product__r.name like '%Adwords%' or Account_Product__r.Name like '%Facebook%' or Account_Product__r.Name like '%Admob%' or Account_Product__r.Name like '%Yahoo%' or Account_Product__r.Name like '%google+%' or Account_Product__r.Name like '%SEO%' or Account_Product__r.Name like '%Social%')
                 AND Amount_Due__c > 0
                 AND Issue_Date__c = THIS_MONTH
                 AND (Status__c = 'AUTHORISED' or Status__c = 'PARTIALLY PAID' or  Status__c = 'PARTIALLY CREDITED')
@@ -322,28 +322,28 @@ global class MonthlyKPI {
       
       //Paused Revenue Per CM
       // Account_product__c[] aps = [select
-        //             	product_price__c, 
-        //             	pauseat__c,
-        //             	activeat__c, 
-        //             	Recurring_Period__c,
-       //              	owner.name,
-       //              	Owner.UserRole.Name
+        //              product_price__c, 
+        //              pauseat__c,
+        //              activeat__c, 
+        //              Recurring_Period__c,
+       //               owner.name,
+       //               Owner.UserRole.Name
        //              from
-       //                	Account_Product__c
+       //                   Account_Product__c
        //              Where
        //                  Recurring_Period__c != null
        //              And
-      	//                 Recurring_Period__c != 'N/A'
+        //                 Recurring_Period__c != 'N/A'
        //              And
-      // 	                (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like 'Socail Media%')
+      //                    (Name like '%Adwords%' or Name like '%Facebook%' or Name like '%Admob%' or Name like '%Yahoo%' or Name like '%google+%' or Name like '%SEO%' or Name like 'Socail Media%')
        //              And
-      // 	                (pauseat__c = THIS_MONTH or (pauseat__c < THIS_MONTH and (activeat__c = THIS_MONTH or activeat__c > THIS_MONTH)))
-      // 	            And
-      // 	                activeat__c != null
+      //                    (pauseat__c = THIS_MONTH or (pauseat__c < THIS_MONTH and (activeat__c = THIS_MONTH or activeat__c > THIS_MONTH)))
+      //                And
+      //                    activeat__c != null
       //               And
       //                   (Owner.UserRole.Name like '%Client%' or Owner.UserRole.Name like '%SEO%')
       //               AND
-      // 	                Owner.IsActive = true];
+      //                    Owner.IsActive = true];
                         
       // if (aps.size() > 0) {
       //   for(Account_product__c ap : aps) {
@@ -353,8 +353,8 @@ global class MonthlyKPI {
       // }
       
       //Paused Revenue Per CM
-	 groupedResults = [select
- 						Account_Product__r.Owner.Name,
+     groupedResults = [select
+                        Account_Product__r.Owner.Name,
                         SUM(Paused_Revenue_This_Month__c)
                     from
                         Client_History__c
@@ -363,7 +363,7 @@ global class MonthlyKPI {
                     And
                         Account_Product__r.Recurring_Period__c != 'N/A'
                     And
-                        (Account_Product__r.Name like '%Adwords%' or Account_Product__r.Name like '%Facebook%' or Account_Product__r.Name like '%Admob%' or Account_Product__r.Name like '%Yahoo%' or Account_Product__r.Name like '%google+%' or Account_Product__r.Name like '%SEO%' or Account_Product__r.Name like 'Socail Media%')
+                        (Account_Product__r.Name like '%Adwords%' or Account_Product__r.Name like '%Facebook%' or Account_Product__r.Name like '%Admob%' or Account_Product__r.Name like '%Yahoo%' or Account_Product__r.Name like '%google+%' or Account_Product__r.Name like '%SEO%' or Account_Product__r.Name like 'Socail%')
                     And
                         (Start_Date__c = This_Month OR (Start_Date__c < This_Month and End_Date__c = null) OR (Start_date__c < This_Month and End_Date__c >= This_Month))
                     And
@@ -377,14 +377,14 @@ global class MonthlyKPI {
                     group by
                         Account_Product__r.Owner.Name
                     ];
-		system.debug(groupedResults);
-		
-		for (AggregateResult ar : groupedResults)  {
-	        String name = string.valueOf(ar.get('Name'));
-	        System.debug('Paused_Revenue: ' + ar.get('expr0'));
-	        saveCMStats(name, string.valueOf(ar.get('expr0')), 'Pause_Revenue');
-	      }
-		
+        system.debug(groupedResults);
+        
+        for (AggregateResult ar : groupedResults)  {
+            String name = string.valueOf(ar.get('Name'));
+            System.debug('Paused_Revenue: ' + ar.get('expr0'));
+            saveCMStats(name, string.valueOf(ar.get('expr0')), 'Pause_Revenue');
+          }
+        
         
       //Cancelled revenue Per CM
       //Get the cancelled account list from cancellation cases. Avoid counting in the downgrade/upgrade cancellation product
@@ -512,29 +512,29 @@ global class MonthlyKPI {
   //          if(cm.Active__c == 0)
               CM_Stats__c cm = new CM_Stats__c();
               cm.Name        = cm_name;
-            	cm.Active__c   = Integer.valueOf(teamMap.get(cm_name).get('Active'));
+                cm.Active__c   = Integer.valueOf(teamMap.get(cm_name).get('Active'));
   //          if(cm.Setups__c == 0)
-              	cm.Setups__c   = Integer.valueOf(teamMap.get(cm_name).get('Setups'));
+                cm.Setups__c   = Integer.valueOf(teamMap.get(cm_name).get('Setups'));
   //          if(cm.Paused__c == 0)
-              	cm.Paused__c   = Integer.valueOf(teamMap.get(cm_name).get('Paused'));
+                cm.Paused__c   = Integer.valueOf(teamMap.get(cm_name).get('Paused'));
   //          if(cm.Total_Pause__c == 0)
-              	cm.Total_Pause__c   = Integer.valueOf(teamMap.get(cm_name).get('Total_Pause'));
+                cm.Total_Pause__c   = Integer.valueOf(teamMap.get(cm_name).get('Total_Pause'));
    //         if(cm.Cancelled__c == 0)
-              	cm.Cancelled__c   = Integer.valueOf(teamMap.get(cm_name).get('Cancelled'));
+                cm.Cancelled__c   = Integer.valueOf(teamMap.get(cm_name).get('Cancelled'));
             //if(cm.Unpaid_Active__c == 0)
-    	      	//cm.Unpaid_Active__c = Integer.valueOf(teamMap.get(cm_name).get('Unpaid_Active'));
+                //cm.Unpaid_Active__c = Integer.valueOf(teamMap.get(cm_name).get('Unpaid_Active'));
    //         if(cm.Revenue__c == 0)
-      	      	cm.Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Revenue'));
+                cm.Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Revenue'));
    //         if(cm.Unpaid_Revenue__c == 0)
-        	  	cm.Unpaid_Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Unpaid_Revenue'));
-   //     	  if(cm.Credits__c == 0)  
-          	  	cm.Credits__c = Decimal.valueOf(teamMap.get(cm_name).get('Credits'));
-    //    	  if(cm.Refunds__c == 0)
-          	  	cm.Refunds__c = Decimal.valueOf(teamMap.get(cm_name).get('Refunds'));
-   //       	if(cm.NPS__c == 0)
-          	  	cm.NPS__c = Decimal.valueOf(teamMap.get(cm_name).get('NPS'));
-          	//if(cm.Void_Revenue__c == 0)
-          	//  	cm.Void_Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Void_Revenue'));
+                cm.Unpaid_Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Unpaid_Revenue'));
+   //         if(cm.Credits__c == 0)  
+                cm.Credits__c = Decimal.valueOf(teamMap.get(cm_name).get('Credits'));
+    //        if(cm.Refunds__c == 0)
+                cm.Refunds__c = Decimal.valueOf(teamMap.get(cm_name).get('Refunds'));
+   //           if(cm.NPS__c == 0)
+                cm.NPS__c = Decimal.valueOf(teamMap.get(cm_name).get('NPS'));
+            //if(cm.Void_Revenue__c == 0)
+            //      cm.Void_Revenue__c = Decimal.valueOf(teamMap.get(cm_name).get('Void_Revenue'));
            // //  if(cm.Waivers_Approved__c == 0)
            //   cm.Waivers_Approved__c = Integer.valueOf(teamMap.get(cm_name).get('Waiver'));
             
@@ -628,34 +628,34 @@ global class MonthlyKPI {
     } 
     
     private  String caculatePauseRevenue(String recurPeriod, Decimal price, Date pauseDate, Date activeDate ) {
-	    Decimal sum = 0;
-	    
-	    Date ld = Date.today();
-	    Date fd = ld.toStartOfMonth();
-	    
-	    integer days = 0;
-	    
-	    if (pauseDate >= fd && activeDate <= ld) {
-	      days = pauseDate.daysBetween(activeDate);
-	    } else if (pauseDate >= fd && activeDate >= ld) {
-	      days = pauseDate.daysBetween(ld); 
-	    } else if (pauseDate <= fd && activeDate <= ld) {
-	      days = fd.daysBetween(activeDate);
-	    } else if (pauseDate <= fd && activeDate >= ld) {
-	      days = fd.daysBetween(ld);
-	    }
-	    
-	    double cycle = 0;
-	    if (recurPeriod == 'Weekly') {
-	      cycle = days/7;
-	    } else if (recurPeriod == 'Monthly') {
-	      cycle = days/fd.daysBetween(ld);
-	    }
-	    sum = cycle * price;
-	    sum = sum.setScale(2, RoundingMode.HALF_UP);
-	    
-	    return sum+'';
-	  } 
+        Decimal sum = 0;
+        
+        Date ld = Date.today();
+        Date fd = ld.toStartOfMonth();
+        
+        integer days = 0;
+        
+        if (pauseDate >= fd && activeDate <= ld) {
+          days = pauseDate.daysBetween(activeDate);
+        } else if (pauseDate >= fd && activeDate >= ld) {
+          days = pauseDate.daysBetween(ld); 
+        } else if (pauseDate <= fd && activeDate <= ld) {
+          days = fd.daysBetween(activeDate);
+        } else if (pauseDate <= fd && activeDate >= ld) {
+          days = fd.daysBetween(ld);
+        }
+        
+        double cycle = 0;
+        if (recurPeriod == 'Weekly') {
+          cycle = days/7;
+        } else if (recurPeriod == 'Monthly') {
+          cycle = days/fd.daysBetween(ld);
+        }
+        sum = cycle * price;
+        sum = sum.setScale(2, RoundingMode.HALF_UP);
+        
+        return sum+'';
+      } 
   
   
   private String caculateCancelRevenue(String recurPeriod, Decimal price, Date cancelDate, Date lastInvoiceDate ) {

@@ -27,6 +27,13 @@
     </approvalStep>
     <emailTemplate>unfiled$public/Work_Request_Approval</emailTemplate>
     <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Work_Request__c.RecordType</field>
+            <operation>notEqual</operation>
+            <value>Marketing Work Request</value>
+        </criteriaItems>
+    </entryCriteria>
     <finalApprovalRecordLock>false</finalApprovalRecordLock>
     <finalRejectionRecordLock>false</finalRejectionRecordLock>
     <label>Work Request Approval Process</label>

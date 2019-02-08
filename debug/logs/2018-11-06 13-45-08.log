@@ -1,0 +1,507 @@
+31.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+13:45:07.0 (507510)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+13:45:07.0 (558825)|EXECUTION_STARTED
+13:45:07.0 (566178)|CODE_UNIT_STARTED|[EXTERNAL]|01p90000006GZdo|SLXDDInvoiceBatch
+13:45:07.0 (3514183)|HEAP_ALLOCATE|[72]|Bytes:3
+13:45:07.0 (3658913)|HEAP_ALLOCATE|[77]|Bytes:152
+13:45:07.0 (3689282)|HEAP_ALLOCATE|[342]|Bytes:408
+13:45:07.0 (3717365)|HEAP_ALLOCATE|[355]|Bytes:408
+13:45:07.0 (3741599)|HEAP_ALLOCATE|[467]|Bytes:48
+13:45:07.0 (3782957)|HEAP_ALLOCATE|[139]|Bytes:6
+13:45:07.0 (3967058)|HEAP_ALLOCATE|[50]|Bytes:5
+13:45:07.0 (4007649)|HEAP_ALLOCATE|[56]|Bytes:5
+13:45:07.0 (4026284)|HEAP_ALLOCATE|[64]|Bytes:7
+13:45:07.0 (5154325)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:117
+13:45:07.0 (30761329)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:11
+13:45:07.0 (30849235)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+13:45:07.0 (30857032)|STATEMENT_EXECUTE|[15]
+13:45:07.0 (30869846)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+13:45:07.0 (30881949)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:45:07.0 (30888193)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (30909491)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+13:45:07.0 (31184201)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x698bd5e2
+13:45:07.0 (31200873)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+13:45:07.0 (31381218)|VARIABLE_ASSIGNMENT|[31]|jobId|"7076F0000AUwmieQQB"
+13:45:07.0 (31394264)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+13:45:07.0 (31407810)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+13:45:07.0 (33252082)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:84
+13:45:07.0 (33273995)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:10
+13:45:07.0 (33282701)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:20
+13:45:07.0 (33300360)|METHOD_ENTRY|[1]|01p90000006GZdo|SLXDDInvoiceBatch.SLXDDInvoiceBatch()
+13:45:07.0 (33311392)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (33318443)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (33325462)|METHOD_EXIT|[1]|SLXDDInvoiceBatch
+13:45:07.0 (33334759)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (33363732)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:12
+13:45:07.0 (33389186)|VARIABLE_SCOPE_BEGIN|[40]|this|SLXDDInvoiceBatch|true|false
+13:45:07.0 (33603907)|VARIABLE_ASSIGNMENT|[40]|this|{"batch_date":"2018-11-06T00:00:00Z","batch_exist":true,"batch_name":"SLX Direct Debit Tuesday 2018-11-06 Today Invoice Batch","period":"Today","todays_batch_id":"a0F6F00000tg5PuUAI"}|0x565a5a77
+13:45:07.0 (33623961)|VARIABLE_SCOPE_BEGIN|[40]|info|Database.BatchableContext|true|false
+13:45:07.0 (33735775)|VARIABLE_ASSIGNMENT|[40]|info|{"jobId":"7076F0000AUwmieQQB"}|0x698bd5e2
+13:45:07.0 (33757426)|STATEMENT_EXECUTE|[40]
+13:45:07.0 (33761235)|STATEMENT_EXECUTE|[41]
+13:45:07.0 (43575049)|HEAP_ALLOCATE|[41]|Bytes:57
+13:45:07.0 (43615907)|HEAP_ALLOCATE|[41]|Bytes:3
+13:45:07.0 (43656832)|METHOD_ENTRY|[1]|01p90000006GZdq|SLXDDInvoiceBatchIterator.SLXDDInvoiceBatchIterator()
+13:45:07.0 (43671215)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (43679619)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (43688254)|METHOD_EXIT|[1]|SLXDDInvoiceBatchIterator
+13:45:07.0 (43715878)|HEAP_ALLOCATE|[41]|Bytes:8
+13:45:07.0 (43765902)|CONSTRUCTOR_ENTRY|[41]|01p90000006GZdq|<init>(String)|SLXDDInvoiceBatchIterator
+13:45:07.0 (43825195)|VARIABLE_SCOPE_BEGIN|[4]|this|SLXDDInvoiceBatchIterator|true|false
+13:45:07.0 (43889101)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x504ee35f
+13:45:07.0 (43906021)|VARIABLE_SCOPE_BEGIN|[4]|period|String|false|false
+13:45:07.0 (43928560)|VARIABLE_ASSIGNMENT|[4]|period|"Today"
+13:45:07.0 (43937692)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (43940466)|STATEMENT_EXECUTE|[2]
+13:45:07.0 (43960455)|HEAP_ALLOCATE|[2]|Bytes:5
+13:45:07.0 (43984773)|VARIABLE_ASSIGNMENT|[2]|this.period|"Today"|0x504ee35f
+13:45:07.0 (44021156)|STATEMENT_EXECUTE|[4]
+13:45:07.0 (44025313)|STATEMENT_EXECUTE|[5]
+13:45:07.0 (44046550)|VARIABLE_ASSIGNMENT|[5]|this.period|"Today"|0x504ee35f
+13:45:07.0 (44070671)|CONSTRUCTOR_EXIT|[41]|01p90000006GZdq|<init>(String)|SLXDDInvoiceBatchIterator
+13:45:07.0 (45559859)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+13:45:07.0 (45580637)|VARIABLE_SCOPE_BEGIN|[8]|this|SLXDDInvoiceBatchIterator|true|false
+13:45:07.0 (45623906)|VARIABLE_ASSIGNMENT|[8]|this|{"period":"Today"}|0x504ee35f
+13:45:07.0 (45660074)|STATEMENT_EXECUTE|[8]
+13:45:07.0 (45663884)|STATEMENT_EXECUTE|[9]
+13:45:07.0 (50952036)|HEAP_ALLOCATE|[9]|Bytes:57
+13:45:07.0 (50976869)|HEAP_ALLOCATE|[9]|Bytes:104
+13:45:07.0 (50982213)|HEAP_ALLOCATE|[9]|Bytes:11
+13:45:07.0 (50986430)|HEAP_ALLOCATE|[9]|Bytes:23
+13:45:07.0 (51027579)|METHOD_ENTRY|[1]|01p90000006GZdp|SLXDDInvoiceBatchIterable.SLXDDInvoiceBatchIterable()
+13:45:07.0 (51042718)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (51052410)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (51063260)|METHOD_EXIT|[1]|SLXDDInvoiceBatchIterable
+13:45:07.0 (51141522)|HEAP_ALLOCATE|[9]|Bytes:24
+13:45:07.0 (51188708)|CONSTRUCTOR_ENTRY|[9]|01p90000006GZdp|<init>(String)|SLXDDInvoiceBatchIterable
+13:45:07.0 (51229161)|VARIABLE_SCOPE_BEGIN|[9]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (51311187)|VARIABLE_ASSIGNMENT|[9]|this|{}|0x669e388d
+13:45:07.0 (51321432)|VARIABLE_SCOPE_BEGIN|[9]|period|String|false|false
+13:45:07.0 (51341165)|VARIABLE_ASSIGNMENT|[9]|period|"Today"
+13:45:07.0 (51351798)|STATEMENT_EXECUTE|[1]
+13:45:07.0 (51354638)|STATEMENT_EXECUTE|[2]
+13:45:07.0 (51376693)|STATEMENT_EXECUTE|[4]
+13:45:07.0 (51400682)|VARIABLE_ASSIGNMENT|[4]|this.period|"Today"|0x669e388d
+13:45:07.0 (51408389)|STATEMENT_EXECUTE|[5]
+13:45:07.0 (51422559)|VARIABLE_ASSIGNMENT|[5]|this.batch_name|""|0x669e388d
+13:45:07.0 (51428434)|STATEMENT_EXECUTE|[6]
+13:45:07.0 (51513734)|HEAP_ALLOCATE|[6]|Bytes:4
+13:45:07.0 (51555331)|VARIABLE_ASSIGNMENT|[6]|this.batch_date|"2018-11-06T00:00:00.000Z"|0x669e388d
+13:45:07.0 (51562349)|STATEMENT_EXECUTE|[7]
+13:45:07.0 (51590298)|STATEMENT_EXECUTE|[9]
+13:45:07.0 (51592482)|STATEMENT_EXECUTE|[10]
+13:45:07.0 (51603308)|VARIABLE_ASSIGNMENT|[10]|this.period|"Today"|0x669e388d
+13:45:07.0 (51608908)|STATEMENT_EXECUTE|[12]
+13:45:07.0 (51660166)|HEAP_ALLOCATE|[12]|Bytes:56
+13:45:07.0 (51678678)|VARIABLE_SCOPE_BEGIN|[12]|target_date|Datetime|false|false
+13:45:07.0 (51705329)|VARIABLE_ASSIGNMENT|[12]|target_date|"2018-11-06T03:45:07.944Z"
+13:45:07.0 (51742065)|STATEMENT_EXECUTE|[14]
+13:45:07.0 (51744677)|STATEMENT_EXECUTE|[15]
+13:45:07.0 (51777685)|HEAP_ALLOCATE|[15]|Bytes:56
+13:45:07.0 (51801639)|VARIABLE_ASSIGNMENT|[15]|target_date|"2018-11-06T03:45:07.944Z"
+13:45:07.0 (51807556)|STATEMENT_EXECUTE|[17]
+13:45:07.0 (51815286)|HEAP_ALLOCATE|[17]|Bytes:10
+13:45:07.0 (51855314)|HEAP_ALLOCATE|[17]|Bytes:10
+13:45:07.0 (51886027)|HEAP_ALLOCATE|[17]|Bytes:10
+13:45:07.0 (51896994)|VARIABLE_SCOPE_BEGIN|[17]|target_date_string|String|false|false
+13:45:07.0 (51908815)|VARIABLE_ASSIGNMENT|[17]|target_date_string|"2018-11-06"
+13:45:07.0 (51915443)|STATEMENT_EXECUTE|[18]
+13:45:07.0 (51923761)|HEAP_ALLOCATE|[18]|Bytes:20
+13:45:07.0 (51936206)|HEAP_ALLOCATE|[18]|Bytes:30
+13:45:07.0 (51968928)|USER_DEBUG|[18]|DEBUG|Target Date String: 2018-11-06
+13:45:07.0 (51979612)|STATEMENT_EXECUTE|[20]
+13:45:07.0 (51986497)|HEAP_ALLOCATE|[20]|Bytes:755
+13:45:07.0 (52007905)|HEAP_ALLOCATE|[20]|Bytes:4
+13:45:07.0 (52021254)|HEAP_ALLOCATE|[20]|Bytes:7
+13:45:07.0 (52054746)|HEAP_ALLOCATE|[56]|Bytes:4
+13:45:07.0 (58044487)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT t.Reference__c, t.Processed__c, t.Process_Message__c, t.Payment_Response__c, t.Payment_Option__c, t.Payment_Message__c, t.Name, t.LastModifiedDate, t.Issue_Date__c, t.IsDeleted, t.Invoice_Number__c, t.Invoice_Batch__c, t.Id, t.Exclude_Reminder__c, t.Exclude_Invoice__c, t.Email_Processed__c, t.Due_Date__c, t.Amount_Paid__c, t.Amount_Due__c, t.Amount_Credited__c, t.Invoice_Total__c, t.Account__c, t.Account_Product__c, t.Status__c FROM Invoice__c t WHERE (t.IsDeleted = FALSE AND (t.Status__c = 'AUTHORISED' OR t.Status__c = 'PARTIALLY PAID' OR t.Status__c = 'PARTIALLY CREDITED') AND t.Issue_Date__c <= :tmpVar1 AND t.Account_Product__r.SLX_Product__r.company_name__c = 'SponsoredLinx' AND t.Account_Product__r.Payment_Option__c = 'Direct Debit')
+13:45:07.0 (207139624)|SOQL_EXECUTE_END|[20]|Rows:12
+13:45:07.0 (207178472)|HEAP_ALLOCATE|[20]|Bytes:52
+13:45:07.0 (207295771)|HEAP_ALLOCATE|[20]|Bytes:8788
+13:45:07.0 (207331412)|HEAP_ALLOCATE|[20]|Bytes:52
+13:45:07.0 (207456459)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"","period":"Today"}|0x669e388d
+13:45:07.0 (207650262)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"List of size 12 too large to display"|0x2e7ebe23
+13:45:07.0 (207672526)|VARIABLE_ASSIGNMENT|[2]|this.Invoices|"List of size 12 too large to display"|0x669e388d
+13:45:07.0 (207689156)|STATEMENT_EXECUTE|[61]
+13:45:07.0 (207763770)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"","Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (208545495)|USER_DEBUG|[61]|DEBUG|(Invoice__c:{Reference__c=189517, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Auto Trans Australia, LastModifiedDate=2018-11-06 03:01:03, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000938891, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfSkUAJ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=79.00, Amount_Credited__c=0.00, Invoice_Total__c=79.00, Account__c=0019000000YSaV4AAL, Account_Product__c=a079000000BQNTgAAP, Status__c=AUTHORISED}, Invoice__c:{Reference__c=138669, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Food Consultants Australia, LastModifiedDate=2018-11-06 03:01:25, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000938961, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfUGUAZ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=19.00, Amount_Credited__c=0.00, Invoice_Total__c=19.00, Account__c=00190000008IyjxAAC, Account_Product__c=a0790000002OBkLAAW, Status__c=AUTHORISED}, Invoice__c:{Reference__c=202501, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Carolines Sugar Art Services, LastModifiedDate=2018-11-06 03:01:26, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000938974, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfUZUAZ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=89.00, Amount_Credited__c=0.00, Invoice_Total__c=89.00, Account__c=0019000000p8iJWAAY, Account_Product__c=a079000000HFVqkAAH, Status__c=AUTHORISED}, Invoice__c:{Reference__c=142395, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=waemergencymanagement, LastModifiedDate=2018-11-06 03:01:28, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000938985, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfUsUAJ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=69.00, Amount_Credited__c=0.00, Invoice_Total__c=69.00, Account__c=00190000009INMAAA4, Account_Product__c=a0790000002oxlGAAQ, Status__c=AUTHORISED}, Invoice__c:{Reference__c=239670, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Impact Security Solutions, LastModifiedDate=2018-11-06 03:01:29, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939006, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfVOUAZ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=49.00, Amount_Credited__c=0.00, Invoice_Total__c=49.00, Account__c=00190000016ZK3KAAW, Account_Product__c=a079000000a9QYCAA2, Status__c=AUTHORISED}, Invoice__c:{Reference__c=242606, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Simcorner Pty Ltd, LastModifiedDate=2018-11-06 03:01:30, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939020, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfViUAJ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=2099.00, Amount_Credited__c=0.00, Invoice_Total__c=2099.00, Account__c=0019000001AwnutAAB, Account_Product__c=a079000000WXYvXAAX, Status__c=AUTHORISED}, Invoice__c:{Reference__c=208051, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Metal 4 U, LastModifiedDate=2018-11-06 03:01:31, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939030, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfVvUAJ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=79.00, Amount_Credited__c=0.00, Invoice_Total__c=79.00, Account__c=0019000000sFB3iAAG, Account_Product__c=a079000000HrNlLAAV, Status__c=AUTHORISED}, Invoice__c:{Reference__c=145947, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Siwa Fresh, LastModifiedDate=2018-11-06 03:02:01, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939092, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfXGUAZ, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=69.00, Amount_Credited__c=0.00, Invoice_Total__c=69.00, Account__c=0019000000CcEhaAAF, Account_Product__c=a079000000JvipZAAR, Status__c=AUTHORISED}, Invoice__c:{Reference__c=294496, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=The Scout Group, LastModifiedDate=2018-11-06 03:02:43, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939234, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfaFUAR, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=89.00, Amount_Credited__c=0.00, Invoice_Total__c=89.00, Account__c=0016F00001femCyQAI, Account_Product__c=a076F00000dvV2oQAE, Status__c=AUTHORISED}, Invoice__c:{Reference__c=324228, Processed__c=false, Process_Message__c=Ready For Payment, Payment_Option__c=Direct Debit, Name=Accomplished Plumbing Services PL, LastModifiedDate=2018-11-06 03:02:44, Issue_Date__c=2018-11-06 00:00:00, IsDeleted=false, Invoice_Number__c=000939306, Invoice_Batch__c=a0F6F00000tg5OqUAI, Id=a0E6F00002GbfbkUAB, Exclude_Reminder__c=false, Exclude_Invoice__c=false, Email_Processed__c=false, Due_Date__c=2018-11-06 00:00:00, Amount_Paid__c=0.00, Amount_Due__c=89.00, Amount_Credited__c=0.00, Invoice_Total__c=89.00, Account__c=0016F00001o0EHnQAM, Account_Product__c=a076F00000g9gT3QAI, Status__c=AUTHORISED}, ...)
+13:45:07.0 (208639006)|STATEMENT_EXECUTE|[62]
+13:45:07.0 (208735208)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"","Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (208751637)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|0
+13:45:07.0 (208759196)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (208768824)|VARIABLE_ASSIGNMENT|[7]|this.i|0|0x669e388d
+13:45:07.0 (208779679)|STATEMENT_EXECUTE|[63]
+13:45:07.0 (208790154)|HEAP_ALLOCATE|[63]|Bytes:17
+13:45:07.0 (208843464)|HEAP_ALLOCATE|[63]|Bytes:56
+13:45:07.0 (208864376)|HEAP_ALLOCATE|[63]|Bytes:15
+13:45:07.0 (208900446)|HEAP_ALLOCATE|[63]|Bytes:18
+13:45:07.0 (208911268)|HEAP_ALLOCATE|[63]|Bytes:1
+13:45:07.0 (208918870)|HEAP_ALLOCATE|[63]|Bytes:14
+13:45:07.0 (208933776)|HEAP_ALLOCATE|[63]|Bytes:55
+13:45:07.0 (208949159)|VARIABLE_ASSIGNMENT|[63]|this.batch_name|"SLX Direct Debit Tue (35 more) ..."|0x669e388d
+13:45:07.0 (208955225)|STATEMENT_EXECUTE|[64]
+13:45:07.0 (208964120)|HEAP_ALLOCATE|[64]|Bytes:12
+13:45:07.0 (208973483)|HEAP_ALLOCATE|[64]|Bytes:67
+13:45:07.0 (209001395)|USER_DEBUG|[64]|DEBUG|Batch Name: SLX Direct Debit Tuesday 2018-11-06 Today Invoice Batch
+13:45:07.0 (209011617)|STATEMENT_EXECUTE|[66]
+13:45:07.0 (209013560)|STATEMENT_EXECUTE|[66]
+13:45:07.0 (209015339)|STATEMENT_EXECUTE|[67]
+13:45:07.0 (209021765)|HEAP_ALLOCATE|[67]|Bytes:84
+13:45:07.0 (209041440)|HEAP_ALLOCATE|[67]|Bytes:4
+13:45:07.0 (209066162)|HEAP_ALLOCATE|[67]|Bytes:7
+13:45:07.0 (209959983)|SOQL_EXECUTE_BEGIN|[67]|Aggregations:0|SELECT Id FROM Invoice_Batch__c WHERE (name = :tmpVar1 AND Batch_Date__c = :tmpVar2)
+13:45:07.0 (225920705)|SOQL_EXECUTE_END|[67]|Rows:1
+13:45:07.0 (225968986)|HEAP_ALLOCATE|[67]|Bytes:8
+13:45:07.0 (225993427)|HEAP_ALLOCATE|[67]|Bytes:33
+13:45:07.0 (226091342)|HEAP_ALLOCATE|[67]|Bytes:8
+13:45:07.0 (226122856)|VARIABLE_SCOPE_BEGIN|[67]|todaysbatch|List<Invoice_Batch__c>|true|false
+13:45:07.0 (226172852)|VARIABLE_ASSIGNMENT|[67]|todaysbatch|[{"Id":"a0F6F00000tg5PuUAI"}]|0x5f890c61
+13:45:07.0 (226186669)|STATEMENT_EXECUTE|[68]
+13:45:07.0 (226211597)|VARIABLE_SCOPE_BEGIN|[68]|batch|Invoice_Batch__c|true|false
+13:45:07.0 (226229726)|VARIABLE_ASSIGNMENT|[68]|batch|null|
+13:45:07.0 (226237366)|STATEMENT_EXECUTE|[69]
+13:45:07.0 (226250476)|HEAP_ALLOCATE|[69]|Bytes:13
+13:45:07.0 (226389049)|HEAP_ALLOCATE|[69]|Bytes:42
+13:45:07.0 (226424550)|HEAP_ALLOCATE|[69]|Bytes:55
+13:45:07.0 (226451738)|USER_DEBUG|[69]|DEBUG|Todays Batch:(Invoice_Batch__c:{Id=a0F6F00000tg5PuUAI})
+13:45:07.0 (226541881)|STATEMENT_EXECUTE|[70]
+13:45:07.0 (226545980)|STATEMENT_EXECUTE|[71]
+13:45:07.0 (226560255)|HEAP_ALLOCATE|[71]|Bytes:54
+13:45:07.0 (226595072)|USER_DEBUG|[71]|DEBUG|Updating New Invoice Batch with salesforce DD invoices
+13:45:07.0 (226609214)|STATEMENT_EXECUTE|[72]
+13:45:07.0 (226639688)|HEAP_ALLOCATE|[72]|Bytes:8
+13:45:07.0 (226666250)|VARIABLE_ASSIGNMENT|[72]|batch|{"Id":"a0F6F00000tg5PuUAI"}|0x4c4e03ea
+13:45:07.0 (226787115)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (226850352)|STATEMENT_EXECUTE|[73]
+13:45:07.0 (226854036)|STATEMENT_EXECUTE|[74]
+13:45:07.0 (226868061)|HEAP_ALLOCATE|[74]|Bytes:9
+13:45:07.0 (226958286)|HEAP_ALLOCATE|[74]|Bytes:-4
+13:45:07.0 (226978651)|VARIABLE_ASSIGNMENT|[74]|this.status__c|"New Batch"|0x4c4e03ea
+13:45:07.0 (226990668)|STATEMENT_EXECUTE|[79]
+13:45:07.0 (227069219)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (227152356)|HEAP_ALLOCATE|[79]|Bytes:28
+13:45:07.0 (227212706)|HEAP_ALLOCATE|[79]|Bytes:-4
+13:45:07.0 (227230955)|VARIABLE_ASSIGNMENT|[79]|this.Batch_Records__c|12|0x4c4e03ea
+13:45:07.0 (227240567)|STATEMENT_EXECUTE|[80]
+13:45:07.0 (227254363)|HEAP_ALLOCATE|[80]|Bytes:15
+13:45:07.0 (227346621)|HEAP_ALLOCATE|[80]|Bytes:82
+13:45:07.0 (227376307)|HEAP_ALLOCATE|[80]|Bytes:97
+13:45:07.0 (227394478)|USER_DEBUG|[80]|DEBUG|Invoice Batch: Invoice_Batch__c:{Id=a0F6F00000tg5PuUAI, status__c=New Batch, Batch_Records__c=12}
+13:45:07.0 (227407095)|STATEMENT_EXECUTE|[81]
+13:45:07.0 (227461481)|HEAP_ALLOCATE|[81]|Bytes:8
+13:45:07.0 (227476790)|DML_BEGIN|[81]|Op:Update|Type:Invoice_Batch__c|Rows:1
+13:45:07.0 (227522717)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+13:45:07.0 (258510955)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000VEJd
+13:45:07.0 (284898666)|WF_RULE_EVAL_BEGIN|Workflow
+13:45:07.0 (284936227)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Direct Debit Tuesday 2018-11-06 Today Invoice Batch a0F6F00000tg5Pu]|GMT Email notification when payment batches finish|01Q90000000DR2O|ON_CREATE_OR_TRIGGERING_UPDATE|0
+13:45:07.0 (288279554)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Invoice Batch Name contains Today] 
+AND [Invoice Batch : Invoice Batch Name contains GMT] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+13:45:07.0 (288306803)|WF_RULE_EVAL_VALUE|1
+13:45:07.0 (288312567)|WF_CRITERIA_END|false
+13:45:07.0 (288327208)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Direct Debit Tuesday 2018-11-06 Today Invoice Batch a0F6F00000tg5Pu]|Email notification when payment batches finish|01Q90000000DR1k|ON_CREATE_OR_TRIGGERING_UPDATE|0
+13:45:07.0 (288398150)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains SLX] 
+AND [Invoice Batch : Batch Status equals Payments Complete] 
+AND [Invoice Batch : Invoice Batch Name does not contain NZ]
+13:45:07.0 (288410145)|WF_RULE_EVAL_VALUE|1
+13:45:07.0 (288413894)|WF_CRITERIA_END|false
+13:45:07.0 (288421577)|WF_CRITERIA_BEGIN|[Invoice Batch: SLX Direct Debit Tuesday 2018-11-06 Today Invoice Batch a0F6F00000tg5Pu]|Email notification when slx nz payment batches finish|01Q90000000Dd15|ON_CREATE_OR_TRIGGERING_UPDATE|0
+13:45:07.0 (288474422)|WF_RULE_FILTER|[Invoice Batch : Batch Type equals Payments] 
+AND [Invoice Batch : Batch Period equals Today] 
+AND [Invoice Batch : Invoice Batch Name contains NZ] 
+AND [Invoice Batch : Batch Status equals Payments Complete]
+13:45:07.0 (288484189)|WF_RULE_EVAL_VALUE|1
+13:45:07.0 (288487484)|WF_CRITERIA_END|false
+13:45:07.0 (288503894)|WF_SPOOL_ACTION_BEGIN|Workflow
+13:45:07.0 (288513056)|WF_ACTION| None
+13:45:07.0 (288517318)|WF_RULE_EVAL_END
+13:45:07.0 (288606745)|WF_ACTIONS_END| None
+13:45:07.0 (288624261)|CODE_UNIT_FINISHED|Workflow:01I90000000VEJd
+13:45:07.0 (290332844)|DML_END|[81]
+13:45:07.0 (290381133)|CONSTRUCTOR_EXIT|[9]|01p90000006GZdp|<init>(String)|SLXDDInvoiceBatchIterable
+13:45:07.0 (306952943)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (306988709)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (307098813)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307124531)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (307213372)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307290985)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307337921)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (307367246)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (307437618)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (307450638)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (307503313)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307520814)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (307523956)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (307592699)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307664750)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307731048)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":0,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307750294)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|1
+13:45:07.0 (307760371)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (307776212)|VARIABLE_ASSIGNMENT|[7]|this.i|1|0x669e388d
+13:45:07.0 (307807650)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (307860804)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (307870940)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (307922199)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (307939634)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (307985674)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308044235)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308078698)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (308095464)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (308143739)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (308153733)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (308202528)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308218180)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (308221098)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (308273201)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308333480)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308389518)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":1,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308407280)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|2
+13:45:07.0 (308415977)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (308428018)|VARIABLE_ASSIGNMENT|[7]|this.i|2|0x669e388d
+13:45:07.0 (308451436)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (308503546)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (308513862)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (308564870)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308581223)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (308627516)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308694293)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308726506)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (308742631)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (308787687)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (308797214)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (308846294)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308861427)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (308864331)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (308919731)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (308978225)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309035438)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":2,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309053253)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|3
+13:45:07.0 (309062306)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (309074404)|VARIABLE_ASSIGNMENT|[7]|this.i|3|0x669e388d
+13:45:07.0 (309097820)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (309144582)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (309154326)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (309202909)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309218810)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (309263070)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309323101)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309353204)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (309368006)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (309411628)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (309420929)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (309470215)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309485790)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (309488678)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (309541160)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309597940)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309662008)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":3,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309682233)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|4
+13:45:07.0 (309692124)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (309705631)|VARIABLE_ASSIGNMENT|[7]|this.i|4|0x669e388d
+13:45:07.0 (309730763)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (309780398)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (309790320)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (309838994)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309855493)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (309901028)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309958971)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (309988626)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (310003894)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (310048481)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (310057690)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (310105031)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310121222)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (310124184)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (310176014)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310235688)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310292494)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":4,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310308837)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|5
+13:45:07.0 (310317726)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (310328863)|VARIABLE_ASSIGNMENT|[7]|this.i|5|0x669e388d
+13:45:07.0 (310351703)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (310397384)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (310407112)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (310455533)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310472208)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (310514863)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310575134)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310605037)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (310620192)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (310670175)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (310679755)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (310727738)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310742976)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (310745904)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (310800983)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310862416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310920763)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":5,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (310938897)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|6
+13:45:07.0 (310948319)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (310960677)|VARIABLE_ASSIGNMENT|[7]|this.i|6|0x669e388d
+13:45:07.0 (310983968)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (311031273)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (311041924)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (311090244)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311105306)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (311149791)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311210411)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311242011)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (311257834)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (311302621)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (311312012)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (311360289)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311376077)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (311379211)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (311431460)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311489458)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311547921)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":6,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311565380)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|7
+13:45:07.0 (311574287)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (311586730)|VARIABLE_ASSIGNMENT|[7]|this.i|7|0x669e388d
+13:45:07.0 (311610497)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (311663337)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (311673229)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (311721961)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311738150)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (311782560)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311840246)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311870568)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (311884809)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (311927282)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (311936634)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (311982772)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (311997687)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (312000354)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (312058574)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312122531)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312185861)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":7,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312203878)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|8
+13:45:07.0 (312212811)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (312225906)|VARIABLE_ASSIGNMENT|[7]|this.i|8|0x669e388d
+13:45:07.0 (312250106)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (312299188)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (312309865)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (312357782)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312374424)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (312420111)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312477997)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312509802)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (312525279)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (312572137)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (312581930)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (312635135)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312650338)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (312653255)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (312706129)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312765571)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312824954)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":8,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (312843746)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|9
+13:45:07.0 (312852839)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (312865173)|VARIABLE_ASSIGNMENT|[7]|this.i|9|0x669e388d
+13:45:07.0 (312888230)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (312936673)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (312946328)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (312994103)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313008941)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (313053474)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313111120)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313142001)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (313156712)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (313200500)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (313209473)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (313255638)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313270563)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (313273377)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (313325264)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313389037)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313448669)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":9,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313466212)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|10
+13:45:07.0 (313475725)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (313487588)|VARIABLE_ASSIGNMENT|[7]|this.i|10|0x669e388d
+13:45:07.0 (313512045)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (313560939)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (313570634)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (313618365)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313640391)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (313684591)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313743911)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313773974)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (313788357)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (313834427)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (313843936)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (313892431)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (313908964)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (313911642)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (313965472)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (314025360)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (314088107)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":10,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (314105025)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|11
+13:45:07.0 (314114469)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (314126520)|VARIABLE_ASSIGNMENT|[7]|this.i|11|0x669e388d
+13:45:07.0 (314149299)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (314368167)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314392621)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314399846)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314404463)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314409293)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314414065)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314418270)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314422632)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314426768)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314431253)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314435663)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (314440129)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (316321806)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (316339197)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (316395405)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316409318)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (316449353)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316491058)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316515293)|STATEMENT_EXECUTE|[92]
+13:45:07.0 (316530978)|HEAP_ALLOCATE|[92]|Bytes:5
+13:45:07.0 (316569182)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (316575949)|VARIABLE_SCOPE_BEGIN|[95]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (316615070)|VARIABLE_ASSIGNMENT|[95]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316625625)|STATEMENT_EXECUTE|[95]
+13:45:07.0 (316627603)|STATEMENT_EXECUTE|[96]
+13:45:07.0 (316663195)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316697363)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316731195)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":11,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316742350)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|12
+13:45:07.0 (316748202)|HEAP_ALLOCATE|[7]|Bytes:4
+13:45:07.0 (316757056)|VARIABLE_ASSIGNMENT|[7]|this.i|12|0x669e388d
+13:45:07.0 (316775619)|HEAP_ALLOCATE|[96]|Bytes:92
+13:45:07.0 (316808866)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:24
+13:45:07.0 (316814811)|VARIABLE_SCOPE_BEGIN|[88]|this|SLXDDInvoiceBatchIterable|true|false
+13:45:07.0 (316862986)|VARIABLE_ASSIGNMENT|[88]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":12,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316873879)|STATEMENT_EXECUTE|[88]
+13:45:07.0 (316903815)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":12,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316939836)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"batch_date":"2018-11-06T00:00:00.000Z","batch_name":"SLX Direct Debit Tue (35 more) ...","i":12,"Invoices":"0x2e7ebe23","period":"Today"}|0x669e388d
+13:45:07.0 (316972116)|STATEMENT_EXECUTE|[90]
+13:45:07.0 (316988571)|HEAP_ALLOCATE|[90]|Bytes:5
+13:45:07.0 (317187062)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (317207187)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (317213175)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.0 (317217750)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+13:45:07.373 (373848762)|CUMULATIVE_LIMIT_USAGE
+13:45:07.373 (373848762)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:45:07.373 (373848762)|CUMULATIVE_LIMIT_USAGE_END
+
+13:45:07.0 (373919438)|CODE_UNIT_FINISHED|SLXDDInvoiceBatch
+13:45:07.0 (375550215)|EXECUTION_FINISHED

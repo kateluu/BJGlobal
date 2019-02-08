@@ -60,29 +60,6 @@
                 <axisBinding>y</axisBinding>
                 <column>RowCount</column>
             </chartSummary>
-            <componentType>Pie</componentType>
-            <displayUnits>Auto</displayUnits>
-            <drillEnabled>false</drillEnabled>
-            <drillToDetailEnabled>false</drillToDetailEnabled>
-            <enableHover>false</enableHover>
-            <expandOthers>true</expandOthers>
-            <groupingColumn>FK_ACC_OWNER_NAME</groupingColumn>
-            <header>Opportunities</header>
-            <legendPosition>Bottom</legendPosition>
-            <report>Team_Leader_Reports_Shared/Opportunities_Today</report>
-            <showPercentage>false</showPercentage>
-            <showValues>true</showValues>
-            <sortBy>RowLabelAscending</sortBy>
-            <title>TODAY</title>
-            <useReportChart>false</useReportChart>
-        </components>
-        <components>
-            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-            <chartAxisRange>Auto</chartAxisRange>
-            <chartSummary>
-                <axisBinding>y</axisBinding>
-                <column>RowCount</column>
-            </chartSummary>
             <componentType>Bar</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
@@ -124,21 +101,20 @@
                 <axisBinding>y</axisBinding>
                 <column>FORMULA1</column>
             </chartSummary>
-            <componentType>Bar</componentType>
+            <componentType>Column</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
-            <groupingColumn>CUST_OWNER_NAME</groupingColumn>
-            <header>Credits</header>
+            <groupingColumn>BucketField_43516916</groupingColumn>
+            <header>Total Offset</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Team_Leader_Reports_Shared/Total_Credit_Processed_This_Month</report>
+            <report>Client_Manager_Reports/Total_Offsets_This_Month</report>
             <showPercentage>false</showPercentage>
-            <showPicturesOnCharts>false</showPicturesOnCharts>
             <showValues>true</showValues>
             <sortBy>RowValueDescending</sortBy>
-            <title>Last Week</title>
+            <title>This Month</title>
             <useReportChart>false</useReportChart>
         </components>
         <components>
@@ -201,22 +177,17 @@
             <useReportChart>false</useReportChart>
         </components>
         <components>
-            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <chartAxisRange>Auto</chartAxisRange>
-            <chartSummary>
-                <axisBinding>y</axisBinding>
-                <column>RowCount</column>
-            </chartSummary>
             <componentType>Pie</componentType>
             <displayUnits>Auto</displayUnits>
             <drillEnabled>false</drillEnabled>
             <drillToDetailEnabled>false</drillToDetailEnabled>
             <enableHover>false</enableHover>
             <expandOthers>false</expandOthers>
-            <groupingColumn>CUST_OWNER_NAME</groupingColumn>
             <header>Escalated Cancellation</header>
             <legendPosition>Bottom</legendPosition>
-            <report>Team_Leader_Reports_Shared/Escalated_Cancel_Cases_Today</report>
+            <report>Team_Leader_Reports/Escalated_Cancel_Cases_Today2</report>
             <showPercentage>false</showPercentage>
             <showValues>true</showValues>
             <sortBy>RowLabelAscending</sortBy>
@@ -458,8 +429,26 @@
             <title>All Time</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>No Call Made</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Client_Manager_Reports/No_Phone_Call_from_Last_14_Days</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Last 14 days</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </rightSection>
-    <runningUser>sebastian.cox@sponsoredlinx.com</runningUser>
+    <runningUser>david.powell@sponsoredlinx.com</runningUser>
     <textColor>#000000</textColor>
     <title>Team Leader Dashboard</title>
     <titleColor>#000000</titleColor>

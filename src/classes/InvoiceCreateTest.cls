@@ -43,22 +43,32 @@ global class InvoiceCreateTest implements Database.batchable<Account_Product__c>
 	      			if(invoice_date == date.today()){
 	      				try{
 		      				//generate new invoice
-			      			Invoice__c invoice              = new Invoice__c();
-			      			invoice.Amount_Due__c      		= accountproduct.Product_Price__c;
+			      			Invoice__c invoice                  = new Invoice__c();
+			      			invoice.Issue_Date__c      		    = date.today();			      			
+			      			invoice.Invoice_Total__c      		= accountproduct.Product_Price__c;
+
 			      			if(accountproduct.Account__r.Amex__c == true){
-			      				invoice.Amount_Due__c      	= accountproduct.Product_Price__c*1.030;
-			      				invoice.Amount_Due__c		= invoice.Amount_Due__c.setScale(2);
+			                    Date myDate = Date.newInstance(2018, 8, 1);
+				                if (invoice.Issue_Date__c >= myDate){
+				                	// Amex charge change from 1st August 2018				                	
+				                    invoice.Invoice_Total__c      	= invoice.Invoice_Total__c*(1+ Decimal.valueof(Pardot_Auto_Convert_Add__c.getValues('Amex Surcharge').value__c)); 				                    
+				                    
+				                }
+				                else{				                	
+				                    invoice.Invoice_Total__c        = invoice.Invoice_Total__c*(1+ Decimal.valueof(Pardot_Auto_Convert_Add__c.getValues('Old Amex Surcharge').value__c)); 				                    
+				                }
+				                invoice.Invoice_Total__c		= invoice.Invoice_Total__c.setScale(2);			      				
 			      				invoice.Amex__c				= true;
 			      			}
 			      			//if(accountproduct.Account__r.Website!= null && accountproduct.Account__r.Website.endsWithIgnoreCase('.nz') == true){
 			      			//	invoice.Amount_Due__c      	= invoice.Amount_Due__c / 1.1;
 			      			//	invoice.Amount_Due__c		= invoice.Amount_Due__c.setScale(2);
 			      			//}
-			      			invoice.Invoice_Total__c 		= invoice.Amount_Due__c;
+			      			invoice.Amount_Due__c 			= invoice.Invoice_Total__c ;
 			      			invoice.Amount_Paid__c          = 0.00;
 					      	invoice.Amount_Credited__c      = 0.00;
 					      	invoice.Amount_Refunded__c		= 0.00;
-					      	invoice.Issue_Date__c      		= date.today();
+					      	//invoice.Issue_Date__c      		= date.today();
 					      	invoice.CurrencyIsoCode         = accountproduct.CurrencyIsoCode;
 			      			if(accountproduct.Payment_Option__c == null) throw new myException('Oops');
 			      			else if(accountproduct.Payment_Option__c == 'Eway' || accountproduct.Payment_Option__c == 'Commweb' || accountproduct.Payment_Option__c == 'Direct Debit')      invoice.Due_Date__c = date.today();
@@ -146,15 +156,15 @@ global class InvoiceCreateTest implements Database.batchable<Account_Product__c>
 								}
 								System.debug('Before invoice update');
 								update invoice;
-								System.debug('After invoice update'); 
-								
+								System.debug('After invoice update'); 								
 			        		}
+
 			      		}catch(Exception e){
-	      					System.debug('Exception:'+e.getMessage());
+	      					System.debug('Exception:'+e.getStackTraceString());
 	      					if(e.getMessage()=='Oops'){
 	      						emailBody += '<p>[Error] Unable to create invoice, no payment method attached. Please check account product: <a href=https://ap1.salesforce.com/' + accountproduct.Id +'>'+accountproduct.Name+'</a>.</p>';}
 	      					else 
-	      					 	emailBody += '<p>[Error] Unable to create invoice, please check account product: <a href=https://ap1.salesforce.com/' + accountproduct.Id +'>'+accountproduct.Name+'</a>. Error Message: '+e.getMessage()+'.</p> ';
+	      					 	emailBody += '<p>[Error] Unable to create invoice, please check account product: <a href=https://ap1.salesforce.com/' + accountproduct.Id +'>'+accountproduct.Name+'</a>. Error Message: '+e.getStackTraceString()+ '/' +e.getCause() +'.</p> ';
       					}
 		      		}else if(invoice_date < date.today()){
 		      			emailBody += '<p>[Notice] Either Last Invoice Date or Product Status is not accurate, please check account product: <a href=https://ap1.salesforce.com/' + accountproduct.Id +'>'+accountproduct.Name+'</a>.</p> ';
@@ -175,7 +185,7 @@ global class InvoiceCreateTest implements Database.batchable<Account_Product__c>
 			update accountproducts;
    		}catch(Exception e){
 	   		System.debug('Exception:'+e.getMessage());
-	   		emailBody += '[Error] Unable to update batch of account products</a>. Error Message: '+e.getMessage()+'.</p>';
+	   		emailBody += '[Error] Unable to update batch of account products</a>. Error Message: '+e.getStackTraceString()+ '/' +e.getCause() + '.</p>';
       	}
     }
 	
@@ -184,8 +194,11 @@ global class InvoiceCreateTest implements Database.batchable<Account_Product__c>
 		System.debug('EmailBody: '+emailBody);
 	 	if(this.emailBody != ''){
 			Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-			String[] toAddresses   = new String[] {'grace.james@sponsoredlinx.com', 'tracey.daken@sponsoredlinx.com', 'william.zhang@sponsoredlinx.com'};
+			String[] toAddresses   = new String[] {'grace.james@sponsoredlinx.com','william.zhang@sponsoredlinx.com'};
+			String[] ccAddresses   = new String[] {'kate.luu@sponsoredlinx.com'};
+			
 			mail.setToAddresses(toAddresses);
+			mail.setCCAddresses( ccAddresses);
 			mail.setSenderDisplayName(Date.today().format());
 			mail.setSubject('Daily Invoice Generation Summary');
 			mail.setBccSender(false);

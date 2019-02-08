@@ -153,8 +153,17 @@ global with sharing class InvoiceReminder {
   public static testMethod void excludeInvoiceReminderTest() {
     Test.startTest();
     
-	Account acc = new Account(name='test',company__c='test',username__c='test',password__c='test');
-	insert acc;
+    Account acc = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
+    insert acc;
+
+    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+    for(Integer i=0;i<1;i++) {                              
+        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = acc.id , 
+                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Tiger Pistol Product').getRecordTypeId());
+        testProducts.add(item);
+    }
+    insert testProducts; 
+
 	
     Invoice__c invoice1 = new Invoice__c();
     invoice1.name = 'test invoice';
@@ -164,6 +173,7 @@ global with sharing class InvoiceReminder {
     invoice1.Payment_Batch__c = null;
     invoice1.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
     invoice1.Account__c = acc.Id;
+    invoice1.Account_Product__c = testProducts.get(0).Id;
     invoice1.Amount_Due__c = 4.50;
     insert invoice1;
 
@@ -181,8 +191,18 @@ global with sharing class InvoiceReminder {
   public static testMethod void excludeInvoiceReminderErrorTest() {
     Test.startTest();
     
-    Account acc = new Account(name='test',company__c='test',username__c='test',password__c='test');
-	insert acc;
+    Account acc = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
+    insert acc;
+
+    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+    for(Integer i=0;i<1;i++) {                              
+        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = acc.id , 
+                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Tiger Pistol Product').getRecordTypeId());
+        testProducts.add(item);
+    }
+    insert testProducts; 
+
+
 
     Invoice__c invoice1 = new Invoice__c();
     invoice1.name = 'test invoice';
@@ -192,6 +212,7 @@ global with sharing class InvoiceReminder {
     invoice1.Payment_Batch__c = null;
     invoice1.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
     invoice1.Account__c = acc.Id;
+    invoice1.Account_Product__c = testProducts.get(0).Id;
     invoice1.Amount_Due__c = 4.50;
     insert invoice1;
 
@@ -209,8 +230,16 @@ global with sharing class InvoiceReminder {
   public static testMethod void includeReminderInvoiceTest() {
     Test.startTest();
     
-    Account acc = new Account(name='test',company__c='test',username__c='test',password__c='test');
-	insert acc;
+    Account acc = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
+    insert acc;
+
+    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+    for(Integer i=0;i<1;i++) {                              
+        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = acc.id , 
+                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Tiger Pistol Product').getRecordTypeId());
+        testProducts.add(item);
+    }
+    insert testProducts; 
 
     Invoice__c invoice1 = new Invoice__c();
     invoice1.name = 'test invoice';
@@ -220,6 +249,7 @@ global with sharing class InvoiceReminder {
     invoice1.Payment_Batch__c = null;
     invoice1.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
     invoice1.Account__c = acc.Id;
+    invoice1.Account_Product__c = testProducts.get(0).Id;
     invoice1.Amount_Due__c = 4.50;
     invoice1.Exclude_Invoice__c = true;
     invoice1.Exclude_Reminder__c = true;
@@ -244,8 +274,16 @@ global with sharing class InvoiceReminder {
     batch1.Batch_Date__c = Date.today();
     batch1.Batch_Type__c = 'Invoices';
     
-    Account acc = new Account(name='test',company__c='test',username__c='test',password__c='test');
-	insert acc;
+    Account acc = new Account(Name ='TestAccount1', username__c='TestAccount1', password__c='TestAccount1', CurrencyIsoCode ='AUD', Phone='78456213',Active__c= true , card_number__c ='3413551010014590', Card_Number_Masked__c ='34XX-XXXX-XXXX-4590' );
+    insert acc;
+
+    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+    for(Integer i=0;i<1;i++) {                              
+        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = acc.id , 
+                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Traditional Products').getRecordTypeId());
+        testProducts.add(item);
+    }
+    insert testProducts; 
 
     Invoice__c invoice1 = new Invoice__c();
     invoice1.name = 'test invoice';
@@ -255,6 +293,7 @@ global with sharing class InvoiceReminder {
     invoice1.Payment_Batch__c = null;
     invoice1.Xero_Contact_Id__c = 'E786047F-6DD3-4D62-B28D-6100D373AA08';
     invoice1.Account__c = acc.Id;
+    invoice1.Account_Product__c = testProducts.get(0).Id;
     invoice1.Amount_Due__c = 4.50;
     invoice1.Exclude_Invoice__c = false;
     invoice1.Exclude_Reminder__c = false;

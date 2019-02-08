@@ -1,0 +1,116 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:36:00.15 (15614808)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (16452995)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (16488073)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (16810519)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (16925785)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (16977781)|ENTERING_MANAGED_PKG|Centify
+14:36:00.15 (19941133)|DML_BEGIN|[324]|Op:Upsert|Type:Centify__Salesforce_Sync_Settings__c|Rows:1
+14:36:00.15 (41782707)|DML_END|[324]
+14:36:00.56 (56222321)|CUMULATIVE_LIMIT_USAGE
+14:36:00.56 (56222321)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:36:00.56 (56222321)|LIMIT_USAGE_FOR_NS|Centify|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:36:00.56 (56222321)|CUMULATIVE_LIMIT_USAGE_END
+
+
+14:35:59.16 (510034582)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (525964117)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (526014015)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (526094751)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (526128749)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (526194159)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (566805531)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (583687053)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (583748224)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (583834715)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (583869128)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (583936732)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (619141909)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (635958275)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (636016577)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (636103446)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (636139367)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (636208673)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (673166350)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (693873793)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (693928717)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (694012319)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (694047554)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (694114875)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (732230434)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (749324279)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (749376892)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (749457181)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (749492774)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (749570098)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787392363)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787458948)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787601252)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787628663)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787799337)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787855606)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (787901470)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (788143410)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (788223738)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (798237765)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (798379941)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (799029845)|ENTERING_MANAGED_PKG|Centify
+14:35:59.16 (799829706)|SOQL_EXECUTE_BEGIN|[16]|Aggregations:0|select id,lastmodifieddate,isdeleted,name,ownerid,has_the_save_strategy_been_implemented__c,status__c,product_type__c from Cases__c where LastModifiedDate >2019-01-09T04:33:31Z AND LastModifiedDate < 2019-01-09T04:36:05Z  ORDER BY SystemModStamp DESC LIMIT 5000  ALL ROWS
+14:35:59.16 (806771473)|SOQL_EXECUTE_END|[16]|Rows:2
+14:35:59.830 (830493536)|CUMULATIVE_LIMIT_USAGE
+14:35:59.830 (830493536)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:35:59.830 (830493536)|LIMIT_USAGE_FOR_NS|Centify|
+  Number of SOQL queries: 0 out of 200
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 60000
+  Maximum heap size: 0 out of 12000000
+  Number of callouts: 0 out of 0
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 0
+  Number of queueable jobs added to the queue: 0 out of 1
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:35:59.830 (830493536)|CUMULATIVE_LIMIT_USAGE_END
+

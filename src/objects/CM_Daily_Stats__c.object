@@ -79,6 +79,18 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Advance_Notes__c</fullName>
+        <description>Advance Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advance Notes with format</inlineHelpText>
+        <label>Advance Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
         <fullName>Adwords_Acc_Activities__c</fullName>
         <externalId>false</externalId>
         <label>Adwords Acc Activities</label>
@@ -393,11 +405,37 @@ if(No_Change_Accounts__c / Active_Clients__c&gt;= 0.1 , 0.5, 1
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Percent_Index__c</fullName>
+        <externalId>false</externalId>
+        <formula>Customer_Service_Index__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Percent Index</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Role__c</fullName>
         <externalId>false</externalId>
         <formula>Owner:User.UserRole.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Index_In_String__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(ROUND(Customer_Service_Index__c * 100,2) ) + &apos;%&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Index In String</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -522,7 +560,6 @@ if(No_Change_Accounts__c / Active_Clients__c&gt;= 0.1 , 0.5, 1
     <listViews>
         <fullName>Customer_Service_Index_SLX</fullName>
         <columns>NAME</columns>
-        <columns>isGMT__c</columns>
         <columns>Role__c</columns>
         <columns>isActive__c</columns>
         <columns>OWNER.FIRST_NAME</columns>
@@ -536,21 +573,17 @@ if(No_Change_Accounts__c / Active_Clients__c&gt;= 0.1 , 0.5, 1
         <columns>No_Contact_Clients__c</columns>
         <columns>No_Change_Accounts__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>NPS__c</columns>
         <filterScope>Everything</filterScope>
-        <filters>
-            <field>CREATED_DATE</field>
-            <operation>equals</operation>
-            <value>YESTERDAY</value>
-        </filters>
-        <filters>
-            <field>Total_Emails__c</field>
-            <operation>greaterThan</operation>
-            <value>0</value>
-        </filters>
         <filters>
             <field>Role__c</field>
             <operation>notContain</operation>
             <value>gmt</value>
+        </filters>
+        <filters>
+            <field>isActive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
         </filters>
         <label>Customer Service Index - SLX</label>
         <sharedTo>
@@ -609,6 +642,7 @@ if(No_Change_Accounts__c / Active_Clients__c&gt;= 0.1 , 0.5, 1
         <columns>NPS__c</columns>
         <columns>Email_Response_Time__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>Customer_Service_Index__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Total_Emails__c</field>

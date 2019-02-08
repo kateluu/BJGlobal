@@ -524,7 +524,7 @@
         </sharedTo>
     </listViews>
     <listViews>
-        <fullName>All</fullName>
+        <fullName>All_Leads</fullName>
         <columns>CREATED_DATE</columns>
         <columns>Company__c</columns>
         <columns>Lead_Status__c</columns>
@@ -536,13 +536,14 @@
         <columns>From_Source__c</columns>
         <columns>HTTP_Referer__c</columns>
         <columns>IP_Address__c</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>From_Form__c</field>
             <operation>notContain</operation>
             <value>adadviser</value>
         </filters>
-        <label>a All</label>
+        <label>All Leads</label>
         <sharedTo>
             <role>Adwords_SEO_Client_Manger</role>
             <role>BJBDigital</role>
@@ -838,9 +839,14 @@
             <value>andreotti</value>
         </filters>
         <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <filters>
             <field>Lead_Status__c</field>
             <operation>equals</operation>
-            <value>New,Follow Up</value>
+            <value>New,Follow Up,Uncontactable,Not Interested</value>
         </filters>
         <label>DST - Daniel Andreotti</label>
         <sharedTo>

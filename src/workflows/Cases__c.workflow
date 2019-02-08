@@ -30,6 +30,28 @@
         <template>Cases/NewassignmentnotificationSAMPLE</template>
     </alerts>
     <alerts>
+        <fullName>Save_Strategy_Implementation_Confirm_Required</fullName>
+        <description>Save Strategy Implementation Confirm Required</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ben@bjbglobal.com.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CM_Email_Templates/Productive_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Save_Strategy_Implemented_after_48h</fullName>
+        <description>Save Strategy Implemented after 48h</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Owner_Manager__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Cases/Confirm_Save_Strategy_Implemented</template>
+    </alerts>
+    <alerts>
         <fullName>Send_out_email_notification_to_assigned_resolution_manager_1_when_a_case_is_esca</fullName>
         <description>Send out email notification to assigned resolution manager when a case is escalated</description>
         <protected>false</protected>
@@ -40,6 +62,24 @@
         <senderAddress>contact@sponsoredlinx.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>Cases/NewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Unresolve_Cancellation_Case</fullName>
+        <description>Unresolve Cancellation Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>SLX_CM_Group</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>david.powell@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Cases/Unresolve_Cancellation_Save</template>
     </alerts>
     <alerts>
         <fullName>X48_Hours_Alert</fullName>
@@ -123,8 +163,6 @@
         <fullName>Update_Resolution_Manager</fullName>
         <description>Update Resolution Manager To Courtney</description>
         <field>Resolution_Manager__c</field>
-        <lookupValue>courtney.leech@sponsoredlinx.com</lookupValue>
-        <lookupValueType>User</lookupValueType>
         <name>Update Resolution Manager</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>LookupValue</operation>
@@ -150,9 +188,9 @@
         <protected>false</protected>
     </fieldUpdates>
     <outboundMessages>
-        <fullName>Move_Escalated_Cases_TO_RM_MCC</fullName>
+        <fullName>Move_Escalated_Cases_Between_RM_CM_MCC</fullName>
         <apiVersion>43.0</apiVersion>
-        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
+        <endpointUrl>http://staging.clientpanel.sponsoredlinx.com.au/api/adwordsapi/transfer</endpointUrl>
         <fields>Adwords_ID__c</fields>
         <fields>BJB_Company__c</fields>
         <fields>Id</fields>
@@ -161,7 +199,7 @@
         <fields>OwnerId</fields>
         <includeSessionId>false</includeSessionId>
         <integrationUser>ben@bjbglobal.com.au</integrationUser>
-        <name>Move Escalated Cases TO RM MCC</name>
+        <name>Move Escalated Cases Between RM &amp; CM MCC</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>
     </outboundMessages>
@@ -229,6 +267,35 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Ensure the save strategy implementation must be confirmed</fullName>
+        <actions>
+            <name>Save_Strategy_Implementation_Confirm_Required</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Cases__c.Account_Resolution__c</field>
+            <operation>equals</operation>
+            <value>Save</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.CaseType__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Escalated</value>
+        </criteriaItems>
+        <description>if &apos;the save strategy has been implemented&apos; they are required to tick a box or say yes or select yes to confirm this has been followed and done</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
         <fullName>Escalated Cases</fullName>
         <actions>
             <name>Update_Escalated_Date</name>
@@ -245,7 +312,7 @@
     <rules>
         <fullName>Move Escalated Cases TO RM MCC</fullName>
         <actions>
-            <name>Move_Escalated_Cases_TO_RM_MCC</name>
+            <name>Move_Escalated_Cases_Between_RM_CM_MCC</name>
             <type>OutboundMessage</type>
         </actions>
         <active>true</active>
@@ -268,6 +335,59 @@
             <operation>notEqual</operation>
             <value>Save</value>
         </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Move Saved Cases Back TO CM MCC</fullName>
+        <actions>
+            <name>Move_Escalated_Cases_Between_RM_CM_MCC</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Cases__c.Resolution_Manager__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>AdWords Management</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.CaseType__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Account_Resolution__c</field>
+            <operation>equals</operation>
+            <value>Save</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Linked_to_MCC__c</field>
+            <operation>equals</operation>
+            <value>RM</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Case Owner - Unresolved Cancellation</fullName>
+        <actions>
+            <name>Unresolve_Cancellation_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Cases__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Unresolved</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Account_Resolution__c</field>
+            <operation>equals</operation>
+            <value>Cancellation</value>
+        </criteriaItems>
+        <description>Notify Case Owner Once Case Unresolved</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>CUST_NAME</field>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>CM_Daily_Stats__c.Customer_Service_Index__c</field>
     </columns>
     <columns>
         <field>CM_Daily_Stats__c.Setup_within_24_Hrs__c</field>
+    </columns>
+    <columns>
+        <field>CM_Daily_Stats__c.Active_Clients__c</field>
     </columns>
     <columns>
         <field>CM_Daily_Stats__c.Acc_Built_in_48_Hrs__c</field>
@@ -34,14 +38,12 @@
         <field>CM_Daily_Stats__c.Credits_Issued__c</field>
     </columns>
     <currency>AUD</currency>
-    <filter>
-        <criteriaItems>
-            <column>CM_Daily_Stats__c.Email_Received__c</column>
-            <operator>greaterThan</operator>
-            <value>0</value>
-        </criteriaItems>
-    </filter>
-    <format>Tabular</format>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
     <name>Customer Service Index</name>
     <params>
         <name>co</name>
@@ -49,13 +51,11 @@
     </params>
     <reportType>CustomEntity$CM_Daily_Stats__c</reportType>
     <scope>organization</scope>
-    <showDetails>true</showDetails>
-    <sortColumn>CUST_NAME</sortColumn>
-    <sortOrder>Desc</sortOrder>
+    <showDetails>false</showDetails>
     <timeFrameFilter>
         <dateColumn>CUST_CREATED_DATE</dateColumn>
-        <endDate>2017-08-23</endDate>
+        <endDate>2018-11-01</endDate>
         <interval>INTERVAL_CUSTOM</interval>
-        <startDate>2017-08-23</startDate>
+        <startDate>2018-10-26</startDate>
     </timeFrameFilter>
 </Report>

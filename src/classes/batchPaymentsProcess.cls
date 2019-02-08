@@ -410,9 +410,8 @@ global class batchPaymentsProcess implements Database.batchable<Invoice__c>,Data
           current_invoice.Payment_Message__c = 'FAILURE: ' + paymentAttempt.Response_Message__c;
           current_invoice.Payment_Response__c = paymentAttempt.Gateway_Transaction_Id__c;
         }
-      } else {
-        current_invoice.Payment_Message__c = 'This is not a '+this.paymentMethod+' invoice';
-        current_invoice.Payment_Response__c = '--';
+      } else if(current_invoice.Payment_Option__c != this.paymentMethod) {
+          current_invoice.Payment_Message__c = 'This is not a '+this.paymentMethod+' invoice';          
       }
       current_invoice.Processed__c = true;
 

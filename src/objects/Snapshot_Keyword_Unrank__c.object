@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Snapshot Keyword Unrank</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Google_Unranked_Count_DaysAgo2__c</fullName>
+        <description>Google Unranked Count DaysAgo2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Google Unranked Count DaysAgo2</inlineHelpText>
+        <label>Google Unranked Count DaysAgo2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Unranked_Count__c</fullName>
+        <description>Google Unranked Count</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Google Unranked Count</inlineHelpText>
+        <label>Google Unranked Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Google_Unranked_Increase_2_days__c</fullName>
+        <description>Google Unranked Increase 2 days</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Google Unranked Increase 2 days</inlineHelpText>
+        <label>Google Unranked Increase 2 days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Keyword_Count__c</fullName>
+        <description>Keywords</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Keywords</inlineHelpText>
+        <label>Keywords</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Owner_Email__c</fullName>
+        <description>Project Owner Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Project Owner Email</inlineHelpText>
+        <label>Project Owner Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Owner_Name__c</fullName>
+        <description>Owner</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner</inlineHelpText>
+        <label>Project Owner Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SEO_Website__c</fullName>
+        <description>Snapshot Keyword Unrank</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Snapshot Keyword Unrank</inlineHelpText>
+        <label>SEO Website</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>URL__c</fullName>
+        <description>website_url__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>website_url__c</inlineHelpText>
+        <label>URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Snapshot Keyword Unrank</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Google_Unranked_Count__c</columns>
+        <columns>Google_Unranked_Count_DaysAgo2__c</columns>
+        <columns>Google_Unranked_Increase_2_days__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Project_Owner_Name__c</columns>
+        <columns>SEO_Website__c</columns>
+        <columns>URL__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Today</fullName>
+        <columns>NAME</columns>
+        <columns>Google_Unranked_Count__c</columns>
+        <columns>Google_Unranked_Count_DaysAgo2__c</columns>
+        <columns>Google_Unranked_Increase_2_days__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Project_Owner_Email__c</columns>
+        <columns>Project_Owner_Name__c</columns>
+        <columns>SEO_Website__c</columns>
+        <columns>URL__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today</label>
+    </listViews>
+    <listViews>
+        <fullName>Yesterday</fullName>
+        <columns>NAME</columns>
+        <columns>Google_Unranked_Count__c</columns>
+        <columns>Google_Unranked_Count_DaysAgo2__c</columns>
+        <columns>Google_Unranked_Increase_2_days__c</columns>
+        <columns>Keyword_Count__c</columns>
+        <columns>Project_Owner_Email__c</columns>
+        <columns>Project_Owner_Name__c</columns>
+        <columns>SEO_Website__c</columns>
+        <columns>URL__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Yesterday</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SEO-{00000}</displayFormat>
+        <label>Snapshot Keyword Unrank Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Snapshot Keyword Unranks</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

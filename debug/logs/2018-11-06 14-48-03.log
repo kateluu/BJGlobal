@@ -1,0 +1,438 @@
+24.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+14:48:02.0 (94312)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+14:48:02.0 (130248)|EXECUTION_STARTED
+14:48:02.0 (136616)|CODE_UNIT_STARTED|[EXTERNAL]|06690000001JylY|VF: /apex/sfInvoiceList
+14:48:02.0 (10103254)|SYSTEM_MODE_ENTER|true
+14:48:02.0 (10524807)|HEAP_ALLOCATE|[72]|Bytes:3
+14:48:02.0 (10567881)|HEAP_ALLOCATE|[77]|Bytes:152
+14:48:02.0 (10582173)|HEAP_ALLOCATE|[342]|Bytes:408
+14:48:02.0 (10593486)|HEAP_ALLOCATE|[355]|Bytes:408
+14:48:02.0 (10604082)|HEAP_ALLOCATE|[467]|Bytes:48
+14:48:02.0 (10628315)|HEAP_ALLOCATE|[139]|Bytes:6
+14:48:02.0 (10644509)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+14:48:02.0 (10650153)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+14:48:02.0 (10653785)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (10657549)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:538
+14:48:02.0 (10666632)|METHOD_ENTRY|[1]|01p90000001RtUP|sfInvoiceList.sfInvoiceList()
+14:48:02.0 (10673734)|STATEMENT_EXECUTE|[1]
+14:48:02.0 (10677965)|STATEMENT_EXECUTE|[1]
+14:48:02.0 (10705618)|HEAP_ALLOCATE|[50]|Bytes:5
+14:48:02.0 (10726998)|HEAP_ALLOCATE|[56]|Bytes:5
+14:48:02.0 (10734622)|HEAP_ALLOCATE|[64]|Bytes:7
+14:48:02.0 (10749618)|SYSTEM_MODE_ENTER|false
+14:48:02.0 (10765008)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+14:48:02.0 (10769766)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (10774717)|SYSTEM_MODE_EXIT|false
+14:48:02.0 (10783276)|METHOD_EXIT|[1]|sfInvoiceList
+14:48:02.0 (10796360)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+14:48:02.0 (10811609)|VARIABLE_SCOPE_BEGIN|[17]|this|sfInvoiceList|true|false
+14:48:02.0 (10854094)|VARIABLE_ASSIGNMENT|[17]|this|{}|0x43ef7e35
+14:48:02.0 (10862937)|VARIABLE_SCOPE_BEGIN|[17]|controller|ApexPages.StandardController|true|false
+14:48:02.0 (11188251)|VARIABLE_ASSIGNMENT|[17]|controller|"StandardController [null]"|0x2a651185
+14:48:02.0 (11205590)|SYSTEM_MODE_ENTER|false
+14:48:02.0 (11213295)|HEAP_ALLOCATE|[18]|Bytes:5
+14:48:02.0 (11218592)|STATEMENT_EXECUTE|[1]
+14:48:02.0 (11221848)|HEAP_ALLOCATE|[18]|Bytes:5
+14:48:02.0 (11225595)|STATEMENT_EXECUTE|[2]
+14:48:02.0 (11247174)|HEAP_ALLOCATE|[18]|Bytes:6
+14:48:02.0 (11308872)|STATEMENT_EXECUTE|[17]
+14:48:02.0 (11311464)|STATEMENT_EXECUTE|[18]
+14:48:02.0 (18373614)|HEAP_ALLOCATE|[18]|Bytes:12
+14:48:02.0 (18403270)|VARIABLE_SCOPE_BEGIN|[18]|acc|Account|true|false
+14:48:02.0 (18432425)|VARIABLE_ASSIGNMENT|[18]|acc|{"CurrencyIsoCode":"AUD","Id":"0016F00002TGicZQAT"}|0x167e8f62
+14:48:02.0 (18439109)|STATEMENT_EXECUTE|[19]
+14:48:02.0 (18453775)|HEAP_ALLOCATE|[19]|Bytes:394
+14:48:02.0 (18480109)|HEAP_ALLOCATE|[19]|Bytes:4
+14:48:02.0 (18494534)|HEAP_ALLOCATE|[19]|Bytes:7
+14:48:02.0 (19851772)|SOQL_EXECUTE_BEGIN|[19]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+14:48:02.0 (29443072)|SOQL_EXECUTE_END|[19]|Rows:10
+14:48:02.0 (29482550)|HEAP_ALLOCATE|[19]|Bytes:44
+14:48:02.0 (29555788)|HEAP_ALLOCATE|[19]|Bytes:5630
+14:48:02.0 (29657452)|HEAP_ALLOCATE|[19]|Bytes:44
+14:48:02.0 (29685219)|VARIABLE_SCOPE_BEGIN|[19]|invoices|List<Invoice__c>|true|false
+14:48:02.0 (29724666)|VARIABLE_ASSIGNMENT|[19]|invoices|"List of size 10 too large to display"|0x9418d3a
+14:48:02.0 (29737883)|STATEMENT_EXECUTE|[40]
+14:48:02.0 (29766793)|HEAP_ALLOCATE|[40]|Bytes:4
+14:48:02.0 (29940128)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x43ef7e35
+14:48:02.0 (29970165)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (29985658)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x774d623b
+14:48:02.0 (30009775)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x43ef7e35
+14:48:02.0 (30028938)|STATEMENT_EXECUTE|[42]
+14:48:02.0 (30044804)|VARIABLE_SCOPE_BEGIN|[42]|i|Integer|false|false
+14:48:02.0 (30058514)|HEAP_ALLOCATE|[42]|Bytes:4
+14:48:02.0 (30071442)|VARIABLE_ASSIGNMENT|[42]|i|0
+14:48:02.0 (30359379)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (30393112)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (30408327)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (30497016)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002GREQjUAP","Name":"SaveUEnergy","Invoice_Number__c":"000938610","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-05T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x3d8df6b6
+14:48:02.0 (30523076)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (30525806)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (30537934)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (30550883)|VARIABLE_ASSIGNMENT|[44]|i|1
+14:48:02.0 (30557623)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (30611722)|USER_DEBUG|[45]|DEBUG|1
+14:48:02.0 (30625457)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (30717526)|HEAP_ALLOCATE|[46]|Bytes:112
+14:48:02.0 (30729571)|HEAP_ALLOCATE|[46]|Bytes:5
+14:48:02.0 (30750545)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (30776888)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (30811322)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (30849024)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x6732805b
+14:48:02.0 (30883426)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (30886939)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (30895641)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (30907812)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (30920003)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (30943343)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x6732805b
+14:48:02.0 (30954438)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (31029996)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6732805b
+14:48:02.0 (31101347)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002GREQjUAP","Name":"SaveUEnergy","Invoice_Number__c":"000938610","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-05T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x3d8df6b6
+14:48:02.0 (31175058)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002GREQjUAP","Name":"SaveUEnergy","Invoice_Number__c":"000938610","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-11-05T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-11-05T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x6732805b
+14:48:02.0 (31321739)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (31337121)|HEAP_ALLOCATE|[51]|Bytes:4
+14:48:02.0 (31428929)|HEAP_ALLOCATE|[53]|Bytes:6
+14:48:02.0 (31476264)|HEAP_ALLOCATE|[55]|Bytes:3
+14:48:02.0 (31760225)|HEAP_ALLOCATE|[57]|Bytes:7
+14:48:02.0 (31842105)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (31845747)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (31857194)|HEAP_ALLOCATE|[58]|Bytes:7
+14:48:02.0 (31921692)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x3d8df6b6"}|0x6732805b
+14:48:02.0 (31939140)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (31955027)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x6732805b
+14:48:02.0 (31969692)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (32014602)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (32049603)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (32072030)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (32090945)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (32101940)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (32169767)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002FF5dpUAD","Name":"SaveUEnergy","Invoice_Number__c":"000934560","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-29T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x79d12034
+14:48:02.0 (32193250)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (32195673)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (32204806)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (32221122)|VARIABLE_ASSIGNMENT|[44]|i|2
+14:48:02.0 (32228263)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (32246289)|USER_DEBUG|[45]|DEBUG|2
+14:48:02.0 (32258350)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (32267611)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (32277346)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (32287722)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (32311369)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x983714
+14:48:02.0 (32333593)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (32336229)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (32342177)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (32351331)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (32362468)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (32381292)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x983714
+14:48:02.0 (32390012)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (32411117)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x983714
+14:48:02.0 (32475352)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002FF5dpUAD","Name":"SaveUEnergy","Invoice_Number__c":"000934560","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-29T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x79d12034
+14:48:02.0 (32547013)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002FF5dpUAD","Name":"SaveUEnergy","Invoice_Number__c":"000934560","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-29T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-29T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x983714
+14:48:02.0 (32592119)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (32686634)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (32713874)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (32749666)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x79d12034"}|0x983714
+14:48:02.0 (32765416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (32779091)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x983714
+14:48:02.0 (32811123)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (32839394)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (32862936)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (32883184)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (32900314)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (32910909)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (32977810)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002E71egUAB","Name":"SaveUEnergy","Invoice_Number__c":"000929956","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-22T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x6a4587c0
+14:48:02.0 (32997643)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (32999949)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (33008310)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (33020040)|VARIABLE_ASSIGNMENT|[44]|i|3
+14:48:02.0 (33026126)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (33041917)|USER_DEBUG|[45]|DEBUG|3
+14:48:02.0 (33053770)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (33062818)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (33071876)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (33082363)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (33105716)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x2d3bb0a3
+14:48:02.0 (33126817)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (33129899)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (33137082)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (33145865)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (33175323)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (33197616)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x2d3bb0a3
+14:48:02.0 (33205616)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (33227243)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x2d3bb0a3
+14:48:02.0 (33269382)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002E71egUAB","Name":"SaveUEnergy","Invoice_Number__c":"000929956","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-22T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x6a4587c0
+14:48:02.0 (33312986)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002E71egUAB","Name":"SaveUEnergy","Invoice_Number__c":"000929956","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-22T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-22T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x2d3bb0a3
+14:48:02.0 (33340536)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (33399585)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (33402176)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (33427283)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x6a4587c0"}|0x2d3bb0a3
+14:48:02.0 (33436877)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (33444930)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x2d3bb0a3
+14:48:02.0 (33453456)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (33469320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (33484155)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (33499588)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (33511256)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (33518781)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (33560194)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002D8CVXUA3","Name":"SaveUEnergy","Invoice_Number__c":"000926418","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-15T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x7ea1b713
+14:48:02.0 (33571424)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (33573103)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (33578807)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (33586016)|VARIABLE_ASSIGNMENT|[44]|i|4
+14:48:02.0 (33589877)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (33604196)|USER_DEBUG|[45]|DEBUG|4
+14:48:02.0 (33612160)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (33618450)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (33624414)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (33631580)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (33646650)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x4860e871
+14:48:02.0 (33660567)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (33662542)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (33666894)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (33672536)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (33679364)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (33692033)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x4860e871
+14:48:02.0 (33696957)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (33710442)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x4860e871
+14:48:02.0 (33749535)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002D8CVXUA3","Name":"SaveUEnergy","Invoice_Number__c":"000926418","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-15T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x7ea1b713
+14:48:02.0 (33789845)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002D8CVXUA3","Name":"SaveUEnergy","Invoice_Number__c":"000926418","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-15T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-15T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x4860e871
+14:48:02.0 (33814054)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (33864020)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (33865838)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (33884155)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x7ea1b713"}|0x4860e871
+14:48:02.0 (33893442)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (33901227)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x4860e871
+14:48:02.0 (33908838)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (33923244)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (33937140)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (33950197)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (33960164)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (33966945)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (34007747)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002BwrozUAB","Name":"SaveUEnergy","Invoice_Number__c":"000922712","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-08T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-08T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x2ccbc637
+14:48:02.0 (34019836)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (34021424)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (34026884)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (34033318)|VARIABLE_ASSIGNMENT|[44]|i|5
+14:48:02.0 (34037589)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (34046873)|USER_DEBUG|[45]|DEBUG|5
+14:48:02.0 (34055002)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (34060730)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (34066103)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (34072239)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (34085616)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x6af1e12
+14:48:02.0 (34099389)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (34101170)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (34105376)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (34110817)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (34117194)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (34129614)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x6af1e12
+14:48:02.0 (34134481)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (34147714)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6af1e12
+14:48:02.0 (34185802)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002BwrozUAB","Name":"SaveUEnergy","Invoice_Number__c":"000922712","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-08T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-08T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x2ccbc637
+14:48:02.0 (34244013)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002BwrozUAB","Name":"SaveUEnergy","Invoice_Number__c":"000922712","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-08T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-08T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x6af1e12
+14:48:02.0 (34269307)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (34334481)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (34336507)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (34356689)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x2ccbc637"}|0x6af1e12
+14:48:02.0 (34365556)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (34372825)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x6af1e12
+14:48:02.0 (34381276)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (34395931)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (34410092)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (34422805)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (34433848)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (34440739)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (34489225)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F00002ApnimUAB","Name":"SaveUEnergy","Invoice_Number__c":"000919428","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-01T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-01T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x5c6b931a
+14:48:02.0 (34511261)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (34513747)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (34522068)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (34533445)|VARIABLE_ASSIGNMENT|[44]|i|6
+14:48:02.0 (34542714)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (34560914)|USER_DEBUG|[45]|DEBUG|6
+14:48:02.0 (34575234)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (34584774)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (34595396)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (34605711)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (34629761)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x474eb944
+14:48:02.0 (34652612)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (34655384)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (34662261)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (34669031)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (34677069)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (34690803)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x474eb944
+14:48:02.0 (34696193)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (34710779)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x474eb944
+14:48:02.0 (34754293)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002ApnimUAB","Name":"SaveUEnergy","Invoice_Number__c":"000919428","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-01T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-01T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x5c6b931a
+14:48:02.0 (34795735)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F00002ApnimUAB","Name":"SaveUEnergy","Invoice_Number__c":"000919428","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-01T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-10-01T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x474eb944
+14:48:02.0 (34822725)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (34874776)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (34876609)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (34895532)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x5c6b931a"}|0x474eb944
+14:48:02.0 (34905201)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (34912716)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x474eb944
+14:48:02.0 (34921301)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (34936515)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (34951358)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (34965841)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (34977601)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (34985158)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (35028023)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000029ebTEUAY","Name":"SaveUEnergy","Invoice_Number__c":"000916160","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-24T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x1a5664d0
+14:48:02.0 (35040326)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (35042040)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (35047630)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (35054914)|VARIABLE_ASSIGNMENT|[44]|i|7
+14:48:02.0 (35059098)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (35068967)|USER_DEBUG|[45]|DEBUG|7
+14:48:02.0 (35076187)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (35082070)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (35087193)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (35093522)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (35108820)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x3780a7a6
+14:48:02.0 (35128899)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (35131562)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (35137643)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (35145979)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (35157306)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (35177908)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x3780a7a6
+14:48:02.0 (35187720)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (35208719)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3780a7a6
+14:48:02.0 (35256030)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000029ebTEUAY","Name":"SaveUEnergy","Invoice_Number__c":"000916160","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-24T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x1a5664d0
+14:48:02.0 (35299213)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000029ebTEUAY","Name":"SaveUEnergy","Invoice_Number__c":"000916160","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-24T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-24T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x3780a7a6
+14:48:02.0 (35325525)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (35401644)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (35404750)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (35432821)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x1a5664d0"}|0x3780a7a6
+14:48:02.0 (35443099)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (35451407)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x3780a7a6
+14:48:02.0 (35460131)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (35479053)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (35507977)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (35529310)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (35545749)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (35555472)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (35619381)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000028brn3UAA","Name":"SaveUEnergy","Invoice_Number__c":"000912650","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-17T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x693c51a6
+14:48:02.0 (35637653)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (35639676)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (35648193)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (35659971)|VARIABLE_ASSIGNMENT|[44]|i|8
+14:48:02.0 (35665813)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (35681490)|USER_DEBUG|[45]|DEBUG|8
+14:48:02.0 (35692376)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (35701433)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (35710244)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (35720575)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (35744036)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x786ce247
+14:48:02.0 (35766277)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (35769316)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (35776516)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (35785360)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (35797760)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (35819389)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x786ce247
+14:48:02.0 (35827804)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (35850842)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x786ce247
+14:48:02.0 (35910438)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000028brn3UAA","Name":"SaveUEnergy","Invoice_Number__c":"000912650","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-17T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x693c51a6
+14:48:02.0 (35978789)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000028brn3UAA","Name":"SaveUEnergy","Invoice_Number__c":"000912650","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-17T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-17T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x786ce247
+14:48:02.0 (36019272)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (36090771)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (36092954)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (36117816)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x693c51a6"}|0x786ce247
+14:48:02.0 (36128163)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (36136460)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x786ce247
+14:48:02.0 (36145310)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (36160490)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (36174744)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (36190470)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (36206479)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (36223907)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (36290420)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000027O6bgUAC","Name":"SaveUEnergy","Invoice_Number__c":"000909407","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-10T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x1bb4d8c8
+14:48:02.0 (36309502)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (36312053)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (36320707)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (36331835)|VARIABLE_ASSIGNMENT|[44]|i|9
+14:48:02.0 (36336170)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (36348559)|USER_DEBUG|[45]|DEBUG|9
+14:48:02.0 (36356654)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (36362862)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (36368703)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (36375537)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (36391844)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x6cd2cd6
+14:48:02.0 (36406721)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (36408818)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (36412777)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (36418775)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (36425939)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (36438644)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x6cd2cd6
+14:48:02.0 (36446411)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (36468132)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6cd2cd6
+14:48:02.0 (36526970)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000027O6bgUAC","Name":"SaveUEnergy","Invoice_Number__c":"000909407","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-10T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x1bb4d8c8
+14:48:02.0 (36593039)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000027O6bgUAC","Name":"SaveUEnergy","Invoice_Number__c":"000909407","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":99.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-10T00:00:00.000Z","Invoice_Total__c":99.00,"Issue_Date__c":"2018-09-10T00:00:00.000Z","Account_Product__c":"a076F00000qK8S2QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S2QAK","CurrencyIsoCode":"AUD"}}|0x6cd2cd6
+14:48:02.0 (36625099)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (36678457)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (36680347)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (36702069)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x1bb4d8c8"}|0x6cd2cd6
+14:48:02.0 (36711540)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (36722963)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x6cd2cd6
+14:48:02.0 (36734984)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (36757436)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (36780198)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (36800467)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (36817127)|HEAP_ALLOCATE|[43]|Bytes:64
+14:48:02.0 (36831819)|VARIABLE_SCOPE_BEGIN|[43]|inv|Invoice__c|true|false
+14:48:02.0 (36896346)|VARIABLE_ASSIGNMENT|[43]|inv|{"Id":"a0E6F000026JZ1PUAW","Name":"SaveUEnergy","Invoice_Number__c":"INV030918005732-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":199.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-03T00:00:00.000Z","Invoice_Total__c":199.00,"Issue_Date__c":"2018-09-03T00:00:00.000Z","Account_Product__c":"a076F00000qK8S1QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S1QAK","CurrencyIsoCode":"AUD"}}|0x1b476be7
+14:48:02.0 (36915102)|STATEMENT_EXECUTE|[43]
+14:48:02.0 (36917212)|STATEMENT_EXECUTE|[44]
+14:48:02.0 (36926715)|HEAP_ALLOCATE|[44]|Bytes:4
+14:48:02.0 (36937844)|VARIABLE_ASSIGNMENT|[44]|i|10
+14:48:02.0 (36943891)|STATEMENT_EXECUTE|[45]
+14:48:02.0 (36959322)|USER_DEBUG|[45]|DEBUG|10
+14:48:02.0 (36968439)|STATEMENT_EXECUTE|[46]
+14:48:02.0 (36975035)|HEAP_ALLOCATE|[46]|Bytes:12
+14:48:02.0 (36981090)|CONSTRUCTOR_ENTRY|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (36987871)|VARIABLE_SCOPE_BEGIN|[77]|this|sfInvoiceList.InvRow|true|false
+14:48:02.0 (37004930)|VARIABLE_ASSIGNMENT|[77]|this|{}|0x347b31d2
+14:48:02.0 (37020239)|STATEMENT_EXECUTE|[77]
+14:48:02.0 (37022455)|STATEMENT_EXECUTE|[78]
+14:48:02.0 (37026684)|STATEMENT_EXECUTE|[79]
+14:48:02.0 (37032872)|CONSTRUCTOR_EXIT|[46]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+14:48:02.0 (37039510)|VARIABLE_SCOPE_BEGIN|[46]|ir|sfInvoiceList.InvRow|true|false
+14:48:02.0 (37052732)|VARIABLE_ASSIGNMENT|[46]|ir|{}|0x347b31d2
+14:48:02.0 (37058622)|STATEMENT_EXECUTE|[47]
+14:48:02.0 (37072893)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x347b31d2
+14:48:02.0 (37132512)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000026JZ1PUAW","Name":"SaveUEnergy","Invoice_Number__c":"INV030918005732-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":199.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-03T00:00:00.000Z","Invoice_Total__c":199.00,"Issue_Date__c":"2018-09-03T00:00:00.000Z","Account_Product__c":"a076F00000qK8S1QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S1QAK","CurrencyIsoCode":"AUD"}}|0x1b476be7
+14:48:02.0 (37204240)|VARIABLE_ASSIGNMENT|[78]|this.invoice|{"Id":"a0E6F000026JZ1PUAW","Name":"SaveUEnergy","Invoice_Number__c":"INV030918005732-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":199.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-03T00:00:00.000Z","Invoice_Total__c":199.00,"Issue_Date__c":"2018-09-03T00:00:00.000Z","Account_Product__c":"a076F00000qK8S1QAK","Reference__c":"474826","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qK8S1QAK","CurrencyIsoCode":"AUD"}}|0x347b31d2
+14:48:02.0 (37271577)|STATEMENT_EXECUTE|[50]
+14:48:02.0 (37358828)|STATEMENT_EXECUTE|[57]
+14:48:02.0 (37362043)|STATEMENT_EXECUTE|[58]
+14:48:02.0 (37393948)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x1b476be7"}|0x347b31d2
+14:48:02.0 (37409539)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+14:48:02.0 (37420834)|VARIABLE_ASSIGNMENT|[79]|this.color|"#BCBAE8"|0x347b31d2
+14:48:02.0 (37435113)|STATEMENT_EXECUTE|[71]
+14:48:02.0 (37460443)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (37482542)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+14:48:02.0 (37502380)|HEAP_ALLOCATE|[43]|Bytes:5
+14:48:02.0 (37521737)|VARIABLE_ASSIGNMENT|[43]|inv|null|
+14:48:02.0 (37530785)|STATEMENT_EXECUTE|[74]
+14:48:02.0 (37571363)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x774d623b"}|0x43ef7e35
+14:48:02.0 (38446482)|USER_DEBUG|[74]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002GREQjUAP, Name=SaveUEnergy, Invoice_Number__c=000938610, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-11-05 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-11-05 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002FF5dpUAD, Name=SaveUEnergy, Invoice_Number__c=000934560, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-29 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-29 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002E71egUAB, Name=SaveUEnergy, Invoice_Number__c=000929956, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-22 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-22 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002D8CVXUA3, Name=SaveUEnergy, Invoice_Number__c=000926418, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-15 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-15 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002BwrozUAB, Name=SaveUEnergy, Invoice_Number__c=000922712, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-08 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-08 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002ApnimUAB, Name=SaveUEnergy, Invoice_Number__c=000919428, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-01 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-10-01 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000029ebTEUAY, Name=SaveUEnergy, Invoice_Number__c=000916160, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-24 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-24 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000028brn3UAA, Name=SaveUEnergy, Invoice_Number__c=000912650, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-17 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-17 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000027O6bgUAC, Name=SaveUEnergy, Invoice_Number__c=000909407, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=99.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-10 00:00:00, Invoice_Total__c=99.00, Issue_Date__c=2018-09-10 00:00:00, Account_Product__c=a076F00000qK8S2QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000026JZ1PUAW, Name=SaveUEnergy, Invoice_Number__c=INV030918005732-1, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=199.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-03 00:00:00, Invoice_Total__c=199.00, Issue_Date__c=2018-09-03 00:00:00, Account_Product__c=a076F00000qK8S1QAK, Reference__c=474826, Status__c=PAID, CurrencyIsoCode=AUD}])
+14:48:02.0 (38528315)|SYSTEM_MODE_EXIT|false
+14:48:02.0 (38654932)|SYSTEM_MODE_ENTER|true
+14:48:02.0 (56786102)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000001JylY
+14:48:02.0 (59469545)|VF_SERIALIZE_VIEWSTATE_END
+14:48:02.62 (62500089)|CUMULATIVE_LIMIT_USAGE
+14:48:02.62 (62500089)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 10 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:48:02.62 (62500089)|CUMULATIVE_LIMIT_USAGE_END
+
+14:48:02.0 (62537334)|CODE_UNIT_FINISHED|VF: /apex/sfInvoiceList
+14:48:02.0 (63777912)|EXECUTION_FINISHED

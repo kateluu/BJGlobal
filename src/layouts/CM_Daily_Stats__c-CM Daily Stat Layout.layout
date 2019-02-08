@@ -39,6 +39,10 @@
                 <behavior>Readonly</behavior>
                 <field>isActive__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Service_Index_In_String__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -110,11 +114,19 @@
                 <behavior>Edit</behavior>
                 <field>No_Change_Accounts__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Contact_Client_Cap__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Customer_Service_Index__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Percent_Index__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -135,10 +147,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Outbound_Talk_Cap__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Contact_Client_Cap__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>

@@ -1,0 +1,170 @@
+24.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+18:48:04.0 (76773)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+18:48:04.0 (121133)|EXECUTION_STARTED
+18:48:04.0 (125353)|CODE_UNIT_STARTED|[EXTERNAL]|06690000001JylY|VF: /apex/sfInvoiceList
+18:48:04.0 (7655383)|SYSTEM_MODE_ENTER|true
+18:48:04.0 (8021436)|HEAP_ALLOCATE|[72]|Bytes:3
+18:48:04.0 (8060744)|HEAP_ALLOCATE|[77]|Bytes:152
+18:48:04.0 (8074644)|HEAP_ALLOCATE|[342]|Bytes:408
+18:48:04.0 (8084913)|HEAP_ALLOCATE|[355]|Bytes:408
+18:48:04.0 (8095243)|HEAP_ALLOCATE|[467]|Bytes:48
+18:48:04.0 (8125676)|HEAP_ALLOCATE|[139]|Bytes:6
+18:48:04.0 (8140174)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+18:48:04.0 (8145172)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+18:48:04.0 (8151438)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:48:04.0 (8155513)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:532
+18:48:04.0 (8164342)|METHOD_ENTRY|[1]|01p90000001RtUP|sfInvoiceList.sfInvoiceList()
+18:48:04.0 (8171730)|STATEMENT_EXECUTE|[1]
+18:48:04.0 (8176201)|STATEMENT_EXECUTE|[1]
+18:48:04.0 (8211762)|HEAP_ALLOCATE|[50]|Bytes:5
+18:48:04.0 (8234118)|HEAP_ALLOCATE|[56]|Bytes:5
+18:48:04.0 (8241741)|HEAP_ALLOCATE|[64]|Bytes:7
+18:48:04.0 (8255774)|SYSTEM_MODE_ENTER|false
+18:48:04.0 (8269697)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+18:48:04.0 (8273819)|STATEMENT_EXECUTE|[71]
+18:48:04.0 (8278728)|SYSTEM_MODE_EXIT|false
+18:48:04.0 (8287719)|METHOD_EXIT|[1]|sfInvoiceList
+18:48:04.0 (8301752)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:48:04.0 (8316950)|VARIABLE_SCOPE_BEGIN|[15]|this|sfInvoiceList|true|false
+18:48:04.0 (8358425)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x6a3d4dcd
+18:48:04.0 (8366593)|VARIABLE_SCOPE_BEGIN|[15]|controller|ApexPages.StandardController|true|false
+18:48:04.0 (8555809)|VARIABLE_ASSIGNMENT|[15]|controller|"StandardController [null]"|0x6ac87383
+18:48:04.0 (8571227)|SYSTEM_MODE_ENTER|false
+18:48:04.0 (8578231)|HEAP_ALLOCATE|[16]|Bytes:5
+18:48:04.0 (8583430)|STATEMENT_EXECUTE|[1]
+18:48:04.0 (8586561)|HEAP_ALLOCATE|[16]|Bytes:5
+18:48:04.0 (8590175)|STATEMENT_EXECUTE|[2]
+18:48:04.0 (8609793)|HEAP_ALLOCATE|[16]|Bytes:6
+18:48:04.0 (8645127)|STATEMENT_EXECUTE|[15]
+18:48:04.0 (8647087)|STATEMENT_EXECUTE|[16]
+18:48:04.0 (14285160)|HEAP_ALLOCATE|[16]|Bytes:12
+18:48:04.0 (14313439)|VARIABLE_SCOPE_BEGIN|[16]|acc|Account|true|false
+18:48:04.0 (14340267)|VARIABLE_ASSIGNMENT|[16]|acc|{"CurrencyIsoCode":"AUD","Id":"0016F00002cB6hUQAS"}|0x35a138f0
+18:48:04.0 (14347903)|STATEMENT_EXECUTE|[17]
+18:48:04.0 (14359629)|HEAP_ALLOCATE|[17]|Bytes:394
+18:48:04.0 (14385265)|HEAP_ALLOCATE|[17]|Bytes:4
+18:48:04.0 (14399868)|HEAP_ALLOCATE|[17]|Bytes:7
+18:48:04.0 (18150617)|SOQL_EXECUTE_BEGIN|[17]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+18:48:04.0 (25767180)|SOQL_EXECUTE_END|[17]|Rows:2
+18:48:04.0 (25806349)|HEAP_ALLOCATE|[17]|Bytes:12
+18:48:04.0 (25857968)|HEAP_ALLOCATE|[17]|Bytes:1420
+18:48:04.0 (25977766)|HEAP_ALLOCATE|[17]|Bytes:12
+18:48:04.0 (26003834)|VARIABLE_SCOPE_BEGIN|[17]|invoices|List<Invoice__c>|true|false
+18:48:04.0 (26160142)|VARIABLE_ASSIGNMENT|[17]|invoices|[{"Id":"a0E6F00002ASm7BUAT","Name":"Sponsoredlinx","Invoice_Number__c":"INV280918002138-1","Amount_Credited__c":0.00,"Amount_Due__c":299.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLIIUQA4","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Facebook Lead Ads St (12 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLIIUQA4","CurrencyIsoCode":"AUD"}},{"Id":"a0E6F00002ASmPtUAL","Name":"Protest2_supercahrge (1 more) ...","Invoice_Number__c":"INV280918059212-1","Amount_Credited__c":0.00,"Amount_Due__c":399.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":399.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLJm0QAG","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Social Engage - Supe (14 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLJm0QAG","RecordTypeId":"0126F000001zXB3QAM","CurrencyIsoCode":"AUD"}}]|0x266f08c8
+18:48:04.0 (26200059)|STATEMENT_EXECUTE|[38]
+18:48:04.0 (26224527)|HEAP_ALLOCATE|[38]|Bytes:4
+18:48:04.0 (26395442)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6a3d4dcd
+18:48:04.0 (26424215)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:48:04.0 (26436318)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x289530d1
+18:48:04.0 (26458014)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x6a3d4dcd
+18:48:04.0 (26471127)|STATEMENT_EXECUTE|[40]
+18:48:04.0 (26482266)|VARIABLE_SCOPE_BEGIN|[40]|i|Integer|false|false
+18:48:04.0 (26491524)|HEAP_ALLOCATE|[40]|Bytes:4
+18:48:04.0 (26499133)|VARIABLE_ASSIGNMENT|[40]|i|0
+18:48:04.0 (26711070)|HEAP_ALLOCATE|[41]|Bytes:5
+18:48:04.0 (26736979)|HEAP_ALLOCATE|[41]|Bytes:64
+18:48:04.0 (26749852)|VARIABLE_SCOPE_BEGIN|[41]|inv|Invoice__c|true|false
+18:48:04.0 (26799080)|VARIABLE_ASSIGNMENT|[41]|inv|{"Id":"a0E6F00002ASm7BUAT","Name":"Sponsoredlinx","Invoice_Number__c":"INV280918002138-1","Amount_Credited__c":0.00,"Amount_Due__c":299.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLIIUQA4","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Facebook Lead Ads St (12 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLIIUQA4","CurrencyIsoCode":"AUD"}}|0x33706069
+18:48:04.0 (26811555)|STATEMENT_EXECUTE|[41]
+18:48:04.0 (26813601)|STATEMENT_EXECUTE|[42]
+18:48:04.0 (26821457)|HEAP_ALLOCATE|[42]|Bytes:4
+18:48:04.0 (26828735)|VARIABLE_ASSIGNMENT|[42]|i|1
+18:48:04.0 (26832887)|STATEMENT_EXECUTE|[43]
+18:48:04.0 (26874911)|USER_DEBUG|[43]|DEBUG|1
+18:48:04.0 (26883797)|STATEMENT_EXECUTE|[44]
+18:48:04.0 (26950886)|HEAP_ALLOCATE|[44]|Bytes:112
+18:48:04.0 (26957852)|HEAP_ALLOCATE|[44]|Bytes:5
+18:48:04.0 (26975885)|HEAP_ALLOCATE|[44]|Bytes:12
+18:48:04.0 (26993156)|CONSTRUCTOR_ENTRY|[44]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+18:48:04.0 (27016676)|VARIABLE_SCOPE_BEGIN|[71]|this|sfInvoiceList.InvRow|true|false
+18:48:04.0 (27045269)|VARIABLE_ASSIGNMENT|[71]|this|{}|0x1900eaf1
+18:48:04.0 (27068773)|STATEMENT_EXECUTE|[71]
+18:48:04.0 (27071601)|STATEMENT_EXECUTE|[72]
+18:48:04.0 (27077348)|STATEMENT_EXECUTE|[73]
+18:48:04.0 (27086649)|CONSTRUCTOR_EXIT|[44]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+18:48:04.0 (27094051)|VARIABLE_SCOPE_BEGIN|[44]|ir|sfInvoiceList.InvRow|true|false
+18:48:04.0 (27107060)|VARIABLE_ASSIGNMENT|[44]|ir|{}|0x1900eaf1
+18:48:04.0 (27112675)|STATEMENT_EXECUTE|[45]
+18:48:04.0 (27161612)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x1900eaf1
+18:48:04.0 (27213211)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002ASm7BUAT","Name":"Sponsoredlinx","Invoice_Number__c":"INV280918002138-1","Amount_Credited__c":0.00,"Amount_Due__c":299.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLIIUQA4","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Facebook Lead Ads St (12 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLIIUQA4","CurrencyIsoCode":"AUD"}}|0x33706069
+18:48:04.0 (27261105)|VARIABLE_ASSIGNMENT|[72]|this.invoice|{"Id":"a0E6F00002ASm7BUAT","Name":"Sponsoredlinx","Invoice_Number__c":"INV280918002138-1","Amount_Credited__c":0.00,"Amount_Due__c":299.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLIIUQA4","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Facebook Lead Ads St (12 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLIIUQA4","CurrencyIsoCode":"AUD"}}|0x1900eaf1
+18:48:04.0 (27359804)|STATEMENT_EXECUTE|[48]
+18:48:04.0 (27369563)|HEAP_ALLOCATE|[49]|Bytes:3
+18:48:04.0 (27433157)|HEAP_ALLOCATE|[51]|Bytes:7
+18:48:04.0 (27459548)|HEAP_ALLOCATE|[53]|Bytes:8
+18:48:04.0 (27478249)|STATEMENT_EXECUTE|[53]
+18:48:04.0 (27480172)|STATEMENT_EXECUTE|[54]
+18:48:04.0 (27487087)|HEAP_ALLOCATE|[54]|Bytes:7
+18:48:04.0 (27526918)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x33706069"}|0x1900eaf1
+18:48:04.0 (27537912)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#D2EBC2"
+18:48:04.0 (27547642)|VARIABLE_ASSIGNMENT|[73]|this.color|"#D2EBC2"|0x1900eaf1
+18:48:04.0 (27556515)|STATEMENT_EXECUTE|[65]
+18:48:04.0 (27584892)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x289530d1"}|0x6a3d4dcd
+18:48:04.0 (27607062)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:48:04.0 (27622408)|HEAP_ALLOCATE|[41]|Bytes:5
+18:48:04.0 (27634571)|HEAP_ALLOCATE|[41]|Bytes:64
+18:48:04.0 (27641948)|VARIABLE_SCOPE_BEGIN|[41]|inv|Invoice__c|true|false
+18:48:04.0 (27689437)|VARIABLE_ASSIGNMENT|[41]|inv|{"Id":"a0E6F00002ASmPtUAL","Name":"Protest2_supercahrge (1 more) ...","Invoice_Number__c":"INV280918059212-1","Amount_Credited__c":0.00,"Amount_Due__c":399.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":399.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLJm0QAG","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Social Engage - Supe (14 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLJm0QAG","RecordTypeId":"0126F000001zXB3QAM","CurrencyIsoCode":"AUD"}}|0x82638c8
+18:48:04.0 (27701150)|STATEMENT_EXECUTE|[41]
+18:48:04.0 (27702885)|STATEMENT_EXECUTE|[42]
+18:48:04.0 (27708599)|HEAP_ALLOCATE|[42]|Bytes:4
+18:48:04.0 (27715308)|VARIABLE_ASSIGNMENT|[42]|i|2
+18:48:04.0 (27719460)|STATEMENT_EXECUTE|[43]
+18:48:04.0 (27730453)|USER_DEBUG|[43]|DEBUG|2
+18:48:04.0 (27738229)|STATEMENT_EXECUTE|[44]
+18:48:04.0 (27744341)|HEAP_ALLOCATE|[44]|Bytes:12
+18:48:04.0 (27750615)|CONSTRUCTOR_ENTRY|[44]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+18:48:04.0 (27757207)|VARIABLE_SCOPE_BEGIN|[71]|this|sfInvoiceList.InvRow|true|false
+18:48:04.0 (27772382)|VARIABLE_ASSIGNMENT|[71]|this|{}|0x441cd9f6
+18:48:04.0 (27786810)|STATEMENT_EXECUTE|[71]
+18:48:04.0 (27788701)|STATEMENT_EXECUTE|[72]
+18:48:04.0 (27793146)|STATEMENT_EXECUTE|[73]
+18:48:04.0 (27799204)|CONSTRUCTOR_EXIT|[44]|01p90000001RtUP|<init>()|sfInvoiceList.InvRow
+18:48:04.0 (27805781)|VARIABLE_SCOPE_BEGIN|[44]|ir|sfInvoiceList.InvRow|true|false
+18:48:04.0 (27817554)|VARIABLE_ASSIGNMENT|[44]|ir|{}|0x441cd9f6
+18:48:04.0 (27822764)|STATEMENT_EXECUTE|[45]
+18:48:04.0 (27835490)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x441cd9f6
+18:48:04.0 (27880043)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002ASmPtUAL","Name":"Protest2_supercahrge (1 more) ...","Invoice_Number__c":"INV280918059212-1","Amount_Credited__c":0.00,"Amount_Due__c":399.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":399.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLJm0QAG","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Social Engage - Supe (14 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLJm0QAG","RecordTypeId":"0126F000001zXB3QAM","CurrencyIsoCode":"AUD"}}|0x82638c8
+18:48:04.0 (27927330)|VARIABLE_ASSIGNMENT|[72]|this.invoice|{"Id":"a0E6F00002ASmPtUAL","Name":"Protest2_supercahrge (1 more) ...","Invoice_Number__c":"INV280918059212-1","Amount_Credited__c":0.00,"Amount_Due__c":399.00,"Amount_Paid__c":0.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-28T00:00:00.000Z","Invoice_Total__c":399.00,"Issue_Date__c":"2018-09-28T00:00:00.000Z","Account_Product__c":"a076F00000qLJm0QAG","Reference__c":"478963","Status__c":"AUTHORISED","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Social Engage - Supe (14 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qLJm0QAG","RecordTypeId":"0126F000001zXB3QAM","CurrencyIsoCode":"AUD"}}|0x441cd9f6
+18:48:04.0 (27961097)|STATEMENT_EXECUTE|[48]
+18:48:04.0 (28005226)|HEAP_ALLOCATE|[55]|Bytes:5
+18:48:04.0 (28038230)|HEAP_ALLOCATE|[57]|Bytes:3
+18:48:04.0 (28062159)|HEAP_ALLOCATE|[59]|Bytes:7
+18:48:04.0 (28083855)|HEAP_ALLOCATE|[59]|Bytes:6
+18:48:04.0 (28097445)|STATEMENT_EXECUTE|[61]
+18:48:04.0 (28099296)|STATEMENT_EXECUTE|[62]
+18:48:04.0 (28105107)|HEAP_ALLOCATE|[62]|Bytes:7
+18:48:04.0 (28129984)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x82638c8"}|0x441cd9f6
+18:48:04.0 (28139620)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#FCFCF7"
+18:48:04.0 (28147957)|VARIABLE_ASSIGNMENT|[73]|this.color|"#FCFCF7"|0x441cd9f6
+18:48:04.0 (28155686)|STATEMENT_EXECUTE|[65]
+18:48:04.0 (28171092)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x289530d1"}|0x6a3d4dcd
+18:48:04.0 (28184719)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:48:04.0 (28203311)|HEAP_ALLOCATE|[41]|Bytes:5
+18:48:04.0 (28215266)|VARIABLE_ASSIGNMENT|[41]|inv|null|
+18:48:04.0 (28220958)|STATEMENT_EXECUTE|[68]
+18:48:04.0 (28242513)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x289530d1"}|0x6a3d4dcd
+18:48:04.0 (28392824)|USER_DEBUG|[68]|DEBUG|(InvRow:[color=#D2EBC2, invoice=Invoice__c:{Id=a0E6F00002ASm7BUAT, Name=Sponsoredlinx, Invoice_Number__c=INV280918002138-1, Amount_Credited__c=0.00, Amount_Due__c=299.00, Amount_Paid__c=0.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-28 00:00:00, Invoice_Total__c=299.00, Issue_Date__c=2018-09-28 00:00:00, Account_Product__c=a076F00000qLIIUQA4, Reference__c=478963, Status__c=AUTHORISED, CurrencyIsoCode=AUD}], InvRow:[color=#FCFCF7, invoice=Invoice__c:{Id=a0E6F00002ASmPtUAL, Name=Protest2_supercahrged, Invoice_Number__c=INV280918059212-1, Amount_Credited__c=0.00, Amount_Due__c=399.00, Amount_Paid__c=0.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-28 00:00:00, Invoice_Total__c=399.00, Issue_Date__c=2018-09-28 00:00:00, Account_Product__c=a076F00000qLJm0QAG, Reference__c=478963, Status__c=AUTHORISED, CurrencyIsoCode=AUD}])
+18:48:04.0 (28414652)|SYSTEM_MODE_EXIT|false
+18:48:04.0 (28509960)|SYSTEM_MODE_ENTER|true
+18:48:04.0 (37195012)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000001JylY
+18:48:04.0 (39595146)|VF_SERIALIZE_VIEWSTATE_END
+18:48:04.42 (42010222)|CUMULATIVE_LIMIT_USAGE
+18:48:04.42 (42010222)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:48:04.42 (42010222)|CUMULATIVE_LIMIT_USAGE_END
+
+18:48:04.0 (42044923)|CODE_UNIT_FINISHED|VF: /apex/sfInvoiceList
+18:48:04.0 (42937026)|EXECUTION_FINISHED

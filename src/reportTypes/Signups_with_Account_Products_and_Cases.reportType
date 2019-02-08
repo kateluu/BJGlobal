@@ -7,7 +7,7 @@
     <join>
         <join>
             <outerJoin>false</outerJoin>
-            <relationship>Cases__r</relationship>
+            <relationship>CustomCases__r</relationship>
         </join>
         <outerJoin>false</outerJoin>
         <relationship>Account_Products__r</relationship>
@@ -152,6 +152,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Xero_Invoices_Checked__c</field>
+            <table>Sign_Up__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Is_Addon__c</field>
             <table>Sign_Up__c</table>
         </columns>
         <masterLabel>Sign Ups</masterLabel>
@@ -368,202 +373,202 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_2_Weeks_Notice_to_be_applied__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account_2__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account_Products_List__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>SEO_Package__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_Action_Taken_to_Save__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Cancel_by__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_Cancellation_Waiver_approved__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Cancelled_Revenue__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Status__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Subject__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Product_Type__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Resolution_Manager__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Owner_Role__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>escalated_date__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Name</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account_Product__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account_Resolution__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Billing_Resolution__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Cancellation_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_Cancellation_Waiver_Requested__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Closed_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CaseType__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Open_Time__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Origin__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Response_Time__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Reason__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Client_Manager1__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Closed_Date__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_CM_Proposed_Action__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Contact__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CaseOwnerRole__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Case_Resolution__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Client_Manager_Reassign__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Client_Manager__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X2012_CM_Comments__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Competitor__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>BJB_Company__c</field>
-            <table>Sign_Up__c.Account_Products__r.Cases__r</table>
+            <table>Sign_Up__c.Account_Products__r.CustomCases__r</table>
         </columns>
         <masterLabel>Cases</masterLabel>
     </sections>

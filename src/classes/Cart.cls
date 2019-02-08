@@ -130,7 +130,10 @@ public class Cart {
 
         // Load products
         if (fromPackageData.productIds != null){
-	        Map<Id, SLX_Product__c> productsMap = new Map<Id, SLX_Product__c>([SELECT Id, Name, product_price__c, product_recurring__c, recurring_period__c, company_name__c, Product_Family__c, Is_Ghost__c, Billed_In_Advance__c FROM SLX_Product__c WHERE IsActive__c = true AND company_name__c = :companyName AND Id IN :fromPackageData.productIds]);
+	        Map<Id, SLX_Product__c> productsMap = new Map<Id, SLX_Product__c>([SELECT Id, Name, product_price__c, product_recurring__c, recurring_period__c, company_name__c, 
+                                                                                Product_Family__c, Is_Ghost__c, Billed_In_Advance__c ,Bill_Pending_Time__c
+                                                                                FROM SLX_Product__c 
+                                                                                WHERE IsActive__c = true AND company_name__c = :companyName AND Id IN :fromPackageData.productIds]);
 
             Id previousProductId;
 	        for ( Id packageProductId : fromPackageData.productIds ) {

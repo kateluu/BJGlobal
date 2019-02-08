@@ -15,4 +15,5 @@
     <tab>CM_Daily_Stats__c</tab>
     <tab>ERICA</tab>
     <tab>Voicemail__c</tab>
+    <tab>NVM_Information</tab>
 </CustomApplication>

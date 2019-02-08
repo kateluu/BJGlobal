@@ -1,8 +1,9 @@
 global class ActivityReportScheduler implements Schedulable{
 	global void execute(SchedulableContext SC) {
 		Boolean isTest = false;
+		Boolean isEmailSend = true;
 		ActivityReport ar = new ActivityReport(isTest);
-		
+		ActivitySEOReport sr = new ActivitySEOReport(isTest, isEmailSend);		
 	}
 		
 	public static testMethod void ActivityReportSchedulerTest() {

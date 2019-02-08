@@ -1,0 +1,150 @@
+33.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+18:57:31.1 (1668238)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (3284943)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (4300566)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (4803830)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (4993351)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (6204588)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (6328527)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (6389505)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (6426059)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (6589537)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (7038645)|SOQL_EXECUTE_BEGIN|[3114]|Aggregations:0|SELECT body, name FROM StaticResource WHERE Name = :tmpVar1 LIMIT 1
+18:57:31.1 (9461872)|SOQL_EXECUTE_END|[3114]|Rows:0
+18:57:31.1 (10279496)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (10314159)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (12221234)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (12347893)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (12455959)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (12537192)|ENTERING_MANAGED_PKG|SFSSDupeCatcher
+18:57:31.1 (15654728)|SOQL_EXECUTE_BEGIN|[623]|Aggregations:0|SELECT Id, SFSSDupeCatcher__Account__c, Scenario__r.Person_Account_Filter__c, Scenario_Type__c FROM Potential_Duplicate__c WHERE Account__r.Id IN :tmpVar1
+18:57:31.1 (21328797)|SOQL_EXECUTE_END|[623]|Rows:0
+18:57:31.21 (21531075)|CUMULATIVE_LIMIT_USAGE
+18:57:31.21 (21531075)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 2 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.21 (21531075)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.21 (21531075)|CUMULATIVE_LIMIT_USAGE_END
+
+18:57:31.28 (28146257)|CUMULATIVE_LIMIT_USAGE
+18:57:31.28 (28146257)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 2 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.28 (28146257)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.28 (28146257)|CUMULATIVE_LIMIT_USAGE_END
+
+18:57:31.32 (32596329)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000E0PX|dlrs_AccountTrigger on Account trigger event BeforeDelete|__sfdc_trigger/dlrs_AccountTrigger
+18:57:31.32 (32640902)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:57:31.32 (32700772)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:57:31.32 (32713411)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+18:57:31.32 (32755014)|VARIABLE_ASSIGNMENT|[4]|this|{}|0xb5e0f40
+18:57:31.32 (32795869)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:57:31.32 (32804810)|VARIABLE_SCOPE_BEGIN|[4]|this|dlrs_AccountTrigger|true|false
+18:57:31.32 (32817137)|VARIABLE_ASSIGNMENT|[4]|this|{}|0xb5e0f40
+18:57:31.32 (32824896)|STATEMENT_EXECUTE|[4]
+18:57:31.32 (32827202)|STATEMENT_EXECUTE|[7]
+18:57:31.32 (39553282)|VARIABLE_SCOPE_BEGIN|[36]|dlrs.RollupService.LastMetadataAPIConnectionException|Exception|true|true
+18:57:31.32 (39575410)|VARIABLE_SCOPE_BEGIN|[285]|dlrs.RollupService.triggerHandleInvoked|Boolean|false|true
+18:57:31.32 (39597780)|HEAP_ALLOCATE|[7]|Bytes:145
+18:57:31.32 (39608925)|HEAP_ALLOCATE|[7]|Bytes:120
+18:57:31.32 (39613394)|HEAP_ALLOCATE|[7]|Bytes:128
+18:57:31.32 (39633254)|METHOD_ENTRY|[34]|01p6F000007Lebh|dlrs.RollupService.RollupService()
+18:57:31.32 (39641372)|STATEMENT_EXECUTE|[34]
+18:57:31.32 (39646034)|ENTERING_MANAGED_PKG|dlrs
+18:57:31.32 (40155751)|METHOD_EXIT|[34]|dlrs.RollupService
+18:57:31.32 (40183903)|METHOD_ENTRY|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+18:57:31.32 (40190128)|ENTERING_MANAGED_PKG|dlrs
+18:57:31.32 (40277108)|METHOD_EXIT|[7]|01p6F000007Lebh|dlrs.RollupService.triggerHandler()
+18:57:31.40 (40288236)|CUMULATIVE_LIMIT_USAGE
+18:57:31.40 (40288236)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 2 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.40 (40288236)|LIMIT_USAGE_FOR_NS|dlrs|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.40 (40288236)|LIMIT_USAGE_FOR_NS|SFSSDupeCatcher|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:57:31.40 (40288236)|CUMULATIVE_LIMIT_USAGE_END
+

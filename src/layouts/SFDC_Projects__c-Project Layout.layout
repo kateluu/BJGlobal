@@ -13,7 +13,7 @@
                 <field>Account__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Account_Product__c</field>
             </layoutItems>
             <layoutItems>
@@ -27,6 +27,10 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Phone_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Mobile__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -68,15 +72,19 @@
                 <behavior>Readonly</behavior>
                 <field>Days_from_In_Progress_to_Complete__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Web_Questionnaire__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Owner_Email__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SEO_Account_Manager__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

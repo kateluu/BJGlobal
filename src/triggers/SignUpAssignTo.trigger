@@ -4,7 +4,7 @@ trigger SignUpAssignTo on Sign_Up__c (after update) {
     if(newSignUp.Assign_To_User__c!= null && oldSignUp.Assign_To_User__c != newSignUp.Assign_To_User__c){
       if(newSignUp.Product_Type__c == 'Adwords Management'){
         signup.changeSignupOwner(newSignUp.Id, newSignUp.Assign_To_User__c);
-      }else if(newSignUp.Product_Type__c == 'SEO' || newSignUp.Product_Type__c == 'Social Marketing'){
+      }else if(newSignUp.Product_Type__c == 'SEO' || newSignUp.Product_Type__c == 'Social Marketing'|| newSignUp.Product_Type__c == 'Social Engage'){
         // transfer sign up, account products and projects to the new SEO CM
         //newSignUp.OwnerId = newSignUp.Assign_To_User__c;
         // Account prodcts

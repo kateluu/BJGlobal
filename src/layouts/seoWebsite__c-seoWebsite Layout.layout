@@ -11,20 +11,11 @@
         <label>System Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CreatedById</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CurrencyIsoCode</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>OwnerId</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
@@ -33,6 +24,14 @@
         <editHeading>true</editHeading>
         <label>Information</label>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CreatedById</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>OwnerId</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Name</field>
@@ -50,6 +49,10 @@
                 <field>Project__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Status__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Send_SEO_Report__c</field>
             </layoutItems>
@@ -59,14 +62,6 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Status__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Searching_From__c</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Geolocation__c</field>
@@ -88,12 +83,20 @@
                 <field>Google_Top_10_Percent__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Google_Places_Top_10_Percent__c</field>
+                <behavior>Edit</behavior>
+                <field>Google_Indexed_Pages__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Google_Indexed_Pages__c</field>
+                <field>Ahrefs_Domain_Rank__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Ahrefs_Backlinks__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Referring_Domains__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -112,10 +115,10 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Rank History</label>
+        <label>Rank History (drag to zoom)</label>
         <layoutColumns>
             <layoutItems>
-                <height>240</height>
+                <height>260</height>
                 <page>SeoWebsiteCharts</page>
                 <showLabel>false</showLabel>
                 <showScrollbars>false</showScrollbars>
@@ -124,7 +127,7 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <height>240</height>
+                <height>260</height>
                 <page>SeoWebsiteKeywordsRankChart</page>
                 <showLabel>false</showLabel>
                 <showScrollbars>false</showScrollbars>
@@ -141,9 +144,10 @@
         <fields>Google_Original__c</fields>
         <fields>Google_Current__c</fields>
         <fields>Google__c</fields>
-        <fields>Google_Top_Unstable_Rank__c</fields>
         <fields>Google_URL_Relative__c</fields>
         <fields>Priority_Flag__c</fields>
+        <fields>Google_Top_Unstable_Rank__c</fields>
+        <fields>Word_Count_Deficit__c</fields>
         <relatedList>seoThemeKeywords__c.seoWebsites__c</relatedList>
         <sortField>Google_Current__c</sortField>
         <sortOrder>Asc</sortOrder>

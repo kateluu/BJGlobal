@@ -1,4 +1,4 @@
-global class activateProductStatusBatch implements Database.batchable <Account_Product__c>, Database.Stateful {
+global class activateProductStatusBatch implements Database.batchable <Account_Product__c>, Database.Stateful ,  Database.AllowsCallouts{
 	
 	// email body. 'global' and 'Database.Stateful' will make sure its value don't reset at each batch 
 	global String email_message = '';
@@ -92,11 +92,19 @@ global class activateProductStatusBatch implements Database.batchable <Account_P
 					product.Last_Invoice_Date__c = product.activeat__c.addDays(-1);
 				}
 
-
+				// for social engage product, need to clear workflow control flag
+				if(product.Name.containsIgnoreCase('Social Engage')){
+					product.Last_Paid_Date__c = null;
+					// make a synchronous call to TigerPistol
+					system.debug(' product.id = ' + product.id);
+					TigerPistolConnector.reActivateCustomerSynch(product.id);
+				}
 
 				//update product status :  to make sure there’s only one notification in the outbound message when the product is updated
 				//allProducts.add(product);
 				update product;
+		
+
 			}
 		}
 		
@@ -123,8 +131,9 @@ global class activateProductStatusBatch implements Database.batchable <Account_P
 		this.email_message+='\r\n'; 
 		
 		Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-		String[] toAddresses  = new String[] { 'accounts@sponsoredlinx.com', 'kate.lewis@sponsoredlinx.com' };
-		String[] bccAddresses  = new String[] { 'alister.dunlop@sponsoredlinx.com', 'william.zhang@sponsoredlinx.com' };
+		String[] toAddresses  = new String[] { 'accounts@sponsoredlinx.com', 'kate.lewis@sponsoredlinx.com' , 'erin.birkett@sponsoredlinx.com' };
+		String[] bccAddresses  = new String[] { 'alister.dunlop@sponsoredlinx.com', 'william.zhang@sponsoredlinx.com', 'hanh.luu@sponsoredlinx.com' };
+
 		mail.setToAddresses(toAddresses); 
 		mail.setBccAddresses(bccAddresses);
 		mail.setReplyTo('accounts@sponsoredlinx.com.au');

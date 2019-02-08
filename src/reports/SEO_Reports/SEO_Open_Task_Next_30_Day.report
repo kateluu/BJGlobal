@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SFDC_Projects__c$Name</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c.Activities$Subject</field>
+    </columns>
+    <columns>
+        <field>SFDC_Projects__c.Activities$ActivityDate</field>
+    </columns>
+    <currency>AUD</currency>
+    <description>SEO Open Task Next 30 Day</description>
+    <filter>
+        <criteriaItems>
+            <column>SFDC_Projects__c$Account_Product__c</column>
+            <operator>contains</operator>
+            <value>SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c$Project_Stage__c</column>
+            <operator>notEqual</operator>
+            <value>Cancelled,Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c$Owner</column>
+            <operator>equals</operator>
+            <value>,Connor Krohn,Adam Conroy,Fiona Hoy,Nathan Moody,Molly Hanrahan,Nicholas Davis,Madeleine Slater,Amy Ambrose,Tom Caffrey,James Snelson,Sarah Googe,Chanelle Canilao,Marco Cacciola,Celest Maggs,Alexander Mortimer,Raymond,Kate Muller,Laura Markwort,Emma Morcombe,Warren Oliver,Leland Ahkit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SFDC_Projects__c.Activities$Status</column>
+            <operator>equals</operator>
+            <value>Not Started</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SFDC_Projects__c.Activities$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SEO Open Task Next 30 Day</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Projects_with_Activities__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SFDC_Projects__c.Activities$ActivityDate</dateColumn>
+        <interval>INTERVAL_NEXT30</interval>
+    </timeFrameFilter>
+</Report>

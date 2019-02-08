@@ -1172,6 +1172,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Mobile__c</fullName>
+        <externalId>false</externalId>
+        <label>Mobile</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
         <fullName>Monthly_Reports_Setup__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1467,6 +1477,19 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Owner_Email__c</fullName>
+        <description>Owner Email which is required for unranking keyword notification</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner Email which is required for unranking keyword notification</inlineHelpText>
+        <label>Owner Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>PFK_PFT_s__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1700,27 +1723,16 @@
                 <default>true</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Web Design</fullName>
-                <color>#0B24BE</color>
+                <fullName>SEO Maintenance</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Web &amp; SEO</fullName>
-                <color>#641CCF</color>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Additional Work Web</fullName>
-                <color>#FFCC33</color>
+                <fullName>SEO Content Pack</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
                 <fullName>Additional SEO Work</fullName>
                 <color>#333399</color>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -1732,7 +1744,17 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Internal</fullName>
+                <fullName>DIFM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web &amp; SEO</fullName>
+                <color>#641CCF</color>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web Design</fullName>
+                <color>#0B24BE</color>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -1740,7 +1762,8 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Mobile Application</fullName>
+                <fullName>Additional Work Web</fullName>
+                <color>#FFCC33</color>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -1748,11 +1771,11 @@
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Facebook Management</fullName>
+                <fullName>Mobile Application</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>SEO Maintenance</fullName>
+                <fullName>Facebook Management</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
@@ -1769,6 +1792,14 @@
             </picklistValues>
             <picklistValues>
                 <fullName>Explainer Videos</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal</fullName>
                 <default>false</default>
             </picklistValues>
             <sorted>false</sorted>
@@ -1856,6 +1887,20 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Report_Project_No__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project No</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Reports__c</fullName>
@@ -2397,10 +2442,12 @@
         <columns>NAME</columns>
         <columns>Project_Stage__c</columns>
         <columns>Email__c</columns>
+        <columns>Project_Type__c</columns>
         <columns>Phone_Number__c</columns>
         <columns>Last_SEO_Analysis__c</columns>
         <columns>LAST_UPDATE</columns>
         <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Project_Type__c</field>
@@ -2416,6 +2463,7 @@
         <columns>Phone_Number__c</columns>
         <columns>Email__c</columns>
         <columns>CREATED_DATE</columns>
+        <columns>Project_Type__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Project_Type__c</field>
@@ -2489,6 +2537,27 @@
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>DIFM_Project</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
+        <columns>Account__c</columns>
+        <columns>Project_Type__c</columns>
+        <columns>Project_Stage__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Type__c</field>
+            <operation>equals</operation>
+            <value>DIFM</value>
+        </filters>
+        <label>DIFM Project</label>
+        <sharedTo>
+            <group>Doug_Carpenter</group>
+            <group>Monique_Bellamy</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>In_Progress</fullName>
         <columns>NAME</columns>
         <columns>Project_Type__c</columns>
@@ -2504,6 +2573,35 @@
             <value>In Progress</value>
         </filters>
         <label>In Progress</label>
+    </listViews>
+    <listViews>
+        <fullName>Manage_SEO_Projects</fullName>
+        <booleanFilter>1 AND 2 AND (  3 )</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Project_Stage__c</columns>
+        <columns>Email__c</columns>
+        <columns>Phone_Number__c</columns>
+        <columns>Last_SEO_Analysis__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Account__c</columns>
+        <columns>Account_Product__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Type__c</field>
+            <operation>contains</operation>
+            <value>SEO</value>
+        </filters>
+        <filters>
+            <field>Project_Stage__c</field>
+            <operation>equals</operation>
+            <value>Ongoing Management</value>
+        </filters>
+        <filters>
+            <field>Account_Product__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Manage all SEO Projects</label>
     </listViews>
     <listViews>
         <fullName>On_Hold</fullName>
@@ -2569,6 +2667,58 @@
             <value>Project Ready</value>
         </filters>
         <label>Project Ready</label>
+    </listViews>
+    <listViews>
+        <fullName>SEO_Content_Project</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
+        <columns>Account__c</columns>
+        <columns>Project_Type__c</columns>
+        <columns>Project_Stage__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Type__c</field>
+            <operation>equals</operation>
+            <value>SEO Content Pack</value>
+        </filters>
+        <label>SEO Content Project</label>
+        <sharedTo>
+            <group>Doug_Carpenter</group>
+            <group>Monique_Bellamy</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Web_Project</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Product__c</columns>
+        <columns>Account__c</columns>
+        <columns>Project_Type__c</columns>
+        <columns>Project_Stage__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Type__c</field>
+            <operation>contains</operation>
+            <value>Web</value>
+        </filters>
+        <filters>
+            <field>Project_Stage__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>6/1/2018 12:00 AM</value>
+        </filters>
+        <label>Web Project</label>
+        <sharedTo>
+            <group>Doug_Carpenter</group>
+            <group>Monique_Bellamy</group>
+        </sharedTo>
     </listViews>
     <nameField>
         <label>Project Name</label>

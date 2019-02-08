@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Change_Case_status</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>UnresolvedDSApprovalTeam</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>Unanimous</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Send Approval Request To Upper Level Manager</label>
+        <name>Send_Approval_Request_To_Upper_Level_Manager</name>
+    </approvalStep>
+    <emailTemplate>Cases/Unresolve_Case_Request</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>(1 OR 2) and 3</booleanFilter>
+        <criteriaItems>
+            <field>Cases__c.Downgrade_Difference__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>NZD 10</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Refund_Amount__c</field>
+            <operation>greaterThan</operation>
+            <value>NZD 250</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Cases__c.Owner_Role__c</field>
+            <operation>contains</operation>
+            <value>Digital,Sales</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>UnresolveDSEscalatedCase</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -27,8 +27,34 @@
         <template>Sign_Up/Please_check_sign_up_price</template>
     </alerts>
     <alerts>
+        <fullName>GMT_Questionnaire_Form</fullName>
+        <ccEmails>kate.luu@sponsoredlinx.com</ccEmails>
+        <description>GMT Questionnaire Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/GMT_Webcontent_Questionnaire</template>
+    </alerts>
+    <alerts>
+        <fullName>GMT_Questionnaire_Reminder</fullName>
+        <ccEmails>kate.luu@sponsoredlinx.com</ccEmails>
+        <description>GMT Questionnaire Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/GMT_Questionnaire_Reminder</template>
+    </alerts>
+    <alerts>
         <fullName>New_SEO_Sign_Up_Alert</fullName>
-        <ccEmails>will@sponsoredlinx.com</ccEmails>
+        <ccEmails>will@sponsoredlinx.com; kate.luu@sponsoredlinx.com</ccEmails>
         <description>New SEO Sign Up Alert</description>
         <protected>false</protected>
         <recipients>
@@ -51,12 +77,16 @@
             <recipient>nathan.moody@sponsoredlinx.com</recipient>
             <type>user</type>
         </recipients>
+        <recipients>
+            <recipient>nicholas.davis@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>Sign_Up/New_SEO_Sign_Up_Alert_SLX</template>
     </alerts>
     <alerts>
         <fullName>New_SEO_Sign_Up_Alert_GMT</fullName>
-        <ccEmails>will@sponsoredlinx.com</ccEmails>
+        <ccEmails>will@sponsoredlinx.com;kate.luu@sponsoredlinx.com</ccEmails>
         <description>New SEO Sign Up Alert - GMT</description>
         <protected>false</protected>
         <recipients>
@@ -75,8 +105,28 @@
             <recipient>nathan.moody@sponsoredlinx.com</recipient>
             <type>user</type>
         </recipients>
+        <recipients>
+            <recipient>nicholas.davis@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
         <senderType>CurrentUser</senderType>
         <template>Sign_Up/New_SEO_Sign_Up_Alert_GMT</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Sign_Up</fullName>
+        <description>New Sign Up</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jacob.bamford@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>toby.wilson@sponsoredlinx.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/New_Sign_Up_Alert_SLX</template>
     </alerts>
     <alerts>
         <fullName>New_Sign_Up_Alert</fullName>
@@ -111,6 +161,18 @@
         <template>Sign_Up/New_Signup_to_CM_GMT</template>
     </alerts>
     <alerts>
+        <fullName>New_Sign_Up_GMT_SalesManager</fullName>
+        <description>New Sign Up</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>cody.pechey@getmoretraffic.com.au</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/New_Sign_Up_Alert_GMT_SalesManager</template>
+    </alerts>
+    <alerts>
         <fullName>Pending_Setup_Call_To_New_Signup</fullName>
         <description>Pending Setup Call To New Signup</description>
         <protected>false</protected>
@@ -122,6 +184,32 @@
         <template>AssignedNotification/Miss_Call_Notification</template>
     </alerts>
     <alerts>
+        <fullName>SLX_Questionnaire_Form</fullName>
+        <ccEmails>kate.luu@sponsoredlinx.com</ccEmails>
+        <description>SLX Questionnaire Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/SLX_Webcontent_Questionnaire</template>
+    </alerts>
+    <alerts>
+        <fullName>SLX_Questionnaire_Reminder</fullName>
+        <ccEmails>kate.luu@sponsoredlinx.com</ccEmails>
+        <description>SLX Questionnaire Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/SLX_Questionnaire_reminder</template>
+    </alerts>
+    <alerts>
         <fullName>Send_Completed_Sign_Up_to_GMT_Team_B</fullName>
         <description>Send Completed Sign Up to GMT Team B</description>
         <protected>false</protected>
@@ -131,6 +219,18 @@
         </recipients>
         <senderType>CurrentUser</senderType>
         <template>Sign_Up/New_Signup_to_COM</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_new_DIFM_sign_up_to_Web_Team_Manager</fullName>
+        <description>Send new DIFM sign up to Web Team Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Doug_Carpenter</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>signup@sponsoredlinx.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sign_Up/New_DIFM_Sign_Up_Alert_SLX</template>
     </alerts>
     <alerts>
         <fullName>Send_new_SEO_sign_up_to_SEO_Manager</fullName>
@@ -216,7 +316,7 @@
         <description>Send new sign up to COM</description>
         <protected>false</protected>
         <recipients>
-            <recipient>sebastian.cox@sponsoredlinx.com</recipient>
+            <recipient>amber.porter@sponsoredlinx.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -225,6 +325,7 @@
     <alerts>
         <fullName>Send_setup_suvery_after_24_hours</fullName>
         <ccEmails>will@sponsoredlinx.com</ccEmails>
+        <ccEmails>hanh.luu@sponsoredlinx.com</ccEmails>
         <description>Send setup suvery after 24 hours</description>
         <protected>false</protected>
         <recipients>
@@ -449,9 +550,72 @@
         <criteriaItems>
             <field>Sign_Up__c.Product_Type__c</field>
             <operation>equals</operation>
-            <value>AdWords Management,Social Marketing</value>
+            <value>AdWords Management,Social Marketing,Social Engage</value>
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New DIFM Signup Alert to Web Manager</fullName>
+        <actions>
+            <name>Send_new_DIFM_sign_up_to_Web_Team_Manager</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Sign_Up__c.Product_Type__c</field>
+            <operation>equals</operation>
+            <value>DIFM</value>
+        </criteriaItems>
+        <description>New DIFM Signup Alert to Web Manager</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Sign Up Alert to Sales Managers - GMT</fullName>
+        <actions>
+            <name>New_Sign_Up_GMT_SalesManager</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Sign_Up__c.Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sign_Up__c.Product_Type__c</field>
+            <operation>notEqual</operation>
+            <value>SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sign_Up__c.FromSource__c</field>
+            <operation>contains</operation>
+            <value>get</value>
+        </criteriaItems>
+        <description>New Sign Up Alert to Sales Managers GMT</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Sign Up Alert to Sales Managers - SLX</fullName>
+        <actions>
+            <name>New_Sign_Up</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Sign_Up__c.Email__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sign_Up__c.Product_Type__c</field>
+            <operation>notEqual</operation>
+            <value>SEO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Sign_Up__c.FromSource__c</field>
+            <operation>notContain</operation>
+            <value>get</value>
+        </criteriaItems>
+        <description>New Sign Up Alert to Sales Managers SLX</description>
+        <triggerType>onCreateOnly</triggerType>
     </rules>
     <rules>
         <fullName>New Signup Alert to SEO Manager</fullName>
@@ -574,11 +738,6 @@
             <field>Sign_Up__c.Status__c</field>
             <operation>equals</operation>
             <value>Completed</value>
-        </criteriaItems>
-        <criteriaItems>
-            <field>Sign_Up__c.Product_Type__c</field>
-            <operation>equals</operation>
-            <value>AdWords Management,SEO,Social Marketing</value>
         </criteriaItems>
         <criteriaItems>
             <field>Sign_Up__c.Completed_Date__c</field>

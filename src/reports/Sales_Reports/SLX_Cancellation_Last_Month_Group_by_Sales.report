@@ -24,7 +24,7 @@
     <currency>AUD</currency>
     <filter>
         <criteriaItems>
-            <column>Sign_Up__c.Account_Products__r.Cases__r$Product_Type__c</column>
+            <column>Sign_Up__c.Account_Products__r.CustomCases__r$Product_Type__c</column>
             <operator>equals</operator>
             <value>AdWords Management,Social Marketing</value>
         </criteriaItems>
@@ -51,7 +51,7 @@
     <sortColumn>Sign_Up__c$Status__c</sortColumn>
     <sortOrder>Asc</sortOrder>
     <timeFrameFilter>
-        <dateColumn>Sign_Up__c.Account_Products__r.Cases__r$Cancellation_Date__c</dateColumn>
+        <dateColumn>Sign_Up__c.Account_Products__r.CustomCases__r$Cancellation_Date__c</dateColumn>
         <interval>INTERVAL_LASTMONTH</interval>
     </timeFrameFilter>
 </Report>

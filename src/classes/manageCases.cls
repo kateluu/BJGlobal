@@ -226,7 +226,19 @@ public with sharing class manageCases {
     	testAcc.Card_Month_Expiry__c = '5';
     	testAcc.Card_Year_Expiry__c = '1010';
     	testAcc.Card_CVN__c = '123';
+    	testAcc.CurrencyIsoCode ='AUD';
+    	testAcc.Active__c= true;
     	insert testAcc;
+
+	    List<Account_Product__c> testProducts = new List<Account_Product__c>();
+	    for(Integer i=0;i<1;i++) {                              
+	        Account_Product__c item = new Account_Product__c(Name ='Social Engage '+1, Product_Status__c ='Active', Product_Price__c=1000, CurrencyIsoCode ='AUD', Account__c = testAcc.id , 
+	                      recordTypeId =Schema.SObjectType.Account_Product__c.getRecordTypeInfosByName().get('Traditional Products').getRecordTypeId());
+	        testProducts.add(item);
+	    }
+	    insert testProducts; 
+
+
     	
     	Cases__c testCase = new Cases__c();
     	testCase.Account__c = testAcc.Id;
@@ -237,6 +249,7 @@ public with sharing class manageCases {
     	testInv.Amount_Due__c = 100;
     	testInv.Amount_Paid__c = 50;
     	testInv.Account__c = testAcc.Id;
+    	testInv.Account_Product__c = testProducts.get(0).Id;
     	testInv.Status__c = 'AUTHORISED';
     	testInv.Invoice_Number__c = 'abc123';
     	insert testInv;

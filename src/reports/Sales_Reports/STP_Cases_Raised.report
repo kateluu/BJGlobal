@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Report xmlns="http://soap.sforce.com/2006/04/metadata">
     <columns>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$Name</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$Name</field>
     </columns>
     <columns>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Closed_Date__c</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$Case_Closed_Date__c</field>
     </columns>
     <columns>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Origin__c</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$Case_Origin__c</field>
     </columns>
     <columns>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$Case_Reason__c</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$Case_Reason__c</field>
     </columns>
     <columns>
         <field>Sign_Up__c$Status__c</field>
@@ -34,7 +34,7 @@
             <value>SEO</value>
         </criteriaItems>
         <criteriaItems>
-            <column>Sign_Up__c.Account_Products__r.Cases__r$BJB_Company__c</column>
+            <column>Sign_Up__c.Account_Products__r.CustomCases__r$BJB_Company__c</column>
             <operator>notEqual</operator>
             <value></value>
         </criteriaItems>
@@ -42,12 +42,12 @@
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$BJB_Company__c</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$BJB_Company__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
-        <field>Sign_Up__c.Account_Products__r.Cases__r$CaseType__c</field>
+        <field>Sign_Up__c.Account_Products__r.CustomCases__r$CaseType__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>STP Cases Raised</name>

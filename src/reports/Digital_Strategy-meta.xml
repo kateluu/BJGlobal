@@ -2,9 +2,12 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <accessType>Shared</accessType>
     <name>Digital Strategy</name>
-    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
     <sharedTo>
+        <group>Apac_Managers</group>
         <role>Digital_Strategy_Manager</role>
+        <role>Digital_Strategy_Sales</role>
         <role>SLXSalesManager</role>
+        <role>Sales_Manager_Assistant_Digital_Strategy</role>
     </sharedTo>
 </ReportFolder>

@@ -99,7 +99,7 @@
         <criteriaItems>
             <column>Cases__c.Resolution_Manager__c</column>
             <operator>equals</operator>
-            <value>Alexandra Brown,Conor McCown-Butt,Cameron Asher,Carly Snyman</value>
+            <value>Alexandra Brown,David Powell,Nurmala Moyden,Kylie Vaughan,Conor McCown-Butt,Roxanne Edmonds</value>
         </criteriaItems>
         <criteriaItems>
             <column>Cases__c.Account_Resolution__c</column>
@@ -120,9 +120,9 @@
     </params>
     <reportType>CustomEntity$Cases__c</reportType>
     <scope>organization</scope>
-    <showDetails>false</showDetails>
+    <showDetails>true</showDetails>
     <timeFrameFilter>
         <dateColumn>Cases__c.unresolved_date__c</dateColumn>
-        <interval>INTERVAL_THISWEEK</interval>
+        <interval>INTERVAL_TODAY</interval>
     </timeFrameFilter>
 </Report>

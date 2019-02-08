@@ -4,6 +4,18 @@
     <description>Pardot Auto Convert Add</description>
     <enableFeeds>false</enableFeeds>
     <fields>
+        <fullName>Description__c</fullName>
+        <description>Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Value__c</fullName>
         <externalId>false</externalId>
         <label>Value</label>
@@ -13,6 +25,6 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Pardot Auto Convert Add</label>
+    <label>Automation Paramaters</label>
     <visibility>Public</visibility>
 </CustomObject>

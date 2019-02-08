@@ -1,0 +1,415 @@
+25.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+15:10:10.0 (447266)|USER_INFO|[EXTERNAL]|0056F00000Az5s6|nurmala.moyden@sponsoredlinx.com|Australian Eastern Standard Time|GMT+10:00
+15:10:10.0 (506869)|EXECUTION_STARTED
+15:10:10.0 (513524)|CODE_UNIT_STARTED|[EXTERNAL]|06690000002H8AP|VF: /apex/InvoiceListForCase
+15:10:10.0 (56947876)|SYSTEM_MODE_ENTER|true
+15:10:10.0 (57327118)|HEAP_ALLOCATE|[72]|Bytes:3
+15:10:10.0 (57369063)|HEAP_ALLOCATE|[77]|Bytes:152
+15:10:10.0 (57383828)|HEAP_ALLOCATE|[342]|Bytes:408
+15:10:10.0 (57396812)|HEAP_ALLOCATE|[355]|Bytes:408
+15:10:10.0 (57409206)|HEAP_ALLOCATE|[467]|Bytes:48
+15:10:10.0 (57435349)|HEAP_ALLOCATE|[139]|Bytes:6
+15:10:10.0 (57452478)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+15:10:10.0 (57457552)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:80
+15:10:10.0 (57461367)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (57465987)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:564
+15:10:10.0 (57476805)|METHOD_ENTRY|[1]|01p90000002RRLj|InvoiceListForCase.InvoiceListForCase()
+15:10:10.0 (57483673)|STATEMENT_EXECUTE|[1]
+15:10:10.0 (57488810)|STATEMENT_EXECUTE|[1]
+15:10:10.0 (57527805)|HEAP_ALLOCATE|[50]|Bytes:5
+15:10:10.0 (57551381)|HEAP_ALLOCATE|[56]|Bytes:5
+15:10:10.0 (57560628)|HEAP_ALLOCATE|[64]|Bytes:7
+15:10:10.0 (57577254)|SYSTEM_MODE_ENTER|false
+15:10:10.0 (57590100)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+15:10:10.0 (57594934)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (57600067)|SYSTEM_MODE_EXIT|false
+15:10:10.0 (57608723)|METHOD_EXIT|[1]|InvoiceListForCase
+15:10:10.0 (57622805)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+15:10:10.0 (57637122)|VARIABLE_SCOPE_BEGIN|[16]|this|InvoiceListForCase|true|false
+15:10:10.0 (57677824)|VARIABLE_ASSIGNMENT|[16]|this|{}|0x5d13144a
+15:10:10.0 (57687062)|VARIABLE_SCOPE_BEGIN|[16]|controller|ApexPages.StandardController|true|false
+15:10:10.0 (57906682)|VARIABLE_ASSIGNMENT|[16]|controller|"StandardController [null]"|0x7579aac
+15:10:10.0 (57925592)|SYSTEM_MODE_ENTER|false
+15:10:10.0 (57933546)|HEAP_ALLOCATE|[17]|Bytes:5
+15:10:10.0 (57939001)|STATEMENT_EXECUTE|[1]
+15:10:10.0 (57942705)|HEAP_ALLOCATE|[17]|Bytes:5
+15:10:10.0 (57945895)|STATEMENT_EXECUTE|[2]
+15:10:10.0 (57968365)|HEAP_ALLOCATE|[17]|Bytes:6
+15:10:10.0 (58025394)|STATEMENT_EXECUTE|[16]
+15:10:10.0 (58028707)|STATEMENT_EXECUTE|[17]
+15:10:10.0 (66999642)|HEAP_ALLOCATE|[17]|Bytes:12
+15:10:10.0 (67029243)|VARIABLE_SCOPE_BEGIN|[17]|ca|Cases__c|true|false
+15:10:10.0 (67058301)|VARIABLE_ASSIGNMENT|[17]|ca|{"CurrencyIsoCode":"AUD","Id":"a0K6F00000ioF0HUAU"}|0x474c19e6
+15:10:10.0 (67066019)|STATEMENT_EXECUTE|[18]
+15:10:10.0 (67081242)|HEAP_ALLOCATE|[18]|Bytes:55
+15:10:10.0 (67105692)|HEAP_ALLOCATE|[18]|Bytes:4
+15:10:10.0 (67120223)|HEAP_ALLOCATE|[18]|Bytes:7
+15:10:10.0 (67425047)|SOQL_EXECUTE_BEGIN|[18]|Aggregations:0|SELECT id, Account__c FROM Cases__c WHERE id = :tmpVar1
+15:10:10.0 (69500364)|SOQL_EXECUTE_END|[18]|Rows:1
+15:10:10.0 (69549016)|HEAP_ALLOCATE|[18]|Bytes:8
+15:10:10.0 (69578522)|HEAP_ALLOCATE|[18]|Bytes:87
+15:10:10.0 (69673051)|HEAP_ALLOCATE|[18]|Bytes:8
+15:10:10.0 (69696017)|HEAP_ALLOCATE|[18]|Bytes:34
+15:10:10.0 (69770504)|HEAP_ALLOCATE|[18]|Bytes:16
+15:10:10.0 (69836838)|VARIABLE_ASSIGNMENT|[18]|ca|{"Id":"a0K6F00000ioF0HUAU","Account__c":"0016F00002Sk6pjQAB","CurrencyIsoCode":"AUD"}|0x64d8593e
+15:10:10.0 (69852156)|STATEMENT_EXECUTE|[20]
+15:10:10.0 (69867109)|HEAP_ALLOCATE|[20]|Bytes:394
+15:10:10.0 (69894056)|HEAP_ALLOCATE|[20]|Bytes:4
+15:10:10.0 (74369733)|SOQL_EXECUTE_BEGIN|[20]|Aggregations:0|SELECT Id, Name, Invoice_Number__c, Amount_Credited__c, Amount_Due__c, Amount_Paid__c, Amount_Refunded__c, Due_Date__c, Invoice_Total__c, Issue_Date__c, Account_Product__r.Name, Account_Product__r.description__c, Account_Product__c, Reference__c, Status__c FROM Invoice__c WHERE (Status__c != '' AND Issue_Date__c >= 2011-01-01 AND Account__c = :tmpVar1) ORDER BY Issue_Date__c DESC NULLS FIRST
+15:10:10.0 (85180470)|SOQL_EXECUTE_END|[20]|Rows:9
+15:10:10.0 (85226270)|HEAP_ALLOCATE|[20]|Bytes:40
+15:10:10.0 (85316034)|HEAP_ALLOCATE|[20]|Bytes:5220
+15:10:10.0 (85385155)|HEAP_ALLOCATE|[20]|Bytes:40
+15:10:10.0 (85407069)|VARIABLE_SCOPE_BEGIN|[20]|invoices|List<Invoice__c>|true|false
+15:10:10.0 (85442550)|VARIABLE_ASSIGNMENT|[20]|invoices|"List of size 9 too large to display"|0x5eb8f459
+15:10:10.0 (85451156)|STATEMENT_EXECUTE|[41]
+15:10:10.0 (85479421)|HEAP_ALLOCATE|[41]|Bytes:4
+15:10:10.0 (85597877)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x5d13144a
+15:10:10.0 (85621504)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (85632384)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|[]|0x45c4c012
+15:10:10.0 (85649588)|VARIABLE_ASSIGNMENT|[2]|this.irs|[]|0x5d13144a
+15:10:10.0 (85661713)|STATEMENT_EXECUTE|[43]
+15:10:10.0 (85673022)|VARIABLE_SCOPE_BEGIN|[43]|i|Integer|false|false
+15:10:10.0 (85682963)|HEAP_ALLOCATE|[43]|Bytes:4
+15:10:10.0 (85692678)|VARIABLE_ASSIGNMENT|[43]|i|0
+15:10:10.0 (85854237)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (85884962)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (85895350)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (85969933)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002FeXxTUAV","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000936092","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0xd9556d7
+15:10:10.0 (85986005)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (85988216)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (85997983)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (86006649)|VARIABLE_ASSIGNMENT|[45]|i|1
+15:10:10.0 (86011813)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (86051960)|USER_DEBUG|[46]|DEBUG|1
+15:10:10.0 (86062427)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (86138203)|HEAP_ALLOCATE|[47]|Bytes:112
+15:10:10.0 (86146618)|HEAP_ALLOCATE|[47]|Bytes:5
+15:10:10.0 (86162612)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (86181283)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (86206893)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (86238340)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x55c1fb88
+15:10:10.0 (86262944)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (86265506)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (86273426)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (86279718)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (86287454)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (86304733)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x55c1fb88
+15:10:10.0 (86311284)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (86368310)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x55c1fb88
+15:10:10.0 (86423656)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002FeXxTUAV","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000936092","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0xd9556d7
+15:10:10.0 (86492569)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002FeXxTUAV","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000936092","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-31T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-31T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x55c1fb88
+15:10:10.0 (86611639)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (86622995)|HEAP_ALLOCATE|[52]|Bytes:4
+15:10:10.0 (86694427)|HEAP_ALLOCATE|[54]|Bytes:6
+15:10:10.0 (86729754)|HEAP_ALLOCATE|[56]|Bytes:3
+15:10:10.0 (86758248)|HEAP_ALLOCATE|[58]|Bytes:7
+15:10:10.0 (86781524)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (86783851)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (86793190)|HEAP_ALLOCATE|[59]|Bytes:7
+15:10:10.0 (86840688)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0xd9556d7"}|0x55c1fb88
+15:10:10.0 (86853360)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (86864948)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x55c1fb88
+15:10:10.0 (86875103)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (86908999)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (86936153)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (86953369)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (86967520)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (86975959)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (87029552)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002EWeZ5UAL","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000931501","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x66296b65
+15:10:10.0 (87044889)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (87046846)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (87054727)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (87063521)|VARIABLE_ASSIGNMENT|[45]|i|2
+15:10:10.0 (87068147)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (87080992)|USER_DEBUG|[46]|DEBUG|2
+15:10:10.0 (87089480)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (87097004)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (87103436)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (87110749)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (87129195)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x6a613735
+15:10:10.0 (87145244)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (87147219)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (87152478)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (87157825)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (87165499)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (87180601)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x6a613735
+15:10:10.0 (87186086)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (87202142)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x6a613735
+15:10:10.0 (87247003)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002EWeZ5UAL","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000931501","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x66296b65
+15:10:10.0 (87302798)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002EWeZ5UAL","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000931501","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-24T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-24T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x6a613735
+15:10:10.0 (87351572)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (87430847)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (87434395)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (87483066)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x66296b65"}|0x6a613735
+15:10:10.0 (87504343)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (87518830)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x6a613735
+15:10:10.0 (87530393)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (87553002)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (87570348)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (87587104)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (87601588)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (87610475)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (87661591)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002DViTQUA1","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000927879","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x5f69d84
+15:10:10.0 (87675131)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (87677183)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (87684414)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (87692518)|VARIABLE_ASSIGNMENT|[45]|i|3
+15:10:10.0 (87697063)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (87709684)|USER_DEBUG|[46]|DEBUG|3
+15:10:10.0 (87717623)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (87726805)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (87736451)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (87748433)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (87775046)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x3f5dbb07
+15:10:10.0 (87797081)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (87800138)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (87808768)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (87814931)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (87823911)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (87840240)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x3f5dbb07
+15:10:10.0 (87846023)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (87862989)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x3f5dbb07
+15:10:10.0 (87909703)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002DViTQUA1","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000927879","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x5f69d84
+15:10:10.0 (87961070)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002DViTQUA1","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000927879","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-17T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-17T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x3f5dbb07
+15:10:10.0 (87993994)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (88081619)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (88086196)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (88117254)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x5f69d84"}|0x3f5dbb07
+15:10:10.0 (88128478)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (88137582)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x3f5dbb07
+15:10:10.0 (88146711)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (88164840)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (88187195)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (88209064)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (88224673)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (88233167)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (88285117)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002CQBrMUAX","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000924050","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x7d84f473
+15:10:10.0 (88299629)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (88301635)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (88309402)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (88317725)|VARIABLE_ASSIGNMENT|[45]|i|4
+15:10:10.0 (88322151)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (88334001)|USER_DEBUG|[46]|DEBUG|4
+15:10:10.0 (88342958)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (88350125)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (88356092)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (88363480)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (88381347)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7ff08162
+15:10:10.0 (88396372)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (88398387)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (88403996)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (88410237)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (88421084)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (88435713)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7ff08162
+15:10:10.0 (88441590)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (88458235)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7ff08162
+15:10:10.0 (88509146)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002CQBrMUAX","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000924050","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x7d84f473
+15:10:10.0 (88561651)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002CQBrMUAX","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000924050","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-10T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-10T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x7ff08162
+15:10:10.0 (88593272)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (88652263)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (88654594)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (88679809)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x7d84f473"}|0x7ff08162
+15:10:10.0 (88691112)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (88699978)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7ff08162
+15:10:10.0 (88709630)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (88727899)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (88743819)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (88758959)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (88772741)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (88780619)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (88829339)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002BEujyUAD","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000920528","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x5a0026fa
+15:10:10.0 (88842574)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (88844361)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (88851900)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (88859813)|VARIABLE_ASSIGNMENT|[45]|i|5
+15:10:10.0 (88864475)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (88876059)|USER_DEBUG|[46]|DEBUG|5
+15:10:10.0 (88884160)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (88890893)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (88896879)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (88905021)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (88922745)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x23576d9d
+15:10:10.0 (88937758)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (88939714)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (88944821)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (88950014)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (88957351)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (88971124)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x23576d9d
+15:10:10.0 (88977024)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (88993097)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x23576d9d
+15:10:10.0 (89041148)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002BEujyUAD","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000920528","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x5a0026fa
+15:10:10.0 (89090439)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002BEujyUAD","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000920528","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-10-03T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-10-03T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x23576d9d
+15:10:10.0 (89118975)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (89176297)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (89178457)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (89203147)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x5a0026fa"}|0x23576d9d
+15:10:10.0 (89214106)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (89223219)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x23576d9d
+15:10:10.0 (89232714)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (89250252)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (89265478)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (89280665)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (89294155)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (89301832)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (89351698)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F00002A3hNcUAJ","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000917278","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x77df1c9c
+15:10:10.0 (89364962)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (89366849)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (89373663)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (89381655)|VARIABLE_ASSIGNMENT|[45]|i|6
+15:10:10.0 (89385937)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (89397199)|USER_DEBUG|[46]|DEBUG|6
+15:10:10.0 (89405190)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (89413255)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (89420543)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (89427659)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (89445918)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x40ec2e5d
+15:10:10.0 (89461033)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (89463033)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (89468463)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (89478258)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (89485384)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (89500256)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x40ec2e5d
+15:10:10.0 (89506071)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (89522763)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x40ec2e5d
+15:10:10.0 (89570772)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F00002A3hNcUAJ","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000917278","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x77df1c9c
+15:10:10.0 (89618729)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F00002A3hNcUAJ","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000917278","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-26T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-26T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x40ec2e5d
+15:10:10.0 (89647307)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (89704576)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (89706710)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (89730839)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x77df1c9c"}|0x40ec2e5d
+15:10:10.0 (89741949)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (89751019)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x40ec2e5d
+15:10:10.0 (89759529)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (89776812)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (89792119)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (89806693)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (89819903)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (89827573)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (89875889)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000028ykv9UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000913789","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x4674a55e
+15:10:10.0 (89889586)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (89891410)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (89898157)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (89905800)|VARIABLE_ASSIGNMENT|[45]|i|7
+15:10:10.0 (89910054)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (89921298)|USER_DEBUG|[46]|DEBUG|7
+15:10:10.0 (89928794)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (89935572)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (89941672)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (89948562)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (89965178)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x12bb20c4
+15:10:10.0 (89980444)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (89982307)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (89987802)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (89992910)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (89999869)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (90016808)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x12bb20c4
+15:10:10.0 (90023378)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (90039615)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x12bb20c4
+15:10:10.0 (90086399)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000028ykv9UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000913789","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x4674a55e
+15:10:10.0 (90133964)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000028ykv9UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000913789","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-19T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-19T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x12bb20c4
+15:10:10.0 (90162685)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (90219572)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (90221676)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (90245375)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x4674a55e"}|0x12bb20c4
+15:10:10.0 (90256288)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (90264942)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x12bb20c4
+15:10:10.0 (90273569)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (90290429)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (90305011)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (90319772)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (90332939)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (90340421)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (90390967)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000027rwv7UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000910586","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x1c89e68f
+15:10:10.0 (90404789)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (90407083)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (90415449)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (90425319)|VARIABLE_ASSIGNMENT|[45]|i|8
+15:10:10.0 (90429756)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (90441700)|USER_DEBUG|[46]|DEBUG|8
+15:10:10.0 (90449887)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (90456763)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (90462302)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (90469093)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (90494053)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x693b5860
+15:10:10.0 (90510151)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (90512083)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (90518341)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (90524679)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (90531991)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (90546291)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x693b5860
+15:10:10.0 (90552008)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (90568300)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x693b5860
+15:10:10.0 (90620635)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000027rwv7UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000910586","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x1c89e68f
+15:10:10.0 (90668722)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000027rwv7UAA","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"000910586","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":109.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-09-12T00:00:00.000Z","Invoice_Total__c":109.00,"Issue_Date__c":"2018-09-12T00:00:00.000Z","Account_Product__c":"a076F00000qJz5TQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Week (13 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5TQAS","CurrencyIsoCode":"AUD"}}|0x693b5860
+15:10:10.0 (90699281)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (90756383)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (90758549)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (90782548)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x1c89e68f"}|0x693b5860
+15:10:10.0 (90793635)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (90802021)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x693b5860
+15:10:10.0 (90810709)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (90827815)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (90843749)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (90858273)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (90874686)|HEAP_ALLOCATE|[44]|Bytes:64
+15:10:10.0 (90882935)|VARIABLE_SCOPE_BEGIN|[44]|inv|Invoice__c|true|false
+15:10:10.0 (90942713)|VARIABLE_ASSIGNMENT|[44]|inv|{"Id":"a0E6F000025Fhl7UAC","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"INV280818065521-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJz5SQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5SQAS","CurrencyIsoCode":"AUD"}}|0x47e53412
+15:10:10.0 (90956385)|STATEMENT_EXECUTE|[44]
+15:10:10.0 (90958171)|STATEMENT_EXECUTE|[45]
+15:10:10.0 (90965010)|HEAP_ALLOCATE|[45]|Bytes:4
+15:10:10.0 (90975127)|VARIABLE_ASSIGNMENT|[45]|i|9
+15:10:10.0 (90979481)|STATEMENT_EXECUTE|[46]
+15:10:10.0 (90991469)|USER_DEBUG|[46]|DEBUG|9
+15:10:10.0 (91003169)|STATEMENT_EXECUTE|[47]
+15:10:10.0 (91011361)|HEAP_ALLOCATE|[47]|Bytes:12
+15:10:10.0 (91017516)|CONSTRUCTOR_ENTRY|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (91024878)|VARIABLE_SCOPE_BEGIN|[79]|this|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (91042223)|VARIABLE_ASSIGNMENT|[79]|this|{}|0x7198fb5f
+15:10:10.0 (91057754)|STATEMENT_EXECUTE|[79]
+15:10:10.0 (91059699)|STATEMENT_EXECUTE|[80]
+15:10:10.0 (91066427)|STATEMENT_EXECUTE|[81]
+15:10:10.0 (91072924)|CONSTRUCTOR_EXIT|[47]|01p90000002RRLj|<init>()|InvoiceListForCase.InvRow
+15:10:10.0 (91080543)|VARIABLE_SCOPE_BEGIN|[47]|ir|InvoiceListForCase.InvRow|true|false
+15:10:10.0 (91099273)|VARIABLE_ASSIGNMENT|[47]|ir|{}|0x7198fb5f
+15:10:10.0 (91105291)|STATEMENT_EXECUTE|[48]
+15:10:10.0 (91122470)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{}|0x7198fb5f
+15:10:10.0 (91170626)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|{"Id":"a0E6F000025Fhl7UAC","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"INV280818065521-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJz5SQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5SQAS","CurrencyIsoCode":"AUD"}}|0x47e53412
+15:10:10.0 (91219001)|VARIABLE_ASSIGNMENT|[80]|this.invoice|{"Id":"a0E6F000025Fhl7UAC","Name":"Favoured Flooring Pt (5 more) ...","Invoice_Number__c":"INV280818065521-1","Amount_Credited__c":0.00,"Amount_Due__c":0.00,"Amount_Paid__c":299.00,"Amount_Refunded__c":0.00,"Due_Date__c":"2018-08-28T00:00:00.000Z","Invoice_Total__c":299.00,"Issue_Date__c":"2018-08-28T00:00:00.000Z","Account_Product__c":"a076F00000qJz5SQAS","Reference__c":"473976","Status__c":"PAID","CurrencyIsoCode":"AUD","Account_Product__r":{"Name":"Adwords Premium Setu (1 more) ...","Description__c":"sponsoredlinx.com.au (8 more) ...","Id":"a076F00000qJz5SQAS","CurrencyIsoCode":"AUD"}}|0x7198fb5f
+15:10:10.0 (91281060)|STATEMENT_EXECUTE|[51]
+15:10:10.0 (91344715)|STATEMENT_EXECUTE|[58]
+15:10:10.0 (91346953)|STATEMENT_EXECUTE|[59]
+15:10:10.0 (91379568)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"invoice":"0x47e53412"}|0x7198fb5f
+15:10:10.0 (91392552)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"#BCBAE8"
+15:10:10.0 (91402497)|VARIABLE_ASSIGNMENT|[81]|this.color|"#BCBAE8"|0x7198fb5f
+15:10:10.0 (91413185)|STATEMENT_EXECUTE|[72]
+15:10:10.0 (91433536)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (91450150)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+15:10:10.0 (91466510)|HEAP_ALLOCATE|[44]|Bytes:5
+15:10:10.0 (91488911)|VARIABLE_ASSIGNMENT|[44]|inv|null|
+15:10:10.0 (91495280)|STATEMENT_EXECUTE|[75]
+15:10:10.0 (91539400)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"irs":"0x45c4c012"}|0x5d13144a
+15:10:10.0 (92173730)|USER_DEBUG|[75]|DEBUG|(InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002FeXxTUAV, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000936092, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-31 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-10-31 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002EWeZ5UAL, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000931501, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-24 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-10-24 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002DViTQUA1, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000927879, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-17 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-10-17 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002CQBrMUAX, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000924050, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-10 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-10-10 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002BEujyUAD, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000920528, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-10-03 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-10-03 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F00002A3hNcUAJ, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000917278, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-26 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-09-26 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000028ykv9UAA, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000913789, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-19 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-09-19 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000027rwv7UAA, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=000910586, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=109.00, Amount_Refunded__c=0.00, Due_Date__c=2018-09-12 00:00:00, Invoice_Total__c=109.00, Issue_Date__c=2018-09-12 00:00:00, Account_Product__c=a076F00000qJz5TQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}], InvRow:[color=#BCBAE8, invoice=Invoice__c:{Id=a0E6F000025Fhl7UAC, Name=Favoured Flooring Pty Ltd, Invoice_Number__c=INV280818065521-1, Amount_Credited__c=0.00, Amount_Due__c=0.00, Amount_Paid__c=299.00, Amount_Refunded__c=0.00, Due_Date__c=2018-08-28 00:00:00, Invoice_Total__c=299.00, Issue_Date__c=2018-08-28 00:00:00, Account_Product__c=a076F00000qJz5SQAS, Reference__c=473976, Status__c=PAID, CurrencyIsoCode=AUD}])
+15:10:10.0 (92244908)|SYSTEM_MODE_EXIT|false
+15:10:10.0 (92409057)|SYSTEM_MODE_ENTER|true
+15:10:10.0 (116224954)|VF_SERIALIZE_VIEWSTATE_BEGIN|06690000002H8AP
+15:10:10.0 (119172361)|VF_SERIALIZE_VIEWSTATE_END
+15:10:10.122 (122687810)|CUMULATIVE_LIMIT_USAGE
+15:10:10.122 (122687810)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 10 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:10:10.122 (122687810)|CUMULATIVE_LIMIT_USAGE_END
+
+15:10:10.0 (122733495)|CODE_UNIT_FINISHED|VF: /apex/InvoiceListForCase
+15:10:10.0 (123701956)|EXECUTION_FINISHED

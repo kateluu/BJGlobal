@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_61427600</developerName>
+        <masterLabel>Company</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__NVM_Service_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>GMT cm 1117</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT sales 1117</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Get More Traffic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Get More Traffic Main</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT sales 1117 Current</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>GMT CM 1117 Current</sourceValue>
+            </sourceValues>
+            <value>GMT</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SLX sales 0118</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SponsoredLinx QLD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>slx cm and back office</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>slx cm and back office 2017</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SLX New Sales Line</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SLX sales 0118 Current</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SLX sales 0817</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>slx cm 2017 Current</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OLD slx cm and back office</sourceValue>
+            </sourceValues>
+            <value>SLX</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_80757590</developerName>
+        <masterLabel>Last State</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Last_State__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Agent Handled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CCR Handled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Message Taken (A)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Message Taken (Q)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Internal Call</sourceValue>
+            </sourceValues>
+            <value>Answered</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Automation Abandoned</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Queue Abandoned</sourceValue>
+            </sourceValues>
+            <value>Abandoned</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Last_State__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__NVM_Service_Name__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__CLID__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Call_Recording__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Agent__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Agent2__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Agent_Ring_Duration__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Agent_Talk_Time__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Queue_Duration__c</field>
+    </columns>
+    <columns>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Total_Call_Duration__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Interaction_Type__c</column>
+            <operator>equals</operator>
+            <value>Inbound Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Queue_Name__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_80757590</column>
+            <operator>equals</operator>
+            <value>Abandoned</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_61427600</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Queue_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Abandoned__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Deep Inbound Calls</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$NVMStatsSF__NVM_Call_Summary__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__Agent__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>NVMStatsSF__NVM_Call_Summary__c.NVMStatsSF__CallTime__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

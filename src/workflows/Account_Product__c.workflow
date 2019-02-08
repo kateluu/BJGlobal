@@ -86,7 +86,7 @@
     </alerts>
     <alerts>
         <fullName>X14_Days_Pending_Linking_Alert</fullName>
-        <ccEmails>david.powell@sponsoredlinx.com</ccEmails>
+        <ccEmails>daniel.sharman@sponsoredlinx.com</ccEmails>
         <description>14 Days Pending Linking Alert</description>
         <protected>false</protected>
         <recipients>
@@ -111,7 +111,7 @@
     </alerts>
     <alerts>
         <fullName>X21_Days_Pending_Linking_Alert</fullName>
-        <ccEmails>David.Powell@sponsoredlinx.com</ccEmails>
+        <ccEmails>daniel.sharman@sponsoredlinx.com</ccEmails>
         <ccEmails>accounts@sponsoredlinx.com</ccEmails>
         <description>21 Days Pending Linking Alert</description>
         <protected>false</protected>
@@ -123,7 +123,7 @@
     </alerts>
     <alerts>
         <fullName>X7_Days_Pending_Linking_Alert</fullName>
-        <ccEmails>david.powell@sponsoredlinx.com</ccEmails>
+        <ccEmails>daniel.sharman@sponsoredlinx.com</ccEmails>
         <description>7 Days Pending Linking Alert</description>
         <protected>false</protected>
         <recipients>
@@ -132,6 +132,25 @@
         <senderType>CurrentUser</senderType>
         <template>Account_Product/Facebook_Pending_Linking_Alert</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>Activate_Social_Product</fullName>
+        <field>Product_Status__c</field>
+        <literalValue>Active</literalValue>
+        <name>Activate Social Product</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Calculate_Paid_Waiting_Time</fullName>
+        <description>Calculate Paid Waiting Time</description>
+        <field>From_Last_Paid_Date__c</field>
+        <formula>IF(ISNULL(Last_Paid_Date__c), NULL , TODAY() - Last_Paid_Date__c)</formula>
+        <name>Calculate Paid Waiting Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
     <fieldUpdates>
         <fullName>Change_Price</fullName>
         <field>Product_Price__c</field>
@@ -151,10 +170,37 @@
         <protected>false</protected>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Clear_Last_Paid_Date</fullName>
+        <description>Clear Last Paid Date</description>
+        <field>Last_Paid_Date__c</field>
+        <name>Clear Last Paid Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Deactivate_Social_Product</fullName>
+        <field>Product_Status__c</field>
+        <literalValue>Suspended</literalValue>
+        <name>Deactivate Social Product</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Discount_Product_Price</fullName>
         <field>Product_Price__c</field>
         <formula>Product_Price__c - Relationship_Discount__c</formula>
         <name>Discount Product Price</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>First_Reassigned_Update</fullName>
+        <field>First_Reassigned_Date__c</field>
+        <formula>NOW()</formula>
+        <name>First Reassigned Update</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
@@ -176,10 +222,39 @@
         <operation>Null</operation>
         <protected>false</protected>
     </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Last_Invoice_Date</fullName>
+        <description>Update Last Invoice Date to make sure the invoice will be generated on next day</description>
+        <field>Last_Invoice_Date__c</field>
+        <formula>TODAY() - 6</formula>
+        <name>Update Last Invoice Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Changed_Time</fullName>
+        <field>Last_Status_Changed_Time__c</field>
+        <formula>now()</formula>
+        <name>Update Status Changed Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Changed_Time_Deactivate</fullName>
+        <description>Update Status Changed Time</description>
+        <field>Last_Status_Changed_Time__c</field>
+        <formula>now()</formula>
+        <name>Update Status Changed Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
     <outboundMessages>
         <fullName>Move_paused_to_MOH</fullName>
         <apiVersion>42.0</apiVersion>
-        <endpointUrl>http://13.210.18.161/adwordsapi/transfer</endpointUrl>
+        <endpointUrl>http://staging.clientpanel.sponsoredlinx.com.au/api/adwordsapi/transfer</endpointUrl>
         <fields>Adwords_ID__c</fields>
         <fields>BJB_Company__c</fields>
         <fields>Id</fields>
@@ -187,7 +262,7 @@
         <fields>Product_Status__c</fields>
         <includeSessionId>false</includeSessionId>
         <integrationUser>ben@bjbglobal.com.au</integrationUser>
-        <name>Move paused to MOH</name>
+        <name>Move Active/Paused/Cancelled between MOH</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>
     </outboundMessages>
@@ -231,6 +306,29 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Activate Product Base On Paid Date</fullName>
+        <actions>
+            <name>Activate_Social_Product</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Last_Invoice_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Status_Changed_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>For any social product only, activate the product if last paid date is less than 7days</description>
+        <formula>( FIND(&apos;Social Engage&apos;, Name)&gt;-1 ) 
+&amp;&amp;  (!ISNULL(Last_Paid_Date__c)) 
+&amp;&amp; ((From_Last_Paid_Date__c &lt; 6) || (activeat__c = TODAY()))
+&amp;&amp; ( ISPICKVAL(Product_Status__c,&apos;Cancel&apos;)
+     || ISPICKVAL(Product_Status__c,&apos;Suspended&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>Auto Task for resumed product</fullName>
         <actions>
             <name>Account_resumes_today_please_contact</name>
@@ -255,6 +353,45 @@
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
+        <fullName>Calculate Paid Waiting Time</fullName>
+        <actions>
+            <name>Calculate_Paid_Waiting_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account_Product__c.Name</field>
+            <operation>contains</operation>
+            <value>Social Engage</value>
+        </criteriaItems>
+        <description>Calculate Paid Waiting Time</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Capture First Reassigned Date</fullName>
+        <actions>
+            <name>First_Reassigned_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account_Product__c.First_Reassigned_Date__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account_Product__c.OwnerId</field>
+            <operation>notContain</operation>
+            <value>Checkout</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account_Product__c.OwnerId</field>
+            <operation>equals</operation>
+            <value>Ben Bradshaw</value>
+        </criteriaItems>
+        <description>The first reassignment from CM To CM will be captured here</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
         <fullName>ConvertoPages Cancellation</fullName>
         <actions>
             <name>Cancellation_of_CovertoPages</name>
@@ -271,6 +408,28 @@
             <operation>equals</operation>
             <value>Cancelled</value>
         </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Deactivate Product Base On Paid Date</fullName>
+        <actions>
+            <name>Clear_Last_Paid_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Deactivate_Social_Product</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Status_Changed_Time_Deactivate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>For any social product only, deactivate the product if last paid date is over from 7days</description>
+        <formula>( FIND(&apos;Social Engage&apos;, Name)&gt;-1 ) 
+&amp;&amp; (!ISNULL(Last_Paid_Date__c))
+&amp;&amp; (From_Last_Paid_Date__c &gt; 5)
+&amp;&amp; ISPICKVAL(Product_Status__c , &apos;Active&apos;)</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>
@@ -343,7 +502,7 @@
         </workflowTimeTriggers>
     </rules>
     <rules>
-        <fullName>Move Paused%2FCancelled to MOH</fullName>
+        <fullName>Move Active%2FPaused%2FCancelled between MOH %26 CM MCC</fullName>
         <actions>
             <name>Move_paused_to_MOH</name>
             <type>OutboundMessage</type>
@@ -352,7 +511,7 @@
         <criteriaItems>
             <field>Account_Product__c.Product_Status__c</field>
             <operation>equals</operation>
-            <value>Paused,Cancelled</value>
+            <value>Paused,Cancelled,Active</value>
         </criteriaItems>
         <criteriaItems>
             <field>Account_Product__c.Adwords_ID__c</field>

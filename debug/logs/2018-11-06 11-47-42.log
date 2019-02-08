@@ -1,0 +1,45 @@
+28.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+11:47:41.16 (16544185)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (33340744)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (33387517)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (33447532)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (33559715)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (38443175)|SOQL_EXECUTE_BEGIN|[23]|Aggregations:1|SELECT Name, NVMContactWorld__Agent__c, Agent__r.Name, Agent__r.SmallPhotoUrl, Type__c, TimeStamp__c, (SELECT Name, Detail__c FROM Interaction_Event_Notes__r) FROM InteractionEvent__c WHERE (IndexedCallObjectIdentifier__c = :tmpVar1 AND TimeStamp__c != NULL) ORDER BY TimeStamp__c ASC NULLS FIRST
+11:47:41.16 (47412983)|SOQL_EXECUTE_END|[23]|Rows:0
+11:47:41.16 (55195566)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (55227098)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (55261256)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (55306764)|ENTERING_MANAGED_PKG|NVMContactWorld
+11:47:41.16 (55989338)|SOQL_EXECUTE_BEGIN|[23]|Aggregations:1|SELECT Name, NVMContactWorld__Agent__c, Agent__r.Name, Agent__r.SmallPhotoUrl, Type__c, TimeStamp__c, (SELECT Name, Detail__c FROM Interaction_Event_Notes__r) FROM InteractionEvent__c WHERE (IndexedCallObjectIdentifier__c = :tmpVar1 AND TimeStamp__c != NULL) ORDER BY TimeStamp__c ASC NULLS FIRST
+11:47:41.16 (62085384)|SOQL_EXECUTE_END|[23]|Rows:0
+11:47:41.65 (65669821)|CUMULATIVE_LIMIT_USAGE
+11:47:41.65 (65669821)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:47:41.65 (65669821)|LIMIT_USAGE_FOR_NS|NVMContactWorld|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+11:47:41.65 (65669821)|CUMULATIVE_LIMIT_USAGE_END
+

@@ -1,0 +1,761 @@
+43.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+18:09:34.0 (93295)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+18:09:34.0 (133416)|EXECUTION_STARTED
+18:09:34.0 (136604)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Sign_Up_Note:new
+18:09:34.0 (150529)|VALIDATION_RULE|03d6F000000gdjF|Adwords_Id_Must_be_Ten_Digits
+18:09:34.0 (309252)|VALIDATION_FORMULA|AND(NOT(ISBLANK(Adwords_ID__c)), NOT(REGEX(Adwords_ID__c, "[0-9]{3}-[0-9]{3}-[0-9]{4}")))|Adwords_ID__c=null
+18:09:34.0 (317041)|VALIDATION_PASS
+18:09:34.0 (597322)|CODE_UNIT_FINISHED|Validation:Sign_Up_Note:new
+18:09:34.0 (605717)|EXECUTION_FINISHED
+18:09:34.24 (24467258)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+18:09:34.24 (24488478)|EXECUTION_STARTED
+18:09:34.24 (24492411)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000azxr|SignupNoteAfterInsert on Sign_Up_Note trigger event AfterInsert|__sfdc_trigger/SignupNoteAfterInsert
+18:09:34.24 (24531098)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (25041847)|HEAP_ALLOCATE|[72]|Bytes:3
+18:09:34.24 (25084487)|HEAP_ALLOCATE|[77]|Bytes:152
+18:09:34.24 (25100098)|HEAP_ALLOCATE|[342]|Bytes:408
+18:09:34.24 (25138649)|HEAP_ALLOCATE|[355]|Bytes:408
+18:09:34.24 (25152060)|HEAP_ALLOCATE|[467]|Bytes:48
+18:09:34.24 (25182036)|HEAP_ALLOCATE|[139]|Bytes:6
+18:09:34.24 (25199528)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (25473265)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:16
+18:09:34.24 (25484132)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupNoteAfterInsert|true|false
+18:09:34.24 (25532165)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5d35d7e7
+18:09:34.24 (25596435)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:16
+18:09:34.24 (25605088)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupNoteAfterInsert|true|false
+18:09:34.24 (25622207)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x5d35d7e7
+18:09:34.24 (25630427)|STATEMENT_EXECUTE|[1]
+18:09:34.24 (25669107)|HEAP_ALLOCATE|[50]|Bytes:5
+18:09:34.24 (25691931)|HEAP_ALLOCATE|[56]|Bytes:5
+18:09:34.24 (25700874)|HEAP_ALLOCATE|[64]|Bytes:7
+18:09:34.24 (26075032)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (26103493)|VARIABLE_SCOPE_BEGIN|[2]|signup_note|Sign_Up_Note__c|true|false
+18:09:34.24 (47464404)|VARIABLE_ASSIGNMENT|[2]|signup_note|{"LastModifiedDate":"2018-09-28T08:09:34.000Z","Is_Pricing_Correct__c":"Yes","Notes_from_recording_done__c":false,"Do_they_have_a_current_active_fb__c":false,"Name":"Note - 18291","Sign_up__c":"a066F00001GiZmeQAF","Note__c":"New","Healthcheck_done__c":false,"CreatedById":"00590000000VmmqAAC","RecordTypeId":"01290000001GyO6AAK","Campaign_start_date__c":"2018-09-28T00:00:00.000Z","Contact_person__c":"t","IsDeleted":false,"Target_Market__c":"12","Notes__c":"12","OwnerID__c":"0056F000006HQLx","Payment__c":"Direct Deposit","Agreed_target_locations__c":"australia","CurrencyIsoCode":"AUD","SystemModstamp":"2018-09-28T08:09:34.000Z","From_Source__c":"Inbound call","BJB_Company__c":"SponsoredLinX","Position_in_the_company__c":"t","Current_daily_budget__c":12,"CreatedDate":"2018-09-28T08:09:34.000Z","Did_you_record_the_signup_call__c":false,"Date_of_Sale__c":"2018-09-28T00:00:00.000Z","Id":"a1T6F00000Q5hD7UAJ","Processed__c":false,"LastModifiedById":"00590000000VmmqAAC","Agreed_daily_budget__c":12}|0x77005ed7
+18:09:34.24 (47512997)|STATEMENT_EXECUTE|[2]
+18:09:34.24 (47517858)|STATEMENT_EXECUTE|[3]
+18:09:34.24 (47540685)|HEAP_ALLOCATE|[3]|Bytes:75
+18:09:34.24 (47575976)|HEAP_ALLOCATE|[3]|Bytes:4
+18:09:34.24 (47604822)|HEAP_ALLOCATE|[3]|Bytes:7
+18:09:34.24 (47979078)|SOQL_EXECUTE_BEGIN|[3]|Aggregations:0|SELECT Note_Created__c, Daily_budget__c FROM Sign_Up__c WHERE id = :tmpVar1
+18:09:34.24 (51116197)|SOQL_EXECUTE_END|[3]|Rows:1
+18:09:34.24 (51153637)|HEAP_ALLOCATE|[3]|Bytes:8
+18:09:34.24 (51181924)|HEAP_ALLOCATE|[3]|Bytes:111
+18:09:34.24 (51276186)|HEAP_ALLOCATE|[3]|Bytes:8
+18:09:34.24 (51296207)|HEAP_ALLOCATE|[3]|Bytes:36
+18:09:34.24 (51367905)|HEAP_ALLOCATE|[3]|Bytes:16
+18:09:34.24 (51387776)|VARIABLE_SCOPE_BEGIN|[3]|signup|Sign_Up__c|true|false
+18:09:34.24 (51433241)|VARIABLE_ASSIGNMENT|[3]|signup|{"Note_Created__c":true,"Daily_Budget__c":12,"Id":"a066F00001GiZmeQAF"}|0x645c7f4f
+18:09:34.24 (51448009)|STATEMENT_EXECUTE|[4]
+18:09:34.24 (51536277)|VARIABLE_ASSIGNMENT|[4]|this.Note_Created__c|true|0x645c7f4f
+18:09:34.24 (51551025)|STATEMENT_EXECUTE|[5]
+18:09:34.24 (51654984)|VARIABLE_ASSIGNMENT|[5]|this.Daily_Budget__c|12|0x645c7f4f
+18:09:34.24 (51668860)|STATEMENT_EXECUTE|[6]
+18:09:34.24 (51724778)|HEAP_ALLOCATE|[6]|Bytes:8
+18:09:34.24 (51751110)|DML_BEGIN|[6]|Op:Update|Type:Sign_Up__c|Rows:1
+18:09:34.24 (51804812)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (68226759)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000DZX0|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:09:34.24 (68279538)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (68308456)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (68390665)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (68403761)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:09:34.24 (68444958)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7fc4b286
+18:09:34.24 (68515418)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (68525136)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:09:34.24 (68539330)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x7fc4b286
+18:09:34.24 (68548613)|STATEMENT_EXECUTE|[1]
+18:09:34.24 (68744956)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (68765785)|HEAP_ALLOCATE|[2]|Bytes:4
+18:09:34.24 (68775601)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:09:34.24 (71812743)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:08:14.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:08:14.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x589291c8
+18:09:34.24 (71858033)|STATEMENT_EXECUTE|[2]
+18:09:34.24 (71860733)|STATEMENT_EXECUTE|[3]
+18:09:34.24 (72058070)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:09:34.24 (72933085)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:08:14.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:08:14.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x732d82f0
+18:09:34.24 (73016546)|HEAP_ALLOCATE|[4]|Bytes:7
+18:09:34.24 (73115112)|HEAP_ALLOCATE|[82]|Bytes:16
+18:09:34.24 (73177489)|STATEMENT_EXECUTE|[4]
+18:09:34.24 (73209620)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (73228620)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:09:34.73 (73239997)|CUMULATIVE_LIMIT_USAGE
+18:09:34.73 (73239997)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.73 (73239997)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.24 (74564416)|CODE_UNIT_FINISHED|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:09:34.24 (91865374)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000IdrN|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:09:34.24 (91919737)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (91955561)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (92081069)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (92103259)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:09:34.24 (92159407)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x12d7b894
+18:09:34.24 (92241851)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (92256568)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:09:34.24 (92279824)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x12d7b894
+18:09:34.24 (92292885)|STATEMENT_EXECUTE|[1]
+18:09:34.24 (92380995)|STATEMENT_EXECUTE|[3]
+18:09:34.24 (92385076)|STATEMENT_EXECUTE|[5]
+18:09:34.24 (92512161)|HEAP_ALLOCATE|[5]|Bytes:18
+18:09:34.24 (92528735)|VARIABLE_SCOPE_BEGIN|[5]|signup_id|String|false|false
+18:09:34.24 (92570278)|VARIABLE_ASSIGNMENT|[5]|signup_id|"a066F00001GiZmeQAF"
+18:09:34.24 (92640720)|STATEMENT_EXECUTE|[6]
+18:09:34.92 (92659499)|CUMULATIVE_LIMIT_USAGE
+18:09:34.92 (92659499)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.92 (92659499)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.24 (93977313)|CODE_UNIT_FINISHED|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:09:34.24 (96424932)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000DhMP|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:09:34.24 (96466343)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (96475903)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.24 (96561390)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (96575106)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:09:34.24 (96614623)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x34257f8
+18:09:34.24 (96697615)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.24 (96711228)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:09:34.24 (96734523)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x34257f8
+18:09:34.24 (96747038)|STATEMENT_EXECUTE|[1]
+18:09:34.24 (96850666)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (96886593)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:09:34.24 (98669837)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:09:34.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:09:34.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x737cd87b
+18:09:34.24 (98727017)|STATEMENT_EXECUTE|[2]
+18:09:34.24 (98730586)|STATEMENT_EXECUTE|[3]
+18:09:34.24 (98880039)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:09:34.24 (100232778)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:08:14.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:08:14.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x2d13e66e
+18:09:34.24 (100286937)|STATEMENT_EXECUTE|[4]
+18:09:34.24 (100317678)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (100339162)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:09:34.100 (100349497)|CUMULATIVE_LIMIT_USAGE
+18:09:34.100 (100349497)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.100 (100349497)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.24 (101330753)|CODE_UNIT_FINISHED|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:09:34.24 (101409663)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000UJA1
+18:09:34.24 (112490233)|WF_RULE_EVAL_BEGIN|Workflow
+18:09:34.24 (112535138)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Signup Alert to SEO Manager|01Q6F000000DkrE|ON_CREATE_ONLY|0
+18:09:34.24 (112552398)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (112564181)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Signup Alert to SEO Manager - GMT|01Q6F000000DkrJ|ON_CREATE_ONLY|0
+18:09:34.24 (112578999)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (112589005)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 1: Send Complete SignUp To COM|01Q90000000mpb6|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (115782962)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing, Admob Management] 
+AND [Sign Up : Status equals New] 
+AND [Sign Up : Invoice Paid equals true]
+18:09:34.24 (115801667)|WF_RULE_EVAL_VALUE|true
+18:09:34.24 (115818597)|WF_RULE_EVAL_VALUE|5
+18:09:34.24 (115827868)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (115833799)|WF_CRITERIA_END|false
+18:09:34.24 (115850765)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 3: SLX - Assign New Sign Up to CM|01Q6F000000DkC1|ON_ALL_CHANGES|0
+18:09:34.24 (116231158)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}),  OR(CONTAINS( {!ID:00N90000003wjk4} , 'SponsoredLinX'),CONTAINS({!ID:00N90000003wjk4} , 'sponsoredlinx')) )|Values:FromSource__c=sponsoredlinx.com.au, Assign_To_User__c=null
+18:09:34.24 (116247440)|WF_CRITERIA_END|false
+18:09:34.24 (116274921)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team C|01Q90000000DWbs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (116333159)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (116350500)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Update Spotcheck completed date|01Q90000000DV5d|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (116404464)|WF_RULE_FILTER|[Sign Up : Spotcheck Completed By not equal to ]
+18:09:34.24 (116415716)|WF_RULE_EVAL_VALUE|
+18:09:34.24 (116419527)|WF_CRITERIA_END|false
+18:09:34.24 (116434958)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Sign Up Completed Date|01Q6F0000002oDg|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (116533122)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Product Type equals AdWords Management, SEO, Social Marketing] 
+AND [Sign Up : Completed Date equals ]
+18:09:34.24 (116555284)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (116562413)|WF_CRITERIA_END|false
+18:09:34.24 (116577460)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To GMT Team B|01Q6F0000002jYd|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (116638212)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team B]
+18:09:34.24 (116653479)|WF_RULE_EVAL_VALUE|4
+18:09:34.24 (116659318)|WF_CRITERIA_END|false
+18:09:34.24 (116672263)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Spot_Check_Auto_Creation3016F000000UuBc|01Q6F000001EXII|ON_ALL_CHANGES|0
+18:09:34.24 (116728768)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (116736267)|WF_CRITERIA_END|true
+18:09:34.24 (117673599)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Populate_Sign_Up_Note_OwnerID3016F0000005q4o|01Q6F0000019kOr|ON_ALL_CHANGES|0
+18:09:34.24 (117736242)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (117744260)|WF_CRITERIA_END|true
+18:09:34.24 (117760426)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|SEO_ContentPack_Questionnaire3016F0000002gCi|01Q6F000000qybT|ON_CREATE_ONLY|0
+18:09:34.24 (117769279)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (117774262)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|48 Hrs Account Built Alert to TL (Mon - Wed)|01Q6F0000019ddq|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (117926995)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Monday, Tuesday, Wednesday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:09:34.24 (117953610)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (117961747)|WF_CRITERIA_END|false
+18:09:34.24 (117977943)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Create_Survey_Trigger_from_Sign_Up3016F0000003VBk|01Q6F000001RaCB|ON_ALL_CHANGES|0
+18:09:34.24 (118042467)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (118055426)|WF_CRITERIA_END|true
+18:09:34.24 (118078956)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Sign Up Sold to Pause Date|01Q900000002JYW|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118151863)|WF_RULE_FILTER|[Sign Up : Status equals Sold to Pause]
+18:09:34.24 (118168178)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (118174412)|WF_CRITERIA_END|false
+18:09:34.24 (118187841)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Build_Check_Auto_Creation3016F0000005Zhv|01Q6F0000019cqj|ON_ALL_CHANGES|0
+18:09:34.24 (118234354)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (118240700)|WF_CRITERIA_END|true
+18:09:34.24 (118253500)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Sign Up Alert to Sales Managers - GMT|01Q6F000001RfFU|ON_CREATE_ONLY|0
+18:09:34.24 (118262176)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (118266397)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Sign Up Alert to Sales Managers - SLX|01Q6F000001ReHX|ON_CREATE_ONLY|0
+18:09:34.24 (118273949)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (118277766)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 3: GMT - Assign New Sign Up to CM|01Q6F000000DkCL|ON_ALL_CHANGES|0
+18:09:34.24 (118472960)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}), CONTAINS( {!ID:00N90000003wjk4} , 'getmoretraffic'))|Values:FromSource__c=sponsoredlinx.com.au, Assign_To_User__c=null
+18:09:34.24 (118482405)|WF_CRITERIA_END|false
+18:09:34.24 (118492257)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Change Status to Pending CM Call|01Q6F0000002pFI|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118542060)|WF_RULE_NOT_EVALUATED
+18:09:34.24 (118550318)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team A|01Q90000000mrRn|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118584552)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team A]
+18:09:34.24 (118594854)|WF_RULE_EVAL_VALUE|4
+18:09:34.24 (118599518)|WF_CRITERIA_END|false
+18:09:34.24 (118606519)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Populate_Team_Leader_Field_in_Sign_Up3016F0000005ZYj|01Q6F0000019jQP|ON_ALL_CHANGES|0
+18:09:34.24 (118646479)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (118652917)|WF_CRITERIA_END|true
+18:09:34.24 (118664639)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team B|01Q90000000mrRs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118701806)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team B]
+18:09:34.24 (118711015)|WF_RULE_EVAL_VALUE|4
+18:09:34.24 (118714423)|WF_CRITERIA_END|false
+18:09:34.24 (118721091)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|48 Hrs Account Built Alert to TL (Thu-Fri)|01Q6F0000019ddR|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118789027)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Thursday, Friday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:09:34.24 (118799254)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (118802794)|WF_CRITERIA_END|false
+18:09:34.24 (118809188)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Send Complete SEO SignUp To SEO Manager|01Q90000000muYJ|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (118878743)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals SEO]
+18:09:34.24 (118890643)|WF_RULE_EVAL_VALUE|true
+18:09:34.24 (118902290)|WF_RULE_EVAL_VALUE|5
+18:09:34.24 (118908010)|WF_CRITERIA_END|false
+18:09:34.24 (118921582)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Update_Adwords_ID_in_Account_Product3016F0000002Uly|01Q6F000000qDbf|ON_ALL_CHANGES|0
+18:09:34.24 (118979289)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (118988593)|WF_CRITERIA_END|true
+18:09:34.24 (119007221)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Facebook_Product_Billing3016F0000005dyq|01Q6F0000019fAR|ON_ALL_CHANGES|0
+18:09:34.24 (119057930)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.24 (119067711)|WF_CRITERIA_END|true
+18:09:34.24 (119093159)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Send Setup Suvery|01Q6F000000Dk6S|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (119204350)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Is Test equals true] 
+AND [Sign Up : Company equals bjb global]
+18:09:34.24 (119225224)|WF_RULE_EVAL_VALUE|9
+18:09:34.24 (119232377)|WF_CRITERIA_END|false
+18:09:34.24 (119248867)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To GMT Team A|01Q90000000nO1p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.24 (119315076)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team A]
+18:09:34.24 (119331410)|WF_RULE_EVAL_VALUE|4
+18:09:34.24 (119338028)|WF_CRITERIA_END|false
+18:09:34.24 (119360856)|WF_SPOOL_ACTION_BEGIN|Workflow
+18:09:34.24 (119394688)|WF_ACTION| Flow Trigger: 7;
+18:09:34.24 (119403406)|WF_RULE_EVAL_END
+18:09:34.24 (120325240)|WF_FLOW_ACTION_BEGIN|09L6F000000PUWz
+18:09:34.121 (121695553)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000HGwO|3016F0000005Zhv
+18:09:34.121 (122291219)|FLOW_CREATE_INTERVIEW_END|204510064a735cd5aa63714611931661f3198b1-1a5d|Build Check Auto Creation
+18:09:34.122 (122569159)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.122 (122588406)|FLOW_START_INTERVIEW_BEGIN|204510064a735cd5aa63714611931661f3198b1-1a5d|Build Check Auto Creation
+18:09:34.122 (124853820)|FLOW_START_INTERVIEW_END|204510064a735cd5aa63714611931661f3198b1-1a5d|Build Check Auto Creation
+18:09:34.122 (124882524)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (126056433)|WF_FLOW_ACTION_END|09L6F000000PUWz
+18:09:34.24 (126080878)|WF_FLOW_ACTION_BEGIN|09L6F000000PYPN
+18:09:34.127 (127733346)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090J2|3016F0000005ZYj
+18:09:34.127 (128476166)|FLOW_CREATE_INTERVIEW_END|204610064a735cd5aa63714611931661f3198b1-1a5e|Populate Team Leader Field in Sign Up
+18:09:34.128 (128830631)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.128 (128852428)|FLOW_START_INTERVIEW_BEGIN|204610064a735cd5aa63714611931661f3198b1-1a5e|Populate Team Leader Field in Sign Up
+18:09:34.128 (131301896)|FLOW_START_INTERVIEW_END|204610064a735cd5aa63714611931661f3198b1-1a5e|Populate Team Leader Field in Sign Up
+18:09:34.128 (131330282)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (131951052)|WF_FLOW_ACTION_END|09L6F000000PYPN
+18:09:34.24 (131977538)|WF_FLOW_ACTION_BEGIN|09L6F000000UJRN
+18:09:34.133 (133458556)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWUZ|3016F0000002Uly
+18:09:34.133 (134053326)|FLOW_CREATE_INTERVIEW_END|204710064a735cd5aa63714611931661f3198b1-1a5f|Update Adwords ID in Account Product
+18:09:34.134 (134374208)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.134 (134395360)|FLOW_START_INTERVIEW_BEGIN|204710064a735cd5aa63714611931661f3198b1-1a5f|Update Adwords ID in Account Product
+18:09:34.134 (136267924)|FLOW_START_INTERVIEW_END|204710064a735cd5aa63714611931661f3198b1-1a5f|Update Adwords ID in Account Product
+18:09:34.134 (136291390)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (136864574)|WF_FLOW_ACTION_END|09L6F000000UJRN
+18:09:34.24 (136889288)|WF_FLOW_ACTION_BEGIN|09L6F000000PZ9R
+18:09:34.138 (138166162)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000092sF|3016F0000005q4o
+18:09:34.138 (138646669)|FLOW_CREATE_INTERVIEW_END|204810064a735cd5aa63714611931661f3198b1-1a60|Populate Sign Up Note OwnerID
+18:09:34.138 (138928144)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.138 (138947327)|FLOW_START_INTERVIEW_BEGIN|204810064a735cd5aa63714611931661f3198b1-1a60|Populate Sign Up Note OwnerID
+18:09:34.138 (140732697)|FLOW_START_INTERVIEW_END|204810064a735cd5aa63714611931661f3198b1-1a60|Populate Sign Up Note OwnerID
+18:09:34.138 (140756307)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (141309125)|WF_FLOW_ACTION_END|09L6F000000PZ9R
+18:09:34.24 (141331203)|WF_FLOW_ACTION_BEGIN|09L6F000000Udyy
+18:09:34.142 (142480106)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWRf|3016F0000003VBk
+18:09:34.142 (143019083)|FLOW_CREATE_INTERVIEW_END|204910064a735cd5aa63714611931661f3198b1-1a61|Create Survey Trigger from Sign Up
+18:09:34.143 (143301433)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.143 (143320669)|FLOW_START_INTERVIEW_BEGIN|204910064a735cd5aa63714611931661f3198b1-1a61|Create Survey Trigger from Sign Up
+18:09:34.143 (145169301)|FLOW_START_INTERVIEW_END|204910064a735cd5aa63714611931661f3198b1-1a61|Create Survey Trigger from Sign Up
+18:09:34.143 (145193010)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (145773503)|WF_FLOW_ACTION_END|09L6F000000Udyy
+18:09:34.24 (145795422)|WF_FLOW_ACTION_BEGIN|09L6F000000LW80
+18:09:34.146 (146997622)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F0000008ux0|3016F000000UuBc
+18:09:34.146 (150852837)|FLOW_CREATE_INTERVIEW_END|205110064a735cd5aa63714611931661f3198b1-1a63|Spot Check Auto Creation
+18:09:34.151 (151122402)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.151 (151143232)|FLOW_START_INTERVIEW_BEGIN|205110064a735cd5aa63714611931661f3198b1-1a63|Spot Check Auto Creation
+18:09:34.151 (153181309)|FLOW_START_INTERVIEW_END|205110064a735cd5aa63714611931661f3198b1-1a63|Spot Check Auto Creation
+18:09:34.151 (153207857)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (153784653)|WF_FLOW_ACTION_END|09L6F000000LW80
+18:09:34.24 (153808801)|WF_FLOW_ACTION_BEGIN|09L6F000000PVmN
+18:09:34.155 (155224602)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090wE|3016F0000005dyq
+18:09:34.155 (155788605)|FLOW_CREATE_INTERVIEW_END|205210064a735cd5aa63714611931661f3198b1-1a64|Facebook Product Billing
+18:09:34.156 (156041024)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.156 (156060655)|FLOW_START_INTERVIEW_BEGIN|205210064a735cd5aa63714611931661f3198b1-1a64|Facebook Product Billing
+18:09:34.156 (157852133)|FLOW_START_INTERVIEW_END|205210064a735cd5aa63714611931661f3198b1-1a64|Facebook Product Billing
+18:09:34.156 (157874737)|FLOW_START_INTERVIEWS_END|1
+18:09:34.24 (158360445)|WF_FLOW_ACTION_END|09L6F000000PVmN
+18:09:34.24 (158393485)|WF_TIME_TRIGGERS_BEGIN
+18:09:34.24 (178925909)|WF_ACTIONS_END| Flow Trigger: 7;
+18:09:34.24 (178943150)|CODE_UNIT_FINISHED|Workflow:01I90000000UJA1
+18:09:34.24 (180913025)|DML_END|[6]
+18:09:34.24 (180986873)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.24 (181030330)|VARIABLE_ASSIGNMENT|[2]|signup_note|null|
+18:09:34.24 (181039281)|STATEMENT_EXECUTE|[10]
+18:09:34.24 (181061561)|HEAP_ALLOCATE|[10]|Bytes:7
+18:09:34.24 (181120866)|USER_DEBUG|[10]|DEBUG|dfsdfdf
+18:09:34.24 (181131702)|STATEMENT_EXECUTE|[11]
+18:09:34.24 (181139660)|HEAP_ALLOCATE|[11]|Bytes:73
+18:09:34.24 (181164548)|HEAP_ALLOCATE|[11]|Bytes:4
+18:09:34.24 (181587455)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT id, Sign_Up__r.Account__c FROM Sign_Up_Note__c WHERE id = :tmpVar1
+18:09:34.24 (186148764)|SOQL_EXECUTE_END|[11]|Rows:1
+18:09:34.24 (186178264)|HEAP_ALLOCATE|[11]|Bytes:8
+18:09:34.24 (186203230)|HEAP_ALLOCATE|[11]|Bytes:143
+18:09:34.24 (186238616)|HEAP_ALLOCATE|[11]|Bytes:8
+18:09:34.24 (186253075)|HEAP_ALLOCATE|[11]|Bytes:41
+18:09:34.24 (186273620)|HEAP_ALLOCATE|[11]|Bytes:16
+18:09:34.24 (186334110)|VARIABLE_ASSIGNMENT|[11]|this.record|{"Id":"a1T6F00000Q5hD7UAJ","Sign_up__c":"a066F00001GiZmeQAF","Sign_up__r":{"Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF"}}|0x5d35d7e7
+18:09:34.24 (186344139)|STATEMENT_EXECUTE|[12]
+18:09:34.24 (186451194)|HEAP_ALLOCATE|[12]|Bytes:18
+18:09:34.24 (186470564)|VARIABLE_ASSIGNMENT|[12]|this.accountID|"0016F00002cBajsQAC"|0x5d35d7e7
+18:09:34.24 (186476771)|STATEMENT_EXECUTE|[13]
+18:09:34.24 (186485944)|HEAP_ALLOCATE|[13]|Bytes:12
+18:09:34.24 (186502356)|HEAP_ALLOCATE|[13]|Bytes:30
+18:09:34.24 (186535143)|USER_DEBUG|[13]|DEBUG|accountID = 0016F00002cBajsQAC
+18:09:34.24 (186545012)|STATEMENT_EXECUTE|[14]
+18:09:34.24 (186552166)|HEAP_ALLOCATE|[14]|Bytes:66
+18:09:34.24 (186569901)|HEAP_ALLOCATE|[14]|Bytes:4
+18:09:34.24 (186969341)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT id, TP_External_Product__c FROM Account WHERE id = :tmpVar1
+18:09:34.24 (189623108)|SOQL_EXECUTE_END|[14]|Rows:1
+18:09:34.24 (189647987)|HEAP_ALLOCATE|[14]|Bytes:8
+18:09:34.24 (189660690)|HEAP_ALLOCATE|[14]|Bytes:33
+18:09:34.24 (189721444)|HEAP_ALLOCATE|[14]|Bytes:8
+18:09:34.24 (189734346)|HEAP_ALLOCATE|[14]|Bytes:33
+18:09:34.24 (189780312)|HEAP_ALLOCATE|[14]|Bytes:8
+18:09:34.24 (189808905)|VARIABLE_ASSIGNMENT|[14]|this.myAccount|{"Id":"0016F00002cBajsQAC"}|0x5d35d7e7
+18:09:34.24 (189827340)|STATEMENT_EXECUTE|[15]
+18:09:34.189 (189844456)|CUMULATIVE_LIMIT_USAGE
+18:09:34.189 (189844456)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.189 (189844456)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.24 (190788653)|CODE_UNIT_FINISHED|SignupNoteAfterInsert on Sign_Up_Note trigger event AfterInsert|__sfdc_trigger/SignupNoteAfterInsert
+18:09:34.24 (191722396)|EXECUTION_FINISHED
+18:09:34.193 (193892340)|USER_INFO|[EXTERNAL]|00590000000Vmmq|ben@bjbglobal.com.au|Australian Eastern Standard Time|GMT+10:00
+18:09:34.193 (193909565)|EXECUTION_STARTED
+18:09:34.193 (193913825)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000001nI8a
+18:09:34.193 (205245123)|WF_RULE_EVAL_BEGIN|Workflow
+18:09:34.193 (205285973)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Check Signup Price SLX|01Q90000000mrnZ|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.193 (207212259)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISPICKVAL({!ID:00N9000000CZWtI}, 'No')  && NOT(CONTAINS( {!ID:00N9000000CZ4PG.00N900000014aWp.TextName} ,'GetMoreTraffic'))|Values:Is_Pricing_Correct__c=Yes, Sign_up__r.Account__r.Name=ProTest1_Simple
+18:09:34.193 (207231887)|WF_CRITERIA_END|false
+18:09:34.193 (207250101)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Send GMT Signup Notes|01Q6F000000GqPD|ON_CREATE_ONLY|0
+18:09:34.193 (211100526)|WF_RULE_FILTER|[Sign Up Note : Created Date equals TODAY] 
+AND [Sign Up : FromSource contains getmoretraffic]
+18:09:34.193 (211181627)|WF_RULE_EVAL_VALUE|2018-09-28 08:09:34
+18:09:34.193 (211201302)|WF_RULE_EVAL_VALUE|sponsoredlinx.com.au
+18:09:34.193 (211207886)|WF_CRITERIA_END|false
+18:09:34.193 (211225615)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Billing Instruction Alert|01Q6F0000019k5f|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.193 (211262921)|WF_RULE_FILTER|[Sign Up Note : Billing Instruction not equal to ]
+18:09:34.193 (211272087)|WF_RULE_EVAL_VALUE|
+18:09:34.193 (211275389)|WF_CRITERIA_END|false
+18:09:34.193 (211285274)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Check Signup Price GMT|01Q90000000DQJ6|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.193 (211877684)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]ISPICKVAL({!ID:00N9000000CZWtI}, 'No')  &&  CONTAINS( {!ID:00N9000000CZ4PG.00N900000014aWp.TextName} ,'GetMoreTraffic')|Values:Is_Pricing_Correct__c=Yes, Sign_up__r.Account__r.Name=ProTest1_Simple
+18:09:34.193 (211895456)|WF_CRITERIA_END|false
+18:09:34.193 (211910993)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Send Signup Notes Alert to Sales Manager - SLX|01Q6F0000002T61|ON_CREATE_ONLY|0
+18:09:34.193 (212124158)|WF_RULE_FILTER|[Sign Up Note : Created Date equals TODAY] 
+AND [Sign Up : FromSource contains sponsoredlinx]
+18:09:34.193 (212169034)|WF_RULE_EVAL_VALUE|2018-09-28 08:09:34
+18:09:34.193 (212181538)|WF_RULE_EVAL_VALUE|sponsoredlinx.com.au
+18:09:34.193 (212185509)|WF_CRITERIA_END|true
+18:09:34.193 (213468608)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Campaign Start Date SLX|01Q90000000mrsO|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.193 (213806342)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:00N9000000CZ4Pk}  <>  TODAY() && NOT(CONTAINS({!ID:00N9000000CZ4PG.00N900000014aWp.TextName},'GetMoreTraffic'))|Values:Campaign_start_date__c=2018-09-28 00:00:00, Sign_up__r.Account__r.Name=ProTest1_Simple
+18:09:34.193 (213817623)|WF_CRITERIA_END|false
+18:09:34.193 (213828143)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Send Signup Notes Alert to Sales Manager - GMT|01Q6F000001ReJT|ON_CREATE_ONLY|0
+18:09:34.193 (214038460)|WF_RULE_FILTER|[Sign Up Note : Created Date equals TODAY] 
+AND [Sign Up : FromSource contains Get]
+18:09:34.193 (214084438)|WF_RULE_EVAL_VALUE|2018-09-28 08:09:34
+18:09:34.193 (214096394)|WF_RULE_EVAL_VALUE|sponsoredlinx.com.au
+18:09:34.193 (214100742)|WF_CRITERIA_END|false
+18:09:34.193 (214110480)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Auto_Populate_Adwords_Id_in_the_Sign_Up_Record3016F000000TqjU|01Q6F000000DkbG|ON_ALL_CHANGES|0
+18:09:34.193 (214165690)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.193 (214173081)|WF_CRITERIA_END|true
+18:09:34.193 (214188387)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Adwords Acc Transfer|01Q6F0000019kNo|ON_ALL_CHANGES|0
+18:09:34.193 (226358415)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ischanged({!ID:00N6F00000I2QVI}), {!ID:00N9000000CZ4PG.Owner:User.LastName} != 'Site Guest User', {!ID:00N6F00000EHZvM} = false,  {!ID:RecordType.Name} = 'Adwords Signup Notes',{!ID:00N6F00000EHZw0}!= '000-000-0000')|Values:Processed__c=0, Adwords_ID__c=null, OwnerID1__c=null, Sign_up__r.Owner:User.LastName=Site Guest User, RecordType.Name=Facebook Signup Notes
+18:09:34.193 (226376471)|WF_CRITERIA_END|false
+18:09:34.193 (226392735)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Update_Sign_Up_From_Source3016F0000005dzG|01Q6F0000019fAg|ON_ALL_CHANGES|0
+18:09:34.193 (226460032)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.193 (226471428)|WF_CRITERIA_END|true
+18:09:34.193 (226495530)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Campaign Start Date GMT|01Q90000000DQJG|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.193 (226838935)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]{!ID:00N9000000CZ4Pk}  <>  TODAY() && CONTAINS({!ID:00N9000000CZ4PG.00N900000014aWp.TextName},'GetMoreTraffic')|Values:Campaign_start_date__c=2018-09-28 00:00:00, Sign_up__r.Account__r.Name=ProTest1_Simple
+18:09:34.193 (226857530)|WF_CRITERIA_END|false
+18:09:34.193 (226872595)|WF_CRITERIA_BEGIN|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]|Auto_Populate_Business_Name_Sign_Up_Note3016F000000DErq|01Q6F000000RWYU|ON_CREATE_ONLY|0
+18:09:34.193 (226920127)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.193 (226926809)|WF_CRITERIA_END|true
+18:09:34.193 (226950901)|WF_SPOOL_ACTION_BEGIN|Workflow
+18:09:34.193 (226975779)|WF_RULE_INVOCATION|[Sign Up Note: Note - 18291 a1T6F00000Q5hD7]
+18:09:34.193 (226983869)|WF_EMAIL_ALERT|Id=01W6F00000055RQ|CurrentRule:Send Signup Notes Alert to Sales Manager - SLX (Id=01Q6F0000002T61)
+18:09:34.193 (291130423)|WF_EMAIL_SENT|Template:00X6F000001NxbT|Recipients:toby.wilson@sponsoredlinx.com jacob.bamford@sponsoredlinx.com |CcEmails:
+18:09:34.193 (291198800)|WF_ACTION| Email Alert: 1; Flow Trigger: 3;
+18:09:34.193 (291207601)|WF_RULE_EVAL_END
+18:09:34.193 (291307986)|WF_FLOW_ACTION_BEGIN|09L6F000000L3cZ
+18:09:34.292 (292927766)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWU5|3016F000000TqjU
+18:09:34.292 (293770555)|FLOW_CREATE_INTERVIEW_END|205310064a735cd5aa63714611931661f3198b1-1a65|Auto Populate Adwords Id in the Sign Up Record
+18:09:34.294 (294225233)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.294 (294247428)|FLOW_START_INTERVIEW_BEGIN|205310064a735cd5aa63714611931661f3198b1-1a65|Auto Populate Adwords Id in the Sign Up Record
+18:09:34.294 (296012213)|FLOW_START_INTERVIEW_END|205310064a735cd5aa63714611931661f3198b1-1a65|Auto Populate Adwords Id in the Sign Up Record
+18:09:34.294 (296044167)|FLOW_START_INTERVIEWS_END|1
+18:09:34.193 (296833762)|WF_FLOW_ACTION_END|09L6F000000L3cZ
+18:09:34.193 (296859370)|WF_FLOW_ACTION_BEGIN|09L6F000000Cfs6
+18:09:34.298 (298463437)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F0000004deg|3016F000000DErq
+18:09:34.298 (299101383)|FLOW_CREATE_INTERVIEW_END|205410064a735cd5aa63714611931661f3198b1-1a66|Auto Populate Business Name - Sign Up Note
+18:09:34.299 (299409136)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.299 (299430315)|FLOW_START_INTERVIEW_BEGIN|205410064a735cd5aa63714611931661f3198b1-1a66|Auto Populate Business Name - Sign Up Note
+18:09:34.299 (319186629)|FLOW_START_INTERVIEW_END|205410064a735cd5aa63714611931661f3198b1-1a66|Auto Populate Business Name - Sign Up Note
+18:09:34.299 (319223835)|FLOW_START_INTERVIEWS_END|1
+18:09:34.193 (319892965)|WF_FLOW_ACTION_END|09L6F000000Cfs6
+18:09:34.193 (319916833)|WF_FLOW_ACTION_BEGIN|09L6F000000PVmc
+18:09:34.321 (321303852)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090yj|3016F0000005dzG
+18:09:34.321 (321963555)|FLOW_CREATE_INTERVIEW_END|205510064a735cd5aa63714611931661f3198b1-1a67|Update Sign Up From Source
+18:09:34.322 (322249194)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.322 (322269927)|FLOW_START_INTERVIEW_BEGIN|205510064a735cd5aa63714611931661f3198b1-1a67|Update Sign Up From Source
+18:09:34.322 (323478760)|FLOW_START_INTERVIEW_END|205510064a735cd5aa63714611931661f3198b1-1a67|Update Sign Up From Source
+18:09:34.363 (363101809)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000DZX0|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:09:34.363 (363156539)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.363 (363200709)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.363 (363280911)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.363 (363292897)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:09:34.363 (363332952)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x72e5e38c
+18:09:34.363 (363372290)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.363 (363379999)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignToTeam|true|false
+18:09:34.363 (363392913)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x72e5e38c
+18:09:34.363 (363401065)|STATEMENT_EXECUTE|[1]
+18:09:34.363 (363470226)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.363 (363489612)|HEAP_ALLOCATE|[2]|Bytes:4
+18:09:34.363 (363499528)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:09:34.363 (364622286)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:09:34.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:09:34.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x1f9e7126
+18:09:34.363 (364662118)|STATEMENT_EXECUTE|[2]
+18:09:34.363 (364664809)|STATEMENT_EXECUTE|[3]
+18:09:34.363 (364727572)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:09:34.363 (365422467)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:09:34.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:09:34.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x19a9bcf6
+18:09:34.363 (365527040)|STATEMENT_EXECUTE|[4]
+18:09:34.363 (365550991)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.363 (365569572)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:09:34.365 (365579210)|CUMULATIVE_LIMIT_USAGE
+18:09:34.365 (365579210)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.365 (365579210)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.363 (366535578)|CODE_UNIT_FINISHED|SignUpAssignToTeam on Sign_Up trigger event BeforeUpdate|__sfdc_trigger/SignUpAssignToTeam
+18:09:34.379 (379811600)|CODE_UNIT_STARTED|[EXTERNAL]|01q90000000IdrN|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:09:34.379 (379893293)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.379 (379941074)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.379 (380018598)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.379 (380043059)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:09:34.379 (380099916)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x495e3951
+18:09:34.379 (380159710)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.379 (380169852)|VARIABLE_SCOPE_BEGIN|[1]|this|SignupUpdate|true|false
+18:09:34.379 (380188022)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x495e3951
+18:09:34.379 (380199891)|STATEMENT_EXECUTE|[1]
+18:09:34.379 (380268254)|STATEMENT_EXECUTE|[3]
+18:09:34.379 (380271491)|STATEMENT_EXECUTE|[5]
+18:09:34.379 (380336367)|HEAP_ALLOCATE|[5]|Bytes:18
+18:09:34.379 (380349473)|VARIABLE_SCOPE_BEGIN|[5]|signup_id|String|false|false
+18:09:34.379 (380377879)|VARIABLE_ASSIGNMENT|[5]|signup_id|"a066F00001GiZmeQAF"
+18:09:34.379 (380443765)|STATEMENT_EXECUTE|[6]
+18:09:34.380 (380459321)|CUMULATIVE_LIMIT_USAGE
+18:09:34.380 (380459321)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.380 (380459321)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.379 (381441400)|CODE_UNIT_FINISHED|SignupUpdate on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignupUpdate
+18:09:34.382 (382994320)|CODE_UNIT_STARTED|[EXTERNAL]|01q6F000000DhMP|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:09:34.382 (383044524)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.382 (383056702)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+18:09:34.382 (383107862)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.382 (383119372)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:09:34.382 (383153377)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x14fa5a75
+18:09:34.382 (383192974)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+18:09:34.382 (383199847)|VARIABLE_SCOPE_BEGIN|[1]|this|SignUpAssignTo|true|false
+18:09:34.382 (383212533)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x14fa5a75
+18:09:34.382 (383219689)|STATEMENT_EXECUTE|[1]
+18:09:34.382 (383290331)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.382 (383325151)|VARIABLE_SCOPE_BEGIN|[2]|newSignUp|Sign_Up__c|true|false
+18:09:34.382 (384774525)|VARIABLE_ASSIGNMENT|[2]|newSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:09:35.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:09:35.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x78811e8d
+18:09:34.382 (384823434)|STATEMENT_EXECUTE|[2]
+18:09:34.382 (384826207)|STATEMENT_EXECUTE|[3]
+18:09:34.382 (384885775)|VARIABLE_SCOPE_BEGIN|[3]|oldSignUp|Sign_Up__c|true|false
+18:09:34.382 (385792698)|VARIABLE_ASSIGNMENT|[3]|oldSignUp|{"Lastname__c":"Luu","LastModifiedDate":"2018-09-28T08:09:34.000Z","Management_Price__c":89.00,"Have_negative_keywords_been_added__c":false,"Account_Built_Alert_Sent__c":false,"Industry__c":"Legal Services","Name":"Kate Luu","City__c":"brisbane city","Is_Addon__c":false,"CreatedById":"0056F000006HQLxQAO","MailingState__c":"QLD","Has_GTM_code_been_sent_to_client__c":false,"Username__c":"kate.luu@sponsoredli (6 more) ...","MailingPostalCode__c":"4000","Will_keywords_bring_in_the_right_traffic__c":false,"Signup_Checked_In_Xero__c":false,"Invoice_Paid__c":false,"No_Adwords_Change__c":1,"Product_Type__c":"Social Marketing","State__c":"QLD","Cart_SF__c":"{\"myPackageData\":{\"p (177 more) ...","Cart_Signature__c":"133598df01a1e902c564 (12 more) ...","IsDeleted":false,"Check_SQR__c":false,"CurrencyIsoCode":"AUD","Is_there_2_ads_adgroup_for_split_testing__c":false,"Active_Days__c":0,"Salesperson__c":"0019000000RPRRhAAP","Is_Test__c":false,"Comments__c":"Test 1","CreatedDate":"2018-09-28T08:00:50.000Z","Account__c":"0016F00002cBajsQAC","Id":"a066F00001GiZmeQAF","Status__c":"Pending CM Call","Email__c":"kate.luu@sponsoredli (6 more) ...","Note_Created__c":true,"Invoiceno__c":"INV280918059002-1","FromSource__c":"sponsoredlinx.com.au","Company__c":"ProTest1_Simple","PostalCode__c":"4000","MailingCity__c":"brisbane city","OwnerId":"0056F000006HQLxQAO","Daily_Budget__c":12,"Set_Up_Price__c":399.00,"Is_targeting_correct__c":false,"Is_conversion_tracking_setup__c":false,"Street__c":"Wikham","Assign_to_Team__c":"Team C","Are_all_possible_extensions_setup__c":false,"Form_Name__c":"Checkout","Keywords_separated_into_correct_adgroup__c":false,"Account_Built__c":false,"Is_location_targeting_correct__c":false,"Is_Setup_Task_Created__c":false,"SystemModstamp":"2018-09-28T08:09:34.000Z","BJB_Company__c":"a0C90000002PU4fEAG","From_Source__c":"Inbound call","Xero_Invoices_Checked__c":false,"IPAddress__c":"110.175.173.90","Firstname__c":"Kate","LastActivityDate":"2018-09-28T00:00:00.000Z","Phone__c":"000000000","MailingStreet__c":"Wikham","GST__c":false,"Day_of_the_Week__c":"Error","Client_Called_by_TL__c":false,"Ads_have_what_they_do_selling_point_CTA__c":false,"Is_the_correct_type_of_campaign_set_up__c":false,"LastModifiedById":"00590000000VmmqAAC","Are_the_ads_set_to_rotate_evenly__c":false}|0x2c1b4367
+18:09:34.382 (385879899)|STATEMENT_EXECUTE|[4]
+18:09:34.382 (385917976)|HEAP_ALLOCATE|[2]|Bytes:5
+18:09:34.382 (385946503)|VARIABLE_ASSIGNMENT|[2]|newSignUp|null|
+18:09:34.385 (385963529)|CUMULATIVE_LIMIT_USAGE
+18:09:34.385 (385963529)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 4 out of 100
+  Number of query rows: 4 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 2 out of 150
+  Number of DML rows: 2 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+18:09:34.385 (385963529)|CUMULATIVE_LIMIT_USAGE_END
+
+18:09:34.382 (386871239)|CODE_UNIT_FINISHED|SignUpAssignTo on Sign_Up trigger event AfterUpdate|__sfdc_trigger/SignUpAssignTo
+18:09:34.387 (387200382)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:01I90000000UJA1
+18:09:34.387 (392303753)|WF_RULE_EVAL_BEGIN|Workflow
+18:09:34.387 (392340889)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Signup Alert to SEO Manager|01Q6F000000DkrE|ON_CREATE_ONLY|0
+18:09:34.387 (392360470)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (392371614)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Signup Alert to SEO Manager - GMT|01Q6F000000DkrJ|ON_CREATE_ONLY|0
+18:09:34.387 (392385482)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (392392896)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 1: Send Complete SignUp To COM|01Q90000000mpb6|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (392515341)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing, Admob Management] 
+AND [Sign Up : Status equals New] 
+AND [Sign Up : Invoice Paid equals true]
+18:09:34.387 (392536087)|WF_RULE_EVAL_VALUE|true
+18:09:34.387 (392555886)|WF_RULE_EVAL_VALUE|5
+18:09:34.387 (392564505)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (392574082)|WF_CRITERIA_END|false
+18:09:34.387 (392589349)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 3: SLX - Assign New Sign Up to CM|01Q6F000000DkC1|ON_ALL_CHANGES|0
+18:09:34.387 (392799011)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}),  OR(CONTAINS( {!ID:00N90000003wjk4} , 'SponsoredLinX'),CONTAINS({!ID:00N90000003wjk4} , 'sponsoredlinx')) )|Values:FromSource__c=sponsoredlinx.com.au, Assign_To_User__c=null
+18:09:34.387 (392816732)|WF_CRITERIA_END|false
+18:09:34.387 (392833185)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team C|01Q90000000DWbs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (392865546)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (392878977)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Update Spotcheck completed date|01Q90000000DV5d|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (392923512)|WF_RULE_FILTER|[Sign Up : Spotcheck Completed By not equal to ]
+18:09:34.387 (392938264)|WF_RULE_EVAL_VALUE|
+18:09:34.387 (392943229)|WF_CRITERIA_END|false
+18:09:34.387 (392959588)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Sign Up Completed Date|01Q6F0000002oDg|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393006960)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Product Type equals AdWords Management, SEO, Social Marketing] 
+AND [Sign Up : Completed Date equals ]
+18:09:34.387 (393018148)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (393026805)|WF_CRITERIA_END|false
+18:09:34.387 (393033936)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To GMT Team B|01Q6F0000002jYd|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393054999)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team B]
+18:09:34.387 (393061951)|WF_RULE_EVAL_VALUE|4
+18:09:34.387 (393065219)|WF_CRITERIA_END|false
+18:09:34.387 (393070821)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Spot_Check_Auto_Creation3016F000000UuBc|01Q6F000001EXII|ON_ALL_CHANGES|0
+18:09:34.387 (393093676)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393099400)|WF_CRITERIA_END|true
+18:09:34.387 (393116128)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Populate_Sign_Up_Note_OwnerID3016F0000005q4o|01Q6F0000019kOr|ON_ALL_CHANGES|0
+18:09:34.387 (393129403)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393133861)|WF_CRITERIA_END|true
+18:09:34.387 (393145395)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|SEO_ContentPack_Questionnaire3016F0000002gCi|01Q6F000000qybT|ON_CREATE_ONLY|0
+18:09:34.387 (393153896)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (393157608)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|48 Hrs Account Built Alert to TL (Mon - Wed)|01Q6F0000019ddq|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393225385)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Monday, Tuesday, Wednesday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:09:34.387 (393247386)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (393254238)|WF_CRITERIA_END|false
+18:09:34.387 (393268776)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Create_Survey_Trigger_from_Sign_Up3016F0000003VBk|01Q6F000001RaCB|ON_ALL_CHANGES|0
+18:09:34.387 (393299293)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393311941)|WF_CRITERIA_END|true
+18:09:34.387 (393334243)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Sign Up Sold to Pause Date|01Q900000002JYW|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393372216)|WF_RULE_FILTER|[Sign Up : Status equals Sold to Pause]
+18:09:34.387 (393380730)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (393384054)|WF_CRITERIA_END|false
+18:09:34.387 (393390050)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Build_Check_Auto_Creation3016F0000005Zhv|01Q6F0000019cqj|ON_ALL_CHANGES|0
+18:09:34.387 (393406459)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393411320)|WF_CRITERIA_END|true
+18:09:34.387 (393419124)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Sign Up Alert to Sales Managers - GMT|01Q6F000001RfFU|ON_CREATE_ONLY|0
+18:09:34.387 (393427251)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (393430906)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|New Sign Up Alert to Sales Managers - SLX|01Q6F000001ReHX|ON_CREATE_ONLY|0
+18:09:34.387 (393438475)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (393441767)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 3: GMT - Assign New Sign Up to CM|01Q6F000000DkCL|ON_ALL_CHANGES|0
+18:09:34.387 (393501170)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]AND(ISCHANGED({!ID:00N9000000CZbfs}), CONTAINS( {!ID:00N90000003wjk4} , 'getmoretraffic'))|Values:FromSource__c=sponsoredlinx.com.au, Assign_To_User__c=null
+18:09:34.387 (393508516)|WF_CRITERIA_END|false
+18:09:34.387 (393515717)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Change Status to Pending CM Call|01Q6F0000002pFI|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393537421)|WF_RULE_NOT_EVALUATED
+18:09:34.387 (393541834)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team A|01Q90000000mrRn|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393564830)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team A]
+18:09:34.387 (393573842)|WF_RULE_EVAL_VALUE|4
+18:09:34.387 (393577718)|WF_CRITERIA_END|false
+18:09:34.387 (393583312)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Populate_Team_Leader_Field_in_Sign_Up3016F0000005ZYj|01Q6F0000019jQP|ON_ALL_CHANGES|0
+18:09:34.387 (393599553)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393603858)|WF_CRITERIA_END|true
+18:09:34.387 (393612373)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To Team B|01Q90000000mrRs|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393634946)|WF_RULE_FILTER|[Sign Up : Assign to Team equals Team B]
+18:09:34.387 (393643433)|WF_RULE_EVAL_VALUE|4
+18:09:34.387 (393662385)|WF_CRITERIA_END|false
+18:09:34.387 (393674270)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|48 Hrs Account Built Alert to TL (Thu-Fri)|01Q6F0000019ddR|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393752127)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Day of the Week equals Thursday, Friday] 
+AND [Sign Up : Account Built equals false] 
+AND [Sign Up : Account Built Alert Sent equals false] 
+AND [Sign Up : Product Type equals AdWords Management, Social Marketing]
+18:09:34.387 (393775239)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (393781932)|WF_CRITERIA_END|false
+18:09:34.387 (393795908)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Send Complete SEO SignUp To SEO Manager|01Q90000000muYJ|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (393851007)|WF_RULE_FILTER|[Sign Up : Note Created equals true] 
+AND [Sign Up : Product Type equals SEO]
+18:09:34.387 (393863730)|WF_RULE_EVAL_VALUE|true
+18:09:34.387 (393877174)|WF_RULE_EVAL_VALUE|5
+18:09:34.387 (393883161)|WF_CRITERIA_END|false
+18:09:34.387 (393896410)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Update_Adwords_ID_in_Account_Product3016F0000002Uly|01Q6F000000qDbf|ON_ALL_CHANGES|0
+18:09:34.387 (393956079)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (393967908)|WF_CRITERIA_END|true
+18:09:34.387 (393982735)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Facebook_Product_Billing3016F0000005dyq|01Q6F0000019fAR|ON_ALL_CHANGES|0
+18:09:34.387 (394011419)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+18:09:34.387 (394017784)|WF_CRITERIA_END|true
+18:09:34.387 (394039049)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Send Setup Suvery|01Q6F000000Dk6S|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (394083647)|WF_RULE_FILTER|[Sign Up : Status equals Completed] 
+AND [Sign Up : Is Test equals true] 
+AND [Sign Up : Company equals bjb global]
+18:09:34.387 (394095615)|WF_RULE_EVAL_VALUE|9
+18:09:34.387 (394099402)|WF_CRITERIA_END|false
+18:09:34.387 (394108814)|WF_CRITERIA_BEGIN|[Sign Up: Kate Luu a066F00001GiZme]|Step 2: Send Complete SignUp To GMT Team A|01Q90000000nO1p|ON_CREATE_OR_TRIGGERING_UPDATE|0
+18:09:34.387 (394186392)|WF_RULE_FILTER|[Sign Up : Assign to Team equals GMT Team A]
+18:09:34.387 (394204460)|WF_RULE_EVAL_VALUE|4
+18:09:34.387 (394211367)|WF_CRITERIA_END|false
+18:09:34.387 (394234803)|WF_SPOOL_ACTION_BEGIN|Workflow
+18:09:34.387 (394282335)|WF_ACTION| Flow Trigger: 7;
+18:09:34.387 (394291851)|WF_RULE_EVAL_END
+18:09:34.387 (394339431)|WF_FLOW_ACTION_BEGIN|09L6F000000PUWz
+18:09:34.394 (394440839)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000HGwO|3016F0000005Zhv
+18:09:34.394 (394512699)|FLOW_CREATE_INTERVIEW_END|205610064a735cd5aa63714611931661f3198b1-1a68|Build Check Auto Creation
+18:09:34.394 (394975671)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.394 (395006207)|FLOW_START_INTERVIEW_BEGIN|205610064a735cd5aa63714611931661f3198b1-1a68|Build Check Auto Creation
+18:09:34.394 (396338658)|FLOW_START_INTERVIEW_END|205610064a735cd5aa63714611931661f3198b1-1a68|Build Check Auto Creation
+18:09:34.394 (396364942)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (396909666)|WF_FLOW_ACTION_END|09L6F000000PUWz
+18:09:34.387 (396930997)|WF_FLOW_ACTION_BEGIN|09L6F000000PYPN
+18:09:34.396 (396981048)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090J2|3016F0000005ZYj
+18:09:34.396 (397016441)|FLOW_CREATE_INTERVIEW_END|205710064a735cd5aa63714611931661f3198b1-1a69|Populate Team Leader Field in Sign Up
+18:09:34.397 (397256644)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.397 (397275323)|FLOW_START_INTERVIEW_BEGIN|205710064a735cd5aa63714611931661f3198b1-1a69|Populate Team Leader Field in Sign Up
+18:09:34.397 (398532366)|FLOW_START_INTERVIEW_END|205710064a735cd5aa63714611931661f3198b1-1a69|Populate Team Leader Field in Sign Up
+18:09:34.397 (398554724)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (399031399)|WF_FLOW_ACTION_END|09L6F000000PYPN
+18:09:34.387 (399068111)|WF_FLOW_ACTION_BEGIN|09L6F000000UJRN
+18:09:34.399 (399120131)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWUZ|3016F0000002Uly
+18:09:34.399 (399154089)|FLOW_CREATE_INTERVIEW_END|205810064a735cd5aa63714611931661f3198b1-1a6a|Update Adwords ID in Account Product
+18:09:34.399 (399388337)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.399 (399406553)|FLOW_START_INTERVIEW_BEGIN|205810064a735cd5aa63714611931661f3198b1-1a6a|Update Adwords ID in Account Product
+18:09:34.399 (400550839)|FLOW_START_INTERVIEW_END|205810064a735cd5aa63714611931661f3198b1-1a6a|Update Adwords ID in Account Product
+18:09:34.399 (400572514)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (401018497)|WF_FLOW_ACTION_END|09L6F000000UJRN
+18:09:34.387 (401050146)|WF_FLOW_ACTION_BEGIN|09L6F000000PZ9R
+18:09:34.401 (401108626)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000092sF|3016F0000005q4o
+18:09:34.401 (401149051)|FLOW_CREATE_INTERVIEW_END|205910064a735cd5aa63714611931661f3198b1-1a6b|Populate Sign Up Note OwnerID
+18:09:34.401 (401432303)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.401 (401457904)|FLOW_START_INTERVIEW_BEGIN|205910064a735cd5aa63714611931661f3198b1-1a6b|Populate Sign Up Note OwnerID
+18:09:34.401 (403418046)|FLOW_START_INTERVIEW_END|205910064a735cd5aa63714611931661f3198b1-1a6b|Populate Sign Up Note OwnerID
+18:09:34.401 (403439471)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (404040241)|WF_FLOW_ACTION_END|09L6F000000PZ9R
+18:09:34.387 (404060417)|WF_FLOW_ACTION_BEGIN|09L6F000000Udyy
+18:09:34.404 (404107988)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F000000TWRf|3016F0000003VBk
+18:09:34.404 (404138451)|FLOW_CREATE_INTERVIEW_END|206010064a735cd5aa63714611931661f3198b1-1a6c|Create Survey Trigger from Sign Up
+18:09:34.404 (404374099)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.404 (404392283)|FLOW_START_INTERVIEW_BEGIN|206010064a735cd5aa63714611931661f3198b1-1a6c|Create Survey Trigger from Sign Up
+18:09:34.404 (405518945)|FLOW_START_INTERVIEW_END|206010064a735cd5aa63714611931661f3198b1-1a6c|Create Survey Trigger from Sign Up
+18:09:34.404 (405539841)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (406055304)|WF_FLOW_ACTION_END|09L6F000000Udyy
+18:09:34.387 (406073803)|WF_FLOW_ACTION_BEGIN|09L6F000000LW80
+18:09:34.406 (406118102)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F0000008ux0|3016F000000UuBc
+18:09:34.406 (406147778)|FLOW_CREATE_INTERVIEW_END|206110064a735cd5aa63714611931661f3198b1-1a6d|Spot Check Auto Creation
+18:09:34.406 (406359295)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.406 (406376131)|FLOW_START_INTERVIEW_BEGIN|206110064a735cd5aa63714611931661f3198b1-1a6d|Spot Check Auto Creation
+18:09:34.406 (407595962)|FLOW_START_INTERVIEW_END|206110064a735cd5aa63714611931661f3198b1-1a6d|Spot Check Auto Creation
+18:09:34.406 (407616564)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (408170581)|WF_FLOW_ACTION_END|09L6F000000LW80
+18:09:34.387 (408188630)|WF_FLOW_ACTION_BEGIN|09L6F000000PVmN
+18:09:34.408 (408231201)|FLOW_CREATE_INTERVIEW_BEGIN|00D90000000IJSa|3006F00000090wE|3016F0000005dyq
+18:09:34.408 (408260229)|FLOW_CREATE_INTERVIEW_END|206210064a735cd5aa63714611931661f3198b1-1a6e|Facebook Product Billing
+18:09:34.408 (408472431)|FLOW_START_INTERVIEWS_BEGIN|1
+18:09:34.408 (408489295)|FLOW_START_INTERVIEW_BEGIN|206210064a735cd5aa63714611931661f3198b1-1a6e|Facebook Product Billing
+18:09:34.408 (409510609)|FLOW_START_INTERVIEW_END|206210064a735cd5aa63714611931661f3198b1-1a6e|Facebook Product Billing
+18:09:34.408 (409531489)|FLOW_START_INTERVIEWS_END|1
+18:09:34.387 (410006121)|WF_FLOW_ACTION_END|09L6F000000PVmN
+18:09:34.387 (410042000)|WF_TIME_TRIGGERS_BEGIN
+18:09:34.387 (414513753)|WF_ACTIONS_END| Flow Trigger: 7;
+18:09:34.387 (414527908)|CODE_UNIT_FINISHED|Workflow:01I90000000UJA1
+18:09:34.322 (415456497)|FLOW_START_INTERVIEWS_END|1
+18:09:34.193 (416043577)|WF_FLOW_ACTION_END|09L6F000000PVmc
+18:09:34.193 (416133441)|WF_ACTIONS_END| Email Alert: 1; Flow Trigger: 3;
+18:09:34.193 (416142449)|CODE_UNIT_FINISHED|Workflow:01I90000001nI8a
+18:09:34.193 (417138658)|EXECUTION_FINISHED

@@ -2,31 +2,54 @@
 
     <apex:sectionHeader title="SEO Website" subtitle="{!seoWebsite.name}"/>
 
+    <apex:form >
+        <apex:commandLink value="Back to Website" action="{!cancel}" status="status"/>
+        <apex:pageMessages ></apex:pageMessages>
+    </apex:form>
+
  <apex:form >
-    <apex:pageBlock title="New SEO Keywords">
-    	
-        <apex:pageBlockSection columns="1" id="sec">
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel >Keywords (each keyword on a new line)</apex:outputLabel>
-                <apex:inputTextarea rows="30" cols="80" id="bulk_keywords" value="{!bulk_keywords}"/>
-            </apex:pageBlockSectionItem>
 
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel >Override Website Geolocation?</apex:outputLabel>
-                <apex:inputField id="geolocation" value="{!seoThemeKeyword.Geolocation_Override__c}" />
-            </apex:pageBlockSectionItem>
+    <table style="width: 100%;" id="theGrid">
+    <tbody>
+        <tr>
+            <td style="width: 65%;">
+                <apex:pageBlock title="Add Keywords">
+                    
+                    <apex:pageBlockSection columns="3">
+                            <apex:outputLabel >Keywords (new line for each):</apex:outputLabel>
+                            <apex:outputLabel >Combine with location suffixes:</apex:outputLabel>
+                            <apex:outputLabel >Override Website Geolocation?</apex:outputLabel>
 
-            <apex:pageBlockSectionItem >
+                            <apex:inputTextarea rows="20" cols="40" id="bulk_keywords" value="{!bulk_keywords}"/>
+                            <apex:inputTextarea rows="20" cols="40" id="keyword_suffixes" value="{!keyword_suffix}"/>
+                            <apex:inputField id="geolocation" value="{!seoThemeKeyword.Geolocation_Override__c}" label="" />
+                    </apex:pageBlockSection>
 
-            </apex:pageBlockSectionItem>
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton value="Add" action="{!save}"/>
+                    </apex:pageBlockButtons>
+                </apex:pageBlock>
 
-        </apex:pageBlockSection>
+                <apex:pageBlock title="Also Ranking For" rendered="{!keywordSuggestions != null}">
+                    <apex:pageBlockTable value="{!keywordSuggestions}" var="kw">
+                        <apex:column headerValue="Keyword" value="{!kw.Name}"/>
+                        <apex:column headerValue="Position" value="{!kw.Google_Current__c}"/>
+                        <apex:column headerValue="Search Volume" value="{!kw.Google_Volume__c}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </td>
+            <td style="width: 35%;">
+                <apex:pageBlock title="Existing">
+                    <apex:pageBlockTable value="{!seoKeywords}" var="kw" rendered="{!seoKeywords != null}">
+                        <apex:column headerValue="Keyword" value="{!kw.Name}"/>
+                        <apex:column headerValue="Position" value="{!kw.Google_Current__c}"/>
+                        <apex:column headerValue="Search Volume" value="{!kw.Google_Volume__c}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </td>
+        </tr>
+    </tbody>
+    </table>
 
-        <apex:commandButton value="Save" action="{!save}"/>
-        <apex:commandButton value="Cancel" action="{!cancel}"/>
-
-        <apex:pageMessages ></apex:pageMessages> 
-       
-    </apex:pageBlock>
     </apex:form>
 </apex:page>

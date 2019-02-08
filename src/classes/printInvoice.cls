@@ -7,6 +7,7 @@ public with sharing class printInvoice {
 	public Company__c company {set;get;}
 	
 	public printInvoice(ApexPages.StandardController controller){
+		HttpRequest req = new HttpRequest();
 		Invoice__c inv = (Invoice__c)controller.getRecord();
 		this.invoice   = [select 
 								Id, 
@@ -26,6 +27,7 @@ public with sharing class printInvoice {
 								Account__r.BillingPostalCode, 
 								Account__r.BillingCountry, 
 								Invoice_Number__c, 
+								IsNewSurcharge__c,
 								Issue_Date__c, 
 								Amount_Due__c, 
 								Amount_Refunded__c, 
@@ -62,7 +64,7 @@ public with sharing class printInvoice {
                         FROM 
                         	Company__c
                         WHERE 
-                        	Name =: this.invoice.Account_Product__r.SLX_Product__r.company_name__c
+                        	Name =: this.invoice.Account_Product__r.SLX_Product__r.company_name__c 
 						];
 							
 		Payment__c[] payments = [select 
@@ -117,6 +119,12 @@ public with sharing class printInvoice {
 		if (invoice.Account_Product__r.recurring_period__c == 'Weekly') {
 			Date endDate = invoice.Issue_Date__c.addDays(-1);
 			Date startDate = endDate.addDays(-6);
+
+			if(invoice.Account_Product__r.Name.containsIgnoreCase('Social Engage')){			
+				startDate = invoice.Issue_Date__c;
+				endDate = startDate.addDays(6);
+			}
+
 			dateRange = startDate.format() + ' - ' + endDate.format();
 		} else if (invoice.Account_Product__r.recurring_period__c == 'Fortnightly') {
 			Date startDate = invoice.Issue_Date__c;
@@ -145,6 +153,28 @@ public with sharing class printInvoice {
 		} else {
 			dateRange = '';
 		}
+
+		
+		//req.setEndpoint(company.logo_code__c);
+  //      req.setMethod('GET');
+  //      req.setHeader('Content-Type', 'image/png');
+  //      req.setCompressed(true);
+  //      req.setTimeout(60000);
+  //      HttpResponse res = new Http().send(req);
+  //      while (res.getStatusCode() == 302) {
+  //          req.setEndpoint(res.getHeader('Location'));
+  //          res = new Http().send(req);
+  //      } 
+  //      String responseValue = res.getBody(); 
+  //      System.debug('Response Status code for File: '+res.getStatusCode());
+  //      system.debug('Response Body for File: ' + responseValue);         
+  //      Blob image = res.getBodyAsBlob();        
+  //      logo = new Attachment();
+  //      logo.Name = 'mylogo.png';
+  //      logo.Body = image;
+  //      logo.contentType = 'image/png';
+  //      logo.ParentId = '001i000000gDY4X';
+  //      insert logo; 
 	}
 	
 	public class tran {
